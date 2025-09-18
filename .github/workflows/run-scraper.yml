@@ -1,0 +1,49 @@
+name: Run HKJC Scraper
+
+on:
+  workflow_dispatch:
+    inputs:
+      race_dates:
+        description: "以逗號分隔的日期（例：2024/09/07,2024/09/10）"
+        required: false
+        default: ""
+      base_url:
+        description: "基礎 URL（通常不用改）"
+        required: false
+        default: "https://racing.hkjc.com/racing/information/Chinese/Racing/LocalResults.aspx"
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Google Chrome
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        env:
+          RACE_DATES: ${{ github.event.inputs.race_dates }}
+          BASE_URL: ${{ github.event.inputs.base_url }}
+        run: |
+          # 若你不想用包裝器，也可直接 python hkjc_scraper.py
+          python run_by_env.py
+
+      - name: Upload CSV artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: hkjc-results-${{ github.run_id }}
+          path: "*.csv"
+          retention-days: 7
