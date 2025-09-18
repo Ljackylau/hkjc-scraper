@@ -1,0 +1,51 @@
+name: Filter recent horse records
+
+on:
+  workflow_dispatch:
+    inputs:
+      input_file:
+        description: '輸入檔 (CSV/XLSX) 相對路徑'
+        required: true
+        default: 'data/TOTAL_RACE.xlsx'
+      horse_list:
+        description: '以逗號分隔的馬名'
+        required: true
+        default: '加州動員,遨遊武士,電訊巴打'
+      n:
+        description: '每匹馬取最近 N 場'
+        required: false
+        default: '8'
+      output_file:
+        description: '輸出 CSV 路徑'
+        required: false
+        default: 'outputs/horse_recent_8.csv'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run filter
+        env:
+          INPUT_FILE: ${{ github.event.inputs.input_file }}
+          HORSE_LIST: ${{ github.event.inputs.horse_list }}
+          N: ${{ github.event.inputs.n }}
+          OUTPUT_FILE: ${{ github.event.inputs.output_file }}
+        run: python filter_recent_n.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: horse-recent-${{ github.run_id }}
+          path: |
+            outputs/*.csv
+            *.csv
+          if-no-files-found: warn
