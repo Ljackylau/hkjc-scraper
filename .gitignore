@@ -212,3 +212,10 @@ __marimo__/
 
 # 可選：避免把本機 VS Code 設定推上來
 .vscode/
+
+# 允許追蹤 data/ 底下的資料檔
+!data/*.csv
+!data/*.xlsx
+
+# 忽略執行輸出
+outputs/
