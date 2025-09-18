@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project-specific (HKJC scraper)
+# 產生的結果檔，不進版控；不影響 GitHub Actions 上傳 artifact
+*.csv
+
+# 可選：避免把本機 VS Code 設定推上來
+.vscode/
