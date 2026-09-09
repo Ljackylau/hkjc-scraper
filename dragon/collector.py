@@ -81,7 +81,7 @@ def render(state):
 
 def render_chart(state):
     data=json.dumps(state,ensure_ascii=False)
-    return '''<!doctype html><meta charset="utf-8"><title>Dragon live pair signals</title>
+    return '''<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="15"><title>Dragon live pair signals</title>
 <style>body{font:14px system-ui;margin:24px;color:#17202a}h1{font-size:20px}section{margin:24px 0}svg{width:100%;max-width:1100px;height:360px;border-bottom:1px solid #ccd}.q{fill:#2878d0}.f{fill:#e58b2a}.both{stroke:#b48b00;stroke-width:4}.muted{fill:#68737d;font-size:12px}.lineq{stroke:#2878d0}.linef{stroke:#e58b2a}line{stroke:#d9dee3}.legend{margin:6px 0}.legend span{margin-right:16px}</style>
 <h1>Dragon T−60 → T−10 市場跌幅訊號</h1><p>柱＝合資格組合出現次數；線＝平均跌幅；金色粗框＝QIN／FCT 同時支持。唔代表實際入位機率。</p><div id="app"></div>
 <script>const state='''+data+''';const app=document.querySelector('#app');
@@ -93,7 +93,7 @@ def publish(state, push):
     ROOT.joinpath('chart.html').write_text(render_chart(state))
     if push:
         def git(*args): return subprocess.run(['git',*args],cwd=ROOT.parent,check=True,capture_output=True)
-        git('add','dragon/results.json','dragon/RESULTS.md')
+        git('add','dragon/results.json','dragon/RESULTS.md','dragon/chart.html')
         if subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT.parent).returncode:
             git('commit','-m','Update Dragon pair-drop results')
             for attempt in range(3):
