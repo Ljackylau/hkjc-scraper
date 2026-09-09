@@ -1,8 +1,8 @@
-name: Dragon T60-T10 Pair Drops
+name: Dragon All-Race Live Pair Signals
 on:
   workflow_dispatch:
   push:
-    paths: ['dragon/meeting.json', '.github/workflows/dragon-pairs.yml']
+    paths: ['dragon/meeting.json', 'dragon/collector.py', '.github/workflows/dragon-pairs.yml']
 permissions:
   contents: write
 concurrency:
