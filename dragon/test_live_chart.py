@@ -11,7 +11,9 @@ class LiveChartTest(unittest.TestCase):
             page.on('pageerror',lambda e: errors.append(str(e)))
             data={'date':'2099-09-09','venue':'HV','published_at':'2099-09-09T20:00:00+08:00','races':[{'race':7,'off_time':'22:15','status':'收集中','horse_numbers':[1,2,3],'pools':[]}]}
             page.route('https://raw.githubusercontent.com/**',lambda route:route.fulfill(json=data,headers={'access-control-allow-origin':'*'}))
-            page.goto(Path(__file__).with_name('live.html').as_uri())
+            target=Path(__file__).with_name('chart.html')
+            if not target.exists(): target=Path(__file__).with_name('live.html')
+            page.goto(target.as_uri())
             page.evaluate('localStorage.clear()'); page.reload()
             page.wait_for_selector('.race')
             data['published_at']='2099-09-09T20:01:00+08:00'
