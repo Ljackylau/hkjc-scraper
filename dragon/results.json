@@ -2530,106 +2530,20 @@
         11,
         12
       ],
-      "last_attempt": "2026-09-09T22:54:01.507349+08:00",
+      "last_attempt": "2026-09-09T22:55:01.511802+08:00",
       "errors": [],
       "pools": [
         {
           "pool": "QIN",
-          "pairs": [
-            {
-              "pair": "1-11",
-              "start": "57",
-              "end": "16",
-              "drop_pct": 71.9298245614035
-            },
-            {
-              "pair": "6-11",
-              "start": "95",
-              "end": "27",
-              "drop_pct": 71.57894736842105
-            },
-            {
-              "pair": "9-11",
-              "start": "75",
-              "end": "24",
-              "drop_pct": 68.0
-            },
-            {
-              "pair": "1-9",
-              "start": "90",
-              "end": "38",
-              "drop_pct": 57.77777777777778
-            },
-            {
-              "pair": "1-6",
-              "start": "87",
-              "end": "44",
-              "drop_pct": 49.42528735632184
-            },
-            {
-              "pair": "1-10",
-              "start": "77",
-              "end": "45",
-              "drop_pct": 41.55844155844156
-            },
-            {
-              "pair": "1-4",
-              "start": "24",
-              "end": "16",
-              "drop_pct": 33.333333333333336
-            }
-          ],
-          "horses": [
-            {
-              "horse": 1,
-              "count": 5,
-              "partners": 5,
-              "avg_drop_pct": 50.8,
-              "max_drop_pct": 71.93
-            },
-            {
-              "horse": 11,
-              "count": 3,
-              "partners": 3,
-              "avg_drop_pct": 70.5,
-              "max_drop_pct": 71.93
-            },
-            {
-              "horse": 6,
-              "count": 2,
-              "partners": 2,
-              "avg_drop_pct": 60.5,
-              "max_drop_pct": 71.58
-            },
-            {
-              "horse": 9,
-              "count": 2,
-              "partners": 2,
-              "avg_drop_pct": 62.89,
-              "max_drop_pct": 68.0
-            },
-            {
-              "horse": 4,
-              "count": 1,
-              "partners": 1,
-              "avg_drop_pct": 33.33,
-              "max_drop_pct": 33.33
-            },
-            {
-              "horse": 10,
-              "count": 1,
-              "partners": 1,
-              "avg_drop_pct": 41.56,
-              "max_drop_pct": 41.56
-            }
-          ],
-          "compared_pairs": 66,
+          "pairs": [],
+          "horses": [],
+          "compared_pairs": 0,
           "missing_at_end": [],
           "baseline_time": "2026-09-09T21:07:01.313778+08:00",
-          "final_time": "2026-09-09T22:54:01.499520+08:00",
+          "final_time": "2026-09-09T22:55:01.504677+08:00",
           "source_updated": "2026-09-09T22:53:00+08:00",
-          "fresh": true,
-          "comparison_ready": true,
+          "fresh": false,
+          "comparison_ready": false,
           "baseline_label": "首次成功新鮮取樣；非 T−60 比較",
           "current_odds": {
             "1-2": "62",
@@ -2702,243 +2616,15 @@
         },
         {
           "pool": "FCT",
-          "pairs": [
-            {
-              "pair": "6-11",
-              "start": "295",
-              "end": "69",
-              "drop_pct": 76.61016949152543
-            },
-            {
-              "pair": "11-1",
-              "start": "121",
-              "end": "29",
-              "drop_pct": 76.03305785123968
-            },
-            {
-              "pair": "11-6",
-              "start": "181",
-              "end": "45",
-              "drop_pct": 75.13812154696133
-            },
-            {
-              "pair": "1-11",
-              "start": "141",
-              "end": "37",
-              "drop_pct": 73.75886524822695
-            },
-            {
-              "pair": "11-9",
-              "start": "107",
-              "end": "41",
-              "drop_pct": 61.6822429906542
-            },
-            {
-              "pair": "11-8",
-              "start": "155",
-              "end": "68",
-              "drop_pct": 56.12903225806452
-            },
-            {
-              "pair": "1-6",
-              "start": "184",
-              "end": "85",
-              "drop_pct": 53.80434782608695
-            },
-            {
-              "pair": "1-9",
-              "start": "139",
-              "end": "66",
-              "drop_pct": 52.51798561151079
-            },
-            {
-              "pair": "11-12",
-              "start": "403",
-              "end": "199",
-              "drop_pct": 50.62034739454094
-            },
-            {
-              "pair": "1-10",
-              "start": "176",
-              "end": "90",
-              "drop_pct": 48.86363636363637
-            },
-            {
-              "pair": "6-1",
-              "start": "198",
-              "end": "105",
-              "drop_pct": 46.96969696969697
-            },
-            {
-              "pair": "9-11",
-              "start": "116",
-              "end": "62",
-              "drop_pct": 46.55172413793103
-            },
-            {
-              "pair": "11-3",
-              "start": "43",
-              "end": "24",
-              "drop_pct": 44.18604651162791
-            },
-            {
-              "pair": "3-9",
-              "start": "112",
-              "end": "64",
-              "drop_pct": 42.857142857142854
-            },
-            {
-              "pair": "6-9",
-              "start": "227",
-              "end": "136",
-              "drop_pct": 40.08810572687225
-            },
-            {
-              "pair": "8-11",
-              "start": "159",
-              "end": "98",
-              "drop_pct": 38.36477987421384
-            },
-            {
-              "pair": "11-5",
-              "start": "362",
-              "end": "225",
-              "drop_pct": 37.84530386740332
-            },
-            {
-              "pair": "9-1",
-              "start": "126",
-              "end": "79",
-              "drop_pct": 37.301587301587304
-            },
-            {
-              "pair": "10-1",
-              "start": "161",
-              "end": "101",
-              "drop_pct": 37.267080745341616
-            },
-            {
-              "pair": "6-4",
-              "start": "111",
-              "end": "70",
-              "drop_pct": 36.93693693693694
-            },
-            {
-              "pair": "4-1",
-              "start": "47",
-              "end": "31",
-              "drop_pct": 34.04255319148936
-            },
-            {
-              "pair": "9-3",
-              "start": "124",
-              "end": "83",
-              "drop_pct": 33.064516129032256
-            },
-            {
-              "pair": "4-12",
-              "start": "231",
-              "end": "156",
-              "drop_pct": 32.467532467532465
-            },
-            {
-              "pair": "3-6",
-              "start": "91",
-              "end": "62",
-              "drop_pct": 31.86813186813187
-            },
-            {
-              "pair": "1-4",
-              "start": "68",
-              "end": "47",
-              "drop_pct": 30.88235294117647
-            },
-            {
-              "pair": "3-11",
-              "start": "39",
-              "end": "27",
-              "drop_pct": 30.76923076923077
-            }
-          ],
-          "horses": [
-            {
-              "horse": 11,
-              "count": 12,
-              "partners": 7,
-              "avg_drop_pct": 55.64,
-              "max_drop_pct": 76.61
-            },
-            {
-              "horse": 1,
-              "count": 10,
-              "partners": 5,
-              "avg_drop_pct": 49.14,
-              "max_drop_pct": 76.03
-            },
-            {
-              "horse": 6,
-              "count": 7,
-              "partners": 5,
-              "avg_drop_pct": 51.63,
-              "max_drop_pct": 76.61
-            },
-            {
-              "horse": 9,
-              "count": 7,
-              "partners": 4,
-              "avg_drop_pct": 44.87,
-              "max_drop_pct": 61.68
-            },
-            {
-              "horse": 3,
-              "count": 5,
-              "partners": 3,
-              "avg_drop_pct": 36.55,
-              "max_drop_pct": 44.19
-            },
-            {
-              "horse": 4,
-              "count": 4,
-              "partners": 3,
-              "avg_drop_pct": 33.58,
-              "max_drop_pct": 36.94
-            },
-            {
-              "horse": 8,
-              "count": 2,
-              "partners": 1,
-              "avg_drop_pct": 47.25,
-              "max_drop_pct": 56.13
-            },
-            {
-              "horse": 10,
-              "count": 2,
-              "partners": 1,
-              "avg_drop_pct": 43.07,
-              "max_drop_pct": 48.86
-            },
-            {
-              "horse": 12,
-              "count": 2,
-              "partners": 2,
-              "avg_drop_pct": 41.54,
-              "max_drop_pct": 50.62
-            },
-            {
-              "horse": 5,
-              "count": 1,
-              "partners": 1,
-              "avg_drop_pct": 37.85,
-              "max_drop_pct": 37.85
-            }
-          ],
-          "compared_pairs": 132,
+          "pairs": [],
+          "horses": [],
+          "compared_pairs": 0,
           "missing_at_end": [],
           "baseline_time": "2026-09-09T21:07:01.385207+08:00",
-          "final_time": "2026-09-09T22:54:01.506278+08:00",
+          "final_time": "2026-09-09T22:55:01.511219+08:00",
           "source_updated": "2026-09-09T22:53:00+08:00",
-          "fresh": true,
-          "comparison_ready": true,
+          "fresh": false,
+          "comparison_ready": false,
           "baseline_label": "首次成功新鮮取樣；非 T−60 比較",
           "current_odds": {
             "2-1": "143",
@@ -3078,5 +2764,5 @@
       ]
     }
   ],
-  "published_at": "2026-09-09T22:54:22.460067+08:00"
+  "published_at": "2026-09-09T22:55:23.793168+08:00"
 }
