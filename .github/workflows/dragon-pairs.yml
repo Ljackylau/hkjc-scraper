@@ -2,7 +2,7 @@ name: Dragon FCT Live Signals
 on:
   workflow_dispatch:
   push:
-    paths: ['dragon/meeting.json', 'dragon/collector.py', 'dragon/chart.html', '.github/workflows/dragon-pairs.yml']
+    paths: ['dragon/meeting.json', 'dragon/collector.py', 'dragon/chart.html', 'dragon/test_*.py', '.github/workflows/dragon-pairs.yml']
 permissions:
   contents: write
 concurrency:
