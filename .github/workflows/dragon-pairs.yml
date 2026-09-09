@@ -1,8 +1,8 @@
-name: Dragon All-Race Live Pair Signals
+name: Dragon FCT Live Signals
 on:
   workflow_dispatch:
   push:
-    paths: ['dragon/meeting.json', 'dragon/collector.py', '.github/workflows/dragon-pairs.yml']
+    paths: ['dragon/meeting.json', 'dragon/collector.py', 'dragon/chart.html', '.github/workflows/dragon-pairs.yml']
 permissions:
   contents: write
 concurrency:
@@ -24,7 +24,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-      - name: Collect and publish every minute
+      - name: Collect FCT every minute and publish immediately
         run: python dragon/collector.py --push
       - uses: actions/upload-artifact@v4
         if: always()
