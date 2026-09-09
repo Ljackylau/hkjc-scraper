@@ -24,7 +24,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-      - name: Collect and publish each race
+      - name: Collect and publish every minute
         run: python dragon/collector.py --push
       - uses: actions/upload-artifact@v4
         if: always()
@@ -35,4 +35,3 @@ jobs:
             dragon/results.json
             dragon/RESULTS.md
             dragon/chart.html
-

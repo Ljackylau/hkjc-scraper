@@ -1,5 +1,27 @@
-<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="15"><title>Dragon live pair signals</title>
-<style>body{font:14px system-ui;margin:24px;color:#17202a}h1{font-size:20px}section{margin:24px 0}svg{width:100%;max-width:1100px;height:360px;border-bottom:1px solid #ccd}.q{fill:#2878d0}.f{fill:#e58b2a}.both{stroke:#b48b00;stroke-width:4}.muted{fill:#68737d;font-size:12px}.lineq{stroke:#2878d0}.linef{stroke:#e58b2a}line{stroke:#d9dee3}.legend{margin:6px 0}.legend span{margin-right:16px}</style>
-<h1>Dragon T−60 → T−10 市場跌幅訊號</h1><p>柱＝合資格組合出現次數；線＝平均跌幅；金色粗框＝QIN／FCT 同時支持。唔代表實際入位機率。</p><div id="app"></div>
-<script>const state={"date": "2026-09-09", "venue": "HV", "races": [{"race": 1, "status": "錯過 T−60；冇結果"}, {"race": 2, "status": "錯過 T−60；冇結果"}, {"race": 3, "status": "錯過 T−60；冇結果"}, {"race": 4, "status": "錯過 T−60；冇結果"}, {"race": 5, "status": "錯過 T−60；冇結果"}, {"race": 6, "status": "錯過 T−60；冇結果"}, {"race": 7, "status": "等候 T−60"}, {"race": 8, "status": "等候 T−60"}]};const app=document.querySelector('#app');
-function chart(r){let q=(r.pools||[]).find(x=>x.pool==='QIN')||{horses:[]},f=(r.pools||[]).find(x=>x.pool==='FCT')||{horses:[]};let all=[...new Set([...q.horses,...f.horses].map(x=>x.horse))].sort((a,b)=>a-b),qm=Object.fromEntries(q.horses.map(x=>[x.horse,x])),fm=Object.fromEntries(f.horses.map(x=>[x.horse,x])),mx=Math.max(1,...all.map(h=>Math.max(qm[h]?.count||0,fm[h]?.count||0))),svg=`<svg viewBox="0 0 1000 360" role="img" aria-label="R${r.race} 馬號訊號圖"><line x1="55" y1="300" x2="970" y2="300"/>`;all.forEach((h,i)=>{let x=75+i* (890/Math.max(1,all.length-1)),a=qm[h],b=fm[h],both=a&&b,scale=220/mx;svg+=`<text x="${x}" y="325" text-anchor="middle">${h}</text>`;if(a)svg+=`<rect class="q ${both?'both':''}" x="${x-12}" y="${300-a.count*scale}" width="10" height="${a.count*scale}" data-tooltip="${h}號 QIN ${a.count}次；平均跌幅 ${a.avg_drop_pct}%"/>`;if(b)svg+=`<rect class="f ${both?'both':''}" x="${x+2}" y="${300-b.count*scale}" width="10" height="${b.count*scale}" data-tooltip="${h}號 FCT ${b.count}次；平均跌幅 ${b.avg_drop_pct}%"/>`;if(a)svg+=`<circle class="lineq" cx="${x-7}" cy="${300-Math.min(100,a.avg_drop_pct)*2}" r="3"/>`;if(b)svg+=`<circle class="linef" cx="${x+7}" cy="${300-Math.min(100,b.avg_drop_pct)*2}" r="3"/>`});return `<section><h2>R${r.race}｜${r.status}</h2><div class="legend"><span class="q">■ QIN 次數</span><span class="f">■ FCT 次數</span><span>● 平均跌幅％</span></div>${svg}</svg></section>`}state.races.forEach(r=>app.insertAdjacentHTML('beforeend',chart(r)));</script>
+<!doctype html>
+<html lang="zh-HK"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dragon 即時組合訊號</title>
+<style>body{font:16px system-ui;background:#0c1423;color:#e5edf8;margin:0;padding:24px}main{max-width:1200px;margin:auto}section{background:#152137;border:1px solid #30405a;border-radius:16px;padding:20px;margin:20px 0}p{color:#aebdd2;line-height:1.6}svg{width:100%;min-width:620px} .scroll{overflow:auto}text{fill:#aebdd2;font-size:12px}.warn{color:#ffca69}h1{font-size:25px}small{color:#aebdd2}</style>
+<main><h1>Dragon｜即時組合跌幅</h1><p>每場一圖 · 藍色 QIN／橙色 FCT · 柱＝跌幅 &gt;30% 組合次數 · 點＝該等組合平均跌幅（右軸）<br>金色底＝兩池都有訊號；只係市場訊號，唔係入前三機率。FCT 正反方向分開計。無資料唔等於零。</p><p id="health">正在讀取數據…</p><div id="app"></div></main>
+<script>
+const url='https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/main/dragon/results.json';
+const esc=x=>String(x??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const stamp=x=>x?new Date(x).toLocaleString('zh-HK',{timeZone:'Asia/Hong_Kong',hour12:false}):'未有';
+let latest;
+function render(s){
+document.querySelector('#app').innerHTML=s.races.map(r=>{
+const pools=r.pools||[],q=pools.find(p=>p.pool==='QIN'),f=pools.find(p=>p.pool==='FCT');
+const hs=[...new Set([...(r.horse_numbers||[]),...pools.flatMap(p=>p.horses.map(h=>h.horse))])].sort((a,b)=>a-b);
+const mx=Math.max(1,...pools.flatMap(p=>p.horses.map(h=>h.count)));
+let svg='<svg viewBox="0 0 1000 340" role="img" aria-label="馬號組合次數及平均跌幅">';
+for(let i=0;i<=4;i++){let y=270-i*55;svg+='<path d="M50 '+y+'H940" stroke="#30405a"/><text x="8" y="'+(y+4)+'">'+(mx*i/4).toFixed(1)+'</text><text x="948" y="'+(y+4)+'">'+i*25+'%</text>'}
+hs.forEach((h,i)=>{const x=65+(i+.5)*860/hs.length, w=Math.min(17,280/hs.length),qh=q?.horses.find(a=>a.horse===h),fh=f?.horses.find(a=>a.horse===h);
+if(qh&&fh)svg+='<rect x="'+(x-w-5)+'" y="40" width="'+(2*w+14)+'" height="240" fill="#c9a542" opacity=".14"/>';
+svg+='<text x="'+x+'" y="300" text-anchor="middle">'+h+'</text>';
+[q,f].forEach((p,j)=>{if(!p)return;const a=p.horses.find(a=>a.horse===h),n=a?.count||0,c=j?'#f5a04c':'#58a9ff',xx=x+(j?3:-w-3);svg+='<rect x="'+xx+'" y="'+(270-n/mx*220)+'" width="'+w+'" height="'+(n/mx*220)+'" fill="'+c+'"><title>'+h+'號 '+p.pool+'：'+n+'次；平均跌幅 '+(a?.avg_drop_pct??'—')+'%</title></rect>';if(a)svg+='<circle cx="'+(xx+w/2)+'" cy="'+(270-a.avg_drop_pct*2.2)+'" r="4" fill="'+c+'" stroke="white"><title>平均跌幅 '+a.avg_drop_pct+'%</title></circle>'});
+});svg+='<text x="470" y="330">馬號</text></svg>';
+let info=pools.map(p=>{let age=(Date.now()-Date.parse(p.final_time))/1000;return '<div class="'+(r.status==='收集中'&&age>150?'warn':'')+'">'+esc(p.pool)+'｜取樣 '+esc(stamp(p.final_time))+'｜來源 '+esc(stamp(p.source_updated))+'｜'+p.compared_pairs+' 組可比較'+(r.status==='收集中'&&age>150?' · 數據過期':'')+'</div>'}).join('');
+return '<section><h2>R'+r.race+' · '+esc(r.status)+'</h2><small>'+info+'</small>'+(hs.length?'<div class="scroll">'+svg+'</div>':'<p>未有可比較快照；唔會用模擬數據填圖。</p>')+'</section>';
+}).join('');
+}
+async function tick(){try{const res=await fetch(url+'?t='+Date.now(),{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);const s=await res.json();if(!Array.isArray(s.races))throw Error('數據格式錯誤');latest=s;render(s);document.querySelector('#health').textContent='賽日 '+s.date+' '+s.venue+'｜最後發布 '+stamp(s.published_at)+'｜每 15 秒查詢；收集目標 60 秒一次，網絡可能延遲。'}catch(e){document.querySelector('#health').textContent='讀取失敗：'+e.message+'；保留舊圖，唔代表即時數據。';if(latest)render(latest)}finally{setTimeout(tick,15000)}}tick();
+</script></html>

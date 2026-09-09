@@ -88,12 +88,12 @@ def render_chart(state):
 function chart(r){let q=(r.pools||[]).find(x=>x.pool==='QIN')||{horses:[]},f=(r.pools||[]).find(x=>x.pool==='FCT')||{horses:[]};let all=[...new Set([...q.horses,...f.horses].map(x=>x.horse))].sort((a,b)=>a-b),qm=Object.fromEntries(q.horses.map(x=>[x.horse,x])),fm=Object.fromEntries(f.horses.map(x=>[x.horse,x])),mx=Math.max(1,...all.map(h=>Math.max(qm[h]?.count||0,fm[h]?.count||0))),svg=`<svg viewBox="0 0 1000 360" role="img" aria-label="R${r.race} 馬號訊號圖"><line x1="55" y1="300" x2="970" y2="300"/>`;all.forEach((h,i)=>{let x=75+i* (890/Math.max(1,all.length-1)),a=qm[h],b=fm[h],both=a&&b,scale=220/mx;svg+=`<text x="${x}" y="325" text-anchor="middle">${h}</text>`;if(a)svg+=`<rect class="q ${both?'both':''}" x="${x-12}" y="${300-a.count*scale}" width="10" height="${a.count*scale}" data-tooltip="${h}號 QIN ${a.count}次；平均跌幅 ${a.avg_drop_pct}%"/>`;if(b)svg+=`<rect class="f ${both?'both':''}" x="${x+2}" y="${300-b.count*scale}" width="10" height="${b.count*scale}" data-tooltip="${h}號 FCT ${b.count}次；平均跌幅 ${b.avg_drop_pct}%"/>`;if(a)svg+=`<circle class="lineq" cx="${x-7}" cy="${300-Math.min(100,a.avg_drop_pct)*2}" r="3"/>`;if(b)svg+=`<circle class="linef" cx="${x+7}" cy="${300-Math.min(100,b.avg_drop_pct)*2}" r="3"/>`});return `<section><h2>R${r.race}｜${r.status}</h2><div class="legend"><span class="q">■ QIN 次數</span><span class="f">■ FCT 次數</span><span>● 平均跌幅％</span></div>${svg}</svg></section>`}state.races.forEach(r=>app.insertAdjacentHTML('beforeend',chart(r)));</script>'''
 
 def publish(state, push):
+    state['published_at']=now().isoformat()
     ROOT.joinpath('results.json').write_text(json.dumps(state,ensure_ascii=False,indent=2))
     ROOT.joinpath('RESULTS.md').write_text(render(state))
-    ROOT.joinpath('chart.html').write_text(render_chart(state))
     if push:
         def git(*args): return subprocess.run(['git',*args],cwd=ROOT.parent,check=True,capture_output=True)
-        git('add','dragon/results.json','dragon/RESULTS.md','dragon/chart.html')
+        git('add','dragon/results.json','dragon/RESULTS.md')
         if subprocess.run(['git','diff','--cached','--quiet'],cwd=ROOT.parent).returncode:
             git('commit','-m','Update Dragon pair-drop results')
             for attempt in range(3):
@@ -115,7 +115,8 @@ async def collect(config, push):
             start,stop=off-timedelta(minutes=60),off-timedelta(minutes=10)
             pages={}; bases={}; finals={}; errors=[]
             async def save():
-                async with lock: publish(state,push)
+                async with lock:
+                    await asyncio.to_thread(publish,json.loads(json.dumps(state)),push)
             if now()>start+timedelta(seconds=30):
                 race['status']='錯過 T−60；冇結果'; await save(); return
             await asyncio.sleep(max(0,(start-now()).total_seconds()-45))
@@ -127,6 +128,7 @@ async def collect(config, push):
                 await asyncio.sleep(max(0,(start-now()).total_seconds()))
                 race['status']='收集中'; await save()
                 while now()<=stop:
+                    cycle_start=now()
                     for pool,page in pages.items():
                         if now()>stop: break
                         try:
@@ -141,7 +143,19 @@ async def collect(config, push):
                         except Exception as e: errors.append(type(e).__name__+': '+str(e)[:200])
                     if now()>start+timedelta(seconds=30) and len(bases)<2:
                         race['status']='起點資料缺漏／來源時間未能核實'; break
-                    await asyncio.sleep(min(10,max(0,(stop-now()).total_seconds())))
+                    race['pools']=[]
+                    race['horse_numbers']=sorted({int(h) for s in finals.values() for k in s['odds'] for h in k.split('-')})
+                    race['last_attempt']=now().isoformat()
+                    for pool in pages:
+                        b,f=bases.get(pool),finals.get(pool)
+                        if b and f:
+                            result=compare(b['odds'],f['odds'],pool)
+                            result.update(baseline_time=b['captured'],final_time=f['captured'],source_updated=f['source_updated'])
+                            race['pools'].append(result)
+                    await save()
+                    target=min(cycle_start+timedelta(seconds=60),stop-timedelta(seconds=5))
+                    if now()>=stop-timedelta(seconds=5): break
+                    await asyncio.sleep(max(0,(target-now()).total_seconds()))
                 race['pools']=[]
                 for pool in pages:
                     b,f=bases.get(pool),finals.get(pool)
@@ -168,4 +182,3 @@ if __name__=='__main__':
     if config['venue'] not in ('HV','ST'): raise ValueError('Invalid venue')
     for clock in config['times']: datetime.strptime(clock,'%H:%M')
     asyncio.run(collect(config,args.push))
-
