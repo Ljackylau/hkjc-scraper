@@ -60,7 +60,7 @@ def snapshot(raw, pool, captured):
 
 def render(state):
     lines=['# Dragon 組合跌幅結果','',f"賽日：{state['date']}　場地：{state['venue']}",'',
-    'T−60 至 T−10；跌幅嚴格大過 30%。馬號次數係組合出現次數，唔係入位機率。',
+    '首次新鮮取樣至最新資料，非 T−60 比較；跌幅嚴格大過 30%。馬號次數唔係入位機率。',
     '時間容差：起點後最多 30 秒；終點前最多 30 秒。用原定開跑時間，延遲開跑唔會自動改時間。','']
     for race in state['races']:
         lines += [f"## R{race['race']} — {race['status']}",'']
@@ -102,76 +102,76 @@ def publish(state, push):
                     if attempt==2: raise
                     git('pull','--rebase')
 
+def live_pool(pool, baseline, current):
+    valid=bool(baseline and current['fresh'] and baseline['captured'] != current['captured'])
+    result=compare(baseline['odds'],current['odds'],pool) if valid else compare({}, {}, pool)
+    result.update(baseline_time=baseline['captured'] if baseline else None,
+                  final_time=current['captured'],source_updated=current['source_updated'],
+                  fresh=current['fresh'],comparison_ready=valid,
+                  baseline_label='首次成功新鮮取樣；非 T−60 比較',
+                  current_odds=current['odds'])
+    return result
+
 async def collect(config, push):
     from playwright.async_api import async_playwright
-    state={'date':config['date'],'venue':config['venue'],'races':[{'race':i+1,'status':'等候 T−60'} for i in range(len(config['times']))]}
-    publish(state,push)
-    lock=asyncio.Lock()
+    state={'date':config['date'],'venue':config['venue'],'races':[{'race':i+1,'status':'正在開啟'} for i in range(len(config['times']))]}
+    saved=ROOT.joinpath('results.json')
+    if saved.exists():
+        previous=json.loads(saved.read_text())
+        if previous.get('date')==config['date'] and previous.get('venue')==config['venue']:
+            for race in state['races']:
+                prior=next((r for r in previous.get('races',[]) if r['race']==race['race']),{})
+                race.update(prior)
+                race['status']='正在重新連接'
     async with async_playwright() as p:
         browser=await p.chromium.launch()
         context=await browser.new_context(timezone_id='Asia/Hong_Kong',locale='zh-HK')
         async def race_job(race, clock):
             off=datetime.fromisoformat(config['date']+'T'+clock).replace(tzinfo=HK)
-            start,stop=off-timedelta(minutes=60),off-timedelta(minutes=10)
-            pages={}; bases={}; finals={}; errors=[]
-            async def save():
-                async with lock:
-                    await asyncio.to_thread(publish,json.loads(json.dumps(state)),push)
-            if now()>start+timedelta(seconds=30):
-                race['status']='錯過 T−60；冇結果'; await save(); return
-            await asyncio.sleep(max(0,(start-now()).total_seconds()-45))
+            stop=max(off+timedelta(minutes=15),now()+timedelta(minutes=3))
+            pages={}; bases=race.setdefault('baselines',{}); errors=[]
             try:
-                for pool,route in [('QIN','wpq'),('FCT','fct')]:
-                    page=await context.new_page(); pages[pool]=page
-                    await page.goto(f"https://bet.hkjc.com/ch/racing/{route}/{config['date']}/{config['venue']}/{race['race']}",wait_until='domcontentloaded',timeout=40000)
-                    await page.locator(f'[id^="qb_{pool}_"]').first.wait_for(timeout=30000)
-                await asyncio.sleep(max(0,(start-now()).total_seconds()))
-                race['status']='收集中'; await save()
-                while now()<=stop:
+                while now()<stop:
                     cycle_start=now()
-                    for pool,page in pages.items():
-                        if now()>stop: break
+                    for pool,route in [('QIN','wpq'),('FCT','fct')]:
                         try:
-                            raw=await page.evaluate(DOM); stamp=now()
-                            if stamp>stop: continue
-                            s=snapshot(raw,pool,stamp)
+                            page=pages.get(pool)
+                            if page is None:
+                                page=await context.new_page()
+                                pages[pool]=page
+                                await page.goto(f"https://bet.hkjc.com/ch/racing/{route}/{config['date']}/{config['venue']}/{race['race']}",wait_until='domcontentloaded',timeout=25000)
+                            raw=await page.evaluate(DOM)
+                            s=snapshot(raw,pool,now())
                             with ROOT.joinpath(f"raw-R{race['race']}.jsonl").open('a') as f:
-                                f.write(json.dumps({'pool':pool,**s},ensure_ascii=False)+'\n')
-                            if s['fresh'] and s['odds']:
-                                if pool not in bases and stamp<=start+timedelta(seconds=30): bases[pool]=s
-                                finals[pool]=s
-                        except Exception as e: errors.append(type(e).__name__+': '+str(e)[:200])
-                    if now()>start+timedelta(seconds=30) and len(bases)<2:
-                        race['status']='起點資料缺漏／來源時間未能核實'; break
-                    race['pools']=[]
-                    race['horse_numbers']=sorted({int(h) for s in finals.values() for k in s['odds'] for h in k.split('-')})
+                                f.write(json.dumps({'pool':pool,**s},ensure_ascii=False)+'\\n')
+                            if s['odds']:
+                                if s['fresh'] and pool not in bases: bases[pool]=s
+                                result=live_pool(pool,bases.get(pool),s)
+                                race['pools']=[x for x in race.get('pools',[]) if x['pool']!=pool]+[result]
+                        except Exception as e:
+                            errors.append(type(e).__name__+': '+str(e)[:200])
+                            page=pages.pop(pool,None)
+                            if page: await page.close()
+                    race['horse_numbers']=sorted({int(h) for s in race.get('pools',[]) for k in s.get('current_odds',{}) for h in k.split('-')})
                     race['last_attempt']=now().isoformat()
-                    for pool in pages:
-                        b,f=bases.get(pool),finals.get(pool)
-                        if b and f:
-                            result=compare(b['odds'],f['odds'],pool)
-                            result.update(baseline_time=b['captured'],final_time=f['captured'],source_updated=f['source_updated'])
-                            race['pools'].append(result)
-                    await save()
-                    target=min(cycle_start+timedelta(seconds=60),stop-timedelta(seconds=5))
-                    if now()>=stop-timedelta(seconds=5): break
-                    await asyncio.sleep(max(0,(target-now()).total_seconds()))
-                race['pools']=[]
-                for pool in pages:
-                    b,f=bases.get(pool),finals.get(pool)
-                    if endpoint_ok(b,f,start,stop):
-                        result=compare(b['odds'],f['odds'],pool)
-                        result.update(baseline_time=b['captured'],final_time=f['captured'])
-                        race['pools'].append(result)
-                race['status']='完成' if len(race['pools'])==2 else '資料不足；未完成兩池比較'
-            except Exception as e:
-                race['status']='收集失敗'; errors.append(type(e).__name__+': '+str(e)[:200])
+                    race['errors']=errors[-5:]
+                    race['status']='收集中' if race.get('pools') else '暫無數據；每分鐘重試'
+                    await asyncio.sleep(max(0,min(60-(now()-cycle_start).total_seconds(),(stop-now()).total_seconds())))
+                race['status']='已停止取樣；保留最後資料' if race.get('pools') else '暫無數據；本次取樣已結束'
             finally:
-                race['errors']=errors[-5:]
                 for page in pages.values(): await page.close()
-                await save()
-        await asyncio.gather(*(race_job(r,t) for r,t in zip(state['races'],config['times'])))
-        await browser.close()
+        tasks=[asyncio.create_task(race_job(r,t)) for r,t in zip(state['races'],config['times'])]
+        try:
+            while any(not t.done() for t in tasks):
+                await asyncio.to_thread(publish,json.loads(json.dumps(state)),push)
+                await asyncio.wait(tasks,timeout=60,return_when=asyncio.ALL_COMPLETED)
+            await asyncio.gather(*tasks)
+            await asyncio.to_thread(publish,json.loads(json.dumps(state)),push)
+        finally:
+            for t in tasks:
+                if not t.done(): t.cancel()
+            await asyncio.gather(*tasks,return_exceptions=True)
+            await browser.close()
     summary=os.getenv('GITHUB_STEP_SUMMARY')
     if summary: Path(summary).write_text(render(state))
 
