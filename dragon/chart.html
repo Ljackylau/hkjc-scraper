@@ -24,5 +24,35 @@ let info=pools.map(p=>{let age=(Date.now()-Date.parse(p.final_time))/1000;return
 return '<section><h2>R'+r.race+' · '+esc(r.status)+'</h2><small>'+info+'</small>'+(hs.length?'<div class="scroll">'+svg+'</div>':'<p>未有可比較快照；唔會用模擬數據填圖。</p>')+odds+'</section>';
 }).join('');
 }
-async function tick(){try{const res=await fetch(url+'?t='+Date.now(),{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);const s=await res.json();if(!Array.isArray(s.races))throw Error('數據格式錯誤');latest=s;render(s);document.querySelector('#health').textContent='賽日 '+s.date+' '+s.venue+'｜最後發布 '+stamp(s.published_at)+'｜每 15 秒查詢；收集目標 60 秒一次，網絡可能延遲。'}catch(e){document.querySelector('#health').textContent='讀取失敗：'+e.message+'；保留舊圖，唔代表即時數據。';if(latest)render(latest)}finally{setTimeout(tick,15000)}}tick();
+let apiChecked=0;
+async function getData(target,headers={}){
+ const res=await fetch(target,{cache:'no-store',headers,signal:AbortSignal.timeout(12000)});
+ if(!res.ok)throw Error('HTTP '+res.status);
+ const data=await res.json();
+ if(!Array.isArray(data.races)||!Number.isFinite(Date.parse(data.published_at)))throw Error('無有效發布時間');
+ return data;
+}
+async function tick(){
+ let problem='';
+ try{
+  let s=await getData(url+'?refresh='+crypto.randomUUID());
+  if(Date.now()-Date.parse(s.published_at)>150000 && Date.now()-apiChecked>180000){
+   apiChecked=Date.now();
+   try{
+    const fresh=await getData('https://api.github.com/repos/Ljackylau/hkjc-scraper/contents/dragon/results.json?ref=main&refresh='+crypto.randomUUID(),{'Accept':'application/vnd.github.raw+json'});
+    if(Date.parse(fresh.published_at)>Date.parse(s.published_at))s=fresh;
+   }catch(e){problem='｜備援讀取失敗：'+e.message}
+  }
+  if(!latest||Date.parse(s.published_at)>=Date.parse(latest.published_at))latest=s;
+ }catch(e){problem='｜讀取失敗：'+e.message}
+ const health=document.querySelector('#health');
+ if(latest){
+  render(latest);
+  const age=Math.max(0,Math.floor((Date.now()-Date.parse(latest.published_at))/1000));
+  health.className=age>150||problem?'warn':'';
+  health.textContent='賽日 '+latest.date+' '+latest.venue+'｜最後發布 '+stamp(latest.published_at)+'｜數據距今 '+age+' 秒｜'+(age>150?'更新延遲／已停止，唔係即時資料':'已讀取最新結果')+'｜每 15 秒查詢'+problem;
+ }else{health.className='warn';health.textContent='未能取得有效數據'+problem}
+ setTimeout(tick,15000);
+}
+tick();
 </script></html>
