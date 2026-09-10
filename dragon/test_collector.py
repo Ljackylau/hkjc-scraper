@@ -1,10 +1,20 @@
 import unittest
 from datetime import datetime, timedelta
-from collector import pairs, compare, endpoint_ok, snapshot, top_three, HK
+from collector import pairs, compare, endpoint_ok, snapshot, top_three, record_due_snapshots, HK
 class TestCollector(unittest.TestCase):
     def test_top_three_uses_average_drop(self):
         result={'horses':[{'horse':1,'avg_drop_pct':35,'count':4},{'horse':2,'avg_drop_pct':51,'count':1},{'horse':3,'avg_drop_pct':44,'count':2},{'horse':4,'avg_drop_pct':40,'count':9}]}
         self.assertEqual([x['horse'] for x in top_three(result)],[2,3,4])
+    def test_automatic_snapshots_record_once(self):
+        off=datetime(2026,9,9,22,tzinfo=HK); race={}
+        result={'final_time':(off-timedelta(minutes=10)).isoformat(),'source_updated':'x','top3':[{'horse':2,'score':51}]}
+        record_due_snapshots(race,result,off,off-timedelta(minutes=10))
+        self.assertEqual(race['snapshots']['T−10']['top3'][0]['horse'],2)
+        later=dict(result,top3=[{'horse':9,'score':99}])
+        record_due_snapshots(race,later,off,off-timedelta(minutes=9))
+        self.assertEqual(race['snapshots']['T−10']['top3'][0]['horse'],2)
+        record_due_snapshots(race,later,off,off-timedelta(minutes=3))
+        self.assertIn('T−3',race['snapshots'])
     def test_strict_threshold(self):
         r=compare({'1-2':'100','1-3':'100'},{'1-2':'70','1-3':'69.9'},'QIN')
         self.assertEqual([x['pair'] for x in r['pairs']],['1-3'])

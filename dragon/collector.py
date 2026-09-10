@@ -109,6 +109,17 @@ def live_pool(pool, baseline, current):
     result['top3']=top_three(result)
     return result
 
+def record_due_snapshots(race, result, off, captured):
+    """Persist the first sample within 90 seconds after each target time."""
+    saved=race.setdefault('snapshots',{})
+    for label,minutes in [('T−10',10),('T−3',3)]:
+        target=off-timedelta(minutes=minutes)
+        if label not in saved and target <= captured <= target+timedelta(seconds=90):
+            saved[label]={'label':label,'target_time':target.isoformat(),
+                          'captured':result['final_time'],
+                          'source_updated':result['source_updated'],
+                          'top3':result['top3']}
+
 async def collect(config, push):
     from playwright.async_api import async_playwright
     state={'date':config['date'],'venue':config['venue'],'races':[{'race':i+1,'off_time':t,'status':'正在開啟'} for i,t in enumerate(config['times'])]}
@@ -148,6 +159,7 @@ async def collect(config, push):
                                 if pool not in bases: bases[pool]=s
                                 result=live_pool(pool,bases.get(pool),s)
                                 race['pools']=[result]
+                                record_due_snapshots(race,result,off,datetime.fromisoformat(s['captured']))
                                 if result['comparison_ready']:
                                     point={'captured':s['captured'],'source_updated':s['source_updated'],
                                            'top3':result['top3']}

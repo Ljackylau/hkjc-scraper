@@ -16,7 +16,7 @@ button{border:0;border-radius:9px;padding:9px 12px;margin:0 7px 7px 0;background
 <script>
 const RAW='https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/main/dragon/results.json';
 const API='https://api.github.com/repos/Ljackylau/hkjc-scraper/contents/dragon/results.json?ref=main';
-const STATE_KEY='dragon-fct-last-state-v3', SHOT_KEY='dragon-fct-shots-v3';
+const STATE_KEY='dragon-fct-last-state-v4';
 const esc=x=>String(x??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const stamp=x=>x?new Date(x).toLocaleString('zh-HK',{timeZone:'Asia/Hong_Kong',hour12:false}):'未有';
 let latest=read(STATE_KEY,null), apiChecked=0;
@@ -24,18 +24,11 @@ function read(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{retur
 function write(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}
 function fct(r){return (r.pools||[]).find(p=>p.pool==='FCT')}
 function top3(p){return [...(p?.horses||[])].sort((a,b)=>b.avg_drop_pct-a.avg_drop_pct||b.count-a.count||a.horse-b.horse).slice(0,3)}
-function key(s,r,label){return s.date+'-'+s.venue+'-R'+r.race+'-'+label}
-function minutesToOff(s,r,time){const off=new Date(s.date+'T'+r.off_time+':00+08:00');return Math.round((off-new Date(time))/60000)}
-function capture(raceNo,label){
- const r=latest.races.find(x=>x.race===raceNo),p=fct(r),rank=top3(p); if(!rank.length)return;
- const shot={label,captured:p.final_time,source_updated:p.source_updated,minutes_to_off:minutesToOff(latest,r,p.final_time),top3:rank.map(h=>({horse:h.horse,score:h.avg_drop_pct}))};
- const shots=read(SHOT_KEY,{});shots[key(latest,r,label)]=shot;write(SHOT_KEY,shots);render(latest);
-}
 function shotCard(s,r,label){
- const z=read(SHOT_KEY,{})[key(s,r,label)];
- if(!z)return '<div class="shot"><b>'+label+' 快照</b><p class="muted">尚未保存</p></div>';
- return '<div class="shot"><b>'+label+' 快照</b><div class="muted">實際 '+esc(stamp(z.captured))+'｜開跑前 '+esc(z.minutes_to_off)+' 分鐘</div>'+
- z.top3.map((h,i)=>'<div class="rank">'+(i+1)+'. '+h.horse+'號 <span class="score">'+Number(h.score).toFixed(2)+'%</span></div>').join('')+'</div>';
+ const z=(r.snapshots||{})[label];
+ if(!z)return '<div class="shot"><b>'+label+' 自動快照</b><p class="muted">等候指定時間自動保存</p></div>';
+ return '<div class="shot"><b>'+label+' 自動快照</b><div class="muted">目標 '+esc(stamp(z.target_time))+'｜實際 '+esc(stamp(z.captured))+'｜來源 '+esc(stamp(z.source_updated))+'</div>'+
+ (z.top3.length?z.top3.map((h,i)=>'<div class="rank">'+(i+1)+'. '+h.horse+'號 <span class="score">'+Number(h.score).toFixed(2)+'%</span></div>').join(''):'<p class="muted">當時冇符合門檻嘅 FCT 訊號</p>')+'</div>';
 }
 function raceHTML(s,r){
  const p=fct(r),hs=r.horse_numbers||[],rank=top3(p),leaders=new Set(rank.map(h=>h.horse)),scores=Object.fromEntries((p?.horses||[]).map(h=>[h.horse,h]));
@@ -45,10 +38,8 @@ function raceHTML(s,r){
    svg+='<text x="'+x+'" y="310" text-anchor="middle">'+h+'</text>';
    if(a)svg+='<path d="M'+x+' 280V'+y+'" stroke="#f5a04c" stroke-width="3"/><circle cx="'+x+'" cy="'+y+'" r="'+(leaders.has(h)?9:6)+'" fill="'+(leaders.has(h)?'#ffd15c':'#f5a04c')+'"><title>'+h+'號：'+a.avg_drop_pct+'%｜'+a.count+'個組合</title></circle><text x="'+x+'" y="'+(y-13)+'" text-anchor="middle">'+a.avg_drop_pct.toFixed(1)+'</text>';
  });svg+='<text x="480" y="340" text-anchor="middle">馬號</text></svg>';
- const ready=rank.length>0,age=p?.final_time?Math.max(0,Math.floor((Date.now()-Date.parse(p.final_time))/1000)):null;
  const meta=p?'FCT｜基準 '+stamp(p.baseline_time)+'｜取樣 '+stamp(p.final_time)+'｜來源 '+stamp(p.source_updated)+'｜'+p.compared_pairs+' 組可比較'+(p.fresh===false?'｜來源過期':''):'暫未取得 FCT';
  return '<section class="race"><h2>R'+r.race+' · '+esc(r.status)+'</h2><p class="'+(p?.fresh===false?'warn':'muted')+'">'+esc(meta)+'</p>'+
- '<button '+(ready?'':'disabled')+' onclick="capture('+r.race+',\'T−10\')">保存 T−10 快照</button><button '+(ready?'':'disabled')+' onclick="capture('+r.race+',\'T−3\')">保存 T−3 快照</button>'+
  '<div class="layout"><div class="chart">'+(hs.length?svg:'<div class="empty">暫時冇 FCT 數據</div>')+'</div><aside class="snapshots">'+shotCard(s,r,'T−10')+shotCard(s,r,'T−3')+'</aside></div>'+
  (p?'<details><summary>最新 FCT 賠率（'+Object.keys(p.current_odds||{}).length+' 組）</summary><p class="muted">'+Object.entries(p.current_odds||{}).map(([k,v])=>esc(k)+'：'+esc(v)).join('　·　')+'</p></details>':'')+'</section>';
 }
