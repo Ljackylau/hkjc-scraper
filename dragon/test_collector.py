@@ -1,7 +1,23 @@
 import unittest
 from datetime import datetime, timedelta
-from collector import pairs, compare, endpoint_ok, snapshot, top_three, record_due_snapshots, HK
+from collector import (pairs, compare, endpoint_ok, snapshot, top_three,
+                       record_due_snapshots, meeting_candidates,
+                       race_time_from_text, validate_config, HK)
 class TestCollector(unittest.TestCase):
+    def test_meeting_candidates_choose_today_then_next(self):
+        hrefs=['https://x?Racecourse=HV&racedate=2026%2F09%2F09',
+               'https://x?Racecourse=ST&racedate=2026%2F09%2F13',
+               'https://x?Racecourse=HV&racedate=2026/09/16']
+        self.assertEqual(meeting_candidates(hrefs,datetime(2026,9,10).date()),
+                         [('2026-09-13','ST'),('2026-09-16','HV')])
+    def test_race_time_from_official_heading(self):
+        text='Race 6 - TEST HANDICAP\nSunday, September 13, 2026, Sha Tin, 15:35\nTurf'
+        self.assertEqual(race_time_from_text(text,6),'15:35')
+        self.assertIsNone(race_time_from_text(text,7))
+    def test_config_validation(self):
+        config={'date':'2026-09-13','venue':'ST','times':['13:00','13:30']}
+        self.assertIs(validate_config(config),config)
+        with self.assertRaises(ValueError): validate_config({'date':'2026-09-13','venue':'XX','times':['13:00']})
     def test_top_three_uses_average_drop(self):
         result={'horses':[{'horse':1,'avg_drop_pct':35,'count':4},{'horse':2,'avg_drop_pct':51,'count':1},{'horse':3,'avg_drop_pct':44,'count':2},{'horse':4,'avg_drop_pct':40,'count':9}]}
         self.assertEqual([x['horse'] for x in top_three(result)],[2,3,4])

@@ -8,7 +8,64 @@ from zoneinfo import ZoneInfo
 HK = ZoneInfo('Asia/Hong_Kong')
 ROOT = Path(__file__).resolve().parent
 DOM = """() => ({text:document.body.innerText, cells:Array.from(document.querySelectorAll('[id^="qb_QIN_"], [id^="qb_FCT_"]')).map(e=>({id:e.id,value:e.innerText}))})"""
+HKJC_ENTRIES = 'https://racing.hkjc.com/en-us/local/information/entries'
+HKJC_RACECARD = 'https://racing.hkjc.com/en-us/local/information/racecard'
 def now(): return datetime.now(HK)
+
+def meeting_candidates(hrefs, today):
+    """Return official HKJC meetings from today onward, nearest first."""
+    found=set()
+    for href in hrefs:
+        date_match=re.search(r'racedate=(\d{4})(?:%2F|/)(\d{2})(?:%2F|/)(\d{2})',href,re.I)
+        venue_match=re.search(r'Racecourse=(ST|HV)',href,re.I)
+        if not date_match or not venue_match: continue
+        date='-'.join(date_match.groups())
+        if date >= today.isoformat(): found.add((date,venue_match[1].upper()))
+    return sorted(found)
+
+def race_time_from_text(text, race_no):
+    """Read the advertised post time from an official HKJC race-card heading."""
+    match=re.search(rf'Race\s+{race_no}\s+-[\s\S]*?(\d{{1,2}}:\d{{2}})',text,re.I)
+    if not match: return None
+    datetime.strptime(match[1],'%H:%M')
+    return match[1]
+
+async def discover_meeting(context, today=None):
+    """Discover the current/next HK meeting and every official race time."""
+    today=today or now().date()
+    page=await context.new_page()
+    try:
+        candidates=[]
+        # Race-card links carry the declared post times and are the authoritative
+        # source. Entries is a fallback for days when navigation is reorganised.
+        for landing in (HKJC_RACECARD,HKJC_ENTRIES):
+            await page.goto(landing,wait_until='domcontentloaded',timeout=30000)
+            hrefs=await page.locator('a').evaluate_all("els => els.map(e => e.href)")
+            candidates=meeting_candidates(hrefs,today)
+            if candidates: break
+        if not candidates:
+            raise RuntimeError('HKJC entries page did not expose a current or future meeting')
+        date,venue=candidates[0]
+        times=[]
+        for race_no in range(1,13):
+            url=f'{HKJC_RACECARD}?RaceNo={race_no}&Racecourse={venue}&racedate={date.replace("-","%2F")}'
+            await page.goto(url,wait_until='domcontentloaded',timeout=30000)
+            clock=race_time_from_text(await page.locator('body').inner_text(),race_no)
+            if not clock:
+                if race_no==1: raise RuntimeError('HKJC race card has no readable first-race time')
+                break
+            times.append(clock)
+        if not times: raise RuntimeError('HKJC race card returned no race times')
+        return {'date':date,'venue':venue,'times':times,'source':'HKJC automatic discovery'}
+    finally:
+        await page.close()
+
+def validate_config(config):
+    datetime.strptime(config['date'],'%Y-%m-%d')
+    if config['venue'] not in ('HV','ST'): raise ValueError('Invalid venue')
+    if not config.get('times'): raise ValueError('No race times')
+    for clock in config['times']: datetime.strptime(clock,'%H:%M')
+    return config
 def pairs(cells, pool):
     out = {}
     for c in cells:
@@ -120,22 +177,28 @@ def record_due_snapshots(race, result, off, captured):
                           'source_updated':result['source_updated'],
                           'top3':result['top3']}
 
-async def collect(config, push):
+async def collect(config, push, auto_meeting=True):
     from playwright.async_api import async_playwright
-    state={'date':config['date'],'venue':config['venue'],'races':[{'race':i+1,'off_time':t,'status':'正在開啟'} for i,t in enumerate(config['times'])]}
-    saved=ROOT.joinpath('results.json')
-    if saved.exists():
-        previous=json.loads(saved.read_text())
-        if previous.get('date')==config['date'] and previous.get('venue')==config['venue']:
-            for race in state['races']:
-                prior=next((r for r in previous.get('races',[]) if r['race']==race['race']),{})
-                race.update(prior)
-                race['off_time']=config['times'][race['race']-1]
-                race['status']='正在重新連接'
-    dirty=asyncio.Event()
     async with async_playwright() as p:
         browser=await p.chromium.launch()
         context=await browser.new_context(timezone_id='Asia/Hong_Kong',locale='zh-HK')
+        if auto_meeting:
+            try:
+                config=validate_config(await discover_meeting(context))
+            except Exception as e:
+                print(f'Automatic meeting discovery failed; using meeting.json: {type(e).__name__}: {e}')
+        state={'date':config['date'],'venue':config['venue'],'meeting_source':config.get('source','meeting.json fallback'),
+               'races':[{'race':i+1,'off_time':t,'status':'正在開啟'} for i,t in enumerate(config['times'])]}
+        saved=ROOT.joinpath('results.json')
+        if saved.exists():
+            previous=json.loads(saved.read_text())
+            if previous.get('date')==config['date'] and previous.get('venue')==config['venue']:
+                for race in state['races']:
+                    prior=next((r for r in previous.get('races',[]) if r['race']==race['race']),{})
+                    race.update(prior)
+                    race['off_time']=config['times'][race['race']-1]
+                    race['status']='正在重新連接'
+        dirty=asyncio.Event()
         async def race_job(race, clock):
             off=datetime.fromisoformat(config['date']+'T'+clock).replace(tzinfo=HK)
             stop=max(off+timedelta(minutes=15),now()+timedelta(minutes=3))
@@ -197,9 +260,8 @@ async def collect(config, push):
     if summary: Path(summary).write_text(render(state))
 
 if __name__=='__main__':
-    ap=argparse.ArgumentParser(); ap.add_argument('--push',action='store_true'); args=ap.parse_args()
-    config=json.loads(ROOT.joinpath('meeting.json').read_text())
-    datetime.strptime(config['date'],'%Y-%m-%d')
-    if config['venue'] not in ('HV','ST'): raise ValueError('Invalid venue')
-    for clock in config['times']: datetime.strptime(clock,'%H:%M')
-    asyncio.run(collect(config,args.push))
+    ap=argparse.ArgumentParser(); ap.add_argument('--push',action='store_true')
+    ap.add_argument('--no-auto-meeting',action='store_true',help='Use meeting.json without HKJC discovery')
+    args=ap.parse_args()
+    config=validate_config(json.loads(ROOT.joinpath('meeting.json').read_text()))
+    asyncio.run(collect(config,args.push,not args.no_auto_meeting))
