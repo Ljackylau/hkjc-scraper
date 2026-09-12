@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-HK"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Race Day｜Dragon + Horse103</title>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#09111f;color:#eaf1fb;font:16px system-ui}main{max-width:1200px;margin:auto;padding:24px}header,section{background:#132038;border:1px solid #304761;border-radius:16px;padding:20px;margin-bottom:18px}h1{font-size:28px;margin:0 0 12px}a{color:#88caff}button,input{font:inherit;background:#223b55;color:white;border:1px solid #53718b;border-radius:8px;padding:10px;margin:4px}button.active{background:#c89c42;color:#071321}.muted{color:#aabcce;font-size:14px}.pick{font-size:25px;color:#f2ca76}.races{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}.card{background:#0c1728;border:1px solid #304761;border-radius:12px;padding:16px}iframe{width:100%;height:1000px;border:0}.bad{color:#ffb494}.good{color:#81d5a8}small{display:block;margin-top:10px}nav{margin:12px 0}
+</style>
+<main><header><h1>Race Day｜賽日控制台</h1>
+<p>Dragon 即時市場圖表 ＋ Horse103 T−3 主選及四匹</p>
+<p><a href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止：開啟 GitHub Runner ↗</a></p>
+<p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉本頁不會停止收集。</p>
+<label>賽日 <input type="date" id="date" value="2026-09-13"></label><button id="load">查看</button>
+<p id="health" class="muted">尚未載入資料</p>
+<nav><button id="horseTab" class="active">Horse103 T−3</button><button id="dragonTab">Dragon 市場圖表</button></nav>
+</header>
+<section id="horse"><p class="muted">60% 即場解碼 valueIndex ＋ 40% 位置Q資金。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應。</p><div id="cards" class="races"></div></section>
+<section id="dragon" hidden><p>獨立副本沿用原 FCT 圖表，首次可用取樣為基準。</p><button id="early">前半場</button><button id="late">後半場</button><iframe id="chart" title="Dragon 即時圖表"></iframe></section>
+<p class="muted">原網站保留：<a href="../dragon/chart.html" target="_blank" rel="noopener">原 Dragon 圖表</a>。本頁約每 30 秒讀取摘要；顯示時間包含資料發佈與快取延遲。</p></main>
+<script>
+const $=id=>document.getElementById(id);let selected='2026-09-13', phase='early';
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const base=()=>`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/race-day-data/race-day-data/${selected}`;
+const labels={waiting:'等待 T−3',saved:'已保存',missed:'錯過 T−3',retrying:'重試中',unavailable:'資料不足'};
+function frame(){if(!$('dragon').hidden)$('chart').src=`chart.html?date=${encodeURIComponent(selected)}&phase=${phase}`}
+async function refresh(){
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(selected))return;
+ const requested=selected;
+ const data=await Promise.all(['early','late'].map(async p=>{try{const r=await fetch(`${base()}/${p}/status.json?v=${Math.floor(Date.now()/30000)}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!r.ok)return {phase:p,missing:true};return {...await r.json(),phase:p}}catch(e){return {phase:p,missing:true}}}));
+ if(requested!==selected)return;
+ $('health').textContent=data.map(d=>d.missing?`${d.phase==='early'?'前':'後'}半場：未取得紀錄`:`${d.phase==='early'?'前':'後'}半場：${d.state}｜更新 ${new Date(d.updated_at).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}${Date.now()-Date.parse(d.updated_at)>180000?'｜超過3分鐘未更新':''}`).join('　／　');
+ const cards=[];
+ for(const d of data)for(const [n,s]of Object.entries(d.horse103||{})){
+ const picks=s.picks||[];const text=picks.map(h=>`${h.horse_number} ${h.name_tc||''}`);
+ cards.push({n:+n,html:`<div class="card"><h2>R${esc(n)} <span class="muted">${esc(labels[s.status]||s.status)}</span></h2>${s.target?`<p class="muted">鎖定 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${picks.length?`<p class="pick">主選 ${esc(text[0])}</p><p>其餘：${esc(text.slice(1).join('、'))}</p><p class="muted">原解碼順序：${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<p class="bad">${esc(s.error||s.reason||'')}</p>${s.status==='saved'?`<a href="${base()}/${d.phase}/horse103/race_${String(n).padStart(2,'0')}.json" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</div>`});
+ }
+ $('cards').innerHTML=cards.sort((a,b)=>a.n-b.n).map(c=>c.html).join('')||'<p>未有已啟動紀錄。請先在 GitHub 執行 Preflight；賽日執行 Run。</p>';
+}
+$('load').onclick=()=>{selected=$('date').value;refresh();frame()};
+$('dragonTab').onclick=()=>{$('dragon').hidden=false;$('horse').hidden=true;$('dragonTab').className='active';$('horseTab').className='';frame()};
+$('horseTab').onclick=()=>{$('horse').hidden=false;$('dragon').hidden=true;$('chart').src='about:blank';$('horseTab').className='active';$('dragonTab').className=''};
+$('early').onclick=()=>{phase='early';frame()};$('late').onclick=()=>{phase='late';frame()};
+refresh();setInterval(()=>{if(!document.hidden)refresh()},30000);
+</script></html>
