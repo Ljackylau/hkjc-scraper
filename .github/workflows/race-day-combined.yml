@@ -1,0 +1,100 @@
+name: Race Day Runner (Independent)
+on:
+  push:
+    branches: [main]
+    paths: ['race-day/**', '.github/workflows/race-day-combined.yml']
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Hong Kong race date'
+        required: true
+        default: '2026-09-13'
+      mode:
+        description: 'Preflight today; Run on race day'
+        type: choice
+        options: [Preflight, Run]
+        default: Preflight
+permissions:
+  contents: write
+concurrency:
+  group: race-day-independent
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      release: ${{ steps.plan.outputs.release }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s race-day -p 'test_*.py' -v
+      - id: plan
+        env:
+          RACE_DATE: ${{ inputs.date || '2026-09-13' }}
+        run: python race-day/runner.py --date "$RACE_DATE" --plan
+      - uses: actions/upload-artifact@v4
+        with:
+          name: race-day-plan
+          path: race-day/plan.json
+          retention-days: 1
+  early:
+    needs: prepare
+    if: inputs.mode == 'Run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: race-day-plan
+          path: race-day
+      - run: pip install 'playwright>=1.45,<2' certifi
+      - run: python -m playwright install --with-deps chromium
+      - env:
+          RACE_DATE: ${{ inputs.date }}
+        run: python -u race-day/runner.py --date "$RACE_DATE" --phase early --push
+  release-late:
+    needs: prepare
+    if: inputs.mode == 'Run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - env:
+          RELEASE: ${{ needs.prepare.outputs.release }}
+        run: |
+          python3 - <<'PY'
+          import os,time
+          from datetime import datetime,timezone
+          target=datetime.fromisoformat(os.environ['RELEASE'])
+          while datetime.now(timezone.utc)<target:
+              time.sleep(min(30,(target-datetime.now(timezone.utc)).total_seconds()))
+          PY
+  late:
+    needs: [prepare, release-late]
+    if: inputs.mode == 'Run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: race-day-plan
+          path: race-day
+      - run: pip install 'playwright>=1.45,<2' certifi
+      - run: python -m playwright install --with-deps chromium
+      - env:
+          RACE_DATE: ${{ inputs.date }}
+        run: python -u race-day/runner.py --date "$RACE_DATE" --phase late --push
