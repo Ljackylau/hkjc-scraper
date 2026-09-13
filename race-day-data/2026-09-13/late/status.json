@@ -1,7 +1,7 @@
 {
   "date": "2026-09-13",
   "phase": "late",
-  "updated_at": "2026-09-13T17:41:29.139846+08:00",
+  "updated_at": "2026-09-13T17:42:33.424116+08:00",
   "state": "running",
   "horse103": {
     "6": {
@@ -301,8 +301,78 @@
       ]
     },
     "10": {
-      "status": "waiting",
-      "target": "2026-09-13T17:42:00+08:00"
+      "status": "saved",
+      "target": "2026-09-13T17:42:00+08:00",
+      "delay_seconds": 9.45,
+      "picks": [
+        {
+          "horse_number": 12,
+          "name_tc": "嵐臣",
+          "name_en": "NYX GLUCK",
+          "formula_score": 0.766,
+          "live_value_index": 61.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2606000.0,
+          "q_amount": 2095000.0
+        },
+        {
+          "horse_number": 6,
+          "name_tc": "自動自覺",
+          "name_en": "RUN RUN SMART",
+          "formula_score": 0.44243,
+          "live_value_index": 60.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 537000.0,
+          "q_amount": 565000.0
+        },
+        {
+          "horse_number": 11,
+          "name_tc": "大回報",
+          "name_en": "BIG RETURN",
+          "formula_score": 0.41884,
+          "live_value_index": 64.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 227000.0,
+          "q_amount": 176000.0
+        },
+        {
+          "horse_number": 14,
+          "name_tc": "逍遙騎士",
+          "name_en": "FLYING KNIGHT",
+          "formula_score": 0.41665,
+          "live_value_index": 61.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 330000.0,
+          "q_amount": 110000.0
+        },
+        {
+          "horse_number": 3,
+          "name_tc": "馭跑得",
+          "name_en": "ALL OUT FOR SIX",
+          "formula_score": 0.40202,
+          "live_value_index": 57.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 391000.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        11,
+        12,
+        14,
+        6,
+        3
+      ]
     }
   },
   "errors": [],
