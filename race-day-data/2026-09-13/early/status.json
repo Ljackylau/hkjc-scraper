@@ -1,7 +1,7 @@
 {
   "date": "2026-09-13",
   "phase": "early",
-  "updated_at": "2026-09-13T14:57:06.347073+08:00",
+  "updated_at": "2026-09-13T14:58:08.465832+08:00",
   "state": "running",
   "horse103": {
     "1": {
@@ -232,8 +232,78 @@
       "error": "T-3 response not ready or lockTime mismatches schedule"
     },
     "5": {
-      "status": "waiting",
-      "target": "2026-09-13T14:57:00+08:00"
+      "status": "saved",
+      "target": "2026-09-13T14:57:00+08:00",
+      "delay_seconds": 7.74,
+      "picks": [
+        {
+          "horse_number": 11,
+          "name_tc": "天天更好",
+          "name_en": "BETTER AND BETTER",
+          "formula_score": 0.74704,
+          "live_value_index": 68.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1218000.0,
+          "q_amount": 952000.0
+        },
+        {
+          "horse_number": 9,
+          "name_tc": "龍文正道",
+          "name_en": "ROAD TO GLORY",
+          "formula_score": 0.7222,
+          "live_value_index": 64.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1215000.0,
+          "q_amount": 806000.0
+        },
+        {
+          "horse_number": 3,
+          "name_tc": "渡月橋",
+          "name_en": "LUNAR DASH",
+          "formula_score": 0.64801,
+          "live_value_index": 72.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 776000.0,
+          "q_amount": 486000.0
+        },
+        {
+          "horse_number": 13,
+          "name_tc": "領駿輝煌",
+          "name_en": "APEX GLORY",
+          "formula_score": 0.55844,
+          "live_value_index": 58.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 756000.0,
+          "q_amount": 89000.0
+        },
+        {
+          "horse_number": 10,
+          "name_tc": "烈進駒",
+          "name_en": "SPIRITED STEED",
+          "formula_score": 0.4,
+          "live_value_index": 0.0,
+          "live_command": null,
+          "live_capital_signal": null,
+          "is_live_candidate": false,
+          "qp_amount": 1437000.0,
+          "q_amount": 1215000.0
+        }
+      ],
+      "original": [
+        3,
+        11,
+        9,
+        6,
+        13
+      ]
     }
   },
   "errors": [],
