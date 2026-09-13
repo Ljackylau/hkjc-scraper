@@ -15,12 +15,18 @@ button{border:0;border-radius:9px;padding:9px 12px;margin:0 7px 7px 0;background
 <p id="health">正在載入上次資料…</p></header><div id="app"></div></main>
 <script>
 const args=new URLSearchParams(location.search); const date=args.get('date')||'2026-09-13';const phase=args.get('phase')==='late'?'late':'early';
-const RAW=`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/race-day-data/race-day-data/${date}/${phase}/dragon/results.json`;
-const API=RAW;
+const RAW=ref=>`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${ref}/race-day-data/${date}/${phase}/dragon/results.json`;
 const STATE_KEY='dragon-fct-last-state-v4';
 const esc=x=>String(x??'—').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const stamp=x=>x?new Date(x).toLocaleString('zh-HK',{timeZone:'Asia/Hong_Kong',hour12:false}):'未有';
-let latest=read(STATE_KEY,null), apiChecked=0;
+let latest=read(STATE_KEY,null), dataRef='',refChecked=0;
+async function currentRef(){
+ if(dataRef&&Date.now()-refChecked<55000)return dataRef;
+ try{const r=await fetch(`https://api.github.com/repos/Ljackylau/hkjc-scraper/branches/race-day-data?t=${Math.floor(Date.now()/55000)}`,{cache:'no-store',signal:AbortSignal.timeout(12000)});
+  if(!r.ok)throw Error('GitHub API '+r.status);dataRef=(await r.json()).commit.sha;refChecked=Date.now()
+ }catch(e){if(!dataRef)throw e}
+ return dataRef
+}
 function read(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}}
 function write(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}
 function fct(r){return (r.pools||[]).find(p=>p.pool==='FCT')}
@@ -47,8 +53,7 @@ function raceHTML(s,r){
 function render(s){document.querySelector('#app').innerHTML=s.races.map(r=>raceHTML(s,r)).join('')}
 async function fetchJSON(url,headers={}){const r=await fetch(url,{cache:'no-store',headers,signal:AbortSignal.timeout(12000)});if(!r.ok)throw Error('HTTP '+r.status);const d=await r.json();if(!Array.isArray(d.races)||!Date.parse(d.published_at))throw Error('數據格式錯誤');return d}
 async function tick(){
- let error='';try{let s=await fetchJSON(RAW+'?v='+crypto.randomUUID());
-  if(Date.now()-Date.parse(s.published_at)>90000&&Date.now()-apiChecked>60000){apiChecked=Date.now();try{const a=await fetchJSON(API+'&v='+crypto.randomUUID(),{'Accept':'application/vnd.github.raw+json'});if(Date.parse(a.published_at)>Date.parse(s.published_at))s=a}catch(e){error='｜備援失敗 '+e.message}}
+ let error='';try{const ref=await currentRef();let s=await fetchJSON(RAW(ref));
   if(!latest||Date.parse(s.published_at)>=Date.parse(latest.published_at)){latest=s;write(STATE_KEY,s)}
  }catch(e){error='｜讀取失敗 '+e.message}
  const h=document.querySelector('#health');if(latest){render(latest);const age=Math.max(0,Math.floor((Date.now()-Date.parse(latest.published_at))/1000));h.className=age>120||error?'warn':'ok';h.textContent='賽日 '+latest.date+' '+latest.venue+'｜最後發布 '+stamp(latest.published_at)+'｜距今 '+age+' 秒｜'+(age>120?'資料已延遲；保留最後成功畫面':'即時資料正常')+error}else{h.className='warn';h.textContent='未有可顯示資料'+error}
@@ -56,4 +61,3 @@ async function tick(){
 }
 if(latest)render(latest);tick();
 </script></html>
-

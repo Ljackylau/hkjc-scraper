@@ -16,13 +16,21 @@
 <section id="dragon" hidden><p>獨立副本沿用原 FCT 圖表，首次可用取樣為基準。</p><button id="early">前半場</button><button id="late">後半場</button><iframe id="chart" title="Dragon 即時圖表"></iframe></section>
 <p class="muted">原網站保留：<a href="../dragon/chart.html" target="_blank" rel="noopener">原 Dragon 圖表</a>。本頁約每 30 秒讀取摘要；顯示時間包含資料發佈與快取延遲。</p></main>
 <script>
-const $=id=>document.getElementById(id);let selected='2026-09-13', phase='early';
+const $=id=>document.getElementById(id);let selected='2026-09-13', phase='early',dataRef='',refChecked=0;
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const base=()=>`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/race-day-data/race-day-data/${selected}`;
+const base=()=>`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${dataRef||'race-day-data'}/race-day-data/${selected}`;
+async function currentRef(){
+ if(dataRef&&Date.now()-refChecked<55000)return dataRef;
+ try{const r=await fetch(`https://api.github.com/repos/Ljackylau/hkjc-scraper/branches/race-day-data?t=${Math.floor(Date.now()/55000)}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});
+  if(!r.ok)throw Error('HTTP '+r.status);dataRef=(await r.json()).commit.sha;refChecked=Date.now()
+ }catch(e){if(!dataRef)throw e}
+ return dataRef
+}
 const labels={waiting:'等待 T−3',saved:'已保存',missed:'錯過 T−3',retrying:'重試中',unavailable:'資料不足'};
 function frame(){if(!$('dragon').hidden)$('chart').src=`chart.html?date=${encodeURIComponent(selected)}&phase=${phase}`}
 async function refresh(){
  if(!/^\d{4}-\d{2}-\d{2}$/.test(selected))return;
+ try{await currentRef()}catch(e){$('health').textContent='暫時未能取得最新版本：'+e.message;return}
  const requested=selected;
  const data=await Promise.all(['early','late'].map(async p=>{try{const r=await fetch(`${base()}/${p}/status.json?v=${Math.floor(Date.now()/30000)}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!r.ok)return {phase:p,missing:true};return {...await r.json(),phase:p}}catch(e){return {phase:p,missing:true}}}));
  if(requested!==selected)return;
@@ -38,5 +46,5 @@ $('load').onclick=()=>{selected=$('date').value;refresh();frame()};
 $('dragonTab').onclick=()=>{$('dragon').hidden=false;$('horse').hidden=true;$('dragonTab').className='active';$('horseTab').className='';frame()};
 $('horseTab').onclick=()=>{$('horse').hidden=false;$('dragon').hidden=true;$('chart').src='about:blank';$('horseTab').className='active';$('dragonTab').className=''};
 $('early').onclick=()=>{phase='early';frame()};$('late').onclick=()=>{phase='late';frame()};
-refresh();setInterval(()=>{if(!document.hidden)refresh()},30000);
+refresh();setInterval(()=>{if(!document.hidden)refresh()},60000);
 </script></html>
