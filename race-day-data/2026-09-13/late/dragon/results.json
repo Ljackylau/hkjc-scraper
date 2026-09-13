@@ -5716,7 +5716,7 @@
         13,
         14
       ],
-      "last_attempt": "2026-09-13T17:15:00.104695+08:00",
+      "last_attempt": "2026-09-13T17:16:00.105480+08:00",
       "errors": [],
       "pools": [
         {
@@ -5954,9 +5954,9 @@
           "compared_pairs": 182,
           "missing_at_end": [],
           "baseline_time": "2026-09-13T16:11:00.017214+08:00",
-          "final_time": "2026-09-13T17:15:00.103729+08:00",
+          "final_time": "2026-09-13T17:16:00.104483+08:00",
           "source_updated": "2026-09-13T17:14:00+08:00",
-          "fresh": true,
+          "fresh": false,
           "comparison_ready": true,
           "baseline_label": "首次可用取樣；非 T−60 比較",
           "current_odds": {
@@ -6541,6 +6541,27 @@
               "count": 2
             }
           ]
+        },
+        {
+          "captured": "2026-09-13T17:16:00.071225+08:00",
+          "source_updated": "2026-09-13T17:15:00+08:00",
+          "top3": [
+            {
+              "horse": 2,
+              "score": 43.49,
+              "count": 1
+            },
+            {
+              "horse": 13,
+              "score": 43.49,
+              "count": 1
+            },
+            {
+              "horse": 4,
+              "score": 40.49,
+              "count": 2
+            }
+          ]
         }
       ],
       "horse_numbers": [
@@ -6559,7 +6580,7 @@
         13,
         14
       ],
-      "last_attempt": "2026-09-13T17:15:00.069837+08:00",
+      "last_attempt": "2026-09-13T17:16:00.072171+08:00",
       "errors": [],
       "pools": [
         {
@@ -6630,9 +6651,9 @@
           "compared_pairs": 182,
           "missing_at_end": [],
           "baseline_time": "2026-09-13T16:46:00.014996+08:00",
-          "final_time": "2026-09-13T17:15:00.068884+08:00",
-          "source_updated": "2026-09-13T17:11:00+08:00",
-          "fresh": false,
+          "final_time": "2026-09-13T17:16:00.071225+08:00",
+          "source_updated": "2026-09-13T17:15:00+08:00",
+          "fresh": true,
           "comparison_ready": true,
           "baseline_label": "首次可用取樣；非 T−60 比較",
           "current_odds": {
@@ -6841,5 +6862,5 @@
       "snapshots": {}
     }
   ],
-  "published_at": "2026-09-13T17:15:06.089912+08:00"
+  "published_at": "2026-09-13T17:16:06.092870+08:00"
 }
