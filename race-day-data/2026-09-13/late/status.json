@@ -1,7 +1,7 @@
 {
   "date": "2026-09-13",
   "phase": "late",
-  "updated_at": "2026-09-13T17:06:35.562265+08:00",
+  "updated_at": "2026-09-13T17:08:00.659281+08:00",
   "state": "running",
   "horse103": {
     "6": {
@@ -227,8 +227,78 @@
       ]
     },
     "9": {
-      "status": "waiting",
-      "target": "2026-09-13T17:07:00+08:00"
+      "status": "saved",
+      "target": "2026-09-13T17:07:00+08:00",
+      "delay_seconds": 2.23,
+      "picks": [
+        {
+          "horse_number": 1,
+          "name_tc": "超寫意",
+          "name_en": "CHILL BUDDY",
+          "formula_score": 0.802,
+          "live_value_index": 67.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1541000.0,
+          "q_amount": 1653000.0
+        },
+        {
+          "horse_number": 5,
+          "name_tc": "鑽石星空",
+          "name_en": "LUCY IN THE SKY",
+          "formula_score": 0.76148,
+          "live_value_index": 66.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1408000.0,
+          "q_amount": 1926000.0
+        },
+        {
+          "horse_number": 4,
+          "name_tc": "一世美麗",
+          "name_en": "FIT FOR BEAUTY",
+          "formula_score": 0.43075,
+          "live_value_index": 65.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 157000.0,
+          "q_amount": 0.0
+        },
+        {
+          "horse_number": 2,
+          "name_tc": "錶之極光",
+          "name_en": "AURORA PATCH",
+          "formula_score": 0.42007,
+          "live_value_index": 55.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 347000.0,
+          "q_amount": 232000.0
+        },
+        {
+          "horse_number": 11,
+          "name_tc": "咕嚕快跑",
+          "name_en": "GULU GOGO",
+          "formula_score": 0.37445,
+          "live_value_index": 57.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 125000.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        1,
+        5,
+        4,
+        11,
+        2
+      ]
     },
     "10": {
       "status": "waiting",
