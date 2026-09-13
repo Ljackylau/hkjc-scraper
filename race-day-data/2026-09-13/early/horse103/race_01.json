@@ -1,0 +1,386 @@
+{
+  "captured_at": "2026-09-13T04:57:04.072151+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.40 * normalized QP amount",
+  "race": {
+    "id": "39102638-8171-4b46-9758-bf3577c70cef",
+    "race_number": 1,
+    "post_time": "13:00",
+    "venue": "沙田",
+    "distance": 1400,
+    "course": "B"
+  },
+  "lock_time": "2026-09-13T04:57:00.000Z",
+  "live103_raw": {
+    "phase": "locked",
+    "lockTime": "2026-09-13T04:57:00.000Z",
+    "postTime": "2026-09-13T05:00:00.000Z",
+    "freshness": "live",
+    "candidates": [
+      {
+        "isFill": false,
+        "nameEn": "GOR GOR",
+        "nameTc": "暴風一族",
+        "command": "follow",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 71,
+        "verdictKey": "capital_overrides",
+        "horseNumber": 1,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "YOUNG FIGHTER",
+        "nameTc": "競駿勇士",
+        "command": "follow",
+        "inPreview": false,
+        "valueTier": "mid",
+        "valueIndex": 69,
+        "verdictKey": "capital_overrides",
+        "horseNumber": 4,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "MANYTHANKS FOREVER",
+        "nameTc": "常常感恩",
+        "command": "follow",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 66,
+        "verdictKey": "capital_overrides",
+        "horseNumber": 13,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "SEA DIAMOND",
+        "nameTc": "海鑽石",
+        "command": "follow",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 64,
+        "verdictKey": "capital_overrides",
+        "horseNumber": 3,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "SUPERB GUY",
+        "nameTc": "巴閉佬",
+        "command": "follow",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 64,
+        "verdictKey": "capital_overrides",
+        "horseNumber": 11,
+        "capitalSignal": "steady"
+      }
+    ],
+    "dataQuality": "ready",
+    "generatedAt": "2026-09-13T04:57:00.332Z",
+    "previewOnly": [
+      {
+        "nameEn": "EXCEED THE WISH",
+        "nameTc": "星之願",
+        "horseNumber": 14
+      }
+    ],
+    "previewTime": "2026-09-13T04:53:00.000Z",
+    "engineVersion": "live103-v3.4.1",
+    "fakeFavorites": [
+      {
+        "nameEn": "RATTAN GALAXY",
+        "nameTc": "籐王駒",
+        "horseNumber": 10,
+        "capitalSignal": "none"
+      },
+      {
+        "nameEn": "EXCEED THE WISH",
+        "nameTc": "星之願",
+        "horseNumber": 14,
+        "capitalSignal": "none"
+      },
+      {
+        "nameEn": "THE CONCENTRATION",
+        "nameTc": "全神貫注",
+        "horseNumber": 5,
+        "capitalSignal": "none"
+      }
+    ]
+  },
+  "ticket_cutoff": "2026-09-13T04:57:00.000Z",
+  "base_race_id": 24369,
+  "source_ticket_race_id": 24369,
+  "qp_max_amount": 190000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 324223,
+      "race_id": 24369,
+      "race_date": "2026-09-13",
+      "horse_or_combo": "1-11",
+      "bet_type": "QP",
+      "amount": 96000,
+      "amount_str": "96K",
+      "bet_time": "12:36",
+      "scraped_at": "2026-09-13T04:38:02.181109+00:00"
+    },
+    {
+      "id": 324224,
+      "race_id": 24369,
+      "race_date": "2026-09-13",
+      "horse_or_combo": "10-13",
+      "bet_type": "QP",
+      "amount": 93000,
+      "amount_str": "93K",
+      "bet_time": "12:36",
+      "scraped_at": "2026-09-13T04:38:02.181109+00:00"
+    },
+    {
+      "id": 324513,
+      "race_id": 24369,
+      "race_date": "2026-09-13",
+      "horse_or_combo": "10-11",
+      "bet_type": "QP",
+      "amount": 94000,
+      "amount_str": "94K",
+      "bet_time": "12:46",
+      "scraped_at": "2026-09-13T04:47:05.864752+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 11,
+      "name_tc": "巴閉佬",
+      "name_en": "SUPERB GUY",
+      "formula_score": 0.784,
+      "live_value_index": 64.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 190000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "暴風一族",
+      "name_en": "GOR GOR",
+      "formula_score": 0.62811,
+      "live_value_index": 71.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 96000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 13,
+      "name_tc": "常常感恩",
+      "name_en": "MANYTHANKS FOREVER",
+      "formula_score": 0.59179,
+      "live_value_index": 66.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "競駿勇士",
+      "name_en": "YOUNG FIGHTER",
+      "formula_score": 0.414,
+      "live_value_index": 69.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "籐王駒",
+      "name_en": "RATTAN GALAXY",
+      "formula_score": 0.39368,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 187000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "海鑽石",
+      "name_en": "SEA DIAMOND",
+      "formula_score": 0.384,
+      "live_value_index": 64.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "悠然常勝",
+      "name_en": "LIGHTNING ACE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "全神貫注",
+      "name_en": "THE CONCENTRATION",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "萬事勝利",
+      "name_en": "MULTISUPERSTAR",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "增旺",
+      "name_en": "PERIDOT",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "傳承效應",
+      "name_en": "LEGENDARY IMPACT",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 9,
+      "name_tc": "文武全能",
+      "name_en": "THE ALL ROUNDER",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "紅旺繽紛",
+      "name_en": "SUPREME WINNER",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 14,
+      "name_tc": "星之願",
+      "name_en": "EXCEED THE WISH",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 11,
+    "name_tc": "巴閉佬",
+    "name_en": "SUPERB GUY",
+    "formula_score": 0.784,
+    "live_value_index": 64.0,
+    "live_command": "follow",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 190000.0,
+    "q_amount": 0.0
+  },
+  "other_four": [
+    {
+      "horse_number": 1,
+      "name_tc": "暴風一族",
+      "name_en": "GOR GOR",
+      "formula_score": 0.62811,
+      "live_value_index": 71.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 96000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 13,
+      "name_tc": "常常感恩",
+      "name_en": "MANYTHANKS FOREVER",
+      "formula_score": 0.59179,
+      "live_value_index": 66.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "競駿勇士",
+      "name_en": "YOUNG FIGHTER",
+      "formula_score": 0.414,
+      "live_value_index": 69.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "籐王駒",
+      "name_en": "RATTAN GALAXY",
+      "formula_score": 0.39368,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 187000.0,
+      "q_amount": 0.0
+    }
+  ],
+  "live_received_at": "2026-09-13T12:57:02.381843+08:00",
+  "capture_delay_seconds": 2.38,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained."
+}
