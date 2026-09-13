@@ -1,9 +1,30 @@
 {
   "date": "2026-09-13",
   "phase": "early",
-  "updated_at": "2026-09-13T12:00:46.909261+08:00",
+  "updated_at": "2026-09-13T12:01:48.445486+08:00",
   "state": "running",
-  "horse103": {},
+  "horse103": {
+    "1": {
+      "status": "waiting",
+      "target": "2026-09-13T12:57:00+08:00"
+    },
+    "2": {
+      "status": "waiting",
+      "target": "2026-09-13T13:27:00+08:00"
+    },
+    "3": {
+      "status": "waiting",
+      "target": "2026-09-13T13:57:00+08:00"
+    },
+    "4": {
+      "status": "waiting",
+      "target": "2026-09-13T14:27:00+08:00"
+    },
+    "5": {
+      "status": "waiting",
+      "target": "2026-09-13T14:57:00+08:00"
+    }
+  },
   "errors": [],
   "publish_error": null
 }
