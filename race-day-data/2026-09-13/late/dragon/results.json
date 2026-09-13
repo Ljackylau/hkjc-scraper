@@ -290,7 +290,7 @@
         13,
         14
       ],
-      "last_attempt": "2026-09-13T15:04:00.072545+08:00",
+      "last_attempt": "2026-09-13T15:05:00.073459+08:00",
       "errors": [],
       "pools": [
         {
@@ -328,7 +328,7 @@
           "compared_pairs": 182,
           "missing_at_end": [],
           "baseline_time": "2026-09-13T14:36:00.014029+08:00",
-          "final_time": "2026-09-13T15:04:00.071634+08:00",
+          "final_time": "2026-09-13T15:05:00.072573+08:00",
           "source_updated": "2026-09-13T15:01:00+08:00",
           "fresh": false,
           "comparison_ready": true,
@@ -536,7 +536,12 @@
     {
       "race": 7,
       "off_time": "16:05",
-      "status": "正在開啟"
+      "status": "暫無數據；每分鐘重試",
+      "baselines": {},
+      "history": [],
+      "horse_numbers": [],
+      "last_attempt": "2026-09-13T15:05:00.916793+08:00",
+      "errors": []
     },
     {
       "race": 8,
@@ -554,5 +559,5 @@
       "status": "正在開啟"
     }
   ],
-  "published_at": "2026-09-13T15:04:03.074071+08:00"
+  "published_at": "2026-09-13T15:05:06.077457+08:00"
 }
