@@ -34,7 +34,8 @@ function summary(n,s){
  const original=new Set(originalNumbers);
  const extra=picks.slice(1,5).filter(h=>!original.has(Number(h.horse_number))).map(h=>`${h.horse_number}號`);
  const otherOriginal=originalNumbers.filter(h=>h!==main).map(h=>`${h}號`);
- return `R${n}\n獨贏&位置信心馬：${main}號${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${main}號 拖 ${extra.join('、')||'無'}，其他原解碼馬：${otherOriginal.join('、')||'無'}`
+ const legs=[...extra,...otherOriginal];
+ return `R${n}\n獨贏&位置信心馬：${main}號${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${main}號 拖 ${legs.join('、')||'無'}`
 }
 async function copyText(value,label){
  try{
