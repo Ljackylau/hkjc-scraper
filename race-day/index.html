@@ -29,10 +29,12 @@ async function currentRef(){
 const labels={waiting:'等待 T−3',saved:'已保存',missed:'錯過 T−3',retrying:'重試中',unavailable:'資料不足'};
 function summary(n,s){
  const picks=s.picks||[];
- if(s.status!=='saved'||!picks.length)return `R${n} 3甲膽：未能鎖定T−3  &&&& 大機會3甲腳：無\n其他配邊線配腳：`;
- const original=new Set((s.original||[]).map(Number));
+ if(s.status!=='saved'||!picks.length)return `R${n}\n獨贏&位置信心馬：未能鎖定T−3\n連贏位置Q：無`;
+ const main=Number(picks[0].horse_number),originalNumbers=(s.original||[]).map(Number);
+ const original=new Set(originalNumbers);
  const extra=picks.slice(1,5).filter(h=>!original.has(Number(h.horse_number))).map(h=>`${h.horse_number}號`);
- return `R${n} 3甲膽：${picks[0].horse_number}號  &&&& 大機會3甲腳：${extra.join('、')||'無'}\n其他配邊線配腳：`
+ const otherOriginal=originalNumbers.filter(h=>h!==main).map(h=>`${h}號`);
+ return `R${n}\n獨贏&位置信心馬：${main}號${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${main}號 拖 ${extra.join('、')||'無'}，其他原解碼馬：${otherOriginal.join('、')||'無'}`
 }
 async function copyText(value,label){
  try{
