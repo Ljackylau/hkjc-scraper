@@ -1713,6 +1713,27 @@
               "count": 2
             }
           ]
+        },
+        {
+          "captured": "2026-09-16T21:34:00.085207+08:00",
+          "source_updated": "2026-09-16T21:33:00+08:00",
+          "top3": [
+            {
+              "horse": 10,
+              "score": 45.66,
+              "count": 6
+            },
+            {
+              "horse": 9,
+              "score": 44.87,
+              "count": 4
+            },
+            {
+              "horse": 3,
+              "score": 44.54,
+              "count": 2
+            }
+          ]
         }
       ],
       "horse_numbers": [
@@ -1729,7 +1750,7 @@
         11,
         12
       ],
-      "last_attempt": "2026-09-16T21:33:00.083379+08:00",
+      "last_attempt": "2026-09-16T21:34:00.086075+08:00",
       "errors": [],
       "pools": [
         {
@@ -1880,8 +1901,8 @@
           "compared_pairs": 132,
           "missing_at_end": [],
           "baseline_time": "2026-09-16T20:46:00.011803+08:00",
-          "final_time": "2026-09-16T21:33:00.082512+08:00",
-          "source_updated": "2026-09-16T21:32:00+08:00",
+          "final_time": "2026-09-16T21:34:00.085207+08:00",
+          "source_updated": "2026-09-16T21:33:00+08:00",
           "fresh": true,
           "comparison_ready": true,
           "baseline_label": "首次可用取樣；非 T−60 比較",
@@ -2216,7 +2237,7 @@
         11,
         12
       ],
-      "last_attempt": "2026-09-16T21:33:00.048808+08:00",
+      "last_attempt": "2026-09-16T21:34:00.050633+08:00",
       "errors": [],
       "pools": [
         {
@@ -2226,7 +2247,7 @@
           "compared_pairs": 132,
           "missing_at_end": [],
           "baseline_time": "2026-09-16T21:16:00.013588+08:00",
-          "final_time": "2026-09-16T21:33:00.048038+08:00",
+          "final_time": "2026-09-16T21:34:00.049899+08:00",
           "source_updated": "2026-09-16T21:30:00+08:00",
           "fresh": false,
           "comparison_ready": true,
@@ -2376,5 +2397,5 @@
       "status": "正在開啟"
     }
   ],
-  "published_at": "2026-09-16T21:33:06.057908+08:00"
+  "published_at": "2026-09-16T21:34:06.057524+08:00"
 }
