@@ -1,7 +1,7 @@
 {
   "date": "2026-09-16",
   "phase": "early",
-  "updated_at": "2026-09-16T19:37:02.166976+08:00",
+  "updated_at": "2026-09-16T19:38:03.496539+08:00",
   "state": "running",
   "horse103": {
     "1": {
@@ -79,8 +79,78 @@
       ]
     },
     "2": {
-      "status": "waiting",
-      "target": "2026-09-16T19:37:00+08:00"
+      "status": "saved",
+      "target": "2026-09-16T19:37:00+08:00",
+      "delay_seconds": 7.63,
+      "picks": [
+        {
+          "horse_number": 3,
+          "name_tc": "朗日自強",
+          "name_en": "BRIGHT DAY",
+          "formula_score": 0.832,
+          "live_value_index": 72.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1366000.0,
+          "q_amount": 1201000.0
+        },
+        {
+          "horse_number": 5,
+          "name_tc": "風火猴王",
+          "name_en": "HOLMES A COURT",
+          "formula_score": 0.79935,
+          "live_value_index": 73.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1234000.0,
+          "q_amount": 1164000.0
+        },
+        {
+          "horse_number": 8,
+          "name_tc": "花好月盈",
+          "name_en": "DAN ATTACK",
+          "formula_score": 0.74052,
+          "live_value_index": 61.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 1279000.0,
+          "q_amount": 1196000.0
+        },
+        {
+          "horse_number": 7,
+          "name_tc": "加州勇勝",
+          "name_en": "CALIFORNIA BAY",
+          "formula_score": 0.53833,
+          "live_value_index": 62.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 568000.0,
+          "q_amount": 280000.0
+        },
+        {
+          "horse_number": 12,
+          "name_tc": "智勝攻略",
+          "name_en": "TACTICAL COMMAND",
+          "formula_score": 0.501,
+          "live_value_index": 57.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 543000.0,
+          "q_amount": 150000.0
+        }
+      ],
+      "original": [
+        5,
+        3,
+        7,
+        12,
+        8
+      ]
     },
     "3": {
       "status": "waiting",
