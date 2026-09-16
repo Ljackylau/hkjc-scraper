@@ -1,7 +1,7 @@
 {
   "date": "2026-09-16",
   "phase": "late",
-  "updated_at": "2026-09-16T22:11:47.604968+08:00",
+  "updated_at": "2026-09-16T22:12:49.009696+08:00",
   "state": "running",
   "horse103": {
     "5": {
@@ -84,8 +84,9 @@
       "error": "T-3 response not ready or lockTime mismatches schedule"
     },
     "7": {
-      "status": "waiting",
-      "target": "2026-09-16T22:12:00+08:00"
+      "status": "retrying",
+      "target": "2026-09-16T22:12:00+08:00",
+      "error": "T-3 response not ready or lockTime mismatches schedule"
     },
     "8": {
       "status": "waiting",
