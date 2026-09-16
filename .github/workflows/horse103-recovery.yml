@@ -1,0 +1,22 @@
+name: Horse103 delayed meeting recovery
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/horse103-recovery.yml']
+permissions:
+  contents: write
+concurrency:
+  group: horse103-recovery
+  cancel-in-progress: false
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -u race-day/recover.py

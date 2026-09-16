@@ -62,7 +62,17 @@ async def horse_job(race,date,folder,states,executor):
         states[str(n)]={'status':'saved','target':saved['lock_time'],'delay_seconds':saved.get('capture_delay_seconds'),'picks':saved['ranking'][:5],'original':[a['horseNumber'] for a in saved['live103_raw']['candidates']]}
         return
     states[str(n)]={'status':'waiting','target':target.isoformat()}
-    while now()<target:await asyncio.sleep(min(5,(target-now()).total_seconds()))
+    # Re-read the authoritative schedule while waiting; meetings can be delayed.
+    while True:
+        try:
+            current=await asyncio.get_running_loop().run_in_executor(executor,horse.get_races,date)
+            updated=next(r for r in current if r['id']==race['id'])
+            race=updated;target=horse.hk_datetime(date,race['post_time'])-timedelta(minutes=3)
+            states[str(n)]={'status':'waiting','target':target.isoformat()}
+        except Exception as e:
+            states[str(n)]['error']='Schedule refresh: '+str(e)[:150]
+        if now()>=target:break
+        await asyncio.sleep(min(20,max(0,(target-now()).total_seconds())))
     # Never manufacture a T-3 snapshot by querying a race long after its lock.
     if now()>target+timedelta(seconds=90):
         states[str(n)]={'status':'missed','target':target.isoformat(),'reason':'Started more than 90 seconds after T-3'};return
@@ -71,7 +81,9 @@ async def horse_job(race,date,folder,states,executor):
         base=horse.get_base_race_id(date,None)
         # Request Live103 before slower ticket pagination.
         live=horse.request('/functions/v1/live103-decision',{'raceId':race['id']})
-        if not valid_live(live,race,date):raise RuntimeError('T-3 response not ready or lockTime mismatches schedule')
+        if not valid_live(live,race,date):
+            atomic(folder/'horse103'/f'race_{n:02d}_rejected.json',{'received_at':now().isoformat(),'expected_lock':target.isoformat(),'live':live})
+            raise RuntimeError(f"Live103 quality={live.get('dataQuality')}, phase={live.get('phase')}, lockTime={live.get('lockTime')}; expected={target.isoformat()}")
         fetched=now().isoformat()
         tickets=horse.get_tickets(date)
         # capture_race must consume exactly the response obtained above.
@@ -89,6 +101,13 @@ async def horse_job(race,date,folder,states,executor):
             print('Horse103 R',n,'saved', [r['horse_number'] for r in result['ranking'][:5]],flush=True);return
         except Exception as e:
             states[str(n)]={'status':'retrying','target':target.isoformat(),'error':str(e)[:250]}
+            try:
+                latest=await loop.run_in_executor(executor,horse.get_races,date)
+                updated=next(r for r in latest if r['id']==race['id'])
+                revised=horse.hk_datetime(date,updated['post_time'])-timedelta(minutes=3)
+                if revised!=target and now()<=revised+timedelta(seconds=90):
+                    return await horse_job(updated,date,folder,states,executor)
+            except Exception:pass
             await asyncio.sleep(5)
     states[str(n)]['status']='unavailable'
 
