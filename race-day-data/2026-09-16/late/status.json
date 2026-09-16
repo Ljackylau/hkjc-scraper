@@ -1,12 +1,82 @@
 {
   "date": "2026-09-16",
   "phase": "late",
-  "updated_at": "2026-09-16T21:06:18.202047+08:00",
+  "updated_at": "2026-09-16T21:07:19.464790+08:00",
   "state": "running",
   "horse103": {
     "5": {
-      "status": "waiting",
-      "target": "2026-09-16T21:07:00+08:00"
+      "status": "saved",
+      "target": "2026-09-16T21:07:00+08:00",
+      "delay_seconds": 3.62,
+      "picks": [
+        {
+          "horse_number": 6,
+          "name_tc": "競駿非凡",
+          "name_en": "YOUNG ARROW",
+          "formula_score": 0.73,
+          "live_value_index": 55.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2398000.0,
+          "q_amount": 2454000.0
+        },
+        {
+          "horse_number": 7,
+          "name_tc": "紅錢到",
+          "name_en": "WINNING MONEY",
+          "formula_score": 0.62516,
+          "live_value_index": 73.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1122000.0,
+          "q_amount": 711000.0
+        },
+        {
+          "horse_number": 10,
+          "name_tc": "團結戰靈",
+          "name_en": "GENIUS BABY",
+          "formula_score": 0.5915,
+          "live_value_index": 65.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1208000.0,
+          "q_amount": 1059000.0
+        },
+        {
+          "horse_number": 8,
+          "name_tc": "老鼠斑",
+          "name_en": "GROUPER",
+          "formula_score": 0.57265,
+          "live_value_index": 65.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1095000.0,
+          "q_amount": 723000.0
+        },
+        {
+          "horse_number": 4,
+          "name_tc": "幸運愉快",
+          "name_en": "LUCKY MCQUEEN",
+          "formula_score": 0.50492,
+          "live_value_index": 66.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 653000.0,
+          "q_amount": 347000.0
+        }
+      ],
+      "original": [
+        7,
+        8,
+        10,
+        6,
+        4
+      ]
     },
     "6": {
       "status": "waiting",
