@@ -1,12 +1,82 @@
 {
   "date": "2026-09-16",
   "phase": "early",
-  "updated_at": "2026-09-16T19:06:21.571063+08:00",
+  "updated_at": "2026-09-16T19:07:22.984990+08:00",
   "state": "running",
   "horse103": {
     "1": {
-      "status": "waiting",
-      "target": "2026-09-16T19:07:00+08:00"
+      "status": "saved",
+      "target": "2026-09-16T19:07:00+08:00",
+      "delay_seconds": 7.15,
+      "picks": [
+        {
+          "horse_number": 9,
+          "name_tc": "花香月明",
+          "name_en": "RUNJEET",
+          "formula_score": 0.85,
+          "live_value_index": 75.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 93000.0,
+          "q_amount": 0.0
+        },
+        {
+          "horse_number": 11,
+          "name_tc": "辣得金",
+          "name_en": "SPICY SPANGLE",
+          "formula_score": 0.456,
+          "live_value_index": 76.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 0.0,
+          "q_amount": 0.0
+        },
+        {
+          "horse_number": 4,
+          "name_tc": "良駒好友",
+          "name_en": "JOLLY COMPANION",
+          "formula_score": 0.402,
+          "live_value_index": 67.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 0.0,
+          "q_amount": 0.0
+        },
+        {
+          "horse_number": 12,
+          "name_tc": "洛河",
+          "name_en": "SOLAR RIVER",
+          "formula_score": 0.4,
+          "live_value_index": 0.0,
+          "live_command": null,
+          "live_capital_signal": null,
+          "is_live_candidate": false,
+          "qp_amount": 93000.0,
+          "q_amount": 0.0
+        },
+        {
+          "horse_number": 6,
+          "name_tc": "飈誌",
+          "name_en": "ICONICAL",
+          "formula_score": 0.378,
+          "live_value_index": 63.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 0.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        11,
+        9,
+        4,
+        6,
+        2
+      ]
     },
     "2": {
       "status": "waiting",

@@ -1,0 +1,345 @@
+{
+  "captured_at": "2026-09-16T11:07:08.301168+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.40 * normalized QP amount",
+  "race": {
+    "id": "0ef8912d-031b-43c4-ab7a-781d4e59950c",
+    "race_number": 1,
+    "post_time": "19:10",
+    "venue": "跑馬地",
+    "distance": 1000,
+    "course": "B"
+  },
+  "lock_time": "2026-09-16T11:07:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.4.1",
+    "phase": "locked",
+    "generatedAt": "2026-09-16T11:07:02.991Z",
+    "postTime": "2026-09-16T11:10:00.000Z",
+    "previewTime": "2026-09-16T11:03:00.000Z",
+    "lockTime": "2026-09-16T11:07:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 11,
+        "nameTc": "辣得金",
+        "nameEn": "SPICY SPANGLE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 76,
+        "valueTier": "high",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "花香月明",
+        "nameEn": "RUNJEET",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 75,
+        "valueTier": "high",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "良駒好友",
+        "nameEn": "JOLLY COMPANION",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "飈誌",
+        "nameEn": "ICONICAL",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "喆喆友福",
+        "nameEn": "ALWAYS MY FOLKS",
+        "capitalSignal": "none",
+        "command": "avoid",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "risk_dominates",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 7,
+        "nameTc": "銀亮濠俠",
+        "nameEn": "MACANESE MASTER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "陸小鳳",
+        "nameEn": "DIRIYA",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "洛河",
+        "nameEn": "SOLAR RIVER",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 7,
+        "nameTc": "銀亮濠俠",
+        "nameEn": "MACANESE MASTER"
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "洛河",
+        "nameEn": "SOLAR RIVER"
+      }
+    ]
+  },
+  "ticket_cutoff": "2026-09-16T11:07:00.000Z",
+  "base_race_id": 24379,
+  "source_ticket_race_id": 24379,
+  "qp_max_amount": 93000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 351356,
+      "race_id": 24379,
+      "race_date": "2026-09-16",
+      "horse_or_combo": "9-12",
+      "bet_type": "QP",
+      "amount": 93000,
+      "amount_str": "93K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-16T10:49:08.339574+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 9,
+      "name_tc": "花香月明",
+      "name_en": "RUNJEET",
+      "formula_score": 0.85,
+      "live_value_index": 75.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 11,
+      "name_tc": "辣得金",
+      "name_en": "SPICY SPANGLE",
+      "formula_score": 0.456,
+      "live_value_index": 76.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "良駒好友",
+      "name_en": "JOLLY COMPANION",
+      "formula_score": 0.402,
+      "live_value_index": 67.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "洛河",
+      "name_en": "SOLAR RIVER",
+      "formula_score": 0.4,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "飈誌",
+      "name_en": "ICONICAL",
+      "formula_score": 0.378,
+      "live_value_index": 63.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "喆喆友福",
+      "name_en": "ALWAYS MY FOLKS",
+      "formula_score": 0.336,
+      "live_value_index": 56.0,
+      "live_command": "avoid",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "尚旋",
+      "name_en": "TOPSPIN KING",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "雙子美麗",
+      "name_en": "BEAUTY GEMINI",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "瑰麗人生",
+      "name_en": "SWEET BRIAR",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "銀亮濠俠",
+      "name_en": "MACANESE MASTER",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "陸小鳳",
+      "name_en": "DIRIYA",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "君智盛",
+      "name_en": "SMART CITY",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 9,
+    "name_tc": "花香月明",
+    "name_en": "RUNJEET",
+    "formula_score": 0.85,
+    "live_value_index": 75.0,
+    "live_command": "aggressive",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 93000.0,
+    "q_amount": 0.0
+  },
+  "other_four": [
+    {
+      "horse_number": 11,
+      "name_tc": "辣得金",
+      "name_en": "SPICY SPANGLE",
+      "formula_score": 0.456,
+      "live_value_index": 76.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "良駒好友",
+      "name_en": "JOLLY COMPANION",
+      "formula_score": 0.402,
+      "live_value_index": 67.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "洛河",
+      "name_en": "SOLAR RIVER",
+      "formula_score": 0.4,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "飈誌",
+      "name_en": "ICONICAL",
+      "formula_score": 0.378,
+      "live_value_index": 63.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "live_received_at": "2026-09-16T19:07:07.150783+08:00",
+  "capture_delay_seconds": 7.15,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained."
+}
