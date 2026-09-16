@@ -1,8 +1,8 @@
 {
   "date": "2026-09-16",
   "phase": "recovery",
-  "updated_at": "2026-09-16T22:52:02.779188+08:00",
-  "state": "running",
+  "updated_at": "2026-09-16T22:52:19.466278+08:00",
+  "state": "finished",
   "horse103": {
     "7": {
       "status": "saved",
@@ -79,8 +79,78 @@
       ]
     },
     "8": {
-      "status": "waiting",
-      "target": "2026-09-16T22:52:00+08:00"
+      "status": "saved",
+      "target": "2026-09-16T22:52:00+08:00",
+      "delay_seconds": 8.97,
+      "picks": [
+        {
+          "horse_number": 12,
+          "name_tc": "極光之子",
+          "name_en": "LE ZONDA",
+          "formula_score": 0.74648,
+          "live_value_index": 66.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2392000.0,
+          "q_amount": 1967000.0
+        },
+        {
+          "horse_number": 6,
+          "name_tc": "包裝福星",
+          "name_en": "PACKING ANGEL",
+          "formula_score": 0.5553,
+          "live_value_index": 62.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1251000.0,
+          "q_amount": 1030000.0
+        },
+        {
+          "horse_number": 11,
+          "name_tc": "穿甲金鷹",
+          "name_en": "ARMOR GOLDEN EAGLE",
+          "formula_score": 0.53829,
+          "live_value_index": 63.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1094000.0,
+          "q_amount": 851000.0
+        },
+        {
+          "horse_number": 9,
+          "name_tc": "加州動員",
+          "name_en": "CALIFORNIATOTALITY",
+          "formula_score": 0.43733,
+          "live_value_index": 64.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 364000.0,
+          "q_amount": 257000.0
+        },
+        {
+          "horse_number": 8,
+          "name_tc": "勁沙塵",
+          "name_en": "MAX QUE",
+          "formula_score": 0.4,
+          "live_value_index": 0.0,
+          "live_command": null,
+          "live_capital_signal": null,
+          "is_live_candidate": false,
+          "qp_amount": 2730000.0,
+          "q_amount": 2603000.0
+        }
+      ],
+      "original": [
+        12,
+        9,
+        4,
+        11,
+        6
+      ]
     }
   }
 }
