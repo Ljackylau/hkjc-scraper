@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="zh-HK"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Race Day｜Dragon + Horse103</title>
+<title>Race Day｜Horse103 T−3</title>
 <style>
-:root{color-scheme:dark}body{margin:0;background:#09111f;color:#eaf1fb;font:16px system-ui}main{max-width:1200px;margin:auto;padding:24px}header,section{background:#132038;border:1px solid #304761;border-radius:16px;padding:20px;margin-bottom:18px}h1{font-size:28px;margin:0 0 12px}a{color:#88caff}button,input{font:inherit;background:#223b55;color:white;border:1px solid #53718b;border-radius:8px;padding:10px;margin:4px}button.active{background:#c89c42;color:#071321}.muted{color:#aabcce;font-size:14px}.pick{font-size:25px;color:#f2ca76}.races{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}.card{background:#0c1728;border:1px solid #304761;border-radius:12px;padding:16px}.copyline{white-space:pre-wrap;background:#071321;border:1px solid #3b536f;border-radius:9px;padding:12px;margin:12px 0;line-height:1.55}.copybar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}iframe{width:100%;height:1000px;border:0}.bad{color:#ffb494}.good{color:#81d5a8}small{display:block;margin-top:10px}nav{margin:12px 0}
+:root{color-scheme:dark}body{margin:0;background:#09111f;color:#eaf1fb;font:16px system-ui}main{max-width:1200px;margin:auto;padding:24px}header,section{background:#132038;border:1px solid #304761;border-radius:16px;padding:20px;margin-bottom:18px}h1{font-size:28px;margin:0 0 12px}a{color:#88caff}button,input{font:inherit;background:#223b55;color:white;border:1px solid #53718b;border-radius:8px;padding:10px;margin:4px}.muted{color:#aabcce;font-size:14px}.pick{font-size:25px;color:#f2ca76}.races{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}.card{background:#0c1728;border:1px solid #304761;border-radius:12px;padding:16px}.copyline{white-space:pre-wrap;background:#071321;border:1px solid #3b536f;border-radius:9px;padding:12px;margin:12px 0;line-height:1.55}.copybar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.bad{color:#ffb494}.good{color:#81d5a8}small{display:block;margin-top:10px}
 </style>
 <main><header><h1>Race Day｜賽日控制台</h1>
-<p>Dragon 即時市場圖表 ＋ Horse103 T−3 主選及四匹</p>
+<p>Horse103 T−3 主選及四匹</p>
 <p><a href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止：開啟 GitHub Runner ↗</a></p>
 <p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉本頁不會停止收集。</p>
-<label>賽日 <input type="date" id="date" value="2026-09-13"></label><button id="load">查看</button>
+<label>賽日 <input type="date" id="date"></label><button id="load">查看</button>
 <p id="health" class="muted">尚未載入資料</p>
-<nav><button id="horseTab" class="active">Horse103 T−3</button><button id="dragonTab">Dragon 市場圖表</button></nav>
 </header>
 <section id="horse"><p class="muted">60% 即場解碼 valueIndex ＋ 40% 位置Q資金。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應。</p><div class="copybar"><button id="copyAll" hidden>複製所有已鎖定場次</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
-<section id="dragon" hidden><p>獨立副本沿用原 FCT 圖表，首次可用取樣為基準。</p><button id="early">前半場</button><button id="late">後半場</button><iframe id="chart" title="Dragon 即時圖表"></iframe></section>
-<p class="muted">原網站保留：<a href="../dragon/chart.html" target="_blank" rel="noopener">原 Dragon 圖表</a>。本頁約每分鐘讀取摘要；顯示時間包含資料發佈與快取延遲。</p></main>
+<p class="muted">本頁約每分鐘讀取摘要；顯示時間包含資料發佈與快取延遲。</p></main>
 <script>
-const $=id=>document.getElementById(id);let selected='2026-09-13', phase='early',dataRef='',refChecked=0,copyRows=new Map();
+const $=id=>document.getElementById(id);
+const hkToday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Hong_Kong',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts().map(x=>[x.type,x.value]));return `${p.year}-${p.month}-${p.day}`};
+let selected=hkToday(),dataRef='',refChecked=0,copyRows=new Map();$('date').value=selected;
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const base=()=>`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${dataRef||'race-day-data'}/race-day-data/${selected}`;
 async function currentRef(){
@@ -33,9 +33,7 @@ function summary(n,s){
  const main=Number(picks[0].horse_number),originalNumbers=(s.original||[]).map(Number);
  const original=new Set(originalNumbers);
  const extra=picks.slice(1,5).filter(h=>!original.has(Number(h.horse_number))).map(h=>`${h.horse_number}號`);
- const otherOriginal=originalNumbers.filter(h=>h!==main).map(h=>`${h}號`);
- const legs=[...extra,...otherOriginal];
- return `R${n}\n獨贏&位置信心馬：${main}號${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${main}號 拖 ${legs.join('、')||'無'}`
+ return `R${n}\n獨贏&位置信心馬：${main}號${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${main}號 拖 `
 }
 async function copyText(value,label){
  try{
@@ -44,7 +42,6 @@ async function copyText(value,label){
   $('copyStatus').textContent='✓ '+label+'已複製';setTimeout(()=>{$('copyStatus').textContent=''},1800)
  }catch(e){$('copyStatus').textContent='未能自動複製，請長按文字複製'}
 }
-function frame(){if(!$('dragon').hidden)$('chart').src=`chart.html?date=${encodeURIComponent(selected)}&phase=${phase}`}
 async function refresh(){
  if(!/^\d{4}-\d{2}-\d{2}$/.test(selected))return;
  try{await currentRef()}catch(e){$('health').textContent='暫時未能取得最新版本：'+e.message;return}
@@ -75,9 +72,6 @@ async function refresh(){
 }
 $('cards').onclick=e=>{const b=e.target.closest('[data-copy-race]');if(!b)return;const n=Number(b.dataset.copyRace),row=copyRows.get(n);if(row)copyText(row.text,`R${n} `)};
 $('copyAll').onclick=()=>{const value=[...copyRows.entries()].filter(([,x])=>x.saved).sort((a,b)=>a[0]-b[0]).map(([,x])=>x.text).join('\n\n');if(value)copyText(value,'所有已鎖定場次')};
-$('load').onclick=()=>{selected=$('date').value;refresh();frame()};
-$('dragonTab').onclick=()=>{$('dragon').hidden=false;$('horse').hidden=true;$('dragonTab').className='active';$('horseTab').className='';frame()};
-$('horseTab').onclick=()=>{$('horse').hidden=false;$('dragon').hidden=true;$('chart').src='about:blank';$('horseTab').className='active';$('dragonTab').className=''};
-$('early').onclick=()=>{phase='early';frame()};$('late').onclick=()=>{phase='late';frame()};
+$('load').onclick=()=>{selected=$('date').value;dataRef='';refChecked=0;refresh()};
 refresh();setInterval(()=>{if(!document.hidden)refresh()},60000);
 </script></html>

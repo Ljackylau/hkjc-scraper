@@ -54,6 +54,11 @@ def valid_live(live,race,date):
     target=horse.hk_datetime(date,race['post_time'])-timedelta(minutes=3)
     return live.get('phase') in ('locked','started') and abs((horse.parse_utc(live['lockTime'])-target).total_seconds())<=2
 
+class ScheduleMoved(RuntimeError):
+    def __init__(self,target):
+        super().__init__(f'Schedule moved to {target.isoformat()}')
+        self.target=target
+
 async def horse_job(race,date,folder,states,executor):
     n=race['race_number'];target=horse.hk_datetime(date,race['post_time'])-timedelta(minutes=3)
     dest=folder/'horse103'/f'race_{n:02d}.json'
@@ -81,6 +86,13 @@ async def horse_job(race,date,folder,states,executor):
         base=horse.get_base_race_id(date,None)
         # Request Live103 before slower ticket pagination.
         live=horse.request('/functions/v1/live103-decision',{'raceId':race['id']})
+        try:reported=horse.parse_utc(live['lockTime']).astimezone(HK)
+        except Exception:reported=None
+        # Live103 lockTime is the final authority when its schedule update reaches
+        # the decision endpoint before the races table.
+        if reported and target+timedelta(seconds=2)<reported<=target+timedelta(minutes=30):
+            atomic(folder/'horse103'/f'race_{n:02d}_schedule_update.json',{'received_at':now().isoformat(),'old_lock':target.isoformat(),'new_lock':reported.isoformat(),'live':live})
+            raise ScheduleMoved(reported)
         if not valid_live(live,race,date):
             atomic(folder/'horse103'/f'race_{n:02d}_rejected.json',{'received_at':now().isoformat(),'expected_lock':target.isoformat(),'live':live})
             raise RuntimeError(f"Live103 quality={live.get('dataQuality')}, phase={live.get('phase')}, lockTime={live.get('lockTime')}; expected={target.isoformat()}")
@@ -99,6 +111,11 @@ async def horse_job(race,date,folder,states,executor):
             atomic(dest,result)
             states[str(n)]={'status':'saved','target':target.isoformat(),'delay_seconds':round(lag,2),'picks':result['ranking'][:5],'original':[r['horseNumber'] for r in result['live103_raw']['candidates']]}
             print('Horse103 R',n,'saved', [r['horse_number'] for r in result['ranking'][:5]],flush=True);return
+        except ScheduleMoved as moved:
+            target=moved.target
+            race={**race,'post_time':(target+timedelta(minutes=3)).strftime('%H:%M')}
+            states[str(n)]={'status':'waiting','target':target.isoformat(),'reason':'Schedule delayed; following Live103 lockTime'}
+            while now()<target:await asyncio.sleep(min(20,max(0,(target-now()).total_seconds())))
         except Exception as e:
             states[str(n)]={'status':'retrying','target':target.isoformat(),'error':str(e)[:250]}
             try:
