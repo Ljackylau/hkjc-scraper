@@ -1,0 +1,31 @@
+name: Horse103 downloadable backup
+on:
+  push:
+    branches: [main]
+    paths: ['race-day/resilience.py', '.github/workflows/horse103-backup.yml']
+  schedule:
+    - cron: '30 16 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: horse103-downloadable-backup
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: race-day-data
+          path: backup-source
+          sparse-checkout: race-day-data
+      - run: python3 race-day/resilience.py archive --root backup-source/race-day-data --output backup/horse103.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: horse103-history-${{ github.run_id }}
+          path: backup/horse103.zip
+          retention-days: 7
+          if-no-files-found: error

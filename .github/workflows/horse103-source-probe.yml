@@ -1,0 +1,26 @@
+name: Horse103 independent source probe
+on:
+  push:
+    branches: [main]
+    paths: ['race-day/hkjc_probe.py', '.github/workflows/horse103-source-probe.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install 'playwright>=1.45,<2'
+      - run: python -m playwright install --with-deps chromium
+      - run: python race-day/hkjc_probe.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hkjc-source-feasibility
+          path: hkjc-probe.json
+          retention-days: 7

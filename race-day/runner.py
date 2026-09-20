@@ -82,10 +82,11 @@ async def horse_job(race,date,folder,states,executor):
     if now()>target+timedelta(seconds=90):
         states[str(n)]={'status':'missed','target':target.isoformat(),'reason':'Started more than 90 seconds after T-3'};return
     loop=asyncio.get_running_loop()
+    evidence=None
     def capture():
-        base=horse.get_base_race_id(date,None)
+        nonlocal evidence
         # Request Live103 before slower ticket pagination.
-        live=horse.request('/functions/v1/live103-decision',{'raceId':race['id']})
+        live=evidence['live'] if evidence else horse.request('/functions/v1/live103-decision',{'raceId':race['id']})
         try:reported=horse.parse_utc(live['lockTime']).astimezone(HK)
         except Exception:reported=None
         # Live103 lockTime is the final authority when its schedule update reaches
@@ -96,8 +97,18 @@ async def horse_job(race,date,folder,states,executor):
         if not valid_live(live,race,date):
             atomic(folder/'horse103'/f'race_{n:02d}_rejected.json',{'received_at':now().isoformat(),'expected_lock':target.isoformat(),'live':live})
             raise RuntimeError(f"Live103 quality={live.get('dataQuality')}, phase={live.get('phase')}, lockTime={live.get('lockTime')}; expected={target.isoformat()}")
-        fetched=now().isoformat()
+        fetched=evidence['live_received_at'] if evidence else now().isoformat()
+        lag=(datetime.fromisoformat(fetched)-target).total_seconds()
+        if not 0<=lag<=90:raise RuntimeError('Response received outside 90-second capture window')
+        if evidence is None:
+            evidence={'source':'103.plus Live103','race':race,'date':date,'expected_lock':target.isoformat(),'live_received_at':fetched,'capture_delay_seconds':round(lag,2),'live':live}
+            # Keep the first valid response even if tickets, entries or publication fail.
+            atomic(folder/'horse103'/f'race_{n:02d}_live.json',evidence)
+        base=horse.get_base_race_id(date,None)
         tickets=horse.get_tickets(date)
+        cutoff=horse.parse_utc(live['lockTime'])
+        eligible=[t for t in tickets if int(t['race_id'])==base+n-1 and horse.parse_utc(t['scraped_at'])<=cutoff]
+        atomic(folder/'horse103'/f'race_{n:02d}_tickets.json',{'received_at':now().isoformat(),'cutoff':live['lockTime'],'tickets':eligible})
         # capture_race must consume exactly the response obtained above.
         return horse.capture_race(race,date,base,tickets,live_override=live),fetched
     while now()<=target+timedelta(seconds=90):
@@ -112,6 +123,7 @@ async def horse_job(race,date,folder,states,executor):
             states[str(n)]={'status':'saved','target':target.isoformat(),'delay_seconds':round(lag,2),'picks':result['ranking'][:5],'original':[r['horseNumber'] for r in result['live103_raw']['candidates']]}
             print('Horse103 R',n,'saved', [r['horse_number'] for r in result['ranking'][:5]],flush=True);return
         except ScheduleMoved as moved:
+            evidence=None
             target=moved.target
             race={**race,'post_time':(target+timedelta(minutes=3)).strftime('%H:%M')}
             states[str(n)]={'status':'waiting','target':target.isoformat(),'reason':'Schedule delayed; following Live103 lockTime'}
@@ -122,11 +134,14 @@ async def horse_job(race,date,folder,states,executor):
                 latest=await loop.run_in_executor(executor,horse.get_races,date)
                 updated=next(r for r in latest if r['id']==race['id'])
                 revised=horse.hk_datetime(date,updated['post_time'])-timedelta(minutes=3)
-                if revised!=target and now()<=revised+timedelta(seconds=90):
+                if evidence is None and revised!=target and now()<=revised+timedelta(seconds=90):
                     return await horse_job(updated,date,folder,states,executor)
             except Exception:pass
             await asyncio.sleep(5)
     states[str(n)]['status']='unavailable'
+    if evidence:
+        states[str(n)]['status']='partial'
+        states[str(n)]['reason']='T−3 Live103 saved; ranking incomplete. See raw evidence.'
 
 async def run(args):
     config=json.loads((HERE/'plan.json').read_text())

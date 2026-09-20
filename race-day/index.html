@@ -7,6 +7,7 @@
 <main><header><h1>Race Day｜賽日控制台</h1>
 <p>Horse103 T−3 主選及四匹</p>
 <p><a href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止：開啟 GitHub Runner ↗</a></p>
+<p><a href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載 Horse103 歷史備份 ↗</a> <span class="muted">選最近成功執行 → Artifacts；下載至手機／電腦可保留獨立副本。</span></p>
 <p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉本頁不會停止收集。</p>
 <label>賽日 <input type="date" id="date"></label><button id="load">查看</button>
 <p id="health" class="muted">尚未載入資料</p>
@@ -26,10 +27,10 @@ async function currentRef(){
  }catch(e){if(!dataRef)throw e}
  return dataRef
 }
-const labels={waiting:'等待 T−3',saved:'已保存',missed:'錯過 T−3',retrying:'重試中',unavailable:'資料不足'};
+const labels={waiting:'等待 T−3',saved:'已保存',partial:'T−3 原始資料已保存；未完成排名',missed:'錯過 T−3',retrying:'重試中',unavailable:'資料不足'};
 function summary(n,s){
  const picks=s.picks||[];
- if(s.status!=='saved'||!picks.length)return `R${n}\n獨贏&位置信心馬：未能鎖定T−3\n連贏位置Q：無`;
+ if(s.status!=='saved'||!picks.length)return `R${n}\n獨贏&位置信心馬：${s.status==='partial'?'原始T−3已保存，排名未完成':'未能鎖定T−3'}\n連贏位置Q：無`;
  const main=Number(picks[0].horse_number),originalNumbers=(s.original||[]).map(Number);
  const original=new Set(originalNumbers);
  const extra=picks.slice(1,5).filter(h=>!original.has(Number(h.horse_number))).map(h=>`${h.horse_number}號`);

@@ -31,6 +31,16 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m unittest discover -s race-day -p 'test_*.py' -v
+      - name: Check Horse103 connectivity and response schema
+        env:
+          RACE_DATE: ${{ inputs.date || '2026-09-13' }}
+        run: python race-day/resilience.py health --date "$RACE_DATE" --output race-day/source-health.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: horse103-source-health
+          path: race-day/source-health.json
+          retention-days: 7
       - id: plan
         env:
           RACE_DATE: ${{ inputs.date || '2026-09-13' }}
@@ -61,6 +71,15 @@ jobs:
       - env:
           RACE_DATE: ${{ inputs.date }}
         run: python -u race-day/runner.py --date "$RACE_DATE" --phase early --push
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: horse103-early-${{ inputs.date }}-${{ github.run_id }}
+          path: |
+            race-day-data/${{ inputs.date }}/early/horse103/
+            race-day-data/${{ inputs.date }}/early/status.json
+            race-day/plan.json
+          retention-days: 7
   release-late:
     needs: prepare
     if: inputs.mode == 'Run'
@@ -98,3 +117,12 @@ jobs:
       - env:
           RACE_DATE: ${{ inputs.date }}
         run: python -u race-day/runner.py --date "$RACE_DATE" --phase late --push
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: horse103-late-${{ inputs.date }}-${{ github.run_id }}
+          path: |
+            race-day-data/${{ inputs.date }}/late/horse103/
+            race-day-data/${{ inputs.date }}/late/status.json
+            race-day/plan.json
+          retention-days: 7
