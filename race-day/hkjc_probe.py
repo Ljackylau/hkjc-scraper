@@ -3,7 +3,7 @@ import asyncio
 import json
 from datetime import datetime, timezone
 from pathlib import Path
-from dragon_copy import discover_meeting
+from dragon_copy import meeting_candidates, HKJC_RACECARD, HKJC_ENTRIES, now
 
 
 async def probe():
@@ -14,7 +14,19 @@ async def probe():
         browser=await p.chromium.launch()
         context=await browser.new_context(timezone_id='Asia/Hong_Kong',locale='zh-HK')
         try:
-            meeting=await asyncio.wait_for(discover_meeting(context),timeout=120)
+            # Odds feasibility needs meeting identity, not a complete schedule.
+            # Check timing separately before any future live collector is enabled.
+            landing=await context.new_page()
+            candidates=[]
+            for url in (HKJC_RACECARD,HKJC_ENTRIES):
+                await landing.goto(url,wait_until='domcontentloaded',timeout=25000)
+                hrefs=await landing.locator('a').evaluate_all('els => els.map(e => e.href)')
+                candidates=meeting_candidates(hrefs,now().date())
+                if candidates:break
+            await landing.close()
+            if not candidates:raise RuntimeError('No official current/future meeting links')
+            date,venue=candidates[0]
+            meeting={'date':date,'venue':venue,'schedule_validated':False}
             report['meeting']=meeting
             for route in ('wp','qin','qpl'):
                 page=await context.new_page()
