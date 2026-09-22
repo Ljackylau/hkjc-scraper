@@ -8,7 +8,7 @@ on:
       date:
         description: 'Hong Kong race date'
         required: true
-        default: '2026-09-13'
+        default: '2026-09-23'
       mode:
         description: 'Preflight today; Run on race day'
         type: choice
@@ -33,7 +33,7 @@ jobs:
       - run: python -m unittest discover -s race-day -p 'test_*.py' -v
       - name: Check Horse103 connectivity and response schema
         env:
-          RACE_DATE: ${{ inputs.date || '2026-09-13' }}
+          RACE_DATE: ${{ inputs.date || '2026-09-23' }}
         run: python race-day/resilience.py health --date "$RACE_DATE" --output race-day/source-health.json
       - uses: actions/upload-artifact@v4
         if: always()
@@ -43,7 +43,7 @@ jobs:
           retention-days: 7
       - id: plan
         env:
-          RACE_DATE: ${{ inputs.date || '2026-09-13' }}
+          RACE_DATE: ${{ inputs.date || '2026-09-23' }}
         run: python race-day/runner.py --date "$RACE_DATE" --plan
       - uses: actions/upload-artifact@v4
         with:
