@@ -14,6 +14,16 @@ on:
         type: choice
         options: [Preflight, Run]
         default: Preflight
+      venue:
+        description: 'Independent HKJC shadow: venue'
+        required: true
+        default: HV
+        type: choice
+        options: [HV, ST]
+      post_times:
+        description: 'Nine official race times, comma separated (verify on race day)'
+        required: true
+        default: '18:40,19:10,19:40,20:10,20:40,21:10,21:45,22:15,22:50'
 permissions:
   contents: write
 concurrency:
@@ -125,4 +135,75 @@ jobs:
             race-day-data/${{ inputs.date }}/late/horse103/
             race-day-data/${{ inputs.date }}/late/status.json
             race-day/plan.json
+          retention-days: 7
+  hkjc-early:
+    if: inputs.mode == 'Run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install 'playwright>=1.45,<2' certifi
+      - run: python -m playwright install --with-deps chromium
+      - name: Archive independent HKJC early odds (shadow only)
+        env:
+          RACE_DATE: ${{ inputs.date }}
+          VENUE: ${{ inputs.venue }}
+          POST_TIMES: ${{ inputs.post_times }}
+        run: python -u race-day/hkjc_shadow.py --date "$RACE_DATE" --venue "$VENUE" --times "$POST_TIMES" --phase early --push
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hkjc-shadow-early-${{ github.run_id }}
+          path: race-day-data/${{ inputs.date }}/hkjc-early/
+          retention-days: 7
+  hkjc-release-late:
+    if: inputs.mode == 'Run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - name: Hold until 90 minutes before fifth race
+        env:
+          RACE_DATE: ${{ inputs.date }}
+          POST_TIMES: ${{ inputs.post_times }}
+        run: |
+          python3 - <<'PY'
+          import os,time
+          from datetime import datetime,timedelta,timezone
+          clocks=os.environ['POST_TIMES'].split(',')
+          if len(clocks)!=9:raise ValueError('Nine race times required')
+          hk=timezone(timedelta(hours=8))
+          target=datetime.strptime(os.environ['RACE_DATE']+' '+clocks[4],'%Y-%m-%d %H:%M').replace(tzinfo=hk)-timedelta(minutes=90)
+          while datetime.now(hk)<target:
+              time.sleep(min(30,(target-datetime.now(hk)).total_seconds()))
+          PY
+  hkjc-late:
+    needs: hkjc-release-late
+    if: inputs.mode == 'Run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install 'playwright>=1.45,<2' certifi
+      - run: python -m playwright install --with-deps chromium
+      - name: Archive independent HKJC late odds (shadow only)
+        env:
+          RACE_DATE: ${{ inputs.date }}
+          VENUE: ${{ inputs.venue }}
+          POST_TIMES: ${{ inputs.post_times }}
+        run: python -u race-day/hkjc_shadow.py --date "$RACE_DATE" --venue "$VENUE" --times "$POST_TIMES" --phase late --push
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hkjc-shadow-late-${{ github.run_id }}
+          path: race-day-data/${{ inputs.date }}/hkjc-late/
           retention-days: 7

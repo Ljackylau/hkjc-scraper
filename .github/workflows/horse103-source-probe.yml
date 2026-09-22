@@ -2,7 +2,7 @@ name: Horse103 independent source probe
 on:
   push:
     branches: [main]
-    paths: ['race-day/hkjc_probe.py', '.github/workflows/horse103-source-probe.yml']
+    paths: ['race-day/hkjc_probe.py', 'race-day/hkjc_shadow.py', '.github/workflows/horse103-source-probe.yml']
   workflow_dispatch:
 permissions:
   contents: read

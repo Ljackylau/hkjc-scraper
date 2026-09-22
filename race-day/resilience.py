@@ -43,8 +43,10 @@ def health(date):
 
 def archive(root,output):
     root=Path(root);output=Path(output)
-    files=sorted(p for p in root.rglob('*.json') if p.is_file() and
-                 ('horse103' in p.relative_to(root).parts or p.name in ('status.json','source-health.json','plan.json')))
+    files=sorted(p for p in root.rglob('*') if p.is_file() and p.suffix in ('.json','.jsonl') and
+                 ('horse103' in p.relative_to(root).parts or
+                  any(part.startswith('hkjc-') for part in p.relative_to(root).parts) or
+                  p.name in ('status.json','source-health.json','plan.json')))
     if not files:raise RuntimeError('No Horse103 backup files found')
     output.parent.mkdir(parents=True,exist_ok=True)
     manifest={'created_at':datetime.now(timezone.utc).isoformat(),'files':{}}

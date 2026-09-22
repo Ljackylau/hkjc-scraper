@@ -4,6 +4,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from dragon_copy import meeting_candidates, HKJC_RACECARD, HKJC_ENTRIES, now
+from hkjc_shadow import parse
 
 
 async def probe():
@@ -28,17 +29,24 @@ async def probe():
             date,venue=candidates[0]
             meeting={'date':date,'venue':venue,'schedule_validated':False}
             report['meeting']=meeting
-            for route in ('wp','qin','qpl'):
+            for route in ('wp','wpq'):
                 page=await context.new_page()
                 url=f"https://bet.hkjc.com/ch/racing/{route}/{meeting['date']}/{meeting['venue']}/1"
                 row={'url':url,'route':route}
                 try:
                     response=await page.goto(url,wait_until='domcontentloaded',timeout=25000)
                     row['http_status']=response.status if response else None
-                    await page.wait_for_function("document.querySelectorAll('[id^=qb_]').length > 0",timeout=15000)
+                    selector='[id^="odds_WIN_"]' if route=='wp' else '[id^="qb_QPL_"]'
+                    await page.wait_for_selector(selector,timeout=15000)
                     row['raw']=await page.evaluate("""() => ({text:document.body.innerText,
-                        cells:Array.from(document.querySelectorAll('[id^="qb_"]')).map(e=>({id:e.id,value:e.innerText}))})""")
-                    row['odds_elements_found']=len(row['raw']['cells'])
+                        win:Array.from(document.querySelectorAll('[id^="odds_WIN_"]')).map(e=>({id:e.id,value:e.innerText})),
+                        pla:Array.from(document.querySelectorAll('[id^="odds_PLA_"]')).map(e=>({id:e.id,value:e.innerText})),
+                        qin:Array.from(document.querySelectorAll('[id^="qb_QIN_"]')).map(e=>({id:e.id,value:e.innerText})),
+                        qpl:Array.from(document.querySelectorAll('[id^="qb_QPL_"]')).map(e=>({id:e.id,value:e.innerText}))})""")
+                    verified=parse(row['raw'],date,1,route,datetime.now(timezone.utc).astimezone(now().tzinfo))
+                    row['odds_elements_found']={pool:len(values) for pool,values in verified['odds'].items()}
+                    row['source_updated']=verified['source_updated']
+                    row['fresh']=verified['fresh']
                     row['note']='DOM evidence only; timestamps, pool identities and race identity still require validation'
                 except Exception as e:
                     row['error']=str(e)[:500]

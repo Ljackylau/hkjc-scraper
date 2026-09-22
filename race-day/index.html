@@ -13,6 +13,7 @@
 <p id="health" class="muted">尚未載入資料</p>
 </header>
 <section id="horse"><p class="muted">60% 即場解碼 valueIndex ＋ 40% 位置Q資金。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應。</p><div class="copybar"><button id="copyAll" hidden>複製所有已鎖定場次</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
+<section id="hkjc"><h2>HKJC 獨立市場快照（觀察）</h2><p class="muted">每場 T−30 至 T−3 收集獨贏、位置、連贏及位置Q賠率變化。下方係實驗排名，未有足夠賽日驗證，唔會代替 Horse103 主選。</p><div id="hkjcCards" class="races"></div></section>
 <p class="muted">本頁約每分鐘讀取摘要；顯示時間包含資料發佈與快取延遲。</p></main>
 <script>
 const $=id=>document.getElementById(id);
@@ -70,6 +71,16 @@ async function refresh(){
  }
  $('cards').innerHTML=cards.sort((a,b)=>a.n-b.n).map(c=>c.html).join('')||'<p>未有已啟動紀錄。請先在 GitHub 執行 Preflight；賽日執行 Run。</p>';
  $('copyAll').hidden=![...copyRows.values()].some(x=>x.saved);
+ const shadow=await Promise.all(['hkjc-early','hkjc-late'].map(async phase=>{
+  try{const r=await fetch(`${base()}/${phase}/status.json?v=${Math.floor(Date.now()/30000)}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});return r.ok?await r.json():null}catch(e){return null}
+ }));
+ if(requested!==selected)return;
+ const shadowRows=[];
+ for(const phase of shadow)for(const [n,s] of Object.entries(phase?.races||{})){
+  const picks=(s.ranking||[]).map(h=>`${h.horse_number}號 (${h.score})`).join('、');
+  shadowRows.push({n:+n,html:`<div class="card"><h3>R${esc(n)}｜${esc(s.status)}</h3>${picks?`<p>賠率變化排序：${esc(picks)}</p>`:''}<p class="muted">T−3 目標 ${esc(s.target?new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'}):'')}</p>${s.source_updated?`<small>來源更新：WP ${esc(s.source_updated.wp)}；Q/QP ${esc(s.source_updated.wpq)}</small>`:''}<p class="bad">${esc((s.errors||[]).slice(-1).join('')||s.reason||'')}</p></div>`});
+ }
+ $('hkjcCards').innerHTML=shadowRows.sort((a,b)=>a.n-b.n).map(x=>x.html).join('')||'<p class="muted">尚未開始獨立快照；賽日啟動 Run 後才會收集。</p>';
 }
 $('cards').onclick=e=>{const b=e.target.closest('[data-copy-race]');if(!b)return;const n=Number(b.dataset.copyRace),row=copyRows.get(n);if(row)copyText(row.text,`R${n} `)};
 $('copyAll').onclick=()=>{const value=[...copyRows.entries()].filter(([,x])=>x.saved).sort((a,b)=>a[0]-b[0]).map(([,x])=>x.text).join('\n\n');if(value)copyText(value,'所有已鎖定場次')};
