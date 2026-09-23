@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "883754db-90e2-4abb-929f-e5051415d65a",
+    "race_number": 4,
+    "post_time": "20:10",
+    "venue": "跑馬地",
+    "distance": 1200,
+    "course": "C"
+  },
+  "date": "2026-09-23",
+  "expected_lock": "2026-09-23T20:07:00+08:00",
+  "live_received_at": "2026-09-23T20:07:08.142938+08:00",
+  "capture_delay_seconds": 8.14,
+  "live": {
+    "engineVersion": "live103-v3.4.1",
+    "phase": "locked",
+    "generatedAt": "2026-09-23T12:07:02.385Z",
+    "postTime": "2026-09-23T12:10:00.000Z",
+    "previewTime": "2026-09-23T12:03:00.000Z",
+    "lockTime": "2026-09-23T12:07:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 6,
+        "nameTc": "快樂神駒",
+        "nameEn": "CLOUD NINE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "將傲",
+        "nameEn": "INVICTUS",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "焦點",
+        "nameEn": "PODIUM",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 57,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "應龍飛影",
+        "nameEn": "LEADING DRAGON",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 62,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "沙井之友",
+        "nameEn": "FRIENDS OF SHAJING",
+        "capitalSignal": "none",
+        "command": "avoid",
+        "valueIndex": 54,
+        "valueTier": "low",
+        "verdictKey": "risk_dominates",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 4,
+        "nameTc": "星辰千帥",
+        "nameEn": "BROWNNEEDSFURTHER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "禪勝閃亮",
+        "nameEn": "CHANCHENG SPARKLE",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "智勝一籌",
+        "nameEn": "TACTICAL ACE",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 6,
+      "nameTc": "快樂神駒",
+      "nameEn": "CLOUD NINE",
+      "confidence": "high",
+      "reason": "潘頓今季成績大勇，馬匹試閘表現出色，檔位有利，負磅合理，預計步速前置有優勢。",
+      "previewHorseNumber": null
+    }
+  }
+}

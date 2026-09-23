@@ -1,7 +1,7 @@
 {
   "date": "2026-09-23",
   "phase": "early",
-  "updated_at": "2026-09-23T20:06:58.397301+08:00",
+  "updated_at": "2026-09-23T20:08:02.333860+08:00",
   "state": "running",
   "horse103": {
     "1": {
@@ -227,8 +227,78 @@
       ]
     },
     "4": {
-      "status": "waiting",
-      "target": "2026-09-23T20:07:00+08:00"
+      "status": "saved",
+      "target": "2026-09-23T20:07:00+08:00",
+      "delay_seconds": 8.14,
+      "picks": [
+        {
+          "horse_number": 6,
+          "name_tc": "快樂神駒",
+          "name_en": "CLOUD NINE",
+          "formula_score": 0.808,
+          "live_value_index": 68.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2324000.0,
+          "q_amount": 2121000.0
+        },
+        {
+          "horse_number": 9,
+          "name_tc": "將傲",
+          "name_en": "INVICTUS",
+          "formula_score": 0.55081,
+          "live_value_index": 63.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1004000.0,
+          "q_amount": 412000.0
+        },
+        {
+          "horse_number": 11,
+          "name_tc": "焦點",
+          "name_en": "PODIUM",
+          "formula_score": 0.54407,
+          "live_value_index": 57.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1174000.0,
+          "q_amount": 390000.0
+        },
+        {
+          "horse_number": 1,
+          "name_tc": "沙井之友",
+          "name_en": "FRIENDS OF SHAJING",
+          "formula_score": 0.54259,
+          "live_value_index": 54.0,
+          "live_command": "avoid",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 1270000.0,
+          "q_amount": 732000.0
+        },
+        {
+          "horse_number": 3,
+          "name_tc": "應龍飛影",
+          "name_en": "LEADING DRAGON",
+          "formula_score": 0.372,
+          "live_value_index": 62.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 0.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        6,
+        9,
+        11,
+        3,
+        1
+      ]
     }
   },
   "errors": [],
