@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "c985344a-af81-4bb8-89ab-d7717a829756",
+    "race_number": 7,
+    "post_time": "21:45",
+    "venue": "跑馬地",
+    "distance": 1200,
+    "course": "C"
+  },
+  "date": "2026-09-23",
+  "expected_lock": "2026-09-23T21:42:00+08:00",
+  "live_received_at": "2026-09-23T21:42:01.866489+08:00",
+  "capture_delay_seconds": 1.87,
+  "live": {
+    "phase": "locked",
+    "lockTime": "2026-09-23T13:42:00.000Z",
+    "postTime": "2026-09-23T13:45:00.000Z",
+    "freshness": "live",
+    "candidates": [
+      {
+        "isFill": false,
+        "nameEn": "SYMBOL OF STRENGTH",
+        "nameTc": "乘數表",
+        "command": "follow",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 67,
+        "verdictKey": "capital_overrides",
+        "horseNumber": 2,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "WUKONG JEWELLERY",
+        "nameTc": "首飾悟空",
+        "command": "follow",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 65,
+        "verdictKey": "capital_overrides",
+        "horseNumber": 8,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "DARYL FLASH",
+        "nameTc": "丞匡掠影",
+        "command": "follow",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 61,
+        "verdictKey": "capital_overrides",
+        "horseNumber": 12,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "KING MILES",
+        "nameTc": "安康萬里",
+        "command": "observe",
+        "inPreview": true,
+        "valueTier": "low",
+        "valueIndex": 47,
+        "verdictKey": "risk_unresolved",
+        "horseNumber": 9,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": true,
+        "nameEn": "FLYING WROTE",
+        "nameTc": "東來欣賞",
+        "command": "observe",
+        "inPreview": false,
+        "valueTier": "mid",
+        "valueIndex": 63,
+        "verdictKey": "fill_no_trigger",
+        "horseNumber": 1,
+        "capitalSignal": "none"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "nameEn": "WUKONG JEWELLERY",
+      "nameTc": "首飾悟空",
+      "reason": "首飾悟空久休復出，但試閘表現出色，練馬師蔡約翰及騎師艾兆禮今季成績不俗。負磅合理，檔位亦佳。上次流鼻血後休息充足，有望回勇。",
+      "confidence": "medium",
+      "horseNumber": 8,
+      "previewHorseNumber": null
+    },
+    "dataQuality": "ready",
+    "generatedAt": "2026-09-23T13:42:00.833Z",
+    "previewOnly": [
+      {
+        "nameEn": "PRESTIGE ALWAYS",
+        "nameTc": "盈妍威楓",
+        "horseNumber": 11
+      }
+    ],
+    "previewTime": "2026-09-23T13:38:00.000Z",
+    "engineVersion": "live103-v3.4.1",
+    "fakeFavorites": [
+      {
+        "nameEn": "AKASHVANI",
+        "nameTc": "天星",
+        "horseNumber": 3,
+        "capitalSignal": "none"
+      },
+      {
+        "nameEn": "PRESTIGE ALWAYS",
+        "nameTc": "盈妍威楓",
+        "horseNumber": 11,
+        "capitalSignal": "none"
+      },
+      {
+        "nameEn": "YOUNG EMPEROR",
+        "nameTc": "競駿皇者",
+        "horseNumber": 4,
+        "capitalSignal": "none"
+      }
+    ]
+  }
+}

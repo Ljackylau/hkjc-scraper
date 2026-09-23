@@ -1,7 +1,7 @@
 {
   "date": "2026-09-23",
   "phase": "late",
-  "updated_at": "2026-09-23T21:41:46.824926+08:00",
+  "updated_at": "2026-09-23T21:42:48.798617+08:00",
   "state": "running",
   "horse103": {
     "5": {
@@ -153,8 +153,78 @@
       ]
     },
     "7": {
-      "status": "waiting",
-      "target": "2026-09-23T21:42:00+08:00"
+      "status": "saved",
+      "target": "2026-09-23T21:42:00+08:00",
+      "delay_seconds": 1.87,
+      "picks": [
+        {
+          "horse_number": 8,
+          "name_tc": "首飾悟空",
+          "name_en": "WUKONG JEWELLERY",
+          "formula_score": 0.78897,
+          "live_value_index": 65.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1542000.0,
+          "q_amount": 1259000.0
+        },
+        {
+          "horse_number": 1,
+          "name_tc": "東來欣賞",
+          "name_en": "FLYING WROTE",
+          "formula_score": 0.778,
+          "live_value_index": 63.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 1546000.0,
+          "q_amount": 922000.0
+        },
+        {
+          "horse_number": 12,
+          "name_tc": "丞匡掠影",
+          "name_en": "DARYL FLASH",
+          "formula_score": 0.62784,
+          "live_value_index": 61.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1012000.0,
+          "q_amount": 665000.0
+        },
+        {
+          "horse_number": 2,
+          "name_tc": "乘數表",
+          "name_en": "SYMBOL OF STRENGTH",
+          "formula_score": 0.51791,
+          "live_value_index": 67.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 448000.0,
+          "q_amount": 122000.0
+        },
+        {
+          "horse_number": 9,
+          "name_tc": "安康萬里",
+          "name_en": "KING MILES",
+          "formula_score": 0.31693,
+          "live_value_index": 47.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 135000.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        2,
+        8,
+        12,
+        9,
+        1
+      ]
     },
     "8": {
       "status": "waiting",
