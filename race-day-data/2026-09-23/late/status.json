@@ -1,7 +1,7 @@
 {
   "date": "2026-09-23",
   "phase": "late",
-  "updated_at": "2026-09-23T22:46:35.354075+08:00",
+  "updated_at": "2026-09-23T22:47:37.520508+08:00",
   "state": "running",
   "horse103": {
     "5": {
@@ -301,8 +301,78 @@
       ]
     },
     "9": {
-      "status": "waiting",
-      "target": "2026-09-23T22:47:00+08:00"
+      "status": "saved",
+      "target": "2026-09-23T22:47:00+08:00",
+      "delay_seconds": 9.48,
+      "picks": [
+        {
+          "horse_number": 8,
+          "name_tc": "豐辰",
+          "name_en": "THE AUSPICIOUS",
+          "formula_score": 0.54808,
+          "live_value_index": 63.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1222000.0,
+          "q_amount": 604000.0
+        },
+        {
+          "horse_number": 6,
+          "name_tc": "將義",
+          "name_en": "FORTUNATE SON",
+          "formula_score": 0.51531,
+          "live_value_index": 59.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1159000.0,
+          "q_amount": 692000.0
+        },
+        {
+          "horse_number": 12,
+          "name_tc": "財富非凡",
+          "name_en": "FLYING FORTUNE",
+          "formula_score": 0.40036,
+          "live_value_index": 60.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 290000.0,
+          "q_amount": 155000.0
+        },
+        {
+          "horse_number": 2,
+          "name_tc": "紫荊傳令",
+          "name_en": "SERAPH GABRIEL",
+          "formula_score": 0.4,
+          "live_value_index": 0.0,
+          "live_command": null,
+          "live_capital_signal": null,
+          "is_live_candidate": false,
+          "qp_amount": 2874000.0,
+          "q_amount": 2229000.0
+        },
+        {
+          "horse_number": 4,
+          "name_tc": "平凡騎士",
+          "name_en": "LO RIDER",
+          "formula_score": 0.34831,
+          "live_value_index": 51.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 304000.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        8,
+        12,
+        6,
+        11,
+        4
+      ]
     }
   },
   "errors": [],

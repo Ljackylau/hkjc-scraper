@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "569e452c-4294-4f65-b5dd-eca675c3ce55",
+    "race_number": 9,
+    "post_time": "22:50",
+    "venue": "跑馬地",
+    "distance": 1800,
+    "course": "C"
+  },
+  "date": "2026-09-23",
+  "expected_lock": "2026-09-23T22:47:00+08:00",
+  "live_received_at": "2026-09-23T22:47:09.477855+08:00",
+  "capture_delay_seconds": 9.48,
+  "live": {
+    "engineVersion": "live103-v3.4.1",
+    "phase": "locked",
+    "generatedAt": "2026-09-23T14:47:02.172Z",
+    "postTime": "2026-09-23T14:50:00.000Z",
+    "previewTime": "2026-09-23T14:43:00.000Z",
+    "lockTime": "2026-09-23T14:47:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 8,
+        "nameTc": "豐辰",
+        "nameEn": "THE AUSPICIOUS",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "財富非凡",
+        "nameEn": "FLYING FORTUNE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "將義",
+        "nameEn": "FORTUNATE SON",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "瑪瑙",
+        "nameEn": "KEEFY",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 55,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "平凡騎士",
+        "nameEn": "LO RIDER",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 51,
+        "valueTier": "low",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 2,
+        "nameTc": "紫荊傳令",
+        "nameEn": "SERAPH GABRIEL",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "風將",
+        "nameEn": "WINDLORD",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "嘉應傳承",
+        "nameEn": "KA YING GENERATION",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 10,
+        "nameTc": "風將",
+        "nameEn": "WINDLORD"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 6,
+      "nameTc": "將義",
+      "nameEn": "FORTUNATE SON",
+      "confidence": "high",
+      "reason": "上仗同程同班贏馬姿態出色，評分雖加但負磅合理。騎練今季成績俱佳，檔位亦可接受。",
+      "previewHorseNumber": null
+    }
+  }
+}
