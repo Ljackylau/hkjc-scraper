@@ -1,0 +1,128 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "4122d4aa-7cd0-4a0c-8629-f11795f635de",
+    "race_number": 3,
+    "post_time": "19:40",
+    "venue": "跑馬地",
+    "distance": 1650,
+    "course": "C"
+  },
+  "date": "2026-09-23",
+  "expected_lock": "2026-09-23T19:37:00+08:00",
+  "live_received_at": "2026-09-23T19:37:06.328972+08:00",
+  "capture_delay_seconds": 6.33,
+  "live": {
+    "engineVersion": "live103-v3.4.1",
+    "phase": "locked",
+    "generatedAt": "2026-09-23T11:37:02.269Z",
+    "postTime": "2026-09-23T11:40:00.000Z",
+    "previewTime": "2026-09-23T11:33:00.000Z",
+    "lockTime": "2026-09-23T11:37:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 5,
+        "nameTc": "凝妙星",
+        "nameEn": "AMAZING GAZE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 73,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "有情有義",
+        "nameEn": "DECISION LINK",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "蹺妙",
+        "nameEn": "AKERMANIS GOLD",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 57,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "贏玥",
+        "nameEn": "SHOOTING TO TOP",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 52,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "星願無限",
+        "nameEn": "EXCEED THE LIMIT",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 47,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 4,
+        "nameTc": "睿智多寶",
+        "nameEn": "MEGA MASTERMIND",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "越駿齊歡",
+        "nameEn": "LUCKY TOGETHER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "領航天子",
+        "nameEn": "CASA ROCHESTER",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 6,
+        "nameTc": "領航天子",
+        "nameEn": "CASA ROCHESTER"
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "睿智多寶",
+        "nameEn": "MEGA MASTERMIND"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 2,
+      "nameTc": "贏玥",
+      "nameEn": "SHOOTING TO TOP",
+      "confidence": "high",
+      "reason": "潘頓今季成績優異，馬匹上仗同程跑第二，檔位有利，預計步速中慢有利前置馬。",
+      "previewHorseNumber": null
+    }
+  }
+}
