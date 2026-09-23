@@ -15,11 +15,13 @@ import runner
 
 DOM = """() => ({
   text: document.body.innerText,
+  source_text: document.querySelector('#refreshTime')?.innerText || '',
   win: Array.from(document.querySelectorAll('[id^="odds_WIN_"]')).map(e=>({id:e.id,value:e.innerText})),
   pla: Array.from(document.querySelectorAll('[id^="odds_PLA_"]')).map(e=>({id:e.id,value:e.innerText})),
   qin: Array.from(document.querySelectorAll('[id^="qb_QIN_"]')).map(e=>({id:e.id,value:e.innerText})),
   qpl: Array.from(document.querySelectorAll('[id^="qb_QPL_"]')).map(e=>({id:e.id,value:e.innerText}))
 })"""
+STAMP_READY = r"() => /更新時間\s*[:：]?\s*\d{2}\/\d{2}\/\d{4}\s+\d{2}:\d{2}/.test(document.querySelector('#refreshTime')?.innerText || '')"
 
 
 def clock_from_page(raw, date, number):
@@ -32,7 +34,7 @@ def clock_from_page(raw, date, number):
 
 def parse(raw, date, number, route, received):
     reported_off=clock_from_page(raw,date,number)
-    match=re.search(r'更新時間\s*[:：]?\s*(\d{2}/\d{2}/\d{4})\s+(\d{2}:\d{2}(?::\d{2})?)',raw['text'])
+    match=re.search(r'更新時間\s*[:：]?\s*(\d{2}/\d{2}/\d{4})\s+(\d{2}:\d{2}(?::\d{2})?)',raw.get('source_text') or raw['text'])
     if not match:raise ValueError('HKJC source update timestamp missing')
     fmt='%d/%m/%Y %H:%M:%S' if len(match[2])==8 else '%d/%m/%Y %H:%M'
     updated=datetime.strptime(match[1]+' '+match[2],fmt).replace(tzinfo=HK)
@@ -96,6 +98,7 @@ async def capture(page, date, venue, number, route):
     await page.goto(url,wait_until='domcontentloaded',timeout=25000)
     selector='[id^="odds_WIN_"]' if route=='wp' else '[id^="qb_QPL_"]'
     await page.wait_for_selector(selector,timeout=15000)
+    await page.wait_for_function(STAMP_READY,timeout=15000)
     received=now()
     raw=await page.evaluate(DOM)
     result=parse(raw,date,number,route,received)

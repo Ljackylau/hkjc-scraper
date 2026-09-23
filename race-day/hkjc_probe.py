@@ -4,7 +4,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from dragon_copy import meeting_candidates, HKJC_RACECARD, HKJC_ENTRIES, now
-from hkjc_shadow import parse
+from hkjc_shadow import parse, STAMP_READY, DOM
 
 
 async def probe():
@@ -38,11 +38,8 @@ async def probe():
                     row['http_status']=response.status if response else None
                     selector='[id^="odds_WIN_"]' if route=='wp' else '[id^="qb_QPL_"]'
                     await page.wait_for_selector(selector,timeout=15000)
-                    row['raw']=await page.evaluate("""() => ({text:document.body.innerText,
-                        win:Array.from(document.querySelectorAll('[id^="odds_WIN_"]')).map(e=>({id:e.id,value:e.innerText})),
-                        pla:Array.from(document.querySelectorAll('[id^="odds_PLA_"]')).map(e=>({id:e.id,value:e.innerText})),
-                        qin:Array.from(document.querySelectorAll('[id^="qb_QIN_"]')).map(e=>({id:e.id,value:e.innerText})),
-                        qpl:Array.from(document.querySelectorAll('[id^="qb_QPL_"]')).map(e=>({id:e.id,value:e.innerText}))})""")
+                    await page.wait_for_function(STAMP_READY,timeout=15000)
+                    row['raw']=await page.evaluate(DOM)
                     verified=parse(row['raw'],date,1,route,datetime.now(timezone.utc).astimezone(now().tzinfo))
                     row['odds_elements_found']={pool:len(values) for pool,values in verified['odds'].items()}
                     row['source_updated']=verified['source_updated']
@@ -59,7 +56,7 @@ async def probe():
         finally:await browser.close()
     Path('hkjc-probe.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k!='pages'},ensure_ascii=False))
-    for row in report['pages']:print(row['route'],row.get('odds_elements_found',0),row.get('error',''))
+    for row in report['pages']:print(row['route'],row.get('odds_elements_found',0),row.get('error',''),row.get('text_excerpt','')[:400])
 
 
 if __name__=='__main__':asyncio.run(probe())
