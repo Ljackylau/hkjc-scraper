@@ -1,7 +1,7 @@
 {
   "date": "2026-09-23",
   "phase": "late",
-  "updated_at": "2026-09-23T21:06:35.360993+08:00",
+  "updated_at": "2026-09-23T21:07:37.325246+08:00",
   "state": "running",
   "horse103": {
     "5": {
@@ -79,8 +79,78 @@
       ]
     },
     "6": {
-      "status": "waiting",
-      "target": "2026-09-23T21:07:00+08:00"
+      "status": "saved",
+      "target": "2026-09-23T21:07:00+08:00",
+      "delay_seconds": 7.89,
+      "picks": [
+        {
+          "horse_number": 4,
+          "name_tc": "巴閉王",
+          "name_en": "SUPERB KING",
+          "formula_score": 0.82,
+          "live_value_index": 70.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2222000.0,
+          "q_amount": 2818000.0
+        },
+        {
+          "horse_number": 1,
+          "name_tc": "福進",
+          "name_en": "JUMBO BLESSING",
+          "formula_score": 0.77032,
+          "live_value_index": 70.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1946000.0,
+          "q_amount": 1960000.0
+        },
+        {
+          "horse_number": 5,
+          "name_tc": "佐治傳奇",
+          "name_en": "GEORGIAN SIGMA",
+          "formula_score": 0.56036,
+          "live_value_index": 63.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1013000.0,
+          "q_amount": 756000.0
+        },
+        {
+          "horse_number": 9,
+          "name_tc": "天火同人",
+          "name_en": "HARMONY FIRE",
+          "formula_score": 0.45667,
+          "live_value_index": 57.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 637000.0,
+          "q_amount": 270000.0
+        },
+        {
+          "horse_number": 11,
+          "name_tc": "萬眾開心",
+          "name_en": "HAPPY UNITED",
+          "formula_score": 0.43831,
+          "live_value_index": 57.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 535000.0,
+          "q_amount": 250000.0
+        }
+      ],
+      "original": [
+        1,
+        4,
+        5,
+        9,
+        11
+      ]
     },
     "7": {
       "status": "waiting",
