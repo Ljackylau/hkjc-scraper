@@ -1,0 +1,120 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "db3ae6ff-c4a6-4965-b257-a8b12939c972",
+    "race_number": 2,
+    "post_time": "19:10",
+    "venue": "跑馬地",
+    "distance": 1200,
+    "course": "C"
+  },
+  "date": "2026-09-23",
+  "expected_lock": "2026-09-23T19:07:00+08:00",
+  "live_received_at": "2026-09-23T19:07:06.785726+08:00",
+  "capture_delay_seconds": 6.79,
+  "live": {
+    "engineVersion": "live103-v3.4.1",
+    "phase": "locked",
+    "generatedAt": "2026-09-23T11:07:01.470Z",
+    "postTime": "2026-09-23T11:10:00.000Z",
+    "previewTime": "2026-09-23T11:03:00.000Z",
+    "lockTime": "2026-09-23T11:07:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 12,
+        "nameTc": "首駿",
+        "nameEn": "MAJESTIC DELIGHT",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "飛輪霸",
+        "nameEn": "TOURBILLON GOLFER",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 55,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "鄉村威龍",
+        "nameEn": "COUNTRY PRIDE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 53,
+        "valueTier": "low",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "開心五月",
+        "nameEn": "GOOD LUCK BABE",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 58,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "比特星",
+        "nameEn": "BITS SUPERSTAR",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 55,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 4,
+        "nameTc": "馬馳登",
+        "nameEn": "MATZDEN",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "銀刺勇士",
+        "nameEn": "SILVER SPURS",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "路路勁",
+        "nameEn": "LOOKING BRIGHT",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 7,
+        "nameTc": "銀刺勇士",
+        "nameEn": "SILVER SPURS"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "路路勁",
+        "nameEn": "LOOKING BRIGHT"
+      }
+    ],
+    "secondLook": null
+  }
+}

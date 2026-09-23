@@ -1,0 +1,555 @@
+{
+  "captured_at": "2026-09-23T11:07:07.601141+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.40 * normalized QP amount",
+  "race": {
+    "id": "db3ae6ff-c4a6-4965-b257-a8b12939c972",
+    "race_number": 2,
+    "post_time": "19:10",
+    "venue": "跑馬地",
+    "distance": 1200,
+    "course": "C"
+  },
+  "lock_time": "2026-09-23T11:07:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.4.1",
+    "phase": "locked",
+    "generatedAt": "2026-09-23T11:07:01.470Z",
+    "postTime": "2026-09-23T11:10:00.000Z",
+    "previewTime": "2026-09-23T11:03:00.000Z",
+    "lockTime": "2026-09-23T11:07:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 12,
+        "nameTc": "首駿",
+        "nameEn": "MAJESTIC DELIGHT",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "飛輪霸",
+        "nameEn": "TOURBILLON GOLFER",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 55,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "鄉村威龍",
+        "nameEn": "COUNTRY PRIDE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 53,
+        "valueTier": "low",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "開心五月",
+        "nameEn": "GOOD LUCK BABE",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 58,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "比特星",
+        "nameEn": "BITS SUPERSTAR",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 55,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 4,
+        "nameTc": "馬馳登",
+        "nameEn": "MATZDEN",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "銀刺勇士",
+        "nameEn": "SILVER SPURS",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "路路勁",
+        "nameEn": "LOOKING BRIGHT",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 7,
+        "nameTc": "銀刺勇士",
+        "nameEn": "SILVER SPURS"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "路路勁",
+        "nameEn": "LOOKING BRIGHT"
+      }
+    ],
+    "secondLook": null
+  },
+  "ticket_cutoff": "2026-09-23T11:07:00.000Z",
+  "base_race_id": 24387,
+  "source_ticket_race_id": 24388,
+  "qp_max_amount": 610000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 370061,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "1-2",
+      "bet_type": "QP",
+      "amount": 10000,
+      "amount_str": "10K",
+      "bet_time": "19:30",
+      "scraped_at": "2026-09-22T12:11:02.932067+00:00"
+    },
+    {
+      "id": 374364,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "3-4",
+      "bet_type": "Q",
+      "amount": 56000,
+      "amount_str": "56K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374365,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "3-10",
+      "bet_type": "Q",
+      "amount": 75000,
+      "amount_str": "75K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374366,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-7",
+      "bet_type": "Q",
+      "amount": 51000,
+      "amount_str": "51K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374367,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-9",
+      "bet_type": "Q",
+      "amount": 100000,
+      "amount_str": "100K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374368,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-10",
+      "bet_type": "Q",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374369,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "7-9",
+      "bet_type": "Q",
+      "amount": 64000,
+      "amount_str": "64K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374370,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "7-10",
+      "bet_type": "Q",
+      "amount": 100000,
+      "amount_str": "100K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374371,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "9-10",
+      "bet_type": "Q",
+      "amount": 100000,
+      "amount_str": "100K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374378,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "3-4",
+      "bet_type": "QP",
+      "amount": 99000,
+      "amount_str": "99K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374379,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "3-9",
+      "bet_type": "QP",
+      "amount": 69000,
+      "amount_str": "69K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374380,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "3-10",
+      "bet_type": "QP",
+      "amount": 190000,
+      "amount_str": "190K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374381,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-7",
+      "bet_type": "QP",
+      "amount": 74000,
+      "amount_str": "74K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374382,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-9",
+      "bet_type": "QP",
+      "amount": 110000,
+      "amount_str": "110K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374383,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-10",
+      "bet_type": "QP",
+      "amount": 140000,
+      "amount_str": "140K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374384,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "7-9",
+      "bet_type": "QP",
+      "amount": 84000,
+      "amount_str": "84K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374385,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "7-10",
+      "bet_type": "QP",
+      "amount": 140000,
+      "amount_str": "140K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374386,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "9-10",
+      "bet_type": "QP",
+      "amount": 140000,
+      "amount_str": "140K",
+      "bet_time": "18:48",
+      "scraped_at": "2026-09-23T10:49:10.600993+00:00"
+    },
+    {
+      "id": 374467,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "8-9",
+      "bet_type": "QP",
+      "amount": 93000,
+      "amount_str": "93K",
+      "bet_time": "18:50",
+      "scraped_at": "2026-09-23T10:51:10.124559+00:00"
+    },
+    {
+      "id": 374468,
+      "race_id": 24388,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "9-12",
+      "bet_type": "QP",
+      "amount": 93000,
+      "amount_str": "93K",
+      "bet_time": "18:50",
+      "scraped_at": "2026-09-23T10:51:10.124559+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 9,
+      "name_tc": "開心五月",
+      "name_en": "GOOD LUCK BABE",
+      "formula_score": 0.73423,
+      "live_value_index": 58.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 589000.0,
+      "q_amount": 264000.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "比特星",
+      "name_en": "BITS SUPERSTAR",
+      "formula_score": 0.73,
+      "live_value_index": 55.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 610000.0,
+      "q_amount": 395000.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "首駿",
+      "name_en": "MAJESTIC DELIGHT",
+      "formula_score": 0.42698,
+      "live_value_index": 61.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "鄉村威龍",
+      "name_en": "COUNTRY PRIDE",
+      "formula_score": 0.37898,
+      "live_value_index": 53.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "飛輪霸",
+      "name_en": "TOURBILLON GOLFER",
+      "formula_score": 0.33,
+      "live_value_index": 55.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "馬馳登",
+      "name_en": "MATZDEN",
+      "formula_score": 0.27738,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 423000.0,
+      "q_amount": 327000.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "路路勁",
+      "name_en": "LOOKING BRIGHT",
+      "formula_score": 0.23475,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 358000.0,
+      "q_amount": 131000.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "銀刺勇士",
+      "name_en": "SILVER SPURS",
+      "formula_score": 0.19541,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 298000.0,
+      "q_amount": 215000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "紅愛舍",
+      "name_en": "FIND MY LOVE",
+      "formula_score": 0.00656,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 10000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "銳喜",
+      "name_en": "VIGOR HAPPINESS",
+      "formula_score": 0.00656,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 10000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "金珀尖子",
+      "name_en": "GOLDEN ELITE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 11,
+      "name_tc": "有盈勇士",
+      "name_en": "LEGEND STAR",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 9,
+    "name_tc": "開心五月",
+    "name_en": "GOOD LUCK BABE",
+    "formula_score": 0.73423,
+    "live_value_index": 58.0,
+    "live_command": "observe",
+    "live_capital_signal": "none",
+    "is_live_candidate": true,
+    "qp_amount": 589000.0,
+    "q_amount": 264000.0
+  },
+  "other_four": [
+    {
+      "horse_number": 10,
+      "name_tc": "比特星",
+      "name_en": "BITS SUPERSTAR",
+      "formula_score": 0.73,
+      "live_value_index": 55.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 610000.0,
+      "q_amount": 395000.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "首駿",
+      "name_en": "MAJESTIC DELIGHT",
+      "formula_score": 0.42698,
+      "live_value_index": 61.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "鄉村威龍",
+      "name_en": "COUNTRY PRIDE",
+      "formula_score": 0.37898,
+      "live_value_index": 53.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "飛輪霸",
+      "name_en": "TOURBILLON GOLFER",
+      "formula_score": 0.33,
+      "live_value_index": 55.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "live_received_at": "2026-09-23T19:07:06.785726+08:00",
+  "capture_delay_seconds": 6.79,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained."
+}
