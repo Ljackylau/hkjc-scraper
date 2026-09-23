@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "cf1221ec-cab9-4444-814b-d8ece1412581",
+    "race_number": 8,
+    "post_time": "22:15",
+    "venue": "跑馬地",
+    "distance": 1200,
+    "course": "C"
+  },
+  "date": "2026-09-23",
+  "expected_lock": "2026-09-23T22:12:00+08:00",
+  "live_received_at": "2026-09-23T22:12:09.597403+08:00",
+  "capture_delay_seconds": 9.6,
+  "live": {
+    "engineVersion": "live103-v3.4.1",
+    "phase": "locked",
+    "generatedAt": "2026-09-23T14:12:03.549Z",
+    "postTime": "2026-09-23T14:15:00.000Z",
+    "previewTime": "2026-09-23T14:08:00.000Z",
+    "lockTime": "2026-09-23T14:12:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 8,
+        "nameTc": "繼往開來",
+        "nameEn": "DANICA'S CHOICE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "驕陽雄心",
+        "nameEn": "LEADING AGILITY",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "喵喵怪",
+        "nameEn": "MEOWTH",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 64,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "富國兄弟",
+        "nameEn": "THRIVING BROTHERS",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "人和家興",
+        "nameEn": "HARMONY N BLESSED",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 57,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 4,
+        "nameTc": "久久為昇",
+        "nameEn": "STAR RISE",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "富心星",
+        "nameEn": "SKY CAP",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "蓮冠皇",
+        "nameEn": "KING LOTUS",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 8,
+      "nameTc": "繼往開來",
+      "nameEn": "DANICA'S CHOICE",
+      "confidence": "high",
+      "reason": "馬匹狀態大勇，試閘表現出色，上仗同程同班僅敗，今仗負磅合理，騎練今季成績俱佳。",
+      "previewHorseNumber": null
+    }
+  }
+}

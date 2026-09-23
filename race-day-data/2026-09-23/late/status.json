@@ -1,7 +1,7 @@
 {
   "date": "2026-09-23",
   "phase": "late",
-  "updated_at": "2026-09-23T22:11:16.692992+08:00",
+  "updated_at": "2026-09-23T22:12:20.366580+08:00",
   "state": "running",
   "horse103": {
     "5": {
@@ -227,8 +227,78 @@
       ]
     },
     "8": {
-      "status": "waiting",
-      "target": "2026-09-23T22:12:00+08:00"
+      "status": "saved",
+      "target": "2026-09-23T22:12:00+08:00",
+      "delay_seconds": 9.6,
+      "picks": [
+        {
+          "horse_number": 8,
+          "name_tc": "繼往開來",
+          "name_en": "DANICA'S CHOICE",
+          "formula_score": 0.79,
+          "live_value_index": 65.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2687000.0,
+          "q_amount": 2233000.0
+        },
+        {
+          "horse_number": 11,
+          "name_tc": "驕陽雄心",
+          "name_en": "LEADING AGILITY",
+          "formula_score": 0.64307,
+          "live_value_index": 65.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1700000.0,
+          "q_amount": 1123000.0
+        },
+        {
+          "horse_number": 10,
+          "name_tc": "喵喵怪",
+          "name_en": "MEOWTH",
+          "formula_score": 0.43327,
+          "live_value_index": 64.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 331000.0,
+          "q_amount": 79000.0
+        },
+        {
+          "horse_number": 6,
+          "name_tc": "富國兄弟",
+          "name_en": "THRIVING BROTHERS",
+          "formula_score": 0.41131,
+          "live_value_index": 59.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 385000.0,
+          "q_amount": 237000.0
+        },
+        {
+          "horse_number": 1,
+          "name_tc": "人和家興",
+          "name_en": "HARMONY N BLESSED",
+          "formula_score": 0.4072,
+          "live_value_index": 57.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 438000.0,
+          "q_amount": 201000.0
+        }
+      ],
+      "original": [
+        8,
+        11,
+        10,
+        6,
+        1
+      ]
     },
     "9": {
       "status": "waiting",
