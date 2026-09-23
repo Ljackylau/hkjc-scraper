@@ -1,13 +1,69 @@
 {
   "date": "2026-09-23",
-  "updated_at": "2026-09-23T18:36:00.425686+08:00",
+  "updated_at": "2026-09-23T18:37:02.177083+08:00",
   "mode": "shadow",
   "races": {
     "1": {
-      "status": "collecting",
+      "status": "shadow",
       "target": "2026-09-23T18:37:00+08:00",
-      "baseline": true,
-      "last_received": "2026-09-23T18:35:01.320577+08:00"
+      "received_at": "2026-09-23T18:37:00.701122+08:00",
+      "source_updated": {
+        "wp": "2026-09-23T18:36:00+08:00",
+        "wpq": "2026-09-23T18:36:00+08:00"
+      },
+      "ranking": [
+        {
+          "horse_number": 4,
+          "score": 20.85,
+          "drops_pct": {
+            "WIN": 7.53,
+            "PLA": 25.93,
+            "QIN": 34.07,
+            "QPL": 24.59
+          }
+        },
+        {
+          "horse_number": 9,
+          "score": 7.422,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 5.88,
+            "QIN": 9.24,
+            "QPL": 20.52
+          }
+        },
+        {
+          "horse_number": 3,
+          "score": 6.694,
+          "drops_pct": {
+            "WIN": 2.0,
+            "PLA": 0,
+            "QIN": 11.7,
+            "QPL": 18.27
+          }
+        },
+        {
+          "horse_number": 10,
+          "score": 5.456,
+          "drops_pct": {
+            "WIN": 6.25,
+            "PLA": 4.65,
+            "QIN": 9.08,
+            "QPL": 1.45
+          }
+        },
+        {
+          "horse_number": 1,
+          "score": 5.168,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 12.15,
+            "QPL": 13.69
+          }
+        }
+      ],
+      "source": "HKJC odds movement; experimental"
     },
     "2": {
       "status": "waiting",
