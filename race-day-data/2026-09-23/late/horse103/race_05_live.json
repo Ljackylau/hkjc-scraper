@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "f8d897a0-0ef5-4f55-a601-352ef17c0bec",
+    "race_number": 5,
+    "post_time": "20:40",
+    "venue": "跑馬地",
+    "distance": 1650,
+    "course": "C"
+  },
+  "date": "2026-09-23",
+  "expected_lock": "2026-09-23T20:37:00+08:00",
+  "live_received_at": "2026-09-23T20:37:08.776936+08:00",
+  "capture_delay_seconds": 8.78,
+  "live": {
+    "engineVersion": "live103-v3.4.1",
+    "phase": "locked",
+    "generatedAt": "2026-09-23T12:37:02.918Z",
+    "postTime": "2026-09-23T12:40:00.000Z",
+    "previewTime": "2026-09-23T12:33:00.000Z",
+    "lockTime": "2026-09-23T12:37:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 9,
+        "nameTc": "爆竹",
+        "nameEn": "VIVA FIRECRACKER",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 72,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "金駒永騰",
+        "nameEn": "LUCK IS BACK",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "赤風驪",
+        "nameEn": "VERMILION TEMPEST",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "同心",
+        "nameEn": "GAZELEY",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 51,
+        "valueTier": "low",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "越駿聯歡",
+        "nameEn": "HAPPY SMILE",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 5,
+        "nameTc": "創科群英",
+        "nameEn": "INNO SUPER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "滿洛城",
+        "nameEn": "DASHING MAURISON",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "大學生",
+        "nameEn": "IVY LEAGUE",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 9,
+      "nameTc": "爆竹",
+      "nameEn": "VIVA FIRECRACKER",
+      "confidence": "medium",
+      "reason": "爆竹上仗同程同班領放掄元，檔位雖差但步速預計中等，有力再爭。騎練今季成績不俗，操練正常。",
+      "previewHorseNumber": null
+    }
+  }
+}
