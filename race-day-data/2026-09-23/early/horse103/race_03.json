@@ -1,0 +1,673 @@
+{
+  "captured_at": "2026-09-23T11:37:07.735679+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.40 * normalized QP amount",
+  "race": {
+    "id": "4122d4aa-7cd0-4a0c-8629-f11795f635de",
+    "race_number": 3,
+    "post_time": "19:40",
+    "venue": "跑馬地",
+    "distance": 1650,
+    "course": "C"
+  },
+  "lock_time": "2026-09-23T11:37:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.4.1",
+    "phase": "locked",
+    "generatedAt": "2026-09-23T11:37:02.269Z",
+    "postTime": "2026-09-23T11:40:00.000Z",
+    "previewTime": "2026-09-23T11:33:00.000Z",
+    "lockTime": "2026-09-23T11:37:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 5,
+        "nameTc": "凝妙星",
+        "nameEn": "AMAZING GAZE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 73,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "有情有義",
+        "nameEn": "DECISION LINK",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "蹺妙",
+        "nameEn": "AKERMANIS GOLD",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 57,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "贏玥",
+        "nameEn": "SHOOTING TO TOP",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 52,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "星願無限",
+        "nameEn": "EXCEED THE LIMIT",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 47,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 4,
+        "nameTc": "睿智多寶",
+        "nameEn": "MEGA MASTERMIND",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "越駿齊歡",
+        "nameEn": "LUCKY TOGETHER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "領航天子",
+        "nameEn": "CASA ROCHESTER",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 6,
+        "nameTc": "領航天子",
+        "nameEn": "CASA ROCHESTER"
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "睿智多寶",
+        "nameEn": "MEGA MASTERMIND"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 2,
+      "nameTc": "贏玥",
+      "nameEn": "SHOOTING TO TOP",
+      "confidence": "high",
+      "reason": "潘頓今季成績優異，馬匹上仗同程跑第二，檔位有利，預計步速中慢有利前置馬。",
+      "previewHorseNumber": null
+    }
+  },
+  "ticket_cutoff": "2026-09-23T11:37:00.000Z",
+  "base_race_id": 24387,
+  "source_ticket_race_id": 24389,
+  "qp_max_amount": 1163000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 375737,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "1-2",
+      "bet_type": "Q",
+      "amount": 88000,
+      "amount_str": "88K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375738,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-4",
+      "bet_type": "Q",
+      "amount": 53000,
+      "amount_str": "53K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375739,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-5",
+      "bet_type": "Q",
+      "amount": 72000,
+      "amount_str": "72K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375740,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-7",
+      "bet_type": "Q",
+      "amount": 53000,
+      "amount_str": "53K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375741,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-8",
+      "bet_type": "Q",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375742,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-12",
+      "bet_type": "Q",
+      "amount": 56000,
+      "amount_str": "56K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375743,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "5-7",
+      "bet_type": "Q",
+      "amount": 60000,
+      "amount_str": "60K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375744,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "5-8",
+      "bet_type": "Q",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375745,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "8-9",
+      "bet_type": "Q",
+      "amount": 51000,
+      "amount_str": "51K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375753,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "1-2",
+      "bet_type": "QP",
+      "amount": 97000,
+      "amount_str": "97K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375754,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-3",
+      "bet_type": "QP",
+      "amount": 51000,
+      "amount_str": "51K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375755,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-4",
+      "bet_type": "QP",
+      "amount": 94000,
+      "amount_str": "94K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375756,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-5",
+      "bet_type": "QP",
+      "amount": 100000,
+      "amount_str": "100K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375757,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-6",
+      "bet_type": "QP",
+      "amount": 69000,
+      "amount_str": "69K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375758,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-7",
+      "bet_type": "QP",
+      "amount": 83000,
+      "amount_str": "83K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375759,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-8",
+      "bet_type": "QP",
+      "amount": 150000,
+      "amount_str": "150K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375760,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-9",
+      "bet_type": "QP",
+      "amount": 74000,
+      "amount_str": "74K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375761,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-12",
+      "bet_type": "QP",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375762,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-5",
+      "bet_type": "QP",
+      "amount": 51000,
+      "amount_str": "51K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375763,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "5-7",
+      "bet_type": "QP",
+      "amount": 58000,
+      "amount_str": "58K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375764,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "5-8",
+      "bet_type": "QP",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 375765,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "8-9",
+      "bet_type": "QP",
+      "amount": 60000,
+      "amount_str": "60K",
+      "bet_time": "19:17",
+      "scraped_at": "2026-09-23T11:18:05.353846+00:00"
+    },
+    {
+      "id": 376118,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-5",
+      "bet_type": "QP",
+      "amount": 150000,
+      "amount_str": "150K",
+      "bet_time": "19:22",
+      "scraped_at": "2026-09-23T11:24:02.962137+00:00"
+    },
+    {
+      "id": 376119,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-5",
+      "bet_type": "QP",
+      "amount": 94000,
+      "amount_str": "94K",
+      "bet_time": "19:22",
+      "scraped_at": "2026-09-23T11:24:02.962137+00:00"
+    },
+    {
+      "id": 376120,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "5-7",
+      "bet_type": "QP",
+      "amount": 98000,
+      "amount_str": "98K",
+      "bet_time": "19:22",
+      "scraped_at": "2026-09-23T11:24:02.962137+00:00"
+    },
+    {
+      "id": 376121,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "5-8",
+      "bet_type": "QP",
+      "amount": 150000,
+      "amount_str": "150K",
+      "bet_time": "19:22",
+      "scraped_at": "2026-09-23T11:24:02.962137+00:00"
+    },
+    {
+      "id": 376122,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "7-8",
+      "bet_type": "QP",
+      "amount": 93000,
+      "amount_str": "93K",
+      "bet_time": "19:22",
+      "scraped_at": "2026-09-23T11:24:02.962137+00:00"
+    },
+    {
+      "id": 376509,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "5-8",
+      "bet_type": "QP",
+      "amount": 92000,
+      "amount_str": "92K",
+      "bet_time": "19:28",
+      "scraped_at": "2026-09-23T11:30:02.933837+00:00"
+    },
+    {
+      "id": 376901,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "2-5",
+      "bet_type": "QP",
+      "amount": 110000,
+      "amount_str": "110K",
+      "bet_time": "19:35",
+      "scraped_at": "2026-09-23T11:36:08.699974+00:00"
+    },
+    {
+      "id": 376902,
+      "race_id": 24389,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "5-8",
+      "bet_type": "QP",
+      "amount": 140000,
+      "amount_str": "140K",
+      "bet_time": "19:35",
+      "scraped_at": "2026-09-23T11:36:08.699974+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 5,
+      "name_tc": "凝妙星",
+      "name_en": "AMAZING GAZE",
+      "formula_score": 0.838,
+      "live_value_index": 73.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 1163000.0,
+      "q_amount": 252000.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "贏玥",
+      "name_en": "SHOOTING TO TOP",
+      "formula_score": 0.68964,
+      "live_value_index": 52.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 1098000.0,
+      "q_amount": 442000.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "蹺妙",
+      "name_en": "AKERMANIS GOLD",
+      "formula_score": 0.61887,
+      "live_value_index": 57.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 805000.0,
+      "q_amount": 291000.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "有情有義",
+      "name_en": "DECISION LINK",
+      "formula_score": 0.51019,
+      "live_value_index": 66.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 332000.0,
+      "q_amount": 113000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "星願無限",
+      "name_en": "EXCEED THE LIMIT",
+      "formula_score": 0.31536,
+      "live_value_index": 47.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 97000.0,
+      "q_amount": 88000.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "睿智多寶",
+      "name_en": "MEGA MASTERMIND",
+      "formula_score": 0.0822,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 239000.0,
+      "q_amount": 53000.0
+    },
+    {
+      "horse_number": 9,
+      "name_tc": "越駿齊歡",
+      "name_en": "LUCKY TOGETHER",
+      "formula_score": 0.04609,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 134000.0,
+      "q_amount": 51000.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "得意佳作",
+      "name_en": "SURE JOYFUL",
+      "formula_score": 0.04127,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 120000.0,
+      "q_amount": 56000.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "領航天子",
+      "name_en": "CASA ROCHESTER",
+      "formula_score": 0.02373,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 69000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "彩虹七色",
+      "name_en": "RAINBOW SEVEN",
+      "formula_score": 0.01754,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 51000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "加州活力",
+      "name_en": "CALIFORNIA MOXIE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 11,
+      "name_tc": "光明傳承",
+      "name_en": "BRIGHT INHERITANCE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 5,
+    "name_tc": "凝妙星",
+    "name_en": "AMAZING GAZE",
+    "formula_score": 0.838,
+    "live_value_index": 73.0,
+    "live_command": "aggressive",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 1163000.0,
+    "q_amount": 252000.0
+  },
+  "other_four": [
+    {
+      "horse_number": 2,
+      "name_tc": "贏玥",
+      "name_en": "SHOOTING TO TOP",
+      "formula_score": 0.68964,
+      "live_value_index": 52.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 1098000.0,
+      "q_amount": 442000.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "蹺妙",
+      "name_en": "AKERMANIS GOLD",
+      "formula_score": 0.61887,
+      "live_value_index": 57.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 805000.0,
+      "q_amount": 291000.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "有情有義",
+      "name_en": "DECISION LINK",
+      "formula_score": 0.51019,
+      "live_value_index": 66.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 332000.0,
+      "q_amount": 113000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "星願無限",
+      "name_en": "EXCEED THE LIMIT",
+      "formula_score": 0.31536,
+      "live_value_index": 47.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 97000.0,
+      "q_amount": 88000.0
+    }
+  ],
+  "live_received_at": "2026-09-23T19:37:06.328972+08:00",
+  "capture_delay_seconds": 6.33,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained."
+}
