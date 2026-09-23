@@ -1,16 +1,13 @@
 {
   "date": "2026-09-23",
-  "updated_at": "2026-09-23T20:12:35.520615+08:00",
+  "updated_at": "2026-09-23T20:13:37.277007+08:00",
   "mode": "shadow",
   "races": {
     "5": {
-      "status": "retrying",
+      "status": "collecting",
       "target": "2026-09-23T20:37:00+08:00",
-      "errors": [
-        "Stale source timestamp",
-        "Stale source timestamp",
-        "Stale source timestamp"
-      ]
+      "baseline": false,
+      "last_received": "2026-09-23T20:13:01.224773+08:00"
     },
     "6": {
       "status": "waiting",
