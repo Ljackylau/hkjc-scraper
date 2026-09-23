@@ -1,0 +1,115 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "b697ce83-1638-439f-8bd7-c43e565087d8",
+    "race_number": 1,
+    "post_time": "18:40",
+    "venue": "跑馬地",
+    "distance": 1650,
+    "course": "C"
+  },
+  "date": "2026-09-23",
+  "expected_lock": "2026-09-23T18:37:00+08:00",
+  "live_received_at": "2026-09-23T18:37:04.282562+08:00",
+  "capture_delay_seconds": 4.28,
+  "live": {
+    "engineVersion": "live103-v3.4.1",
+    "phase": "locked",
+    "generatedAt": "2026-09-23T10:37:01.304Z",
+    "postTime": "2026-09-23T10:40:00.000Z",
+    "previewTime": "2026-09-23T10:33:00.000Z",
+    "lockTime": "2026-09-23T10:37:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 3,
+        "nameTc": "神駒馬靈",
+        "nameEn": "SOARING BRONCO",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 78,
+        "valueTier": "high",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "開心三多",
+        "nameEn": "ALL ARE MINE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 71,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "紅磚戰士",
+        "nameEn": "RED BRICK WARRIOR",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "堅多福",
+        "nameEn": "SUPER SICARIO",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 58,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "東方魅影",
+        "nameEn": "ORIENTAL SURPRISE",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 57,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 8,
+        "nameTc": "電訊驕陽",
+        "nameEn": "TELECOM POWER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "威威父子",
+        "nameEn": "WINDICATOR FAMILY",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "極速滿貫",
+        "nameEn": "TO INFINITY",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 8,
+        "nameTc": "電訊驕陽",
+        "nameEn": "TELECOM POWER"
+      }
+    ],
+    "secondLook": null
+  }
+}

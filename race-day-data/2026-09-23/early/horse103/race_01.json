@@ -1,0 +1,429 @@
+{
+  "captured_at": "2026-09-23T10:37:05.092516+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.40 * normalized QP amount",
+  "race": {
+    "id": "b697ce83-1638-439f-8bd7-c43e565087d8",
+    "race_number": 1,
+    "post_time": "18:40",
+    "venue": "跑馬地",
+    "distance": 1650,
+    "course": "C"
+  },
+  "lock_time": "2026-09-23T10:37:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.4.1",
+    "phase": "locked",
+    "generatedAt": "2026-09-23T10:37:01.304Z",
+    "postTime": "2026-09-23T10:40:00.000Z",
+    "previewTime": "2026-09-23T10:33:00.000Z",
+    "lockTime": "2026-09-23T10:37:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 3,
+        "nameTc": "神駒馬靈",
+        "nameEn": "SOARING BRONCO",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 78,
+        "valueTier": "high",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "開心三多",
+        "nameEn": "ALL ARE MINE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 71,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "紅磚戰士",
+        "nameEn": "RED BRICK WARRIOR",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "堅多福",
+        "nameEn": "SUPER SICARIO",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 58,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "東方魅影",
+        "nameEn": "ORIENTAL SURPRISE",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 57,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 8,
+        "nameTc": "電訊驕陽",
+        "nameEn": "TELECOM POWER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "威威父子",
+        "nameEn": "WINDICATOR FAMILY",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "極速滿貫",
+        "nameEn": "TO INFINITY",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 8,
+        "nameTc": "電訊驕陽",
+        "nameEn": "TELECOM POWER"
+      }
+    ],
+    "secondLook": null
+  },
+  "ticket_cutoff": "2026-09-23T10:37:00.000Z",
+  "base_race_id": 24387,
+  "source_ticket_race_id": 24387,
+  "qp_max_amount": 463000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 370189,
+      "race_id": 24387,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "3-11",
+      "bet_type": "Q",
+      "amount": 10000,
+      "amount_str": "10K",
+      "bet_time": "05:25",
+      "scraped_at": "2026-09-22T22:11:11.051585+00:00"
+    },
+    {
+      "id": 370676,
+      "race_id": 24387,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "3-8",
+      "bet_type": "QP",
+      "amount": 33000,
+      "amount_str": "33K",
+      "bet_time": "17:37",
+      "scraped_at": "2026-09-23T09:40:13.959612+00:00"
+    },
+    {
+      "id": 370677,
+      "race_id": 24387,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "3-8",
+      "bet_type": "Q",
+      "amount": 31000,
+      "amount_str": "31K",
+      "bet_time": "17:37",
+      "scraped_at": "2026-09-23T09:40:13.959612+00:00"
+    },
+    {
+      "id": 371796,
+      "race_id": 24387,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "3-4",
+      "bet_type": "QP",
+      "amount": 110000,
+      "amount_str": "110K",
+      "bet_time": "18:05",
+      "scraped_at": "2026-09-23T10:06:02.334581+00:00"
+    },
+    {
+      "id": 371797,
+      "race_id": 24387,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-6",
+      "bet_type": "QP",
+      "amount": 93000,
+      "amount_str": "93K",
+      "bet_time": "18:05",
+      "scraped_at": "2026-09-23T10:06:02.334581+00:00"
+    },
+    {
+      "id": 371798,
+      "race_id": 24387,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-8",
+      "bet_type": "QP",
+      "amount": 110000,
+      "amount_str": "110K",
+      "bet_time": "18:05",
+      "scraped_at": "2026-09-23T10:06:02.334581+00:00"
+    },
+    {
+      "id": 371799,
+      "race_id": 24387,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-11",
+      "bet_type": "QP",
+      "amount": 150000,
+      "amount_str": "150K",
+      "bet_time": "18:05",
+      "scraped_at": "2026-09-23T10:06:02.334581+00:00"
+    },
+    {
+      "id": 372693,
+      "race_id": 24387,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-11",
+      "bet_type": "Q",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "18:22",
+      "scraped_at": "2026-09-23T10:23:01.979418+00:00"
+    },
+    {
+      "id": 373443,
+      "race_id": 24387,
+      "race_date": "2026-09-23",
+      "horse_or_combo": "4-11",
+      "bet_type": "Q",
+      "amount": 130000,
+      "amount_str": "130K",
+      "bet_time": "18:35",
+      "scraped_at": "2026-09-23T10:36:10.268875+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 4,
+      "name_tc": "紅磚戰士",
+      "name_en": "RED BRICK WARRIOR",
+      "formula_score": 0.79,
+      "live_value_index": 65.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 463000.0,
+      "q_amount": 250000.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "神駒馬靈",
+      "name_en": "SOARING BRONCO",
+      "formula_score": 0.59154,
+      "live_value_index": 78.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 143000.0,
+      "q_amount": 41000.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "開心三多",
+      "name_en": "ALL ARE MINE",
+      "formula_score": 0.50635,
+      "live_value_index": 71.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 11,
+      "name_tc": "東方魅影",
+      "name_en": "ORIENTAL SURPRISE",
+      "formula_score": 0.47159,
+      "live_value_index": 57.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 150000.0,
+      "q_amount": 260000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "堅多福",
+      "name_en": "SUPER SICARIO",
+      "formula_score": 0.348,
+      "live_value_index": 58.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "電訊驕陽",
+      "name_en": "TELECOM POWER",
+      "formula_score": 0.12354,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 143000.0,
+      "q_amount": 31000.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "一風雲",
+      "name_en": "SMILING ONE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "極速滿貫",
+      "name_en": "TO INFINITY",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "綫路達飛",
+      "name_en": "CIRCUIT DUFFY",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 9,
+      "name_tc": "至高心得",
+      "name_en": "KOLACHI",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "威威父子",
+      "name_en": "WINDICATOR FAMILY",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "幸運同行",
+      "name_en": "PERFECT PAIRING",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 4,
+    "name_tc": "紅磚戰士",
+    "name_en": "RED BRICK WARRIOR",
+    "formula_score": 0.79,
+    "live_value_index": 65.0,
+    "live_command": "follow",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 463000.0,
+    "q_amount": 250000.0
+  },
+  "other_four": [
+    {
+      "horse_number": 3,
+      "name_tc": "神駒馬靈",
+      "name_en": "SOARING BRONCO",
+      "formula_score": 0.59154,
+      "live_value_index": 78.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 143000.0,
+      "q_amount": 41000.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "開心三多",
+      "name_en": "ALL ARE MINE",
+      "formula_score": 0.50635,
+      "live_value_index": 71.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 11,
+      "name_tc": "東方魅影",
+      "name_en": "ORIENTAL SURPRISE",
+      "formula_score": 0.47159,
+      "live_value_index": 57.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 150000.0,
+      "q_amount": 260000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "堅多福",
+      "name_en": "SUPER SICARIO",
+      "formula_score": 0.348,
+      "live_value_index": 58.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "live_received_at": "2026-09-23T18:37:04.282562+08:00",
+  "capture_delay_seconds": 4.28,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained."
+}
