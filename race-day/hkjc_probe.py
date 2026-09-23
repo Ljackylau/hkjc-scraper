@@ -56,7 +56,9 @@ async def probe():
         finally:await browser.close()
     Path('hkjc-probe.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k!='pages'},ensure_ascii=False))
-    for row in report['pages']:print(row['route'],row.get('odds_elements_found',0),row.get('error',''),row.get('text_excerpt','')[:400])
+    for row in report['pages']:print(row['route'],row.get('odds_elements_found',0),'fresh:',row.get('fresh'),row.get('error',''),row.get('text_excerpt','')[:400])
+    if report.get('error') or len(report['pages'])!=2 or any(row.get('error') for row in report['pages']):
+        raise RuntimeError('HKJC source probe failed; inspect hkjc-probe.json and job logs')
 
 
 if __name__=='__main__':asyncio.run(probe())

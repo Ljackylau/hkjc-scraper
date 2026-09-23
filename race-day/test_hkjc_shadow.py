@@ -20,6 +20,9 @@ class HKJCShadowTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'identity'):
             parse(raw,'2026-09-23',2,'wp',received)
         self.assertFalse(parse(raw,'2026-09-23',1,'wp',received+timedelta(minutes=3))['fresh'])
+        raw['text']=raw['text'].replace('更新時間: 23/09/2026 18:10','')
+        raw['source_text']='更新時間: 23/09/2026 18:10'
+        self.assertTrue(parse(raw,'2026-09-23',1,'wp',received)['fresh'])
 
     def test_market_movement_is_separate_and_has_no_arbitrary_zero_score_pick(self):
         baseline={'odds':{'WIN':{'1':'10','2':'10'},'PLA':{'1':'4','2':'4'},
