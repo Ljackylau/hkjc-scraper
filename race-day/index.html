@@ -12,7 +12,7 @@
 <label>賽日 <input type="date" id="date"></label><button id="load">查看</button>
 <p id="health" class="muted">尚未載入資料</p>
 </header>
-<section id="horse"><p class="muted">60% 即場解碼 valueIndex ＋ 40% 位置Q資金。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應。</p><div class="copybar"><button id="copyAll" hidden>複製所有已鎖定場次</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
+<section id="horse"><p class="muted">60% 即場解碼 valueIndex ＋ 40% 位置Q資金。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應。</p><p class="muted">（信心馬！）：T−3公式主選的QP金額，至少為同場其餘馬匹最高QP金額的1.5倍。使用完整快照排名；研究訊號，不代表必勝。舊賽日亦按此條件顯示。</p><div class="copybar"><button id="copyAll" hidden>複製所有已鎖定場次</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
 <section id="hkjc"><h2>HKJC 獨立市場快照（觀察）</h2><p class="muted">每場 T−30 至 T−3 收集獨贏、位置、連贏及位置Q賠率變化。下方係實驗排名，未有足夠賽日驗證，唔會代替 Horse103 主選。</p><div id="hkjcCards" class="races"></div></section>
 <p class="muted">本頁約每分鐘讀取摘要；顯示時間包含資料發佈與快取延遲。</p></main>
 <script>
@@ -29,13 +29,42 @@ async function currentRef(){
  return dataRef
 }
 const labels={waiting:'等待 T−3',saved:'已保存',partial:'T−3 原始資料已保存；未完成排名',missed:'錯過 T−3',retrying:'重試中',unavailable:'資料不足'};
+
+// QP signal uses the complete captured ranking, never the five summary picks.
+const signalCache=new Map();
+function qpConfidence(snapshot,main){
+ const live=snapshot?.live103_raw,ranking=snapshot?.ranking;
+ if(live?.phase!=='locked'||live?.dataQuality!=='ready'||!Array.isArray(ranking)||ranking.length<2)return null;
+ const numbers=ranking.map(h=>Number(h.horse_number));
+ if(new Set(numbers).size!==numbers.length||numbers.some(n=>!Number.isInteger(n)||n<1))return null;
+ if(Number(snapshot.main_pick?.horse_number)!==main||Number(ranking[0].horse_number)!==main)return null;
+ if(ranking.some(h=>typeof h.qp_amount!=='number'||!Number.isFinite(h.qp_amount)||h.qp_amount<0))return null;
+ const amount=ranking[0].qp_amount,other=Math.max(...ranking.slice(1).map(h=>h.qp_amount));
+ if(other<=0)return null;
+ return {ratio:amount/other,qualified:amount>=1.5*other};
+}
+async function loadConfidence(s,url){
+ if(s.status!=='saved'||!s.picks?.length)return;
+ try{
+  let snapshot=signalCache.get(url);
+  if(!snapshot){
+   const r=await fetch(url,{signal:AbortSignal.timeout(10000)});
+   if(!r.ok)throw Error('HTTP '+r.status);
+   snapshot=await r.json();
+   if(signalCache.size>=100)signalCache.clear();
+   signalCache.set(url,snapshot);
+  }
+  s.qpConfidence=qpConfidence(snapshot,Number(s.picks[0].horse_number));
+ }catch(e){s.qpConfidence=null}
+}
+
 function summary(n,s){
  const picks=s.picks||[];
  if(s.status!=='saved'||!picks.length)return `R${n}\n獨贏&位置信心馬：${s.status==='partial'?'原始T−3已保存，排名未完成':'未能鎖定T−3'}\n連贏位置Q：無`;
  const main=Number(picks[0].horse_number),originalNumbers=(s.original||[]).map(Number);
  const original=new Set(originalNumbers);
  const extra=picks.slice(1,5).filter(h=>!original.has(Number(h.horse_number))).map(h=>`${h.horse_number}號`);
- return `R${n}\n獨贏&位置信心馬：${main}號${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${main}號 拖 `
+ return `R${n}\n獨贏&位置信心馬：${main}號${s.qpConfidence?.qualified?'（信心馬！）':''}${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${main}號 拖 `
 }
 async function copyText(value,label){
  try{
@@ -63,11 +92,14 @@ async function refresh(){
   }
  }catch(e){}
  if(requested!==selected)return;
+ const snapshotBase=base();
+ await Promise.all(data.flatMap(d=>Object.entries(d.horse103||{}).map(([n,s])=>loadConfidence(s,`${snapshotBase}/${d.phase}/horse103/race_${String(n).padStart(2,'0')}.json`))));
+ if(requested!==selected)return;
  const cards=[];copyRows=new Map();
  for(const d of data)for(const [n,s]of Object.entries(d.horse103||{})){
  const picks=s.picks||[];const text=picks.map(h=>`${h.horse_number} ${h.name_tc||''}`);
  const line=summary(n,s);copyRows.set(+n,{text:line,saved:s.status==='saved'&&picks.length>0});
- cards.push({n:+n,html:`<div class="card"><h2>R${esc(n)} <span class="muted">${esc(labels[s.status]||s.status)}</span></h2>${s.target?`<p class="muted">鎖定 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${picks.length?`<p class="pick">主選 ${esc(text[0])}</p><p>其餘：${esc(text.slice(1).join('、'))}</p><p class="muted">原解碼順序：${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<div class="copyline">${esc(line)}</div><button data-copy-race="${esc(n)}">複製 R${esc(n)}</button><p class="bad">${esc(s.error||s.reason||'')}</p>${s.status==='saved'?`<a href="${base()}/${d.phase}/horse103/race_${String(n).padStart(2,'0')}.json" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</div>`});
+ cards.push({n:+n,html:`<div class="card"><h2>R${esc(n)} <span class="muted">${esc(labels[s.status]||s.status)}</span></h2>${s.target?`<p class="muted">鎖定 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${picks.length?`<p class="pick">主選 ${esc(text[0])}${s.qpConfidence?.qualified?'（信心馬！）':''}</p><p>其餘：${esc(text.slice(1).join('、'))}</p><p class="muted">原解碼順序：${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<div class="copyline">${esc(line)}</div><button data-copy-race="${esc(n)}">複製 R${esc(n)}</button><p class="bad">${esc(s.error||s.reason||'')}</p>${s.status==='saved'?`<a href="${base()}/${d.phase}/horse103/race_${String(n).padStart(2,'0')}.json" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</div>`});
  }
  $('cards').innerHTML=cards.sort((a,b)=>a.n-b.n).map(c=>c.html).join('')||'<p>未有已啟動紀錄。請先在 GitHub 執行 Preflight；賽日執行 Run。</p>';
  $('copyAll').hidden=![...copyRows.values()].some(x=>x.saved);
