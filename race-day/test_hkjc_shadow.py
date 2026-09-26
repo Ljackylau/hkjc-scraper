@@ -1,9 +1,37 @@
 import unittest
 from datetime import datetime, timedelta
-from hkjc_shadow import HK, parse, movement
+from hkjc_shadow import HK, parse, movement, choose_baseline, baseline_info, schedule_times
 
 
 class HKJCShadowTests(unittest.TestCase):
+    def sample(self, at, age=30):
+        return {'received_at':at.isoformat(),'source_updated':dict.fromkeys(('wp','wpq'),(at-timedelta(seconds=age)).isoformat())}
+
+    def test_late_start_is_labelled_and_too_late_is_rejected(self):
+        off=datetime(2026,9,23,19,10,tzinfo=HK)
+        late=self.sample(off-timedelta(minutes=27))
+        self.assertEqual(choose_baseline([late],off),late)
+        self.assertEqual(baseline_info(late,off)['kind'],'late_start')
+        self.assertIsNone(choose_baseline([self.sample(off-timedelta(minutes=9))],off))
+        self.assertIsNone(choose_baseline([self.sample(off-timedelta(minutes=30),age=180)],off))
+        early=self.sample(off-timedelta(minutes=30)+timedelta(seconds=10))
+        self.assertEqual(choose_baseline([late,early],off),early)
+        self.assertEqual(baseline_info(early,off)['kind'],'t30')
+
+    def test_delayed_schedule_reselects_baseline(self):
+        off=datetime(2026,9,23,19,10,tzinfo=HK)
+        a=self.sample(off-timedelta(minutes=30))
+        b=self.sample(off-timedelta(minutes=25))
+        self.assertEqual(choose_baseline([a,b],off+timedelta(minutes=5)),b)
+        self.assertIsNone(choose_baseline([a,b],off+timedelta(minutes=10)))
+
+    def test_variable_meeting_lengths_and_invalid_clocks(self):
+        for n in (1,8,9,10,11,12,14):
+            clocks=','.join(f'{12+i//2:02d}:{(i%2)*30:02d}' for i in range(n))
+            self.assertEqual(len(schedule_times(clocks)),n)
+        for clocks in ('','13:00,12:30','13:00,13:00','25:00'):
+            with self.assertRaises(ValueError):schedule_times(clocks)
+
     def raw(self):
         odds=lambda prefix,pool:[{'id':f'{prefix}_{pool}_1_{i}','value':'15'} for i in range(1,7)]
         pairs=lambda pool:[{'id':f'qb_{pool}_{i}_{j}','value':'20'} for i in range(1,7) for j in range(i+1,7)]

@@ -24,6 +24,39 @@ DOM = """() => ({
 STAMP_READY = r"() => /更新時間\s*[:：]?\s*\d{2}\/\d{2}\/\d{4}\s+\d{2}:\d{2}/.test(document.querySelector('#refreshTime')?.innerText || '')"
 
 
+def schedule_times(value):
+    clocks=[s.strip() for s in value.split(',')]
+    if not 1 <= len(clocks) <= 14:
+        raise ValueError('Supply 1 to 14 official race times')
+    parsed=[datetime.strptime(s,'%H:%M') for s in clocks]
+    if any(b<=a for a,b in zip(parsed,parsed[1:])):
+        raise ValueError('Race times must be strictly increasing')
+    return clocks
+
+
+def choose_baseline(samples, target):
+    # Never relabel a late snapshot as T-30. Require >=10 minutes to off.
+    t30=target-timedelta(minutes=30)
+    usable=[]
+    for sample in samples:
+        received=datetime.fromisoformat(sample['received_at'])
+        if t30<=received<=target-timedelta(minutes=10):
+            stamps=[datetime.fromisoformat(t) for t in sample['source_updated'].values()]
+            if len(stamps)==2 and all(0<=(received-t).total_seconds()<=120 for t in stamps):
+                usable.append(sample)
+    if not usable:return None
+    return min(usable,key=lambda s:s['received_at'])
+
+
+def baseline_info(sample,target):
+    received=datetime.fromisoformat(sample['received_at'])
+    offset=(received-(target-timedelta(minutes=30))).total_seconds()
+    return {'kind':'t30' if offset<=90 else 'late_start',
+            'received_at':sample['received_at'],
+            'minutes_to_off':round((target-received).total_seconds()/60,2),
+            'source_updated':sample['source_updated']}
+
+
 def clock_from_page(raw, date, number):
     date_label=datetime.strptime(date,'%Y-%m-%d').strftime('%d/%m')
     m=re.search(rf'{date_label}\s*\([^)]*\)\s*,\s*(\d{{1,2}}:\d{{2}})',raw['text'])
@@ -108,22 +141,22 @@ async def capture(page, date, venue, number, route):
 
 async def race_job(context,date,venue,number,off,folder,states):
     target=datetime.strptime(date+' '+off,'%Y-%m-%d %H:%M').replace(tzinfo=HK)
-    baseline=None;dest=folder/f'race_{number:02d}.jsonl'
+    baseline=None;samples=[];dest=folder/f'race_{number:02d}.jsonl'
     states[str(number)]={'status':'waiting','target':(target-timedelta(minutes=3)).isoformat()}
-    while now()<target-timedelta(minutes=31):await asyncio.sleep(min(20,(target-timedelta(minutes=31)-now()).total_seconds()))
+    while now()<target-timedelta(minutes=32):await asyncio.sleep(min(20,(target-timedelta(minutes=32)-now()).total_seconds()))
     wp=await context.new_page();wpq=await context.new_page()
     errors=[];last_source=None
     try:
         while now()<=target-timedelta(minutes=3)+timedelta(seconds=90):
             cycle=now()
-            if cycle<target-timedelta(minutes=30):
-                await asyncio.sleep(min(10,(target-timedelta(minutes=30)-cycle).total_seconds()));continue
             try:
                 w,p=await asyncio.gather(capture(wp,date,venue,number,'wp'),capture(wpq,date,venue,number,'wpq'))
                 revised=datetime.strptime(date+' '+w['post_time'],'%Y-%m-%d %H:%M').replace(tzinfo=HK)
                 if abs((revised-target).total_seconds())>0:
                     if abs((revised-target).total_seconds())>1800:raise ValueError('Schedule changed >30 minutes; review required')
                     target=revised;baseline=None
+                    for suffix in ('t30','baseline'):
+                        (folder/f'race_{number:02d}_{suffix}.json').unlink(missing_ok=True)
                 if w['post_time']!=p['post_time']:raise ValueError('WP/WPQ post times mismatch')
                 if not (w['fresh'] and p['fresh']):raise ValueError('Stale source timestamp')
                 active=set(w['odds']['WIN']) & set(w['odds']['PLA'])
@@ -136,11 +169,15 @@ async def race_job(context,date,venue,number,off,folder,states):
                 if stamp!=last_source:
                     with dest.open('a',encoding='utf-8') as f:f.write(json.dumps(combined,ensure_ascii=False)+'\n')
                     last_source=stamp
+                    samples.append(combined)
                 received=datetime.fromisoformat(combined['received_at'])
                 t30=target-timedelta(minutes=30);t3=target-timedelta(minutes=3)
-                if baseline is None and t30<=received<=t30+timedelta(seconds=90):
-                    baseline=combined
-                    atomic(folder/f'race_{number:02d}_t30.json',combined)
+                if baseline is None:
+                    baseline=choose_baseline(samples,target)
+                    if baseline:
+                        info=baseline_info(baseline,target)
+                        atomic(folder/f'race_{number:02d}_baseline.json',{'baseline':info,'snapshot':baseline})
+                        if info['kind']=='t30':atomic(folder/f'race_{number:02d}_t30.json',baseline)
                 if t3<=received<=t3+timedelta(seconds=90):
                     if any((t3-datetime.fromisoformat(t)).total_seconds()>90 for t in combined['source_updated'].values()):
                         raise ValueError('T−3 odds source older than 90 seconds')
@@ -149,14 +186,17 @@ async def race_job(context,date,venue,number,off,folder,states):
                         ranked=movement(baseline,combined)
                         states[str(number)]={'status':'shadow' if ranked else 'no_signal','target':t3.isoformat(),
                                             'received_at':combined['received_at'],'source_updated':combined['source_updated'],
+                                            'baseline':baseline_info(baseline,target),
                                             'ranking':ranked[:5], 'source':'HKJC odds movement; experimental'}
-                    else:states[str(number)]={'status':'missing_baseline','target':t3.isoformat(),'reason':'T−30 missing; T−3 raw saved'}
+                    else:states[str(number)]={'status':'missing_baseline','target':t3.isoformat(),'reason':'No fresh baseline between T−30 and T−10; T−3 raw saved'}
                     return
                 states[str(number)]={'status':'collecting','target':t3.isoformat(),
                                      'baseline':bool(baseline),'last_received':combined['received_at']}
             except Exception as e:
                 errors.append(str(e)[:180]);states[str(number)]={'status':'retrying','target':(target-timedelta(minutes=3)).isoformat(),'errors':errors[-3:]}
-            interval=10 if now()>=target-timedelta(minutes=4) else 60
+                with (folder/f'race_{number:02d}_errors.jsonl').open('a',encoding='utf-8') as f:
+                    f.write(json.dumps({'at':now().isoformat(),'error':str(e)[:300]},ensure_ascii=False)+'\n')
+            interval=10 if (baseline is None and target-timedelta(minutes=32)<=now()<=target-timedelta(minutes=10)) or now()>=target-timedelta(minutes=4) else 60
             await asyncio.sleep(max(1,interval-(now()-cycle).total_seconds()))
         states[str(number)]={'status':'unavailable','target':(target-timedelta(minutes=3)).isoformat(),'errors':errors[-3:]}
     finally:
@@ -165,11 +205,11 @@ async def race_job(context,date,venue,number,off,folder,states):
 
 async def run(args):
     if now().date().isoformat()!=args.date:raise RuntimeError('Run only on the Hong Kong race date')
-    clocks=args.times.split(',')
-    if len(clocks)!=9 or args.venue not in ('HV','ST'):raise ValueError('Expected nine race times and venue HV/ST')
-    for clock in clocks:datetime.strptime(clock,'%H:%M')
+    clocks=schedule_times(args.times)
+    if args.venue not in ('HV','ST'):raise ValueError('Expected venue HV/ST')
     if args.push:setup_data_branch()
-    numbers=list(range(1,5)) if args.phase=='early' else list(range(5,10))
+    cut=max(1,len(clocks)//2)
+    numbers=list(range(1,cut+1)) if args.phase=='early' else list(range(cut+1,len(clocks)+1))
     folder=REPO/'race-day-data'/args.date/f'hkjc-{args.phase}';folder.mkdir(parents=True,exist_ok=True)
     from playwright.async_api import async_playwright
     async with async_playwright() as p:
