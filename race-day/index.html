@@ -12,7 +12,7 @@
 <label>賽日 <input type="date" id="date"></label><button id="load">查看</button>
 <p id="health" class="muted">尚未載入資料</p>
 </header>
-<section id="horse"><p class="muted">60% 即場解碼 valueIndex ＋ 40% 位置Q資金。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應。</p><p class="muted">（信心馬！）：T−3公式主選的QP金額，至少為同場其餘馬匹最高QP金額的1.5倍。使用完整快照排名；研究訊號，不代表必勝。舊賽日亦按此條件顯示。</p><div class="copybar"><button id="copyAll" hidden>複製所有已鎖定場次</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
+<section id="horse"><p class="muted">現行公式：60% 即場解碼 valueIndex ＋ 20% 位置Q資金 ＋ 20% 連贏Q資金。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應。舊賽日保留當日已鎖定的原公式排名。</p><p class="muted">（信心馬！）：T−3公式主選的QP金額，至少為同場其餘馬匹最高QP金額的1.5倍。使用完整快照排名；研究訊號，不代表必勝。舊賽日亦按此條件顯示。</p><div class="copybar"><button id="copyAll" hidden>複製所有已鎖定場次</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
 <section id="hkjc"><h2>HKJC 獨立市場快照（觀察）</h2><p class="muted">每場收集獨贏、位置、連贏及位置Q賠率變化。優先比較 T−30→T−3；若基準較遲取得，會標示實際起點，最遲接受 T−10。下方係實驗排名，未有足夠賽日驗證，唔會代替 Horse103 主選。</p><div id="hkjcCards" class="races"></div></section>
 <section id="challenge"><h2>騎師王／練馬師王研究紀錄</h2>
 <p class="muted">啟動同一個 Run 後，每分鐘獨立保存兩個王的賠率；關閉本頁仍會收集。開售跌幅反映整個王的市場變化，並非下一場馬匹勝算，不影響 Horse103 推薦。</p>
@@ -124,4 +124,3 @@ $('copyAll').onclick=()=>{const value=[...copyRows.entries()].filter(([,x])=>x.s
 $('load').onclick=()=>{selected=$('date').value;dataRef='';refChecked=0;refresh();refreshChallenges()};
 refresh();refreshChallenges();setInterval(()=>{if(!document.hidden){refresh();refreshChallenges()}},60000);
 </script></html>
-

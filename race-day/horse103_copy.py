@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Capture Horse103 T-3 data and calculate the 60/40 Live103 + QP ranking.
+"""Capture Horse103 T-3 data and calculate the Live103 + QP + Q ranking.
 
 Examples
   python horse103_t3.py --date 2026-09-13 --watch
@@ -29,7 +29,8 @@ SUPABASE_URL = "https://pkrdkibqjwwgtvfdtwya.supabase.co"
 PUBLIC_KEY = "sb_publishable_pP988ZhTMZ4GDYKk8AAnYw_kAViFMFI"
 HK_TZ = timezone(timedelta(hours=8))
 LIVE_WEIGHT = 0.60
-QP_WEIGHT = 0.40
+QP_WEIGHT = 0.20
+Q_WEIGHT = 0.20
 
 
 def ssl_context() -> ssl.SSLContext:
@@ -159,6 +160,7 @@ def capture_race(
     candidates = {int(row["horseNumber"]): row for row in live.get("candidates", [])}
     entries = get_entries(race["id"])
     qp_max = max(qp_by_horse.values(), default=0.0)
+    q_max = max(q_by_horse.values(), default=0.0)
     scores = []
     for entry in entries:
         number = int(entry["horse_number"])
@@ -166,7 +168,13 @@ def capture_race(
         live_index = float(candidate.get("valueIndex") or 0)
         qp_amount = qp_by_horse[number]
         qp_strength = qp_amount / qp_max if qp_max else 0.0
-        score = LIVE_WEIGHT * (live_index / 100.0) + QP_WEIGHT * qp_strength
+        q_amount = q_by_horse[number]
+        q_strength = q_amount / q_max if q_max else 0.0
+        score = (
+            LIVE_WEIGHT * (live_index / 100.0)
+            + QP_WEIGHT * qp_strength
+            + Q_WEIGHT * q_strength
+        )
         horse = entry.get("horses") or {}
         scores.append({
             "horse_number": number,
@@ -178,12 +186,12 @@ def capture_race(
             "live_capital_signal": candidate.get("capitalSignal"),
             "is_live_candidate": number in candidates,
             "qp_amount": qp_amount,
-            "q_amount": q_by_horse[number],
+            "q_amount": q_amount,
         })
     scores.sort(key=lambda row: (-row["formula_score"], -row["live_value_index"], row["horse_number"]))
     return {
         "captured_at": datetime.now(timezone.utc).isoformat(),
-        "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.40 * normalized QP amount",
+        "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.20 * normalized QP amount + 0.20 * normalized Q amount",
         "race": race,
         "lock_time": live["lockTime"],
         "live103_raw": live,
@@ -191,6 +199,7 @@ def capture_race(
         "base_race_id": base_race_id,
         "source_ticket_race_id": target_ticket_race_id,
         "qp_max_amount": qp_max,
+        "q_max_amount": q_max,
         "used_q_and_qp_tickets": used_tickets,
         "ranking": scores,
         "main_pick": scores[0] if scores else None,

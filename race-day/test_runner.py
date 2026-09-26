@@ -14,6 +14,18 @@ class Tests(unittest.TestCase):
   tickets=[{'race_id':101,'bet_type':'QP','scraped_at':'2026-09-09T11:01:59Z','horse_or_combo':'2-3','amount':100}, {'race_id':101,'bet_type':'QP','scraped_at':'2026-09-09T11:02:01Z','horse_or_combo':'1-3','amount':999999}]
   with patch.object(h,'get_entries',return_value=entries):out=h.capture_race(race,'2026-09-09',101,tickets,live_override=live)
   self.assertEqual([x['horse_number'] for x in out['ranking']],[2,1,3]);self.assertEqual(len(out['used_q_and_qp_tickets']),1)
+ def test_q_and_qp_are_normalized_separately(self):
+  race={'id':'r','race_number':1};live={'lockTime':'2026-09-09T11:02:00Z','candidates':[{'horseNumber':1,'valueIndex':70},{'horseNumber':2,'valueIndex':70},{'horseNumber':3,'valueIndex':0}]}
+  entries=[{'horse_number':n,'horses':{'name_tc':str(n)}} for n in [1,2,3]]
+  tickets=[
+   {'race_id':101,'bet_type':'QP','scraped_at':'2026-09-09T11:01:59Z','horse_or_combo':'1-3','amount':100},
+   {'race_id':101,'bet_type':'Q','scraped_at':'2026-09-09T11:01:59Z','horse_or_combo':'2-3','amount':100},
+  ]
+  with patch.object(h,'get_entries',return_value=entries):out=h.capture_race(race,'2026-09-09',101,tickets,live_override=live)
+  self.assertEqual([x['horse_number'] for x in out['ranking'][:2]],[1,2])
+  self.assertAlmostEqual(out['ranking'][0]['formula_score'],0.62)
+  self.assertEqual(out['q_max_amount'],100)
+  self.assertIn('0.20 * normalized Q amount',out['formula'])
  def test_empty_live_not_valid(self):
   self.assertFalse(r.valid_live({'candidates':[]},{},''))
  def test_wrong_lock_rejected(self):
