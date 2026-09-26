@@ -54,12 +54,14 @@ jobs:
           path: race-day/source-health.json
           retention-days: 7
       - id: plan
+        if: github.event_name == 'workflow_dispatch'
         env:
           RACE_DATE: ${{ inputs.date }}
         run: |
           RACE_DATE=${RACE_DATE:-$(TZ=Asia/Hong_Kong date +%F)}
           python race-day/runner.py --date "$RACE_DATE" --plan
       - uses: actions/upload-artifact@v4
+        if: github.event_name == 'workflow_dispatch'
         with:
           name: race-day-plan
           path: race-day/plan.json
