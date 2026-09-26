@@ -14,7 +14,12 @@
 </header>
 <section id="horse"><p class="muted">60% 即場解碼 valueIndex ＋ 40% 位置Q資金。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應。</p><p class="muted">（信心馬！）：T−3公式主選的QP金額，至少為同場其餘馬匹最高QP金額的1.5倍。使用完整快照排名；研究訊號，不代表必勝。舊賽日亦按此條件顯示。</p><div class="copybar"><button id="copyAll" hidden>複製所有已鎖定場次</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
 <section id="hkjc"><h2>HKJC 獨立市場快照（觀察）</h2><p class="muted">每場收集獨贏、位置、連贏及位置Q賠率變化。優先比較 T−30→T−3；若基準較遲取得，會標示實際起點，最遲接受 T−10。下方係實驗排名，未有足夠賽日驗證，唔會代替 Horse103 主選。</p><div id="hkjcCards" class="races"></div></section>
+<section id="challenge"><h2>騎師王／練馬師王研究紀錄</h2>
+<p class="muted">啟動同一個 Run 後，每分鐘獨立保存兩個王的賠率；關閉本頁仍會收集。開售跌幅反映整個王的市場變化，並非下一場馬匹勝算，不影響 Horse103 推薦。</p>
+<p class="muted">同時保存各場馬匹／騎練對應及可取得的積分。缺少積分、剩餘坐騎或來源時間時保留「未知」；末段停賣亦不當成新訊號。</p>
+<div id="challengeCards" class="races"><p class="muted">正在檢查研究紀錄…</p></div></section>
 <p class="muted">本頁約每分鐘讀取摘要；顯示時間包含資料發佈與快取延遲。</p></main>
+<script src="challenge.js"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hkToday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Hong_Kong',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts().map(x=>[x.type,x.value]));return `${p.year}-${p.month}-${p.day}`};
@@ -116,7 +121,7 @@ async function refresh(){
 }
 $('cards').onclick=e=>{const b=e.target.closest('[data-copy-race]');if(!b)return;const n=Number(b.dataset.copyRace),row=copyRows.get(n);if(row)copyText(row.text,`R${n} `)};
 $('copyAll').onclick=()=>{const value=[...copyRows.entries()].filter(([,x])=>x.saved).sort((a,b)=>a[0]-b[0]).map(([,x])=>x.text).join('\n\n');if(value)copyText(value,'所有已鎖定場次')};
-$('load').onclick=()=>{selected=$('date').value;dataRef='';refChecked=0;refresh()};
-refresh();setInterval(()=>{if(!document.hidden)refresh()},60000);
+$('load').onclick=()=>{selected=$('date').value;dataRef='';refChecked=0;refresh();refreshChallenges()};
+refresh();refreshChallenges();setInterval(()=>{if(!document.hidden){refresh();refreshChallenges()}},60000);
 </script></html>
 

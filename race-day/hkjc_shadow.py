@@ -13,9 +13,10 @@ from pathlib import Path
 from runner import REPO, HK, atomic, now, publish, setup_data_branch
 import runner
 
-DOM = """() => ({
+DOM = r"""() => ({
   text: document.body.innerText,
   source_text: document.querySelector('#refreshTime')?.innerText || '',
+  runner_rows: Array.from(document.querySelectorAll('table tr')).map(r=>Array.from(r.cells).map(c=>c.innerText.trim())).filter(r=>r.length>=9 && /^\d+$/.test(r[0])),
   win: Array.from(document.querySelectorAll('[id^="odds_WIN_"]')).map(e=>({id:e.id,value:e.innerText})),
   pla: Array.from(document.querySelectorAll('[id^="odds_PLA_"]')).map(e=>({id:e.id,value:e.innerText})),
   qin: Array.from(document.querySelectorAll('[id^="qb_QIN_"]')).map(e=>({id:e.id,value:e.innerText})),
@@ -136,6 +137,8 @@ async def capture(page, date, venue, number, route):
     raw=await page.evaluate(DOM)
     result=parse(raw,date,number,route,received)
     result['url']=url
+    if route=='wp':result['runner_rows']=raw.get('runner_rows',[])
+    # Preserve contemporaneous horse / jockey / trainer mapping for challenge research.
     return result
 
 
@@ -164,7 +167,7 @@ async def race_job(context,date,venue,number,off,folder,states):
                     raise ValueError('Incomplete combination coverage')
                 combined={'received_at':max(w['received_at'],p['received_at']),
                           'source_updated':{'wp':w['source_updated'],'wpq':p['source_updated']},
-                          'post_time':w['post_time'],'odds':{**w['odds'],**p['odds']},'urls':[w['url'],p['url']]}
+                          'post_time':w['post_time'],'runner_rows':w.get('runner_rows',[]),'odds':{**w['odds'],**p['odds']},'urls':[w['url'],p['url']]}
                 stamp=tuple(combined['source_updated'].values())
                 if stamp!=last_source:
                     with dest.open('a',encoding='utf-8') as f:f.write(json.dumps(combined,ensure_ascii=False)+'\n')
@@ -215,6 +218,8 @@ async def run(args):
     async with async_playwright() as p:
         browser=await p.chromium.launch();context=await browser.new_context(locale='zh-HK',timezone_id='Asia/Hong_Kong')
         states={};tasks=[asyncio.create_task(race_job(context,args.date,args.venue,n,clocks[n-1],folder,states)) for n in numbers]
+        from challenge_shadow import collect as collect_challenges
+        if numbers:tasks.append(asyncio.create_task(collect_challenges(context,args.date,args.venue,clocks,numbers,folder,states)))
         last=0
         try:
             while not all(t.done() for t in tasks):
