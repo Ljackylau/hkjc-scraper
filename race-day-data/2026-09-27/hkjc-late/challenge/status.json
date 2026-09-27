@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 4,
-      "received_at": "2026-09-27T14:27:29.260325+08:00",
+      "samples_this_run": 5,
+      "received_at": "2026-09-27T14:28:29.826417+08:00",
       "source_updated_at": "2026-09-27T14:26:00+08:00",
-      "source_recent": true,
-      "source_age_seconds": 89.3,
+      "source_recent": false,
+      "source_age_seconds": 149.8,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -302,7 +302,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         }
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "observed",
-      "samples_this_run": 4,
-      "received_at": "2026-09-27T14:27:29.475516+08:00",
+      "samples_this_run": 5,
+      "received_at": "2026-09-27T14:28:30.639165+08:00",
       "source_updated_at": "2026-09-27T14:26:00+08:00",
-      "source_recent": true,
-      "source_age_seconds": 89.5,
+      "source_recent": false,
+      "source_age_seconds": 150.6,
       "numeric_quotes": 14,
       "participants": [
         {
@@ -532,5 +532,5 @@
     10,
     11
   ],
-  "updated_at": "2026-09-27T14:27:29.868512+08:00"
+  "updated_at": "2026-09-27T14:28:30.697574+08:00"
 }
