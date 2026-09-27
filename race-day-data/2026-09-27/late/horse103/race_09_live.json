@@ -1,0 +1,120 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "b2c04892-c88e-43c2-b0b1-f027b117c190",
+    "race_number": 9,
+    "post_time": "17:10",
+    "venue": "沙田",
+    "distance": 1600,
+    "course": "C+3"
+  },
+  "date": "2026-09-27",
+  "expected_lock": "2026-09-27T17:07:00+08:00",
+  "live_received_at": "2026-09-27T17:07:06.722185+08:00",
+  "capture_delay_seconds": 6.72,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T09:07:02.578Z",
+    "postTime": "2026-09-27T09:10:00.000Z",
+    "previewTime": "2026-09-27T09:03:00.000Z",
+    "lockTime": "2026-09-27T09:07:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 9,
+        "nameTc": "大回報",
+        "nameEn": "BIG RETURN",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 69,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 13,
+        "nameTc": "逍遙騎士",
+        "nameEn": "FLYING KNIGHT",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "一定掂",
+        "nameEn": "SOLID WIN",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 14,
+        "nameTc": "量子力奇",
+        "nameEn": "QUANTUM LEGEND",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "紫荊拼搏",
+        "nameEn": "SHAMUS STORM",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 8,
+        "nameTc": "包裝戰仕",
+        "nameEn": "PACKING FIGHTER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "活力拍檔",
+        "nameEn": "AMAZING PARTNERS",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "奇異果",
+        "nameEn": "NUCLEOZOR",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 2,
+        "nameTc": "英駿飛駒",
+        "nameEn": "MISTER DAPPER"
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "包裝戰仕",
+        "nameEn": "PACKING FIGHTER"
+      }
+    ],
+    "secondLook": null
+  }
+}
