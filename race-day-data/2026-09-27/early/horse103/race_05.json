@@ -1,0 +1,528 @@
+{
+  "captured_at": "2026-09-27T07:02:08.019234+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.20 * normalized QP amount + 0.20 * normalized Q amount",
+  "race": {
+    "id": "4a732470-0f23-4662-801a-3221d8433465",
+    "race_number": 5,
+    "post_time": "15:05",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "全天候"
+  },
+  "lock_time": "2026-09-27T07:02:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T07:02:02.006Z",
+    "postTime": "2026-09-27T07:05:00.000Z",
+    "previewTime": "2026-09-27T06:58:00.000Z",
+    "lockTime": "2026-09-27T07:02:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 5,
+        "nameTc": "穿甲戰鷹",
+        "nameEn": "ARMOUR WAR EAGLE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 73,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "高士威勁",
+        "nameEn": "CAUSEWAY KING",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "魅力星",
+        "nameEn": "NOBLE DELUXE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 62,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "怡傲錢莊",
+        "nameEn": "CENTRAL BANK",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "幸運大夫",
+        "nameEn": "LUCKY DOCTOR",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 58,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 6,
+        "nameTc": "砂漿麒星",
+        "nameEn": "BRIGHT MORTAR",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "贏得自然",
+        "nameEn": "NATURAL HIGH",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "和光同塵",
+        "nameEn": "M M CONCORD",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 7,
+        "nameTc": "和光同塵",
+        "nameEn": "M M CONCORD"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 2,
+      "nameTc": "怡傲錢莊",
+      "nameEn": "CENTRAL BANK",
+      "confidence": "medium",
+      "reason": "潘頓今季成績優異，馬匹試閘表現出色，狀態回勇。雖然檔位一般，但負磅合理，有望憑騎師發揮爭勝。",
+      "previewHorseNumber": null
+    }
+  },
+  "ticket_cutoff": "2026-09-27T07:02:00.000Z",
+  "base_race_id": 24396,
+  "source_ticket_race_id": 24400,
+  "qp_max_amount": 747000.0,
+  "q_max_amount": 245000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 392176,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "5-6",
+      "bet_type": "Q",
+      "amount": 20000,
+      "amount_str": "20K",
+      "bet_time": "15:40",
+      "scraped_at": "2026-09-26T08:11:04.693629+00:00"
+    },
+    {
+      "id": 392514,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "7-8",
+      "bet_type": "Q",
+      "amount": 10000,
+      "amount_str": "10K",
+      "bet_time": "08:40",
+      "scraped_at": "2026-09-27T02:07:10.521832+00:00"
+    },
+    {
+      "id": 392605,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "2-6",
+      "bet_type": "QP",
+      "amount": 41000,
+      "amount_str": "41K",
+      "bet_time": "10:25",
+      "scraped_at": "2026-09-27T03:07:05.585201+00:00"
+    },
+    {
+      "id": 392606,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "5-6",
+      "bet_type": "QP",
+      "amount": 47000,
+      "amount_str": "47K",
+      "bet_time": "10:25",
+      "scraped_at": "2026-09-27T03:07:05.585201+00:00"
+    },
+    {
+      "id": 399914,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "2-6",
+      "bet_type": "Q",
+      "amount": 89000,
+      "amount_str": "89K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 399915,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "4-6",
+      "bet_type": "Q",
+      "amount": 51000,
+      "amount_str": "51K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 399916,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "5-6",
+      "bet_type": "Q",
+      "amount": 85000,
+      "amount_str": "85K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 399926,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-2",
+      "bet_type": "QP",
+      "amount": 68000,
+      "amount_str": "68K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 399927,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-6",
+      "bet_type": "QP",
+      "amount": 70000,
+      "amount_str": "70K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 399928,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "2-5",
+      "bet_type": "QP",
+      "amount": 75000,
+      "amount_str": "75K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 399929,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "2-6",
+      "bet_type": "QP",
+      "amount": 130000,
+      "amount_str": "130K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 399930,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "4-6",
+      "bet_type": "QP",
+      "amount": 88000,
+      "amount_str": "88K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 399931,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "5-6",
+      "bet_type": "QP",
+      "amount": 140000,
+      "amount_str": "140K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 399932,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-7",
+      "bet_type": "QP",
+      "amount": 81000,
+      "amount_str": "81K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 399933,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-8",
+      "bet_type": "QP",
+      "amount": 72000,
+      "amount_str": "72K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 399934,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-10",
+      "bet_type": "QP",
+      "amount": 78000,
+      "amount_str": "78K",
+      "bet_time": "14:25",
+      "scraped_at": "2026-09-27T06:26:01.739558+00:00"
+    },
+    {
+      "id": 400820,
+      "race_id": 24400,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-5",
+      "bet_type": "QP",
+      "amount": 92000,
+      "amount_str": "92K",
+      "bet_time": "14:44",
+      "scraped_at": "2026-09-27T06:45:03.181903+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 5,
+      "name_tc": "穿甲戰鷹",
+      "name_en": "ARMOUR WAR EAGLE",
+      "formula_score": 0.61849,
+      "live_value_index": 73.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 354000.0,
+      "q_amount": 105000.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "怡傲錢莊",
+      "name_en": "CENTRAL BANK",
+      "formula_score": 0.51072,
+      "live_value_index": 59.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 314000.0,
+      "q_amount": 89000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "高士威勁",
+      "name_en": "CAUSEWAY KING",
+      "formula_score": 0.43958,
+      "live_value_index": 63.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 230000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "砂漿麒星",
+      "name_en": "BRIGHT MORTAR",
+      "formula_score": 0.4,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 747000.0,
+      "q_amount": 245000.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "魅力星",
+      "name_en": "NOBLE DELUXE",
+      "formula_score": 0.39288,
+      "live_value_index": 62.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 78000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "幸運大夫",
+      "name_en": "LUCKY DOCTOR",
+      "formula_score": 0.37544,
+      "live_value_index": 58.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 72000.0,
+      "q_amount": 10000.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "贏得自然",
+      "name_en": "NATURAL HIGH",
+      "formula_score": 0.06519,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 88000.0,
+      "q_amount": 51000.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "和光同塵",
+      "name_en": "M M CONCORD",
+      "formula_score": 0.02985,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 81000.0,
+      "q_amount": 10000.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "表廠傳奇",
+      "name_en": "WATCH LEGEND",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 9,
+      "name_tc": "孤風潛影",
+      "name_en": "JOLTIN",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 11,
+      "name_tc": "騰雲絕影",
+      "name_en": "RAGING WARRIOR",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "桃花俊",
+      "name_en": "DASHING PEACH",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 5,
+    "name_tc": "穿甲戰鷹",
+    "name_en": "ARMOUR WAR EAGLE",
+    "formula_score": 0.61849,
+    "live_value_index": 73.0,
+    "live_command": "aggressive",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 354000.0,
+    "q_amount": 105000.0
+  },
+  "other_four": [
+    {
+      "horse_number": 2,
+      "name_tc": "怡傲錢莊",
+      "name_en": "CENTRAL BANK",
+      "formula_score": 0.51072,
+      "live_value_index": 59.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 314000.0,
+      "q_amount": 89000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "高士威勁",
+      "name_en": "CAUSEWAY KING",
+      "formula_score": 0.43958,
+      "live_value_index": 63.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 230000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "砂漿麒星",
+      "name_en": "BRIGHT MORTAR",
+      "formula_score": 0.4,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 747000.0,
+      "q_amount": 245000.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "魅力星",
+      "name_en": "NOBLE DELUXE",
+      "formula_score": 0.39288,
+      "live_value_index": 62.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 78000.0,
+      "q_amount": 0.0
+    }
+  ],
+  "live_received_at": "2026-09-27T15:02:07.221140+08:00",
+  "capture_delay_seconds": 7.22,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained.",
+  "source_data_quality": "ready",
+  "incomplete_live_candidates": []
+}

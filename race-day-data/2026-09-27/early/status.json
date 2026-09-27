@@ -1,7 +1,7 @@
 {
   "date": "2026-09-27",
   "phase": "early",
-  "updated_at": "2026-09-27T15:01:46.773945+08:00",
+  "updated_at": "2026-09-27T15:02:48.517835+08:00",
   "state": "running",
   "horse103": {
     "1": {
@@ -301,8 +301,80 @@
       ]
     },
     "5": {
-      "status": "waiting",
-      "target": "2026-09-27T15:02:00+08:00"
+      "status": "saved",
+      "target": "2026-09-27T15:02:00+08:00",
+      "delay_seconds": 7.22,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 5,
+          "name_tc": "穿甲戰鷹",
+          "name_en": "ARMOUR WAR EAGLE",
+          "formula_score": 0.61849,
+          "live_value_index": 73.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 354000.0,
+          "q_amount": 105000.0
+        },
+        {
+          "horse_number": 2,
+          "name_tc": "怡傲錢莊",
+          "name_en": "CENTRAL BANK",
+          "formula_score": 0.51072,
+          "live_value_index": 59.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 314000.0,
+          "q_amount": 89000.0
+        },
+        {
+          "horse_number": 1,
+          "name_tc": "高士威勁",
+          "name_en": "CAUSEWAY KING",
+          "formula_score": 0.43958,
+          "live_value_index": 63.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 230000.0,
+          "q_amount": 0.0
+        },
+        {
+          "horse_number": 6,
+          "name_tc": "砂漿麒星",
+          "name_en": "BRIGHT MORTAR",
+          "formula_score": 0.4,
+          "live_value_index": 0.0,
+          "live_command": null,
+          "live_capital_signal": null,
+          "is_live_candidate": false,
+          "qp_amount": 747000.0,
+          "q_amount": 245000.0
+        },
+        {
+          "horse_number": 10,
+          "name_tc": "魅力星",
+          "name_en": "NOBLE DELUXE",
+          "formula_score": 0.39288,
+          "live_value_index": 62.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 78000.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        5,
+        1,
+        10,
+        2,
+        8
+      ]
     }
   },
   "errors": [],
