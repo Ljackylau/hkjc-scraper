@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 3,
-      "received_at": "2026-09-27T14:26:29.953266+08:00",
-      "source_updated_at": "2026-09-27T14:18:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 510.0,
+      "samples_this_run": 4,
+      "received_at": "2026-09-27T14:27:29.260325+08:00",
+      "source_updated_at": "2026-09-27T14:26:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 89.3,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -209,8 +209,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "7",
-          "name": "桂福特",
+          "selection_id": "13",
+          "name": "葉楚航",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -223,8 +223,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "13",
-          "name": "葉楚航",
+          "selection_id": "7",
+          "name": "桂福特",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -312,13 +312,13 @@
       "points_error": null
     },
     "jkc": {
-      "state": "no_numeric_quotes",
-      "samples_this_run": 3,
-      "received_at": "2026-09-27T14:26:29.420218+08:00",
-      "source_updated_at": "2026-09-27T14:18:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 509.4,
-      "numeric_quotes": 0,
+      "state": "observed",
+      "samples_this_run": 4,
+      "received_at": "2026-09-27T14:27:29.475516+08:00",
+      "source_updated_at": "2026-09-27T14:26:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 89.5,
+      "numeric_quotes": 14,
       "participants": [
         {
           "selection_id": "1",
@@ -328,39 +328,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 1.2,
+          "current_odds": 1.22,
+          "quote_text": "1.22",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "3",
-          "name": "袁幸堯",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "2",
-          "name": "艾兆禮",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.70074
         },
         {
           "selection_id": "10",
@@ -370,25 +342,39 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 15.0,
+          "current_odds": 5.5,
+          "quote_text": "5.50",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.155437
         },
         {
-          "selection_id": "14",
-          "name": "其他騎師",
-          "is_other": true,
+          "selection_id": "3",
+          "name": "袁幸堯",
+          "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 9.0,
+          "current_odds": 16.0,
+          "quote_text": "16.0",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.053431
+        },
+        {
+          "selection_id": "2",
+          "name": "艾兆禮",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 14.0,
+          "current_odds": 30.0,
+          "quote_text": "30",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.028497
         },
         {
           "selection_id": "4",
@@ -398,25 +384,25 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 45.0,
+          "current_odds": 65.0,
+          "quote_text": "65",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.013152
         },
         {
-          "selection_id": "9",
-          "name": "艾道拿",
-          "is_other": false,
+          "selection_id": "14",
+          "name": "其他騎師",
+          "is_other": true,
           "scheduled_rides": null,
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 45.0,
+          "current_odds": 75.0,
+          "quote_text": "75",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.011399
         },
         {
           "selection_id": "6",
@@ -426,11 +412,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 65.0,
+          "current_odds": 75.0,
+          "quote_text": "75",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.011399
         },
         {
           "selection_id": "5",
@@ -440,25 +426,25 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 75.0,
+          "current_odds": 85.0,
+          "quote_text": "85",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.010058
         },
         {
-          "selection_id": "7",
-          "name": "梁家俊",
+          "selection_id": "9",
+          "name": "艾道拿",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 45.0,
+          "current_odds": 125.0,
+          "quote_text": "125",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.006839
         },
         {
           "selection_id": "11",
@@ -468,25 +454,25 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 200.0,
+          "current_odds": 300.0,
+          "quote_text": "300",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.00285
         },
         {
-          "selection_id": "8",
-          "name": "楊明綸",
+          "selection_id": "7",
+          "name": "梁家俊",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 100.0,
+          "current_odds": 300.0,
+          "quote_text": "300",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.00285
         },
         {
           "selection_id": "13",
@@ -496,11 +482,25 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 500.0,
+          "current_odds": 600.0,
+          "quote_text": "600",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.001425
+        },
+        {
+          "selection_id": "8",
+          "name": "楊明綸",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 200.0,
+          "current_odds": 800.0,
+          "quote_text": "800",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.001069
         },
         {
           "selection_id": "12",
@@ -510,11 +510,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 500.0,
+          "current_odds": 1000.0,
+          "quote_text": "1000",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.000855
         }
       ],
       "points_available": true,
@@ -532,5 +532,5 @@
     10,
     11
   ],
-  "updated_at": "2026-09-27T14:26:30.051291+08:00"
+  "updated_at": "2026-09-27T14:27:29.868512+08:00"
 }
