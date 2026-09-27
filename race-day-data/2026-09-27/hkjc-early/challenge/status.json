@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "suspended_or_closed",
-      "samples_this_run": 52,
-      "received_at": "2026-09-27T12:54:35.092242+08:00",
+      "samples_this_run": 53,
+      "received_at": "2026-09-27T12:55:35.586071+08:00",
       "source_updated_at": "2026-09-27T12:47:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 455.1,
+      "source_age_seconds": 515.6,
       "numeric_quotes": 21,
       "participants": [
         {
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "suspended_or_closed",
-      "samples_this_run": 52,
-      "received_at": "2026-09-27T12:54:35.755441+08:00",
+      "samples_this_run": 53,
+      "received_at": "2026-09-27T12:55:35.238379+08:00",
       "source_updated_at": "2026-09-27T12:47:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 455.8,
+      "source_age_seconds": 515.2,
       "numeric_quotes": 14,
       "participants": [
         {
@@ -517,9 +517,9 @@
           "normalized_implied_share": 0.0063
         }
       ],
-      "points_available": false,
+      "points_available": true,
       "points_freshness": "not_verifiable",
-      "points_error": "Points table missing"
+      "points_error": null
     }
   },
   "research_only": true,
@@ -531,5 +531,5 @@
     4,
     5
   ],
-  "updated_at": "2026-09-27T12:54:35.841214+08:00"
+  "updated_at": "2026-09-27T12:55:35.870647+08:00"
 }
