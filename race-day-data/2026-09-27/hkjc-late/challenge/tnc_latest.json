@@ -3,11 +3,11 @@
   "date": "2026-09-27",
   "venue": "ST",
   "kind": "tnc",
-  "received_at": "2026-09-27T17:56:29.788169+08:00",
+  "received_at": "2026-09-27T17:58:29.912649+08:00",
   "url": "https://bet.hkjc.com/ch/racing/tnc/2026-09-27/ST/1",
   "source_updated_at": "2026-09-27T17:55:00+08:00",
-  "source_age_seconds": 89.8,
-  "source_recent": true,
+  "source_age_seconds": 209.9,
+  "source_recent": false,
   "state": "no_numeric_quotes",
   "numeric_quotes": 0,
   "participants": [
@@ -313,67 +313,67 @@
       "race_number": 1,
       "post_time": "2026-09-27T12:45:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -18689.8
+      "seconds_to_off": -18809.9
     },
     {
       "race_number": 2,
       "post_time": "2026-09-27T13:15:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -16889.8
+      "seconds_to_off": -17009.9
     },
     {
       "race_number": 3,
       "post_time": "2026-09-27T13:45:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -15089.8
+      "seconds_to_off": -15209.9
     },
     {
       "race_number": 4,
       "post_time": "2026-09-27T14:15:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -13289.8
+      "seconds_to_off": -13409.9
     },
     {
       "race_number": 5,
       "post_time": "2026-09-27T15:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -10289.8
+      "seconds_to_off": -10409.9
     },
     {
       "race_number": 6,
       "post_time": "2026-09-27T15:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -8489.8
+      "seconds_to_off": -8609.9
     },
     {
       "race_number": 7,
       "post_time": "2026-09-27T16:05:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -6689.8
+      "seconds_to_off": -6809.9
     },
     {
       "race_number": 8,
       "post_time": "2026-09-27T16:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -4889.8
+      "seconds_to_off": -5009.9
     },
     {
       "race_number": 9,
       "post_time": "2026-09-27T17:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2789.8
+      "seconds_to_off": -2909.9
     },
     {
       "race_number": 10,
       "post_time": "2026-09-27T17:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -689.8
+      "seconds_to_off": -809.9
     },
     {
       "race_number": 11,
       "post_time": "2026-09-27T18:20:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1410.2
+      "seconds_to_off": 1290.1
     }
   ],
   "raw_tables": [
@@ -559,7 +559,7 @@
   "points_snapshot": {
     "date": "2026-09-27",
     "kind": "tnc",
-    "received_at": "2026-09-27T17:56:29.848953+08:00",
+    "received_at": "2026-09-27T17:58:30.616467+08:00",
     "source_updated_at": null,
     "freshness": "not_verifiable",
     "url": "https://racing.hkjc.com/zh-hk/local/information/tncresult?racedate=2026/09/27",
@@ -571,6 +571,14 @@
         "wins": 2.0,
         "seconds": 0.0,
         "thirds": 1.0
+      },
+      {
+        "name": "羅富全",
+        "selection_id": "8",
+        "points": 20.0,
+        "wins": 1.0,
+        "seconds": 0.0,
+        "thirds": 2.0
       },
       {
         "name": "巫偉傑",
@@ -589,6 +597,14 @@
         "thirds": 0.0
       },
       {
+        "name": "伍鵬志",
+        "selection_id": "10",
+        "points": 18.0,
+        "wins": 1.0,
+        "seconds": 1.0,
+        "thirds": 0.0
+      },
+      {
         "name": "大衛希斯",
         "selection_id": "3",
         "points": 16.0,
@@ -597,11 +613,11 @@
         "thirds": 1.0
       },
       {
-        "name": "羅富全",
-        "selection_id": "8",
+        "name": "呂健威",
+        "selection_id": "1",
         "points": 16.0,
-        "wins": 1.0,
-        "seconds": 0.0,
+        "wins": 0.0,
+        "seconds": 2.0,
         "thirds": 1.0
       },
       {
@@ -637,8 +653,8 @@
         "thirds": 0.0
       },
       {
-        "name": "呂健威",
-        "selection_id": "1",
+        "name": "賀賢",
+        "selection_id": "17",
         "points": 10.0,
         "wins": 0.0,
         "seconds": 1.0,
@@ -651,22 +667,6 @@
         "wins": 0.0,
         "seconds": 1.0,
         "thirds": 1.0
-      },
-      {
-        "name": "賀賢",
-        "selection_id": "17",
-        "points": 10.0,
-        "wins": 0.0,
-        "seconds": 1.0,
-        "thirds": 1.0
-      },
-      {
-        "name": "伍鵬志",
-        "selection_id": "10",
-        "points": 6.0,
-        "wins": 0.0,
-        "seconds": 1.0,
-        "thirds": 0.0
       },
       {
         "name": "徐雨石",
