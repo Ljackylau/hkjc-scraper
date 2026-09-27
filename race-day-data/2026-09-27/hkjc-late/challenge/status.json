@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "observed",
-      "samples_this_run": 125,
-      "received_at": "2026-09-27T16:28:29.592590+08:00",
-      "source_updated_at": "2026-09-27T16:26:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 149.6,
+      "samples_this_run": 127,
+      "received_at": "2026-09-27T16:30:29.668752+08:00",
+      "source_updated_at": "2026-09-27T16:29:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 89.7,
       "numeric_quotes": 14,
       "participants": [
         {
@@ -41,20 +41,6 @@
           "normalized_implied_share": 0.168467
         },
         {
-          "selection_id": "2",
-          "name": "姚本輝",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": 6.5,
-          "current_odds": 7.0,
-          "quote_text": "7.00",
-          "opening_drop_pct": null,
-          "normalized_implied_share": 0.120334
-        },
-        {
           "selection_id": "8",
           "name": "羅富全",
           "is_other": false,
@@ -62,7 +48,21 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 8.5,
+          "previous_odds": 7.5,
+          "current_odds": 7.0,
+          "quote_text": "7.00",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.120334
+        },
+        {
+          "selection_id": "2",
+          "name": "姚本輝",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 7.0,
           "current_odds": 7.5,
           "quote_text": "7.50",
           "opening_drop_pct": null,
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "observed",
-      "samples_this_run": 125,
-      "received_at": "2026-09-27T16:28:29.527342+08:00",
+      "samples_this_run": 127,
+      "received_at": "2026-09-27T16:30:29.630981+08:00",
       "source_updated_at": "2026-09-27T16:26:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 149.5,
+      "source_age_seconds": 269.6,
       "numeric_quotes": 13,
       "participants": [
         {
@@ -532,5 +532,5 @@
     10,
     11
   ],
-  "updated_at": "2026-09-27T16:28:30.195929+08:00"
+  "updated_at": "2026-09-27T16:30:30.352819+08:00"
 }
