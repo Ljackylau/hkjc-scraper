@@ -1,6 +1,6 @@
 {
   "date": "2026-09-27",
-  "updated_at": "2026-09-27T16:31:33.694932+08:00",
+  "updated_at": "2026-09-27T16:32:35.796405+08:00",
   "mode": "shadow",
   "races": {
     "6": {
@@ -146,10 +146,75 @@
       "source": "HKJC odds movement; experimental"
     },
     "8": {
-      "status": "collecting",
+      "status": "shadow",
       "target": "2026-09-27T16:32:00+08:00",
-      "baseline": true,
-      "last_received": "2026-09-27T16:31:31.070497+08:00"
+      "received_at": "2026-09-27T16:32:01.136113+08:00",
+      "source_updated": {
+        "wp": "2026-09-27T16:31:00+08:00",
+        "wpq": "2026-09-27T16:31:00+08:00"
+      },
+      "baseline": {
+        "kind": "t30",
+        "received_at": "2026-09-27T16:06:11.490541+08:00",
+        "minutes_to_off": 28.81,
+        "source_updated": {
+          "wp": "2026-09-27T16:05:00+08:00",
+          "wpq": "2026-09-27T16:05:00+08:00"
+        }
+      },
+      "ranking": [
+        {
+          "horse_number": 7,
+          "score": 39.107,
+          "drops_pct": {
+            "WIN": 33.33,
+            "PLA": 31.71,
+            "QIN": 40.48,
+            "QPL": 57.09
+          }
+        },
+        {
+          "horse_number": 5,
+          "score": 21.809,
+          "drops_pct": {
+            "WIN": 17.65,
+            "PLA": 0,
+            "QIN": 26.51,
+            "QPL": 51.65
+          }
+        },
+        {
+          "horse_number": 6,
+          "score": 18.89,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 23.08,
+            "QIN": 37.5,
+            "QPL": 28.1
+          }
+        },
+        {
+          "horse_number": 9,
+          "score": 16.606,
+          "drops_pct": {
+            "WIN": 5.0,
+            "PLA": 0,
+            "QIN": 25.01,
+            "QPL": 49.27
+          }
+        },
+        {
+          "horse_number": 3,
+          "score": 14.602,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 28.22,
+            "QPL": 44.79
+          }
+        }
+      ],
+      "source": "HKJC odds movement; experimental"
     },
     "9": {
       "status": "waiting",
