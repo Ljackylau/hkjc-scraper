@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "ad7d1fe0-0f6a-44e2-8e06-12005e656048",
+    "race_number": 2,
+    "post_time": "13:15",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "C+3"
+  },
+  "date": "2026-09-27",
+  "expected_lock": "2026-09-27T13:12:00+08:00",
+  "live_received_at": "2026-09-27T13:12:07.619396+08:00",
+  "capture_delay_seconds": 7.62,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T05:12:02.413Z",
+    "postTime": "2026-09-27T05:15:00.000Z",
+    "previewTime": "2026-09-27T05:08:00.000Z",
+    "lockTime": "2026-09-27T05:12:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 4,
+        "nameTc": "小魔怪",
+        "nameEn": "LITTLE MONSTER",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "領駿輝煌",
+        "nameEn": "APEX GLORY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "共同享樂",
+        "nameEn": "DAILY FUN",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 54,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "金多囍",
+        "nameEn": "GLACIATED",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 54,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "紫電王",
+        "nameEn": "ULTRA BOLT",
+        "capitalSignal": "none",
+        "command": "avoid",
+        "valueIndex": 50,
+        "valueTier": "low",
+        "verdictKey": "risk_dominates",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 10,
+        "nameTc": "隋我同來",
+        "nameEn": "JUST FOLLOW ME",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "星光大道",
+        "nameEn": "NAVAS G",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "源好運",
+        "nameEn": "SUPER DRAGON",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 12,
+      "nameTc": "金多囍",
+      "nameEn": "GLACIATED",
+      "confidence": "high",
+      "reason": "何澤堯及伍鵬志今季成績優異，馬匹上仗表現出色，末段衝刺強勁，體重增加狀態良好，有力爭勝。",
+      "previewHorseNumber": null
+    }
+  }
+}

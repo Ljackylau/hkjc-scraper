@@ -1,0 +1,443 @@
+{
+  "captured_at": "2026-09-27T05:12:08.401097+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.20 * normalized QP amount + 0.20 * normalized Q amount",
+  "race": {
+    "id": "ad7d1fe0-0f6a-44e2-8e06-12005e656048",
+    "race_number": 2,
+    "post_time": "13:15",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "C+3"
+  },
+  "lock_time": "2026-09-27T05:12:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T05:12:02.413Z",
+    "postTime": "2026-09-27T05:15:00.000Z",
+    "previewTime": "2026-09-27T05:08:00.000Z",
+    "lockTime": "2026-09-27T05:12:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 4,
+        "nameTc": "小魔怪",
+        "nameEn": "LITTLE MONSTER",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "領駿輝煌",
+        "nameEn": "APEX GLORY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "共同享樂",
+        "nameEn": "DAILY FUN",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 54,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "金多囍",
+        "nameEn": "GLACIATED",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 54,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "紫電王",
+        "nameEn": "ULTRA BOLT",
+        "capitalSignal": "none",
+        "command": "avoid",
+        "valueIndex": 50,
+        "valueTier": "low",
+        "verdictKey": "risk_dominates",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 10,
+        "nameTc": "隋我同來",
+        "nameEn": "JUST FOLLOW ME",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "星光大道",
+        "nameEn": "NAVAS G",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "源好運",
+        "nameEn": "SUPER DRAGON",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 12,
+      "nameTc": "金多囍",
+      "nameEn": "GLACIATED",
+      "confidence": "high",
+      "reason": "何澤堯及伍鵬志今季成績優異，馬匹上仗表現出色，末段衝刺強勁，體重增加狀態良好，有力爭勝。",
+      "previewHorseNumber": null
+    }
+  },
+  "ticket_cutoff": "2026-09-27T05:12:00.000Z",
+  "base_race_id": 24396,
+  "source_ticket_race_id": 24397,
+  "qp_max_amount": 223000.0,
+  "q_max_amount": 680000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 392577,
+      "race_id": 24397,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "4-8",
+      "bet_type": "Q",
+      "amount": 34000,
+      "amount_str": "34K",
+      "bet_time": "10:25",
+      "scraped_at": "2026-09-27T03:07:03.40014+00:00"
+    },
+    {
+      "id": 392578,
+      "race_id": 24397,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "8-10",
+      "bet_type": "Q",
+      "amount": 32000,
+      "amount_str": "32K",
+      "bet_time": "10:25",
+      "scraped_at": "2026-09-27T03:07:03.40014+00:00"
+    },
+    {
+      "id": 392579,
+      "race_id": 24397,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "8-12",
+      "bet_type": "Q",
+      "amount": 44000,
+      "amount_str": "44K",
+      "bet_time": "10:25",
+      "scraped_at": "2026-09-27T03:07:03.40014+00:00"
+    },
+    {
+      "id": 395743,
+      "race_id": 24397,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "4-10",
+      "bet_type": "QP",
+      "amount": 63000,
+      "amount_str": "63K",
+      "bet_time": "12:54",
+      "scraped_at": "2026-09-27T04:55:05.416936+00:00"
+    },
+    {
+      "id": 395744,
+      "race_id": 24397,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "4-12",
+      "bet_type": "QP",
+      "amount": 73000,
+      "amount_str": "73K",
+      "bet_time": "12:54",
+      "scraped_at": "2026-09-27T04:55:05.416936+00:00"
+    },
+    {
+      "id": 395815,
+      "race_id": 24397,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "4-8",
+      "bet_type": "Q",
+      "amount": 310000,
+      "amount_str": "310K",
+      "bet_time": "12:55",
+      "scraped_at": "2026-09-27T04:57:02.96186+00:00"
+    },
+    {
+      "id": 396032,
+      "race_id": 24397,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "4-8",
+      "bet_type": "Q",
+      "amount": 130000,
+      "amount_str": "130K",
+      "bet_time": "13:03",
+      "scraped_at": "2026-09-27T05:04:11.564787+00:00"
+    },
+    {
+      "id": 396099,
+      "race_id": 24397,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "8-10",
+      "bet_type": "QP",
+      "amount": 93000,
+      "amount_str": "93K",
+      "bet_time": "13:05",
+      "scraped_at": "2026-09-27T05:06:01.851011+00:00"
+    },
+    {
+      "id": 396205,
+      "race_id": 24397,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "4-8",
+      "bet_type": "QP",
+      "amount": 87000,
+      "amount_str": "87K",
+      "bet_time": "13:07",
+      "scraped_at": "2026-09-27T05:09:05.769457+00:00"
+    },
+    {
+      "id": 396278,
+      "race_id": 24397,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "4-8",
+      "bet_type": "Q",
+      "amount": 130000,
+      "amount_str": "130K",
+      "bet_time": "13:09",
+      "scraped_at": "2026-09-27T05:11:04.2913+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 4,
+      "name_tc": "小魔怪",
+      "name_en": "LITTLE MONSTER",
+      "formula_score": 0.78565,
+      "live_value_index": 68.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 223000.0,
+      "q_amount": 604000.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "領駿輝煌",
+      "name_en": "APEX GLORY",
+      "formula_score": 0.72143,
+      "live_value_index": 60.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 180000.0,
+      "q_amount": 680000.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "金多囍",
+      "name_en": "GLACIATED",
+      "formula_score": 0.40241,
+      "live_value_index": 54.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 73000.0,
+      "q_amount": 44000.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "共同享樂",
+      "name_en": "DAILY FUN",
+      "formula_score": 0.324,
+      "live_value_index": 54.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "紫電王",
+      "name_en": "ULTRA BOLT",
+      "formula_score": 0.3,
+      "live_value_index": 50.0,
+      "live_command": "avoid",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "隋我同來",
+      "name_en": "JUST FOLLOW ME",
+      "formula_score": 0.14932,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 156000.0,
+      "q_amount": 32000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "成就非凡",
+      "name_en": "NOT USUAL DOUBLE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "君至酷",
+      "name_en": "SOO KOO",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "機緣燦爛",
+      "name_en": "KYOTO SPRING",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "星光大道",
+      "name_en": "NAVAS G",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 9,
+      "name_tc": "龍威心得",
+      "name_en": "RYUI KOKOROE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 11,
+      "name_tc": "源好運",
+      "name_en": "SUPER DRAGON",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 4,
+    "name_tc": "小魔怪",
+    "name_en": "LITTLE MONSTER",
+    "formula_score": 0.78565,
+    "live_value_index": 68.0,
+    "live_command": "aggressive",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 223000.0,
+    "q_amount": 604000.0
+  },
+  "other_four": [
+    {
+      "horse_number": 8,
+      "name_tc": "領駿輝煌",
+      "name_en": "APEX GLORY",
+      "formula_score": 0.72143,
+      "live_value_index": 60.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 180000.0,
+      "q_amount": 680000.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "金多囍",
+      "name_en": "GLACIATED",
+      "formula_score": 0.40241,
+      "live_value_index": 54.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 73000.0,
+      "q_amount": 44000.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "共同享樂",
+      "name_en": "DAILY FUN",
+      "formula_score": 0.324,
+      "live_value_index": 54.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "紫電王",
+      "name_en": "ULTRA BOLT",
+      "formula_score": 0.3,
+      "live_value_index": 50.0,
+      "live_command": "avoid",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "live_received_at": "2026-09-27T13:12:07.619396+08:00",
+  "capture_delay_seconds": 7.62,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained."
+}

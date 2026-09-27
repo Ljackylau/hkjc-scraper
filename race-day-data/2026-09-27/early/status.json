@@ -1,7 +1,7 @@
 {
   "date": "2026-09-27",
   "phase": "early",
-  "updated_at": "2026-09-27T13:11:44.728890+08:00",
+  "updated_at": "2026-09-27T13:12:46.452954+08:00",
   "state": "running",
   "horse103": {
     "1": {
@@ -79,8 +79,78 @@
       ]
     },
     "2": {
-      "status": "waiting",
-      "target": "2026-09-27T13:12:00+08:00"
+      "status": "saved",
+      "target": "2026-09-27T13:12:00+08:00",
+      "delay_seconds": 7.62,
+      "picks": [
+        {
+          "horse_number": 4,
+          "name_tc": "小魔怪",
+          "name_en": "LITTLE MONSTER",
+          "formula_score": 0.78565,
+          "live_value_index": 68.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 223000.0,
+          "q_amount": 604000.0
+        },
+        {
+          "horse_number": 8,
+          "name_tc": "領駿輝煌",
+          "name_en": "APEX GLORY",
+          "formula_score": 0.72143,
+          "live_value_index": 60.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 180000.0,
+          "q_amount": 680000.0
+        },
+        {
+          "horse_number": 12,
+          "name_tc": "金多囍",
+          "name_en": "GLACIATED",
+          "formula_score": 0.40241,
+          "live_value_index": 54.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 73000.0,
+          "q_amount": 44000.0
+        },
+        {
+          "horse_number": 2,
+          "name_tc": "共同享樂",
+          "name_en": "DAILY FUN",
+          "formula_score": 0.324,
+          "live_value_index": 54.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 0.0,
+          "q_amount": 0.0
+        },
+        {
+          "horse_number": 3,
+          "name_tc": "紫電王",
+          "name_en": "ULTRA BOLT",
+          "formula_score": 0.3,
+          "live_value_index": 50.0,
+          "live_command": "avoid",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 0.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        4,
+        8,
+        2,
+        12,
+        3
+      ]
     },
     "3": {
       "status": "waiting",
