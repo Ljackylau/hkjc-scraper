@@ -1,16 +1,13 @@
 {
   "date": "2026-09-27",
-  "updated_at": "2026-09-27T15:23:20.510747+08:00",
+  "updated_at": "2026-09-27T15:24:22.556938+08:00",
   "mode": "shadow",
   "races": {
     "6": {
-      "status": "retrying",
+      "status": "collecting",
       "target": "2026-09-27T15:32:00+08:00",
-      "errors": [
-        "Page.wait_for_function: Timeout 15000ms exceeded.",
-        "Page.wait_for_function: Timeout 15000ms exceeded.",
-        "Page.wait_for_function: Timeout 15000ms exceeded."
-      ]
+      "baseline": true,
+      "last_received": "2026-09-27T15:23:21.124608+08:00"
     },
     "7": {
       "status": "waiting",
