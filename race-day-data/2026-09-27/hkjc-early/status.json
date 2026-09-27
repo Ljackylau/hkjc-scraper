@@ -1,6 +1,6 @@
 {
   "date": "2026-09-27",
-  "updated_at": "2026-09-27T15:01:31.441581+08:00",
+  "updated_at": "2026-09-27T15:02:33.397797+08:00",
   "mode": "shadow",
   "races": {
     "1": {
@@ -24,10 +24,75 @@
       "errors": []
     },
     "5": {
-      "status": "collecting",
+      "status": "shadow",
       "target": "2026-09-27T15:02:00+08:00",
-      "baseline": true,
-      "last_received": "2026-09-27T15:01:31.018159+08:00"
+      "received_at": "2026-09-27T15:02:01.088829+08:00",
+      "source_updated": {
+        "wp": "2026-09-27T15:01:00+08:00",
+        "wpq": "2026-09-27T15:01:00+08:00"
+      },
+      "baseline": {
+        "kind": "t30",
+        "received_at": "2026-09-27T14:35:30.852986+08:00",
+        "minutes_to_off": 29.49,
+        "source_updated": {
+          "wp": "2026-09-27T14:34:00+08:00",
+          "wpq": "2026-09-27T14:35:00+08:00"
+        }
+      },
+      "ranking": [
+        {
+          "horse_number": 1,
+          "score": 30.827,
+          "drops_pct": {
+            "WIN": 21.0,
+            "PLA": 23.33,
+            "QIN": 33.76,
+            "QPL": 54.46
+          }
+        },
+        {
+          "horse_number": 11,
+          "score": 18.84,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 30.72,
+            "QPL": 63.48
+          }
+        },
+        {
+          "horse_number": 5,
+          "score": 18.28,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 34.49,
+            "QPL": 56.91
+          }
+        },
+        {
+          "horse_number": 3,
+          "score": 15.13,
+          "drops_pct": {
+            "WIN": 20.99,
+            "PLA": 6.67,
+            "QIN": 21.18,
+            "QPL": 9.4
+          }
+        },
+        {
+          "horse_number": 9,
+          "score": 14.24,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 31.22,
+            "QPL": 39.98
+          }
+        }
+      ],
+      "source": "HKJC odds movement; experimental"
     }
   },
   "errors": []
