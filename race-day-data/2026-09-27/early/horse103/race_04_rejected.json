@@ -1,0 +1,112 @@
+{
+  "received_at": "2026-09-27T14:12:40.280954+08:00",
+  "expected_lock": "2026-09-27T14:12:00+08:00",
+  "live": {
+    "phase": "locked",
+    "lockTime": "2026-09-27T06:12:00.000Z",
+    "postTime": "2026-09-27T06:15:00.000Z",
+    "freshness": "live",
+    "candidates": [
+      {
+        "isFill": false,
+        "nameEn": "FLOWING RICHES",
+        "nameTc": "常嚐發財",
+        "command": "aggressive",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 71,
+        "verdictKey": "capital_clean",
+        "horseNumber": 6,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "ZOUPER FELLOW",
+        "nameTc": "飛來霸",
+        "command": "aggressive",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 68,
+        "verdictKey": "capital_clean",
+        "horseNumber": 11,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "LET'S HAVE FUN",
+        "nameTc": "共創歡欣",
+        "command": "follow",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 62,
+        "verdictKey": "capital_overrides",
+        "horseNumber": 13,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "THUNDER PRINCE",
+        "nameTc": "雷神太保",
+        "command": "observe",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 59,
+        "verdictKey": "risk_unresolved",
+        "horseNumber": 9,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "HARVEST MOON",
+        "nameTc": "豐才",
+        "command": "observe",
+        "inPreview": false,
+        "valueTier": null,
+        "valueIndex": null,
+        "verdictKey": "evidence_incomplete",
+        "horseNumber": 3,
+        "capitalSignal": "steady"
+      }
+    ],
+    "secondLook": {
+      "phase": "lock",
+      "nameEn": "HARVEST MOON",
+      "nameTc": "豐才",
+      "reason": "初出馬，試閘表現出色，由今季成績優異的艾兆禮策騎，檔位統計亦佳，值得一搏。",
+      "confidence": "medium",
+      "horseNumber": 3,
+      "previewHorseNumber": 1
+    },
+    "dataQuality": "partial",
+    "generatedAt": "2026-09-27T06:12:14.418Z",
+    "previewOnly": [
+      {
+        "nameEn": "RAPID PHANTOM",
+        "nameTc": "極速神影",
+        "horseNumber": 1
+      }
+    ],
+    "previewTime": "2026-09-27T06:08:00.000Z",
+    "engineVersion": "live103-v3.5.0",
+    "fakeFavorites": [
+      {
+        "nameEn": "RAPID PHANTOM",
+        "nameTc": "極速神影",
+        "horseNumber": 1,
+        "capitalSignal": "none"
+      },
+      {
+        "nameEn": "SUPREME VOYAGER",
+        "nameTc": "杭至尊",
+        "horseNumber": 12,
+        "capitalSignal": "none"
+      },
+      {
+        "nameEn": "RUN RUN SUNRISE",
+        "nameTc": "日出東方",
+        "horseNumber": 2,
+        "capitalSignal": "none"
+      }
+    ]
+  }
+}
