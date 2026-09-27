@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 81,
-      "received_at": "2026-09-27T15:44:29.555609+08:00",
+      "samples_this_run": 82,
+      "received_at": "2026-09-27T15:45:29.589405+08:00",
       "source_updated_at": "2026-09-27T15:35:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 569.6,
+      "source_age_seconds": 629.6,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 81,
-      "received_at": "2026-09-27T15:44:29.529810+08:00",
-      "source_updated_at": "2026-09-27T15:35:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 569.5,
+      "samples_this_run": 82,
+      "received_at": "2026-09-27T15:45:29.425855+08:00",
+      "source_updated_at": "2026-09-27T15:44:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 89.4,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -335,8 +335,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "10",
-          "name": "周俊樂",
+          "selection_id": "3",
+          "name": "袁幸堯",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -349,8 +349,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "3",
-          "name": "袁幸堯",
+          "selection_id": "10",
+          "name": "周俊樂",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -379,6 +379,20 @@
         {
           "selection_id": "2",
           "name": "艾兆禮",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "13",
+          "name": "班德禮",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -447,34 +461,6 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "7",
-          "name": "梁家俊",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "13",
-          "name": "班德禮",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
           "selection_id": "11",
           "name": "蔡明紹",
           "is_other": false,
@@ -489,8 +475,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "12",
-          "name": "黃寶妮",
+          "selection_id": "8",
+          "name": "楊明綸",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -503,8 +489,22 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "8",
-          "name": "楊明綸",
+          "selection_id": "7",
+          "name": "梁家俊",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "12",
+          "name": "黃寶妮",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -532,5 +532,5 @@
     10,
     11
   ],
-  "updated_at": "2026-09-27T15:44:30.461747+08:00"
+  "updated_at": "2026-09-27T15:45:29.647142+08:00"
 }
