@@ -31,6 +31,15 @@ class Tests(unittest.TestCase):
  def test_wrong_lock_rejected(self):
   v={'candidates':[{}],'dataQuality':'ready','phase':'locked','lockTime':'2026-09-09T11:01:00Z'}
   self.assertFalse(r.valid_live(v,{'post_time':'19:05'},'2026-09-09'))
+ def test_equivalent_utc_and_hk_lock_time_is_valid(self):
+  v={'candidates':[{'horseNumber':1,'valueIndex':70}],'dataQuality':'ready','phase':'locked','lockTime':'2026-09-27T06:12:00.000Z'}
+  self.assertTrue(r.valid_live(v,{'post_time':'14:15'},'2026-09-27'))
+ def test_partial_with_three_scoreable_candidates_is_valid(self):
+  v={'candidates':[{'horseNumber':1,'valueIndex':71},{'horseNumber':2,'valueIndex':68},{'horseNumber':3,'valueIndex':62},{'horseNumber':4,'valueIndex':None}],'dataQuality':'partial','phase':'locked','lockTime':'2026-09-27T06:12:00.000Z'}
+  self.assertTrue(r.valid_live(v,{'post_time':'14:15'},'2026-09-27'))
+ def test_sparse_partial_is_rejected(self):
+  v={'candidates':[{'horseNumber':1,'valueIndex':71},{'horseNumber':2,'valueIndex':None}],'dataQuality':'partial','phase':'locked','lockTime':'2026-09-27T06:12:00.000Z'}
+  self.assertFalse(r.valid_live(v,{'post_time':'14:15'},'2026-09-27'))
  def test_late_start_no_network(self):
   with tempfile.TemporaryDirectory() as tmp,patch.object(h,'get_base_race_id',side_effect=AssertionError('must not request')):
    states={};asyncio.run(r.horse_job({'race_number':1,'post_time':'01:00'},'2020-01-01',Path(tmp),states,None));self.assertEqual(states['1']['status'],'missed')
