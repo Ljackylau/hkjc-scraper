@@ -3,11 +3,11 @@
   "date": "2026-09-27",
   "venue": "ST",
   "kind": "jkc",
-  "received_at": "2026-09-27T16:00:29.627175+08:00",
+  "received_at": "2026-09-27T16:01:29.591856+08:00",
   "url": "https://bet.hkjc.com/ch/racing/jkc/2026-09-27/ST/1",
-  "source_updated_at": "2026-09-27T15:54:00+08:00",
-  "source_age_seconds": 389.6,
-  "source_recent": false,
+  "source_updated_at": "2026-09-27T16:00:00+08:00",
+  "source_age_seconds": 89.6,
+  "source_recent": true,
   "state": "observed",
   "numeric_quotes": 13,
   "participants": [
@@ -23,7 +23,7 @@
       "current_odds": 1.28,
       "quote_text": "1.28",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.646509
+      "normalized_implied_share": 0.646019
     },
     {
       "selection_id": "3",
@@ -37,21 +37,7 @@
       "current_odds": 7.0,
       "quote_text": "7.00",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.118219
-    },
-    {
-      "selection_id": "10",
-      "name": "周俊樂",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": 12.0,
-      "current_odds": 13.0,
-      "quote_text": "13.0",
-      "opening_drop_pct": null,
-      "normalized_implied_share": 0.063656
+      "normalized_implied_share": 0.118129
     },
     {
       "selection_id": "4",
@@ -61,11 +47,25 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 15.0,
-      "current_odds": 13.0,
-      "quote_text": "13.0",
+      "previous_odds": 13.0,
+      "current_odds": 12.0,
+      "quote_text": "12.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.063656
+      "normalized_implied_share": 0.068909
+    },
+    {
+      "selection_id": "10",
+      "name": "周俊樂",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 13.0,
+      "current_odds": 14.0,
+      "quote_text": "14.0",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.059065
     },
     {
       "selection_id": "2",
@@ -79,7 +79,7 @@
       "current_odds": 30.0,
       "quote_text": "30",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.027584
+      "normalized_implied_share": 0.027563
     },
     {
       "selection_id": "13",
@@ -93,7 +93,7 @@
       "current_odds": 35.0,
       "quote_text": "35",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.023644
+      "normalized_implied_share": 0.023626
     },
     {
       "selection_id": "5",
@@ -107,7 +107,7 @@
       "current_odds": 40.0,
       "quote_text": "40",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.020688
+      "normalized_implied_share": 0.020673
     },
     {
       "selection_id": "14",
@@ -121,7 +121,7 @@
       "current_odds": 45.0,
       "quote_text": "45",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.01839
+      "normalized_implied_share": 0.018376
     },
     {
       "selection_id": "6",
@@ -135,7 +135,7 @@
       "current_odds": 75.0,
       "quote_text": "75",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.011034
+      "normalized_implied_share": 0.011025
     },
     {
       "selection_id": "9",
@@ -149,7 +149,7 @@
       "current_odds": 300.0,
       "quote_text": "300",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.002758
+      "normalized_implied_share": 0.002756
     },
     {
       "selection_id": "11",
@@ -163,7 +163,7 @@
       "current_odds": 500.0,
       "quote_text": "500",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.001655
+      "normalized_implied_share": 0.001654
     },
     {
       "selection_id": "8",
@@ -177,7 +177,7 @@
       "current_odds": 600.0,
       "quote_text": "600",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.001379
+      "normalized_implied_share": 0.001378
     },
     {
       "selection_id": "7",
@@ -191,7 +191,7 @@
       "current_odds": 1000.0,
       "quote_text": "1000",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.000828
+      "normalized_implied_share": 0.000827
     },
     {
       "selection_id": "12",
@@ -208,74 +208,74 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "騎師王\n1\n27/09/2026, 星期日, 沙田\n更新時間: 27/09/2026 15:54\n田\nS2\nS3\n所有場次即時投注將於第 10 場前截止\n添加到投注區",
+  "header": "騎師王\n1\n27/09/2026, 星期日, 沙田\n更新時間: 27/09/2026 16:00\n田\nS2\nS3\n所有場次即時投注將於第 10 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
   "research_only": true,
   "race_context": [
     {
       "race_number": 1,
       "post_time": "2026-09-27T12:45:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -11729.6
+      "seconds_to_off": -11789.6
     },
     {
       "race_number": 2,
       "post_time": "2026-09-27T13:15:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -9929.6
+      "seconds_to_off": -9989.6
     },
     {
       "race_number": 3,
       "post_time": "2026-09-27T13:45:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -8129.6
+      "seconds_to_off": -8189.6
     },
     {
       "race_number": 4,
       "post_time": "2026-09-27T14:15:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -6329.6
+      "seconds_to_off": -6389.6
     },
     {
       "race_number": 5,
       "post_time": "2026-09-27T15:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -3329.6
+      "seconds_to_off": -3389.6
     },
     {
       "race_number": 6,
       "post_time": "2026-09-27T15:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -1529.6
+      "seconds_to_off": -1589.6
     },
     {
       "race_number": 7,
       "post_time": "2026-09-27T16:05:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 270.4
+      "seconds_to_off": 210.4
     },
     {
       "race_number": 8,
       "post_time": "2026-09-27T16:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 2070.4
+      "seconds_to_off": 2010.4
     },
     {
       "race_number": 9,
       "post_time": "2026-09-27T17:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 4170.4
+      "seconds_to_off": 4110.4
     },
     {
       "race_number": 10,
       "post_time": "2026-09-27T17:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 6270.4
+      "seconds_to_off": 6210.4
     },
     {
       "race_number": 11,
       "post_time": "2026-09-27T18:20:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 8370.4
+      "seconds_to_off": 8310.4
     }
   ],
   "raw_tables": [
@@ -305,20 +305,20 @@
         "7.00"
       ],
       [
-        "10",
-        "周俊樂",
-        "24",
-        "2",
-        "12.0",
-        "13.0"
-      ],
-      [
         "4",
         "何澤堯",
         "10",
         "4",
-        "15.0",
-        "13.0"
+        "13.0",
+        "12.0"
+      ],
+      [
+        "10",
+        "周俊樂",
+        "24",
+        "2",
+        "13.0",
+        "14.0"
       ],
       [
         "2",
@@ -405,7 +405,7 @@
   "points_snapshot": {
     "date": "2026-09-27",
     "kind": "jkc",
-    "received_at": "2026-09-27T16:00:30.245489+08:00",
+    "received_at": "2026-09-27T16:01:29.647593+08:00",
     "source_updated_at": null,
     "freshness": "not_verifiable",
     "url": "https://racing.hkjc.com/zh-hk/local/information/jkcresult?racedate=2026/09/27",
