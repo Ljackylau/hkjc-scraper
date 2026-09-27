@@ -885,6 +885,27 @@
               "count": 11
             }
           ]
+        },
+        {
+          "captured": "2026-09-27T12:48:48.637742+08:00",
+          "source_updated": "2026-09-27T12:48:00+08:00",
+          "top3": [
+            {
+              "horse": 3,
+              "score": 61.97,
+              "count": 10
+            },
+            {
+              "horse": 5,
+              "score": 60.91,
+              "count": 14
+            },
+            {
+              "horse": 12,
+              "score": 57.71,
+              "count": 11
+            }
+          ]
         }
       ],
       "horse_numbers": [
@@ -901,7 +922,7 @@
         11,
         12
       ],
-      "last_attempt": "2026-09-27T12:47:48.644162+08:00",
+      "last_attempt": "2026-09-27T12:48:48.638661+08:00",
       "errors": [],
       "pools": [
         {
@@ -1198,8 +1219,8 @@
           "compared_pairs": 132,
           "missing_at_end": [],
           "baseline_time": "2026-09-27T12:04:48.576371+08:00",
-          "final_time": "2026-09-27T12:47:48.643239+08:00",
-          "source_updated": "2026-09-27T12:47:00+08:00",
+          "final_time": "2026-09-27T12:48:48.637742+08:00",
+          "source_updated": "2026-09-27T12:48:00+08:00",
           "fresh": true,
           "comparison_ready": true,
           "baseline_label": "首次可用取樣；非 T−60 比較",
@@ -1712,7 +1733,7 @@
         11,
         12
       ],
-      "last_attempt": "2026-09-27T12:48:00.041550+08:00",
+      "last_attempt": "2026-09-27T12:49:00.040342+08:00",
       "errors": [],
       "pools": [
         {
@@ -1795,7 +1816,7 @@
           "compared_pairs": 132,
           "missing_at_end": [],
           "baseline_time": "2026-09-27T12:16:00.010825+08:00",
-          "final_time": "2026-09-27T12:48:00.040800+08:00",
+          "final_time": "2026-09-27T12:49:00.039583+08:00",
           "source_updated": "2026-09-27T12:46:00+08:00",
           "fresh": false,
           "comparison_ready": true,
@@ -2173,7 +2194,7 @@
         13,
         14
       ],
-      "last_attempt": "2026-09-27T12:48:00.013538+08:00",
+      "last_attempt": "2026-09-27T12:49:00.017890+08:00",
       "errors": [],
       "pools": [
         {
@@ -2183,7 +2204,7 @@
           "compared_pairs": 182,
           "missing_at_end": [],
           "baseline_time": "2026-09-27T12:46:00.012280+08:00",
-          "final_time": "2026-09-27T12:48:00.012623+08:00",
+          "final_time": "2026-09-27T12:49:00.016961+08:00",
           "source_updated": "2026-09-27T12:46:00+08:00",
           "fresh": false,
           "comparison_ready": true,
@@ -2388,5 +2409,5 @@
       "status": "正在開啟"
     }
   ],
-  "published_at": "2026-09-27T12:48:03.017948+08:00"
+  "published_at": "2026-09-27T12:49:03.020691+08:00"
 }
