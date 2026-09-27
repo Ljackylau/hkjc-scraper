@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 82,
-      "received_at": "2026-09-27T15:45:29.589405+08:00",
-      "source_updated_at": "2026-09-27T15:35:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 629.6,
+      "samples_this_run": 83,
+      "received_at": "2026-09-27T15:46:29.531427+08:00",
+      "source_updated_at": "2026-09-27T15:45:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 89.5,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -265,8 +265,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "19",
-          "name": "丁冠豪",
+          "selection_id": "20",
+          "name": "徐雨石",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -279,8 +279,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "20",
-          "name": "徐雨石",
+          "selection_id": "19",
+          "name": "丁冠豪",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -288,7 +288,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 82,
-      "received_at": "2026-09-27T15:45:29.425855+08:00",
-      "source_updated_at": "2026-09-27T15:44:00+08:00",
+      "samples_this_run": 83,
+      "received_at": "2026-09-27T15:46:29.543707+08:00",
+      "source_updated_at": "2026-09-27T15:45:00+08:00",
       "source_recent": true,
-      "source_age_seconds": 89.4,
+      "source_age_seconds": 89.5,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -512,7 +512,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         }
@@ -532,5 +532,5 @@
     10,
     11
   ],
-  "updated_at": "2026-09-27T15:45:29.647142+08:00"
+  "updated_at": "2026-09-27T15:46:29.613323+08:00"
 }
