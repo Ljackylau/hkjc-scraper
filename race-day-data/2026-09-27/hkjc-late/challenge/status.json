@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "observed",
-      "samples_this_run": 189,
-      "received_at": "2026-09-27T17:32:30.493991+08:00",
-      "source_updated_at": "2026-09-27T17:28:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 270.5,
+      "samples_this_run": 190,
+      "received_at": "2026-09-27T17:33:29.943630+08:00",
+      "source_updated_at": "2026-09-27T17:32:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 89.9,
       "numeric_quotes": 9,
       "participants": [
         {
@@ -24,7 +24,7 @@
           "current_odds": 1.6,
           "quote_text": "1.60",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.531054
+          "normalized_implied_share": 0.530345
         },
         {
           "selection_id": "8",
@@ -38,7 +38,7 @@
           "current_odds": 5.0,
           "quote_text": "5.00",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.169937
+          "normalized_implied_share": 0.169711
         },
         {
           "selection_id": "4",
@@ -52,7 +52,7 @@
           "current_odds": 6.5,
           "quote_text": "6.50",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.130721
+          "normalized_implied_share": 0.130547
         },
         {
           "selection_id": "2",
@@ -66,7 +66,7 @@
           "current_odds": 8.5,
           "quote_text": "8.50",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.099963
+          "normalized_implied_share": 0.09983
         },
         {
           "selection_id": "6",
@@ -80,7 +80,7 @@
           "current_odds": 22.0,
           "quote_text": "22",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.038622
+          "normalized_implied_share": 0.038571
         },
         {
           "selection_id": "3",
@@ -94,7 +94,7 @@
           "current_odds": 85.0,
           "quote_text": "85",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.009996
+          "normalized_implied_share": 0.009983
         },
         {
           "selection_id": "10",
@@ -108,7 +108,7 @@
           "current_odds": 85.0,
           "quote_text": "85",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.009996
+          "normalized_implied_share": 0.009983
         },
         {
           "selection_id": "17",
@@ -118,11 +118,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 250.0,
-          "current_odds": 175.0,
-          "quote_text": "175",
+          "previous_odds": 175.0,
+          "current_odds": 125.0,
+          "quote_text": "125",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.004855
+          "normalized_implied_share": 0.006788
         },
         {
           "selection_id": "16",
@@ -132,11 +132,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 100.0,
-          "current_odds": 175.0,
-          "quote_text": "175",
+          "previous_odds": 175.0,
+          "current_odds": 200.0,
+          "quote_text": "200",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.004855
+          "normalized_implied_share": 0.004243
         },
         {
           "selection_id": "1",
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "observed",
-      "samples_this_run": 189,
-      "received_at": "2026-09-27T17:32:29.658084+08:00",
+      "samples_this_run": 190,
+      "received_at": "2026-09-27T17:33:29.857795+08:00",
       "source_updated_at": "2026-09-27T17:28:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 269.7,
+      "source_age_seconds": 329.9,
       "numeric_quotes": 9,
       "participants": [
         {
@@ -532,5 +532,5 @@
     10,
     11
   ],
-  "updated_at": "2026-09-27T17:32:30.546197+08:00"
+  "updated_at": "2026-09-27T17:33:30.524876+08:00"
 }
