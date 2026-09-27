@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 141,
-      "received_at": "2026-09-27T16:44:29.666926+08:00",
-      "source_updated_at": "2026-09-27T16:37:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 449.7,
+      "samples_this_run": 142,
+      "received_at": "2026-09-27T16:45:29.866194+08:00",
+      "source_updated_at": "2026-09-27T16:45:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 29.9,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -83,8 +83,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "3",
-          "name": "大衛希斯",
+          "selection_id": "6",
+          "name": "廖康銘",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -97,8 +97,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "6",
-          "name": "廖康銘",
+          "selection_id": "3",
+          "name": "大衛希斯",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -313,30 +313,16 @@
     },
     "jkc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 141,
-      "received_at": "2026-09-27T16:44:29.657218+08:00",
-      "source_updated_at": "2026-09-27T16:37:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 449.7,
+      "samples_this_run": 142,
+      "received_at": "2026-09-27T16:45:30.415781+08:00",
+      "source_updated_at": "2026-09-27T16:45:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 30.4,
       "numeric_quotes": 0,
       "participants": [
         {
           "selection_id": "1",
           "name": "潘頓",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "3",
-          "name": "袁幸堯",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -363,8 +349,22 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "4",
-          "name": "何澤堯",
+          "selection_id": "3",
+          "name": "袁幸堯",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "6",
+          "name": "霍宏聲",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -391,8 +391,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "13",
-          "name": "班德禮",
+          "selection_id": "4",
+          "name": "何澤堯",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -419,9 +419,9 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "14",
-          "name": "其他騎師",
-          "is_other": true,
+          "selection_id": "13",
+          "name": "班德禮",
+          "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
           "points": null,
@@ -433,9 +433,9 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "6",
-          "name": "霍宏聲",
-          "is_other": false,
+          "selection_id": "14",
+          "name": "其他騎師",
+          "is_other": true,
           "scheduled_rides": null,
           "remaining_rides": null,
           "points": null,
@@ -475,8 +475,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "8",
-          "name": "楊明綸",
+          "selection_id": "7",
+          "name": "梁家俊",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -489,8 +489,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "7",
-          "name": "梁家俊",
+          "selection_id": "8",
+          "name": "楊明綸",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -532,5 +532,5 @@
     10,
     11
   ],
-  "updated_at": "2026-09-27T16:44:30.350145+08:00"
+  "updated_at": "2026-09-27T16:45:30.801029+08:00"
 }
