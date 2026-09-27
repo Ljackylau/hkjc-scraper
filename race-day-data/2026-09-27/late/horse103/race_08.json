@@ -1,0 +1,558 @@
+{
+  "captured_at": "2026-09-27T08:32:09.232504+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.20 * normalized QP amount + 0.20 * normalized Q amount",
+  "race": {
+    "id": "f4301739-7fa6-4359-93cb-9db7463697f0",
+    "race_number": 8,
+    "post_time": "16:35",
+    "venue": "沙田",
+    "distance": 1400,
+    "course": "C+3"
+  },
+  "lock_time": "2026-09-27T08:32:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T08:32:01.893Z",
+    "postTime": "2026-09-27T08:35:00.000Z",
+    "previewTime": "2026-09-27T08:28:00.000Z",
+    "lockTime": "2026-09-27T08:32:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 6,
+        "nameTc": "小鳥天堂",
+        "nameEn": "LITTLE PARADISE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 64,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "合夥奔馳",
+        "nameEn": "COPARTNER PRANCE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "手機錶霸",
+        "nameEn": "PATCH OF THETA",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 58,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "幸運有您",
+        "nameEn": "LUCKY WITH YOU",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "紫荊盛勢",
+        "nameEn": "STORMY GROVE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 55,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 2,
+        "nameTc": "驕陽明駒",
+        "nameEn": "HELIOS EXPRESS",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "錶之銀河",
+        "nameEn": "GALAXY PATCH",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "白鷺金剛",
+        "nameEn": "INVINCIBLE IBIS",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 3,
+        "nameTc": "白鷺金剛",
+        "nameEn": "INVINCIBLE IBIS"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 6,
+      "nameTc": "小鳥天堂",
+      "nameEn": "LITTLE PARADISE",
+      "confidence": "high",
+      "reason": "小鳥天堂上季1400米G3勝出，今季操練及試閘俱佳，潘頓今季成績突出，檔位理想，負磅合理。",
+      "previewHorseNumber": null
+    }
+  },
+  "ticket_cutoff": "2026-09-27T08:32:00.000Z",
+  "base_race_id": 24396,
+  "source_ticket_race_id": 24403,
+  "qp_max_amount": 1379000.0,
+  "q_max_amount": 1052000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 392180,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "2-6",
+      "bet_type": "Q",
+      "amount": 10000,
+      "amount_str": "10K",
+      "bet_time": "15:40",
+      "scraped_at": "2026-09-26T08:11:06.889039+00:00"
+    },
+    {
+      "id": 392626,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-6",
+      "bet_type": "QP",
+      "amount": 44000,
+      "amount_str": "44K",
+      "bet_time": "10:25",
+      "scraped_at": "2026-09-27T03:07:08.085306+00:00"
+    },
+    {
+      "id": 392627,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "3-6",
+      "bet_type": "QP",
+      "amount": 32000,
+      "amount_str": "32K",
+      "bet_time": "10:25",
+      "scraped_at": "2026-09-27T03:07:08.085306+00:00"
+    },
+    {
+      "id": 406014,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-2",
+      "bet_type": "QP",
+      "amount": 87000,
+      "amount_str": "87K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406015,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-3",
+      "bet_type": "QP",
+      "amount": 74000,
+      "amount_str": "74K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406016,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-6",
+      "bet_type": "QP",
+      "amount": 270000,
+      "amount_str": "270K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406017,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "2-3",
+      "bet_type": "QP",
+      "amount": 79000,
+      "amount_str": "79K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406018,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "2-6",
+      "bet_type": "QP",
+      "amount": 220000,
+      "amount_str": "220K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406019,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "3-6",
+      "bet_type": "QP",
+      "amount": 230000,
+      "amount_str": "230K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406020,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "4-6",
+      "bet_type": "QP",
+      "amount": 65000,
+      "amount_str": "65K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406021,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "5-6",
+      "bet_type": "QP",
+      "amount": 150000,
+      "amount_str": "150K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406022,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-8",
+      "bet_type": "QP",
+      "amount": 58000,
+      "amount_str": "58K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406023,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-2",
+      "bet_type": "Q",
+      "amount": 57000,
+      "amount_str": "57K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406024,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-6",
+      "bet_type": "Q",
+      "amount": 210000,
+      "amount_str": "210K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406025,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "2-6",
+      "bet_type": "Q",
+      "amount": 200000,
+      "amount_str": "200K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406026,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "3-6",
+      "bet_type": "Q",
+      "amount": 190000,
+      "amount_str": "190K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406027,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "5-6",
+      "bet_type": "Q",
+      "amount": 140000,
+      "amount_str": "140K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406028,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-8",
+      "bet_type": "Q",
+      "amount": 62000,
+      "amount_str": "62K",
+      "bet_time": "16:12",
+      "scraped_at": "2026-09-27T08:13:10.174543+00:00"
+    },
+    {
+      "id": 406117,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-7",
+      "bet_type": "QP",
+      "amount": 150000,
+      "amount_str": "150K",
+      "bet_time": "16:13",
+      "scraped_at": "2026-09-27T08:15:02.012059+00:00"
+    },
+    {
+      "id": 406160,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-7",
+      "bet_type": "Q",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "16:15",
+      "scraped_at": "2026-09-27T08:16:13.653591+00:00"
+    },
+    {
+      "id": 406425,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "3-7",
+      "bet_type": "QP",
+      "amount": 91000,
+      "amount_str": "91K",
+      "bet_time": "16:21",
+      "scraped_at": "2026-09-27T08:22:19.652542+00:00"
+    },
+    {
+      "id": 406651,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-7",
+      "bet_type": "Q",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "16:26",
+      "scraped_at": "2026-09-27T08:27:11.633289+00:00"
+    },
+    {
+      "id": 406652,
+      "race_id": 24403,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-7",
+      "bet_type": "QP",
+      "amount": 160000,
+      "amount_str": "160K",
+      "bet_time": "16:26",
+      "scraped_at": "2026-09-27T08:27:11.633289+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 6,
+      "name_tc": "小鳥天堂",
+      "name_en": "LITTLE PARADISE",
+      "formula_score": 0.784,
+      "live_value_index": 64.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 1379000.0,
+      "q_amount": 1052000.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "紫荊盛勢",
+      "name_en": "STORMY GROVE",
+      "formula_score": 0.43379,
+      "live_value_index": 55.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 401000.0,
+      "q_amount": 240000.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "合夥奔馳",
+      "name_en": "COPARTNER PRANCE",
+      "formula_score": 0.42637,
+      "live_value_index": 63.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 150000.0,
+      "q_amount": 140000.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "手機錶霸",
+      "name_en": "PATCH OF THETA",
+      "formula_score": 0.35743,
+      "live_value_index": 58.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 65000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "幸運有您",
+      "name_en": "LUCKY WITH YOU",
+      "formula_score": 0.3562,
+      "live_value_index": 56.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 58000.0,
+      "q_amount": 62000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "錶之銀河",
+      "name_en": "GALAXY PATCH",
+      "formula_score": 0.11965,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 475000.0,
+      "q_amount": 267000.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "白鷺金剛",
+      "name_en": "INVINCIBLE IBIS",
+      "formula_score": 0.10951,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 506000.0,
+      "q_amount": 190000.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "驕陽明駒",
+      "name_en": "HELIOS EXPRESS",
+      "formula_score": 0.10674,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 386000.0,
+      "q_amount": 267000.0
+    },
+    {
+      "horse_number": 9,
+      "name_tc": "太陽勇士",
+      "name_en": "SOLEIL FIGHTER",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 6,
+    "name_tc": "小鳥天堂",
+    "name_en": "LITTLE PARADISE",
+    "formula_score": 0.784,
+    "live_value_index": 64.0,
+    "live_command": "observe",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 1379000.0,
+    "q_amount": 1052000.0
+  },
+  "other_four": [
+    {
+      "horse_number": 7,
+      "name_tc": "紫荊盛勢",
+      "name_en": "STORMY GROVE",
+      "formula_score": 0.43379,
+      "live_value_index": 55.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 401000.0,
+      "q_amount": 240000.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "合夥奔馳",
+      "name_en": "COPARTNER PRANCE",
+      "formula_score": 0.42637,
+      "live_value_index": 63.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 150000.0,
+      "q_amount": 140000.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "手機錶霸",
+      "name_en": "PATCH OF THETA",
+      "formula_score": 0.35743,
+      "live_value_index": 58.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 65000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "幸運有您",
+      "name_en": "LUCKY WITH YOU",
+      "formula_score": 0.3562,
+      "live_value_index": 56.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 58000.0,
+      "q_amount": 62000.0
+    }
+  ],
+  "live_received_at": "2026-09-27T16:32:08.356918+08:00",
+  "capture_delay_seconds": 8.36,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained.",
+  "source_data_quality": "ready",
+  "incomplete_live_candidates": []
+}

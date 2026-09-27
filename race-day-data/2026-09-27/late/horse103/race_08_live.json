@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "f4301739-7fa6-4359-93cb-9db7463697f0",
+    "race_number": 8,
+    "post_time": "16:35",
+    "venue": "沙田",
+    "distance": 1400,
+    "course": "C+3"
+  },
+  "date": "2026-09-27",
+  "expected_lock": "2026-09-27T16:32:00+08:00",
+  "live_received_at": "2026-09-27T16:32:08.356918+08:00",
+  "capture_delay_seconds": 8.36,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T08:32:01.893Z",
+    "postTime": "2026-09-27T08:35:00.000Z",
+    "previewTime": "2026-09-27T08:28:00.000Z",
+    "lockTime": "2026-09-27T08:32:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 6,
+        "nameTc": "小鳥天堂",
+        "nameEn": "LITTLE PARADISE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 64,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "合夥奔馳",
+        "nameEn": "COPARTNER PRANCE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "手機錶霸",
+        "nameEn": "PATCH OF THETA",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 58,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "幸運有您",
+        "nameEn": "LUCKY WITH YOU",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "紫荊盛勢",
+        "nameEn": "STORMY GROVE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 55,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 2,
+        "nameTc": "驕陽明駒",
+        "nameEn": "HELIOS EXPRESS",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "錶之銀河",
+        "nameEn": "GALAXY PATCH",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "白鷺金剛",
+        "nameEn": "INVINCIBLE IBIS",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 3,
+        "nameTc": "白鷺金剛",
+        "nameEn": "INVINCIBLE IBIS"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 6,
+      "nameTc": "小鳥天堂",
+      "nameEn": "LITTLE PARADISE",
+      "confidence": "high",
+      "reason": "小鳥天堂上季1400米G3勝出，今季操練及試閘俱佳，潘頓今季成績突出，檔位理想，負磅合理。",
+      "previewHorseNumber": null
+    }
+  }
+}
