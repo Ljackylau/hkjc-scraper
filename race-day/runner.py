@@ -50,7 +50,19 @@ def setup_data_branch():
         shutil.copytree(destination/'race-day-data',REPO/'race-day-data',dirs_exist_ok=True)
 
 def valid_live(live,race,date):
-    if not live.get('candidates') or live.get('dataQuality')!='ready':return False
+    candidates=live.get('candidates') or []
+    quality=live.get('dataQuality')
+    if not candidates or quality not in ('ready','partial'):return False
+    # Live103 can mark an otherwise usable locked response as partial when one
+    # preview horse has no valueIndex. Preserve that genuine T-3 response when
+    # at least three candidates remain independently scoreable; never accept a
+    # sparse/placeholder partial response.
+    if quality=='partial':
+        scoreable=sum(
+            1 for row in candidates
+            if row.get('horseNumber') is not None and isinstance(row.get('valueIndex'),(int,float))
+        )
+        if scoreable<3:return False
     target=horse.hk_datetime(date,race['post_time'])-timedelta(minutes=3)
     return live.get('phase') in ('locked','started') and abs((horse.parse_utc(live['lockTime'])-target).total_seconds())<=2
 
@@ -118,9 +130,14 @@ async def horse_job(race,date,folder,states,executor):
             if lag>90:raise RuntimeError('Response received outside 90-second capture window')
             result['live_received_at']=fetched;result['capture_delay_seconds']=round(lag,2)
             result['timing_note']='First valid response after T-3; actual receipt timestamp retained.'
+            result['source_data_quality']=result['live103_raw'].get('dataQuality')
+            result['incomplete_live_candidates']=[
+                row.get('horseNumber') for row in result['live103_raw'].get('candidates',[])
+                if not isinstance(row.get('valueIndex'),(int,float))
+            ]
             if not result['ranking']:raise RuntimeError('No eligible runners')
             atomic(dest,result)
-            states[str(n)]={'status':'saved','target':target.isoformat(),'delay_seconds':round(lag,2),'picks':result['ranking'][:5],'original':[r['horseNumber'] for r in result['live103_raw']['candidates']]}
+            states[str(n)]={'status':'saved','target':target.isoformat(),'delay_seconds':round(lag,2),'data_quality':result['source_data_quality'],'incomplete_live_candidates':result['incomplete_live_candidates'],'picks':result['ranking'][:5],'original':[r['horseNumber'] for r in result['live103_raw']['candidates']]}
             print('Horse103 R',n,'saved', [r['horse_number'] for r in result['ranking'][:5]],flush=True);return
         except ScheduleMoved as moved:
             evidence=None
