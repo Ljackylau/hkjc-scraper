@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "71fa4eb6-1a34-4f9d-a219-6dba64ba0a0a",
+    "race_number": 7,
+    "post_time": "16:05",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "全天候"
+  },
+  "date": "2026-09-27",
+  "expected_lock": "2026-09-27T16:02:00+08:00",
+  "live_received_at": "2026-09-27T16:02:07.404345+08:00",
+  "capture_delay_seconds": 7.4,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T08:02:01.675Z",
+    "postTime": "2026-09-27T08:05:00.000Z",
+    "previewTime": "2026-09-27T07:58:00.000Z",
+    "lockTime": "2026-09-27T08:02:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 9,
+        "nameTc": "包裝天王",
+        "nameEn": "PACKING KING",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 70,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "錶之極光",
+        "nameEn": "AURORA PATCH",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "致力之城",
+        "nameEn": "BUSTLING CITY",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "伶俐驫駒",
+        "nameEn": "SPEEDY SMARTIE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "三軍勇將",
+        "nameEn": "MIGHTY COMMANDER",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 5,
+        "nameTc": "何方來聲",
+        "nameEn": "FOUR STARS ALIGN",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "大番薯",
+        "nameEn": "NOTTHESILLYONE",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "同心同樂",
+        "nameEn": "RIDING TOGETHER",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 4,
+        "nameTc": "亨驥",
+        "nameEn": "ALL'S WELL"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 8,
+      "nameTc": "致力之城",
+      "nameEn": "BUSTLING CITY",
+      "confidence": "high",
+      "reason": "致力之城上仗全天候賽道大勝升班，檔位有利，騎練今季成績佳，試閘表現出色，有力再下一城。",
+      "previewHorseNumber": null
+    }
+  }
+}

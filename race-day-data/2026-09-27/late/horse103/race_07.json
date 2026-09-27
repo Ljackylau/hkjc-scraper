@@ -1,0 +1,539 @@
+{
+  "captured_at": "2026-09-27T08:02:08.264141+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.20 * normalized QP amount + 0.20 * normalized Q amount",
+  "race": {
+    "id": "71fa4eb6-1a34-4f9d-a219-6dba64ba0a0a",
+    "race_number": 7,
+    "post_time": "16:05",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "全天候"
+  },
+  "lock_time": "2026-09-27T08:02:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T08:02:01.675Z",
+    "postTime": "2026-09-27T08:05:00.000Z",
+    "previewTime": "2026-09-27T07:58:00.000Z",
+    "lockTime": "2026-09-27T08:02:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 9,
+        "nameTc": "包裝天王",
+        "nameEn": "PACKING KING",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 70,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "錶之極光",
+        "nameEn": "AURORA PATCH",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "致力之城",
+        "nameEn": "BUSTLING CITY",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "伶俐驫駒",
+        "nameEn": "SPEEDY SMARTIE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "三軍勇將",
+        "nameEn": "MIGHTY COMMANDER",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 5,
+        "nameTc": "何方來聲",
+        "nameEn": "FOUR STARS ALIGN",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "大番薯",
+        "nameEn": "NOTTHESILLYONE",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "同心同樂",
+        "nameEn": "RIDING TOGETHER",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 4,
+        "nameTc": "亨驥",
+        "nameEn": "ALL'S WELL"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 8,
+      "nameTc": "致力之城",
+      "nameEn": "BUSTLING CITY",
+      "confidence": "high",
+      "reason": "致力之城上仗全天候賽道大勝升班，檔位有利，騎練今季成績佳，試閘表現出色，有力再下一城。",
+      "previewHorseNumber": null
+    }
+  },
+  "ticket_cutoff": "2026-09-27T08:02:00.000Z",
+  "base_race_id": 24396,
+  "source_ticket_race_id": 24402,
+  "qp_max_amount": 547000.0,
+  "q_max_amount": 524000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 404180,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-5",
+      "bet_type": "QP",
+      "amount": 61000,
+      "amount_str": "61K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404181,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-8",
+      "bet_type": "QP",
+      "amount": 130000,
+      "amount_str": "130K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404182,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-9",
+      "bet_type": "QP",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404183,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "5-8",
+      "bet_type": "QP",
+      "amount": 82000,
+      "amount_str": "82K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404184,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "5-9",
+      "bet_type": "QP",
+      "amount": 61000,
+      "amount_str": "61K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404185,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-8",
+      "bet_type": "QP",
+      "amount": 74000,
+      "amount_str": "74K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404186,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-9",
+      "bet_type": "QP",
+      "amount": 110000,
+      "amount_str": "110K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404187,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "8-9",
+      "bet_type": "QP",
+      "amount": 110000,
+      "amount_str": "110K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404188,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "8-12",
+      "bet_type": "QP",
+      "amount": 57000,
+      "amount_str": "57K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404189,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-5",
+      "bet_type": "Q",
+      "amount": 58000,
+      "amount_str": "58K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404190,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-8",
+      "bet_type": "Q",
+      "amount": 100000,
+      "amount_str": "100K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404191,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-9",
+      "bet_type": "Q",
+      "amount": 63000,
+      "amount_str": "63K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404192,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "5-8",
+      "bet_type": "Q",
+      "amount": 74000,
+      "amount_str": "74K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404193,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "6-9",
+      "bet_type": "Q",
+      "amount": 92000,
+      "amount_str": "92K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404194,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "8-9",
+      "bet_type": "Q",
+      "amount": 100000,
+      "amount_str": "100K",
+      "bet_time": "15:45",
+      "scraped_at": "2026-09-27T07:46:05.748904+00:00"
+    },
+    {
+      "id": 404251,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "1-8",
+      "bet_type": "Q",
+      "amount": 130000,
+      "amount_str": "130K",
+      "bet_time": "15:46",
+      "scraped_at": "2026-09-27T07:47:06.15874+00:00"
+    },
+    {
+      "id": 404252,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "8-12",
+      "bet_type": "Q",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "15:46",
+      "scraped_at": "2026-09-27T07:47:06.15874+00:00"
+    },
+    {
+      "id": 404988,
+      "race_id": 24402,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "8-12",
+      "bet_type": "QP",
+      "amount": 94000,
+      "amount_str": "94K",
+      "bet_time": "15:59",
+      "scraped_at": "2026-09-27T08:01:01.508125+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 8,
+      "name_tc": "致力之城",
+      "name_en": "BUSTLING CITY",
+      "formula_score": 0.79,
+      "live_value_index": 65.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 547000.0,
+      "q_amount": 524000.0
+    },
+    {
+      "horse_number": 9,
+      "name_tc": "包裝天王",
+      "name_en": "PACKING KING",
+      "formula_score": 0.66395,
+      "live_value_index": 70.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 401000.0,
+      "q_amount": 255000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "錶之極光",
+      "name_en": "AURORA PATCH",
+      "formula_score": 0.64968,
+      "live_value_index": 67.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 311000.0,
+      "q_amount": 351000.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "伶俐驫駒",
+      "name_en": "SPEEDY SMARTIE",
+      "formula_score": 0.46701,
+      "live_value_index": 61.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 151000.0,
+      "q_amount": 120000.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "三軍勇將",
+      "name_en": "MIGHTY COMMANDER",
+      "formula_score": 0.36,
+      "live_value_index": 60.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "何方來聲",
+      "name_en": "FOUR STARS ALIGN",
+      "formula_score": 0.12497,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 204000.0,
+      "q_amount": 132000.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "大番薯",
+      "name_en": "NOTTHESILLYONE",
+      "formula_score": 0.10239,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 184000.0,
+      "q_amount": 92000.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "同心同樂",
+      "name_en": "RIDING TOGETHER",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "亨驥",
+      "name_en": "ALL'S WELL",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "綠色鐵蹄",
+      "name_en": "HOTT SHOTT",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "十二神將",
+      "name_en": "DEVAS TWELVE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 11,
+      "name_tc": "駿毅快車",
+      "name_en": "ENDURANCE EXPRESS",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 8,
+    "name_tc": "致力之城",
+    "name_en": "BUSTLING CITY",
+    "formula_score": 0.79,
+    "live_value_index": 65.0,
+    "live_command": "aggressive",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 547000.0,
+    "q_amount": 524000.0
+  },
+  "other_four": [
+    {
+      "horse_number": 9,
+      "name_tc": "包裝天王",
+      "name_en": "PACKING KING",
+      "formula_score": 0.66395,
+      "live_value_index": 70.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 401000.0,
+      "q_amount": 255000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "錶之極光",
+      "name_en": "AURORA PATCH",
+      "formula_score": 0.64968,
+      "live_value_index": 67.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 311000.0,
+      "q_amount": 351000.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "伶俐驫駒",
+      "name_en": "SPEEDY SMARTIE",
+      "formula_score": 0.46701,
+      "live_value_index": 61.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 151000.0,
+      "q_amount": 120000.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "三軍勇將",
+      "name_en": "MIGHTY COMMANDER",
+      "formula_score": 0.36,
+      "live_value_index": 60.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "live_received_at": "2026-09-27T16:02:07.404345+08:00",
+  "capture_delay_seconds": 7.4,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained.",
+  "source_data_quality": "ready",
+  "incomplete_live_candidates": []
+}

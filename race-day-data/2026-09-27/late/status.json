@@ -1,7 +1,7 @@
 {
   "date": "2026-09-27",
   "phase": "late",
-  "updated_at": "2026-09-27T16:01:55.746972+08:00",
+  "updated_at": "2026-09-27T16:02:57.583549+08:00",
   "state": "running",
   "horse103": {
     "6": {
@@ -81,8 +81,80 @@
       ]
     },
     "7": {
-      "status": "waiting",
-      "target": "2026-09-27T16:02:00+08:00"
+      "status": "saved",
+      "target": "2026-09-27T16:02:00+08:00",
+      "delay_seconds": 7.4,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 8,
+          "name_tc": "致力之城",
+          "name_en": "BUSTLING CITY",
+          "formula_score": 0.79,
+          "live_value_index": 65.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 547000.0,
+          "q_amount": 524000.0
+        },
+        {
+          "horse_number": 9,
+          "name_tc": "包裝天王",
+          "name_en": "PACKING KING",
+          "formula_score": 0.66395,
+          "live_value_index": 70.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 401000.0,
+          "q_amount": 255000.0
+        },
+        {
+          "horse_number": 1,
+          "name_tc": "錶之極光",
+          "name_en": "AURORA PATCH",
+          "formula_score": 0.64968,
+          "live_value_index": 67.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 311000.0,
+          "q_amount": 351000.0
+        },
+        {
+          "horse_number": 12,
+          "name_tc": "伶俐驫駒",
+          "name_en": "SPEEDY SMARTIE",
+          "formula_score": 0.46701,
+          "live_value_index": 61.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 151000.0,
+          "q_amount": 120000.0
+        },
+        {
+          "horse_number": 2,
+          "name_tc": "三軍勇將",
+          "name_en": "MIGHTY COMMANDER",
+          "formula_score": 0.36,
+          "live_value_index": 60.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 0.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        9,
+        1,
+        8,
+        12,
+        2
+      ]
     },
     "8": {
       "status": "waiting",
