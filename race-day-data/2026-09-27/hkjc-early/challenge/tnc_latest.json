@@ -3,10 +3,10 @@
   "date": "2026-09-27",
   "venue": "ST",
   "kind": "tnc",
-  "received_at": "2026-09-27T13:27:35.230991+08:00",
+  "received_at": "2026-09-27T13:28:35.626526+08:00",
   "url": "https://bet.hkjc.com/ch/racing/tnc/2026-09-27/ST/1",
   "source_updated_at": "2026-09-27T13:25:00+08:00",
-  "source_age_seconds": 155.2,
+  "source_age_seconds": 215.6,
   "source_recent": false,
   "state": "observed",
   "numeric_quotes": 21,
@@ -313,67 +313,67 @@
       "race_number": 1,
       "post_time": "2026-09-27T12:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2555.2
+      "seconds_to_off": -2615.6
     },
     {
       "race_number": 2,
       "post_time": "2026-09-27T13:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -755.2
+      "seconds_to_off": -815.6
     },
     {
       "race_number": 3,
       "post_time": "2026-09-27T13:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1044.8
+      "seconds_to_off": 984.4
     },
     {
       "race_number": 4,
       "post_time": "2026-09-27T14:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 2844.8
+      "seconds_to_off": 2784.4
     },
     {
       "race_number": 5,
       "post_time": "2026-09-27T15:05:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 5844.8
+      "seconds_to_off": 5784.4
     },
     {
       "race_number": 6,
       "post_time": "2026-09-27T15:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 7644.8
+      "seconds_to_off": 7584.4
     },
     {
       "race_number": 7,
       "post_time": "2026-09-27T16:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 9444.8
+      "seconds_to_off": 9384.4
     },
     {
       "race_number": 8,
       "post_time": "2026-09-27T16:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 11244.8
+      "seconds_to_off": 11184.4
     },
     {
       "race_number": 9,
       "post_time": "2026-09-27T17:10:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 13344.8
+      "seconds_to_off": 13284.4
     },
     {
       "race_number": 10,
       "post_time": "2026-09-27T17:45:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 15444.8
+      "seconds_to_off": 15384.4
     },
     {
       "race_number": 11,
       "post_time": "2026-09-27T18:20:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 17544.8
+      "seconds_to_off": 17484.4
     }
   ],
   "raw_tables": [
@@ -559,17 +559,33 @@
   "points_snapshot": {
     "date": "2026-09-27",
     "kind": "tnc",
-    "received_at": "2026-09-27T13:27:35.433281+08:00",
+    "received_at": "2026-09-27T13:28:36.212819+08:00",
     "source_updated_at": null,
     "freshness": "not_verifiable",
     "url": "https://racing.hkjc.com/zh-hk/local/information/tncresult?racedate=2026/09/27",
     "participants": [
+      {
+        "name": "文家良",
+        "selection_id": "11",
+        "points": 12.0,
+        "wins": 1.0,
+        "seconds": 0.0,
+        "thirds": 0.0
+      },
       {
         "name": "其他練馬師",
         "selection_id": "21",
         "points": 12.0,
         "wins": 1.0,
         "seconds": 0.0,
+        "thirds": 0.0
+      },
+      {
+        "name": "巫偉傑",
+        "selection_id": "4",
+        "points": 6.0,
+        "wins": 0.0,
+        "seconds": 1.0,
         "thirds": 0.0
       },
       {
@@ -581,6 +597,14 @@
         "thirds": 0.0
       },
       {
+        "name": "韋達",
+        "selection_id": "14",
+        "points": 4.0,
+        "wins": 0.0,
+        "seconds": 0.0,
+        "thirds": 1.0
+      },
+      {
         "name": "方嘉柏",
         "selection_id": "16",
         "points": 4.0,
@@ -589,8 +613,24 @@
         "thirds": 1.0
       },
       {
-        "name": "巫偉傑",
-        "selection_id": "4",
+        "name": "黎昭昇",
+        "selection_id": "18",
+        "points": 0.0,
+        "wins": 0.0,
+        "seconds": 0.0,
+        "thirds": 0.0
+      },
+      {
+        "name": "呂健威",
+        "selection_id": "1",
+        "points": 0.0,
+        "wins": 0.0,
+        "seconds": 0.0,
+        "thirds": 0.0
+      },
+      {
+        "name": "大衛希斯",
+        "selection_id": "3",
         "points": 0.0,
         "wins": 0.0,
         "seconds": 0.0,
@@ -613,8 +653,24 @@
         "thirds": 0.0
       },
       {
-        "name": "文家良",
-        "selection_id": "11",
+        "name": "桂福特",
+        "selection_id": "7",
+        "points": 0.0,
+        "wins": 0.0,
+        "seconds": 0.0,
+        "thirds": 0.0
+      },
+      {
+        "name": "羅富全",
+        "selection_id": "8",
+        "points": 0.0,
+        "wins": 0.0,
+        "seconds": 0.0,
+        "thirds": 0.0
+      },
+      {
+        "name": "伍鵬志",
+        "selection_id": "10",
         "points": 0.0,
         "wins": 0.0,
         "seconds": 0.0,
@@ -631,14 +687,6 @@
       {
         "name": "蘇偉賢",
         "selection_id": "15",
-        "points": 0.0,
-        "wins": 0.0,
-        "seconds": 0.0,
-        "thirds": 0.0
-      },
-      {
-        "name": "黎昭昇",
-        "selection_id": "18",
         "points": 0.0,
         "wins": 0.0,
         "seconds": 0.0,
