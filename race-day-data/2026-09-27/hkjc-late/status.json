@@ -1,14 +1,14 @@
 {
   "date": "2026-09-27",
-  "updated_at": "2026-09-27T15:04:46.516183+08:00",
+  "updated_at": "2026-09-27T15:05:48.505208+08:00",
   "mode": "shadow",
   "races": {
     "6": {
       "status": "retrying",
       "target": "2026-09-27T15:32:00+08:00",
       "errors": [
-        "Stale source timestamp",
-        "Stale source timestamp",
+        "Page.wait_for_function: Timeout 15000ms exceeded.",
+        "Page.wait_for_function: Timeout 15000ms exceeded.",
         "Stale source timestamp"
       ]
     },
