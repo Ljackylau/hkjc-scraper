@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "observed",
-      "samples_this_run": 148,
-      "received_at": "2026-09-27T16:51:29.829732+08:00",
+      "samples_this_run": 149,
+      "received_at": "2026-09-27T16:52:29.681118+08:00",
       "source_updated_at": "2026-09-27T16:49:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 149.8,
+      "source_age_seconds": 209.7,
       "numeric_quotes": 13,
       "participants": [
         {
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "observed",
-      "samples_this_run": 148,
-      "received_at": "2026-09-27T16:51:29.783191+08:00",
+      "samples_this_run": 149,
+      "received_at": "2026-09-27T16:52:29.662007+08:00",
       "source_updated_at": "2026-09-27T16:51:00+08:00",
       "source_recent": true,
-      "source_age_seconds": 29.8,
+      "source_age_seconds": 89.7,
       "numeric_quotes": 12,
       "participants": [
         {
@@ -363,20 +363,6 @@
           "normalized_implied_share": 0.153438
         },
         {
-          "selection_id": "6",
-          "name": "霍宏聲",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": 20.0,
-          "current_odds": 22.0,
-          "quote_text": "22",
-          "opening_drop_pct": null,
-          "normalized_implied_share": 0.038359
-        },
-        {
           "selection_id": "5",
           "name": "田泰安",
           "is_other": false,
@@ -389,6 +375,20 @@
           "quote_text": "20",
           "opening_drop_pct": null,
           "normalized_implied_share": 0.042195
+        },
+        {
+          "selection_id": "6",
+          "name": "霍宏聲",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 20.0,
+          "current_odds": 22.0,
+          "quote_text": "22",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.038359
         },
         {
           "selection_id": "4",
@@ -532,5 +532,5 @@
     10,
     11
   ],
-  "updated_at": "2026-09-27T16:51:30.409768+08:00"
+  "updated_at": "2026-09-27T16:52:30.257080+08:00"
 }

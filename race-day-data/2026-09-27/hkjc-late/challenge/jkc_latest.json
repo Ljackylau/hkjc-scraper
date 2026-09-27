@@ -3,10 +3,10 @@
   "date": "2026-09-27",
   "venue": "ST",
   "kind": "jkc",
-  "received_at": "2026-09-27T16:51:29.783191+08:00",
+  "received_at": "2026-09-27T16:52:29.662007+08:00",
   "url": "https://bet.hkjc.com/ch/racing/jkc/2026-09-27/ST/1",
   "source_updated_at": "2026-09-27T16:51:00+08:00",
-  "source_age_seconds": 29.8,
+  "source_age_seconds": 89.7,
   "source_recent": true,
   "state": "observed",
   "numeric_quotes": 12,
@@ -54,20 +54,6 @@
       "normalized_implied_share": 0.153438
     },
     {
-      "selection_id": "6",
-      "name": "霍宏聲",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": 20.0,
-      "current_odds": 22.0,
-      "quote_text": "22",
-      "opening_drop_pct": null,
-      "normalized_implied_share": 0.038359
-    },
-    {
       "selection_id": "5",
       "name": "田泰安",
       "is_other": false,
@@ -80,6 +66,20 @@
       "quote_text": "20",
       "opening_drop_pct": null,
       "normalized_implied_share": 0.042195
+    },
+    {
+      "selection_id": "6",
+      "name": "霍宏聲",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 20.0,
+      "current_odds": 22.0,
+      "quote_text": "22",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.038359
     },
     {
       "selection_id": "4",
@@ -208,74 +208,74 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "騎師王\n1\n27/09/2026, 星期日, 沙田\n更新時間: 27/09/2026 16:51\n田\nS2\nS3\n所有場次即時投注將於第 10 場前截止\n添加到投注區",
+  "header": "騎師王\n1\n27/09/2026, 星期日, 沙田\n更新時間: 27/09/2026 16:51\n田\nS2\nS3\n所有場次即時投注將於第 10 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
   "research_only": true,
   "race_context": [
     {
       "race_number": 1,
       "post_time": "2026-09-27T12:45:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -14789.8
+      "seconds_to_off": -14849.7
     },
     {
       "race_number": 2,
       "post_time": "2026-09-27T13:15:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -12989.8
+      "seconds_to_off": -13049.7
     },
     {
       "race_number": 3,
       "post_time": "2026-09-27T13:45:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -11189.8
+      "seconds_to_off": -11249.7
     },
     {
       "race_number": 4,
       "post_time": "2026-09-27T14:15:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -9389.8
+      "seconds_to_off": -9449.7
     },
     {
       "race_number": 5,
       "post_time": "2026-09-27T15:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -6389.8
+      "seconds_to_off": -6449.7
     },
     {
       "race_number": 6,
       "post_time": "2026-09-27T15:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -4589.8
+      "seconds_to_off": -4649.7
     },
     {
       "race_number": 7,
       "post_time": "2026-09-27T16:05:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2789.8
+      "seconds_to_off": -2849.7
     },
     {
       "race_number": 8,
       "post_time": "2026-09-27T16:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -989.8
+      "seconds_to_off": -1049.7
     },
     {
       "race_number": 9,
       "post_time": "2026-09-27T17:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1110.2
+      "seconds_to_off": 1050.3
     },
     {
       "race_number": 10,
       "post_time": "2026-09-27T17:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 3210.2
+      "seconds_to_off": 3150.3
     },
     {
       "race_number": 11,
       "post_time": "2026-09-27T18:20:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 5310.2
+      "seconds_to_off": 5250.3
     }
   ],
   "raw_tables": [
@@ -313,20 +313,20 @@
         "5.50"
       ],
       [
-        "6",
-        "霍宏聲",
-        "16",
-        "2",
-        "20",
-        "22"
-      ],
-      [
         "5",
         "田泰安",
         "12",
         "3",
         "28",
         "20"
+      ],
+      [
+        "6",
+        "霍宏聲",
+        "16",
+        "2",
+        "20",
+        "22"
       ],
       [
         "4",
@@ -405,7 +405,7 @@
   "points_snapshot": {
     "date": "2026-09-27",
     "kind": "jkc",
-    "received_at": "2026-09-27T16:51:29.847310+08:00",
+    "received_at": "2026-09-27T16:52:30.255654+08:00",
     "source_updated_at": null,
     "freshness": "not_verifiable",
     "url": "https://racing.hkjc.com/zh-hk/local/information/jkcresult?racedate=2026/09/27",
