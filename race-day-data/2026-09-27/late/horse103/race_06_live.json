@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "5f8181af-8731-4d8a-b480-270a121dabdd",
+    "race_number": 6,
+    "post_time": "15:35",
+    "venue": "沙田",
+    "distance": 1400,
+    "course": "C+3"
+  },
+  "date": "2026-09-27",
+  "expected_lock": "2026-09-27T15:32:00+08:00",
+  "live_received_at": "2026-09-27T15:32:06.646738+08:00",
+  "capture_delay_seconds": 6.65,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T07:32:01.930Z",
+    "postTime": "2026-09-27T07:35:00.000Z",
+    "previewTime": "2026-09-27T07:28:00.000Z",
+    "lockTime": "2026-09-27T07:32:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 4,
+        "nameTc": "哈羅威",
+        "nameEn": "HAROLD WIN",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 70,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "綫路萬里",
+        "nameEn": "CIRCUIT FIERY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "確好勁",
+        "nameEn": "GHORGAN",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "都靈冠星",
+        "nameEn": "TURIN CHAMPIONS",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "熱氣球",
+        "nameEn": "HOT AIR BALLON",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 64,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 1,
+        "nameTc": "準輝煌",
+        "nameEn": "ETALON OR",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "鬥志波",
+        "nameEn": "BUCEPHALAS",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "文明福星",
+        "nameEn": "LUCKY MAN",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 3,
+      "nameTc": "綫路萬里",
+      "nameEn": "CIRCUIT FIERY",
+      "confidence": "medium",
+      "reason": "檔位極佳，負磅輕，試閘表現不俗。雖然久休復出，但操練充足，有望憑輕磅及內檔之利爭勝。",
+      "previewHorseNumber": null
+    }
+  }
+}
