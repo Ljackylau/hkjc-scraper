@@ -1,0 +1,372 @@
+{
+  "captured_at": "2026-09-27T04:42:06.729133+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.20 * normalized QP amount + 0.20 * normalized Q amount",
+  "race": {
+    "id": "007a85da-f621-466b-a45b-2e966f6fab63",
+    "race_number": 1,
+    "post_time": "12:45",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "全天候"
+  },
+  "lock_time": "2026-09-27T04:42:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T04:42:02.345Z",
+    "postTime": "2026-09-27T04:45:00.000Z",
+    "previewTime": "2026-09-27T04:38:00.000Z",
+    "lockTime": "2026-09-27T04:42:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 10,
+        "nameTc": "建測精英",
+        "nameEn": "VON BAER",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 70,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "嘉嘉友福",
+        "nameEn": "SO MY FOLKS",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 69,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "日日獎",
+        "nameEn": "DAILY TROPHY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "旭能精英",
+        "nameEn": "RISING ELITE",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "機械騎士",
+        "nameEn": "ROBOT KNIGHT",
+        "capitalSignal": "none",
+        "command": "avoid",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "risk_dominates",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 6,
+        "nameTc": "銳一",
+        "nameEn": "ONLY U",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "五福星",
+        "nameEn": "GIMME FIVE",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "喜行",
+        "nameEn": "HAPPY ACTION",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 5,
+        "nameTc": "喜行",
+        "nameEn": "HAPPY ACTION"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 3,
+      "nameTc": "日日獎",
+      "nameEn": "DAILY TROPHY",
+      "confidence": "high",
+      "reason": "檔位極佳，練馬師方嘉柏今季成績優秀。久休復出體重增加，兩課全天候試閘表現不俗，狀態回勇。",
+      "previewHorseNumber": null
+    }
+  },
+  "ticket_cutoff": "2026-09-27T04:42:00.000Z",
+  "base_race_id": 24396,
+  "source_ticket_race_id": 24396,
+  "qp_max_amount": 32000.0,
+  "q_max_amount": 43000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 392242,
+      "race_id": 24396,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "2-6",
+      "bet_type": "Q",
+      "amount": 12000,
+      "amount_str": "12K",
+      "bet_time": "22:45",
+      "scraped_at": "2026-09-26T16:11:04.267907+00:00"
+    },
+    {
+      "id": 392569,
+      "race_id": 24396,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "2-6",
+      "bet_type": "Q",
+      "amount": 31000,
+      "amount_str": "31K",
+      "bet_time": "10:54",
+      "scraped_at": "2026-09-27T03:07:02.651292+00:00"
+    },
+    {
+      "id": 392570,
+      "race_id": 24396,
+      "race_date": "2026-09-27",
+      "horse_or_combo": "2-6",
+      "bet_type": "QP",
+      "amount": 32000,
+      "amount_str": "32K",
+      "bet_time": "10:54",
+      "scraped_at": "2026-09-27T03:07:02.651292+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 2,
+      "name_tc": "嘉嘉友福",
+      "name_en": "SO MY FOLKS",
+      "formula_score": 0.814,
+      "live_value_index": 69.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 32000.0,
+      "q_amount": 43000.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "建測精英",
+      "name_en": "VON BAER",
+      "formula_score": 0.42,
+      "live_value_index": 70.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "日日獎",
+      "name_en": "DAILY TROPHY",
+      "formula_score": 0.402,
+      "live_value_index": 67.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "銳一",
+      "name_en": "ONLY U",
+      "formula_score": 0.4,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 32000.0,
+      "q_amount": 43000.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "旭能精英",
+      "name_en": "RISING ELITE",
+      "formula_score": 0.354,
+      "live_value_index": 59.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "機械騎士",
+      "name_en": "ROBOT KNIGHT",
+      "formula_score": 0.336,
+      "live_value_index": 56.0,
+      "live_command": "avoid",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "喜行",
+      "name_en": "HAPPY ACTION",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "駿先生",
+      "name_en": "MR GOOD VIBES",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "大浪園田",
+      "name_en": "WAVE GARDEN",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 9,
+      "name_tc": "五福星",
+      "name_en": "GIMME FIVE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 11,
+      "name_tc": "勝在有型",
+      "name_en": "HANDSOME BLOND",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "戰騎飛",
+      "name_en": "TURF PHOENIX",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 2,
+    "name_tc": "嘉嘉友福",
+    "name_en": "SO MY FOLKS",
+    "formula_score": 0.814,
+    "live_value_index": 69.0,
+    "live_command": "follow",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 32000.0,
+    "q_amount": 43000.0
+  },
+  "other_four": [
+    {
+      "horse_number": 10,
+      "name_tc": "建測精英",
+      "name_en": "VON BAER",
+      "formula_score": 0.42,
+      "live_value_index": 70.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "日日獎",
+      "name_en": "DAILY TROPHY",
+      "formula_score": 0.402,
+      "live_value_index": 67.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "銳一",
+      "name_en": "ONLY U",
+      "formula_score": 0.4,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 32000.0,
+      "q_amount": 43000.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "旭能精英",
+      "name_en": "RISING ELITE",
+      "formula_score": 0.354,
+      "live_value_index": 59.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "live_received_at": "2026-09-27T12:42:05.949019+08:00",
+  "capture_delay_seconds": 5.95,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained."
+}

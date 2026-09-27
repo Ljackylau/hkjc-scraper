@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "007a85da-f621-466b-a45b-2e966f6fab63",
+    "race_number": 1,
+    "post_time": "12:45",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "全天候"
+  },
+  "date": "2026-09-27",
+  "expected_lock": "2026-09-27T12:42:00+08:00",
+  "live_received_at": "2026-09-27T12:42:05.949019+08:00",
+  "capture_delay_seconds": 5.95,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T04:42:02.345Z",
+    "postTime": "2026-09-27T04:45:00.000Z",
+    "previewTime": "2026-09-27T04:38:00.000Z",
+    "lockTime": "2026-09-27T04:42:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 10,
+        "nameTc": "建測精英",
+        "nameEn": "VON BAER",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 70,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "嘉嘉友福",
+        "nameEn": "SO MY FOLKS",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 69,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "日日獎",
+        "nameEn": "DAILY TROPHY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "旭能精英",
+        "nameEn": "RISING ELITE",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "機械騎士",
+        "nameEn": "ROBOT KNIGHT",
+        "capitalSignal": "none",
+        "command": "avoid",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "risk_dominates",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 6,
+        "nameTc": "銳一",
+        "nameEn": "ONLY U",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "五福星",
+        "nameEn": "GIMME FIVE",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "喜行",
+        "nameEn": "HAPPY ACTION",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 5,
+        "nameTc": "喜行",
+        "nameEn": "HAPPY ACTION"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 3,
+      "nameTc": "日日獎",
+      "nameEn": "DAILY TROPHY",
+      "confidence": "high",
+      "reason": "檔位極佳，練馬師方嘉柏今季成績優秀。久休復出體重增加，兩課全天候試閘表現不俗，狀態回勇。",
+      "previewHorseNumber": null
+    }
+  }
+}
