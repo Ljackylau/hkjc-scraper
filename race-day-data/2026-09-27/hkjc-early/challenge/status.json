@@ -5,16 +5,16 @@
   "pools": {
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 113,
-      "received_at": "2026-09-27T13:55:35.643672+08:00",
-      "source_updated_at": "2026-09-27T13:46:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 575.6,
+      "samples_this_run": 114,
+      "received_at": "2026-09-27T13:56:35.767353+08:00",
+      "source_updated_at": "2026-09-27T13:55:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 95.8,
       "numeric_quotes": 0,
       "participants": [
         {
-          "selection_id": "2",
-          "name": "姚本輝",
+          "selection_id": "11",
+          "name": "文家良",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -27,8 +27,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "4",
-          "name": "巫偉傑",
+          "selection_id": "2",
+          "name": "姚本輝",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -55,8 +55,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "3",
-          "name": "大衛希斯",
+          "selection_id": "4",
+          "name": "巫偉傑",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -83,8 +83,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "11",
-          "name": "文家良",
+          "selection_id": "3",
+          "name": "大衛希斯",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -99,20 +99,6 @@
         {
           "selection_id": "6",
           "name": "廖康銘",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "8",
-          "name": "羅富全",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -153,8 +139,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "7",
-          "name": "桂福特",
+          "selection_id": "10",
+          "name": "伍鵬志",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -181,20 +167,6 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "14",
-          "name": "韋達",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
           "selection_id": "16",
           "name": "方嘉柏",
           "is_other": false,
@@ -209,8 +181,36 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "10",
-          "name": "伍鵬志",
+          "selection_id": "8",
+          "name": "羅富全",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "14",
+          "name": "韋達",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "7",
+          "name": "桂福特",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -265,6 +265,20 @@
           "normalized_implied_share": null
         },
         {
+          "selection_id": "19",
+          "name": "丁冠豪",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
           "selection_id": "18",
           "name": "黎昭昇",
           "is_other": false,
@@ -291,20 +305,6 @@
           "quote_text": "---",
           "opening_drop_pct": null,
           "normalized_implied_share": null
-        },
-        {
-          "selection_id": "19",
-          "name": "丁冠豪",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
         }
       ],
       "points_available": true,
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "observed",
-      "samples_this_run": 113,
-      "received_at": "2026-09-27T13:55:35.734070+08:00",
+      "samples_this_run": 114,
+      "received_at": "2026-09-27T13:56:35.665045+08:00",
       "source_updated_at": "2026-09-27T13:55:00+08:00",
       "source_recent": true,
-      "source_age_seconds": 35.7,
+      "source_age_seconds": 95.7,
       "numeric_quotes": 14,
       "participants": [
         {
@@ -531,5 +531,5 @@
     4,
     5
   ],
-  "updated_at": "2026-09-27T13:55:36.227138+08:00"
+  "updated_at": "2026-09-27T13:56:36.260883+08:00"
 }
