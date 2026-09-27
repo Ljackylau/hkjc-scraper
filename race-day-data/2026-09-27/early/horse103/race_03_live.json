@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "1f6926eb-63b5-4673-8bdb-9c5c2bea1d91",
+    "race_number": 3,
+    "post_time": "13:45",
+    "venue": "沙田",
+    "distance": 1400,
+    "course": "C+3"
+  },
+  "date": "2026-09-27",
+  "expected_lock": "2026-09-27T13:42:00+08:00",
+  "live_received_at": "2026-09-27T13:42:06.541127+08:00",
+  "capture_delay_seconds": 6.54,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T05:42:02.061Z",
+    "postTime": "2026-09-27T05:45:00.000Z",
+    "previewTime": "2026-09-27T05:38:00.000Z",
+    "lockTime": "2026-09-27T05:42:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 11,
+        "nameTc": "快樂老撾",
+        "nameEn": "DRACO",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 69,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "銳高",
+        "nameEn": "VIGOR ELLEEGANT",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "閃電武士",
+        "nameEn": "STORMY KNIGHT",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "精益大師",
+        "nameEn": "LEAN MASTER",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "海王",
+        "nameEn": "AQUAMAN",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 1,
+        "nameTc": "一路精彩",
+        "nameEn": "FOREVER FANCY",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "東方寶寶",
+        "nameEn": "DOUBLE BINGO",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "順成之星",
+        "nameEn": "FORTUNE SUPERNOVA",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 9,
+        "nameTc": "果然僥倖",
+        "nameEn": "ALWAYS FLUKE"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 11,
+      "nameTc": "快樂老撾",
+      "nameEn": "DRACO",
+      "confidence": "high",
+      "reason": "上仗同程同班輕勝，評分雖加但負磅仍輕。騎練今季成績俱佳，狀態勇銳，有力再下一城。",
+      "previewHorseNumber": null
+    }
+  }
+}
