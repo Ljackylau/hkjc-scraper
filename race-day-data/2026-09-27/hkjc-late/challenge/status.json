@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 212,
-      "received_at": "2026-09-27T17:55:30.228696+08:00",
-      "source_updated_at": "2026-09-27T17:47:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 510.2,
+      "samples_this_run": 213,
+      "received_at": "2026-09-27T17:56:29.788169+08:00",
+      "source_updated_at": "2026-09-27T17:55:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 89.8,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -55,20 +55,6 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "2",
-          "name": "姚本輝",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
           "selection_id": "6",
           "name": "廖康銘",
           "is_other": false,
@@ -97,6 +83,20 @@
           "normalized_implied_share": null
         },
         {
+          "selection_id": "2",
+          "name": "姚本輝",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "未能勝出",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
           "selection_id": "3",
           "name": "大衛希斯",
           "is_other": false,
@@ -106,7 +106,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -120,7 +120,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -134,7 +134,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 212,
-      "received_at": "2026-09-27T17:55:29.799167+08:00",
-      "source_updated_at": "2026-09-27T17:47:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 509.8,
+      "samples_this_run": 213,
+      "received_at": "2026-09-27T17:56:29.840939+08:00",
+      "source_updated_at": "2026-09-27T17:55:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 89.8,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -372,7 +372,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -386,7 +386,21 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "6",
+          "name": "霍宏聲",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -400,7 +414,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -414,27 +428,13 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
         {
           "selection_id": "11",
           "name": "蔡明紹",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "6",
-          "name": "霍宏聲",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -532,5 +532,5 @@
     10,
     11
   ],
-  "updated_at": "2026-09-27T17:55:30.380993+08:00"
+  "updated_at": "2026-09-27T17:56:29.904823+08:00"
 }
