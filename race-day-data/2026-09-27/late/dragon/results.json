@@ -241,7 +241,7 @@
         13,
         14
       ],
-      "last_attempt": "2026-09-27T15:01:00.064168+08:00",
+      "last_attempt": "2026-09-27T15:02:00.067605+08:00",
       "errors": [],
       "pools": [
         {
@@ -251,9 +251,9 @@
           "compared_pairs": 182,
           "missing_at_end": [],
           "baseline_time": "2026-09-27T14:36:00.028456+08:00",
-          "final_time": "2026-09-27T15:01:00.063274+08:00",
+          "final_time": "2026-09-27T15:02:00.066718+08:00",
           "source_updated": "2026-09-27T15:00:00+08:00",
-          "fresh": true,
+          "fresh": false,
           "comparison_ready": true,
           "baseline_label": "首次可用取樣；非 T−60 比較",
           "current_odds": {
@@ -471,5 +471,5 @@
       "status": "正在開啟"
     }
   ],
-  "published_at": "2026-09-27T15:01:03.067593+08:00"
+  "published_at": "2026-09-27T15:02:03.069333+08:00"
 }
