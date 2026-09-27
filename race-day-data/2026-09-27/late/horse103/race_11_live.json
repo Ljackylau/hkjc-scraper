@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "dcaab0bb-957c-445e-b43e-81a5e3be1f17",
+    "race_number": 11,
+    "post_time": "18:20",
+    "venue": "沙田",
+    "distance": 1400,
+    "course": "C+3"
+  },
+  "date": "2026-09-27",
+  "expected_lock": "2026-09-27T18:17:00+08:00",
+  "live_received_at": "2026-09-27T18:17:06.258333+08:00",
+  "capture_delay_seconds": 6.26,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-09-27T10:17:01.743Z",
+    "postTime": "2026-09-27T10:20:00.000Z",
+    "previewTime": "2026-09-27T10:13:00.000Z",
+    "lockTime": "2026-09-27T10:17:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 3,
+        "nameTc": "友瑩仁",
+        "nameEn": "AEROINVINCIBLE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "超勁赤兔",
+        "nameEn": "THE RED HARE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "綫路英雄",
+        "nameEn": "CIRCUIT CHAMPION",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "名揚四海",
+        "nameEn": "COMPLETE UNKNOWN",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 14,
+        "nameTc": "皇仁歡星",
+        "nameEn": "DRAGON JOY",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 54,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 10,
+        "nameTc": "哥倫布",
+        "nameEn": "FORZA TORO",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "同樣美麗",
+        "nameEn": "BEAUTY CRESCENT",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "一生好彩",
+        "nameEn": "LUCKY SAM GOR",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 5,
+        "nameTc": "風火輪",
+        "nameEn": "THUNDER BLAZE"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 6,
+      "nameTc": "綫路英雄",
+      "nameEn": "CIRCUIT CHAMPION",
+      "confidence": "high",
+      "reason": "潘頓與沈集成今季成績甚佳。馬匹檔位理想，近績穩定，上仗熱身後狀態應更進一步，有力爭勝。",
+      "previewHorseNumber": null
+    }
+  }
+}
