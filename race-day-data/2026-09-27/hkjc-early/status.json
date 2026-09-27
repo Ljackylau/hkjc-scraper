@@ -1,13 +1,78 @@
 {
   "date": "2026-09-27",
-  "updated_at": "2026-09-27T12:41:44.545835+08:00",
+  "updated_at": "2026-09-27T12:42:46.530617+08:00",
   "mode": "shadow",
   "races": {
     "1": {
-      "status": "collecting",
+      "status": "shadow",
       "target": "2026-09-27T12:42:00+08:00",
-      "baseline": true,
-      "last_received": "2026-09-27T12:41:40.860786+08:00"
+      "received_at": "2026-09-27T12:42:20.975411+08:00",
+      "source_updated": {
+        "wp": "2026-09-27T12:41:00+08:00",
+        "wpq": "2026-09-27T12:41:00+08:00"
+      },
+      "baseline": {
+        "kind": "t30",
+        "received_at": "2026-09-27T12:15:00.819351+08:00",
+        "minutes_to_off": 29.99,
+        "source_updated": {
+          "wp": "2026-09-27T12:14:00+08:00",
+          "wpq": "2026-09-27T12:14:00+08:00"
+        }
+      },
+      "ranking": [
+        {
+          "horse_number": 10,
+          "score": 13.281,
+          "drops_pct": {
+            "WIN": 12.5,
+            "PLA": 7.69,
+            "QIN": 17.37,
+            "QPL": 17.55
+          }
+        },
+        {
+          "horse_number": 3,
+          "score": 10.3,
+          "drops_pct": {
+            "WIN": 5.38,
+            "PLA": 15.38,
+            "QIN": 15.6,
+            "QPL": 7.26
+          }
+        },
+        {
+          "horse_number": 2,
+          "score": 6.745,
+          "drops_pct": {
+            "WIN": 3.75,
+            "PLA": 0,
+            "QIN": 10.67,
+            "QPL": 16.49
+          }
+        },
+        {
+          "horse_number": 9,
+          "score": 6.322,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 10.98,
+            "QPL": 20.63
+          }
+        },
+        {
+          "horse_number": 4,
+          "score": 5.461,
+          "drops_pct": {
+            "WIN": 7.69,
+            "PLA": 1.47,
+            "QIN": 5.3,
+            "QPL": 6.71
+          }
+        }
+      ],
+      "source": "HKJC odds movement; experimental"
     },
     "2": {
       "status": "waiting",
