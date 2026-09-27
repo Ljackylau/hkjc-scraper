@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "observed",
-      "samples_this_run": 118,
-      "received_at": "2026-09-27T14:00:35.739515+08:00",
+      "samples_this_run": 119,
+      "received_at": "2026-09-27T14:01:35.643347+08:00",
       "source_updated_at": "2026-09-27T13:59:00+08:00",
-      "source_recent": true,
-      "source_age_seconds": 95.7,
+      "source_recent": false,
+      "source_age_seconds": 155.6,
       "numeric_quotes": 21,
       "participants": [
         {
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "observed",
-      "samples_this_run": 118,
-      "received_at": "2026-09-27T14:00:35.658829+08:00",
+      "samples_this_run": 119,
+      "received_at": "2026-09-27T14:01:35.338256+08:00",
       "source_updated_at": "2026-09-27T13:59:00+08:00",
-      "source_recent": true,
-      "source_age_seconds": 95.7,
+      "source_recent": false,
+      "source_age_seconds": 155.3,
       "numeric_quotes": 14,
       "participants": [
         {
@@ -531,5 +531,5 @@
     4,
     5
   ],
-  "updated_at": "2026-09-27T14:00:36.060945+08:00"
+  "updated_at": "2026-09-27T14:01:35.686658+08:00"
 }
