@@ -1,7 +1,7 @@
 {
   "date": "2026-09-27",
   "phase": "late",
-  "updated_at": "2026-09-27T17:41:08.448293+08:00",
+  "updated_at": "2026-09-27T17:42:10.533387+08:00",
   "state": "running",
   "horse103": {
     "6": {
@@ -309,8 +309,80 @@
       ]
     },
     "10": {
-      "status": "waiting",
-      "target": "2026-09-27T17:42:00+08:00"
+      "status": "saved",
+      "target": "2026-09-27T17:42:00+08:00",
+      "delay_seconds": 6.1,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 10,
+          "name_tc": "增強",
+          "name_en": "GENEVA",
+          "formula_score": 0.59917,
+          "live_value_index": 71.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1609000.0,
+          "q_amount": 1261000.0
+        },
+        {
+          "horse_number": 9,
+          "name_tc": "興馳千里",
+          "name_en": "TURQUOISE VELOCITY",
+          "formula_score": 0.55007,
+          "live_value_index": 64.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1423000.0,
+          "q_amount": 1346000.0
+        },
+        {
+          "horse_number": 3,
+          "name_tc": "扶搖勢勁",
+          "name_en": "RISING FORCE",
+          "formula_score": 0.4,
+          "live_value_index": 0.0,
+          "live_command": null,
+          "live_capital_signal": null,
+          "is_live_candidate": false,
+          "qp_amount": 3137000.0,
+          "q_amount": 3573000.0
+        },
+        {
+          "horse_number": 7,
+          "name_tc": "維港智能",
+          "name_en": "VICTOR THE WINNER",
+          "formula_score": 0.39061,
+          "live_value_index": 63.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 110000.0,
+          "q_amount": 100000.0
+        },
+        {
+          "horse_number": 1,
+          "name_tc": "風雲武士",
+          "name_en": "STORM RIDER",
+          "formula_score": 0.37834,
+          "live_value_index": 59.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 337000.0,
+          "q_amount": 51000.0
+        }
+      ],
+      "original": [
+        10,
+        9,
+        7,
+        1,
+        4
+      ]
     },
     "11": {
       "status": "waiting",
