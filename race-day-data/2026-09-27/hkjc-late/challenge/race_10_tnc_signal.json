@@ -1,0 +1,92 @@
+{
+  "status": "observed",
+  "rule": "trainer odds shortened >=15% from previous race off to T-3",
+  "threshold_pct": 15,
+  "previous_race": 9,
+  "baseline_source_updated_at": "2026-09-27T17:10:00+08:00",
+  "t3_source_updated_at": "2026-09-27T17:35:00+08:00",
+  "t3_received_at": "2026-09-27T17:42:29.912648+08:00",
+  "changes": [
+    {
+      "name": "文家良",
+      "before_odds": 1.9,
+      "t3_odds": 1.55,
+      "drop_pct": 18.42
+    },
+    {
+      "name": "羅富全",
+      "before_odds": 6.0,
+      "t3_odds": 5.0,
+      "drop_pct": 16.67
+    },
+    {
+      "name": "巫偉傑",
+      "before_odds": 4.75,
+      "t3_odds": 7.0,
+      "drop_pct": -47.37
+    },
+    {
+      "name": "姚本輝",
+      "before_odds": 9.0,
+      "t3_odds": 9.0,
+      "drop_pct": 0.0
+    },
+    {
+      "name": "廖康銘",
+      "before_odds": 11.0,
+      "t3_odds": 22.0,
+      "drop_pct": -100.0
+    },
+    {
+      "name": "伍鵬志",
+      "before_odds": 125.0,
+      "t3_odds": 85.0,
+      "drop_pct": 32.0
+    },
+    {
+      "name": "大衛希斯",
+      "before_odds": 100.0,
+      "t3_odds": 100.0,
+      "drop_pct": 0.0
+    },
+    {
+      "name": "賀賢",
+      "before_odds": 250.0,
+      "t3_odds": 125.0,
+      "drop_pct": 50.0
+    },
+    {
+      "name": "方嘉柏",
+      "before_odds": 100.0,
+      "t3_odds": 200.0,
+      "drop_pct": -100.0
+    }
+  ],
+  "qualifying": [
+    {
+      "name": "文家良",
+      "before_odds": 1.9,
+      "t3_odds": 1.55,
+      "drop_pct": 18.42
+    },
+    {
+      "name": "羅富全",
+      "before_odds": 6.0,
+      "t3_odds": 5.0,
+      "drop_pct": 16.67
+    },
+    {
+      "name": "伍鵬志",
+      "before_odds": 125.0,
+      "t3_odds": 85.0,
+      "drop_pct": 32.0
+    },
+    {
+      "name": "賀賢",
+      "before_odds": 250.0,
+      "t3_odds": 125.0,
+      "drop_pct": 50.0
+    }
+  ],
+  "derived_from_preserved_data": true
+}
