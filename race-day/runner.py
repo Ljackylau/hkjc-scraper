@@ -79,7 +79,7 @@ def format_tip_message(number,snapshot,market=None,cold=None,positions=None,resu
     title=f'🏁 R{number}｜正式賽果更新' if result else f'🏇 R{number}｜T−3 已鎖定'
     return (title+'\n'
             f'獨贏&位置信心馬：{confidence_horses}\n'
-            f'連贏位置Q：{main}號 拖 {legs}\n'
+            f'連贏位置Q：{annotated(main,positions)} 拖 {legs}\n'
             f'最有可能爆冷馬：{cold_text}\n\n'
             '查看完整資料：https://ljackylau.github.io/hkjc-scraper/race-day/')
 
@@ -100,6 +100,26 @@ def parse_result_html(body):
         raise RuntimeError('Official top-four result incomplete')
     return entries
 
+def parse_dividends_html(body):
+    """Read HKJC's official per-race dividend table; keep the published HK$ unit."""
+    match=re.search(r'<div[^>]*class="[^"]*dividend_tab[^\"]*"[^>]*>.*?<table[^>]*>.*?<tbody[^>]*>(.*?)</tbody>',body,re.I|re.S)
+    if not match:raise RuntimeError('Official dividends not ready')
+    pools={'WIN':'W','PLACE':'P','QUINELLA':'Q','QUINELLA PLACE':'QP',
+           'FORECAST':'FCT','TIERCE':'TIERCE','TRIO':'TRIO','FIRST 4':'FIRST4','QUARTET':'QUARTET'}
+    found={};current=None
+    for raw in re.findall(r'<tr[^>]*>(.*?)</tr>',match.group(1),re.I|re.S):
+        cells=[' '.join(html.unescape(re.sub(r'<[^>]+>',' ',cell)).split()) for cell in re.findall(r'<td[^>]*>(.*?)</td>',raw,re.I|re.S)]
+        if len(cells)==3:current=cells[0].upper().strip();combination,amount=cells[1:]
+        elif len(cells)==2 and current:combination,amount=cells
+        else:continue
+        try:value=float(amount.replace(',','').replace('$',''))
+        except ValueError:continue
+        if current in pools and value>=0 and combination:
+            found.setdefault(pools[current],[]).append({'combination':combination,'dividend_hkd':value})
+    if not all(found.get(pool) for pool in ('W','P','Q','QP')):
+        raise RuntimeError('Official W/P/Q/QP dividends incomplete')
+    return found
+
 def fetch_official_result(date,venue,number):
     venue='ST' if venue in ('ST','沙田') else 'HV'
     query=urllib.parse.urlencode({'racedate':date.replace('-','/'),'Racecourse':venue,'RaceNo':number})
@@ -107,7 +127,8 @@ def fetch_official_result(date,venue,number):
     request=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (Horse103 result monitor)'})
     with urllib.request.urlopen(request,timeout=20) as response:body=response.read().decode('utf-8','replace')
     entries=parse_result_html(body)
-    return {'source':'HKJC official local results','source_url':url,'received_at':now().isoformat(),'entries':entries,'top4':[row['horse_number'] for row in entries[:4]]}
+    dividends=parse_dividends_html(body)
+    return {'source':'HKJC official local results','source_url':url,'received_at':now().isoformat(),'entries':entries,'top4':[row['horse_number'] for row in entries[:4]],'dividends':dividends,'dividend_unit':'HKJC published HK$ unit','settlement_status':'complete'}
 
 def remote_json(url):
     request=urllib.request.Request(url,headers={'User-Agent':'hkjc-race-day-runner','Cache-Control':'no-cache'})
@@ -192,7 +213,7 @@ async def result_job(race,date,folder,states,executor):
             off=horse.hk_datetime(date,updated['post_time'])
         except Exception:pass
         await asyncio.sleep(min(30,max(1,(off+timedelta(minutes=2)-now()).total_seconds())))
-    deadline=off+timedelta(minutes=45);result=None
+    deadline=off+timedelta(minutes=90);result=None
     while now()<=deadline:
         try:
             result=await asyncio.get_running_loop().run_in_executor(executor,fetch_official_result,date,race.get('venue'),number)
@@ -200,7 +221,7 @@ async def result_job(race,date,folder,states,executor):
         except Exception as e:
             states[str(number)]={'status':'waiting','error':str(e)[:180]};await asyncio.sleep(30)
     if result is None:
-        states[str(number)]={'status':'unavailable','reason':'Official result not available within 45 minutes'};return
+        states[str(number)]={'status':'unavailable','reason':'Official result/dividends not complete within 90 minutes; overnight reconciliation will retry'};return
     snapshot_path=folder/'horse103'/f'race_{number:02d}.json'
     snapshot=json.loads(snapshot_path.read_text(encoding='utf-8')) if snapshot_path.exists() else None
     tip_marker=folder/'notifications'/f'race_{number:02d}.json'

@@ -26,6 +26,8 @@ Opening result pages does not fetch HKJC/Supabase directly. Pages read small sum
 
 When Telegram secrets are configured, each successful T−3 lock sends one recommendation message. A terminal T−3 failure sends a warning instead of silently disappearing. After the race, the runner polls the HKJC official result, stores the top four without changing the archived T−3 recommendation, annotates recommended runners that finished first to fourth, and sends one result message. Telegram errors are retried; GitHub, Telegram, Horse103 and HKJC outages can still prevent delivery, so delivery is monitored rather than described as guaranteed. The website's 賽果紀錄 tab combines archived recommendations with official results.
 
+Official settlement now waits for the HKJC result **and complete W/P/Q/QP dividend table** before saving and sending the post-race result. Other available pools (forecast, tierce, trio, first four and quartet) are stored as published, with the official combination and HK$ dividend value. The separate `Race Day Official Settlement` workflow checks yesterday's race meeting at 00:30 Hong Kong time and rechecks the previous two days; it can also be dispatched for a specific archived date. It writes `race-day-data/YYYY-MM-DD/settlement/race_XX.json` and a missing-race report on the data branch. Genuine pre-race captures are never overwritten by settlement. The history page folds those records into the archived 2026-09-13/16/23/27 records. Historic races without a saved T−3 tip show the official outcome with no invented banker.
+
 ## Validation
 
 `python -m unittest discover -s race-day -p 'test_*.py' -v`

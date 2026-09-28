@@ -6,8 +6,28 @@ sys.path.insert(0,str(Path(__file__).parent))
 import runner as r
 import horse103_copy as h
 import dragon_copy as d
+import reconcile
 
 class Tests(unittest.TestCase):
+ def test_official_dividends_with_rowspan_and_repeated_pool(self):
+  html='<div class="dividend_tab"><table><tbody><tr><td rowspan="1">WIN</td><td>8</td><td>358.50</td></tr><tr><td rowspan="3">PLACE</td><td>8</td><td>97.50</td></tr><tr><td>9</td><td>30.00</td></tr><tr><td>3</td><td>20.00</td></tr><tr><td>QUINELLA</td><td>8,9</td><td>1,670.00</td></tr><tr><td rowspan="3">QUINELLA PLACE</td><td>8,9</td><td>485.00</td></tr><tr><td>3,8</td><td>312.50</td></tr><tr><td>3,9</td><td>81.50</td></tr></tbody></table></div>'
+  payouts=r.parse_dividends_html(html)
+  self.assertEqual(payouts['W'][0]['dividend_hkd'],358.5)
+  self.assertEqual([x['combination'] for x in payouts['QP']],['8,9','3,8','3,9'])
+  with self.assertRaises(RuntimeError):r.parse_dividends_html(html.replace('QUINELLA PLACE','No payout'))
+ def test_overnight_reconciliation_includes_missed_t3_race(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   root=Path(tmp);day=root/'2026-09-27'/'early'
+   r.atomic(day/'status.json',{'horse103':{'1':{'status':'saved'},'2':{'status':'unavailable'}}})
+   r.atomic(day/'horse103'/'race_01.json',{'race':{'venue':'ST'},'ranking':[{'horse_number':8}],'live103_raw':{'candidates':[{'horseNumber':8}]}})
+   payout={'source_url':'https://racing.hkjc.com/','top4':[8,9,3,6],'dividends':{'W':[{'combination':'8','dividend_hkd':358.5}]},'settlement_status':'complete'}
+   with patch.object(reconcile,'fetch_official_result',side_effect=lambda *_:json.loads(json.dumps(payout))) as fetch:
+    report=reconcile.reconcile('2026-09-27',root,workers=1)
+   self.assertEqual(report['complete'],2)
+   self.assertEqual(fetch.call_count,2)
+   missed=json.loads((root/'2026-09-27'/'settlement'/'race_02.json').read_text())
+   self.assertNotIn('banker',missed)
+   self.assertEqual(missed['dividends']['W'][0]['dividend_hkd'],358.5)
  def test_parse_official_result_and_annotate_message(self):
   body='<div class="performance"><table><tbody>'+''.join(f'<tr><td>{p}</td><td>{h}</td><td>Horse</td></tr>' for p,h in [(1,4),(2,9),(3,3),(4,10)])+'</tbody></table></div>'
   entries=r.parse_result_html(body)

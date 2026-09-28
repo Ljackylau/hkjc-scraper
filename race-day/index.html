@@ -4,25 +4,33 @@
 <style>
 :root{color-scheme:dark;--panel:#132038;--line:#304761;--red:#d9404b;--red-dark:#641c27}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#09111f;color:#eaf1fb;font:16px system-ui}main{max-width:1200px;margin:auto;padding:20px}header,section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}h1{font-size:28px;margin:0}h2,h3{margin-top:0}a{color:#88caff}button,input{font:inherit;background:#223b55;color:white;border:1px solid #53718b;border-radius:9px;padding:10px}.muted{color:#aabcce;font-size:14px}.pick{font-size:24px;color:#f2ca76}.races{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.card{background:#0c1728;border:1px solid var(--line);border-radius:12px;padding:16px}.copyline{white-space:pre-wrap;background:#071321;border:1px solid #3b536f;border-radius:9px;padding:13px;margin:10px 0;line-height:1.6}.copybar,.datebar,.racebar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.bad{color:#ffb494}.good{color:#81d5a8}small{display:block;margin-top:8px}.utility{margin-top:12px}.utility summary,.info summary,.card details summary{color:#9bd1ff;cursor:pointer;padding:6px 0}.tabs{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding:8px 0 10px;background:#09111f}.tab{margin:0;min-height:48px;background:var(--red-dark);border-color:#a63542;font-weight:750;color:#ffdadd}.tab.active{background:var(--red);border-color:#ff7580;color:white;box-shadow:0 4px 18px #d9404b55}.tab-panel[hidden]{display:none}.racebar{position:sticky;top:66px;z-index:15;background:var(--panel);padding:8px 0 12px;margin-bottom:8px}.race-scroll{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;flex:1;padding:2px}.race-scroll::-webkit-scrollbar{display:none}.race-chip{flex:0 0 auto;min-width:44px;padding:9px 11px;margin:0}.race-chip.active{background:var(--red);border-color:#ff7580}.race-move{margin:0;padding:9px 12px}.card-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.card-head h2{margin:0}.copy-race{width:100%;margin:0 0 8px}.footer-note{text-align:center}.refreshing{opacity:.65;pointer-events:none}.history-wrap{overflow-x:auto}.history-table{width:100%;border-collapse:collapse;min-width:620px}.history-table th,.history-table td{padding:11px 9px;border-bottom:1px solid var(--line);text-align:left}.history-table th{color:#9bd1ff;position:sticky;top:66px;background:var(--panel)}
 @media(max-width:700px){main{padding:10px 12px 90px}header,section{padding:15px;border-radius:14px;margin-bottom:12px}header h1{font-size:25px}.subtitle{margin:8px 0 10px}.datebar{display:grid;grid-template-columns:auto 1fr auto}.datebar input{width:100%;min-width:0}.health{line-height:1.45;margin-bottom:0}.tabs{margin:0 -1px}.tab{font-size:14px;padding:9px 4px}.races{display:block}.card{padding:14px}.card[hidden]{display:none}.copyline{font-size:16px}.desktop-intro{display:none}.racebar{top:66px}.race-scroll{max-width:calc(100vw - 126px)}}
+:root{--panel:#111e32;--line:#293b52;--red:#e05961;--gold:#f5cb77;--mint:#78d5ad}
+body{background:radial-gradient(ellipse 90% 430px at 50% -100px,#17304b,#09111f 80%);letter-spacing:.01em}
+main{max-width:1120px;padding-bottom:90px}header{padding:22px 26px;background:linear-gradient(135deg,#1b3452,#101c30 65%);border-color:#385878}
+h1{font-size:27px;letter-spacing:-.03em}.subtitle{color:#a3bcd1;margin:7px 0 16px}
+h2{font-size:21px}.datebar{max-width:390px}.datebar input{min-height:44px;flex:1}.health{font-size:13px;line-height:1.5;margin:14px 0 0}
+button{cursor:pointer;transition:background .15s,border-color .15s,transform .15s}button:hover{border-color:#8ea9bf}button:active{transform:scale(.98)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.tabs{top:auto;bottom:0;position:fixed;left:50%;transform:translateX(-50%);width:min(100%,1120px);padding:9px max(12px,env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom));background:#0b1728ee;backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:18px 18px 0 0;box-shadow:0 -12px 32px #050c18aa;z-index:30}
+.tab{background:transparent;border:0;color:#9dafbf;min-height:48px;font-size:15px}.tab.active{background:#284661;border:1px solid #668daa;color:#fff;box-shadow:none}
+.tab-panel{min-height:260px}.racebar{top:0;border-bottom:1px solid var(--line);padding:8px 0;background:var(--panel)}.race-chip{border-radius:999px;background:#1e354d;border:1px solid #45617d}.race-chip.active{background:#e5b65c;color:#172438;border-color:#e5b65c;font-weight:800}
+.races{grid-template-columns:repeat(auto-fit,minmax(350px,1fr))}.card{background:#0d1a2c;border-color:#2c4660;box-shadow:0 9px 22px #050b1590}.card-head{padding-bottom:10px;border-bottom:1px solid var(--line)}.card-head h2{font-size:23px}.copyline{font-size:17px;line-height:1.85;border:0;background:transparent;padding:13px 0 6px;margin:0;white-space:pre-wrap}.copy-race{background:#294c65;border-color:#457594;color:#fff;font-weight:700;min-height:45px}.pick{color:var(--gold)}
+.signal-label{font-size:12px;letter-spacing:.08em;color:#91afc6;text-transform:uppercase}.signal-pick{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:7px 0 14px}.horse-number{display:inline-flex;align-items:center;justify-content:center;min-width:56px;padding:9px 13px;border-radius:13px;background:#614923;color:#ffdd94;font-size:23px;font-weight:850;line-height:1}.horse-number.secondary{background:#263e56;color:#dceeff}.signal-line{font-size:16px;margin:8px 0;line-height:1.65}.signal-copy{white-space:pre-wrap}.status-chip{display:inline-block;padding:4px 9px;border-radius:999px;font-size:12px;background:#213d4b;color:#a4dfc7}.status-chip.waiting{background:#493b24;color:#f6d286}.status-chip.error{background:#562e37;color:#ffbfc5}
+.section-intro{color:#9ab0c3;font-size:14px;line-height:1.55;margin:-4px 0 16px}.market-switch{display:flex;gap:8px;margin-bottom:16px}.market-switch button.active{background:#345874;border-color:#82b5d5}.history-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}.history-tools select{font:inherit;background:#21374d;color:white;border:1px solid #53718b;border-radius:9px;padding:10px}.history-list{display:grid;gap:11px}.history-day{border:1px solid var(--line);border-radius:15px;overflow:hidden;background:#0d1a2c}.history-day>h3{margin:0;padding:13px 16px;background:#1a3148;color:#f3cf8a;font-size:17px}.history-race{padding:13px 16px;border-top:1px solid #30445c}.history-race>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:9px;flex-wrap:wrap}.history-race>summary::-webkit-details-marker{display:none}.history-race>summary:after{content:'⌄';margin-left:auto;color:#9cb4cb}.history-race[open]>summary:after{content:'⌃'}.history-race strong{font-size:17px;color:#fff}.history-race .muted{font-size:13px}.history-detail{padding-top:12px;line-height:1.65}.history-detail p{margin:6px 0}.dividend-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:13px}.dividend-item{border:1px solid #354d64;background:#172c42;border-radius:10px;padding:10px}.dividend-item b{display:block;color:#f2ce86;margin-bottom:3px}.dividend-item span{font-size:13px}.history-table{min-width:680px}.history-table th{position:static}.system-link{display:block;padding:13px 16px;border:1px solid #45617c;border-radius:11px;background:#1d3449;margin-bottom:10px;text-decoration:none}.system-link:hover{background:#2b4864}
+@media(max-width:700px){main{padding:12px 12px 115px}header,section{padding:16px;margin-bottom:12px}header h1{font-size:23px}.subtitle{font-size:13px}.health{font-size:12px}.racebar{top:0}.race-scroll{max-width:calc(100vw - 116px)}.races{display:block}.card{padding:16px}.copyline{font-size:15px}.tab{font-size:14px}.dividend-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
-<main><header><h1>Race Day｜賽日控制台</h1><p class="subtitle">Horse103 T−3 賽日資訊</p>
+<main><header><h1>Horse103 <span style="color:#f1cc82">Race Day</span></h1><p class="subtitle">賽前訊號・即時市場・正式賽果</p>
 <div class="datebar"><label for="date">賽日</label><input type="date" id="date"><button id="load">查看</button></div>
 <p id="health" class="muted health">尚未載入資料</p>
-<details class="utility"><summary>啟動、停止及備份</summary>
-<p><a href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止：開啟 GitHub Runner ↗</a></p>
-<p><a href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載 Horse103 歷史備份 ↗</a></p>
-<p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉本頁不會停止收集。</p></details>
 </header>
-<nav class="tabs" aria-label="資料分類"><button class="tab active" data-tab="horse">比賽Tips</button><button class="tab" data-tab="hkjc">HKJC市場</button><button class="tab" data-tab="challenge">騎練數據</button><button class="tab" data-tab="history">賽果紀錄</button></nav>
+<nav class="tabs" aria-label="資料分類"><button class="tab active" data-tab="horse">◉ 今日</button><button class="tab" data-tab="hkjc">⌁ 市場</button><button class="tab" data-tab="history">▤ 歷史</button><button class="tab" data-tab="system">⚙ 系統</button></nav>
 <section id="horse" class="tab-panel"><div class="racebar"><button id="prevRace" class="race-move" aria-label="上一場">‹</button><div id="raceNav" class="race-scroll"></div><button id="nextRace" class="race-move" aria-label="下一場">›</button><button id="refreshNow" class="race-move" aria-label="立即更新">↻</button></div>
-<details class="info"><summary>公式及訊號說明</summary><p class="muted">現行公式：50% 即場解碼 valueIndex ＋ 33.33% 位置Q資金 ＋ 8.33% 連贏Q資金 ＋ 8.33% 正規化獨贏賠率強度。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應；舊賽日保留當日已鎖定排名。</p><p class="muted">（QP集中）：主選位置Q金額至少是同場其他馬最高金額的1.5倍；只描述資金分布，不代表入三甲信心。</p></details><div class="copybar"><button id="copyAll" hidden>複製所有已鎖定場次</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
-<section id="hkjc" class="tab-panel" hidden><h2>HKJC 獨立市場快照（觀察）</h2><p class="muted">每場收集獨贏、位置、連贏及位置Q賠率變化。優先比較 T−30→T−3；若基準較遲取得，會標示實際起點，最遲接受 T−10。</p><div id="hkjcCards" class="races"></div></section>
-<section id="challenge" class="tab-panel" hidden><h2>騎師王／練馬師王研究紀錄</h2>
+<div class="copybar"><button id="copyAll" hidden>複製全日推介</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
+<section id="hkjc" class="tab-panel" hidden><h2>市場觀察</h2><p class="section-intro">HKJC T−30 至 T−3 賠率變化；騎練王屬研究資料，不影響主選。</p><div class="market-switch"><button id="marketOdds" class="active">馬匹市場</button><button id="marketChallenge">騎師／練馬師王</button></div><div id="hkjcCards" class="races"></div><div id="challenge" hidden><h3>騎師王／練馬師王</h3>
 <p class="muted">啟動同一個 Run 後，每分鐘獨立保存兩個王的賠率；關閉本頁仍會收集。開售跌幅反映整個王的市場變化，並非下一場馬匹勝算，不影響 Horse103 推薦。</p>
-<p class="muted">同時保存各場馬匹／騎練對應及可取得的積分。缺少積分、剩餘坐騎或來源時間時保留「未知」；末段停賣亦不當成新訊號。</p>
-<div id="challengeCards" class="races"><p class="muted">正在檢查研究紀錄…</p></div></section>
-<section id="history" class="tab-panel" hidden><h2>推介及賽果紀錄</h2><p class="muted">膽及腳保留當時賽前紀錄；賽果只採用HKJC正式結果。</p><div id="historyRows" class="history-wrap"><p class="muted">正在載入…</p></div></section>
-<p class="muted footer-note">本頁每分鐘自動更新；畫面會保留目前分頁及場次。</p></main>
+<div id="challengeCards" class="races"><p class="muted">正在檢查研究紀錄…</p></div></div></section>
+<section id="history" class="tab-panel" hidden><h2>推介及正式賽果</h2><p class="section-intro">賽前記錄保留原樣；派彩金額按馬會公布單位顯示。缺少舊紀錄會標明未有紀錄。</p><div class="history-tools"><label for="historyDate">賽日</label><select id="historyDate"><option value="all">全部日期</option></select><span id="historyCount" class="muted"></span></div><div id="historyRows" class="history-list"><p class="muted">正在載入…</p></div></section>
+<section id="system" class="tab-panel" hidden><h2>系統與資料狀態</h2><p class="section-intro">賽日啟動一次 Runner，系統會自動收集、通知及翌日覆核正式派彩。</p><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止 Race Day Runner ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-settlement.yml" target="_blank" rel="noopener">查看正式賽果覆核 ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載歷史備份 ↗</a><p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉網站不會停止收集。</p><details class="info"><summary>公式及訊號說明</summary><p class="muted">50% 即場解碼 valueIndex ＋ 33.33% 位置Q資金 ＋ 8.33% 連贏Q資金 ＋ 8.33% 正規化獨贏賠率強度。QP集中：主選位置Q金額至少是其他馬最高金額1.5倍。排名不是概率。</p></details></section>
+<p class="muted footer-note">賽日頁每分鐘自動更新；正式派彩以馬會公布為準。</p></main>
 <script src="challenge.js"></script>
 <script>
 const $=id=>document.getElementById(id);
@@ -51,13 +59,32 @@ async function latestRaceDate(){
 }
 const labels={waiting:'等待 T−3',saved:'已保存',partial:'T−3 原始資料已保存；未完成排名',missed:'錯過 T−3',retrying:'重試中',unavailable:'資料不足'};
 function selectTab(name){
- if(!['horse','hkjc','challenge','history'].includes(name))name='horse';
+ if(name==='challenge')name='hkjc';
+ if(!['horse','hkjc','history','system'].includes(name))name='horse';
  activeTab=name;sessionStorage.setItem('raceDayTab',name);
  document.querySelectorAll('.tab').forEach(tab=>{const on=tab.dataset.tab===name;tab.classList.toggle('active',on);tab.setAttribute('aria-selected',String(on))});
  document.querySelectorAll('.tab-panel').forEach(panel=>{panel.hidden=panel.id!==name});
  if(name==='history')refreshHistory();
 }
 
+let historyRows=[];
+const payoutNames={W:'獨贏',P:'位置',Q:'連贏',QP:'位置Q',FCT:'二重彩',TIERCE:'三重彩',TRIO:'單T',FIRST4:'四連環',QUARTET:'四重彩'};
+function historyView(){
+ const chosen=$('historyDate').value;
+ const rows=historyRows.filter(row=>chosen==='all'||row.date===chosen);
+ $('historyCount').textContent=`${rows.length} 場有紀錄`;
+ const days=new Map();for(const row of rows){if(!days.has(row.date))days.set(row.date,[]);days.get(row.date).push(row)}
+ const horse=(number,positions)=>`${esc(number)}號${positions.has(Number(number))?`（${positions.get(Number(number))}）`:''}`;
+ $('historyRows').innerHTML=[...days].map(([day,group])=>`<div class="history-day"><h3>${esc(day)} <small style="display:inline;margin-left:8px;color:#a3b7c9">${group.length} 場</small></h3>${group.map(row=>{
+  const positions=new Map((row.top4||[]).map((number,i)=>[Number(number),['第一','第二','第三','第四'][i]]));
+  const picks=[row.banker,...(row.additional_picks||[])].filter(x=>x!=null).map(x=>horse(x,positions)).join('、')||'未有紀錄';
+  const legs=row.legs===null||row.legs===undefined?'未有紀錄':row.legs.length?row.legs.map(x=>horse(x,positions)).join('、'):'無';
+  const pools=row.dividends||{};
+  const payout=Object.entries(payoutNames).map(([pool,title])=>pools[pool]?.length?`<div class="dividend-item"><b>${title}</b>${pools[pool].map(x=>`<span>${esc(x.combination)}　HK$${esc(Number(x.dividend_hkd).toLocaleString('en-HK',{minimumFractionDigits:2}))}</span>`).join('<br>')}</div>`:'').join('');
+  const state=row.settlement_status==='complete'?'正式派彩已核實':payout?'部分派彩':'派彩未有紀錄';
+  return `<details class="history-race"><summary><strong>R${esc(row.race)}</strong><span class="muted">膽 ${picks}</span><span class="status-chip ${payout?'':'waiting'}">${state}</span></summary><div class="history-detail"><p>膽：${picks}</p><p>腳：${legs}</p><p>賽果：${esc((row.top4||[]).join('－')||'未有紀錄')}</p>${payout?`<div class="dividend-grid">${payout}</div>`:'<p class="muted">正式派彩尚未保存。</p>'}${row.source_url?`<p><a href="${esc(row.source_url)}" target="_blank" rel="noopener">馬會原始賽果 ↗</a></p>`:''}</div></details>`
+ }).join('')}</div>`).join('')||'<p class="muted">此日期未有紀錄。</p>';
+}
 async function refreshHistory(){
  try{
   await currentRef();if(historyLoadedRef===dataRef)return;
@@ -67,18 +94,15 @@ async function refreshHistory(){
   const rows=backfillResponse.ok?await backfillResponse.json():[];
   if(treeResponse.ok){
    const tree=await treeResponse.json();
-   const paths=(tree.tree||[]).map(x=>x.path).filter(path=>/^race-day-data\/\d{4}-\d{2}-\d{2}\/(early|late|recovery)\/results\/race_\d{2}\.json$/.test(path));
+   const paths=(tree.tree||[]).map(x=>x.path).filter(path=>/^race-day-data\/\d{4}-\d{2}-\d{2}\/(?:settlement|(?:early|late|recovery)\/results)\/race_\d{2}\.json$/.test(path));
    const live=await Promise.all(paths.map(async path=>{try{const r=await fetch(`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${dataRef}/${path}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});return r.ok?await r.json():null}catch(e){return null}}));
    rows.push(...live.filter(Boolean));
   }
-  const merged=new Map();for(const row of rows)if(row?.date&&row?.race)merged.set(`${row.date}-${row.race}`,row);
-  const ordered=[...merged.values()].sort((a,b)=>b.date.localeCompare(a.date)||Number(a.race)-Number(b.race));
-  const body=ordered.map(row=>{
-   const labels=['第一','第二','第三','第四'],positions=new Map((row.top4||[]).map((horse,i)=>[Number(horse),labels[i]]));
-   const horse=number=>`${esc(number)}號${positions.has(Number(number))?`（${positions.get(Number(number))}）`:''}`;
-   return `<tr><td>${esc(row.date)}</td><td>R${esc(row.race)}</td><td>${row.banker?horse(row.banker):'—'}</td><td>${(row.legs||[]).length?row.legs.map(horse).join('、'):'無'}</td><td>${esc((row.top4||[]).join('－')||'未有')}</td></tr>`
-  }).join('');
-  $('historyRows').innerHTML=`<table class="history-table"><thead><tr><th>日期</th><th>場次</th><th>膽</th><th>腳</th><th>賽果</th></tr></thead><tbody>${body||'<tr><td colspan="5">尚未有賽果紀錄</td></tr>'}</tbody></table>`;
+  const merged=new Map();for(const row of rows)if(row?.date&&row?.race){const key=`${row.date}-${row.race}`,old=merged.get(key)||{};merged.set(key,{...old,...row,banker:row.banker??old.banker,additional_picks:row.additional_picks??old.additional_picks,legs:row.legs??old.legs})}
+  historyRows=[...merged.values()].sort((a,b)=>b.date.localeCompare(a.date)||Number(a.race)-Number(b.race));
+  const chosen=$('historyDate').value,dates=[...new Set(historyRows.map(row=>row.date))];
+  $('historyDate').innerHTML='<option value="all">全部日期</option>'+dates.map(date=>`<option value="${esc(date)}">${esc(date)}</option>`).join('');
+  $('historyDate').value=dates.includes(chosen)?chosen:'all';historyView();
   historyLoadedRef=dataRef;
  }catch(e){$('historyRows').innerHTML=`<p class="bad">暫時未能載入賽果紀錄：${esc(e.message)}</p>`}
 }
@@ -183,7 +207,7 @@ async function refresh(){
   fallbackChecked=true;const latest=await latestRaceDate();
   if(latest&&latest!==selected){fallbackNotice=`今日未有賽事資料；已顯示最近賽日 ${latest}。`;selected=latest;$('date').value=latest;await refresh();await refreshChallenges();return}
  }
- $('health').textContent=(fallbackNotice?fallbackNotice+' ':'')+data.map(d=>d.missing?`${d.phase==='early'?'前':'後'}半場：未取得紀錄`:`${d.phase==='early'?'前':'後'}半場：${d.state}｜更新 ${new Date(d.updated_at).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}${Date.now()-Date.parse(d.updated_at)>180000?'｜超過3分鐘未更新':''}`).join('　／　');
+ $('health').textContent=(fallbackNotice?fallbackNotice+' ':'')+data.map(d=>d.missing?`${d.phase==='early'?'前':'後'}半場：未取得紀錄`:`${d.phase==='early'?'前':'後'}半場：${d.state==='finished'?'已完成':d.state}｜更新 ${new Date(d.updated_at).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}${d.state==='running'&&Date.now()-Date.parse(d.updated_at)>180000?'｜超過3分鐘未更新':''}`).join('　／　');
  if(selected==='2026-09-16')try{
   const response=await fetch(`${base()}/recovery/status.json`,{signal:AbortSignal.timeout(10000)});
   if(response.ok){const recovery=await response.json();
@@ -213,7 +237,14 @@ async function refresh(){
  for(const d of data)for(const [n,s]of Object.entries(d.horse103||{})){
  const picks=s.picks||[];const text=picks.map(h=>`${h.horse_number} ${h.name_tc||''}`);
  const line=summary(n,s);copyRows.set(+n,{text:line,saved:s.status==='saved'&&picks.length>0});
- cards.push({n:+n,html:`<div class="card" data-race="${esc(n)}"><div class="card-head"><h2>R${esc(n)}</h2><span class="${s.status==='saved'?'good':'muted'}">${esc(labels[s.status]||s.status)}</span></div><div class="copyline">${esc(line)}</div><button class="copy-race" data-copy-race="${esc(n)}">複製 R${esc(n)}</button><details><summary>查看排名及原始資料</summary>${s.target?`<p class="muted">鎖定 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${picks.length?`<p class="pick">主選 ${esc(text[0])}${s.qpConfidence?.qualified?'（QP集中）':''}</p><p>其餘：${esc(text.slice(1).join('、'))}</p>${s.qpConfidence?`<p class="muted">位置Q比值 ${esc(s.qpConfidence.ratio.toFixed(2))} 倍｜主選 ${esc(s.qpConfidence.tickets)} 筆｜${esc(s.qpConfidence.partners)} 個不同配搭</p>`:''}<p class="muted">原解碼順序：${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<p class="bad">${esc(s.error||s.reason||'')}</p>${s.status==='saved'?`<a href="${base()}/${d.phase}/horse103/race_${String(n).padStart(2,'0')}.json" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</details></div>`});
+ const main=Number(picks[0]?.horse_number),original=new Set((s.original||[]).map(Number));
+ const extras=picks.slice(1,5).filter(x=>!original.has(Number(x.horse_number))).map(x=>Number(x.horse_number));
+ const horses=[main,...extras].filter(Number.isInteger).map((number,i)=>`<span class="horse-number ${i?'secondary':''}">${esc(number)}號${s.resultPositions?.[number]?` <small style="display:inline;font-size:12px;margin:0 0 0 5px">${esc(s.resultPositions[number])}</small>`:''}</span>`).join('');
+ const legs=(s.market?.legs||[]).map(x=>annotatedHorse(x,s.resultPositions)).join('、')||'資料未有';
+ const cold=(s.market?.cold||[]).map(x=>annotatedHorse(x,s.resultPositions)).join('、')||'無';
+ const state=s.status==='saved'?(d.results?.[n]?.status==='saved'?'已完賽':'T−3 已鎖定'):(labels[s.status]||s.status);
+ const stateKind=s.status==='saved'?'':s.status==='waiting'?'waiting':'error';
+ cards.push({n:+n,html:`<div class="card" data-race="${esc(n)}"><div class="card-head"><h2>R${esc(n)}</h2><span class="status-chip ${stateKind}">${esc(state)}</span></div>${horses?`<p class="signal-label">獨贏及位置信心馬</p><div class="signal-pick">${horses}${s.qpConfidence?.qualified?'<span class="status-chip">QP 集中</span>':''}</div><p class="signal-line"><span class="signal-label">連贏／位置Q 拖腳</span><br>${legs}</p><p class="signal-line"><span class="signal-label">留意冷馬</span><br>${cold}</p>`:`<p class="signal-line">${esc(s.reason||s.error||state)}</p>`}<button class="copy-race" data-copy-race="${esc(n)}">複製本場推介</button><details><summary>詳細資料及原始快照</summary>${s.target?`<p class="muted">T−3 目標 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${picks.length?`<p>主選 ${esc(text[0])}</p><p>其餘 ${esc(text.slice(1).join('、'))}</p><p class="muted">原解碼順序 ${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<p class="bad">${esc(s.error||s.reason||'')}</p>${s.status==='saved'?`<a href="${base()}/${d.phase}/horse103/race_${String(n).padStart(2,'0')}.json" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</details></div>`});
  }
  cards.sort((a,b)=>a.n-b.n);
  $('cards').innerHTML=cards.map(c=>c.html).join('')||'<p>未有已啟動紀錄。請先在 GitHub 執行 Preflight；賽日執行 Run。</p>';
@@ -229,6 +260,9 @@ async function refresh(){
 $('cards').onclick=e=>{const b=e.target.closest('[data-copy-race]');if(!b)return;const n=Number(b.dataset.copyRace),row=copyRows.get(n);if(row)copyText(row.text,`R${n} `)};
 $('copyAll').onclick=()=>{const value=[...copyRows.entries()].filter(([,x])=>x.saved).sort((a,b)=>a[0]-b[0]).map(([,x])=>x.text).join('\n\n');if(value)copyText(value,'所有已鎖定場次')};
 document.querySelector('.tabs').onclick=e=>{const tab=e.target.closest('[data-tab]');if(tab)selectTab(tab.dataset.tab)};
+$('historyDate').onchange=historyView;
+$('marketOdds').onclick=()=>{$('hkjcCards').hidden=false;$('challenge').hidden=true;$('marketOdds').classList.add('active');$('marketChallenge').classList.remove('active')};
+$('marketChallenge').onclick=()=>{$('hkjcCards').hidden=true;$('challenge').hidden=false;$('marketOdds').classList.remove('active');$('marketChallenge').classList.add('active')};
 $('raceNav').onclick=e=>{const chip=e.target.closest('[data-race]');if(chip)setRace(Number(chip.dataset.race),true)};
 $('prevRace').onclick=()=>{const i=raceNumbers.indexOf(selectedRace);setRace(raceNumbers[Math.max(0,i-1)],true)};
 $('nextRace').onclick=()=>{const i=raceNumbers.indexOf(selectedRace);setRace(raceNumbers[Math.min(raceNumbers.length-1,i+1)],true)};
