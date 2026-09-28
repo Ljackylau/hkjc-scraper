@@ -58,6 +58,33 @@ def baseline_info(sample,target):
             'source_updated':sample['source_updated']}
 
 
+def restore_saved_state(folder, number, date):
+    """Return an immutable successful result left by an earlier workflow run."""
+    t3_path=folder/f'race_{number:02d}_t3.json'
+    if not t3_path.exists():return None
+    try:
+        end=json.loads(t3_path.read_text(encoding='utf-8'))
+        post_time=end['post_time']
+        target=datetime.strptime(date+' '+post_time,'%Y-%m-%d %H:%M').replace(tzinfo=HK)
+        t3=target-timedelta(minutes=3)
+        received=datetime.fromisoformat(end['received_at'])
+        if not t3<=received<=t3+timedelta(seconds=90):return None
+        baseline_path=folder/f'race_{number:02d}_baseline.json'
+        if not baseline_path.exists():
+            return {'status':'missing_baseline','target':t3.isoformat(),
+                    'received_at':end['received_at'],'source_updated':end.get('source_updated'),
+                    'reason':'T−3 raw snapshot was already saved; baseline unavailable','restored':True}
+        saved=json.loads(baseline_path.read_text(encoding='utf-8'))
+        baseline=saved.get('snapshot',saved)
+        ranked=movement(baseline,end)
+        return {'status':'shadow' if ranked else 'no_signal','target':t3.isoformat(),
+                'received_at':end['received_at'],'source_updated':end.get('source_updated'),
+                'baseline':baseline_info(baseline,target),'ranking':ranked[:5],
+                'source':'HKJC odds movement; experimental','restored':True}
+    except (KeyError,TypeError,ValueError,json.JSONDecodeError):
+        return None
+
+
 def clock_from_page(raw, date, number):
     date_label=datetime.strptime(date,'%Y-%m-%d').strftime('%d/%m')
     m=re.search(rf'{date_label}\s*\([^)]*\)\s*,\s*(\d{{1,2}}:\d{{2}})',raw['text'])
@@ -143,6 +170,10 @@ async def capture(page, date, venue, number, route):
 
 
 async def race_job(context,date,venue,number,off,folder,states):
+    restored=restore_saved_state(folder,number,date)
+    if restored:
+        states[str(number)]=restored
+        return
     target=datetime.strptime(date+' '+off,'%Y-%m-%d %H:%M').replace(tzinfo=HK)
     baseline=None;samples=[];dest=folder/f'race_{number:02d}.jsonl'
     states[str(number)]={'status':'waiting','target':(target-timedelta(minutes=3)).isoformat()}
