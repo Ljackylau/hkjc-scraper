@@ -8,6 +8,15 @@ import horse103_copy as h
 import dragon_copy as d
 
 class Tests(unittest.TestCase):
+ def test_tip_notification_matches_website_format(self):
+  snapshot={'ranking':[{'horse_number':4,'qp_amount':150},{'horse_number':9,'qp_amount':90},{'horse_number':3,'qp_amount':80},{'horse_number':10,'qp_amount':70},{'horse_number':1,'qp_amount':60}], 'live103_raw':{'candidates':[{'horseNumber':4},{'horseNumber':9},{'horseNumber':3},{'horseNumber':10},{'horseNumber':1}]}}
+  text=r.format_tip_message(1,snapshot,[9,3,10,1],[])
+  self.assertIn('獨贏&位置信心馬：4號（QP集中）',text)
+  self.assertIn('連贏位置Q：4號 拖 9號、3號、10號、1號',text)
+  self.assertIn('最有可能爆冷馬：無',text)
+ def test_tip_notification_includes_extra_confidence_horse(self):
+  snapshot={'ranking':[{'horse_number':4,'qp_amount':100},{'horse_number':8,'qp_amount':90}], 'live103_raw':{'candidates':[{'horseNumber':4}]}}
+  self.assertIn('獨贏&位置信心馬：4號，8號',r.format_tip_message(2,snapshot,[],[8]))
  def test_formula_and_cutoff(self):
   race={'id':'r','race_number':1};live={'lockTime':'2026-09-09T11:02:00Z','candidates':[{'horseNumber':1,'valueIndex':80},{'horseNumber':2,'valueIndex':60}]}
   entries=[{'horse_number':n,'horses':{'name_tc':str(n)}} for n in [1,2,3]]

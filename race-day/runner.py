@@ -1,5 +1,5 @@
 """Independent combined runner. Never writes original dragon/ or dragon-webapp/."""
-import argparse, asyncio, concurrent.futures, json, os, signal, subprocess, sys, time, shutil, tempfile
+import argparse, asyncio, concurrent.futures, json, os, signal, subprocess, sys, time, shutil, tempfile, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import dragon_copy as dragon
@@ -14,6 +14,87 @@ def atomic(path,value):
     path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
     temp=path.with_suffix(path.suffix+'.tmp')
     temp.write_text(json.dumps(value,ensure_ascii=False,indent=2),encoding='utf-8');temp.replace(path)
+
+def telegram_configured():
+    return bool(os.getenv('TELEGRAM_BOT_TOKEN') and os.getenv('TELEGRAM_CHAT_ID'))
+
+def telegram_send(text):
+    """Send a private alert without ever logging credentials or response bodies."""
+    token=os.getenv('TELEGRAM_BOT_TOKEN');chat=os.getenv('TELEGRAM_CHAT_ID')
+    if not token or not chat:return False
+    body=urllib.parse.urlencode({'chat_id':chat,'text':text,'disable_web_page_preview':'true'}).encode()
+    request=urllib.request.Request(f'https://api.telegram.org/bot{token}/sendMessage',data=body,method='POST')
+    with urllib.request.urlopen(request,timeout=15) as response:
+        if response.status!=200:raise RuntimeError(f'Telegram HTTP {response.status}')
+    return True
+
+def qp_concentrated(snapshot):
+    ranking=snapshot.get('ranking') or []
+    if len(ranking)<2:return False
+    amount=ranking[0].get('qp_amount');others=[row.get('qp_amount') for row in ranking[1:]]
+    if not isinstance(amount,(int,float)) or any(not isinstance(x,(int,float)) for x in others):return False
+    return max(others)>0 and amount>=1.5*max(others)
+
+def format_tip_message(number,snapshot,market=None,cold=None):
+    ranking=snapshot.get('ranking') or [];main=int(ranking[0]['horse_number'])
+    original={int(row['horseNumber']) for row in snapshot.get('live103_raw',{}).get('candidates',[]) if row.get('horseNumber') is not None}
+    extras=[int(row['horse_number']) for row in ranking[1:5] if int(row['horse_number']) not in original]
+    confidence='（QP集中）' if qp_concentrated(snapshot) else ''
+    confidence_horses=f'{main}號{confidence}'+(('，'+'、'.join(f'{n}號' for n in extras)) if extras else '')
+    legs='、'.join(f'{int(n)}號' for n in (market or []) if int(n)!=main) or '無'
+    cold_text='、'.join(f'{int(n)}號' for n in (cold or [])) or '無'
+    return (f'🏇 R{number}｜T−3 已鎖定\n'
+            f'獨贏&位置信心馬：{confidence_horses}\n'
+            f'連贏位置Q：{main}號 拖 {legs}\n'
+            f'最有可能爆冷馬：{cold_text}\n\n'
+            '查看完整資料：https://ljackylau.github.io/hkjc-scraper/race-day/')
+
+def remote_json(url):
+    request=urllib.request.Request(url,headers={'User-Agent':'hkjc-race-day-runner','Cache-Control':'no-cache'})
+    with urllib.request.urlopen(request,timeout=12) as response:return json.load(response)
+
+def remote_market(date,phase,number,main):
+    root=f'https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/race-day-data/race-day-data/{date}/hkjc-{phase}'
+    stamp=int(time.time())
+    status=remote_json(f'{root}/status.json?v={stamp}')
+    race=(status.get('races') or {}).get(str(number)) or {}
+    ranking=[int(row['horse_number']) for row in race.get('ranking') or []]
+    if not ranking:return None,None
+    cold=[]
+    try:
+        signal=remote_json(f'{root}/challenge/race_{number:02d}_tnc_signal.json?v={stamp}')
+        t3=remote_json(f'{root}/race_{number:02d}_t3.json?v={stamp}')
+        trainers={''.join(str(row.get('name','')).split()) for row in signal.get('qualifying') or []}
+        trainer_by_horse={int(row[0]):''.join(str(row[6]).split()) for row in t3.get('runner_rows') or []}
+        cold=[horse for horse in ranking[:5] if trainer_by_horse.get(horse) in trainers]
+    except Exception:pass
+    return [horse for horse in ranking if horse!=main],cold
+
+async def notification_monitor(date,phase,folder,states,finished):
+    if not telegram_configured():return
+    notify_folder=folder/'notifications';notify_folder.mkdir(exist_ok=True)
+    pending_since={}
+    while not finished.is_set() or any(state.get('status')=='saved' and not (notify_folder/f'race_{int(n):02d}.json').exists() for n,state in states.items()):
+        for n,state in list(states.items()):
+            number=int(n);marker=notify_folder/f'race_{number:02d}.json'
+            if state.get('status')!='saved' or marker.exists():continue
+            pending_since.setdefault(number,time.monotonic())
+            snapshot_path=folder/'horse103'/f'race_{number:02d}.json'
+            if not snapshot_path.exists():continue
+            snapshot=json.loads(snapshot_path.read_text(encoding='utf-8'));main=int(snapshot['ranking'][0]['horse_number'])
+            market=cold=None
+            try:market,cold=await asyncio.to_thread(remote_market,date,phase,number,main)
+            except Exception:pass
+            # Allow the parallel HKJC collector one minute to publish the full signal.
+            if market is None and time.monotonic()-pending_since[number]<75:continue
+            message=format_tip_message(number,snapshot,market,cold)
+            try:
+                await asyncio.to_thread(telegram_send,message)
+                atomic(marker,{'sent_at':now().isoformat(),'race':number,'message':message})
+                print('Telegram R',number,'sent',flush=True)
+            except Exception as e:print('Telegram R',number,'retry:',str(e)[:160],flush=True)
+        try:await asyncio.wait_for(finished.wait(),timeout=5)
+        except asyncio.TimeoutError:pass
 def plan(date):
     datetime.strptime(date,'%Y-%m-%d')
     races=horse.get_races(date)
@@ -176,7 +257,8 @@ async def run(args):
     dragon_config={'date':args.date,'venue':'ST' if races[0]['venue'] in ('沙田','ST') else 'HV','times':[r['post_time'] for r in races],'race_numbers':numbers,'source':config['source']}
     tasks=[asyncio.create_task(dragon.collect(dragon_config,False,False))]
     tasks += [asyncio.create_task(horse_job(r,args.date,folder,states,executor)) for r in races]
-    stop=asyncio.Event();loop=asyncio.get_running_loop()
+    stop=asyncio.Event();jobs_finished=asyncio.Event();loop=asyncio.get_running_loop()
+    notifier=asyncio.create_task(notification_monitor(args.date,args.phase,folder,states,jobs_finished))
     for sig in (signal.SIGTERM,signal.SIGINT):loop.add_signal_handler(sig,stop.set)
     last_push=0;publish_error=None
     try:
@@ -187,13 +269,20 @@ async def run(args):
                 try:await asyncio.to_thread(publish,folder);publish_error=None
                 except Exception as e:publish_error=str(e)[:250];print('Publish retry next minute:',publish_error,flush=True)
                 last_push=time.monotonic()
-            if all(t.done() for t in tasks):break
+            if all(t.done() for t in tasks):
+                jobs_finished.set()
+                try:await asyncio.wait_for(notifier,timeout=95)
+                except asyncio.TimeoutError:notifier.cancel()
+                break
             try:await asyncio.wait_for(stop.wait(),timeout=3)
             except asyncio.TimeoutError:pass
     finally:
+        jobs_finished.set()
         for t in tasks:
             if not t.done():t.cancel()
+        if not notifier.done():notifier.cancel()
         await asyncio.gather(*tasks,return_exceptions=True)
+        await asyncio.gather(notifier,return_exceptions=True)
         atomic(folder/'status.json',{'date':args.date,'phase':args.phase,'updated_at':now().isoformat(),'state':'stopped' if stop.is_set() else 'finished','horse103':states,'publish_error':publish_error})
         if args.push:
             try:await asyncio.to_thread(publish,folder)
