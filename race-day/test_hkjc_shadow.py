@@ -1,6 +1,9 @@
 import unittest
 from datetime import datetime, timedelta
-from hkjc_shadow import HK, parse, movement, choose_baseline, baseline_info, schedule_times
+from hkjc_shadow import HK, parse, movement, choose_baseline, baseline_info, schedule_times, restore_saved_state
+from pathlib import Path
+import json
+import tempfile
 
 
 class HKJCShadowTests(unittest.TestCase):
@@ -61,6 +64,23 @@ class HKJCShadowTests(unittest.TestCase):
         ranked=movement(baseline,t3)
         self.assertEqual(ranked[0]['horse_number'],1)
         self.assertGreater(ranked[0]['score'],ranked[1]['score'])
+
+
+    def test_successful_snapshot_is_restored_after_workflow_restart(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder=Path(tmp);off=datetime(2026,9,27,12,45,tzinfo=HK);t3=off-timedelta(minutes=3)
+            start={'received_at':(off-timedelta(minutes=30)).isoformat(),
+                   'source_updated':{'wp':(off-timedelta(minutes=31)).isoformat(),'wpq':(off-timedelta(minutes=31)).isoformat()},
+                   'odds':{'WIN':{'1':'10'},'PLA':{'1':'4'},'QIN':{'1-2':'20'},'QPL':{'1-2':'15'}}}
+            end={'post_time':'12:45','received_at':(t3+timedelta(seconds=5)).isoformat(),
+                 'source_updated':{'wp':t3.isoformat(),'wpq':t3.isoformat()},
+                 'odds':{'WIN':{'1':'8'},'PLA':{'1':'3'},'QIN':{'1-2':'15'},'QPL':{'1-2':'12'}}}
+            (folder/'race_01_t3.json').write_text(json.dumps(end))
+            (folder/'race_01_baseline.json').write_text(json.dumps({'snapshot':start}))
+            state=restore_saved_state(folder,1,'2026-09-27')
+            self.assertEqual(state['status'],'shadow')
+            self.assertTrue(state['restored'])
+            self.assertEqual(state['target'],t3.isoformat())
 
 
 if __name__=='__main__':unittest.main()
