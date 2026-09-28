@@ -96,8 +96,8 @@ async function loadMarket(n,phase,main,shadowByRace,root){
   if(!signalResponse.ok||!t3Response.ok)return {legs,cold:[]};
   const signal=await signalResponse.json(),snapshot=await t3Response.json();
   const trainers=new Set((signal.qualifying||[]).map(x=>compactName(x.name)));
-  const top5=new Set(ordered.slice(0,5));
-  const cold=(snapshot.runner_rows||[]).filter(row=>top5.has(Number(row[0]))&&trainers.has(compactName(row[6]))).map(row=>Number(row[0]));
+  const trainerByHorse=new Map((snapshot.runner_rows||[]).map(row=>[Number(row[0]),compactName(row[6])]));
+  const cold=ordered.slice(0,5).filter(h=>trainers.has(trainerByHorse.get(h)));
   return {legs,cold:[...new Set(cold)]};
  }catch(e){return {legs,cold:[]}}
 }
