@@ -131,7 +131,7 @@ def t3_candidate(sample,context):
 
 
 def market_drop_signal(samples,sample,race,context,threshold=15):
-    """Compare the first observed quote after the previous off with this T-3 quote."""
+    """Compare the last quote at the previous off with this race's T-3 quote."""
     number=race['race_number']
     previous=next((r for r in context if r['race_number']==number-1),None)
     current_time=datetime.fromisoformat(sample['source_updated_at']) if sample.get('source_updated_at') else None
@@ -143,10 +143,10 @@ def market_drop_signal(samples,sample,race,context,threshold=15):
         stamp=old.get('source_updated_at')
         if old.get('state')!='observed' or not stamp:continue
         when=datetime.fromisoformat(stamp)
-        if previous_off<=when<current_time:eligible.append((when,old))
+        if when<=previous_off:eligible.append((when,old))
     if not eligible:
-        return {'status':'unavailable','reason':'No observed quote after previous race','qualifying':[]}
-    baseline=min(eligible,key=lambda x:x[0])[1]
+        return {'status':'unavailable','reason':'No observed quote at previous race off','qualifying':[]}
+    baseline=max(eligible,key=lambda x:x[0])[1]
     old={compact(p['name']):p for p in baseline['participants'] if p.get('current_odds')}
     changes=[]
     for participant in sample['participants']:

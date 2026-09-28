@@ -3,7 +3,7 @@ from datetime import datetime,timedelta
 from challenge_shadow import HK,parse,parse_points,race_context,t3_candidate,market_drop_signal
 
 class ChallengeTests(unittest.TestCase):
-    def test_trainer_drop_uses_first_quote_after_previous_race(self):
+    def test_trainer_drop_uses_last_quote_at_previous_race_off(self):
         previous=datetime(2026,9,27,13,15,tzinfo=HK)
         def sample(at,odds):
             return {'state':'observed','source_updated_at':at.isoformat(),
@@ -16,8 +16,8 @@ class ChallengeTests(unittest.TestCase):
                  {'race_number':2,'post_time':(previous+timedelta(minutes=30)).isoformat()}]
         signal=market_drop_signal([before,first,later,current],current,{'race_number':2},context)
         self.assertEqual(signal['status'],'observed')
-        self.assertEqual(signal['baseline_source_updated_at'],first['source_updated_at'])
-        self.assertEqual(signal['qualifying'][0]['drop_pct'],25.0)
+        self.assertEqual(signal['baseline_source_updated_at'],before['source_updated_at'])
+        self.assertEqual(signal['qualifying'][0]['drop_pct'],40.0)
 
     def setUp(self):
         self.at=datetime(2026,9,27,12,42,30,tzinfo=HK)
