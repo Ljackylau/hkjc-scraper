@@ -35,6 +35,33 @@ def qp_concentrated(snapshot):
     if not isinstance(amount,(int,float)) or any(not isinstance(x,(int,float)) for x in others):return False
     return max(others)>0 and amount>=1.5*max(others)
 
+def apply_market_formula(snapshot,win_odds):
+    """Re-rank a genuine T-3 Horse103 capture with the independent T-3 WIN snapshot."""
+    ranking=snapshot.get('ranking') or []
+    odds={}
+    for h,value in (win_odds or {}).items():
+        try:
+            if float(value)>0:odds[int(h)]=float(value)
+        except (TypeError,ValueError):pass
+    if not ranking or not odds:return False
+    qp_max=max((float(row.get('qp_amount') or 0) for row in ranking),default=0)
+    q_max=max((float(row.get('q_amount') or 0) for row in ranking),default=0)
+    inverse={horse:1/value for horse,value in odds.items()};inverse_max=max(inverse.values(),default=0)
+    if not inverse_max:return False
+    for row in ranking:
+        number=int(row['horse_number'])
+        vi=float(row.get('live_value_index') or 0)/100
+        qp=float(row.get('qp_amount') or 0)/qp_max if qp_max else 0
+        q=float(row.get('q_amount') or 0)/q_max if q_max else 0
+        win_strength=inverse.get(number,0)/inverse_max
+        row['win_odds']=odds.get(number);row['normalized_win_strength']=round(win_strength,6)
+        row['formula_score']=round(.5*vi+(1/3)*qp+(1/12)*q+(1/12)*win_strength,5)
+    ranking.sort(key=lambda row:(-row['formula_score'],-row['live_value_index'],row['horse_number']))
+    snapshot['formula']='S = 0.50 * (Live103 valueIndex / 100) + 0.3333 * normalized QP amount + 0.0833 * normalized Q amount + 0.0833 * normalized inverse WIN odds'
+    snapshot['formula_source']='Horse103 locked T-3 plus independent HKJC T-3 WIN snapshot'
+    snapshot['main_pick']=ranking[0];snapshot['other_four']=ranking[1:5]
+    return True
+
 def format_tip_message(number,snapshot,market=None,cold=None):
     ranking=snapshot.get('ranking') or [];main=int(ranking[0]['horse_number'])
     original={int(row['horseNumber']) for row in snapshot.get('live103_raw',{}).get('candidates',[]) if row.get('horseNumber') is not None}
@@ -53,25 +80,27 @@ def remote_json(url):
     request=urllib.request.Request(url,headers={'User-Agent':'hkjc-race-day-runner','Cache-Control':'no-cache'})
     with urllib.request.urlopen(request,timeout=12) as response:return json.load(response)
 
-def remote_market(date,phase,number,main):
+def remote_market(date,phase,number):
     root=f'https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/race-day-data/race-day-data/{date}/hkjc-{phase}'
     stamp=int(time.time())
     status=remote_json(f'{root}/status.json?v={stamp}')
     race=(status.get('races') or {}).get(str(number)) or {}
     ranking=[int(row['horse_number']) for row in race.get('ranking') or []]
-    if not ranking:return None,None
+    if not ranking:return None,None,None
     cold=[]
     try:
-        signal=remote_json(f'{root}/challenge/race_{number:02d}_tnc_signal.json?v={stamp}')
         t3=remote_json(f'{root}/race_{number:02d}_t3.json?v={stamp}')
+        win_odds=(t3.get('odds') or {}).get('WIN') or {}
+    except Exception:return ranking,cold,None
+    try:
+        signal=remote_json(f'{root}/challenge/race_{number:02d}_tnc_signal.json?v={stamp}')
         trainers={''.join(str(row.get('name','')).split()) for row in signal.get('qualifying') or []}
         trainer_by_horse={int(row[0]):''.join(str(row[6]).split()) for row in t3.get('runner_rows') or []}
         cold=[horse for horse in ranking[:5] if trainer_by_horse.get(horse) in trainers]
     except Exception:pass
-    return [horse for horse in ranking if horse!=main],cold
+    return ranking,cold,win_odds
 
 async def notification_monitor(date,phase,folder,states,finished):
-    if not telegram_configured():return
     notify_folder=folder/'notifications';notify_folder.mkdir(exist_ok=True)
     pending_since={}
     while not finished.is_set() or any(state.get('status')=='saved' and not (notify_folder/f'race_{int(n):02d}.json').exists() for n,state in states.items()):
@@ -81,13 +110,20 @@ async def notification_monitor(date,phase,folder,states,finished):
             pending_since.setdefault(number,time.monotonic())
             snapshot_path=folder/'horse103'/f'race_{number:02d}.json'
             if not snapshot_path.exists():continue
-            snapshot=json.loads(snapshot_path.read_text(encoding='utf-8'));main=int(snapshot['ranking'][0]['horse_number'])
-            market=cold=None
-            try:market,cold=await asyncio.to_thread(remote_market,date,phase,number,main)
+            snapshot=json.loads(snapshot_path.read_text(encoding='utf-8'))
+            market=cold=win_odds=None
+            try:market,cold,win_odds=await asyncio.to_thread(remote_market,date,phase,number)
             except Exception:pass
             # Allow the parallel HKJC collector one minute to publish the full signal.
             if market is None and time.monotonic()-pending_since[number]<75:continue
+            if win_odds and apply_market_formula(snapshot,win_odds):
+                atomic(snapshot_path,snapshot)
+                state['picks']=snapshot['ranking'][:5]
+                state['formula']='market_normalized_v2'
             message=format_tip_message(number,snapshot,market,cold)
+            if not telegram_configured():
+                atomic(marker,{'processed_at':now().isoformat(),'race':number,'notification':'not configured'})
+                continue
             try:
                 await asyncio.to_thread(telegram_send,message)
                 atomic(marker,{'sent_at':now().isoformat(),'race':number,'message':message})

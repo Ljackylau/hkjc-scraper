@@ -8,6 +8,16 @@ import horse103_copy as h
 import dragon_copy as d
 
 class Tests(unittest.TestCase):
+ def test_market_formula_normalizes_inverse_win_odds(self):
+  snapshot={'ranking':[{'horse_number':1,'live_value_index':50,'qp_amount':100,'q_amount':100},{'horse_number':2,'live_value_index':50,'qp_amount':100,'q_amount':100}]}
+  self.assertTrue(r.apply_market_formula(snapshot,{'1':'10','2':'2'}))
+  self.assertEqual(snapshot['ranking'][0]['horse_number'],2)
+  self.assertEqual(snapshot['ranking'][0]['normalized_win_strength'],1)
+  self.assertIn('normalized inverse WIN odds',snapshot['formula'])
+ def test_market_formula_keeps_snapshot_if_odds_missing(self):
+  snapshot={'ranking':[{'horse_number':1,'live_value_index':50,'qp_amount':100,'q_amount':0}]}
+  self.assertFalse(r.apply_market_formula(snapshot,{}))
+  self.assertNotIn('formula',snapshot)
  def test_tip_notification_matches_website_format(self):
   snapshot={'ranking':[{'horse_number':4,'qp_amount':150},{'horse_number':9,'qp_amount':90},{'horse_number':3,'qp_amount':80},{'horse_number':10,'qp_amount':70},{'horse_number':1,'qp_amount':60}], 'live103_raw':{'candidates':[{'horseNumber':4},{'horseNumber':9},{'horseNumber':3},{'horseNumber':10},{'horseNumber':1}]}}
   text=r.format_tip_message(1,snapshot,[9,3,10,1],[])
