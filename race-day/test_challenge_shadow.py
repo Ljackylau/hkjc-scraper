@@ -1,8 +1,24 @@
 import unittest
 from datetime import datetime,timedelta
-from challenge_shadow import HK,parse,parse_points,race_context,t3_candidate
+from challenge_shadow import HK,parse,parse_points,race_context,t3_candidate,market_drop_signal
 
 class ChallengeTests(unittest.TestCase):
+    def test_trainer_drop_uses_first_quote_after_previous_race(self):
+        previous=datetime(2026,9,27,13,15,tzinfo=HK)
+        def sample(at,odds):
+            return {'state':'observed','source_updated_at':at.isoformat(),
+                    'participants':[{'name':'甲','current_odds':odds}]}
+        before=sample(previous-timedelta(minutes=1),10)
+        first=sample(previous+timedelta(minutes=2),8)
+        later=sample(previous+timedelta(minutes=8),7)
+        current=sample(previous+timedelta(minutes=27),6)
+        context=[{'race_number':1,'post_time':previous.isoformat()},
+                 {'race_number':2,'post_time':(previous+timedelta(minutes=30)).isoformat()}]
+        signal=market_drop_signal([before,first,later,current],current,{'race_number':2},context)
+        self.assertEqual(signal['status'],'observed')
+        self.assertEqual(signal['baseline_source_updated_at'],first['source_updated_at'])
+        self.assertEqual(signal['qualifying'][0]['drop_pct'],25.0)
+
     def setUp(self):
         self.at=datetime(2026,9,27,12,42,30,tzinfo=HK)
         self.raw={'url':'https://bet.hkjc.com/ch/racing/jkc/2026-09-27/ST/1',

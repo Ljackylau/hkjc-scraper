@@ -73,11 +73,33 @@ async function loadConfidence(s,url){
 
 function summary(n,s){
  const picks=s.picks||[];
- if(s.status!=='saved'||!picks.length)return `R${n}\n獨贏&位置信心馬：${s.status==='partial'?'原始T−3已保存，排名未完成':'未能鎖定T−3'}\n連贏位置Q：無`;
+ if(s.status!=='saved'||!picks.length)return `R${n}\n獨贏&位置信心馬：${s.status==='partial'?'原始T−3已保存，排名未完成':'未能鎖定T−3'}\n連贏位置Q：無\n最有可能爆冷馬：無`;
  const main=Number(picks[0].horse_number),originalNumbers=(s.original||[]).map(Number);
  const original=new Set(originalNumbers);
  const extra=picks.slice(1,5).filter(h=>!original.has(Number(h.horse_number))).map(h=>`${h.horse_number}號`);
- return `R${n}\n獨贏&位置信心馬：${main}號${s.qpConfidence?.qualified?'（QP集中）':''}${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${main}號 拖 `
+ const legs=(s.market?.legs||[]).map(h=>`${h}號`).join('、')||'無';
+ const cold=(s.market?.cold||[]).map(h=>`${h}號`).join('、')||'無';
+ return `R${n}\n獨贏&位置信心馬：${main}號${s.qpConfidence?.qualified?'（QP集中）':''}${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${main}號 拖 ${legs}\n最有可能爆冷馬：${cold}`
+}
+const compactName=value=>String(value||'').replace(/\s+/g,'');
+async function loadMarket(n,phase,main,shadowByRace,root){
+ const state=shadowByRace.get(Number(n));
+ const ordered=(state?.ranking||[]).map(h=>Number(h.horse_number)).filter(Number.isInteger);
+ const legs=ordered.filter(h=>h!==main);
+ if(!ordered.length)return {legs,cold:[]};
+ try{
+  const folder=phase==='early'?'hkjc-early':phase==='late'?'hkjc-late':'';
+  if(!folder)return {legs,cold:[]};
+  const [signalResponse,t3Response]=await Promise.all([
+   fetch(`${root}/${folder}/challenge/race_${String(n).padStart(2,'0')}_tnc_signal.json`,{cache:'no-store',signal:AbortSignal.timeout(10000)}),
+   fetch(`${root}/${folder}/race_${String(n).padStart(2,'0')}_t3.json`,{cache:'no-store',signal:AbortSignal.timeout(10000)})]);
+  if(!signalResponse.ok||!t3Response.ok)return {legs,cold:[]};
+  const signal=await signalResponse.json(),snapshot=await t3Response.json();
+  const trainers=new Set((signal.qualifying||[]).map(x=>compactName(x.name)));
+  const top5=new Set(ordered.slice(0,5));
+  const cold=(snapshot.runner_rows||[]).filter(row=>top5.has(Number(row[0]))&&trainers.has(compactName(row[6]))).map(row=>Number(row[0]));
+  return {legs,cold:[...new Set(cold)]};
+ }catch(e){return {legs,cold:[]}}
 }
 async function copyText(value,label){
  try{
@@ -108,6 +130,12 @@ async function refresh(){
  const snapshotBase=base();
  await Promise.all(data.flatMap(d=>Object.entries(d.horse103||{}).map(([n,s])=>loadConfidence(s,`${snapshotBase}/${d.phase}/horse103/race_${String(n).padStart(2,'0')}.json`))));
  if(requested!==selected)return;
+ const shadow=await Promise.all(['hkjc-early','hkjc-late'].map(async phase=>{
+  try{const r=await fetch(`${base()}/${phase}/status.json?v=${Math.floor(Date.now()/30000)}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});return r.ok?{...await r.json(),phase}:null}catch(e){return null}
+ }));
+ const shadowByRace=new Map();for(const phase of shadow)for(const [n,s] of Object.entries(phase?.races||{}))shadowByRace.set(+n,s);
+ await Promise.all(data.flatMap(d=>Object.entries(d.horse103||{}).map(async([n,s])=>{const main=Number(s.picks?.[0]?.horse_number);if(Number.isInteger(main))s.market=await loadMarket(n,d.phase,main,shadowByRace,snapshotBase)})));
+ if(requested!==selected)return;
  const cards=[];copyRows=new Map();
  for(const d of data)for(const [n,s]of Object.entries(d.horse103||{})){
  const picks=s.picks||[];const text=picks.map(h=>`${h.horse_number} ${h.name_tc||''}`);
@@ -116,10 +144,6 @@ async function refresh(){
  }
  $('cards').innerHTML=cards.sort((a,b)=>a.n-b.n).map(c=>c.html).join('')||'<p>未有已啟動紀錄。請先在 GitHub 執行 Preflight；賽日執行 Run。</p>';
  $('copyAll').hidden=![...copyRows.values()].some(x=>x.saved);
- const shadow=await Promise.all(['hkjc-early','hkjc-late'].map(async phase=>{
-  try{const r=await fetch(`${base()}/${phase}/status.json?v=${Math.floor(Date.now()/30000)}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});return r.ok?await r.json():null}catch(e){return null}
- }));
- if(requested!==selected)return;
  const shadowRows=[];
  for(const phase of shadow)for(const [n,s] of Object.entries(phase?.races||{})){
   const picks=(s.ranking||[]).map(h=>`${h.horse_number}號 (${h.score})`).join('、');

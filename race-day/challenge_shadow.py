@@ -130,6 +130,37 @@ def t3_candidate(sample,context):
     return [r for r in context if 90<=r['seconds_to_off']<=180]
 
 
+def market_drop_signal(samples,sample,race,context,threshold=15):
+    """Compare the first observed quote after the previous off with this T-3 quote."""
+    number=race['race_number']
+    previous=next((r for r in context if r['race_number']==number-1),None)
+    current_time=datetime.fromisoformat(sample['source_updated_at']) if sample.get('source_updated_at') else None
+    if not previous or not current_time:
+        return {'status':'unavailable','reason':'No previous race or source timestamp','qualifying':[]}
+    previous_off=datetime.fromisoformat(previous['post_time'])
+    eligible=[]
+    for old in samples:
+        stamp=old.get('source_updated_at')
+        if old.get('state')!='observed' or not stamp:continue
+        when=datetime.fromisoformat(stamp)
+        if previous_off<=when<current_time:eligible.append((when,old))
+    if not eligible:
+        return {'status':'unavailable','reason':'No observed quote after previous race','qualifying':[]}
+    baseline=min(eligible,key=lambda x:x[0])[1]
+    old={compact(p['name']):p for p in baseline['participants'] if p.get('current_odds')}
+    changes=[]
+    for participant in sample['participants']:
+        key=compact(participant['name']);before=old.get(key,{}).get('current_odds');after=participant.get('current_odds')
+        if not before or not after:continue
+        drop=round(100*(before-after)/before,2)
+        changes.append({'name':participant['name'],'before_odds':before,'t3_odds':after,'drop_pct':drop})
+    qualifying=[row for row in changes if row['drop_pct']>=threshold]
+    return {'status':'observed','rule':'trainer odds shortened >=15% after previous race to T-3',
+            'threshold_pct':threshold,'previous_race':number-1,
+            'baseline_source_updated_at':baseline['source_updated_at'],
+            't3_source_updated_at':sample['source_updated_at'],'changes':changes,'qualifying':qualifying}
+
+
 def append(path,value):
     with path.open('a',encoding='utf-8') as f:f.write(json.dumps(value,ensure_ascii=False,separators=(',',':'))+'\n')
 
@@ -155,7 +186,7 @@ async def collect(context,date,venue,clocks,numbers,parent,states,once=False):
     folder=Path(parent)/'challenge';folder.mkdir(parents=True,exist_ok=True)
     status={'date':date,'venue':venue,'state':'starting','pools':{},'research_only':True,
             'interval_seconds':60,'phase_races':numbers}
-    pages={};point_pages={};started=time.monotonic()
+    pages={};point_pages={};history={'jkc':[],'tnc':[]};started=time.monotonic()
     try:
         for kind in ('jkc','tnc'):
             pages[kind]=await context.new_page();point_pages[kind]=await context.new_page()
@@ -172,12 +203,16 @@ async def collect(context,date,venue,clocks,numbers,parent,states,once=False):
                     ps=await asyncio.wait_for(read_points(point_pages[kind],date,kind),timeout=18)
                     sample['points_snapshot']=ps
                 except Exception as e:sample['points_error']=str(e)[:200]
+                history[kind].append(sample)
                 append(folder/f'{kind}.jsonl',sample)
                 for race in t3_candidate(sample,rc):
                     # Keyed by schedule target. Delays create a new index, not a silent overwrite.
                     key=re.sub(r'[^0-9]','',race['post_time'])
                     dest=folder/f'race_{race["race_number"]:02d}_{kind}_t3_{key}.json'
                     if not dest.exists():atomic(dest,{'timing':'first_observed_T-3_to_T-1.5','race':race,'snapshot':sample})
+                    if kind=='tnc':
+                        signal=market_drop_signal(history[kind],sample,race,rc)
+                        atomic(folder/f'race_{race["race_number"]:02d}_tnc_signal.json',signal)
                 atomic(folder/f'{kind}_latest.json',sample)
                 status['pools'][kind]={'state':sample['state'],'samples_this_run':old.get('samples_this_run',0)+1,
                     'received_at':sample['received_at'],'source_updated_at':sample['source_updated_at'],
