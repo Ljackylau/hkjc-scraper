@@ -2,28 +2,34 @@
 <html lang="zh-HK"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Race Day｜Horse103 T−3</title>
 <style>
-:root{color-scheme:dark}body{margin:0;background:#09111f;color:#eaf1fb;font:16px system-ui}main{max-width:1200px;margin:auto;padding:24px}header,section{background:#132038;border:1px solid #304761;border-radius:16px;padding:20px;margin-bottom:18px}h1{font-size:28px;margin:0 0 12px}a{color:#88caff}button,input{font:inherit;background:#223b55;color:white;border:1px solid #53718b;border-radius:8px;padding:10px;margin:4px}.muted{color:#aabcce;font-size:14px}.pick{font-size:25px;color:#f2ca76}.races{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}.card{background:#0c1728;border:1px solid #304761;border-radius:12px;padding:16px}.copyline{white-space:pre-wrap;background:#071321;border:1px solid #3b536f;border-radius:9px;padding:12px;margin:12px 0;line-height:1.55}.copybar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.bad{color:#ffb494}.good{color:#81d5a8}small{display:block;margin-top:10px}
+:root{color-scheme:dark;--panel:#132038;--line:#304761;--red:#d9404b;--red-dark:#641c27}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#09111f;color:#eaf1fb;font:16px system-ui}main{max-width:1200px;margin:auto;padding:20px}header,section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}h1{font-size:28px;margin:0}h2,h3{margin-top:0}a{color:#88caff}button,input{font:inherit;background:#223b55;color:white;border:1px solid #53718b;border-radius:9px;padding:10px}.muted{color:#aabcce;font-size:14px}.pick{font-size:24px;color:#f2ca76}.races{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.card{background:#0c1728;border:1px solid var(--line);border-radius:12px;padding:16px}.copyline{white-space:pre-wrap;background:#071321;border:1px solid #3b536f;border-radius:9px;padding:13px;margin:10px 0;line-height:1.6}.copybar,.datebar,.racebar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.bad{color:#ffb494}.good{color:#81d5a8}small{display:block;margin-top:8px}.utility{margin-top:12px}.utility summary,.info summary,.card details summary{color:#9bd1ff;cursor:pointer;padding:6px 0}.tabs{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:8px 0 10px;background:#09111f}.tab{margin:0;min-height:48px;background:var(--red-dark);border-color:#a63542;font-weight:750;color:#ffdadd}.tab.active{background:var(--red);border-color:#ff7580;color:white;box-shadow:0 4px 18px #d9404b55}.tab-panel[hidden]{display:none}.racebar{position:sticky;top:66px;z-index:15;background:var(--panel);padding:8px 0 12px;margin-bottom:8px}.race-scroll{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;flex:1;padding:2px}.race-scroll::-webkit-scrollbar{display:none}.race-chip{flex:0 0 auto;min-width:44px;padding:9px 11px;margin:0}.race-chip.active{background:var(--red);border-color:#ff7580}.race-move{margin:0;padding:9px 12px}.card-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.card-head h2{margin:0}.copy-race{width:100%;margin:0 0 8px}.footer-note{text-align:center}.refreshing{opacity:.65;pointer-events:none}
+@media(max-width:700px){main{padding:10px 12px 90px}header,section{padding:15px;border-radius:14px;margin-bottom:12px}header h1{font-size:25px}.subtitle{margin:8px 0 10px}.datebar{display:grid;grid-template-columns:auto 1fr auto}.datebar input{width:100%;min-width:0}.health{line-height:1.45;margin-bottom:0}.tabs{margin:0 -1px}.tab{font-size:14px;padding:9px 4px}.races{display:block}.card{padding:14px}.card[hidden]{display:none}.copyline{font-size:16px}.desktop-intro{display:none}.racebar{top:66px}.race-scroll{max-width:calc(100vw - 126px)}}
 </style>
-<main><header><h1>Race Day｜賽日控制台</h1>
-<p>Horse103 T−3 主選及四匹</p>
+<main><header><h1>Race Day｜賽日控制台</h1><p class="subtitle">Horse103 T−3 賽日資訊</p>
+<div class="datebar"><label for="date">賽日</label><input type="date" id="date"><button id="load">查看</button></div>
+<p id="health" class="muted health">尚未載入資料</p>
+<details class="utility"><summary>啟動、停止及備份</summary>
 <p><a href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止：開啟 GitHub Runner ↗</a></p>
-<p><a href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載 Horse103 歷史備份 ↗</a> <span class="muted">選最近成功執行 → Artifacts；下載至手機／電腦可保留獨立副本。</span></p>
-<p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉本頁不會停止收集。</p>
-<label>賽日 <input type="date" id="date"></label><button id="load">查看</button>
-<p id="health" class="muted">尚未載入資料</p>
+<p><a href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載 Horse103 歷史備份 ↗</a></p>
+<p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉本頁不會停止收集。</p></details>
 </header>
-<section id="horse"><p class="muted">現行公式：60% 即場解碼 valueIndex ＋ 20% 位置Q資金 ＋ 20% 連贏Q資金。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應。舊賽日保留當日已鎖定的原公式排名。</p><p class="muted">（QP集中）：主選位置Q金額至少是同場其他馬最高金額的1.5倍；只描述資金分布，不代表入三甲信心。每場另列原始票數及不同配搭數；賠率比較仍屬研究，未用於選馬。</p><div class="copybar"><button id="copyAll" hidden>複製所有已鎖定場次</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
-<section id="hkjc"><h2>HKJC 獨立市場快照（觀察）</h2><p class="muted">每場收集獨贏、位置、連贏及位置Q賠率變化。優先比較 T−30→T−3；若基準較遲取得，會標示實際起點，最遲接受 T−10。下方係實驗排名，未有足夠賽日驗證，唔會代替 Horse103 主選。</p><div id="hkjcCards" class="races"></div></section>
-<section id="challenge"><h2>騎師王／練馬師王研究紀錄</h2>
+<nav class="tabs" aria-label="資料分類"><button class="tab active" data-tab="horse">比賽Tips</button><button class="tab" data-tab="hkjc">HKJC市場</button><button class="tab" data-tab="challenge">騎練數據</button></nav>
+<section id="horse" class="tab-panel"><div class="racebar"><button id="prevRace" class="race-move" aria-label="上一場">‹</button><div id="raceNav" class="race-scroll"></div><button id="nextRace" class="race-move" aria-label="下一場">›</button><button id="refreshNow" class="race-move" aria-label="立即更新">↻</button></div>
+<details class="info"><summary>公式及訊號說明</summary><p class="muted">現行公式：60% 即場解碼 valueIndex ＋ 20% 位置Q資金 ＋ 20% 連贏Q資金。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應。</p><p class="muted">（QP集中）：主選位置Q金額至少是同場其他馬最高金額的1.5倍；只描述資金分布，不代表入三甲信心。</p></details><div class="copybar"><button id="copyAll" hidden>複製所有已鎖定場次</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
+<section id="hkjc" class="tab-panel" hidden><h2>HKJC 獨立市場快照（觀察）</h2><p class="muted">每場收集獨贏、位置、連贏及位置Q賠率變化。優先比較 T−30→T−3；若基準較遲取得，會標示實際起點，最遲接受 T−10。</p><div id="hkjcCards" class="races"></div></section>
+<section id="challenge" class="tab-panel" hidden><h2>騎師王／練馬師王研究紀錄</h2>
 <p class="muted">啟動同一個 Run 後，每分鐘獨立保存兩個王的賠率；關閉本頁仍會收集。開售跌幅反映整個王的市場變化，並非下一場馬匹勝算，不影響 Horse103 推薦。</p>
 <p class="muted">同時保存各場馬匹／騎練對應及可取得的積分。缺少積分、剩餘坐騎或來源時間時保留「未知」；末段停賣亦不當成新訊號。</p>
 <div id="challengeCards" class="races"><p class="muted">正在檢查研究紀錄…</p></div></section>
-<p class="muted">本頁約每分鐘讀取摘要；顯示時間包含資料發佈與快取延遲。</p></main>
+<p class="muted footer-note">本頁每分鐘自動更新；畫面會保留目前分頁及場次。</p></main>
 <script src="challenge.js"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hkToday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Hong_Kong',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts().map(x=>[x.type,x.value]));return `${p.year}-${p.month}-${p.day}`};
-let selected=hkToday(),dataRef='',refChecked=0,copyRows=new Map();$('date').value=selected;
+let selected=hkToday(),dataRef='',refChecked=0,copyRows=new Map();
+let activeTab=sessionStorage.getItem('raceDayTab')||'horse';
+let selectedRace=Number(sessionStorage.getItem('raceDayRace')||1),raceNumbers=[];
+$('date').value=selected;
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const base=()=>`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${dataRef||'race-day-data'}/race-day-data/${selected}`;
 async function currentRef(){
@@ -34,6 +40,26 @@ async function currentRef(){
  return dataRef
 }
 const labels={waiting:'等待 T−3',saved:'已保存',partial:'T−3 原始資料已保存；未完成排名',missed:'錯過 T−3',retrying:'重試中',unavailable:'資料不足'};
+function selectTab(name){
+ if(!['horse','hkjc','challenge'].includes(name))name='horse';
+ activeTab=name;sessionStorage.setItem('raceDayTab',name);
+ document.querySelectorAll('.tab').forEach(tab=>{const on=tab.dataset.tab===name;tab.classList.toggle('active',on);tab.setAttribute('aria-selected',String(on))});
+ document.querySelectorAll('.tab-panel').forEach(panel=>{panel.hidden=panel.id!==name});
+}
+function setRace(n,scroll=false){
+ if(!raceNumbers.length)return;
+ const next=raceNumbers.includes(Number(n))?Number(n):raceNumbers[0];
+ selectedRace=next;sessionStorage.setItem('raceDayRace',String(next));
+ document.querySelectorAll('.race-chip').forEach(chip=>chip.classList.toggle('active',Number(chip.dataset.race)===next));
+ const mobile=matchMedia('(max-width:700px)').matches;
+ document.querySelectorAll('#cards .card').forEach(card=>{card.hidden=mobile&&Number(card.dataset.race)!==next});
+ if(scroll)document.querySelector(`.race-chip[data-race="${next}"]`)?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+function renderRaceNav(numbers){
+ raceNumbers=[...new Set(numbers.map(Number).filter(Number.isInteger))].sort((a,b)=>a-b);
+ $('raceNav').innerHTML=raceNumbers.map(n=>`<button class="race-chip" data-race="${n}">R${n}</button>`).join('');
+ setRace(selectedRace);
+}
 
 // QP signal uses the complete captured ranking, never the five summary picks.
 const signalCache=new Map();
@@ -140,9 +166,11 @@ async function refresh(){
  for(const d of data)for(const [n,s]of Object.entries(d.horse103||{})){
  const picks=s.picks||[];const text=picks.map(h=>`${h.horse_number} ${h.name_tc||''}`);
  const line=summary(n,s);copyRows.set(+n,{text:line,saved:s.status==='saved'&&picks.length>0});
- cards.push({n:+n,html:`<div class="card"><h2>R${esc(n)} <span class="muted">${esc(labels[s.status]||s.status)}</span></h2>${s.target?`<p class="muted">鎖定 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${picks.length?`<p class="pick">主選 ${esc(text[0])}${s.qpConfidence?.qualified?'（QP集中）':''}</p><p>其餘：${esc(text.slice(1).join('、'))}</p>${s.qpConfidence?`<p class="muted">位置Q比值 ${esc(s.qpConfidence.ratio.toFixed(2))} 倍｜主選 ${esc(s.qpConfidence.tickets)} 筆｜${esc(s.qpConfidence.partners)} 個不同配搭</p>`:''}<p class="muted">原解碼順序：${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<div class="copyline">${esc(line)}</div><button data-copy-race="${esc(n)}">複製 R${esc(n)}</button><p class="bad">${esc(s.error||s.reason||'')}</p>${s.status==='saved'?`<a href="${base()}/${d.phase}/horse103/race_${String(n).padStart(2,'0')}.json" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</div>`});
+ cards.push({n:+n,html:`<div class="card" data-race="${esc(n)}"><div class="card-head"><h2>R${esc(n)}</h2><span class="${s.status==='saved'?'good':'muted'}">${esc(labels[s.status]||s.status)}</span></div><div class="copyline">${esc(line)}</div><button class="copy-race" data-copy-race="${esc(n)}">複製 R${esc(n)}</button><details><summary>查看排名及原始資料</summary>${s.target?`<p class="muted">鎖定 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${picks.length?`<p class="pick">主選 ${esc(text[0])}${s.qpConfidence?.qualified?'（QP集中）':''}</p><p>其餘：${esc(text.slice(1).join('、'))}</p>${s.qpConfidence?`<p class="muted">位置Q比值 ${esc(s.qpConfidence.ratio.toFixed(2))} 倍｜主選 ${esc(s.qpConfidence.tickets)} 筆｜${esc(s.qpConfidence.partners)} 個不同配搭</p>`:''}<p class="muted">原解碼順序：${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<p class="bad">${esc(s.error||s.reason||'')}</p>${s.status==='saved'?`<a href="${base()}/${d.phase}/horse103/race_${String(n).padStart(2,'0')}.json" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</details></div>`});
  }
- $('cards').innerHTML=cards.sort((a,b)=>a.n-b.n).map(c=>c.html).join('')||'<p>未有已啟動紀錄。請先在 GitHub 執行 Preflight；賽日執行 Run。</p>';
+ cards.sort((a,b)=>a.n-b.n);
+ $('cards').innerHTML=cards.map(c=>c.html).join('')||'<p>未有已啟動紀錄。請先在 GitHub 執行 Preflight；賽日執行 Run。</p>';
+ renderRaceNav(cards.map(c=>c.n));
  $('copyAll').hidden=![...copyRows.values()].some(x=>x.saved);
  const shadowRows=[];
  for(const phase of shadow)for(const [n,s] of Object.entries(phase?.races||{})){
@@ -153,6 +181,12 @@ async function refresh(){
 }
 $('cards').onclick=e=>{const b=e.target.closest('[data-copy-race]');if(!b)return;const n=Number(b.dataset.copyRace),row=copyRows.get(n);if(row)copyText(row.text,`R${n} `)};
 $('copyAll').onclick=()=>{const value=[...copyRows.entries()].filter(([,x])=>x.saved).sort((a,b)=>a[0]-b[0]).map(([,x])=>x.text).join('\n\n');if(value)copyText(value,'所有已鎖定場次')};
-$('load').onclick=()=>{selected=$('date').value;dataRef='';refChecked=0;refresh();refreshChallenges()};
-refresh();refreshChallenges();setInterval(()=>{if(!document.hidden){refresh();refreshChallenges()}},60000);
+document.querySelector('.tabs').onclick=e=>{const tab=e.target.closest('[data-tab]');if(tab)selectTab(tab.dataset.tab)};
+$('raceNav').onclick=e=>{const chip=e.target.closest('[data-race]');if(chip)setRace(Number(chip.dataset.race),true)};
+$('prevRace').onclick=()=>{const i=raceNumbers.indexOf(selectedRace);setRace(raceNumbers[Math.max(0,i-1)],true)};
+$('nextRace').onclick=()=>{const i=raceNumbers.indexOf(selectedRace);setRace(raceNumbers[Math.min(raceNumbers.length-1,i+1)],true)};
+$('refreshNow').onclick=async()=>{const b=$('refreshNow');b.classList.add('refreshing');b.textContent='…';await Promise.all([refresh(),refreshChallenges()]);b.classList.remove('refreshing');b.textContent='↻'};
+$('load').onclick=()=>{selected=$('date').value;dataRef='';refChecked=0;Promise.all([refresh(),refreshChallenges()])};
+addEventListener('resize',()=>setRace(selectedRace));
+selectTab(activeTab);refresh();refreshChallenges();setInterval(()=>{if(!document.hidden){refresh();refreshChallenges()}},60000);
 </script></html>
