@@ -8,6 +8,13 @@ import horse103_copy as h
 import dragon_copy as d
 
 class Tests(unittest.TestCase):
+ def test_parse_official_result_and_annotate_message(self):
+  body='<div class="performance"><table><tbody>'+''.join(f'<tr><td>{p}</td><td>{h}</td><td>Horse</td></tr>' for p,h in [(1,4),(2,9),(3,3),(4,10)])+'</tbody></table></div>'
+  entries=r.parse_result_html(body)
+  self.assertEqual([x['horse_number'] for x in entries[:4]],[4,9,3,10])
+  snapshot={'ranking':[{'horse_number':4,'qp_amount':100},{'horse_number':9,'qp_amount':90}], 'live103_raw':{'candidates':[{'horseNumber':4},{'horseNumber':9}]}}
+  text=r.format_tip_message(1,snapshot,[9,3,10],[],positions={4:'第一',9:'第二',3:'第三',10:'第四'},result=True)
+  self.assertIn('4號（第一）',text);self.assertIn('9號（第二）',text);self.assertIn('10號（第四）',text)
  def test_market_formula_normalizes_inverse_win_odds(self):
   snapshot={'ranking':[{'horse_number':1,'live_value_index':50,'qp_amount':100,'q_amount':100},{'horse_number':2,'live_value_index':50,'qp_amount':100,'q_amount':100}]}
   self.assertTrue(r.apply_market_formula(snapshot,{'1':'10','2':'2'}))

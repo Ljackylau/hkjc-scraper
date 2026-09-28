@@ -95,6 +95,8 @@ jobs:
           name: horse103-early-${{ inputs.date }}-${{ github.run_id }}
           path: |
             race-day-data/${{ inputs.date }}/early/horse103/
+            race-day-data/${{ inputs.date }}/early/results/
+            race-day-data/${{ inputs.date }}/early/notifications/
             race-day-data/${{ inputs.date }}/early/status.json
             race-day/plan.json
           retention-days: 7
@@ -143,6 +145,8 @@ jobs:
           name: horse103-late-${{ inputs.date }}-${{ github.run_id }}
           path: |
             race-day-data/${{ inputs.date }}/late/horse103/
+            race-day-data/${{ inputs.date }}/late/results/
+            race-day-data/${{ inputs.date }}/late/notifications/
             race-day-data/${{ inputs.date }}/late/status.json
             race-day/plan.json
           retention-days: 7

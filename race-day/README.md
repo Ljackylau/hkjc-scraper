@@ -24,6 +24,8 @@ Horse103 starts requesting at scheduled T−3, accepts the first ready locked/st
 
 Opening result pages does not fetch HKJC/Supabase directly. Pages read small summaries from the data branch; browser and raw-content cache can delay visibility. Updated-at is displayed. Restarting restores saved results and Dragon baselines; a missed Horse103 capture is labelled missed, not recreated after the race. Unpublished last-minute local data may be lost on a forced cancellation or runner failure.
 
+When Telegram secrets are configured, each successful T−3 lock sends one recommendation message. A terminal T−3 failure sends a warning instead of silently disappearing. After the race, the runner polls the HKJC official result, stores the top four without changing the archived T−3 recommendation, annotates recommended runners that finished first to fourth, and sends one result message. Telegram errors are retried; GitHub, Telegram, Horse103 and HKJC outages can still prevent delivery, so delivery is monitored rather than described as guaranteed. The website's 賽果紀錄 tab combines archived recommendations with official results.
+
 ## Validation
 
 `python -m unittest discover -s race-day -p 'test_*.py' -v`

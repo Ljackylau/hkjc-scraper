@@ -1,5 +1,5 @@
 """Independent combined runner. Never writes original dragon/ or dragon-webapp/."""
-import argparse, asyncio, concurrent.futures, json, os, signal, subprocess, sys, time, shutil, tempfile, urllib.parse, urllib.request
+import argparse, asyncio, concurrent.futures, html, json, os, re, signal, subprocess, sys, time, shutil, tempfile, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import dragon_copy as dragon
@@ -62,19 +62,52 @@ def apply_market_formula(snapshot,win_odds):
     snapshot['main_pick']=ranking[0];snapshot['other_four']=ranking[1:5]
     return True
 
-def format_tip_message(number,snapshot,market=None,cold=None):
+PLACE_LABELS={'1':'第一','2':'第二','3':'第三','4':'第四'}
+
+def annotated(number,positions=None):
+    label=(positions or {}).get(int(number))
+    return f'{int(number)}號'+(f'（{label}）' if label else '')
+
+def format_tip_message(number,snapshot,market=None,cold=None,positions=None,result=False):
     ranking=snapshot.get('ranking') or [];main=int(ranking[0]['horse_number'])
     original={int(row['horseNumber']) for row in snapshot.get('live103_raw',{}).get('candidates',[]) if row.get('horseNumber') is not None}
     extras=[int(row['horse_number']) for row in ranking[1:5] if int(row['horse_number']) not in original]
     confidence='（QP集中）' if qp_concentrated(snapshot) else ''
-    confidence_horses=f'{main}號{confidence}'+(('，'+'、'.join(f'{n}號' for n in extras)) if extras else '')
-    legs='、'.join(f'{int(n)}號' for n in (market or []) if int(n)!=main) or '無'
-    cold_text='、'.join(f'{int(n)}號' for n in (cold or [])) or '無'
-    return (f'🏇 R{number}｜T−3 已鎖定\n'
+    confidence_horses=f'{annotated(main,positions)}{confidence}'+(('，'+'、'.join(annotated(n,positions) for n in extras)) if extras else '')
+    legs='、'.join(annotated(n,positions) for n in (market or []) if int(n)!=main) or '無'
+    cold_text='、'.join(annotated(n,positions) for n in (cold or [])) or '無'
+    title=f'🏁 R{number}｜正式賽果更新' if result else f'🏇 R{number}｜T−3 已鎖定'
+    return (title+'\n'
             f'獨贏&位置信心馬：{confidence_horses}\n'
             f'連贏位置Q：{main}號 拖 {legs}\n'
             f'最有可能爆冷馬：{cold_text}\n\n'
             '查看完整資料：https://ljackylau.github.io/hkjc-scraper/race-day/')
+
+def parse_result_html(body):
+    match=re.search(r'<div[^>]*class="[^"]*performance[^"]*"[^>]*>.*?<tbody[^>]*>(.*?)</tbody>',body,re.I|re.S)
+    if not match:raise RuntimeError('Official result table not ready')
+    entries=[]
+    for raw_row in re.findall(r'<tr[^>]*>(.*?)</tr>',match.group(1),re.I|re.S):
+        cells=[]
+        for raw_cell in re.findall(r'<td[^>]*>(.*?)</td>',raw_row,re.I|re.S):
+            text=html.unescape(re.sub(r'<[^>]+>',' ',raw_cell))
+            cells.append(' '.join(text.split()))
+        if len(cells)<2:continue
+        placing=re.match(r'^(\d+)',cells[0]);horse_number=re.match(r'^(\d+)$',cells[1])
+        if placing and horse_number:
+            entries.append({'placing':placing[1],'placing_text':cells[0],'horse_number':int(horse_number[1])})
+    if len(entries)<4 or entries[0]['placing']!='1' or len({row['horse_number'] for row in entries[:4]})<4:
+        raise RuntimeError('Official top-four result incomplete')
+    return entries
+
+def fetch_official_result(date,venue,number):
+    venue='ST' if venue in ('ST','沙田') else 'HV'
+    query=urllib.parse.urlencode({'racedate':date.replace('-','/'),'Racecourse':venue,'RaceNo':number})
+    url='https://racing.hkjc.com/en-us/local/information/archive/localresults?'+query
+    request=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (Horse103 result monitor)'})
+    with urllib.request.urlopen(request,timeout=20) as response:body=response.read().decode('utf-8','replace')
+    entries=parse_result_html(body)
+    return {'source':'HKJC official local results','source_url':url,'received_at':now().isoformat(),'entries':entries,'top4':[row['horse_number'] for row in entries[:4]]}
 
 def remote_json(url):
     request=urllib.request.Request(url,headers={'User-Agent':'hkjc-race-day-runner','Cache-Control':'no-cache'})
@@ -103,10 +136,23 @@ def remote_market(date,phase,number):
 async def notification_monitor(date,phase,folder,states,finished):
     notify_folder=folder/'notifications';notify_folder.mkdir(exist_ok=True)
     pending_since={}
-    while not finished.is_set() or any(state.get('status')=='saved' and not (notify_folder/f'race_{int(n):02d}.json').exists() for n,state in states.items()):
+    terminal={'missed','unavailable','partial'}
+    def pending():
+        return any(state.get('status') in ({'saved'}|terminal) and not (notify_folder/f'race_{int(n):02d}.json').exists() for n,state in states.items())
+    while not finished.is_set() or pending():
         for n,state in list(states.items()):
             number=int(n);marker=notify_folder/f'race_{number:02d}.json'
-            if state.get('status')!='saved' or marker.exists():continue
+            if marker.exists():continue
+            if state.get('status') in terminal:
+                message=f'⚠️ R{number}｜T−3未能完成\n狀態：{state.get("status")}\n原因：{state.get("reason") or state.get("error") or "資料不足"}'
+                if telegram_configured():
+                    try:
+                        await asyncio.to_thread(telegram_send,message)
+                        atomic(marker,{'sent_at':now().isoformat(),'race':number,'message':message,'status':'failed'})
+                    except Exception as e:print('Telegram failure alert R',number,'retry:',str(e)[:160],flush=True)
+                else:atomic(marker,{'processed_at':now().isoformat(),'race':number,'notification':'not configured','status':'failed'})
+                continue
+            if state.get('status')!='saved':continue
             pending_since.setdefault(number,time.monotonic())
             snapshot_path=folder/'horse103'/f'race_{number:02d}.json'
             if not snapshot_path.exists():continue
@@ -126,11 +172,62 @@ async def notification_monitor(date,phase,folder,states,finished):
                 continue
             try:
                 await asyncio.to_thread(telegram_send,message)
-                atomic(marker,{'sent_at':now().isoformat(),'race':number,'message':message})
+                atomic(marker,{'sent_at':now().isoformat(),'race':number,'message':message,'market':market or [],'cold':cold or [],'status':'saved'})
                 print('Telegram R',number,'sent',flush=True)
             except Exception as e:print('Telegram R',number,'retry:',str(e)[:160],flush=True)
         try:await asyncio.wait_for(finished.wait(),timeout=5)
         except asyncio.TimeoutError:pass
+
+async def result_job(race,date,folder,states,executor):
+    number=int(race['race_number']);destination=folder/'results'/f'race_{number:02d}.json'
+    result_marker=folder/'notifications'/f'race_{number:02d}_result.json'
+    states[str(number)]={'status':'waiting'}
+    if destination.exists() and result_marker.exists():
+        states[str(number)]={'status':'saved'};return
+    off=horse.hk_datetime(date,race['post_time'])
+    while now()<off+timedelta(minutes=2):
+        try:
+            current=await asyncio.get_running_loop().run_in_executor(executor,horse.get_races,date)
+            updated=next(r for r in current if r['id']==race['id'])
+            off=horse.hk_datetime(date,updated['post_time'])
+        except Exception:pass
+        await asyncio.sleep(min(30,max(1,(off+timedelta(minutes=2)-now()).total_seconds())))
+    deadline=off+timedelta(minutes=45);result=None
+    while now()<=deadline:
+        try:
+            result=await asyncio.get_running_loop().run_in_executor(executor,fetch_official_result,date,race.get('venue'),number)
+            break
+        except Exception as e:
+            states[str(number)]={'status':'waiting','error':str(e)[:180]};await asyncio.sleep(30)
+    if result is None:
+        states[str(number)]={'status':'unavailable','reason':'Official result not available within 45 minutes'};return
+    snapshot_path=folder/'horse103'/f'race_{number:02d}.json'
+    snapshot=json.loads(snapshot_path.read_text(encoding='utf-8')) if snapshot_path.exists() else None
+    tip_marker=folder/'notifications'/f'race_{number:02d}.json'
+    market=cold=[]
+    if tip_marker.exists():
+        tip=json.loads(tip_marker.read_text(encoding='utf-8'));market=tip.get('market') or [];cold=tip.get('cold') or []
+    elif snapshot:
+        try:market,cold,_=await asyncio.to_thread(remote_market,date,folder.name,number)
+        except Exception:pass
+    result['date']=date;result['race']=number
+    result['banker']=int(snapshot['ranking'][0]['horse_number']) if snapshot else None
+    result['legs']=[int(x) for x in market if int(x)!=result['banker']]
+    atomic(destination,result);states[str(number)]={'status':'saved','top4':result['top4']}
+    if snapshot and not result_marker.exists():
+        positions={row['horse_number']:PLACE_LABELS.get(row['placing'],row['placing_text']) for row in result['entries'] if int(row['placing'])<=4}
+        message=format_tip_message(number,snapshot,market,cold,positions=positions,result=True)
+        message='正式賽果：'+'－'.join(str(x) for x in result['top4'])+'\n'+message
+        if telegram_configured():
+            for attempt in range(6):
+                try:
+                    await asyncio.to_thread(telegram_send,message)
+                    atomic(result_marker,{'sent_at':now().isoformat(),'race':number,'message':message})
+                    break
+                except Exception as e:
+                    states[str(number)]['notification_error']=str(e)[:160]
+                    if attempt<5:await asyncio.sleep(10)
+        else:atomic(result_marker,{'processed_at':now().isoformat(),'race':number,'notification':'not configured'})
 def plan(date):
     datetime.strptime(date,'%Y-%m-%d')
     races=horse.get_races(date)
@@ -289,10 +386,11 @@ async def run(args):
     def dragon_save(state,push):
         state['published_at']=now().isoformat();atomic(dragon.ROOT/'results.json',state)
     dragon.publish=dragon_save
-    states={};executor=concurrent.futures.ThreadPoolExecutor(max_workers=3)
+    states={};result_states={};executor=concurrent.futures.ThreadPoolExecutor(max_workers=4)
     dragon_config={'date':args.date,'venue':'ST' if races[0]['venue'] in ('沙田','ST') else 'HV','times':[r['post_time'] for r in races],'race_numbers':numbers,'source':config['source']}
     tasks=[asyncio.create_task(dragon.collect(dragon_config,False,False))]
     tasks += [asyncio.create_task(horse_job(r,args.date,folder,states,executor)) for r in races]
+    tasks += [asyncio.create_task(result_job(r,args.date,folder,result_states,executor)) for r in races]
     stop=asyncio.Event();jobs_finished=asyncio.Event();loop=asyncio.get_running_loop()
     notifier=asyncio.create_task(notification_monitor(args.date,args.phase,folder,states,jobs_finished))
     for sig in (signal.SIGTERM,signal.SIGINT):loop.add_signal_handler(sig,stop.set)
@@ -300,7 +398,7 @@ async def run(args):
     try:
         while not stop.is_set():
             errors=[str(t.exception())[:250] for t in tasks if t.done() and not t.cancelled() and t.exception()]
-            atomic(folder/'status.json',{'date':args.date,'phase':args.phase,'updated_at':now().isoformat(),'state':'running','horse103':states,'errors':errors,'publish_error':publish_error})
+            atomic(folder/'status.json',{'date':args.date,'phase':args.phase,'updated_at':now().isoformat(),'state':'running','horse103':states,'results':result_states,'errors':errors,'publish_error':publish_error})
             if args.push and time.monotonic()-last_push>=60:
                 try:await asyncio.to_thread(publish,folder);publish_error=None
                 except Exception as e:publish_error=str(e)[:250];print('Publish retry next minute:',publish_error,flush=True)
@@ -319,7 +417,7 @@ async def run(args):
         if not notifier.done():notifier.cancel()
         await asyncio.gather(*tasks,return_exceptions=True)
         await asyncio.gather(notifier,return_exceptions=True)
-        atomic(folder/'status.json',{'date':args.date,'phase':args.phase,'updated_at':now().isoformat(),'state':'stopped' if stop.is_set() else 'finished','horse103':states,'publish_error':publish_error})
+        atomic(folder/'status.json',{'date':args.date,'phase':args.phase,'updated_at':now().isoformat(),'state':'stopped' if stop.is_set() else 'finished','horse103':states,'results':result_states,'publish_error':publish_error})
         if args.push:
             try:await asyncio.to_thread(publish,folder)
             except Exception as e:print('Final publish failed:',e,flush=True)

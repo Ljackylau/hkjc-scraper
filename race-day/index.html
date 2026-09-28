@@ -2,7 +2,7 @@
 <html lang="zh-HK"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Race Day｜Horse103 T−3</title>
 <style>
-:root{color-scheme:dark;--panel:#132038;--line:#304761;--red:#d9404b;--red-dark:#641c27}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#09111f;color:#eaf1fb;font:16px system-ui}main{max-width:1200px;margin:auto;padding:20px}header,section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}h1{font-size:28px;margin:0}h2,h3{margin-top:0}a{color:#88caff}button,input{font:inherit;background:#223b55;color:white;border:1px solid #53718b;border-radius:9px;padding:10px}.muted{color:#aabcce;font-size:14px}.pick{font-size:24px;color:#f2ca76}.races{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.card{background:#0c1728;border:1px solid var(--line);border-radius:12px;padding:16px}.copyline{white-space:pre-wrap;background:#071321;border:1px solid #3b536f;border-radius:9px;padding:13px;margin:10px 0;line-height:1.6}.copybar,.datebar,.racebar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.bad{color:#ffb494}.good{color:#81d5a8}small{display:block;margin-top:8px}.utility{margin-top:12px}.utility summary,.info summary,.card details summary{color:#9bd1ff;cursor:pointer;padding:6px 0}.tabs{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:8px 0 10px;background:#09111f}.tab{margin:0;min-height:48px;background:var(--red-dark);border-color:#a63542;font-weight:750;color:#ffdadd}.tab.active{background:var(--red);border-color:#ff7580;color:white;box-shadow:0 4px 18px #d9404b55}.tab-panel[hidden]{display:none}.racebar{position:sticky;top:66px;z-index:15;background:var(--panel);padding:8px 0 12px;margin-bottom:8px}.race-scroll{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;flex:1;padding:2px}.race-scroll::-webkit-scrollbar{display:none}.race-chip{flex:0 0 auto;min-width:44px;padding:9px 11px;margin:0}.race-chip.active{background:var(--red);border-color:#ff7580}.race-move{margin:0;padding:9px 12px}.card-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.card-head h2{margin:0}.copy-race{width:100%;margin:0 0 8px}.footer-note{text-align:center}.refreshing{opacity:.65;pointer-events:none}
+:root{color-scheme:dark;--panel:#132038;--line:#304761;--red:#d9404b;--red-dark:#641c27}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#09111f;color:#eaf1fb;font:16px system-ui}main{max-width:1200px;margin:auto;padding:20px}header,section{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}h1{font-size:28px;margin:0}h2,h3{margin-top:0}a{color:#88caff}button,input{font:inherit;background:#223b55;color:white;border:1px solid #53718b;border-radius:9px;padding:10px}.muted{color:#aabcce;font-size:14px}.pick{font-size:24px;color:#f2ca76}.races{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}.card{background:#0c1728;border:1px solid var(--line);border-radius:12px;padding:16px}.copyline{white-space:pre-wrap;background:#071321;border:1px solid #3b536f;border-radius:9px;padding:13px;margin:10px 0;line-height:1.6}.copybar,.datebar,.racebar{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.bad{color:#ffb494}.good{color:#81d5a8}small{display:block;margin-top:8px}.utility{margin-top:12px}.utility summary,.info summary,.card details summary{color:#9bd1ff;cursor:pointer;padding:6px 0}.tabs{position:sticky;top:0;z-index:20;display:grid;grid-template-columns:repeat(4,1fr);gap:7px;padding:8px 0 10px;background:#09111f}.tab{margin:0;min-height:48px;background:var(--red-dark);border-color:#a63542;font-weight:750;color:#ffdadd}.tab.active{background:var(--red);border-color:#ff7580;color:white;box-shadow:0 4px 18px #d9404b55}.tab-panel[hidden]{display:none}.racebar{position:sticky;top:66px;z-index:15;background:var(--panel);padding:8px 0 12px;margin-bottom:8px}.race-scroll{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;flex:1;padding:2px}.race-scroll::-webkit-scrollbar{display:none}.race-chip{flex:0 0 auto;min-width:44px;padding:9px 11px;margin:0}.race-chip.active{background:var(--red);border-color:#ff7580}.race-move{margin:0;padding:9px 12px}.card-head{display:flex;justify-content:space-between;align-items:center;gap:8px}.card-head h2{margin:0}.copy-race{width:100%;margin:0 0 8px}.footer-note{text-align:center}.refreshing{opacity:.65;pointer-events:none}.history-wrap{overflow-x:auto}.history-table{width:100%;border-collapse:collapse;min-width:620px}.history-table th,.history-table td{padding:11px 9px;border-bottom:1px solid var(--line);text-align:left}.history-table th{color:#9bd1ff;position:sticky;top:66px;background:var(--panel)}
 @media(max-width:700px){main{padding:10px 12px 90px}header,section{padding:15px;border-radius:14px;margin-bottom:12px}header h1{font-size:25px}.subtitle{margin:8px 0 10px}.datebar{display:grid;grid-template-columns:auto 1fr auto}.datebar input{width:100%;min-width:0}.health{line-height:1.45;margin-bottom:0}.tabs{margin:0 -1px}.tab{font-size:14px;padding:9px 4px}.races{display:block}.card{padding:14px}.card[hidden]{display:none}.copyline{font-size:16px}.desktop-intro{display:none}.racebar{top:66px}.race-scroll{max-width:calc(100vw - 126px)}}
 </style>
 <main><header><h1>Race Day｜賽日控制台</h1><p class="subtitle">Horse103 T−3 賽日資訊</p>
@@ -13,7 +13,7 @@
 <p><a href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載 Horse103 歷史備份 ↗</a></p>
 <p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉本頁不會停止收集。</p></details>
 </header>
-<nav class="tabs" aria-label="資料分類"><button class="tab active" data-tab="horse">比賽Tips</button><button class="tab" data-tab="hkjc">HKJC市場</button><button class="tab" data-tab="challenge">騎練數據</button></nav>
+<nav class="tabs" aria-label="資料分類"><button class="tab active" data-tab="horse">比賽Tips</button><button class="tab" data-tab="hkjc">HKJC市場</button><button class="tab" data-tab="challenge">騎練數據</button><button class="tab" data-tab="history">賽果紀錄</button></nav>
 <section id="horse" class="tab-panel"><div class="racebar"><button id="prevRace" class="race-move" aria-label="上一場">‹</button><div id="raceNav" class="race-scroll"></div><button id="nextRace" class="race-move" aria-label="下一場">›</button><button id="refreshNow" class="race-move" aria-label="立即更新">↻</button></div>
 <details class="info"><summary>公式及訊號說明</summary><p class="muted">現行公式：50% 即場解碼 valueIndex ＋ 33.33% 位置Q資金 ＋ 8.33% 連贏Q資金 ＋ 8.33% 正規化獨贏賠率強度。排名分數不是入位概率。保留實際收取時間；最多接受 T−3 後 90 秒首個有效回應；舊賽日保留當日已鎖定排名。</p><p class="muted">（QP集中）：主選位置Q金額至少是同場其他馬最高金額的1.5倍；只描述資金分布，不代表入三甲信心。</p></details><div class="copybar"><button id="copyAll" hidden>複製所有已鎖定場次</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
 <section id="hkjc" class="tab-panel" hidden><h2>HKJC 獨立市場快照（觀察）</h2><p class="muted">每場收集獨贏、位置、連贏及位置Q賠率變化。優先比較 T−30→T−3；若基準較遲取得，會標示實際起點，最遲接受 T−10。</p><div id="hkjcCards" class="races"></div></section>
@@ -21,6 +21,7 @@
 <p class="muted">啟動同一個 Run 後，每分鐘獨立保存兩個王的賠率；關閉本頁仍會收集。開售跌幅反映整個王的市場變化，並非下一場馬匹勝算，不影響 Horse103 推薦。</p>
 <p class="muted">同時保存各場馬匹／騎練對應及可取得的積分。缺少積分、剩餘坐騎或來源時間時保留「未知」；末段停賣亦不當成新訊號。</p>
 <div id="challengeCards" class="races"><p class="muted">正在檢查研究紀錄…</p></div></section>
+<section id="history" class="tab-panel" hidden><h2>推介及賽果紀錄</h2><p class="muted">膽及腳保留當時賽前紀錄；賽果只採用HKJC正式結果。</p><div id="historyRows" class="history-wrap"><p class="muted">正在載入…</p></div></section>
 <p class="muted footer-note">本頁每分鐘自動更新；畫面會保留目前分頁及場次。</p></main>
 <script src="challenge.js"></script>
 <script>
@@ -29,6 +30,7 @@ const hkToday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en',{time
 let selected=hkToday(),dataRef='',refChecked=0,copyRows=new Map(),fallbackNotice='',fallbackChecked=false;
 let activeTab=sessionStorage.getItem('raceDayTab')||'horse';
 let selectedRace=Number(sessionStorage.getItem('raceDayRace')||1),raceNumbers=[];
+let historyLoadedRef='';
 $('date').value=selected;
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const base=()=>`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${dataRef||'race-day-data'}/race-day-data/${selected}`;
@@ -49,10 +51,36 @@ async function latestRaceDate(){
 }
 const labels={waiting:'等待 T−3',saved:'已保存',partial:'T−3 原始資料已保存；未完成排名',missed:'錯過 T−3',retrying:'重試中',unavailable:'資料不足'};
 function selectTab(name){
- if(!['horse','hkjc','challenge'].includes(name))name='horse';
+ if(!['horse','hkjc','challenge','history'].includes(name))name='horse';
  activeTab=name;sessionStorage.setItem('raceDayTab',name);
  document.querySelectorAll('.tab').forEach(tab=>{const on=tab.dataset.tab===name;tab.classList.toggle('active',on);tab.setAttribute('aria-selected',String(on))});
  document.querySelectorAll('.tab-panel').forEach(panel=>{panel.hidden=panel.id!==name});
+ if(name==='history')refreshHistory();
+}
+
+async function refreshHistory(){
+ try{
+  await currentRef();if(historyLoadedRef===dataRef)return;
+  const [backfillResponse,treeResponse]=await Promise.all([
+   fetch('history.json',{cache:'no-store',signal:AbortSignal.timeout(10000)}),
+   fetch(`https://api.github.com/repos/Ljackylau/hkjc-scraper/git/trees/${encodeURIComponent(dataRef)}?recursive=1`,{cache:'no-store',signal:AbortSignal.timeout(10000)})]);
+  const rows=backfillResponse.ok?await backfillResponse.json():[];
+  if(treeResponse.ok){
+   const tree=await treeResponse.json();
+   const paths=(tree.tree||[]).map(x=>x.path).filter(path=>/^race-day-data\/\d{4}-\d{2}-\d{2}\/(early|late|recovery)\/results\/race_\d{2}\.json$/.test(path));
+   const live=await Promise.all(paths.map(async path=>{try{const r=await fetch(`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${dataRef}/${path}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});return r.ok?await r.json():null}catch(e){return null}}));
+   rows.push(...live.filter(Boolean));
+  }
+  const merged=new Map();for(const row of rows)if(row?.date&&row?.race)merged.set(`${row.date}-${row.race}`,row);
+  const ordered=[...merged.values()].sort((a,b)=>b.date.localeCompare(a.date)||Number(a.race)-Number(b.race));
+  const body=ordered.map(row=>{
+   const labels=['第一','第二','第三','第四'],positions=new Map((row.top4||[]).map((horse,i)=>[Number(horse),labels[i]]));
+   const horse=number=>`${esc(number)}號${positions.has(Number(number))?`（${positions.get(Number(number))}）`:''}`;
+   return `<tr><td>${esc(row.date)}</td><td>R${esc(row.race)}</td><td>${row.banker?horse(row.banker):'—'}</td><td>${(row.legs||[]).length?row.legs.map(horse).join('、'):'無'}</td><td>${esc((row.top4||[]).join('－')||'未有')}</td></tr>`
+  }).join('');
+  $('historyRows').innerHTML=`<table class="history-table"><thead><tr><th>日期</th><th>場次</th><th>膽</th><th>腳</th><th>賽果</th></tr></thead><tbody>${body||'<tr><td colspan="5">尚未有賽果紀錄</td></tr>'}</tbody></table>`;
+  historyLoadedRef=dataRef;
+ }catch(e){$('historyRows').innerHTML=`<p class="bad">暫時未能載入賽果紀錄：${esc(e.message)}</p>`}
 }
 function setRace(n,scroll=false){
  if(!raceNumbers.length)return;
@@ -105,15 +133,18 @@ async function loadConfidence(s,url){
  }catch(e){s.qpConfidence=null}
 }
 
+function annotatedHorse(number,positions){
+ const label=positions?.[String(number)];return `${number}號${label?`（${label}）`:''}`
+}
 function summary(n,s){
  const picks=s.picks||[];
  if(s.status!=='saved'||!picks.length)return `R${n}\n獨贏&位置信心馬：${s.status==='partial'?'原始T−3已保存，排名未完成':'未能鎖定T−3'}\n連贏位置Q：無\n最有可能爆冷馬：無`;
  const main=Number(picks[0].horse_number),originalNumbers=(s.original||[]).map(Number);
  const original=new Set(originalNumbers);
- const extra=picks.slice(1,5).filter(h=>!original.has(Number(h.horse_number))).map(h=>`${h.horse_number}號`);
- const legs=(s.market?.legs||[]).map(h=>`${h}號`).join('、')||'無';
- const cold=(s.market?.cold||[]).map(h=>`${h}號`).join('、')||'無';
- return `R${n}\n獨贏&位置信心馬：${main}號${s.qpConfidence?.qualified?'（QP集中）':''}${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${main}號 拖 ${legs}\n最有可能爆冷馬：${cold}`
+ const extra=picks.slice(1,5).filter(h=>!original.has(Number(h.horse_number))).map(h=>annotatedHorse(h.horse_number,s.resultPositions));
+ const legs=(s.market?.legs||[]).map(h=>annotatedHorse(h,s.resultPositions)).join('、')||'無';
+ const cold=(s.market?.cold||[]).map(h=>annotatedHorse(h,s.resultPositions)).join('、')||'無';
+ return `R${n}\n獨贏&位置信心馬：${annotatedHorse(main,s.resultPositions)}${s.qpConfidence?.qualified?'（QP集中）':''}${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${annotatedHorse(main,s.resultPositions)} 拖 ${legs}\n最有可能爆冷馬：${cold}`
 }
 const compactName=value=>String(value||'').replace(/\s+/g,'');
 async function loadMarket(n,phase,main,shadowByRace,root){
@@ -167,6 +198,10 @@ async function refresh(){
  if(requested!==selected)return;
  const snapshotBase=base();
  await Promise.all(data.flatMap(d=>Object.entries(d.horse103||{}).map(([n,s])=>loadConfidence(s,`${snapshotBase}/${d.phase}/horse103/race_${String(n).padStart(2,'0')}.json`))));
+ await Promise.all(data.flatMap(d=>Object.entries(d.horse103||{}).map(async([n,s])=>{
+  if(d.results?.[n]?.status!=='saved')return;
+  try{const r=await fetch(`${snapshotBase}/${d.phase}/results/race_${String(n).padStart(2,'0')}.json`,{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!r.ok)return;const result=await r.json(),labels=['第一','第二','第三','第四'];s.resultPositions=Object.fromEntries((result.top4||[]).map((horse,i)=>[String(horse),labels[i]]))}catch(e){}
+ })));
  if(requested!==selected)return;
  const shadow=await Promise.all(['hkjc-early','hkjc-late'].map(async phase=>{
   try{const r=await fetch(`${base()}/${phase}/status.json?v=${Math.floor(Date.now()/30000)}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});return r.ok?{...await r.json(),phase}:null}catch(e){return null}
@@ -200,5 +235,5 @@ $('nextRace').onclick=()=>{const i=raceNumbers.indexOf(selectedRace);setRace(rac
 $('refreshNow').onclick=async()=>{const b=$('refreshNow');b.classList.add('refreshing');b.textContent='…';await Promise.all([refresh(),refreshChallenges()]);b.classList.remove('refreshing');b.textContent='↻'};
 $('load').onclick=()=>{selected=$('date').value;dataRef='';refChecked=0;fallbackNotice='';fallbackChecked=true;Promise.all([refresh(),refreshChallenges()])};
 addEventListener('resize',()=>setRace(selectedRace));
-selectTab(activeTab);refresh();refreshChallenges();setInterval(()=>{if(!document.hidden){refresh();refreshChallenges()}},60000);
+selectTab(activeTab);refresh();refreshChallenges();setInterval(()=>{if(!document.hidden){refresh();refreshChallenges();if(activeTab==='history'){historyLoadedRef='';refreshHistory()}}},60000);
 </script></html>
