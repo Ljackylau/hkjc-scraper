@@ -12,6 +12,7 @@ from pathlib import Path
 
 from runner import REPO, HK, atomic, now, publish, setup_data_branch
 import runner
+from method_b import prepare as prepare_method_b
 
 DOM = r"""() => ({
   text: document.body.innerText,
@@ -189,7 +190,7 @@ async def race_job(context,date,venue,number,off,folder,states):
                 if abs((revised-target).total_seconds())>0:
                     if abs((revised-target).total_seconds())>1800:raise ValueError('Schedule changed >30 minutes; review required')
                     target=revised;baseline=None
-                    for suffix in ('t30','baseline'):
+                    for suffix in ('t30','baseline','method_b'):
                         (folder/f'race_{number:02d}_{suffix}.json').unlink(missing_ok=True)
                 if w['post_time']!=p['post_time']:raise ValueError('WP/WPQ post times mismatch')
                 if not (w['fresh'] and p['fresh']):raise ValueError('Stale source timestamp')
@@ -199,13 +200,19 @@ async def race_job(context,date,venue,number,off,folder,states):
                 combined={'received_at':max(w['received_at'],p['received_at']),
                           'source_updated':{'wp':w['source_updated'],'wpq':p['source_updated']},
                           'post_time':w['post_time'],'runner_rows':w.get('runner_rows',[]),'odds':{**w['odds'],**p['odds']},'urls':[w['url'],p['url']]}
-                stamp=tuple(combined['source_updated'].values())
+                # Source timestamps have minute precision; distinct quotes within
+                # that minute still need their own archival observation.
+                stamp=(tuple(combined['source_updated'].values()),
+                       json.dumps(combined['odds'],sort_keys=True))
                 if stamp!=last_source:
                     with dest.open('a',encoding='utf-8') as f:f.write(json.dumps(combined,ensure_ascii=False)+'\n')
                     last_source=stamp
                     samples.append(combined)
                 received=datetime.fromisoformat(combined['received_at'])
                 t30=target-timedelta(minutes=30);t3=target-timedelta(minutes=3)
+                method_path=folder/f'race_{number:02d}_method_b.json'
+                if received>=t3-timedelta(seconds=10) and not method_path.exists():
+                    atomic(method_path,prepare_method_b(samples,target,date,number))
                 if baseline is None:
                     baseline=choose_baseline(samples,target)
                     if baseline:
@@ -213,6 +220,8 @@ async def race_job(context,date,venue,number,off,folder,states):
                         atomic(folder/f'race_{number:02d}_baseline.json',{'baseline':info,'snapshot':baseline})
                         if info['kind']=='t30':atomic(folder/f'race_{number:02d}_t30.json',baseline)
                 if t3<=received<=t3+timedelta(seconds=90):
+                    if not method_path.exists():
+                        atomic(method_path,prepare_method_b(samples,target,date,number))
                     if any((t3-datetime.fromisoformat(t)).total_seconds()>90 for t in combined['source_updated'].values()):
                         raise ValueError('T−3 odds source older than 90 seconds')
                     atomic(folder/f'race_{number:02d}_t3.json',combined)

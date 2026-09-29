@@ -4,6 +4,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import dragon_copy as dragon
 import horse103_copy as horse
+from method_b import decide as decide_method_b
 
 HERE=Path(__file__).resolve().parent
 REPO=HERE.parent
@@ -69,11 +70,13 @@ def annotated(number,positions=None):
     return f'{int(number)}號'+(f'（{label}）' if label else '')
 
 def format_tip_message(number,snapshot,market=None,cold=None,positions=None,result=False):
-    ranking=snapshot.get('ranking') or [];main=int(ranking[0]['horse_number'])
+    ranking=snapshot.get('ranking') or [];original_main=int(ranking[0]['horse_number'])
+    decision=snapshot.get('method_b') or {};main=int(decision.get('banker',original_main))
     original={int(row['horseNumber']) for row in snapshot.get('live103_raw',{}).get('candidates',[]) if row.get('horseNumber') is not None}
-    extras=[int(row['horse_number']) for row in ranking[1:5] if int(row['horse_number']) not in original]
-    confidence='（QP集中）' if qp_concentrated(snapshot) else ''
-    confidence_horses=f'{annotated(main,positions)}{confidence}'+(('，'+'、'.join(annotated(n,positions) for n in extras)) if extras else '')
+    extras=[int(row['horse_number']) for row in ranking[1:5] if int(row['horse_number']) not in original and int(row['horse_number'])!=main]
+    confidence='（QP集中）' if main==original_main and qp_concentrated(snapshot) else ''
+    switch=f"（B換膽，原{original_main}號）" if decision.get('status')=='switched' else ''
+    confidence_horses=f'{annotated(main,positions)}{confidence}{switch}'+(('，'+'、'.join(annotated(n,positions) for n in extras)) if extras else '')
     legs='、'.join(annotated(n,positions) for n in (market or []) if int(n)!=main) or '無'
     cold_text='、'.join(annotated(n,positions) for n in (cold or [])) or '無'
     title=f'🏁 R{number}｜正式賽果更新' if result else f'🏇 R{number}｜T−3 已鎖定'
@@ -154,6 +157,13 @@ def remote_market(date,phase,number):
     except Exception:pass
     return ranking,cold,win_odds
 
+def remote_method_b(date,phase,number):
+    root=f'https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/race-day-data/race-day-data/{date}/hkjc-{phase}'
+    source=remote_json(f'{root}/race_{number:02d}_method_b.json?v={int(time.time())}')
+    if source.get('date')!=date or source.get('race')!=number:
+        raise ValueError('Method B archive race/date mismatch')
+    return source
+
 async def notification_monitor(date,phase,folder,states,finished):
     notify_folder=folder/'notifications';notify_folder.mkdir(exist_ok=True)
     pending_since={}
@@ -178,22 +188,29 @@ async def notification_monitor(date,phase,folder,states,finished):
             snapshot_path=folder/'horse103'/f'race_{number:02d}.json'
             if not snapshot_path.exists():continue
             snapshot=json.loads(snapshot_path.read_text(encoding='utf-8'))
-            market=cold=win_odds=None
+            market=cold=win_odds=method_source=None
             try:market,cold,win_odds=await asyncio.to_thread(remote_market,date,phase,number)
             except Exception:pass
-            # Allow the parallel HKJC collector one minute to publish the full signal.
-            if market is None and time.monotonic()-pending_since[number]<75:continue
+            try:method_source=await asyncio.to_thread(remote_method_b,date,phase,number)
+            except Exception:pass
+            # Independent collector publishes after the T−3 snapshot; allow it
+            # time to publish both the ordinary market and the B evidence.
+            if (market is None or method_source is None) and time.monotonic()-pending_since[number]<125:continue
             if win_odds and apply_market_formula(snapshot,win_odds):
-                atomic(snapshot_path,snapshot)
                 state['picks']=snapshot['ranking'][:5]
                 state['formula']='market_normalized_v2'
+            original=int(snapshot['ranking'][0]['horse_number'])
+            decision=decide_method_b(method_source,original,snapshot['lock_time'])
+            snapshot['method_b']=decision
+            state['method_b']=decision
+            atomic(snapshot_path,snapshot)
             message=format_tip_message(number,snapshot,market,cold)
             if not telegram_configured():
-                atomic(marker,{'processed_at':now().isoformat(),'race':number,'notification':'not configured'})
+                atomic(marker,{'processed_at':now().isoformat(),'race':number,'notification':'not configured','method_b':decision,'market':market or [],'cold':cold or []})
                 continue
             try:
                 await asyncio.to_thread(telegram_send,message)
-                atomic(marker,{'sent_at':now().isoformat(),'race':number,'message':message,'market':market or [],'cold':cold or [],'status':'saved'})
+                atomic(marker,{'sent_at':now().isoformat(),'race':number,'message':message,'market':market or [],'cold':cold or [],'method_b':decision,'status':'saved'})
                 print('Telegram R',number,'sent',flush=True)
             except Exception as e:print('Telegram R',number,'retry:',str(e)[:160],flush=True)
         try:await asyncio.wait_for(finished.wait(),timeout=5)
@@ -233,7 +250,8 @@ async def result_job(race,date,folder,states,executor):
         try:market,cold,_=await asyncio.to_thread(remote_market,date,folder.name,number)
         except Exception:pass
     result['date']=date;result['race']=number
-    result['banker']=int(snapshot['ranking'][0]['horse_number']) if snapshot else None
+    result['banker']=int(snapshot.get('method_b',{}).get('banker',snapshot['ranking'][0]['horse_number'])) if snapshot else None
+    if snapshot and snapshot.get('method_b'):result['method_b']=snapshot['method_b']
     result['legs']=[int(x) for x in market if int(x)!=result['banker']]
     result['cold']=saved_cold
     if saved_cold is not None:result['cold_source']='saved_tip'

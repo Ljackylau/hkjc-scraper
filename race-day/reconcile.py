@@ -73,11 +73,14 @@ def reconcile(date, root, workers=4):
         result.update(date=date,race=number)
         if snapshot.exists():
             snap=json.loads(snapshot.read_text())
-            result['banker']=int(snap['ranking'][0]['horse_number'])
+            result['banker']=int(snap.get('method_b',{}).get('banker',snap['ranking'][0]['horse_number']))
+            if snap.get('method_b'):
+                result['method_b']=snap['method_b']
             original={int(x['horseNumber']) for x in snap.get('live103_raw',{}).get('candidates',[]) if x.get('horseNumber') is not None}
-            result['additional_picks']=[int(x['horse_number']) for x in snap['ranking'][1:5] if int(x['horse_number']) not in original]
+            result['additional_picks']=[int(x['horse_number']) for x in snap['ranking'][1:5]
+                                        if int(x['horse_number']) not in original and int(x['horse_number'])!=result['banker']]
         if tip.exists():
-            sent=json.loads(tip.read_text());result['legs']=[int(x) for x in sent['market']] if 'market' in sent else None
+            sent=json.loads(tip.read_text());result['legs']=[int(x) for x in sent['market'] if int(x)!=result.get('banker')] if 'market' in sent else None
             result['tip_sent_at']=sent.get('sent_at')
             if 'cold' in sent:
                 result['cold']=[int(x) for x in sent['cold']]
