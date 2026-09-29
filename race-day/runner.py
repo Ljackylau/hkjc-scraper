@@ -225,15 +225,18 @@ async def result_job(race,date,folder,states,executor):
     snapshot_path=folder/'horse103'/f'race_{number:02d}.json'
     snapshot=json.loads(snapshot_path.read_text(encoding='utf-8')) if snapshot_path.exists() else None
     tip_marker=folder/'notifications'/f'race_{number:02d}.json'
-    market=cold=[]
+    market=[];cold=[];saved_cold=None
     if tip_marker.exists():
         tip=json.loads(tip_marker.read_text(encoding='utf-8'));market=tip.get('market') or [];cold=tip.get('cold') or []
+        if 'cold' in tip:saved_cold=[int(x) for x in tip['cold']]
     elif snapshot:
         try:market,cold,_=await asyncio.to_thread(remote_market,date,folder.name,number)
         except Exception:pass
     result['date']=date;result['race']=number
     result['banker']=int(snapshot['ranking'][0]['horse_number']) if snapshot else None
     result['legs']=[int(x) for x in market if int(x)!=result['banker']]
+    result['cold']=saved_cold
+    if saved_cold is not None:result['cold_source']='saved_tip'
     atomic(destination,result);states[str(number)]={'status':'saved','top4':result['top4']}
     if snapshot and not result_marker.exists():
         positions={row['horse_number']:PLACE_LABELS.get(row['placing'],row['placing_text']) for row in result['entries'] if int(row['placing'])<=4}

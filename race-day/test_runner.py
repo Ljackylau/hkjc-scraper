@@ -28,6 +28,16 @@ class Tests(unittest.TestCase):
    missed=json.loads((root/'2026-09-27'/'settlement'/'race_02.json').read_text())
    self.assertNotIn('banker',missed)
    self.assertEqual(missed['dividends']['W'][0]['dividend_hkd'],358.5)
+ def test_reconstructed_cold_uses_preserved_preoff_signal_only(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   day=Path(tmp)/'2026-09-27';folder=day/'hkjc-early'
+   r.atomic(folder/'status.json',{'races':{'3':{'target':'2026-09-27T13:42:00+08:00','ranking':[{'horse_number':12},{'horse_number':4}]}}})
+   r.atomic(folder/'race_03_t3.json',{'received_at':'2026-09-27T13:42:25+08:00','runner_rows':[['12','','','','','','巫偉傑'],['4','','','','','','文家良']]})
+   signal=folder/'challenge/race_03_tnc_signal.json'
+   r.atomic(signal,{'status':'observed','t3_received_at':'2026-09-27T13:42:35+08:00','qualifying':[{'name':'巫偉傑'}]})
+   self.assertEqual(reconcile.archived_cold(day,3,'early'),[12])
+   r.atomic(signal,{'status':'observed','t3_received_at':'2026-09-27T13:46:01+08:00','qualifying':[{'name':'巫偉傑'}]})
+   self.assertIsNone(reconcile.archived_cold(day,3,'early'))
  def test_parse_official_result_and_annotate_message(self):
   body='<div class="performance"><table><tbody>'+''.join(f'<tr><td>{p}</td><td>{h}</td><td>Horse</td></tr>' for p,h in [(1,4),(2,9),(3,3),(4,10)])+'</tbody></table></div>'
   entries=r.parse_result_html(body)
