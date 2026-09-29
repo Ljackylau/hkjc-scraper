@@ -12,7 +12,7 @@ async function refreshChallenges(){
   const candidates=phases.filter(d=>d?.date===requested&&d.pools?.[kind]).sort((a,b)=>Date.parse(b.updated_at)-Date.parse(a.updated_at));
   if(!candidates.length)continue;
   const phase=candidates[0],s=phase.pools[kind];
-  const old=Date.now()-Date.parse(phase.updated_at)>180000;
+  const old=phase.state==='collecting'&&Date.now()-Date.parse(phase.updated_at)>180000;
   const clock=t=>t?new Date(t).toLocaleString('zh-HK',{timeZone:'Asia/Hong_Kong'}):'未知';
   const participants=(s.participants||[]).filter(p=>!p.is_other);
   const drop=participants.filter(p=>p.opening_drop_pct!=null&&Number.isFinite(Number(p.opening_drop_pct))).sort((a,b)=>Number(b.opening_drop_pct)-Number(a.opening_drop_pct));
@@ -29,8 +29,15 @@ async function refreshChallenges(){
    <p>${phases.filter(d=>d?.pools?.[kind]?.samples_this_run>0).map(d=>`<a target="_blank" rel="noopener" href="${root}/${d.phase}/challenge/${kind}.jsonl">${d.phase==='hkjc-early'?'前':'後'}半場原始紀錄 ↗</a>`).join(' ｜ ')}</p></div>`);
  }
  $('challengeCards').innerHTML=cards.join('')||'<p class="muted">此賽日未有研究紀錄。賽日啟動 Race Day Runner（Run）後一併收集；舊賽日不會補造即時資料。</p>';
+ if(!$('latestChallenge').dataset.initialized){$('latestChallenge').open=phases.some(p=>p?.state==='collecting');$('latestChallenge').dataset.initialized='true'}
  if(!$('challenge').hidden)await refreshJockeyRaceSignals(phases,root,requested);
 }
+
+function filterJockeyRaces(){
+ const choice=$('jockeyRaceSelect').value;
+ document.querySelectorAll('#jockeyRaceCards .jockey-race').forEach(card=>{card.hidden=choice!=='all'&&card.dataset.race!==choice});
+}
+$('jockeyRaceSelect').onchange=filterJockeyRaces;
 
 async function refreshJockeyRaceSignals(phases,root,requested){
  const raceFolders=new Map();
@@ -43,12 +50,17 @@ async function refreshJockeyRaceSignals(phases,root,requested){
   catch(e){return {number,path,signal:null}}
  }));
  if(requested!==selected||$('challenge').hidden)return;
+ const choice=$('jockeyRaceSelect').value;
+ $('jockeyRaceSelect').innerHTML='<option value="all">全部場次</option>'+races.map(([n])=>`<option value="${n}">R${n}</option>`).join('');
+ $('jockeyRaceSelect').value=races.some(([n])=>String(n)===choice)?choice:'all';
  const time=t=>t?new Date(t).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong',hour:'2-digit',minute:'2-digit'}):'未知';
  $('jockeyRaceCards').innerHTML=rows.map(({number,path,signal})=>{
-  if(!signal)return `<div class="card"><h3>R${number}</h3><p class="muted">沒有保存逐場 T−3 騎師王比較，無法重建。</p></div>`;
-  if(signal.status!=='observed')return `<div class="card"><h3>R${number}</h3><p class="muted">${number===1?'第一場沒有上一場作比較。':esc(signal.reason||'沒有足夠的賽前報價。')}</p></div>`;
+  if(!signal)return `<div class="card jockey-race" data-race="${number}"><h3>R${number}</h3><p class="muted">沒有保存逐場 T−3 騎師王比較，無法重建。</p></div>`;
+  const reason={'No readable numeric quote at T-3':'本場 T−3 沒有可讀賠率。','No quote observed by previous race off':'上一場開跑前沒有可比較賠率。','No pre-off T-3 window observation':'本場沒有在 T−3 時段收到報價。','No comparable numeric jockey quotes':'兩個時點沒有可比較騎師賠率。'};
+  if(signal.status!=='observed')return `<div class="card jockey-race" data-race="${number}"><h3>R${number}</h3><p class="muted">${number===1?'第一場沒有上一場作比較。':esc(reason[signal.reason]||signal.reason||'沒有足夠的賽前報價。')}</p></div>`;
   const bars=barChart((signal.changes||[]).slice(0,5).map(change=>({label:change.name,value:Number(change.drop_pct),display:`${Number(change.drop_pct)>0?'+':''}${change.drop_pct}%`,detail:`${change.before_odds} → ${change.t3_odds} 倍`})));
   const age=`前場來源距開跑 ${Math.round(signal.baseline_age_at_off_seconds/60)} 分鐘；本場來源距接收 ${Math.round(signal.t3_source_age_seconds/60)} 分鐘`;
-  return `<div class="card"><h3>R${number}｜最大 5 項變化</h3>${signal.source_recent?'<p class="good">兩個比較時點的來源時間均在 2 分鐘內</p>':'<p class="bad">來源時間偏舊；只供觀察，並非新鮮 T−3 訊號</p>'}<p class="bar-meta">上一場 ${esc(time(signal.baseline_source_updated_at))} → 本場 ${esc(time(signal.t3_source_updated_at))}<br>${esc(age)}</p>${bars}<a href="${path}" target="_blank" rel="noopener">原始逐場比較 JSON ↗</a></div>`;
+  return `<div class="card jockey-race" data-race="${number}"><h3>R${number}｜最大 5 項變化</h3>${signal.source_recent?'<p class="good">兩個比較時點的來源時間均在 2 分鐘內</p>':'<p class="bad">來源時間偏舊；只供觀察，並非新鮮 T−3 訊號</p>'}<p class="bar-meta">上一場 ${esc(time(signal.baseline_source_updated_at))} → 本場 ${esc(time(signal.t3_source_updated_at))}<br>${esc(age)}</p>${bars}<a href="${path}" target="_blank" rel="noopener">原始逐場比較 JSON ↗</a></div>`;
  }).join('');
+ filterJockeyRaces();
 }
