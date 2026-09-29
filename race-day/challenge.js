@@ -37,8 +37,6 @@ function filterJockeyRaces(){
  const choice=$('jockeyRaceSelect').value;
  document.querySelectorAll('#jockeyRaceCards .jockey-race').forEach(card=>{card.hidden=choice!=='all'&&card.dataset.race!==choice});
 }
-$('jockeyRaceSelect').onchange=filterJockeyRaces;
-
 async function refreshJockeyRaceSignals(phases,root,requested){
  const raceFolders=new Map();
  for(const phase of phases)for(const number of phase?.phase_races||[])raceFolders.set(Number(number),phase.phase);

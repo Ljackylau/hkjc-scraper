@@ -271,6 +271,7 @@ $('cards').onclick=e=>{const b=e.target.closest('[data-copy-race]');if(!b)return
 $('copyAll').onclick=()=>{const value=[...copyRows.entries()].filter(([,x])=>x.saved).sort((a,b)=>a[0]-b[0]).map(([,x])=>x.text).join('\n\n');if(value)copyText(value,'所有已鎖定場次')};
 document.querySelector('.tabs').onclick=e=>{const tab=e.target.closest('[data-tab]');if(tab)selectTab(tab.dataset.tab)};
 $('historyDate').onchange=historyView;
+$('jockeyRaceSelect').onchange=filterJockeyRaces;
 $('marketOdds').onclick=()=>{$('hkjcCards').hidden=false;$('challenge').hidden=true;$('marketOdds').classList.add('active');$('marketChallenge').classList.remove('active')};
 $('marketChallenge').onclick=()=>{$('hkjcCards').hidden=true;$('challenge').hidden=false;$('marketOdds').classList.remove('active');$('marketChallenge').classList.add('active');refreshChallenges()};
 $('raceNav').onclick=e=>{const chip=e.target.closest('[data-race]');if(chip)setRace(Number(chip.dataset.race),true)};
