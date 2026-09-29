@@ -161,6 +161,47 @@ def market_drop_signal(samples,sample,race,context,threshold=15):
             't3_source_updated_at':sample['source_updated_at'],'changes':changes,'qualifying':qualifying}
 
 
+def jockey_drop_signal(samples,sample,race,context):
+    """Compare saved pre-off jockey quotes; keep stale quote age explicit."""
+    number=race['race_number']
+    previous=next((r for r in context if r['race_number']==number-1),None)
+    if not previous:return {'status':'unavailable','reason':'First race has no previous-race comparison','changes':[]}
+    off=datetime.fromisoformat(previous['post_time'])
+    received=datetime.fromisoformat(sample['received_at'])
+    if not 90<=(datetime.fromisoformat(race['post_time'])-received).total_seconds()<=180:
+        return {'status':'unavailable','reason':'No pre-off T-3 window observation','changes':[]}
+    if sample.get('state')!='observed' or not sample.get('source_updated_at'):
+        return {'status':'unavailable','reason':'No readable numeric quote at T-3','changes':[]}
+    eligible=[]
+    for old in samples:
+        if old.get('state')!='observed' or not old.get('source_updated_at'):continue
+        stamp=datetime.fromisoformat(old['source_updated_at'])
+        seen=datetime.fromisoformat(old['received_at'])
+        if stamp<=off and seen<=off:eligible.append((stamp,seen,old))
+    if not eligible:return {'status':'unavailable','reason':'No quote observed by previous race off','changes':[]}
+    baseline=max(eligible,key=lambda x:(x[0],x[1]))[2]
+    old={compact(p['name']):p for p in baseline['participants'] if p.get('current_odds') and not p.get('is_other')}
+    changes=[]
+    for p in sample['participants']:
+        before=old.get(compact(p['name']),{}).get('current_odds')
+        after=p.get('current_odds')
+        if not before or not after or p.get('is_other'):continue
+        changes.append({'name':p['name'],'before_odds':before,'t3_odds':after,
+                        'drop_pct':round(100*(before-after)/before,2)})
+    if not changes:return {'status':'unavailable','reason':'No comparable numeric jockey quotes','changes':[]}
+    changes.sort(key=lambda x:abs(x['drop_pct']),reverse=True)
+    current_age=(received-datetime.fromisoformat(sample['source_updated_at'])).total_seconds()
+    baseline_age=(off-datetime.fromisoformat(baseline['source_updated_at'])).total_seconds()
+    return {'status':'observed','rule':'jockey odds from previous race off to this race T-3 observation',
+            'previous_race':number-1,'race':number,'t3_received_at':sample['received_at'],
+            't3_source_updated_at':sample['source_updated_at'],
+            'baseline_source_updated_at':baseline['source_updated_at'],
+            'baseline_age_at_off_seconds':round(baseline_age,1),
+            't3_source_age_seconds':round(current_age,1),
+            'source_recent':0<=current_age<=120 and 0<=baseline_age<=120,
+            'changes':changes}
+
+
 def append(path,value):
     with path.open('a',encoding='utf-8') as f:f.write(json.dumps(value,ensure_ascii=False,separators=(',',':'))+'\n')
 
@@ -205,6 +246,14 @@ async def collect(context,date,venue,clocks,numbers,parent,states,once=False):
                 except Exception as e:sample['points_error']=str(e)[:200]
                 history[kind].append(sample)
                 append(folder/f'{kind}.jsonl',sample)
+                if kind=='jkc':
+                    for race in rc:
+                        if race['race_number'] not in numbers or not 90<=race['seconds_to_off']<=180:continue
+                        dest=folder/f'race_{race["race_number"]:02d}_jkc_signal.json'
+                        signal=jockey_drop_signal(history[kind],sample,race,rc)
+                        old_signal=json.loads(dest.read_text()) if dest.exists() else {}
+                        if not dest.exists() or signal['status']=='observed' and (old_signal.get('status')!='observed' or signal.get('source_recent') and not old_signal.get('source_recent')):
+                            atomic(dest,signal)
                 for race in t3_candidate(sample,rc):
                     # Keyed by schedule target. Delays create a new index, not a silent overwrite.
                     key=re.sub(r'[^0-9]','',race['post_time'])

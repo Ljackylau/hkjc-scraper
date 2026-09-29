@@ -29,7 +29,7 @@ button{cursor:pointer;transition:background .15s,border-color .15s,transform .15
 <div class="copybar"><button id="copyAll" hidden>複製全日推介</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
 <section id="hkjc" class="tab-panel" hidden><h2>市場觀察</h2><p class="section-intro">HKJC T−30 至 T−3 賠率變化；騎練王屬研究資料，不影響主選。</p><div class="market-switch"><button id="marketOdds" class="active">馬匹市場</button><button id="marketChallenge">騎師／練馬師王</button></div><div id="hkjcCards" class="races"></div><div id="challenge" hidden><h3>騎師王／練馬師王</h3>
 <p class="muted">啟動同一個 Run 後，每分鐘獨立保存兩個王的賠率；關閉本頁仍會收集。開售跌幅反映整個王的市場變化，並非下一場馬匹勝算，不影響 Horse103 推薦。</p>
-<div id="challengeCards" class="races"><p class="muted">正在檢查研究紀錄…</p></div></div></section>
+<div id="challengeCards" class="races"><p class="muted">正在檢查研究紀錄…</p></div><h3>每場 T−3 騎師王最大變化</h3><p class="section-intro">與上一場開跑時已收到的賠率比較；綠色為賠率縮短，橙色為上升。棒長按該場最大絕對變幅比較，來源偏舊會標示。</p><div id="jockeyRaceCards" class="races"><p class="muted">選擇騎師／練馬師王後載入…</p></div></div></section>
 <section id="history" class="tab-panel" hidden><h2>推介及正式賽果</h2><p class="section-intro">賽前記錄保留原樣；派彩金額按馬會公布單位顯示。缺少舊紀錄會標明未有紀錄。</p><div class="history-tools"><label for="historyDate">賽日</label><select id="historyDate"><option value="all">全部日期</option></select><span id="historyCount" class="muted"></span></div><div id="historyRows" class="history-list"><p class="muted">正在載入…</p></div></section>
 <section id="system" class="tab-panel" hidden><h2>系統與資料狀態</h2><p class="section-intro">賽日啟動一次 Runner，系統會自動收集、通知及翌日覆核正式派彩。</p><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止 Race Day Runner ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-settlement.yml" target="_blank" rel="noopener">查看正式賽果覆核 ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載歷史備份 ↗</a><p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉網站不會停止收集。</p><details class="info"><summary>公式及訊號說明</summary><p class="muted">50% 即場解碼 valueIndex ＋ 33.33% 位置Q資金 ＋ 8.33% 連贏Q資金 ＋ 8.33% 正規化獨贏賠率強度。QP集中：主選位置Q金額至少是其他馬最高金額1.5倍。排名不是概率。</p></details></section>
 <p class="muted footer-note">賽日頁每分鐘自動更新；正式派彩以馬會公布為準。</p></main>
@@ -46,7 +46,7 @@ const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 function barChart(items,empty='未有可讀數值'){
  const valid=items.filter(x=>Number.isFinite(x.value));if(!valid.length)return `<p class="muted">${esc(empty)}</p>`;
  const max=Math.max(...valid.map(x=>Math.abs(x.value)),0.01);
- return `<div class="bar-list" role="list">${valid.map(x=>{const width=x.value===0?0:Math.max(3,Math.min(100,Math.abs(x.value)/max*100));return `<div class="bar-item" role="listitem" aria-label="${esc(x.label)}：${esc(x.display)}"><span class="bar-name">${esc(x.label)}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill ${x.value<0?'negative':''}" style="width:${width.toFixed(1)}%"></span></span><span class="bar-value">${esc(x.display)}</span></div>`}).join('')}</div>`
+ return `<div class="bar-list" role="list">${valid.map(x=>{const width=x.value===0?0:Math.max(3,Math.min(100,Math.abs(x.value)/max*100));return `<div class="bar-item" role="listitem" aria-label="${esc(x.label)}：${esc(x.display)}${x.detail?'，'+esc(x.detail):''}"><span class="bar-name">${esc(x.label)}${x.detail?`<small class="bar-meta">${esc(x.detail)}</small>`:''}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill ${x.value<0?'negative':''}" style="width:${width.toFixed(1)}%"></span></span><span class="bar-value">${esc(x.display)}</span></div>`}).join('')}</div>`
 }
 const base=()=>`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${dataRef||'race-day-data'}/race-day-data/${selected}`;
 async function currentRef(){
@@ -271,7 +271,7 @@ $('copyAll').onclick=()=>{const value=[...copyRows.entries()].filter(([,x])=>x.s
 document.querySelector('.tabs').onclick=e=>{const tab=e.target.closest('[data-tab]');if(tab)selectTab(tab.dataset.tab)};
 $('historyDate').onchange=historyView;
 $('marketOdds').onclick=()=>{$('hkjcCards').hidden=false;$('challenge').hidden=true;$('marketOdds').classList.add('active');$('marketChallenge').classList.remove('active')};
-$('marketChallenge').onclick=()=>{$('hkjcCards').hidden=true;$('challenge').hidden=false;$('marketOdds').classList.remove('active');$('marketChallenge').classList.add('active')};
+$('marketChallenge').onclick=()=>{$('hkjcCards').hidden=true;$('challenge').hidden=false;$('marketOdds').classList.remove('active');$('marketChallenge').classList.add('active');refreshChallenges()};
 $('raceNav').onclick=e=>{const chip=e.target.closest('[data-race]');if(chip)setRace(Number(chip.dataset.race),true)};
 $('prevRace').onclick=()=>{const i=raceNumbers.indexOf(selectedRace);setRace(raceNumbers[Math.max(0,i-1)],true)};
 $('nextRace').onclick=()=>{const i=raceNumbers.indexOf(selectedRace);setRace(raceNumbers[Math.min(raceNumbers.length-1,i+1)],true)};

@@ -1,8 +1,25 @@
 import unittest
 from datetime import datetime,timedelta
-from challenge_shadow import HK,parse,parse_points,race_context,t3_candidate,market_drop_signal
+from challenge_shadow import HK,parse,parse_points,race_context,t3_candidate,market_drop_signal,jockey_drop_signal
 
 class ChallengeTests(unittest.TestCase):
+    def test_jockey_drop_needs_previous_off_observation_and_marks_staleness(self):
+        off=datetime(2026,9,27,13,15,tzinfo=HK)
+        context=[{'race_number':1,'post_time':off.isoformat()},
+                 {'race_number':2,'post_time':(off+timedelta(minutes=30)).isoformat()}]
+        def quote(received,source,odds):
+            return {'state':'observed','received_at':received.isoformat(),'source_updated_at':source.isoformat(),
+                    'participants':[{'name':'甲','current_odds':odds,'is_other':False}]}
+        baseline=quote(off-timedelta(seconds=10),off-timedelta(minutes=1),5)
+        late=quote(off+timedelta(seconds=20),off-timedelta(seconds=5),2)
+        current=quote(off+timedelta(minutes=27,seconds=30),off+timedelta(minutes=26),4)
+        result=jockey_drop_signal([baseline,late,current],current,context[1],context)
+        self.assertEqual(result['status'],'observed')
+        self.assertEqual(result['changes'][0]['drop_pct'],20)
+        self.assertTrue(result['source_recent'])
+        current['source_updated_at']=(off+timedelta(minutes=20)).isoformat()
+        self.assertFalse(jockey_drop_signal([baseline,current],current,context[1],context)['source_recent'])
+        self.assertEqual(jockey_drop_signal([current],current,context[0],context)['status'],'unavailable')
     def test_trainer_drop_uses_last_quote_at_previous_race_off(self):
         previous=datetime(2026,9,27,13,15,tzinfo=HK)
         def sample(at,odds):

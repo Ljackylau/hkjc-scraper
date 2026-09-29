@@ -29,4 +29,26 @@ async function refreshChallenges(){
    <p>${phases.filter(d=>d?.pools?.[kind]?.samples_this_run>0).map(d=>`<a target="_blank" rel="noopener" href="${root}/${d.phase}/challenge/${kind}.jsonl">${d.phase==='hkjc-early'?'前':'後'}半場原始紀錄 ↗</a>`).join(' ｜ ')}</p></div>`);
  }
  $('challengeCards').innerHTML=cards.join('')||'<p class="muted">此賽日未有研究紀錄。賽日啟動 Race Day Runner（Run）後一併收集；舊賽日不會補造即時資料。</p>';
+ if(!$('challenge').hidden)await refreshJockeyRaceSignals(phases,root,requested);
+}
+
+async function refreshJockeyRaceSignals(phases,root,requested){
+ const raceFolders=new Map();
+ for(const phase of phases)for(const number of phase?.phase_races||[])raceFolders.set(Number(number),phase.phase);
+ const races=[...raceFolders].filter(([number])=>Number.isInteger(number)&&number>0).sort((a,b)=>a[0]-b[0]);
+ if(!races.length){$('jockeyRaceCards').innerHTML='<p class="muted">此賽日沒有保存逐場騎師王比較。</p>';return}
+ const rows=await Promise.all(races.map(async([number,folder])=>{
+  const path=`${root}/${folder}/challenge/race_${String(number).padStart(2,'0')}_jkc_signal.json`;
+  try{const response=await fetch(path,{cache:'no-store',signal:AbortSignal.timeout(10000)});return {number,path,signal:response.ok?await response.json():null}}
+  catch(e){return {number,path,signal:null}}
+ }));
+ if(requested!==selected||$('challenge').hidden)return;
+ const time=t=>t?new Date(t).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong',hour:'2-digit',minute:'2-digit'}):'未知';
+ $('jockeyRaceCards').innerHTML=rows.map(({number,path,signal})=>{
+  if(!signal)return `<div class="card"><h3>R${number}</h3><p class="muted">沒有保存逐場 T−3 騎師王比較，無法重建。</p></div>`;
+  if(signal.status!=='observed')return `<div class="card"><h3>R${number}</h3><p class="muted">${number===1?'第一場沒有上一場作比較。':esc(signal.reason||'沒有足夠的賽前報價。')}</p></div>`;
+  const bars=barChart((signal.changes||[]).slice(0,5).map(change=>({label:change.name,value:Number(change.drop_pct),display:`${Number(change.drop_pct)>0?'+':''}${change.drop_pct}%`,detail:`${change.before_odds} → ${change.t3_odds} 倍`})));
+  const age=`前場來源距開跑 ${Math.round(signal.baseline_age_at_off_seconds/60)} 分鐘；本場來源距接收 ${Math.round(signal.t3_source_age_seconds/60)} 分鐘`;
+  return `<div class="card"><h3>R${number}｜最大 5 項變化</h3>${signal.source_recent?'<p class="good">兩個比較時點的來源時間均在 2 分鐘內</p>':'<p class="bad">來源時間偏舊；只供觀察，並非新鮮 T−3 訊號</p>'}<p class="bar-meta">上一場 ${esc(time(signal.baseline_source_updated_at))} → 本場 ${esc(time(signal.t3_source_updated_at))}<br>${esc(age)}</p>${bars}<a href="${path}" target="_blank" rel="noopener">原始逐場比較 JSON ↗</a></div>`;
+ }).join('');
 }
