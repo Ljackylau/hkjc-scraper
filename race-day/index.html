@@ -27,14 +27,13 @@ button{cursor:pointer;transition:background .15s,border-color .15s,transform .15
 <nav class="tabs" aria-label="資料分類"><button class="tab active" data-tab="horse">◉ 今日</button><button class="tab" data-tab="hkjc">⌁ 市場</button><button class="tab" data-tab="history">▤ 歷史</button><button class="tab" data-tab="system">⚙ 系統</button></nav>
 <section id="horse" class="tab-panel"><div class="racebar"><button id="prevRace" class="race-move" aria-label="上一場">‹</button><div id="raceNav" class="race-scroll"></div><button id="nextRace" class="race-move" aria-label="下一場">›</button><button id="refreshNow" class="race-move" aria-label="立即更新">↻</button></div>
 <div class="copybar"><button id="copyAll" hidden>複製全日推介</button><span id="copyStatus" class="good" aria-live="polite"></span></div><div id="cards" class="races"></div></section>
-<section id="hkjc" class="tab-panel" hidden><h2>市場觀察</h2><p class="section-intro">HKJC T−30 至 T−3 賠率變化；騎練王屬研究資料，不影響主選。</p><div class="market-switch"><button id="marketOdds" class="active">馬匹市場</button><button id="marketChallenge">騎師／練馬師王</button></div><div id="hkjcCards" class="races"></div><div id="challenge" hidden><h3>騎師王／練馬師王</h3>
-<p class="muted">每分鐘獨立保存騎師王及練馬師王賠率；研究資料不影響 Horse103 主選。</p>
-<h3>每場 T−3 騎師王最大變化</h3><p class="section-intro">與上一場開跑時已收到的賠率比較；綠色為賠率縮短，橙色為上升。來源偏舊會標示。</p><div class="history-tools"><label for="jockeyRaceSelect">場次</label><select id="jockeyRaceSelect"><option value="all">全部場次</option></select></div><div id="jockeyRaceCards" class="races"><p class="muted">選擇騎師／練馬師王後載入…</p></div>
-<details id="latestChallenge" class="utility"><summary>最後一次騎師王／練馬師王報價</summary><p class="muted">賽日結束後報價可能已截止；逐場 T−3 紀錄請看上方。</p><div id="challengeCards" class="races"><p class="muted">正在檢查研究紀錄…</p></div></details></div></section>
+<section id="hkjc" class="tab-panel" hidden><h2>市場觀察</h2><p class="section-intro">HKJC 馬匹賠率變化與練馬師王逐場觀察；研究資料不影響主選。</p><div class="market-switch"><button id="marketOdds" class="active">馬匹市場</button><button id="marketChallenge">練馬師王</button></div><div id="hkjcCards" class="races"></div><div id="challenge" hidden><h3>每場 T−3 練馬師王落飛</h3>
+<p class="section-intro">比較上一場開跑時與本場 T−3 附近已收到的賠率；只顯示賠率縮短，例如 20 → 5 倍代表縮短 75%。來源偏舊會標示。</p><div class="history-tools"><label for="trainerRaceSelect">場次</label><select id="trainerRaceSelect"><option value="all">全部場次</option></select></div><div id="trainerRaceCards" class="races"><p class="muted">正在載入練馬師王逐場紀錄…</p></div>
+<details id="latestChallenge" class="utility"><summary>最後一次練馬師王報價</summary><p class="muted">賽日結束後報價可能已截止；逐場 T−3 紀錄請看上方。</p><div id="challengeCards" class="races"><p class="muted">正在檢查研究紀錄…</p></div></details></div></section>
 <section id="history" class="tab-panel" hidden><h2>推介及正式賽果</h2><p class="section-intro">賽前記錄保留原樣；派彩金額按馬會公布單位顯示。缺少舊紀錄會標明未有紀錄。</p><div class="history-tools"><label for="historyDate">賽日</label><select id="historyDate"><option value="all">全部日期</option></select><span id="historyCount" class="muted"></span></div><div id="historyRows" class="history-list"><p class="muted">正在載入…</p></div></section>
 <section id="system" class="tab-panel" hidden><h2>系統與資料狀態</h2><p class="section-intro">賽日啟動一次 Runner，系統會自動收集、通知及翌日覆核正式派彩。</p><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止 Race Day Runner ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-settlement.yml" target="_blank" rel="noopener">查看正式賽果覆核 ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載歷史備份 ↗</a><p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉網站不會停止收集。</p><details class="info"><summary>公式及訊號說明</summary><p class="muted">50% 即場解碼 valueIndex ＋ 33.33% 位置Q資金 ＋ 8.33% 連贏Q資金 ＋ 8.33% 正規化獨贏賠率強度。QP集中：主選位置Q金額至少是其他馬最高金額1.5倍。排名不是概率。</p></details></section>
 <p class="muted footer-note">賽日頁每分鐘自動更新；正式派彩以馬會公布為準。</p></main>
-<script src="challenge.js?v=20260929-jockey-race-filter"></script>
+<script src="challenge.js?v=20260929-trainer-drop-only"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hkToday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Hong_Kong',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts().map(x=>[x.type,x.value]));return `${p.year}-${p.month}-${p.day}`};
@@ -271,7 +270,7 @@ $('cards').onclick=e=>{const b=e.target.closest('[data-copy-race]');if(!b)return
 $('copyAll').onclick=()=>{const value=[...copyRows.entries()].filter(([,x])=>x.saved).sort((a,b)=>a[0]-b[0]).map(([,x])=>x.text).join('\n\n');if(value)copyText(value,'所有已鎖定場次')};
 document.querySelector('.tabs').onclick=e=>{const tab=e.target.closest('[data-tab]');if(tab)selectTab(tab.dataset.tab)};
 $('historyDate').onchange=historyView;
-$('jockeyRaceSelect').onchange=filterJockeyRaces;
+$('trainerRaceSelect').onchange=filterTrainerRaces;
 $('marketOdds').onclick=()=>{$('hkjcCards').hidden=false;$('challenge').hidden=true;$('marketOdds').classList.add('active');$('marketChallenge').classList.remove('active')};
 $('marketChallenge').onclick=()=>{$('hkjcCards').hidden=true;$('challenge').hidden=false;$('marketOdds').classList.remove('active');$('marketChallenge').classList.add('active');refreshChallenges()};
 $('raceNav').onclick=e=>{const chip=e.target.closest('[data-race]');if(chip)setRace(Number(chip.dataset.race),true)};

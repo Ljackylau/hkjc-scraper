@@ -161,8 +161,8 @@ def market_drop_signal(samples,sample,race,context,threshold=15):
             't3_source_updated_at':sample['source_updated_at'],'changes':changes,'qualifying':qualifying}
 
 
-def jockey_drop_signal(samples,sample,race,context):
-    """Compare saved pre-off jockey quotes; keep stale quote age explicit."""
+def jockey_drop_signal(samples,sample,race,context,kind='jkc'):
+    """Compare saved pre-off challenge quotes; keep stale quote age explicit."""
     number=race['race_number']
     previous=next((r for r in context if r['race_number']==number-1),None)
     if not previous:return {'status':'unavailable','reason':'First race has no previous-race comparison','changes':[]}
@@ -188,11 +188,11 @@ def jockey_drop_signal(samples,sample,race,context):
         if not before or not after or p.get('is_other'):continue
         changes.append({'name':p['name'],'before_odds':before,'t3_odds':after,
                         'drop_pct':round(100*(before-after)/before,2)})
-    if not changes:return {'status':'unavailable','reason':'No comparable numeric jockey quotes','changes':[]}
+    if not changes:return {'status':'unavailable','reason':'No comparable numeric challenge quotes','changes':[]}
     changes.sort(key=lambda x:abs(x['drop_pct']),reverse=True)
     current_age=(received-datetime.fromisoformat(sample['source_updated_at'])).total_seconds()
     baseline_age=(off-datetime.fromisoformat(baseline['source_updated_at'])).total_seconds()
-    return {'status':'observed','rule':'jockey odds from previous race off to this race T-3 observation',
+    return {'status':'observed','rule':kind+' odds from previous race off to this race T-3 observation',
             'previous_race':number-1,'race':number,'t3_received_at':sample['received_at'],
             't3_source_updated_at':sample['source_updated_at'],
             'baseline_source_updated_at':baseline['source_updated_at'],
@@ -246,14 +246,14 @@ async def collect(context,date,venue,clocks,numbers,parent,states,once=False):
                 except Exception as e:sample['points_error']=str(e)[:200]
                 history[kind].append(sample)
                 append(folder/f'{kind}.jsonl',sample)
-                if kind=='jkc':
-                    for race in rc:
-                        if race['race_number'] not in numbers or not 90<=race['seconds_to_off']<=180:continue
-                        dest=folder/f'race_{race["race_number"]:02d}_jkc_signal.json'
-                        signal=jockey_drop_signal(history[kind],sample,race,rc)
-                        old_signal=json.loads(dest.read_text()) if dest.exists() else {}
-                        if not dest.exists() or signal['status']=='observed' and (old_signal.get('status')!='observed' or signal.get('source_recent') and not old_signal.get('source_recent')):
-                            atomic(dest,signal)
+                for race in rc:
+                    if race['race_number'] not in numbers or not 90<=race['seconds_to_off']<=180:continue
+                    suffix='jkc_signal' if kind=='jkc' else 'tnc_movement'
+                    dest=folder/f'race_{race["race_number"]:02d}_{suffix}.json'
+                    signal=jockey_drop_signal(history[kind],sample,race,rc,kind)
+                    old_signal=json.loads(dest.read_text()) if dest.exists() else {}
+                    if not dest.exists() or signal['status']=='observed' and (old_signal.get('status')!='observed' or signal.get('source_recent') and not old_signal.get('source_recent')):
+                        atomic(dest,signal)
                 for race in t3_candidate(sample,rc):
                     # Keyed by schedule target. Delays create a new index, not a silent overwrite.
                     key=re.sub(r'[^0-9]','',race['post_time'])
