@@ -96,7 +96,7 @@ async def race_job(context,date,venue,number,off,folder,states):
                 if abs((revised-target).total_seconds())>1800:raise ValueError('Double schedule shift >30 minutes')
                 target=revised;cutoff=target-timedelta(minutes=3,seconds=10)
                 sample['cutoff']=cutoff.isoformat()
-                signature=(sample['source_updated'],json.dumps(sample['odds'],sort_keys=True))
+                signature=(sample['source_updated'],json.dumps({'odds':sample['odds'],'win':sample['win_by_race']},sort_keys=True))
                 if signature!=last:
                     with prefix.with_suffix('.jsonl').open('a',encoding='utf-8') as f:
                         f.write(json.dumps(sample,ensure_ascii=False)+'\n')
@@ -116,7 +116,11 @@ async def race_job(context,date,venue,number,off,folder,states):
                     f.write(json.dumps({'at':now().isoformat(),'error':str(e)[:300]})+'\n')
             interval=10 if now()>=target-timedelta(minutes=7) else 60
             await asyncio.sleep(max(1,interval-(now()-cycle).total_seconds()))
-        state.update(status='unavailable',error=state.get('error','Strict cutoff missed'))
+        cutoff=target-timedelta(minutes=3,seconds=10)
+        if eligible(latest,cutoff,target):
+            atomic(saved,latest)
+            state.update(status='saved',received_at=latest['received_at'],source_updated=latest['source_updated'],matrix_complete=latest['matrix_complete'])
+        else:state.update(status='unavailable',error=state.get('error','Strict cutoff missed'))
     finally:await page.close()
 
 
