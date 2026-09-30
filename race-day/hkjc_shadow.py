@@ -280,6 +280,8 @@ async def run(args):
         states={};tasks=[asyncio.create_task(race_job(context,args.date,args.venue,n,clocks[n-1],folder,states)) for n in numbers]
         from challenge_shadow import collect as collect_challenges
         if numbers:tasks.append(asyncio.create_task(collect_challenges(context,args.date,args.venue,clocks,numbers,folder,states)))
+        from double_shadow import collect as collect_doubles
+        if numbers:tasks.append(asyncio.create_task(collect_doubles(context,args.date,args.venue,clocks,numbers,folder)))
         last=0
         try:
             while not all(t.done() for t in tasks):
@@ -304,3 +306,4 @@ if __name__=='__main__':
     a=argparse.ArgumentParser();a.add_argument('--date',required=True);a.add_argument('--venue',required=True)
     a.add_argument('--times',required=True);a.add_argument('--phase',choices=('early','late'),required=True);a.add_argument('--push',action='store_true')
     asyncio.run(run(a.parse_args()))
+
