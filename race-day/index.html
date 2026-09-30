@@ -19,6 +19,8 @@ button{cursor:pointer;transition:background .15s,border-color .15s,transform .15
 .section-intro{color:#9ab0c3;font-size:14px;line-height:1.55;margin:-4px 0 16px}.market-switch{display:flex;gap:8px;margin-bottom:16px}.market-switch button.active{background:#345874;border-color:#82b5d5}.history-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}.history-tools select{font:inherit;background:#21374d;color:white;border:1px solid #53718b;border-radius:9px;padding:10px}.history-list{display:grid;gap:11px}.history-day{border:1px solid var(--line);border-radius:15px;overflow:hidden;background:#0d1a2c}.history-day>h3{margin:0;padding:13px 16px;background:#1a3148;color:#f3cf8a;font-size:17px}.history-race{padding:13px 16px;border-top:1px solid #30445c}.history-race>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:9px;flex-wrap:wrap}.history-race>summary::-webkit-details-marker{display:none}.history-race>summary:after{content:'⌄';margin-left:auto;color:#9cb4cb}.history-race[open]>summary:after{content:'⌃'}.history-race strong{font-size:17px;color:#fff}.history-race .muted{font-size:13px}.history-detail{padding-top:12px;line-height:1.65}.history-detail p{margin:6px 0}.dividend-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:13px}.dividend-item{border:1px solid #354d64;background:#172c42;border-radius:10px;padding:10px}.dividend-item b{display:block;color:#f2ce86;margin-bottom:3px}.dividend-item span{font-size:13px}.history-table{min-width:680px}.history-table th{position:static}.system-link{display:block;padding:13px 16px;border:1px solid #45617c;border-radius:11px;background:#1d3449;margin-bottom:10px;text-decoration:none}.system-link:hover{background:#2b4864}
 .bar-list{display:grid;gap:12px;margin:13px 0}.bar-item{display:grid;grid-template-columns:minmax(78px,110px) minmax(0,1fr) auto;align-items:center;gap:9px;font-size:14px}.bar-name{overflow-wrap:anywhere;color:#dce9f3}.bar-track{height:15px;border-radius:999px;background:#26364b;overflow:hidden}.bar-fill{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#5186b4,#86d5ad);min-width:2px}.bar-fill.negative{background:linear-gradient(90deg,#ce8b5a,#e5b65c)}.bar-value{font-variant-numeric:tabular-nums;white-space:nowrap;color:#f5cb77}.bar-meta{color:#9db2c5;font-size:12px;line-height:1.4}.bar-section{margin:15px 0}.bar-section h4{font-size:14px;margin:0 0 7px;color:#cbdfee}
 @media(max-width:700px){main{padding:12px 12px 115px}header,section{padding:16px;margin-bottom:12px}header h1{font-size:23px}.subtitle{font-size:13px}.health{font-size:12px}.racebar{top:0}.race-scroll{max-width:calc(100vw - 116px)}.races{display:block}.card{padding:16px}.copyline{font-size:15px}.tab{font-size:14px}.dividend-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+#hkjcCards{grid-template-columns:1fr}.market-line-chart svg{width:100%;display:block;min-height:220px}.line-legend{display:flex;gap:7px;flex-wrap:wrap}.line-legend button{padding:7px 9px;font-size:13px}.line-legend b{font-variant-numeric:tabular-nums}
 </style>
 <main><header><h1>Horse103 <span style="color:#f1cc82">Race Day</span></h1><p class="subtitle">賽前訊號・即時市場・正式賽果</p>
 <div class="datebar"><label for="date">賽日</label><input type="date" id="date"><button id="load">查看</button></div>
@@ -33,6 +35,7 @@ button{cursor:pointer;transition:background .15s,border-color .15s,transform .15
 <section id="history" class="tab-panel" hidden><h2>推介及正式賽果</h2><p class="section-intro">賽前記錄保留原樣；派彩金額按馬會公布單位顯示。缺少舊紀錄會標明未有紀錄。</p><div class="history-tools"><label for="historyDate">賽日</label><select id="historyDate"><option value="all">全部日期</option></select><span id="historyCount" class="muted"></span></div><div id="historyRows" class="history-list"><p class="muted">正在載入…</p></div></section>
 <section id="system" class="tab-panel" hidden><h2>系統與資料狀態</h2><p class="section-intro">賽日啟動一次 Runner，系統會自動收集、通知及翌日覆核正式派彩。</p><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止 Race Day Runner ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-settlement.yml" target="_blank" rel="noopener">查看正式賽果覆核 ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載歷史備份 ↗</a><p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉網站不會停止收集。</p><details class="info"><summary>公式及訊號說明</summary><p class="muted">50% 即場解碼 valueIndex ＋ 33.33% 位置Q資金 ＋ 8.33% 連贏Q資金 ＋ 8.33% 正規化獨贏賠率強度。QP集中：原主選位置Q金額至少是其他馬最高金額1.5倍。B：若原膽 T−10→T−3 前獨贏賠率下降、位置賠率上升，改選其他馬中位置及位置Q支持份額平均增幅最大的一匹；資料不足則保留原膽。分數不是概率。</p></details></section>
 <p class="muted footer-note">賽日頁每分鐘自動更新；正式派彩以馬會公布為準。</p></main>
+<script src="market-lines.js?v=20260930-t7-t3"></script>
 <script src="challenge.js?v=20260929-trainer-drop-only"></script>
 <script>
 const $=id=>document.getElementById(id);
@@ -72,6 +75,7 @@ function selectTab(name){
  document.querySelectorAll('.tab').forEach(tab=>{const on=tab.dataset.tab===name;tab.classList.toggle('active',on);tab.setAttribute('aria-selected',String(on))});
  document.querySelectorAll('.tab-panel').forEach(panel=>{panel.hidden=panel.id!==name});
  if(name==='history')refreshHistory();
+ if(name==='hkjc')refreshMarketLines();
 }
 
 let historyRows=[];
@@ -284,19 +288,28 @@ async function refresh(){
  $('cards').innerHTML=cards.map(c=>c.html).join('')||'<p>未有已啟動紀錄。請先在 GitHub 執行 Preflight；賽日執行 Run。</p>';
  renderRaceNav(cards.map(c=>c.n));
  $('copyAll').hidden=![...copyRows.values()].some(x=>x.saved);
- const shadowRows=[];
- for(const phase of shadow)for(const [n,s] of Object.entries(phase?.races||{})){
-  const bars=barChart((s.ranking||[]).map(h=>({label:`${h.horse_number}號`,value:Number(h.score),display:`${h.score} 分`})),'此場未有有效排序分數');
-  shadowRows.push({n:+n,html:`<div class="card"><h3>R${esc(n)}｜${esc(s.status)}</h3>${s.baseline?.minutes_to_off!=null?`<p class="muted">比較起點 T−${esc(s.baseline.minutes_to_off)} → T−3${s.baseline.kind==='late_start'?'（延後基準）':''}</p>`:''}<p class="bar-meta">賠率變化分數｜棒長按本場最高絕對分數比較</p>${bars}<p class="muted">T−3 目標 ${esc(s.target?new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'}):'')}</p>${s.source_updated?`<small>來源更新：WP ${esc(s.source_updated.wp)}；Q/QP ${esc(s.source_updated.wpq)}</small>`:''}<p class="bad">${esc((s.errors||[]).slice(-1).join('')||s.reason||'')}</p></div>`});
- }
- $('hkjcCards').innerHTML=shadowRows.sort((a,b)=>a.n-b.n).map(x=>x.html).join('')||'<p class="muted">尚未開始獨立快照；賽日啟動 Run 後才會收集。</p>';
+ marketLineStates=shadow.filter(Boolean).flatMap(phase=>Object.entries(phase.races||{}).map(([n,s])=>({n:Number(n),phase:phase.phase,state:s,root:snapshotBase})));
+ $('hkjcCards').innerHTML=marketLineStates.sort((a,b)=>a.n-b.n).map(({n,state:s})=>`<div class="card"><h3>R${esc(n)}｜${esc(s.status)}</h3><p class="bar-meta">T−7 → T−3｜全部馬匹賠率變化分數｜固定原比較基準 ${s.baseline?.minutes_to_off!=null?'T−'+esc(s.baseline.minutes_to_off):'待收集'}<br>獨贏 35%＋位置 25%＋連贏 20%＋位置Q 20%；不是勝出概率。</p><div class="market-line-chart" id="marketLine${n}"><p class="muted">開啟馬匹市場分頁後載入走勢。</p></div><p class="bad">${esc((s.errors||[]).slice(-1).join('')||s.reason||'')}</p></div>`).join('')||'<p class="muted">尚未開始獨立快照；賽日啟動 Run 後才會收集。</p>';
+ if(activeTab==='hkjc')await refreshMarketLines();
 }
+let marketLineStates=[],marketLineData=new Map(),marketLineVersion=0;
+async function refreshMarketLines(){
+ if($('hkjcCards').hidden)return;
+ const version=++marketLineVersion;
+ await Promise.all(marketLineStates.map(async row=>{
+  const data=await MarketLines.load(row.root,row.phase,row.n,row.state);
+  if(version!==marketLineVersion||row.root!==base())return;
+  marketLineData.set(String(row.n),data);
+  const target=$('marketLine'+row.n);if(target)target.innerHTML=MarketLines.chart(data,String(row.n));
+ }));
+}
+$('hkjcCards').onclick=e=>{const b=e.target.closest('[data-line-horse]');if(!b)return;const id=b.dataset.lineChart,data=marketLineData.get(id);if(!data)return;MarketLines.toggle(id,b.dataset.lineHorse);$('marketLine'+id).innerHTML=MarketLines.chart(data,id)};
 $('cards').onclick=e=>{const b=e.target.closest('[data-copy-race]');if(!b)return;const n=Number(b.dataset.copyRace),row=copyRows.get(n);if(row)copyText(row.text,`R${n} `)};
 $('copyAll').onclick=()=>{const value=[...copyRows.entries()].filter(([,x])=>x.saved).sort((a,b)=>a[0]-b[0]).map(([,x])=>x.text).join('\n\n');if(value)copyText(value,'所有已鎖定場次')};
 document.querySelector('.tabs').onclick=e=>{const tab=e.target.closest('[data-tab]');if(tab)selectTab(tab.dataset.tab)};
 $('historyDate').onchange=historyView;
 $('trainerRaceSelect').onchange=filterTrainerRaces;
-$('marketOdds').onclick=()=>{$('hkjcCards').hidden=false;$('challenge').hidden=true;$('marketOdds').classList.add('active');$('marketChallenge').classList.remove('active')};
+$('marketOdds').onclick=()=>{$('hkjcCards').hidden=false;$('challenge').hidden=true;$('marketOdds').classList.add('active');$('marketChallenge').classList.remove('active');refreshMarketLines()};
 $('marketChallenge').onclick=()=>{$('hkjcCards').hidden=true;$('challenge').hidden=false;$('marketOdds').classList.remove('active');$('marketChallenge').classList.add('active');refreshChallenges()};
 $('raceNav').onclick=e=>{const chip=e.target.closest('[data-race]');if(chip)setRace(Number(chip.dataset.race),true)};
 $('prevRace').onclick=()=>{const i=raceNumbers.indexOf(selectedRace);setRace(raceNumbers[Math.max(0,i-1)],true)};
