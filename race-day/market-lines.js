@@ -50,7 +50,10 @@ const MarketLines=(()=>{
  function chart(data,id){
   if(data.error)return `<p class="muted">${escape(data.error)}</p>`;
   const points=data.points;if(!points.length)return '<p class="muted">T−7 至 T−3 尚未有已收到的市場快照。</p>';
-  const horses=[...new Set(points.flatMap(p=>Object.keys(p.scores)))].sort((a,b)=>Number(a)-Number(b)),hide=hidden.get(id)||new Set();
+  const all=[...new Set(points.flatMap(p=>Object.keys(p.scores)))].sort((a,b)=>Number(a)-Number(b));
+  const horses=all.filter(h=>{if(!data.noPullback)return true;const values=points.map(p=>p.scores[h]);return values.length>=2&&values.every(v=>v!=null)&&values.every((v,i)=>!i||v>=values[i-1]-1e-9)}),hide=hidden.get(id)||new Set();
+  if(!horses.length)return data.trainer?'<p class="muted">此時段沒有末段賠率縮短的練馬師。</p>':'<p class="muted">此時段沒有符合「途中沒有回調」且有足夠觀察點的馬匹。</p>';
+  const name=h=>data.labels?.[h]||h+'號';
   const width=720,height=290,left=45,right=665,top=20,bottom=240;
   const max=Math.max(5,...points.flatMap(p=>Object.values(p.scores).filter(v=>v!==null))),ceiling=Math.ceil(max/5)*5;
   const x=t=>left+(t-(data.cutoff-240000))/240000*(right-left),y=v=>bottom-v/ceiling*(bottom-top);
@@ -62,10 +65,10 @@ const MarketLines=(()=>{
    // Separate paths at missing observations rather than inventing missing scores.
    const segments=[];let segment=[];for(const p of points){if(p.scores[h]==null){if(segment.length)segments.push(segment);segment=[]}else segment.push(`${x(p.time).toFixed(1)},${y(p.scores[h]).toFixed(1)}`)}if(segment.length)segments.push(segment);
    svg+=segments.map(s=>`<polyline points="${s.join(' ')}" fill="none" stroke="${color}" stroke-width="2.2"/>`).join('');
-   for(const p of points)if(p.scores[h]!=null)svg+=`<circle cx="${x(p.time)}" cy="${y(p.scores[h])}" r="3" fill="${color}"><title>${h}號｜${p.scores[h].toFixed(3)} 分｜收到 ${escape(new Date(p.received).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'}))}</title></circle>`;
+   for(const p of points)if(p.scores[h]!=null)svg+=`<circle cx="${x(p.time)}" cy="${y(p.scores[h])}" r="3" fill="${color}"><title>${escape(name(h))}｜${p.scores[h].toFixed(3)} ${data.unit||'分'}｜收到 ${escape(new Date(p.received).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'}))}</title></circle>`;
   }
-  const legend=horses.map((h,i)=>{const last=[...points].reverse().find(p=>p.scores[h]!=null)?.scores[h];return `<button data-line-chart="${escape(id)}" data-line-horse="${h}" aria-pressed="${!hide.has(h)}" style="border-color:${colors[i%colors.length]};opacity:${hide.has(h)?.4:1}"><span style="color:${colors[i%colors.length]}">●</span> ${h}號 <b>${last==null?'—':last.toFixed(1)}</b></button>`}).join('');
-  return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="全部馬匹 T−7 至 T−3 賠率變化分數走勢">${svg}</svg><div class="line-legend">${legend}</div><p class="bar-meta">點擊馬號可顯示／隱藏折線；分數越高代表按原有算法落飛越多。只顯示 T−7 至 T−3 期間已收到的快照；最後資料 ${escape(new Date(data.lastReceived).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'}))}，不補造 T−3 端點。</p>`;
+  const legend=horses.map((h,i)=>{const last=[...points].reverse().find(p=>p.scores[h]!=null)?.scores[h];return `<button data-line-chart="${escape(id)}" data-line-horse="${h}" aria-pressed="${!hide.has(h)}" style="border-color:${colors[i%colors.length]};opacity:${hide.has(h)?.4:1}"><span style="color:${colors[i%colors.length]}">●</span> ${escape(name(h))} <b>${last==null?'—':last.toFixed(1)}</b></button>`}).join('');
+  return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="T−7 至 T−3 走勢">${svg}</svg><div class="line-legend">${legend}</div><p class="bar-meta">${data.trainer?'點擊練馬師名稱可顯示／隱藏折線；數值為相對區間起點的賠率縮短百分比。':'點擊馬號可顯示／隱藏折線；只顯示每筆已保存分數均不下降的馬，持平亦符合。'}只顯示 T−7 至 T−3 期間已收到的快照；最後資料 ${escape(new Date(data.lastReceived).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'}))}，不補造 T−3 端點。</p>`;
  }
  function toggle(id,h){const set=hidden.get(id)||new Set();set.has(h)?set.delete(h):set.add(h);hidden.set(id,set)}
  return {load,chart,toggle,scores};
