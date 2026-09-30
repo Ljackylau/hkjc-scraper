@@ -40,10 +40,8 @@ const MarketLines=(()=>{
    const clock=new Date(off).toLocaleTimeString('en-GB',{timeZone:'Asia/Hong_Kong',hour:'2-digit',minute:'2-digit'});
    if(baseline.post_time!==clock)return {error:'比較基準開跑時間不符；暫不繪圖'};
    const points=samples.filter(s=>{const t=Date.parse(s.received_at);return t>=start&&t<=cutoff&&s.post_time===clock}).map(s=>({time:Date.parse(s.received_at),received:s.received_at,scores:scores(baseline,s)}));
-   // The archived T−3 response can arrive after its target. Mark this explicitly.
-   if(end&&end.post_time===clock&&Date.parse(end.received_at)>=cutoff&&Date.parse(end.received_at)<=cutoff+90000)points.push({time:cutoff,received:end.received_at,late:Math.max(0,(Date.parse(end.received_at)-cutoff)/1000),scores:scores(baseline,end)});
    points.sort((a,b)=>a.time-b.time);
-   const data={points,cutoff,baseline:base.baseline?.minutes_to_off,late:points.at(-1)?.late||0};
+   const data={points,cutoff,baseline:base.baseline?.minutes_to_off,lastReceived:points.at(-1)?.received};
    if(end&&points.length)cache.set(cacheKey,data);
    if(cache.size>100)cache.clear();
    return data;
@@ -67,7 +65,7 @@ const MarketLines=(()=>{
    for(const p of points)if(p.scores[h]!=null)svg+=`<circle cx="${x(p.time)}" cy="${y(p.scores[h])}" r="3" fill="${color}"><title>${h}號｜${p.scores[h].toFixed(3)} 分｜收到 ${escape(new Date(p.received).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'}))}</title></circle>`;
   }
   const legend=horses.map((h,i)=>{const last=[...points].reverse().find(p=>p.scores[h]!=null)?.scores[h];return `<button data-line-chart="${escape(id)}" data-line-horse="${h}" aria-pressed="${!hide.has(h)}" style="border-color:${colors[i%colors.length]};opacity:${hide.has(h)?.4:1}"><span style="color:${colors[i%colors.length]}">●</span> ${h}號 <b>${last==null?'—':last.toFixed(1)}</b></button>`}).join('');
-  return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="全部馬匹 T−7 至 T−3 賠率變化分數走勢">${svg}</svg><div class="line-legend">${legend}</div><p class="bar-meta">點擊馬號可顯示／隱藏折線；分數越高代表按原有算法落飛越多。${data.late?`T−3 端點實際延遲 ${data.late.toFixed(1)} 秒收到。`:''}</p>`;
+  return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="全部馬匹 T−7 至 T−3 賠率變化分數走勢">${svg}</svg><div class="line-legend">${legend}</div><p class="bar-meta">點擊馬號可顯示／隱藏折線；分數越高代表按原有算法落飛越多。只顯示 T−7 至 T−3 期間已收到的快照；最後資料 ${escape(new Date(data.lastReceived).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'}))}，不補造 T−3 端點。</p>`;
  }
  function toggle(id,h){const set=hidden.get(id)||new Set();set.has(h)?set.delete(h):set.add(h);hidden.set(id,set)}
  return {load,chart,toggle,scores};
