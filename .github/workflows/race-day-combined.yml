@@ -163,11 +163,13 @@ jobs:
           python-version: '3.11'
       - run: pip install 'playwright>=1.45,<2' certifi
       - run: python -m playwright install --with-deps chromium
-      - name: Archive independent HKJC early odds (shadow only)
+      - name: Capture HKJC quotes and send independent T-3 tips
         env:
           RACE_DATE: ${{ inputs.date }}
           VENUE: ${{ inputs.venue }}
           POST_TIMES: ${{ inputs.post_times }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -u race-day/hkjc_shadow.py --date "$RACE_DATE" --venue "$VENUE" --times "$POST_TIMES" --phase early --push
       - uses: actions/upload-artifact@v4
         if: always()
@@ -213,11 +215,13 @@ jobs:
           python-version: '3.11'
       - run: pip install 'playwright>=1.45,<2' certifi
       - run: python -m playwright install --with-deps chromium
-      - name: Archive independent HKJC late odds (shadow only)
+      - name: Capture HKJC quotes and send independent T-3 tips
         env:
           RACE_DATE: ${{ inputs.date }}
           VENUE: ${{ inputs.venue }}
           POST_TIMES: ${{ inputs.post_times }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -u race-day/hkjc_shadow.py --date "$RACE_DATE" --venue "$VENUE" --times "$POST_TIMES" --phase late --push
       - uses: actions/upload-artifact@v4
         if: always()

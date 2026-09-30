@@ -89,6 +89,16 @@ def reconcile(date, root, workers=4):
             recovered=archived_cold(day,number,folder.name)
             result['cold']=recovered
             if recovered is not None:result['cold_source']='archived_preoff_reconstruction'
+        if date>='2026-10-01':
+            source=day/f'hkjc-{folder.name}'/f'race_{number:02d}_independent.json'
+            for key in ('banker','method_b','additional_picks','legs','cold','cold_source'):result.pop(key,None)
+            if source.exists():
+                signal=json.loads(source.read_text())
+                if signal.get('status')=='ready':
+                    result.update(banker=signal['banker'],legs=signal['legs'],additional_picks=[],independent_tip=signal,
+                                  method_b={'method':'independent_hybrid_v1','status':'independent','banker':signal['banker']})
+                    result['cold']=signal.get('cold',[]) if signal.get('cold_status')=='ready' else None
+                    result['cold_source']='frozen_independent_tip'
         atomic(path,result)
         return number,None
     failed=[]

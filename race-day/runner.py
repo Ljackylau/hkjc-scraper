@@ -74,11 +74,14 @@ def format_tip_message(number,snapshot,market=None,cold=None,positions=None,resu
     decision=snapshot.get('method_b') or {};main=int(decision.get('banker',original_main))
     original={int(row['horseNumber']) for row in snapshot.get('live103_raw',{}).get('candidates',[]) if row.get('horseNumber') is not None}
     extras=[int(row['horse_number']) for row in ranking[1:5] if int(row['horse_number']) not in original and int(row['horse_number'])!=main]
+    if decision.get('method')=='independent_hybrid_v1':extras=[]
     confidence='（QP集中）' if main==original_main and qp_concentrated(snapshot) else ''
     switch=f"（B換膽，原{original_main}號）" if decision.get('status')=='switched' else ''
+    if decision.get('method')=='independent_hybrid_v1':confidence='';switch='（新方法）'
     confidence_horses=f'{annotated(main,positions)}{confidence}{switch}'+(('，'+'、'.join(annotated(n,positions) for n in extras)) if extras else '')
     legs='、'.join(annotated(n,positions) for n in (market or []) if int(n)!=main) or '無'
     cold_text='、'.join(annotated(n,positions) for n in (cold or [])) or '無'
+    if snapshot.get('independent_tip',{}).get('cold_status')=='unavailable':cold_text='資料未就緒'
     title=f'🏁 R{number}｜正式賽果更新' if result else f'🏇 R{number}｜T−3 已鎖定'
     return (title+'\n'
             f'獨贏&位置信心馬：{confidence_horses}\n'
@@ -169,6 +172,44 @@ def remote_method_b(date,phase,number):
         raise ValueError('Method B archive race/date mismatch')
     return source
 
+def remote_independent(date,phase,number):
+    root=f'https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/race-day-data/race-day-data/{date}/hkjc-{phase}'
+    source=remote_json(f'{root}/race_{number:02d}_independent.json?v={int(time.time())}')
+    if source.get('date')!=date or source.get('race')!=number or source.get('method')!='independent_hybrid_v1':
+        raise ValueError('Independent archive race/date/method mismatch')
+    if source.get('status')=='ready':
+        cut=datetime.fromisoformat(source['cutoff']);freeze=cut-timedelta(seconds=10)
+        if datetime.fromisoformat(source['received_at'])>freeze:raise ValueError('Independent quote received after cutoff')
+        if any(not 0<=(freeze-datetime.fromisoformat(v)).total_seconds()<=120 for v in source['source_updated'].values()):
+            raise ValueError('Independent source stale at freeze')
+    return source
+
+async def independent_notification(date,phase,folder,number,state,marker):
+    target=datetime.fromisoformat(state['target']) if state.get('target') else None
+    if target and now()<target:return
+    try:source=await asyncio.to_thread(remote_independent,date,phase,number)
+    except Exception:
+        if target and now()>target+timedelta(minutes=3):
+            text=f'⚠️ R{number}｜未能取得新方法 T−3 快照\n請查看網站系統狀態；未改用較遲資料或 Horse103 原膽。'
+            if telegram_configured():
+                try:await asyncio.to_thread(telegram_send,text)
+                except Exception:pass
+            atomic(marker,{'status':'failed','race':number,'reason':'Independent pre-T-3 archive unavailable'})
+        return
+    state['independent_tip']=source
+    root=f'https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/race-day-data/race-day-data/{date}/hkjc-{phase}'
+    try:sent=await asyncio.to_thread(remote_json,f'{root}/race_{number:02d}_independent_notification.json?v={int(time.time())}')
+    except Exception:sent={}
+    if sent.get('status') not in ('sent','not_configured'):
+        if target and now()>target+timedelta(minutes=3):
+            atomic(marker,{'status':'failed','race':number,'reason':'Independent Telegram send not confirmed','independent_tip':source})
+        return  # The HKJC worker owns T-3 sending/retries.
+    decision={'method':'independent_hybrid_v1','status':'independent','banker':source.get('banker'),
+              'reason':source.get('banker_source',source.get('reason')),'received_at':source.get('received_at')}
+    atomic(marker,{'sent_at':sent.get('sent_at'),'race':number,'status':'saved' if source.get('status')=='ready' else 'failed',
+                   'message':sent.get('message'),'method_b':decision,'independent_tip':source,
+                   'market':source.get('market',[]),'golden':source.get('golden',[]),'cold':source.get('cold',[])})
+
 async def notification_monitor(date,phase,folder,states,finished):
     notify_folder=folder/'notifications';notify_folder.mkdir(exist_ok=True)
     pending_since={}
@@ -179,6 +220,9 @@ async def notification_monitor(date,phase,folder,states,finished):
         for n,state in list(states.items()):
             number=int(n);marker=notify_folder/f'race_{number:02d}.json'
             if marker.exists():continue
+            if date>='2026-10-01':
+                await independent_notification(date,phase,folder,number,state,marker)
+                continue
             if state.get('status') in terminal:
                 message=f'⚠️ R{number}｜T−3未能完成\n狀態：{state.get("status")}\n原因：{state.get("reason") or state.get("error") or "資料不足"}'
                 if telegram_configured():
@@ -246,17 +290,32 @@ async def result_job(race,date,folder,states,executor):
         states[str(number)]={'status':'unavailable','reason':'Official result/dividends not complete within 90 minutes; overnight reconciliation will retry'};return
     snapshot_path=folder/'horse103'/f'race_{number:02d}.json'
     snapshot=json.loads(snapshot_path.read_text(encoding='utf-8')) if snapshot_path.exists() else None
+    if date>='2026-10-01':snapshot=None
     tip_marker=folder/'notifications'/f'race_{number:02d}.json'
     market=[];cold=[];saved_cold=None
     if tip_marker.exists():
         tip=json.loads(tip_marker.read_text(encoding='utf-8'));market=tip.get('market') or [];cold=tip.get('cold') or []
         if 'cold' in tip:saved_cold=[int(x) for x in tip['cold']]
+        independent=tip.get('independent_tip')
+        if independent and independent.get('status')=='ready':
+            snapshot={'ranking':[{'horse_number':independent['banker']}],
+                      'method_b':tip['method_b'],'independent_tip':independent}
     elif snapshot:
         try:market,cold,_=await asyncio.to_thread(remote_market,date,folder.name,number)
+        except Exception:pass
+    if date>='2026-10-01' and snapshot is None:
+        try:
+            independent=await asyncio.to_thread(remote_independent,date,folder.name,number)
+            if independent.get('status')=='ready':
+                snapshot={'ranking':[{'horse_number':independent['banker']}],
+                          'method_b':{'method':'independent_hybrid_v1','status':'independent','banker':independent['banker']},'independent_tip':independent}
+                market=independent.get('market',[]);cold=independent.get('cold',[])
+                saved_cold=cold if independent.get('cold_status')=='ready' else None
         except Exception:pass
     result['date']=date;result['race']=number
     result['banker']=int(snapshot.get('method_b',{}).get('banker',snapshot['ranking'][0]['horse_number'])) if snapshot else None
     if snapshot and snapshot.get('method_b'):result['method_b']=snapshot['method_b']
+    if snapshot and snapshot.get('independent_tip'):result['independent_tip']=snapshot['independent_tip']
     result['legs']=[int(x) for x in market if int(x)!=result['banker']]
     result['cold']=saved_cold
     if saved_cold is not None:result['cold_source']='saved_tip'

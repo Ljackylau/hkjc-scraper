@@ -13,6 +13,7 @@ from pathlib import Path
 from runner import REPO, HK, atomic, now, publish, setup_data_branch
 import runner
 from method_b import prepare as prepare_method_b
+from independent_tip import prepare as prepare_independent, notify as notify_independent, cold_signal
 
 DOM = r"""() => ({
   text: document.body.innerText,
@@ -190,7 +191,7 @@ async def capture(page, date, venue, number, route):
     return result
 
 
-async def race_job(context,date,venue,number,off,folder,states):
+async def race_job(context,date,venue,number,off,folder,states,clocks=None):
     restored=restore_saved_state(folder,number,date)
     if restored:
         states[str(number)]=restored
@@ -204,6 +205,14 @@ async def race_job(context,date,venue,number,off,folder,states):
     try:
         while now()<=target-timedelta(minutes=3)+timedelta(seconds=90):
             cycle=now()
+            independent_path=folder/f'race_{number:02d}_independent.json'
+            if now()>=target-timedelta(minutes=3,seconds=10) and not independent_path.exists():
+                signal=prepare_independent(samples,target,date,number,baseline,golden_legs(baseline,samples,target-timedelta(minutes=3,seconds=10)) if baseline else [])
+                cold_signal(signal,folder,number,clocks,states)
+                atomic(independent_path,signal)
+                await notify_independent(number,signal,folder)
+            elif independent_path.exists():
+                await notify_independent(number,json.loads(independent_path.read_text()),folder)
             try:
                 w,p=await asyncio.gather(capture(wp,date,venue,number,'wp'),capture(wpq,date,venue,number,'wpq'))
                 revised=datetime.strptime(date+' '+w['post_time'],'%Y-%m-%d %H:%M').replace(tzinfo=HK)
@@ -212,6 +221,7 @@ async def race_job(context,date,venue,number,off,folder,states):
                     target=revised;baseline=None
                     for suffix in ('t30','baseline','method_b'):
                         (folder/f'race_{number:02d}_{suffix}.json').unlink(missing_ok=True)
+                    if not (folder/f'race_{number:02d}_independent_notification.json').exists():independent_path.unlink(missing_ok=True)
                 if w['post_time']!=p['post_time']:raise ValueError('WP/WPQ post times mismatch')
                 if not (w['fresh'] and p['fresh']):raise ValueError('Stale source timestamp')
                 active=set(w['odds']['WIN']) & set(w['odds']['PLA'])
@@ -259,7 +269,7 @@ async def race_job(context,date,venue,number,off,folder,states):
                 errors.append(str(e)[:180]);states[str(number)]={'status':'retrying','target':(target-timedelta(minutes=3)).isoformat(),'errors':errors[-3:]}
                 with (folder/f'race_{number:02d}_errors.jsonl').open('a',encoding='utf-8') as f:
                     f.write(json.dumps({'at':now().isoformat(),'error':str(e)[:300]},ensure_ascii=False)+'\n')
-            interval=10 if (baseline is None and target-timedelta(minutes=32)<=now()<=target-timedelta(minutes=10)) or now()>=target-timedelta(minutes=4) else 60
+            interval=5 if now()>=target-timedelta(minutes=4) else 10 if baseline is None and target-timedelta(minutes=32)<=now()<=target-timedelta(minutes=10) else 60
             await asyncio.sleep(max(1,interval-(now()-cycle).total_seconds()))
         states[str(number)]={'status':'unavailable','target':(target-timedelta(minutes=3)).isoformat(),'errors':errors[-3:]}
     finally:
@@ -277,7 +287,7 @@ async def run(args):
     from playwright.async_api import async_playwright
     async with async_playwright() as p:
         browser=await p.chromium.launch();context=await browser.new_context(locale='zh-HK',timezone_id='Asia/Hong_Kong')
-        states={};tasks=[asyncio.create_task(race_job(context,args.date,args.venue,n,clocks[n-1],folder,states)) for n in numbers]
+        states={};tasks=[asyncio.create_task(race_job(context,args.date,args.venue,n,clocks[n-1],folder,states,clocks)) for n in numbers]
         from challenge_shadow import collect as collect_challenges
         if numbers:tasks.append(asyncio.create_task(collect_challenges(context,args.date,args.venue,clocks,numbers,folder,states)))
         from double_shadow import collect as collect_doubles
@@ -287,7 +297,8 @@ async def run(args):
             while not all(t.done() for t in tasks):
                 atomic(folder/'status.json',{'date':args.date,'updated_at':now().isoformat(),'mode':'shadow','races':states,
                                              'errors':[str(t.exception()) for t in tasks if t.done() and t.exception()]})
-                if args.push and time.monotonic()-last>=60:
+                critical=any(s.get('target') and -90<=(datetime.fromisoformat(s['target'])-now()).total_seconds()<=70 for s in states.values())
+                if args.push and time.monotonic()-last>=(15 if critical else 60):
                     try:await asyncio.to_thread(publish,folder)
                     except Exception as e:print('Publish retry:',e,flush=True)
                     last=time.monotonic()
@@ -306,4 +317,3 @@ if __name__=='__main__':
     a=argparse.ArgumentParser();a.add_argument('--date',required=True);a.add_argument('--venue',required=True)
     a.add_argument('--times',required=True);a.add_argument('--phase',choices=('early','late'),required=True);a.add_argument('--push',action='store_true')
     asyncio.run(run(a.parse_args()))
-
