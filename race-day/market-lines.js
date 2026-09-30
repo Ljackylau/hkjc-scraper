@@ -71,5 +71,11 @@ const MarketLines=(()=>{
   return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="T−7 至 T−3 走勢">${svg}</svg><div class="line-legend">${legend}</div><p class="bar-meta">${data.trainer?'點擊練馬師名稱可顯示／隱藏折線；數值為相對區間起點的賠率縮短百分比。':'點擊馬號可顯示／隱藏折線；只顯示每筆已保存分數均不下降的馬，持平亦符合。'}只顯示 T−7 至 T−3 期間已收到的快照；最後資料 ${escape(new Date(data.lastReceived).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'}))}，不補造 T−3 端點。</p>`;
  }
  function toggle(id,h){const set=hidden.get(id)||new Set();set.has(h)?set.delete(h):set.add(h);hidden.set(id,set)}
- return {load,chart,toggle,scores};
+ function golden(data){
+  const points=data.points||[];if(points.length<2)return [];
+  return Object.keys(points.at(-1).scores).filter(h=>{
+   const v=points.map(p=>p.scores[h]);return v.every(x=>x!=null)&&v.at(-1)>=20&&v.every((x,i)=>!i||x>=v[i-1]-1e-9);
+  }).sort((a,b)=>points.at(-1).scores[b]-points.at(-1).scores[a]||Number(a)-Number(b)).map(Number);
+ }
+ return {load,chart,toggle,scores,golden};
 })();

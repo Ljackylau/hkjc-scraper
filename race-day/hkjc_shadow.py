@@ -155,6 +155,26 @@ def movement(start,end):
     return ranked if ranked and ranked[0]['score']>0 else []
 
 
+def golden_legs(baseline,samples,cutoff):
+    """Use only observations already received inside T-7..T-3; no late endpoint."""
+    clock=(cutoff+timedelta(minutes=3)).strftime('%H:%M')
+    if not baseline or baseline.get('post_time')!=clock:return []
+    window=sorted((s for s in samples if cutoff-timedelta(minutes=4)<=datetime.fromisoformat(s['received_at'])<=cutoff and s.get('post_time')==clock),key=lambda s:s['received_at'])
+    if len(window)<2:return []
+    scores=[]
+    for sample in window:
+        if not all(baseline.get('odds',{}).get(p) and sample.get('odds',{}).get(p) for p in ('WIN','PLA','QIN','QPL')):return []
+        rows=movement(baseline,sample)
+        values={int(h):0 for h in sample['odds']['WIN'] if h in sample['odds']['PLA']}
+        values.update({r['horse_number']:r['score'] for r in rows});scores.append(values)
+    result=[]
+    for h in scores[-1]:
+        values=[score.get(h) for score in scores]
+        if all(v is not None for v in values) and values[-1]>=20 and all(b>=a-1e-9 for a,b in zip(values,values[1:])):
+            result.append({'horse_number':h,'score':values[-1]})
+    return sorted(result,key=lambda r:(-r['score'],r['horse_number']))
+
+
 async def capture(page, date, venue, number, route):
     url=f'https://bet.hkjc.com/ch/racing/{route}/{date}/{venue}/{number}'
     await page.goto(url,wait_until='domcontentloaded',timeout=25000)
@@ -230,7 +250,7 @@ async def race_job(context,date,venue,number,off,folder,states):
                         states[str(number)]={'status':'shadow' if ranked else 'no_signal','target':t3.isoformat(),
                                             'received_at':combined['received_at'],'source_updated':combined['source_updated'],
                                             'baseline':baseline_info(baseline,target),
-                                            'ranking':ranked[:5], 'source':'HKJC odds movement; experimental'}
+                                            'ranking':ranked[:5], 'golden_legs':golden_legs(baseline,samples,t3), 'source':'HKJC odds movement; experimental'}
                     else:states[str(number)]={'status':'missing_baseline','target':t3.isoformat(),'reason':'No fresh baseline between T−30 and T−10; T−3 raw saved'}
                     return
                 states[str(number)]={'status':'collecting','target':t3.isoformat(),

@@ -137,6 +137,9 @@ def remote_json(url):
     request=urllib.request.Request(url,headers={'User-Agent':'hkjc-race-day-runner','Cache-Control':'no-cache'})
     with urllib.request.urlopen(request,timeout=12) as response:return json.load(response)
 
+class MarketLegs(list):
+    pass
+
 def remote_market(date,phase,number):
     root=f'https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/race-day-data/race-day-data/{date}/hkjc-{phase}'
     stamp=int(time.time())
@@ -144,6 +147,8 @@ def remote_market(date,phase,number):
     race=(status.get('races') or {}).get(str(number)) or {}
     ranking=[int(row['horse_number']) for row in race.get('ranking') or []]
     if not ranking:return None,None,None
+    golden=[int(r['horse_number']) for r in race.get('golden_legs') or []]
+    ranking=MarketLegs(dict.fromkeys(golden+ranking));ranking.golden=golden
     cold=[]
     try:
         t3=remote_json(f'{root}/race_{number:02d}_t3.json?v={stamp}')
@@ -206,11 +211,11 @@ async def notification_monitor(date,phase,folder,states,finished):
             atomic(snapshot_path,snapshot)
             message=format_tip_message(number,snapshot,market,cold)
             if not telegram_configured():
-                atomic(marker,{'processed_at':now().isoformat(),'race':number,'notification':'not configured','method_b':decision,'market':market or [],'cold':cold or []})
+                atomic(marker,{'processed_at':now().isoformat(),'race':number,'notification':'not configured','method_b':decision,'market':market or [],'golden':getattr(market,'golden',[]),'cold':cold or []})
                 continue
             try:
                 await asyncio.to_thread(telegram_send,message)
-                atomic(marker,{'sent_at':now().isoformat(),'race':number,'message':message,'market':market or [],'cold':cold or [],'method_b':decision,'status':'saved'})
+                atomic(marker,{'sent_at':now().isoformat(),'race':number,'message':message,'market':market or [],'golden':getattr(market,'golden',[]),'cold':cold or [],'method_b':decision,'status':'saved'})
                 print('Telegram R',number,'sent',flush=True)
             except Exception as e:print('Telegram R',number,'retry:',str(e)[:160],flush=True)
         try:await asyncio.wait_for(finished.wait(),timeout=5)
