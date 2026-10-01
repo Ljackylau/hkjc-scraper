@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "090bc7d7-8066-4456-8fcf-d9022e4c00ba",
+    "race_number": 10,
+    "post_time": "17:45",
+    "venue": "沙田",
+    "distance": 1400,
+    "course": "A"
+  },
+  "date": "2026-10-01",
+  "expected_lock": "2026-10-01T17:42:00+08:00",
+  "live_received_at": "2026-10-01T17:42:07.838676+08:00",
+  "capture_delay_seconds": 7.84,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-01T09:42:02.227Z",
+    "postTime": "2026-10-01T09:45:00.000Z",
+    "previewTime": "2026-10-01T09:38:00.000Z",
+    "lockTime": "2026-10-01T09:42:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 14,
+        "nameTc": "八仟好運",
+        "nameEn": "MASTER LUCKY",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 70,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "巴閉精",
+        "nameEn": "SUPERB SPIRIT",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 69,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "禾道豐",
+        "nameEn": "PAPAYA BROSE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 69,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "友瑩亮",
+        "nameEn": "AEROVOLANIC",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "非凡豪傑",
+        "nameEn": "FLYING FORTRESS",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 54,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 8,
+        "nameTc": "金錢遊戲",
+        "nameEn": "MONEY GAMES",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "超寫意",
+        "nameEn": "CHILL BUDDY",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 13,
+        "nameTc": "佛亮老撾",
+        "nameEn": "KING OF FIGHTERS",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 14,
+      "nameTc": "八仟好運",
+      "nameEn": "MASTER LUCKY",
+      "confidence": "high",
+      "reason": "八仟好運檔位佳，負磅輕，近績穩定，上仗1400米跑第二表現出色，蔡約翰馬房操練充足，艾兆禮發揮合拍。",
+      "previewHorseNumber": null
+    }
+  }
+}
