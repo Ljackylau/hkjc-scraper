@@ -1,0 +1,510 @@
+{
+  "source": "HKJC official local results",
+  "source_url": "https://racing.hkjc.com/en-us/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=8",
+  "received_at": "2026-10-02T05:11:34.186286+08:00",
+  "entries": [
+    {
+      "placing": "1",
+      "placing_text": "1",
+      "horse_number": 9
+    },
+    {
+      "placing": "2",
+      "placing_text": "2",
+      "horse_number": 4
+    },
+    {
+      "placing": "3",
+      "placing_text": "3",
+      "horse_number": 11
+    },
+    {
+      "placing": "4",
+      "placing_text": "4",
+      "horse_number": 8
+    },
+    {
+      "placing": "5",
+      "placing_text": "5",
+      "horse_number": 7
+    },
+    {
+      "placing": "6",
+      "placing_text": "6",
+      "horse_number": 13
+    },
+    {
+      "placing": "7",
+      "placing_text": "7",
+      "horse_number": 3
+    },
+    {
+      "placing": "8",
+      "placing_text": "8",
+      "horse_number": 12
+    },
+    {
+      "placing": "9",
+      "placing_text": "9",
+      "horse_number": 5
+    },
+    {
+      "placing": "10",
+      "placing_text": "10",
+      "horse_number": 14
+    },
+    {
+      "placing": "11",
+      "placing_text": "11",
+      "horse_number": 6
+    },
+    {
+      "placing": "12",
+      "placing_text": "12",
+      "horse_number": 10
+    },
+    {
+      "placing": "13",
+      "placing_text": "13",
+      "horse_number": 1
+    },
+    {
+      "placing": "14",
+      "placing_text": "14",
+      "horse_number": 2
+    }
+  ],
+  "top4": [
+    9,
+    4,
+    11,
+    8
+  ],
+  "dividends": {
+    "W": [
+      {
+        "combination": "9",
+        "dividend_hkd": 500.5
+      }
+    ],
+    "P": [
+      {
+        "combination": "9",
+        "dividend_hkd": 97.0
+      },
+      {
+        "combination": "4",
+        "dividend_hkd": 15.0
+      },
+      {
+        "combination": "11",
+        "dividend_hkd": 18.0
+      }
+    ],
+    "Q": [
+      {
+        "combination": "4,9",
+        "dividend_hkd": 658.0
+      }
+    ],
+    "QP": [
+      {
+        "combination": "4,9",
+        "dividend_hkd": 198.0
+      },
+      {
+        "combination": "9,11",
+        "dividend_hkd": 373.0
+      },
+      {
+        "combination": "4,11",
+        "dividend_hkd": 36.5
+      }
+    ],
+    "FCT": [
+      {
+        "combination": "9,4",
+        "dividend_hkd": 1364.0
+      }
+    ],
+    "TIERCE": [
+      {
+        "combination": "9,4,11",
+        "dividend_hkd": 12501.0
+      }
+    ],
+    "TRIO": [
+      {
+        "combination": "4,9,11",
+        "dividend_hkd": 1115.0
+      }
+    ],
+    "FIRST4": [
+      {
+        "combination": "4,8,9,11",
+        "dividend_hkd": 1491.0
+      }
+    ],
+    "QUARTET": [
+      {
+        "combination": "9,4,11,8",
+        "dividend_hkd": 56686.0
+      }
+    ]
+  },
+  "dividend_unit": "HKJC published HK$ unit",
+  "settlement_status": "complete",
+  "date": "2026-10-01",
+  "race": 8,
+  "tip_sent_at": "2026-10-01T16:42:00.579999+08:00",
+  "banker": 7,
+  "legs": [
+    5,
+    4,
+    11,
+    8
+  ],
+  "additional_picks": [],
+  "independent_tip": {
+    "date": "2026-10-01",
+    "race": 8,
+    "off": "2026-10-01T16:45:00+08:00",
+    "freeze": "2026-10-01T16:41:50+08:00",
+    "method": "independent_hybrid_v1",
+    "cutoff": "2026-10-01T16:42:00+08:00",
+    "banker": 7,
+    "legs": [
+      5,
+      4,
+      11,
+      8
+    ],
+    "banker_source": "fixed-baseline market movement",
+    "banker_scores": {
+      "1": 12.196,
+      "2": 1.596,
+      "3": 6.09,
+      "4": 20.109,
+      "5": 10.497,
+      "6": 23.548,
+      "7": 38.419,
+      "8": 14.434,
+      "9": 6.368,
+      "10": 9.484,
+      "11": 19.958,
+      "12": 9.386,
+      "13": 1.788,
+      "14": 18.89
+    },
+    "leg_scores": {
+      "1": 0.7538461538461538,
+      "2": 0.25384615384615383,
+      "3": 0.47692307692307695,
+      "4": 0.8153846153846154,
+      "5": 0.8461538461538463,
+      "6": 0.5538461538461539,
+      "7": 0.3615384615384616,
+      "8": 0.6615384615384616,
+      "9": 0.12307692307692308,
+      "10": 0.16923076923076924,
+      "11": 0.7230769230769232,
+      "12": 0.24615384615384617,
+      "13": 0.6000000000000001,
+      "14": 0.4153846153846154
+    },
+    "received_at": "2026-10-01T16:41:31.298493+08:00",
+    "experimental": true,
+    "not_a_probability": true,
+    "status": "ready",
+    "market": [
+      7,
+      6,
+      4,
+      11,
+      14
+    ],
+    "golden": [],
+    "legs_status": "ready",
+    "baseline_received_at": "2026-10-01T16:34:11.020894+08:00",
+    "long_baseline_received_at": "2026-10-01T16:16:11.078951+08:00",
+    "runner_rows": [
+      [
+        "1",
+        "",
+        "全能勇士",
+        "11",
+        "135",
+        "潘頓",
+        "呂健威",
+        "7.8",
+        "2.8",
+        ""
+      ],
+      [
+        "2",
+        "",
+        "添開心",
+        "14",
+        "134",
+        "袁幸堯 (-7)",
+        "伍鵬志",
+        "43",
+        "11",
+        ""
+      ],
+      [
+        "3",
+        "",
+        "鋁神",
+        "6",
+        "132",
+        "周俊樂 (-2)",
+        "廖康銘",
+        "29",
+        "6.3",
+        ""
+      ],
+      [
+        "4",
+        "",
+        "明德輝煌",
+        "4",
+        "129",
+        "艾道拿",
+        "姚本輝",
+        "3.4",
+        "1.6",
+        ""
+      ],
+      [
+        "5",
+        "",
+        "八玲瓏",
+        "1",
+        "128",
+        "田泰安",
+        "蔡約翰",
+        "6.9",
+        "2.2",
+        ""
+      ],
+      [
+        "6",
+        "",
+        "擅搏",
+        "3",
+        "127",
+        "奧爾民",
+        "賀賢",
+        "7.2",
+        "3.1",
+        ""
+      ],
+      [
+        "7",
+        "",
+        "金鼓大班",
+        "5",
+        "126",
+        "霍宏聲",
+        "游達榮",
+        "43",
+        "10",
+        ""
+      ],
+      [
+        "8",
+        "",
+        "天天更好",
+        "2",
+        "123",
+        "巴度",
+        "羅富全",
+        "10",
+        "2.1",
+        ""
+      ],
+      [
+        "9",
+        "",
+        "電子好好",
+        "13",
+        "121",
+        "班德禮",
+        "文家良",
+        "119",
+        "23",
+        ""
+      ],
+      [
+        "10",
+        "",
+        "笑必勝",
+        "9",
+        "121",
+        "蔡明紹",
+        "黎昭昇",
+        "100",
+        "22",
+        ""
+      ],
+      [
+        "11",
+        "",
+        "閃電奇駿",
+        "12",
+        "119",
+        "艾兆禮",
+        "甘敏斯",
+        "4.7",
+        "1.9",
+        ""
+      ],
+      [
+        "12",
+        "",
+        "騰達勇士",
+        "8",
+        "119",
+        "何澤堯",
+        "方嘉柏",
+        "47",
+        "11",
+        ""
+      ],
+      [
+        "13",
+        "",
+        "花果猴王",
+        "7",
+        "117",
+        "鍾易禮 (-2)",
+        "告東尼",
+        "18",
+        "4.6",
+        ""
+      ],
+      [
+        "14",
+        "",
+        "領航多福",
+        "10",
+        "116",
+        "金誠剛",
+        "鄭俊偉",
+        "28",
+        "6.9",
+        ""
+      ]
+    ],
+    "source_updated": {
+      "wp": "2026-10-01T16:41:00+08:00",
+      "wpq": "2026-10-01T16:41:00+08:00"
+    },
+    "cold": [],
+    "cold_status": "ready",
+    "published_legs": [
+      6,
+      4,
+      11,
+      14
+    ],
+    "published_cold": [],
+    "published_cold_status": "unavailable",
+    "legs_f": [
+      5,
+      4
+    ],
+    "legs_qp": [
+      11,
+      8
+    ],
+    "banker_qp_odds": {
+      "1": 77.0,
+      "2": 243.0,
+      "3": 150.0,
+      "4": 34.0,
+      "5": 83.0,
+      "6": 91.0,
+      "8": 73.0,
+      "9": 359.0,
+      "10": 209.0,
+      "11": 58.0,
+      "12": 118.0,
+      "13": 257.0,
+      "14": 121.0
+    },
+    "legs_method": "f2_banker_qp2_v1",
+    "legs_reason": "",
+    "legs_recomputed": true,
+    "legs_recomputed_at": "2026-10-01T23:48:22.058465+08:00",
+    "legs_inputs_received_at": "2026-10-01T16:41:31.298493+08:00",
+    "legs_inputs_source_updated": {
+      "wp": "2026-10-01T16:41:00+08:00",
+      "wpq": "2026-10-01T16:41:00+08:00"
+    },
+    "cold_policy": "post_previous_off_receipt120_groups_exclude_banker_v6",
+    "cold_group": [
+      {
+        "horse": 11,
+        "trainer": "甘敏斯",
+        "selection_id": "21",
+        "before_odds": null,
+        "current_odds": null,
+        "drop_pct": null,
+        "qualifies": false,
+        "scope": "collective_not_individual"
+      }
+    ],
+    "cold_excluded": [
+      {
+        "horse": 14,
+        "trainer": "鄭俊偉",
+        "reason": "練王選項已不能勝出；不是馬匹不能勝出"
+      }
+    ],
+    "cold_changes": [
+      {
+        "horse": 6,
+        "trainer": "賀賢",
+        "before_odds": 1.16,
+        "current_odds": 1.09,
+        "drop_pct": 6.034482758620676,
+        "selection_id": "10"
+      },
+      {
+        "horse": 4,
+        "trainer": "姚本輝",
+        "before_odds": 7.0,
+        "current_odds": 8.5,
+        "drop_pct": -21.428571428571427,
+        "selection_id": "2"
+      }
+    ],
+    "cold_partial": false,
+    "cold_missing": [],
+    "cold_compared": [
+      6,
+      4
+    ],
+    "cold_received_at": "2026-10-01T16:41:38.442059+08:00",
+    "cold_source_updated_at": "2026-10-01T16:29:00+08:00",
+    "cold_quote_age_seconds": 770.0,
+    "cold_receipt_age_seconds": 11.558,
+    "cold_baseline_source_updated_at": "2026-10-01T16:04:00+08:00",
+    "cold_baseline_received_at": "2026-10-01T16:14:38.300545+08:00",
+    "cold_backfill": {
+      "kind": "archived_pre_t3_reconstruction",
+      "updated_at": "2026-10-01T23:48:22.058465+08:00",
+      "not_sent_at_t3": true,
+      "policy_unchanged": true
+    }
+  },
+  "method_b": {
+    "method": "independent_hybrid_v1",
+    "status": "independent",
+    "banker": 7
+  },
+  "cold": [],
+  "cold_source": "frozen_independent_tip"
+}
