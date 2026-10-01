@@ -15,9 +15,10 @@ def prepare(samples,off,date,number,baseline=None,golden=None):
         return dt(s['received_at'])<=at and all(0<=(at-dt(s['source_updated'][k])).total_seconds()<=age for k in ('wp','wpq'))
     bases=[s for s in ordered if fresh(s,off-timedelta(minutes=10),180)]
     ends=[s for s in ordered if fresh(s,freeze,120)]
-    if not bases or not ends:return {**common,'status':'unavailable','reason':'Missing fresh T-10 or pre-T-3 full-field HKJC quotes'}
+    if not ends:return {**common,'status':'unavailable','reason':'缺截止前120秒內完整HKJC快照'}
+    if not bases and not baseline:return {**common,'status':'unavailable','reason':'缺有效T−10及長窗基準快照'}
     try:
-        decision=pick(ends[-1],bases[-1],cutoff,baseline)
+        decision=pick(ends[-1],bases[-1] if bases else None,cutoff,baseline)
         from hkjc_shadow import movement
         # Preserve the existing market ranking method. Only remove the new
         # banker; never depend on Horse103 to remove a previous banker.
@@ -29,7 +30,7 @@ def prepare(samples,off,date,number,baseline=None,golden=None):
                 'status':'ready','legs':legs,'market':list(dict.fromkeys(gold+market)),
                 'golden':[h for h in gold if h!=decision['banker']],
                 'legs_status':'ready' if baseline and market else 'unavailable',
-                'baseline_received_at':bases[-1]['received_at'],
+                'baseline_received_at':bases[-1]['received_at'] if bases else None,
                 'long_baseline_received_at':baseline.get('received_at') if baseline else None,
                 'runner_rows':rows,'source_updated':ends[-1]['source_updated']}
     except (ValueError,KeyError,TypeError,ZeroDivisionError) as e:return {**common,'status':'unavailable','reason':str(e)}

@@ -52,7 +52,16 @@ def validate(s,cutoff,clock,source_age):
 def pick(latest,baseline10,cutoff,baseline_long=None):
     cutoff=dt(cutoff) if isinstance(cutoff,str) else cutoff
     off=cutoff+timedelta(minutes=3);clock=off.astimezone(timezone(timedelta(hours=8))).strftime('%H:%M');freeze=cutoff-timedelta(seconds=10)
-    hs=validate(latest,freeze,clock,120);hs10=validate(baseline10,off-timedelta(minutes=10),clock,180)
+    hs=validate(latest,freeze,clock,120)
+    if baseline10 is None:
+        long=baseline_long.get('snapshot',baseline_long) if baseline_long else None
+        if not long:raise ValueError('Missing T-10 and valid long-window baseline')
+        age=(off-dt(long['received_at'])).total_seconds()/60
+        if not 10<=age<=30:raise ValueError('Long baseline outside T-30 to T-10')
+        if validate(long,dt(long['received_at']),clock,180)!=hs:raise ValueError('Long baseline field mismatch')
+        scores=movement(long,latest);main=sorted(scores,key=lambda h:(-scores[h],h))[0]
+        return {'banker':main,'legs':[],'banker_source':'fixed-baseline market movement','banker_scores':scores,'leg_scores':{},'t10_status':'unavailable','t10_note':'長窗主膽及原市場拖腳可獨立計算；未計算T-10份額增長','cutoff':cutoff.isoformat(),'received_at':latest['received_at'],'experimental':True,'not_a_probability':True}
+    hs10=validate(baseline10,off-timedelta(minutes=10),clock,180)
     if hs!=hs10:raise ValueError('Field changed since T-10; need consistent snapshots')
     a,b=support(latest),support(baseline10);rp,rw,rq=[ranks(a[k]) for k in ('P','W','Q')]
     change={h:((a['P'][h]-b['P'][h])+(a['Q'][h]-b['Q'][h]))/2 for h in a['W']};rd=ranks(change)

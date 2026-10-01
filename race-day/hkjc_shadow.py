@@ -269,7 +269,7 @@ async def race_job(context,date,venue,number,off,folder,states,clocks=None):
                 errors.append(str(e)[:180]);states[str(number)]={'status':'retrying','target':(target-timedelta(minutes=3)).isoformat(),'errors':errors[-3:]}
                 with (folder/f'race_{number:02d}_errors.jsonl').open('a',encoding='utf-8') as f:
                     f.write(json.dumps({'at':now().isoformat(),'error':str(e)[:300]},ensure_ascii=False)+'\n')
-            interval=5 if now()>=target-timedelta(minutes=4) else 10 if baseline is None and target-timedelta(minutes=32)<=now()<=target-timedelta(minutes=10) else 60
+            interval=5 if now()>=target-timedelta(minutes=4) or target-timedelta(minutes=12)<=now()<=target-timedelta(minutes=10) else 10 if baseline is None and target-timedelta(minutes=32)<=now()<=target-timedelta(minutes=10) else 60
             await asyncio.sleep(max(1,interval-(now()-cycle).total_seconds()))
         states[str(number)]={'status':'unavailable','target':(target-timedelta(minutes=3)).isoformat(),'errors':errors[-3:]}
     finally:
@@ -317,3 +317,4 @@ if __name__=='__main__':
     a=argparse.ArgumentParser();a.add_argument('--date',required=True);a.add_argument('--venue',required=True)
     a.add_argument('--times',required=True);a.add_argument('--phase',choices=('early','late'),required=True);a.add_argument('--push',action='store_true')
     asyncio.run(run(a.parse_args()))
+
