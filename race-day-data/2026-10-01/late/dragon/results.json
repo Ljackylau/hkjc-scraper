@@ -300,6 +300,11 @@
           "captured": "2026-10-01T15:16:00.078215+08:00",
           "source_updated": "2026-10-01T15:15:00+08:00",
           "top3": []
+        },
+        {
+          "captured": "2026-10-01T15:17:00.079606+08:00",
+          "source_updated": "2026-10-01T15:16:00+08:00",
+          "top3": []
         }
       ],
       "horse_numbers": [
@@ -318,7 +323,7 @@
         13,
         14
       ],
-      "last_attempt": "2026-10-01T15:16:00.079157+08:00",
+      "last_attempt": "2026-10-01T15:17:00.080501+08:00",
       "errors": [],
       "pools": [
         {
@@ -328,8 +333,8 @@
           "compared_pairs": 182,
           "missing_at_end": [],
           "baseline_time": "2026-10-01T14:36:00.018174+08:00",
-          "final_time": "2026-10-01T15:16:00.078215+08:00",
-          "source_updated": "2026-10-01T15:15:00+08:00",
+          "final_time": "2026-10-01T15:17:00.079606+08:00",
+          "source_updated": "2026-10-01T15:16:00+08:00",
           "fresh": true,
           "comparison_ready": true,
           "baseline_label": "首次可用取樣；非 T−60 比較",
@@ -740,7 +745,7 @@
         13,
         14
       ],
-      "last_attempt": "2026-10-01T15:16:00.025587+08:00",
+      "last_attempt": "2026-10-01T15:17:00.024036+08:00",
       "errors": [],
       "pools": [
         {
@@ -750,9 +755,9 @@
           "compared_pairs": 182,
           "missing_at_end": [],
           "baseline_time": "2026-10-01T15:11:00.018197+08:00",
-          "final_time": "2026-10-01T15:16:00.024688+08:00",
+          "final_time": "2026-10-01T15:17:00.023126+08:00",
           "source_updated": "2026-10-01T15:15:00+08:00",
-          "fresh": true,
+          "fresh": false,
           "comparison_ready": true,
           "baseline_label": "首次可用取樣；非 T−60 比較",
           "current_odds": {
@@ -965,5 +970,5 @@
       "status": "正在開啟"
     }
   ],
-  "published_at": "2026-10-01T15:16:06.031430+08:00"
+  "published_at": "2026-10-01T15:17:06.031433+08:00"
 }
