@@ -1,0 +1,640 @@
+{
+  "captured_at": "2026-10-01T07:42:06.411706+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.20 * normalized QP amount + 0.20 * normalized Q amount",
+  "race": {
+    "id": "31c35dab-61a1-44b6-a573-08b8476466c2",
+    "race_number": 6,
+    "post_time": "15:45",
+    "venue": "沙田",
+    "distance": 1800,
+    "course": "A"
+  },
+  "lock_time": "2026-10-01T07:42:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-01T07:42:01.373Z",
+    "postTime": "2026-10-01T07:45:00.000Z",
+    "previewTime": "2026-10-01T07:38:00.000Z",
+    "lockTime": "2026-10-01T07:42:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 1,
+        "nameTc": "捷威",
+        "nameEn": "VICTOR SUPREME",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 69,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "好運年",
+        "nameEn": "LUCKY YEAR",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "夢照發",
+        "nameEn": "ROMANTIC FANTASY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "佰勝金龍",
+        "nameEn": "SUPER GOLDENDRAGON",
+        "capitalSignal": "none",
+        "command": "avoid",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "risk_dominates",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 13,
+        "nameTc": "禾道威",
+        "nameEn": "STAR BROSE",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 55,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 8,
+        "nameTc": "智多多寶",
+        "nameEn": "SUPREME MASTERMIND",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 14,
+        "nameTc": "電路一百",
+        "nameEn": "CIRCUIT CENTURY",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "浪漫老撾",
+        "nameEn": "ROMANTIC LAOS",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 8,
+        "nameTc": "智多多寶",
+        "nameEn": "SUPREME MASTERMIND"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 3,
+      "nameTc": "佰勝金龍",
+      "nameEn": "SUPER GOLDENDRAGON",
+      "confidence": "high",
+      "reason": "評分上揚仍負重磅，但近績極佳，兩勝2000米，1800米亦跑獲亞軍。練馬師今季成績突出，馬匹操練充足，狀態勇銳。",
+      "previewHorseNumber": null
+    }
+  },
+  "ticket_cutoff": "2026-10-01T07:42:00.000Z",
+  "base_race_id": 24407,
+  "source_ticket_race_id": 24412,
+  "qp_max_amount": 1010000.0,
+  "q_max_amount": 1028000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 432758,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "1-3",
+      "bet_type": "Q",
+      "amount": 570000,
+      "amount_str": "570K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432759,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "1-6",
+      "bet_type": "Q",
+      "amount": 67000,
+      "amount_str": "67K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432760,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "1-7",
+      "bet_type": "Q",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432761,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "1-8",
+      "bet_type": "Q",
+      "amount": 81000,
+      "amount_str": "81K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432762,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "1-13",
+      "bet_type": "Q",
+      "amount": 74000,
+      "amount_str": "74K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432763,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "3-6",
+      "bet_type": "Q",
+      "amount": 82000,
+      "amount_str": "82K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432764,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "3-7",
+      "bet_type": "Q",
+      "amount": 140000,
+      "amount_str": "140K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432765,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "3-8",
+      "bet_type": "Q",
+      "amount": 86000,
+      "amount_str": "86K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432766,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "3-13",
+      "bet_type": "Q",
+      "amount": 150000,
+      "amount_str": "150K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432767,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "7-13",
+      "bet_type": "Q",
+      "amount": 58000,
+      "amount_str": "58K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432776,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "1-3",
+      "bet_type": "QP",
+      "amount": 410000,
+      "amount_str": "410K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432777,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "1-6",
+      "bet_type": "QP",
+      "amount": 68000,
+      "amount_str": "68K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432778,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "1-7",
+      "bet_type": "QP",
+      "amount": 160000,
+      "amount_str": "160K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432779,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "1-8",
+      "bet_type": "QP",
+      "amount": 110000,
+      "amount_str": "110K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432780,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "1-13",
+      "bet_type": "QP",
+      "amount": 120000,
+      "amount_str": "120K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432781,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "3-6",
+      "bet_type": "QP",
+      "amount": 130000,
+      "amount_str": "130K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432782,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "3-7",
+      "bet_type": "QP",
+      "amount": 150000,
+      "amount_str": "150K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432783,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "3-8",
+      "bet_type": "QP",
+      "amount": 140000,
+      "amount_str": "140K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432784,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "3-13",
+      "bet_type": "QP",
+      "amount": 180000,
+      "amount_str": "180K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432785,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "6-7",
+      "bet_type": "QP",
+      "amount": 57000,
+      "amount_str": "57K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432786,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "6-8",
+      "bet_type": "QP",
+      "amount": 56000,
+      "amount_str": "56K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432787,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "6-13",
+      "bet_type": "QP",
+      "amount": 53000,
+      "amount_str": "53K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432788,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "7-8",
+      "bet_type": "QP",
+      "amount": 64000,
+      "amount_str": "64K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432789,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "7-13",
+      "bet_type": "QP",
+      "amount": 100000,
+      "amount_str": "100K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    },
+    {
+      "id": 432790,
+      "race_id": 24412,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "8-13",
+      "bet_type": "QP",
+      "amount": 78000,
+      "amount_str": "78K",
+      "bet_time": "15:23",
+      "scraped_at": "2026-10-01T07:24:03.652299+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 1,
+      "name_tc": "捷威",
+      "name_en": "VICTOR SUPREME",
+      "formula_score": 0.76331,
+      "live_value_index": 69.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 868000.0,
+      "q_amount": 912000.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "佰勝金龍",
+      "name_en": "SUPER GOLDENDRAGON",
+      "formula_score": 0.76,
+      "live_value_index": 60.0,
+      "live_command": "avoid",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 1010000.0,
+      "q_amount": 1028000.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "好運年",
+      "name_en": "LUCKY YEAR",
+      "formula_score": 0.57502,
+      "live_value_index": 68.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 531000.0,
+      "q_amount": 318000.0
+    },
+    {
+      "horse_number": 13,
+      "name_tc": "禾道威",
+      "name_en": "STAR BROSE",
+      "formula_score": 0.49001,
+      "live_value_index": 55.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 531000.0,
+      "q_amount": 282000.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "夢照發",
+      "name_en": "ROMANTIC FANTASY",
+      "formula_score": 0.46707,
+      "live_value_index": 61.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 364000.0,
+      "q_amount": 149000.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "智多多寶",
+      "name_en": "SUPREME MASTERMIND",
+      "formula_score": 0.1212,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 448000.0,
+      "q_amount": 167000.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "騰龍踏雪",
+      "name_en": "DRAGON ON SNOW",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "浪漫老撾",
+      "name_en": "ROMANTIC LAOS",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "熒光",
+      "name_en": "FLUORESCENCE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 9,
+      "name_tc": "勁步速",
+      "name_en": "FAST SPEED",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "小飛俠",
+      "name_en": "GOOD GOOD",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 11,
+      "name_tc": "大輝煌",
+      "name_en": "MASSIVE GLORY",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "齊歡最樂",
+      "name_en": "ON THE LASH",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 14,
+      "name_tc": "電路一百",
+      "name_en": "CIRCUIT CENTURY",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 1,
+    "name_tc": "捷威",
+    "name_en": "VICTOR SUPREME",
+    "formula_score": 0.76331,
+    "live_value_index": 69.0,
+    "live_command": "follow",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 868000.0,
+    "q_amount": 912000.0
+  },
+  "other_four": [
+    {
+      "horse_number": 3,
+      "name_tc": "佰勝金龍",
+      "name_en": "SUPER GOLDENDRAGON",
+      "formula_score": 0.76,
+      "live_value_index": 60.0,
+      "live_command": "avoid",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 1010000.0,
+      "q_amount": 1028000.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "好運年",
+      "name_en": "LUCKY YEAR",
+      "formula_score": 0.57502,
+      "live_value_index": 68.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 531000.0,
+      "q_amount": 318000.0
+    },
+    {
+      "horse_number": 13,
+      "name_tc": "禾道威",
+      "name_en": "STAR BROSE",
+      "formula_score": 0.49001,
+      "live_value_index": 55.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 531000.0,
+      "q_amount": 282000.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "夢照發",
+      "name_en": "ROMANTIC FANTASY",
+      "formula_score": 0.46707,
+      "live_value_index": 61.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 364000.0,
+      "q_amount": 149000.0
+    }
+  ],
+  "live_received_at": "2026-10-01T15:42:05.181370+08:00",
+  "capture_delay_seconds": 5.18,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained.",
+  "source_data_quality": "ready",
+  "incomplete_live_candidates": []
+}
