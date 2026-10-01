@@ -1,0 +1,12 @@
+const assert=require('node:assert/strict');
+const {calculate,text}=require('./cold-signal.js');
+const tip={race:2,freeze:'2026-10-01T13:26:50+08:00',market:[13,9],runner_rows:[['13','','','','','','Trainer']]};
+const sample=(stamp,received,odds)=>({state:'observed',source_updated_at:`2026-10-01T${stamp}+08:00`,received_at:`2026-10-01T${received}+08:00`,participants:[{name:'Trainer',current_odds:odds}],race_context:[{race_number:1,post_time:'2026-10-01T13:00:00+08:00'}]});
+const base=sample('12:59:00','12:59:20',100),end=sample('13:23:00','13:26:40',80);
+let r=calculate(tip,[base,end]);assert.deepEqual(r.cold,[13]);assert.equal(r.cold_quote_age_seconds,230);assert.equal(text(r),'13號（報價較舊：230秒）');
+assert.equal(calculate(tip,[base,sample('13:16:49','13:26:40',80)]).cold_status,'unavailable');
+assert.deepEqual(calculate(tip,[base,end,sample('13:26:30','13:26:51',30)]).cold,[13]);
+assert.equal(calculate(tip,[sample('12:59:00','13:01:00',100),end]).cold_status,'unavailable');
+assert.equal(calculate(tip,[base,sample('12:59:00','13:26:40',80)]).cold_status,'unavailable');
+assert.equal(text(calculate(tip,[base,sample('13:23:00','13:26:40',90)])),'無（報價較舊：230秒）');
+console.log('6 cold-policy checks passed');

@@ -37,6 +37,7 @@ button{cursor:pointer;transition:background .15s,border-color .15s,transform .15
 <p class="muted footer-note">賽日頁約每15秒自動更新；正式派彩以馬會公布為準。</p></main>
 <script src="market-lines.js?v=20260930-golden-legs"></script>
 <script src="challenge.js?v=20260930-trainer-lines"></script>
+<script src="cold-signal.js?v=20261001-cold-age600"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hkToday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Hong_Kong',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts().map(x=>[x.type,x.value]));return `${p.year}-${p.month}-${p.day}`};
@@ -193,7 +194,7 @@ function summary(n,s){
  const original=new Set(originalNumbers);
  const extra=(s.independent_tip?[]:picks.slice(1,5)).filter(h=>!original.has(Number(h.horse_number))&&Number(h.horse_number)!==main).map(h=>annotatedHorse(h.horse_number,s.resultPositions));
  const legs=(s.market?.legs||[]).map(h=>annotatedHorse(h,s.resultPositions)).join('、')||'無';
- const cold=s.independent_tip&&s.independent_tip.cold_status!=='ready'?'資料未就緒':(s.market?.cold||[]).map(h=>annotatedHorse(h,s.resultPositions)).join('、')||'無';
+ const cold=s.independent_tip?ColdSignal.text(s.independent_tip,h=>annotatedHorse(h,s.resultPositions)):(s.market?.cold||[]).map(h=>annotatedHorse(h,s.resultPositions)).join('、')||'無';
  return `R${n}\n獨贏&位置信心馬：${annotatedHorse(main,s.resultPositions)}${s.independent_tip?'（新方法）':s.method_b?.status==='switched'?`（B換膽，原${s.method_b.original_banker}號）`:s.qpConfidence?.qualified?'（QP集中）':''}${extra.length?'，'+extra.join('、'):''}\n連贏位置Q：${annotatedHorse(main,s.resultPositions)} 拖 ${legs}\n最有可能爆冷馬：${cold}`
 }
 const compactName=value=>String(value||'').replace(/\s+/g,'');
@@ -273,8 +274,9 @@ async function refreshOnce(){
   try{
    const r=await fetch(`${snapshotBase}/hkjc-${d.phase}/race_${String(n).padStart(2,'0')}_independent.json`,{cache:'no-store',signal:AbortSignal.timeout(10000)});
    if(!r.ok){s.status='waiting';s.picks=[];s.reason='新方法：等待 HKJC 賽前快照';return}
-   const tip=await r.json();if(tip.date!==selected||Number(tip.race)!==Number(n)||tip.method!=='independent_hybrid_v1')throw Error('推介日期／場次不符');
+   let tip=await r.json();if(tip.date!==selected||Number(tip.race)!==Number(n)||tip.method!=='independent_hybrid_v1')throw Error('推介日期／場次不符');
    if(tip.status==='ready'&&Date.parse(tip.received_at)>Date.parse(tip.freeze))throw Error('收到時間遲於截止');
+   if(tip.status==='ready')tip=await ColdSignal.update(tip,snapshotBase,d.phase);
    s.independent_tip=tip;s.status=tip.status==='ready'?'saved':'unavailable';s.picks=tip.status==='ready'?[{horse_number:tip.banker}]:[];s.qpConfidence=null;
    s.reason=tip.status==='ready'?'':tip.reason;s.target=tip.cutoff;s.delay_seconds=null;
   }catch(e){s.status='waiting';s.picks=[];s.reason='新方法暫未載入：'+e.message}
@@ -302,7 +304,7 @@ async function refreshOnce(){
  const extras=(s.independent_tip?[]:picks.slice(1,5)).filter(x=>!original.has(Number(x.horse_number))&&Number(x.horse_number)!==main).map(x=>Number(x.horse_number));
  const horses=[main,...extras].filter(Number.isInteger).map((number,i)=>`<span class="horse-number ${i?'secondary':''}">${esc(number)}號${s.resultPositions?.[number]?` <small style="display:inline;font-size:12px;margin:0 0 0 5px">${esc(s.resultPositions[number])}</small>`:''}</span>`).join('');
  const legs=(s.market?.legs||[]).map(x=>(s.market?.golden||[]).includes(x)?`<span class="golden-leg" title="T−7 至 T−3 無回調且最新分數 ≥20">${esc(annotatedHorse(x,s.resultPositions))}</span>`:esc(annotatedHorse(x,s.resultPositions))).join('、')||'資料未有';
- const cold=s.independent_tip&&s.independent_tip.cold_status!=='ready'?'資料未就緒':(s.market?.cold||[]).map(x=>annotatedHorse(x,s.resultPositions)).join('、')||'無';
+ const cold=s.independent_tip?ColdSignal.text(s.independent_tip,x=>annotatedHorse(x,s.resultPositions)):(s.market?.cold||[]).map(x=>annotatedHorse(x,s.resultPositions)).join('、')||'無';
  const state=s.status==='saved'?(d.results?.[n]?.status==='saved'?'已完賽':'T−3 已鎖定'):(labels[s.status]||s.status);
  const stateKind=s.status==='saved'?'':s.status==='waiting'?'waiting':'error';
  cards.push({n:+n,html:`<div class="card" data-race="${esc(n)}"><div class="card-head"><h2>R${esc(n)}</h2><span class="status-chip ${stateKind}">${esc(state)}</span></div>${horses?`<p class="signal-label">獨贏及位置信心馬</p><div class="signal-pick">${horses}${s.independent_tip?'<span class="status-chip">新方法</span>':''}${s.qpConfidence?.qualified&&s.method_b?.status!=='switched'?'<span class="status-chip">QP 集中</span>':''}${s.method_b?.status==='switched'?'<span class="status-chip">B 換膽</span>':''}</div><p class="signal-line"><span class="signal-label">連贏／位置Q 拖腳</span><br>${legs}${s.market?.golden?.length?'<small class="muted">金色：T−7 至 T−3 無回調＋最新分數 ≥20；符合馬優先，原腳順延。</small>':''}</p><p class="signal-line"><span class="signal-label">留意冷馬</span><br>${cold}</p>`:`<p class="signal-line">${esc(s.reason||s.error||state)}</p>`}<button class="copy-race" data-copy-race="${esc(n)}">複製本場推介</button><details><summary>詳細資料及原始快照</summary>${s.target?`<p class="muted">T−3 目標 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${picks.length?`<p>原主膽 ${esc(text[0])}</p>${bNote(s)?`<p class="muted">${esc(bNote(s))}</p>`:''}<p>其餘 ${esc(text.slice(1).join('、'))}</p><p class="muted">原解碼順序 ${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<p class="bad">${esc(s.error||s.reason||'')}</p>${s.status==='saved'?`<a href="${base()}/${s.independent_tip?'hkjc-'+d.phase:d.phase}/${s.independent_tip?'race_'+String(n).padStart(2,'0')+'_independent.json':'horse103/race_'+String(n).padStart(2,'0')+'.json'}" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</details></div>`});

@@ -41,8 +41,15 @@ def message(number,tip):
     main=tip['banker'];legs='、'.join(f'{h}號' for h in tip['legs']) if tip['legs_status']=='ready' else '資料未就緒'
     return (f'🏇 R{number}｜T−3 新方法已鎖定\n獨贏&位置信心馬：{main}號\n'
             f'連贏位置Q：{main}號 拖 {legs or "無"}\n最有可能爆冷馬：'
-            +('、'.join(f'{h}號' for h in tip.get('cold',[])) or '無' if tip.get('cold_status')=='ready' else '資料未就緒')
+            +cold_text(tip)
             +'\n\n查看完整資料：https://ljackylau.github.io/hkjc-scraper/race-day/')
+
+
+def cold_text(tip):
+    if tip.get('cold_status')!='ready':return '無法判定：缺有效報價'
+    value='、'.join(f'{h}號' for h in tip.get('cold',[])) or '無'
+    age=tip.get('cold_quote_age_seconds',0)
+    return value+(f'（報價較舊：{round(age)}秒）' if age>120 else '')
 
 
 async def notify(number,tip,folder):
@@ -67,7 +74,7 @@ async def notify(number,tip,folder):
 
 
 def cold_signal(tip,folder,number,clocks=None,states=None):
-    tip['cold']=[];tip['cold_status']='unavailable'
+    tip['cold']=[];tip['cold_status']='unavailable';tip['cold_policy']='post_previous_off_max600_v2'
     if number==1:
         tip['cold_status']='ready';return
     path=folder/'challenge'/f'race_{number:02d}_tnc_signal.json'
@@ -79,17 +86,24 @@ def cold_signal(tip,folder,number,clocks=None,states=None):
             freeze=dt(tip['freeze'])
             history=[json.loads(line) for line in history_path.read_text().splitlines() if line.strip()]
             history=[s for s in history if dt(s['received_at'])<=freeze and s.get('state')=='observed' and s.get('source_updated_at')]
-            current=[s for s in history if 0<=(freeze-dt(s['source_updated_at'])).total_seconds()<=120]
-            if not current:return
-            sample=current[-1];context=race_context(tip['date'],clocks,states or {},dt(sample['received_at']))
+            context=race_context(tip['date'],clocks,states or {},freeze)
             race=next(r for r in context if r['race_number']==number);previous=next(r for r in context if r['race_number']==number-1)
             previous_off=dt(previous['post_time'])
-            usable=[s for s in history if dt(s['source_updated_at'])>previous_off or 0<=(previous_off-dt(s['source_updated_at'])).total_seconds()<=180]
+            current=[s for s in history if previous_off<dt(s['source_updated_at'])<=dt(s['received_at']) and 0<=(freeze-dt(s['source_updated_at'])).total_seconds()<=600]
+            if not current:return
+            sample=max(current,key=lambda s:(dt(s['source_updated_at']),dt(s['received_at'])))
+            usable=[s for s in history if dt(s['received_at'])<=previous_off or dt(s['source_updated_at'])>previous_off]
+            usable=[s for s in usable if dt(s['source_updated_at'])>previous_off or 0<=(previous_off-dt(s['source_updated_at'])).total_seconds()<=600]
             signal=market_drop_signal(usable,sample,race,context)
             tip['cold_received_at']=sample['received_at']
+            tip['cold_source_updated_at']=sample['source_updated_at']
+            tip['cold_quote_age_seconds']=(freeze-dt(sample['source_updated_at'])).total_seconds()
         elif path.exists():
             signal=json.loads(path.read_text());stamp=signal.get('t3_received_at') or signal.get('received_at') or signal.get('at')
             if not stamp or dt(stamp)>dt(tip['freeze']):return
+            source=signal.get('t3_source_updated_at');baseline=signal.get('baseline_source_updated_at')
+            if not source or not baseline or not 0<=(dt(tip['freeze'])-dt(source)).total_seconds()<=600:return
+            tip['cold_source_updated_at']=source;tip['cold_quote_age_seconds']=(dt(tip['freeze'])-dt(source)).total_seconds()
         else:return
         if signal.get('status')!='observed':return
         trainers={''.join(str(r['name']).split()) for r in signal.get('qualifying',[])}
