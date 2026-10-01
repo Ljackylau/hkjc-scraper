@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "0d883a91-0bd4-4e09-aa66-75a58a8b2df6",
+    "race_number": 5,
+    "post_time": "15:10",
+    "venue": "沙田",
+    "distance": 1000,
+    "course": "A"
+  },
+  "date": "2026-10-01",
+  "expected_lock": "2026-10-01T15:07:00+08:00",
+  "live_received_at": "2026-10-01T15:07:09.947699+08:00",
+  "capture_delay_seconds": 9.95,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-01T07:07:03.162Z",
+    "postTime": "2026-10-01T07:10:00.000Z",
+    "previewTime": "2026-10-01T07:03:00.000Z",
+    "lockTime": "2026-10-01T07:07:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 1,
+        "nameTc": "星球勇士",
+        "nameEn": "JEDI SPURS",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 70,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "嘉應耀昇",
+        "nameEn": "KA YING LIGHTNING",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 70,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "怡昌光輝",
+        "nameEn": "YEE CHEONG GLORY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "升升雙息",
+        "nameEn": "DOUBLE ALPHA",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "輕功猛男",
+        "nameEn": "CHARMING BABE",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 53,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 6,
+        "nameTc": "盈俊天下",
+        "nameEn": "HANDSOME HERO",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "天寶威威",
+        "nameEn": "PRECISION MIND",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "星月峰雲",
+        "nameEn": "CELESTIAL ZOUS",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 6,
+        "nameTc": "盈俊天下",
+        "nameEn": "HANDSOME HERO"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 3,
+      "nameTc": "嘉應耀昇",
+      "nameEn": "KA YING LIGHTNING",
+      "confidence": "high",
+      "reason": "上仗贏得輕鬆，休後兩課試閘表現出色，狀態勇銳。練馬師今季成績理想。",
+      "previewHorseNumber": null
+    }
+  }
+}
