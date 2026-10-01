@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "d26c60a4-2d95-438d-bd96-cdfd3cb1563c",
+    "race_number": 1,
+    "post_time": "13:00",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "A"
+  },
+  "date": "2026-10-01",
+  "expected_lock": "2026-10-01T12:57:00+08:00",
+  "live_received_at": "2026-10-01T12:57:06.454201+08:00",
+  "capture_delay_seconds": 6.45,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-01T04:57:02.658Z",
+    "postTime": "2026-10-01T05:00:00.000Z",
+    "previewTime": "2026-10-01T04:53:00.000Z",
+    "lockTime": "2026-10-01T04:57:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 5,
+        "nameTc": "同有運",
+        "nameEn": "GOOD FORTUNE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 74,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "閃電星福",
+        "nameEn": "FLASH STAR",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 73,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "萬里雲",
+        "nameEn": "CIRRUS SPEED",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "錶之無限",
+        "nameEn": "POWER PATCH",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "新力驕",
+        "nameEn": "SUNNY Q",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 2,
+        "nameTc": "靖哥哥",
+        "nameEn": "FALCON HUNTER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "爆熱",
+        "nameEn": "VIVA CHALEUR",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "怡昌奇兵",
+        "nameEn": "YEE CHEONG RAIDER",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 12,
+        "nameTc": "怡昌奇兵",
+        "nameEn": "YEE CHEONG RAIDER"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 5,
+      "nameTc": "同有運",
+      "nameEn": "GOOD FORTUNE",
+      "confidence": "high",
+      "reason": "同有運上仗同程同班輕磅贏得輕鬆，評分雖加但今仗有見習騎師減磅，檔位理想，操練及試閘表現良好，有望再下一城。",
+      "previewHorseNumber": null
+    }
+  }
+}

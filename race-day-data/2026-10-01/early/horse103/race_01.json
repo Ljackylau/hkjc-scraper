@@ -1,0 +1,442 @@
+{
+  "captured_at": "2026-10-01T04:57:07.565101+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.20 * normalized QP amount + 0.20 * normalized Q amount",
+  "race": {
+    "id": "d26c60a4-2d95-438d-bd96-cdfd3cb1563c",
+    "race_number": 1,
+    "post_time": "13:00",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "A"
+  },
+  "lock_time": "2026-10-01T04:57:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-01T04:57:02.658Z",
+    "postTime": "2026-10-01T05:00:00.000Z",
+    "previewTime": "2026-10-01T04:53:00.000Z",
+    "lockTime": "2026-10-01T04:57:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 5,
+        "nameTc": "同有運",
+        "nameEn": "GOOD FORTUNE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 74,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "閃電星福",
+        "nameEn": "FLASH STAR",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 73,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "萬里雲",
+        "nameEn": "CIRRUS SPEED",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "錶之無限",
+        "nameEn": "POWER PATCH",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "新力驕",
+        "nameEn": "SUNNY Q",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 2,
+        "nameTc": "靖哥哥",
+        "nameEn": "FALCON HUNTER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "爆熱",
+        "nameEn": "VIVA CHALEUR",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "怡昌奇兵",
+        "nameEn": "YEE CHEONG RAIDER",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 12,
+        "nameTc": "怡昌奇兵",
+        "nameEn": "YEE CHEONG RAIDER"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 5,
+      "nameTc": "同有運",
+      "nameEn": "GOOD FORTUNE",
+      "confidence": "high",
+      "reason": "同有運上仗同程同班輕磅贏得輕鬆，評分雖加但今仗有見習騎師減磅，檔位理想，操練及試閘表現良好，有望再下一城。",
+      "previewHorseNumber": null
+    }
+  },
+  "ticket_cutoff": "2026-10-01T04:57:00.000Z",
+  "base_race_id": 24407,
+  "source_ticket_race_id": 24407,
+  "qp_max_amount": 532000.0,
+  "q_max_amount": 0.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 421521,
+      "race_id": 24407,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "7-10",
+      "bet_type": "QP",
+      "amount": 16000,
+      "amount_str": "16K",
+      "bet_time": "17:00",
+      "scraped_at": "2026-09-30T10:11:10.330631+00:00"
+    },
+    {
+      "id": 421655,
+      "race_id": 24407,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "1-5",
+      "bet_type": "QP",
+      "amount": 10000,
+      "amount_str": "10K",
+      "bet_time": "01:05",
+      "scraped_at": "2026-09-30T18:11:09.588804+00:00"
+    },
+    {
+      "id": 423157,
+      "race_id": 24407,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "3-5",
+      "bet_type": "QP",
+      "amount": 93000,
+      "amount_str": "93K",
+      "bet_time": "12:30",
+      "scraped_at": "2026-10-01T04:31:04.888937+00:00"
+    },
+    {
+      "id": 423158,
+      "race_id": 24407,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "4-5",
+      "bet_type": "QP",
+      "amount": 93000,
+      "amount_str": "93K",
+      "bet_time": "12:30",
+      "scraped_at": "2026-10-01T04:31:04.888937+00:00"
+    },
+    {
+      "id": 423159,
+      "race_id": 24407,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "5-7",
+      "bet_type": "QP",
+      "amount": 93000,
+      "amount_str": "93K",
+      "bet_time": "12:30",
+      "scraped_at": "2026-10-01T04:31:04.888937+00:00"
+    },
+    {
+      "id": 423844,
+      "race_id": 24407,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "5-12",
+      "bet_type": "QP",
+      "amount": 150000,
+      "amount_str": "150K",
+      "bet_time": "12:42",
+      "scraped_at": "2026-10-01T04:43:10.308654+00:00"
+    },
+    {
+      "id": 424637,
+      "race_id": 24407,
+      "race_date": "2026-10-01",
+      "horse_or_combo": "4-5",
+      "bet_type": "QP",
+      "amount": 93000,
+      "amount_str": "93K",
+      "bet_time": "12:55",
+      "scraped_at": "2026-10-01T04:56:07.431006+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 5,
+      "name_tc": "同有運",
+      "name_en": "GOOD FORTUNE",
+      "formula_score": 0.644,
+      "live_value_index": 74.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 532000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "閃電星福",
+      "name_en": "FLASH STAR",
+      "formula_score": 0.47296,
+      "live_value_index": 73.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "錶之無限",
+      "name_en": "POWER PATCH",
+      "formula_score": 0.46592,
+      "live_value_index": 66.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 186000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "萬里雲",
+      "name_en": "CIRRUS SPEED",
+      "formula_score": 0.44298,
+      "live_value_index": 67.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 109000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "新力驕",
+      "name_en": "SUNNY Q",
+      "formula_score": 0.40576,
+      "live_value_index": 67.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 10000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "怡昌奇兵",
+      "name_en": "YEE CHEONG RAIDER",
+      "formula_score": 0.05639,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 150000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "爆熱",
+      "name_en": "VIVA CHALEUR",
+      "formula_score": 0.00602,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 16000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "靖哥哥",
+      "name_en": "FALCON HUNTER",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "魅力知福",
+      "name_en": "NOBLE FANS",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "高感",
+      "name_en": "GROOVY FEELING",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 9,
+      "name_tc": "傳承效應",
+      "name_en": "LEGENDARY IMPACT",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 11,
+      "name_tc": "不勞而獲",
+      "name_en": "QUICK MONEY",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 13,
+      "name_tc": "鑽得勝",
+      "name_en": "WINNING DIAMOND",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 14,
+      "name_tc": "星之願",
+      "name_en": "EXCEED THE WISH",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 5,
+    "name_tc": "同有運",
+    "name_en": "GOOD FORTUNE",
+    "formula_score": 0.644,
+    "live_value_index": 74.0,
+    "live_command": "aggressive",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 532000.0,
+    "q_amount": 0.0
+  },
+  "other_four": [
+    {
+      "horse_number": 3,
+      "name_tc": "閃電星福",
+      "name_en": "FLASH STAR",
+      "formula_score": 0.47296,
+      "live_value_index": 73.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 93000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "錶之無限",
+      "name_en": "POWER PATCH",
+      "formula_score": 0.46592,
+      "live_value_index": 66.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 186000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "萬里雲",
+      "name_en": "CIRRUS SPEED",
+      "formula_score": 0.44298,
+      "live_value_index": 67.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 109000.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "新力驕",
+      "name_en": "SUNNY Q",
+      "formula_score": 0.40576,
+      "live_value_index": 67.0,
+      "live_command": "observe",
+      "live_capital_signal": "none",
+      "is_live_candidate": true,
+      "qp_amount": 10000.0,
+      "q_amount": 0.0
+    }
+  ],
+  "live_received_at": "2026-10-01T12:57:06.454201+08:00",
+  "capture_delay_seconds": 6.45,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained.",
+  "source_data_quality": "ready",
+  "incomplete_live_candidates": []
+}
