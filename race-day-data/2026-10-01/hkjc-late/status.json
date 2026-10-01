@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "updated_at": "2026-10-01T18:16:45.433197+08:00",
+  "updated_at": "2026-10-01T18:17:02.893961+08:00",
   "mode": "shadow",
   "races": {
     "6": {
@@ -374,10 +374,76 @@
       "source": "HKJC odds movement; experimental"
     },
     "11": {
-      "status": "collecting",
+      "status": "shadow",
       "target": "2026-10-01T18:17:00+08:00",
-      "baseline": true,
-      "last_received": "2026-10-01T18:16:40.928966+08:00"
+      "received_at": "2026-10-01T18:17:01.798796+08:00",
+      "source_updated": {
+        "wp": "2026-10-01T18:16:00+08:00",
+        "wpq": "2026-10-01T18:16:00+08:00"
+      },
+      "baseline": {
+        "kind": "t30",
+        "received_at": "2026-10-01T17:51:01.305805+08:00",
+        "minutes_to_off": 28.98,
+        "source_updated": {
+          "wp": "2026-10-01T17:50:00+08:00",
+          "wpq": "2026-10-01T17:50:00+08:00"
+        }
+      },
+      "ranking": [
+        {
+          "horse_number": 8,
+          "score": 37.127,
+          "drops_pct": {
+            "WIN": 39.19,
+            "PLA": 33.33,
+            "QIN": 35.69,
+            "QPL": 39.7
+          }
+        },
+        {
+          "horse_number": 6,
+          "score": 24.29,
+          "drops_pct": {
+            "WIN": 14.71,
+            "PLA": 19.35,
+            "QIN": 35.84,
+            "QPL": 35.68
+          }
+        },
+        {
+          "horse_number": 10,
+          "score": 12.464,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 25.0,
+            "QIN": 12.56,
+            "QPL": 18.51
+          }
+        },
+        {
+          "horse_number": 5,
+          "score": 10.486,
+          "drops_pct": {
+            "WIN": 3.57,
+            "PLA": 0,
+            "QIN": 21.98,
+            "QPL": 24.2
+          }
+        },
+        {
+          "horse_number": 1,
+          "score": 10.087,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 8.7,
+            "QIN": 17.77,
+            "QPL": 21.79
+          }
+        }
+      ],
+      "golden_legs": [],
+      "source": "HKJC odds movement; experimental"
     }
   },
   "errors": []
