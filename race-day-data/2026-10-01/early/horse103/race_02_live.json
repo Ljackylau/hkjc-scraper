@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "5fafad3d-bea6-4312-8f31-213bbaed95c7",
+    "race_number": 2,
+    "post_time": "13:30",
+    "venue": "沙田",
+    "distance": 1600,
+    "course": "A"
+  },
+  "date": "2026-10-01",
+  "expected_lock": "2026-10-01T13:27:00+08:00",
+  "live_received_at": "2026-10-01T13:27:11.194039+08:00",
+  "capture_delay_seconds": 11.19,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-01T05:27:03.269Z",
+    "postTime": "2026-10-01T05:30:00.000Z",
+    "previewTime": "2026-10-01T05:23:00.000Z",
+    "lockTime": "2026-10-01T05:27:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 6,
+        "nameTc": "志醒大將",
+        "nameEn": "GENERAL SMART",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 72,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "開心三多",
+        "nameEn": "ALL ARE MINE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 71,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 13,
+        "nameTc": "快樂之友",
+        "nameEn": "HAPPY BUDDIES",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "發財金戈",
+        "nameEn": "FORTUNE KINGO",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 62,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "君達得",
+        "nameEn": "AMAZING DUCK",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 8,
+        "nameTc": "萬事勝利",
+        "nameEn": "MULTISUPERSTAR",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "我最好",
+        "nameEn": "I EXCELLE",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "綫路福將",
+        "nameEn": "CIRCUIT MARSHAL",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 7,
+        "nameTc": "我最好",
+        "nameEn": "I EXCELLE"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 6,
+      "nameTc": "志醒大將",
+      "nameEn": "GENERAL SMART",
+      "confidence": "high",
+      "reason": "志醒大將上仗同程同班輕勝，狀態大勇。今仗負磅雖增，但檔位理想，騎練今季成績俱佳，有望再下一城。",
+      "previewHorseNumber": null
+    }
+  }
+}
