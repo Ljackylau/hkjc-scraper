@@ -1,7 +1,7 @@
 {
   "date": "2026-10-01",
   "phase": "early",
-  "updated_at": "2026-10-01T14:31:36.938458+08:00",
+  "updated_at": "2026-10-01T14:32:38.900534+08:00",
   "state": "running",
   "horse103": {
     "1": {
@@ -867,8 +867,80 @@
       }
     },
     "4": {
-      "status": "waiting",
-      "target": "2026-10-01T14:32:00+08:00"
+      "status": "saved",
+      "target": "2026-10-01T14:32:00+08:00",
+      "delay_seconds": 22.7,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 7,
+          "name_tc": "實力加",
+          "name_en": "SOLID CAR",
+          "formula_score": 0.868,
+          "live_value_index": 78.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1552000.0,
+          "q_amount": 834000.0
+        },
+        {
+          "horse_number": 6,
+          "name_tc": "盈妮威楓",
+          "name_en": "PRESTIGE COME",
+          "formula_score": 0.5737,
+          "live_value_index": 66.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 763000.0,
+          "q_amount": 331000.0
+        },
+        {
+          "horse_number": 10,
+          "name_tc": "遨遊波士",
+          "name_en": "VOYAGE BOSS",
+          "formula_score": 0.48037,
+          "live_value_index": 50.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 700000.0,
+          "q_amount": 376000.0
+        },
+        {
+          "horse_number": 9,
+          "name_tc": "總統輝煌",
+          "name_en": "PRESIDENT PEGASUS",
+          "formula_score": 0.39722,
+          "live_value_index": 65.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 56000.0,
+          "q_amount": 0.0
+        },
+        {
+          "horse_number": 12,
+          "name_tc": "馬上盈",
+          "name_en": "FRANCIS MEYNELL",
+          "formula_score": 0.38534,
+          "live_value_index": 60.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 98000.0,
+          "q_amount": 53000.0
+        }
+      ],
+      "original": [
+        7,
+        6,
+        9,
+        12,
+        10
+      ]
     },
     "5": {
       "status": "waiting",

@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "e9a21af0-6475-41b1-8edb-ee5f0e39a7b0",
+    "race_number": 4,
+    "post_time": "14:35",
+    "venue": "沙田",
+    "distance": 1400,
+    "course": "A"
+  },
+  "date": "2026-10-01",
+  "expected_lock": "2026-10-01T14:32:00+08:00",
+  "live_received_at": "2026-10-01T14:32:22.704836+08:00",
+  "capture_delay_seconds": 22.7,
+  "live": {
+    "phase": "locked",
+    "lockTime": "2026-10-01T06:32:00.000Z",
+    "postTime": "2026-10-01T06:35:00.000Z",
+    "freshness": "live",
+    "candidates": [
+      {
+        "isFill": false,
+        "nameEn": "SOLID CAR",
+        "nameTc": "實力加",
+        "command": "aggressive",
+        "inPreview": true,
+        "valueTier": "high",
+        "valueIndex": 78,
+        "verdictKey": "capital_clean",
+        "horseNumber": 7,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "PRESTIGE COME",
+        "nameTc": "盈妮威楓",
+        "command": "aggressive",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 66,
+        "verdictKey": "capital_clean",
+        "horseNumber": 6,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "PRESIDENT PEGASUS",
+        "nameTc": "總統輝煌",
+        "command": "follow",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 65,
+        "verdictKey": "capital_overrides",
+        "horseNumber": 9,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": false,
+        "nameEn": "FRANCIS MEYNELL",
+        "nameTc": "馬上盈",
+        "command": "observe",
+        "inPreview": true,
+        "valueTier": "mid",
+        "valueIndex": 60,
+        "verdictKey": "risk_unresolved",
+        "horseNumber": 12,
+        "capitalSignal": "steady"
+      },
+      {
+        "isFill": true,
+        "nameEn": "VOYAGE BOSS",
+        "nameTc": "遨遊波士",
+        "command": "observe",
+        "inPreview": true,
+        "valueTier": "low",
+        "valueIndex": 50,
+        "verdictKey": "fill_no_trigger",
+        "horseNumber": 10,
+        "capitalSignal": "none"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "nameEn": "SOLID CAR",
+      "nameTc": "實力加",
+      "reason": "實力加近績穩定，上仗外疊蝕位仍跑第三，狀態勇銳。今仗檔位較佳，賀賢與奧爾民今季成績理想，有力爭勝。",
+      "confidence": "high",
+      "horseNumber": 7,
+      "previewHorseNumber": null
+    },
+    "dataQuality": "ready",
+    "generatedAt": "2026-10-01T06:32:07.520Z",
+    "previewOnly": [],
+    "previewTime": "2026-10-01T06:28:00.000Z",
+    "engineVersion": "live103-v3.5.0",
+    "fakeFavorites": [
+      {
+        "nameEn": "STAR SATYR",
+        "nameTc": "久久為軍",
+        "horseNumber": 14,
+        "capitalSignal": "none"
+      },
+      {
+        "nameEn": "ALABAMA SONG",
+        "nameTc": "豐功偉績",
+        "horseNumber": 11,
+        "capitalSignal": "none"
+      },
+      {
+        "nameEn": "NOBLE PATCH",
+        "nameTc": "錶之翠河",
+        "horseNumber": 5,
+        "capitalSignal": "none"
+      }
+    ]
+  }
+}
