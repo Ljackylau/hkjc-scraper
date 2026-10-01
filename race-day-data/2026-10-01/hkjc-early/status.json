@@ -1,14 +1,13 @@
 {
   "date": "2026-10-01",
-  "updated_at": "2026-10-01T12:32:06.227475+08:00",
+  "updated_at": "2026-10-01T12:33:07.924907+08:00",
   "mode": "shadow",
   "races": {
     "1": {
-      "status": "retrying",
+      "status": "collecting",
       "target": "2026-10-01T12:57:00+08:00",
-      "errors": [
-        "Stale source timestamp"
-      ]
+      "baseline": true,
+      "last_received": "2026-10-01T12:33:01.190517+08:00"
     },
     "2": {
       "status": "waiting",
