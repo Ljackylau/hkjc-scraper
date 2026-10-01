@@ -5,11 +5,11 @@
   "pools": {
     "jkc": {
       "state": "observed",
-      "samples_this_run": 57,
-      "received_at": "2026-10-01T13:13:42.977260+08:00",
+      "samples_this_run": 58,
+      "received_at": "2026-10-01T13:14:42.914797+08:00",
       "source_updated_at": "2026-10-01T13:13:00+08:00",
       "source_recent": true,
-      "source_age_seconds": 43.0,
+      "source_age_seconds": 102.9,
       "numeric_quotes": 14,
       "participants": [
         {
@@ -209,22 +209,22 @@
           "normalized_implied_share": 0.004098
         }
       ],
-      "points_available": false,
+      "points_available": true,
       "points_freshness": "not_verifiable",
-      "points_error": "Points table missing"
+      "points_error": null
     },
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 57,
-      "received_at": "2026-10-01T13:13:42.988799+08:00",
-      "source_updated_at": "2026-10-01T13:13:00+08:00",
+      "samples_this_run": 58,
+      "received_at": "2026-10-01T13:14:42.923596+08:00",
+      "source_updated_at": "2026-10-01T13:14:00+08:00",
       "source_recent": true,
-      "source_age_seconds": 43.0,
+      "source_age_seconds": 42.9,
       "numeric_quotes": 0,
       "participants": [
         {
-          "selection_id": "1",
-          "name": "蔡約翰",
+          "selection_id": "10",
+          "name": "賀賢",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -239,6 +239,20 @@
         {
           "selection_id": "2",
           "name": "姚本輝",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "1",
+          "name": "蔡約翰",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -293,6 +307,48 @@
           "normalized_implied_share": null
         },
         {
+          "selection_id": "11",
+          "name": "大衛希斯",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "8",
+          "name": "羅富全",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "9",
+          "name": "沈集成",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
           "selection_id": "5",
           "name": "伍鵬志",
           "is_other": false,
@@ -321,64 +377,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "9",
-          "name": "沈集成",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "10",
-          "name": "賀賢",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "8",
-          "name": "羅富全",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
           "selection_id": "12",
           "name": "桂福特",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "11",
-          "name": "大衛希斯",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -447,6 +447,20 @@
           "normalized_implied_share": null
         },
         {
+          "selection_id": "21",
+          "name": "其他練馬師",
+          "is_other": true,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
           "selection_id": "17",
           "name": "徐雨石",
           "is_other": false,
@@ -461,9 +475,9 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "21",
-          "name": "其他練馬師",
-          "is_other": true,
+          "selection_id": "20",
+          "name": "鄭俊偉",
+          "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
           "points": null,
@@ -501,20 +515,6 @@
           "quote_text": "---",
           "opening_drop_pct": null,
           "normalized_implied_share": null
-        },
-        {
-          "selection_id": "20",
-          "name": "鄭俊偉",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
         }
       ],
       "points_available": true,
@@ -531,5 +531,5 @@
     4,
     5
   ],
-  "updated_at": "2026-10-01T13:13:43.651229+08:00"
+  "updated_at": "2026-10-01T13:14:43.486708+08:00"
 }
