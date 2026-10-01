@@ -1,6 +1,12 @@
 /* Frozen trainer quotes: fresh read, post-previous-race publication. */
 (function(root){
- const policy='post_previous_off_receipt120_partial_v4',cache=new Map(),clean=x=>String(x||'').replace(/\s+/g,'');
+ const policy='post_previous_off_receipt120_partial_v4',cache=new Map(),journals=new Map(),clean=x=>String(x||'').replace(/\s+/g,'');
+ async function journal(url){
+  if(journals.has(url))return journals.get(url);
+  const pending=(async()=>{const r=await fetch(url,{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('Journal unavailable');return (await r.text()).trim().split('\n').filter(Boolean).map(JSON.parse)})();
+  journals.set(url,pending);if(journals.size>24)journals.delete(journals.keys().next().value);
+  try{return await pending}catch(e){journals.delete(url);throw e}
+ }
  function calculate(tip,rows){
   const answer={cold:[],cold_status:'unavailable',cold_policy:policy},fail=cold_reason=>({...answer,cold_reason});
   if(Number(tip.race)===1)return {...answer,cold_status:'ready'};
@@ -34,9 +40,11 @@
   if(tip.cold_policy===policy)return tip;
   const key=[tip.date,tip.race,tip.freeze].join('/');if(cache.has(key))return {...tip,...cache.get(key)};
   try{
-   const response=await fetch(`${base}/hkjc-${phase}/challenge/tnc.jsonl`,{cache:'no-store',signal:AbortSignal.timeout(15000)});
-   if(!response.ok)return {...tip,cold_status:'unavailable',cold_reason:'練王歷史資料暫未發布'};
-   const answer=calculate(tip,(await response.text()).trim().split('\n').filter(Boolean).map(JSON.parse));
+   const phases=phase==='all'?['early','late']:[phase];
+   const results=await Promise.allSettled(phases.map(p=>journal(`${base}/hkjc-${p}/challenge/tnc.jsonl`)));
+   const rows=results.filter(r=>r.status==='fulfilled').flatMap(r=>r.value);
+   if(!rows.length)return {...tip,cold_status:'unavailable',cold_reason:'練王歷史資料暫未發布'};
+   const answer=calculate(tip,rows);
    if(answer.cold_status==='ready')cache.set(key,answer);return {...tip,...answer};
   }catch(e){return {...tip,cold_status:'unavailable',cold_reason:'練王歷史資料讀取失敗，稍後自動重試'}}
  }

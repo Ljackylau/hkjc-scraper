@@ -37,7 +37,7 @@ button{cursor:pointer;transition:background .15s,border-color .15s,transform .15
 <p class="muted footer-note">賽日頁約每15秒自動更新；正式派彩以馬會公布為準。</p></main>
 <script src="market-lines.js?v=20260930-golden-legs"></script>
 <script src="challenge.js?v=20260930-trainer-lines"></script>
-<script src="cold-signal.js?v=20261001-cold-partial-v4"></script>
+<script src="cold-signal.js?v=20261001-cold-history-sync"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hkToday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Hong_Kong',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts().map(x=>[x.type,x.value]));return `${p.year}-${p.month}-${p.day}`};
@@ -91,7 +91,7 @@ function historyView(){
   const positions=new Map((row.top4||[]).map((number,i)=>[Number(number),['第一','第二','第三','第四'][i]]));
   const picks=[row.banker,...(row.additional_picks||[])].filter(x=>x!=null).map(x=>horse(x,positions)).join('、')||'未有紀錄';
   const legs=row.legs===null||row.legs===undefined?'未有紀錄':row.legs.length?row.legs.map(x=>horse(x,positions)).join('、'):'無';
-  const cold=row.cold===null||row.cold===undefined?'未有紀錄':row.cold.length?row.cold.map(x=>horse(x,positions)).join('、'):'無';
+  const cold=row.independent_tip?ColdSignal.text(row.independent_tip,x=>horse(x,positions)):row.cold===null||row.cold===undefined?'未有紀錄':row.cold.length?row.cold.map(x=>horse(x,positions)).join('、'):'無';
   const coldNote=row.cold_source==='archived_preoff_reconstruction'?'（依保存的賽前來源重建）':'';
   const methodNote=row.independent_tip?'新方法（HKJC 獨立揀膽）':row.method_b?.status==='switched'?`B 換膽（原 ${esc(row.method_b.original_banker)} 號）`:'';
   const pools=row.dividends||{};
@@ -115,6 +115,12 @@ async function refreshHistory(){
   }
   const merged=new Map();for(const row of rows)if(row?.date&&row?.race){const key=`${row.date}-${row.race}`,old=merged.get(key)||{};merged.set(key,{...old,...row,banker:row.banker??old.banker,additional_picks:row.additional_picks??old.additional_picks,legs:row.legs??old.legs,cold:row.cold??old.cold,cold_source:row.cold_source??old.cold_source})}
   historyRows=[...merged.values()].sort((a,b)=>b.date.localeCompare(a.date)||Number(a.race)-Number(b.race));
+  await Promise.all(historyRows.map(async row=>{
+   if(!row.independent_tip||row.date<'2026-10-01')return;
+   const original=row.independent_tip,tip=await ColdSignal.update(original,`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${dataRef}/race-day-data/${row.date}`,'all');
+   row.independent_tip=tip;
+   if(tip.cold_policy!==original.cold_policy){row.cold=tip.cold_status==='ready'?tip.cold:null;row.cold_source='archived_preoff_reconstruction'}
+  }));
   const chosen=$('historyDate').value,dates=[...new Set(historyRows.map(row=>row.date))];
   $('historyDate').innerHTML='<option value="all">全部日期</option>'+dates.map(date=>`<option value="${esc(date)}">${esc(date)}</option>`).join('');
   $('historyDate').value=dates.includes(chosen)?chosen:'all';historyView();

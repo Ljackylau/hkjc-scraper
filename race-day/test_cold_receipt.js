@@ -16,3 +16,16 @@ const partial=calculate(partialTip,[base,end]);assert.deepEqual(partial.cold,[13
 const noHit=calculate(partialTip,[base,sample('13:10:00','13:26:40',90)]);assert.equal(noHit.cold_status,'ready');assert.match(text(noHit),/無符合（可比較部分）/);
 const grouped=structuredClone(end);grouped.participants.push({name:'其他練馬師',is_other:true,current_odds:2});assert.deepEqual(calculate(partialTip,[base,grouped]).cold,[13]);
 console.log('12 trainer receipt and partial-policy checks passed');
+async function testSharedHistory(){
+ const savedFetch=global.fetch;let calls=0;
+ global.fetch=async url=>{calls++;return {ok:true,text:async()=>JSON.stringify(url.includes('hkjc-early')?base:end)}};
+ try{
+  const {update}=require('./cold-signal.js');
+  const modern={...partialTip,date:'2026-10-01'};
+  const [a,b]=await Promise.all([update(modern,'https://example.test/immutable/history','all'),update(modern,'https://example.test/immutable/history','all')]);
+  assert.deepEqual(a.cold,[13]);assert.deepEqual(b.cold,[13]);assert.equal(calls,2);
+  assert.equal(a.cold_missing[0].horse,9);
+  console.log('Shared early/late history and request deduplication checks passed');
+ }finally{global.fetch=savedFetch}
+}
+testSharedHistory().catch(e=>{console.error(e);process.exitCode=1});
