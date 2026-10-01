@@ -1,0 +1,28 @@
+{
+  "sent_at": "2026-10-01T18:17:00.571948+08:00",
+  "race": 11,
+  "status": "failed",
+  "message": "⚠️ R11｜新方法 T−3 資料不足\nMissing fresh T-10 or pre-T-3 full-field HKJC quotes\n未以較遲資料補作賽前推介。",
+  "method_b": {
+    "method": "independent_hybrid_v1",
+    "status": "independent",
+    "banker": null,
+    "reason": "Missing fresh T-10 or pre-T-3 full-field HKJC quotes",
+    "received_at": null
+  },
+  "independent_tip": {
+    "date": "2026-10-01",
+    "race": 11,
+    "off": "2026-10-01T18:20:00+08:00",
+    "freeze": "2026-10-01T18:16:50+08:00",
+    "method": "independent_hybrid_v1",
+    "cutoff": "2026-10-01T18:17:00+08:00",
+    "status": "unavailable",
+    "reason": "Missing fresh T-10 or pre-T-3 full-field HKJC quotes",
+    "cold": [],
+    "cold_status": "unavailable"
+  },
+  "market": [],
+  "golden": [],
+  "cold": []
+}
