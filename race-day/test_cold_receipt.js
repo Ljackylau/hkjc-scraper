@@ -11,4 +11,8 @@ assert.equal(calculate(tip,[base,end,sample('13:10:00','13:26:45',80,'suspended_
 const mismatch=structuredClone(end);mismatch.participants[0].selection_id='2';assert.equal(calculate(tip,[base,mismatch]).cold_status,'unavailable');
 const missing=structuredClone(end);missing.participants[0].current_odds=null;assert.equal(calculate(tip,[base,missing]).cold_status,'unavailable');
 assert.deepEqual(calculate(tip,[base,sample('13:10:00','13:26:40',90)]).cold,[]);
-console.log('9 trainer receipt-policy checks passed');
+const partialTip={...tip,market:[13,9],runner_rows:[...tip.runner_rows,['9','','','','','','OtherTrainer']]};
+const partial=calculate(partialTip,[base,end]);assert.deepEqual(partial.cold,[13]);assert.equal(partial.cold_status,'ready');assert.equal(partial.cold_missing[0].horse,9);assert.match(text(partial),/部分資料不足：9號/);
+const noHit=calculate(partialTip,[base,sample('13:10:00','13:26:40',90)]);assert.equal(noHit.cold_status,'ready');assert.match(text(noHit),/無符合（可比較部分）/);
+const grouped=structuredClone(end);grouped.participants.push({name:'其他練馬師',is_other:true,current_odds:2});assert.deepEqual(calculate(partialTip,[base,grouped]).cold,[13]);
+console.log('12 trainer receipt and partial-policy checks passed');

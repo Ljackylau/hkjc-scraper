@@ -1,7 +1,7 @@
 """Trainer quote validity uses observed receipt, preserving publication age."""
 from datetime import datetime
 
-POLICY = 'post_previous_off_receipt120_v3'
+POLICY = 'post_previous_off_receipt120_partial_v4'
 
 def calculate(tip, rows):
     answer = {'cold': [], 'cold_status': 'unavailable', 'cold_policy': POLICY}
@@ -34,23 +34,36 @@ def calculate(tip, rows):
     bs = baseline.get('source_updated_at')
     if baseline.get('state') != 'observed' or not bs or stamp(bs) > stamp(baseline['received_at']) or (off-stamp(baseline['received_at'])).total_seconds() > 120:
         return fail('缺上一場開跑前120秒內的有效比較報價')
-    identity = lambda r: sorted((str(p.get('selection_id', p['name'])), ''.join(p['name'].split())) for p in r.get('participants', []))
-    if not identity(latest) or identity(latest) != identity(baseline):
-        return fail('練王選項不完整或前後不一致')
-    old = {''.join(p['name'].split()): p.get('current_odds') for p in baseline['participants']}
-    current = {''.join(p['name'].split()): p.get('current_odds') for p in latest['participants']}
+    old = {''.join(p['name'].split()): p for p in baseline.get('participants', []) if not p.get('is_other')}
+    current = {''.join(p['name'].split()): p for p in latest.get('participants', []) if not p.get('is_other')}
     trainers = {int(r[0]): ''.join(str(r[6]).split()) for r in tip.get('runner_rows', [])}
     market = list(tip.get('market', []))[:5]
-    candidates = []
+    candidates, missing, compared = [], [], []
     for horse in market:
         name = trainers.get(int(horse))
-        a, b = old.get(name), current.get(name)
-        if not name or not isinstance(a, (int,float)) or not isinstance(b, (int,float)) or a <= 1 or b <= 1:
-            return fail('市場頭5練馬師缺可比較數字報價')
+        pa, pb = old.get(name, {}), current.get(name, {})
+        a, b = pa.get('current_odds'), pb.get('current_odds')
+        identity_ok = str(pa.get('selection_id', name)) == str(pb.get('selection_id', name))
+        if not name or not identity_ok or not isinstance(a, (int,float)) or not isinstance(b, (int,float)) or a <= 1 or b <= 1:
+            reason = '缺獨立練王選項' if not pa or not pb else ('練王選項前後不一致' if not identity_ok else '練王缺前後數字報價')
+            missing.append({'horse': horse, 'trainer': name, 'reason': reason, 'before_text': pa.get('quote_text'), 'current_text': pb.get('quote_text')})
+            continue
+        compared.append(horse)
         if 100*(a-b)/a >= 15:
             candidates.append(horse)
-    return {**answer, 'cold_status': 'ready', 'cold': candidates,
+    return {**answer, 'cold_status': 'ready' if compared else 'unavailable', 'cold': candidates,
+            'cold_partial': bool(missing), 'cold_missing': missing, 'cold_compared': compared,
+            **({'cold_reason':'市場頭5全部缺可比較練王報價'} if not compared else {}),
             'cold_received_at': latest['received_at'], 'cold_source_updated_at': source,
             'cold_quote_age_seconds': (freeze-stamp(source)).total_seconds(),
             'cold_receipt_age_seconds': round((freeze-stamp(latest['received_at'])).total_seconds(),3),
             'cold_baseline_source_updated_at': bs, 'cold_baseline_received_at': baseline['received_at']}
+
+def format_cold(tip, horse=lambda n: f'{n}號'):
+    missing = '、'.join(f'{r["horse"]}號' for r in tip.get('cold_missing', []))
+    if tip.get('cold_status') != 'ready':
+        return '無法判定：'+tip.get('cold_reason','缺有效報價')+(f'（資料不足：{missing}）' if missing else '')
+    value = '、'.join(horse(n) for n in tip.get('cold', [])) or ('無符合（可比較部分）' if missing else '無')
+    if missing: value += f'（部分資料不足：{missing}）'
+    age = tip.get('cold_quote_age_seconds',0)
+    return value+(f'（報價發布距今：{round(age)}秒）' if age>120 else '')

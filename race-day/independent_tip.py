@@ -45,10 +45,8 @@ def message(number,tip):
 
 
 def cold_text(tip):
-    if tip.get('cold_status')!='ready':return '無法判定：'+tip.get('cold_reason','缺有效報價')
-    value='、'.join(f'{h}號' for h in tip.get('cold',[])) or '無'
-    age=tip.get('cold_quote_age_seconds',0)
-    return value+(f'（報價發布距今：{round(age)}秒）' if age>120 else '')
+    from cold_policy import format_cold
+    return format_cold(tip)
 
 
 async def notify(number,tip,folder):
