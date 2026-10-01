@@ -31,7 +31,7 @@ class TipTests(unittest.TestCase):
         self.assertEqual(tip['status'],'unavailable');self.assertNotIn('banker',tip)
     def test_message_single_banker(self):
         off,s=self.fixture();tip=prepare(s,off,'2026-10-01',1,s[0]);tip['cold_status']='unavailable'
-        self.assertIn('獨贏&位置信心馬：1號\n',message(1,tip));self.assertIn('資料未就緒',message(1,tip))
+        self.assertIn('獨贏&位置信心馬：1號\n',message(1,tip));self.assertIn('無法判定：缺有效報價',message(1,tip));self.assertNotIn('查看完整資料',message(1,tip));self.assertNotIn('已鎖定',message(1,tip))
     def test_settlement_keeps_independent_banker(self):
         import runner,reconcile
         with tempfile.TemporaryDirectory() as f:

@@ -57,7 +57,7 @@ async function currentRef(){
  if(dataRef&&Date.now()-refChecked<55000)return dataRef;
  try{const r=await fetch(`https://api.github.com/repos/Ljackylau/hkjc-scraper/branches/race-day-data?t=${Math.floor(Date.now()/55000)}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});
   if(!r.ok)throw Error('HTTP '+r.status);dataRef=(await r.json()).commit.sha;refChecked=Date.now()
- }catch(e){if(!dataRef)throw e}
+ }catch(e){if(!dataRef)dataRef='race-day-data';refChecked=Date.now()}
  return dataRef
 }
 async function latestRaceDate(){
