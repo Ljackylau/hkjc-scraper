@@ -37,7 +37,7 @@ button{cursor:pointer;transition:background .15s,border-color .15s,transform .15
 <p class="muted footer-note">賽日頁約每15秒自動更新；正式派彩以馬會公布為準。</p></main>
 <script src="market-lines.js?v=20260930-golden-legs"></script>
 <script src="challenge.js?v=20260930-trainer-lines"></script>
-<script src="cold-signal.js?v=20261001-cold-groups-v5"></script>
+<script src="cold-signal.js?v=20261001-cold-exclude-banker-v6"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hkToday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Hong_Kong',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts().map(x=>[x.type,x.value]));return `${p.year}-${p.month}-${p.day}`};

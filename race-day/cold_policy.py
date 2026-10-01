@@ -1,7 +1,7 @@
 """Strict pre-T3 individual trainer signal; Other quotes stay collective."""
 import math
 from datetime import datetime
-POLICY='post_previous_off_receipt120_groups_v5'
+POLICY='post_previous_off_receipt120_groups_exclude_banker_v6'
 
 def compact(s):return ''.join(str(s or '').split())
 def roster_complete(row):
@@ -45,7 +45,10 @@ def calculate(tip,rows):
     ga,gb=other(baseline),other(latest)
     group_ok=bool(ga and gb and roster_complete(baseline) and roster_complete(latest))
     group_drop=100*(ga['current_odds']-gb['current_odds'])/ga['current_odds'] if group_ok and numeric(ga.get('current_odds')) and numeric(gb.get('current_odds')) else None
-    for horse in list(tip.get('market',[]))[:5]:
+    market=list(tip.get('market',[]))[:5]
+    banker=tip.get('banker')
+    for horse in market:
+        if banker is not None and int(horse)==int(banker):continue
         name=trainers.get(int(horse));pa,pb=old.get(name,{}),current.get(name,{})
         a,b=pa.get('current_odds'),pb.get('current_odds')
         identity_ok=str(pa.get('selection_id',name))==str(pb.get('selection_id',name))
@@ -64,7 +67,7 @@ def calculate(tip,rows):
         compared.append(horse);drop=100*(a-b)/a
         changes.append({'horse':horse,'trainer':name,'before_odds':a,'current_odds':b,'drop_pct':drop,'selection_id':pb.get('selection_id')})
         if drop>=15:candidates.append(horse)
-    known=bool(compared or groups or excluded)
+    known=bool(compared or groups or excluded or market and all(banker is not None and int(h)==int(banker) for h in market))
     return {**answer,'cold_status':'ready' if known else 'unavailable','cold':candidates,'cold_group':groups,'cold_excluded':excluded,'cold_changes':changes,
             'cold_partial':bool(missing),'cold_missing':missing,'cold_compared':compared,
             **({'cold_reason':'市場頭5全部缺可比較練王報價'} if not known else {}),
@@ -75,8 +78,8 @@ def format_cold(tip,horse=lambda n:f'{n}號'):
     if tip.get('cold_applicable') is False:return tip['cold_note']
     missing='、'.join(f'{r["horse"]}號' for r in tip.get('cold_missing',[]))
     if tip.get('cold_status')!='ready':return '無法判定：'+tip.get('cold_reason','缺有效報價')+(f'（資料不足：{missing}）' if missing else '')
-    value='、'.join(horse(n) for n in tip.get('cold',[])) or ('無符合（可比較部分）' if missing else '無')
-    group=tip.get('cold_group',[])
+    value='、'.join(horse(n) for n in tip.get('cold',[]) if str(n)!=str(tip.get('banker'))) or ('無符合（可比較部分）' if missing else '無')
+    group=[g for g in tip.get('cold_group',[]) if str(g['horse'])!=str(tip.get('banker'))]
     if group:
         qualified=[g['horse'] for g in group if g.get('qualifies')]
         if qualified:value+='；其他組合落飛：'+'、'.join(horse(n) for n in qualified)+'（組合訊號，非個別練王落飛）'

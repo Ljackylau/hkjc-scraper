@@ -1,6 +1,6 @@
 /* Frozen trainer quotes: fresh read, post-previous-race publication. */
 (function(root){
- const policy='post_previous_off_receipt120_groups_v5',cache=new Map(),journals=new Map(),clean=x=>String(x||'').replace(/\s+/g,'');
+ const policy='post_previous_off_receipt120_groups_exclude_banker_v6',cache=new Map(),journals=new Map(),clean=x=>String(x||'').replace(/\s+/g,'');
  async function journal(url){
   if(journals.has(url))return journals.get(url);
   const pending=(async()=>{const r=await fetch(url,{cache:'no-store',signal:AbortSignal.timeout(15000)});if(!r.ok)throw Error('Journal unavailable');return (await r.text()).trim().split('\n').filter(Boolean).map(JSON.parse)})();
@@ -26,7 +26,9 @@
   const other=r=>(r.participants||[]).find(p=>p.is_other&&String(p.selection_id)==='21'),ga=other(baseline),gb=other(latest),groupOK=!!(ga&&gb&&roster(baseline)&&roster(latest));
   const numeric=x=>typeof x==='number'&&Number.isFinite(x)&&x>1,groupDrop=groupOK&&numeric(ga.current_odds)&&numeric(gb.current_odds)?100*(ga.current_odds-gb.current_odds)/ga.current_odds:null;
   const trainers=new Map((tip.runner_rows||[]).map(r=>[Number(r[0]),clean(r[6])])),cold=[],missing=[],compared=[],groups=[],excluded=[],changes=[];
-  for(const horse of (tip.market||[]).slice(0,5)){
+  const market=(tip.market||[]).slice(0,5);
+  for(const horse of market){
+   if(tip.banker!=null&&Number(horse)===Number(tip.banker))continue;
    const name=trainers.get(Number(horse)),pa=old.get(name)||{},pb=current.get(name)||{},a=pa.current_odds,b=pb.current_odds,identityOK=String(pa.selection_id??name)===String(pb.selection_id??name);
    if(name&&!old.has(name)&&!current.has(name)&&groupOK){groups.push({horse,trainer:name,selection_id:'21',before_odds:ga.current_odds,current_odds:gb.current_odds,drop_pct:groupDrop,qualifies:groupDrop!==null&&groupDrop>=15,scope:'collective_not_individual'});continue;}
    if(name&&Object.keys(pb).length&&identityOK&&/未能勝出|不能勝出/.test(pb.quote_text||'')){excluded.push({horse,trainer:name,reason:'練王選項已不能勝出；不是馬匹不能勝出'});continue;}
@@ -36,7 +38,7 @@
    }
    compared.push(horse);const drop=100*(a-b)/a;changes.push({horse,trainer:name,before_odds:a,current_odds:b,drop_pct:drop,selection_id:pb.selection_id});if(drop>=15)cold.push(horse);
   }
-  const known=!!(compared.length||groups.length||excluded.length);
+  const known=!!(compared.length||groups.length||excluded.length||market.length&&market.every(h=>tip.banker!=null&&Number(h)===Number(tip.banker)));
   return {...answer,cold_status:known?'ready':'unavailable',cold,cold_group:groups,cold_excluded:excluded,cold_changes:changes,cold_partial:!!missing.length,cold_missing:missing,cold_compared:compared,...(!known?{cold_reason:'市場頭5全部缺可比較練王報價'}:{}),cold_source_updated_at:latest.source_updated_at,cold_received_at:latest.received_at,cold_quote_age_seconds:(freeze-source)/1000,cold_receipt_age_seconds:Math.round((freeze-Date.parse(latest.received_at))/10)/100,cold_baseline_source_updated_at:baseline.source_updated_at,cold_baseline_received_at:baseline.received_at};
  }
  async function update(tip,base,phase){
@@ -55,8 +57,8 @@
   if(tip.cold_applicable===false)return tip.cold_note;
   const missing=(tip.cold_missing||[]).map(r=>`${r.horse}號`).join('、');
   if(tip.cold_status!=='ready')return `無法判定：${tip.cold_reason||'缺有效報價'}`+(missing?`（資料不足：${missing}）`:'');
-  let value=(tip.cold||[]).map(horse).join('、')||(missing?'無符合（可比較部分）':'無');
-  const group=tip.cold_group||[],qualified=group.filter(g=>g.qualifies);
+  let value=(tip.cold||[]).filter(h=>tip.banker==null||Number(h)!==Number(tip.banker)).map(horse).join('、')||(missing?'無符合（可比較部分）':'無');
+  const group=(tip.cold_group||[]).filter(g=>tip.banker==null||Number(g.horse)!==Number(tip.banker)),qualified=group.filter(g=>g.qualifies);
   if(group.length)value+=qualified.length?'；其他組合落飛：'+qualified.map(g=>horse(g.horse)).join('、')+'（組合訊號，非個別練王落飛）':'（其他組合：'+group.map(g=>horse(g.horse)).join('、')+'；沒有個別報價）';
   return value+(missing?`（部分資料不足：${missing}）`:'')+(tip.cold_quote_age_seconds>120?`（報價發布距今：${Math.round(tip.cold_quote_age_seconds)}秒）`:'');
  }
