@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "6aef9169-c89a-418f-92db-220712c48074",
+    "race_number": 7,
+    "post_time": "16:15",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "A"
+  },
+  "date": "2026-10-01",
+  "expected_lock": "2026-10-01T16:12:00+08:00",
+  "live_received_at": "2026-10-01T16:12:06.302709+08:00",
+  "capture_delay_seconds": 6.3,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-01T08:12:01.731Z",
+    "postTime": "2026-10-01T08:15:00.000Z",
+    "previewTime": "2026-10-01T08:08:00.000Z",
+    "lockTime": "2026-10-01T08:12:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 1,
+        "nameTc": "長勝金剛",
+        "nameEn": "MASTER CHAMPION",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 72,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "嘉應光彩",
+        "nameEn": "KA YING RADIANCE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 13,
+        "nameTc": "凱旋王者",
+        "nameEn": "VICTORY CHAMPION",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "同喜",
+        "nameEn": "RIDING HIGH",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "永福",
+        "nameEn": "EVER WEALTH",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 58,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 6,
+        "nameTc": "烈進駒",
+        "nameEn": "SPIRITED STEED",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "光年程祥",
+        "nameEn": "LIGHT YEARS GLORY",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 14,
+        "nameTc": "翠湖烈風",
+        "nameEn": "LAKESHORE HERO",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 4,
+        "nameTc": "莊家班",
+        "nameEn": "JOKER ORBIT"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 10,
+      "nameTc": "嘉應光彩",
+      "nameEn": "KA YING RADIANCE",
+      "confidence": "medium",
+      "reason": "檔位佳，休後兩課試閘表現出色，顯示狀態回勇。評分下調有利，有力爭勝。",
+      "previewHorseNumber": null
+    }
+  }
+}

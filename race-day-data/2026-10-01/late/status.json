@@ -1,7 +1,7 @@
 {
   "date": "2026-10-01",
   "phase": "late",
-  "updated_at": "2026-10-01T16:11:26.666729+08:00",
+  "updated_at": "2026-10-01T16:12:29.006310+08:00",
   "state": "running",
   "horse103": {
     "6": {
@@ -321,8 +321,80 @@
       }
     },
     "7": {
-      "status": "waiting",
-      "target": "2026-10-01T16:12:00+08:00"
+      "status": "saved",
+      "target": "2026-10-01T16:12:00+08:00",
+      "delay_seconds": 6.3,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 10,
+          "name_tc": "嘉應光彩",
+          "name_en": "KA YING RADIANCE",
+          "formula_score": 0.70871,
+          "live_value_index": 68.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2254000.0,
+          "q_amount": 1879000.0
+        },
+        {
+          "horse_number": 1,
+          "name_tc": "長勝金剛",
+          "name_en": "MASTER CHAMPION",
+          "formula_score": 0.44656,
+          "live_value_index": 72.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 145000.0,
+          "q_amount": 52000.0
+        },
+        {
+          "horse_number": 11,
+          "name_tc": "同喜",
+          "name_en": "RIDING HIGH",
+          "formula_score": 0.41541,
+          "live_value_index": 61.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 486000.0,
+          "q_amount": 183000.0
+        },
+        {
+          "horse_number": 6,
+          "name_tc": "烈進駒",
+          "name_en": "SPIRITED STEED",
+          "formula_score": 0.4,
+          "live_value_index": 0.0,
+          "live_command": null,
+          "live_capital_signal": null,
+          "is_live_candidate": false,
+          "qp_amount": 2649000.0,
+          "q_amount": 2879000.0
+        },
+        {
+          "horse_number": 13,
+          "name_tc": "凱旋王者",
+          "name_en": "VICTORY CHAMPION",
+          "formula_score": 0.39513,
+          "live_value_index": 65.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 68000.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        1,
+        10,
+        13,
+        11,
+        3
+      ]
     },
     "8": {
       "status": "waiting",
