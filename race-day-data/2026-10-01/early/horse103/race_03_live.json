@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "43e84ed6-13e6-414e-93ab-8733c0c759ac",
+    "race_number": 3,
+    "post_time": "14:00",
+    "venue": "沙田",
+    "distance": 1000,
+    "course": "A"
+  },
+  "date": "2026-10-01",
+  "expected_lock": "2026-10-01T13:57:00+08:00",
+  "live_received_at": "2026-10-01T13:57:08.944532+08:00",
+  "capture_delay_seconds": 8.94,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-01T05:57:02.973Z",
+    "postTime": "2026-10-01T06:00:00.000Z",
+    "previewTime": "2026-10-01T05:53:00.000Z",
+    "lockTime": "2026-10-01T05:57:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 5,
+        "nameTc": "好友心得",
+        "nameEn": "TOMODACHI KOKOROE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 72,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "顏色之皇",
+        "nameEn": "COLOURFUL KING",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "魔術控制",
+        "nameEn": "MAGIC CONTROL",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "天天同樂",
+        "nameEn": "BOTTOMUPTOGETHER",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "翠紅",
+        "nameEn": "CRIMSON FLASH",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 53,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 1,
+        "nameTc": "精算暴雪",
+        "nameEn": "RAGING BLIZZARD",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "美麗第一",
+        "nameEn": "BEAUTY WAVES",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "玩笑",
+        "nameEn": "JOHANNES BRAHMS",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 4,
+      "nameTc": "顏色之皇",
+      "nameEn": "COLOURFUL KING",
+      "confidence": "medium",
+      "reason": "潘頓今季成績極佳，馬匹上仗同程一班賽輕勝，狀態勇銳。雖然檔位統計不佳，但其跑法靈活，有望克服。",
+      "previewHorseNumber": null
+    }
+  }
+}
