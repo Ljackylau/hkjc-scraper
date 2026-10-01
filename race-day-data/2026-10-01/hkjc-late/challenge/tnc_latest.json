@@ -3,10 +3,10 @@
   "date": "2026-10-01",
   "venue": "ST",
   "kind": "tnc",
-  "received_at": "2026-10-01T16:31:38.368174+08:00",
+  "received_at": "2026-10-01T16:32:38.810111+08:00",
   "url": "https://bet.hkjc.com/ch/racing/tnc/2026-10-01/ST/1",
   "source_updated_at": "2026-10-01T16:29:00+08:00",
-  "source_age_seconds": 158.4,
+  "source_age_seconds": 218.8,
   "source_recent": false,
   "state": "observed",
   "numeric_quotes": 14,
@@ -313,67 +313,67 @@
       "race_number": 1,
       "post_time": "2026-10-01T13:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -12698.4
+      "seconds_to_off": -12758.8
     },
     {
       "race_number": 2,
       "post_time": "2026-10-01T13:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -10898.4
+      "seconds_to_off": -10958.8
     },
     {
       "race_number": 3,
       "post_time": "2026-10-01T14:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -9098.4
+      "seconds_to_off": -9158.8
     },
     {
       "race_number": 4,
       "post_time": "2026-10-01T14:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -6998.4
+      "seconds_to_off": -7058.8
     },
     {
       "race_number": 5,
       "post_time": "2026-10-01T15:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -5198.4
+      "seconds_to_off": -5258.8
     },
     {
       "race_number": 6,
       "post_time": "2026-10-01T15:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2798.4
+      "seconds_to_off": -2858.8
     },
     {
       "race_number": 7,
       "post_time": "2026-10-01T16:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -998.4
+      "seconds_to_off": -1058.8
     },
     {
       "race_number": 8,
       "post_time": "2026-10-01T16:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 801.6
+      "seconds_to_off": 741.2
     },
     {
       "race_number": 9,
       "post_time": "2026-10-01T17:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 2301.6
+      "seconds_to_off": 2241.2
     },
     {
       "race_number": 10,
       "post_time": "2026-10-01T17:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 4401.6
+      "seconds_to_off": 4341.2
     },
     {
       "race_number": 11,
       "post_time": "2026-10-01T18:20:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 6501.6
+      "seconds_to_off": 6441.2
     }
   ],
   "raw_tables": [
@@ -559,7 +559,7 @@
   "points_snapshot": {
     "date": "2026-10-01",
     "kind": "tnc",
-    "received_at": "2026-10-01T16:31:38.425348+08:00",
+    "received_at": "2026-10-01T16:32:39.761673+08:00",
     "source_updated_at": null,
     "freshness": "not_verifiable",
     "url": "https://racing.hkjc.com/zh-hk/local/information/tncresult?racedate=2026/10/01",
@@ -589,6 +589,14 @@
         "thirds": 1.0
       },
       {
+        "name": "蘇偉賢",
+        "selection_id": "14",
+        "points": 16.0,
+        "wins": 1.0,
+        "seconds": 0.0,
+        "thirds": 1.0
+      },
+      {
         "name": "游達榮",
         "selection_id": "13",
         "points": 12.0,
@@ -607,18 +615,18 @@
       {
         "name": "大衛希斯",
         "selection_id": "11",
-        "points": 6.0,
+        "points": 12.0,
         "wins": 0.0,
-        "seconds": 1.0,
+        "seconds": 2.0,
         "thirds": 0.0
       },
       {
         "name": "其他練馬師",
         "selection_id": "21",
-        "points": 6.0,
+        "points": 10.0,
         "wins": 0.0,
         "seconds": 1.0,
-        "thirds": 0.0
+        "thirds": 1.0
       },
       {
         "name": "呂健威",
@@ -647,14 +655,6 @@
       {
         "name": "羅富全",
         "selection_id": "8",
-        "points": 4.0,
-        "wins": 0.0,
-        "seconds": 0.0,
-        "thirds": 1.0
-      },
-      {
-        "name": "蘇偉賢",
-        "selection_id": "14",
         "points": 4.0,
         "wins": 0.0,
         "seconds": 0.0,
@@ -735,10 +735,10 @@
       {
         "name": "韋達",
         "selection_id": "",
-        "points": 6.0,
+        "points": 10.0,
         "wins": 0.0,
         "seconds": 1.0,
-        "thirds": 0.0
+        "thirds": 1.0
       },
       {
         "name": "甘敏斯",
