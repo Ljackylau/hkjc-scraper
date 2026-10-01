@@ -191,6 +191,27 @@ async def capture(page, date, venue, number, route):
     return result
 
 
+async def freeze_independent(inputs,folder,number,date,clocks,states):
+    """Dedicated deadline clock; page loads never block the T-3 send."""
+    path=folder/f'race_{number:02d}_independent.json'
+    while True:
+        target,samples,baseline=inputs()
+        freeze=target-timedelta(minutes=3,seconds=10)
+        if now()<freeze:
+            await asyncio.sleep(min(1,max(.01,(freeze-now()).total_seconds())))
+            continue
+        if not path.exists():
+            gold=golden_legs(baseline,samples,freeze) if baseline else []
+            signal=prepare_independent(samples,target,date,number,baseline,gold)
+            cold_signal(signal,folder,number,clocks,states)
+            atomic(path,signal)
+        await notify_independent(number,json.loads(path.read_text()),folder)
+        marker=folder/f'race_{number:02d}_independent_notification.json'
+        if marker.exists() and json.loads(marker.read_text()).get('status') in ('sent','not_configured'):
+            return
+        await asyncio.sleep(1)
+
+
 async def race_job(context,date,venue,number,off,folder,states,clocks=None):
     restored=restore_saved_state(folder,number,date)
     if restored:
@@ -202,17 +223,11 @@ async def race_job(context,date,venue,number,off,folder,states,clocks=None):
     while now()<target-timedelta(minutes=32):await asyncio.sleep(min(20,(target-timedelta(minutes=32)-now()).total_seconds()))
     wp=await context.new_page();wpq=await context.new_page()
     errors=[];last_source=None
+    notifier=asyncio.create_task(freeze_independent(lambda:(target,samples,baseline),folder,number,date,clocks,states))
     try:
         while now()<=target-timedelta(minutes=3)+timedelta(seconds=90):
             cycle=now()
             independent_path=folder/f'race_{number:02d}_independent.json'
-            if now()>=target-timedelta(minutes=3,seconds=10) and not independent_path.exists():
-                signal=prepare_independent(samples,target,date,number,baseline,golden_legs(baseline,samples,target-timedelta(minutes=3,seconds=10)) if baseline else [])
-                cold_signal(signal,folder,number,clocks,states)
-                atomic(independent_path,signal)
-                await notify_independent(number,signal,folder)
-            elif independent_path.exists():
-                await notify_independent(number,json.loads(independent_path.read_text()),folder)
             try:
                 w,p=await asyncio.gather(capture(wp,date,venue,number,'wp'),capture(wpq,date,venue,number,'wpq'))
                 revised=datetime.strptime(date+' '+w['post_time'],'%Y-%m-%d %H:%M').replace(tzinfo=HK)
@@ -273,6 +288,12 @@ async def race_job(context,date,venue,number,off,folder,states,clocks=None):
             await asyncio.sleep(max(1,interval-(now()-cycle).total_seconds()))
         states[str(number)]={'status':'unavailable','target':(target-timedelta(minutes=3)).isoformat(),'errors':errors[-3:]}
     finally:
+        if not notifier.done():
+            if now()>=target-timedelta(minutes=3,seconds=10):
+                try:await asyncio.wait_for(notifier,timeout=65)
+                except (asyncio.TimeoutError,asyncio.CancelledError):notifier.cancel()
+            else:notifier.cancel()
+        await asyncio.gather(notifier,return_exceptions=True)
         await wp.close();await wpq.close()
 
 
@@ -317,4 +338,5 @@ if __name__=='__main__':
     a=argparse.ArgumentParser();a.add_argument('--date',required=True);a.add_argument('--venue',required=True)
     a.add_argument('--times',required=True);a.add_argument('--phase',choices=('early','late'),required=True);a.add_argument('--push',action='store_true')
     asyncio.run(run(a.parse_args()))
+
 

@@ -63,13 +63,14 @@ def apply_market_formula(snapshot,win_odds):
     snapshot['main_pick']=ranking[0];snapshot['other_four']=ranking[1:5]
     return True
 
-PLACE_LABELS={'1':'第一','2':'第二','3':'第三','4':'第四'}
+PLACE_LABELS={'1':'🥇','2':'🥈','3':'🥉','4':'4️⃣'}
 
 def annotated(number,positions=None):
     label=(positions or {}).get(int(number))
+    label={'第一':'🥇','第二':'🥈','第三':'🥉','第四':'4️⃣'}.get(label,label)
     return f'{int(number)}號'+(f'（{label}）' if label else '')
 
-def format_tip_message(number,snapshot,market=None,cold=None,positions=None,result=False):
+def format_tip_message(number,snapshot,market=None,cold=None,positions=None,result=False,dividends=None):
     ranking=snapshot.get('ranking') or [];original_main=int(ranking[0]['horse_number'])
     decision=snapshot.get('method_b') or {};main=int(decision.get('banker',original_main))
     original={int(row['horseNumber']) for row in snapshot.get('live103_raw',{}).get('candidates',[]) if row.get('horseNumber') is not None}
@@ -77,7 +78,7 @@ def format_tip_message(number,snapshot,market=None,cold=None,positions=None,resu
     if decision.get('method')=='independent_hybrid_v1':extras=[]
     confidence='（QP集中）' if main==original_main and qp_concentrated(snapshot) else ''
     switch=f"（B換膽，原{original_main}號）" if decision.get('status')=='switched' else ''
-    if decision.get('method')=='independent_hybrid_v1':confidence='';switch='（新方法）'
+    if decision.get('method')=='independent_hybrid_v1':confidence='';switch=''
     confidence_horses=f'{annotated(main,positions)}{confidence}{switch}'+(('，'+'、'.join(annotated(n,positions) for n in extras)) if extras else '')
     legs='、'.join(annotated(n,positions) for n in (market or []) if int(n)!=main) or '無'
     cold_text='、'.join(annotated(n,positions) for n in (cold or [])) or '無'
@@ -85,6 +86,18 @@ def format_tip_message(number,snapshot,market=None,cold=None,positions=None,resu
     if independent.get('cold_status'):
         from cold_policy import format_cold
         cold_text=format_cold(independent,lambda n:annotated(n,positions))
+    if result:
+        for h in [main,*extras]:
+            label=(positions or {}).get(h)
+            pool='W' if label in ('🥇','第一') else 'P' if label in ('🥈','🥉','第二','第三') else None
+            for payout in (dividends or {}).get(pool,[]) if pool else []:
+                if str(payout.get('combination','')).strip()==str(h):
+                    amount=float(payout['dividend_hkd'])
+                    odds=f'{amount/10:g}'
+                    payout_label='獨贏' if pool=='W' else '位置'
+                    confidence_horses+=f'；{h}號{payout_label}派彩 {odds}倍（每$10派${amount:g}）'
+                    break
+    if independent.get('legs_status')=='unavailable':legs='資料未就緒：'+independent.get('legs_reason','缺有效基準')
     title=f'🏁 R{number}｜正式賽果更新' if result else f'🏇 R{number}'
     return (title+'\n'
             f'獨贏&位置信心馬：{confidence_horses}\n'
@@ -192,7 +205,7 @@ async def independent_notification(date,phase,folder,number,state,marker):
     try:source=await asyncio.to_thread(remote_independent,date,phase,number)
     except Exception:
         if target and now()>target+timedelta(minutes=3):
-            text=f'⚠️ R{number}｜未能取得新方法 T−3 快照\n請查看網站系統狀態；未改用較遲資料或 Horse103 原膽。'
+            text=f'⚠️ R{number}｜未能取得 T−3 快照\n請查看網站系統狀態；未改用較遲資料或 Horse103 原膽。'
             if telegram_configured():
                 try:await asyncio.to_thread(telegram_send,text)
                 except Exception:pass
@@ -210,7 +223,7 @@ async def independent_notification(date,phase,folder,number,state,marker):
               'reason':source.get('banker_source',source.get('reason')),'received_at':source.get('received_at')}
     atomic(marker,{'sent_at':sent.get('sent_at'),'race':number,'status':'saved' if source.get('status')=='ready' else 'failed',
                    'message':sent.get('message'),'method_b':decision,'independent_tip':source,
-                   'market':source.get('market',[]),'golden':source.get('golden',[]),'cold':source.get('cold',[])})
+                   'market':source.get('legs',[]),'golden':source.get('golden',[]),'cold':source.get('cold',[])})
 
 async def notification_monitor(date,phase,folder,states,finished):
     notify_folder=folder/'notifications';notify_folder.mkdir(exist_ok=True)
@@ -311,9 +324,11 @@ async def result_job(race,date,folder,states,executor):
             if independent.get('status')=='ready':
                 snapshot={'ranking':[{'horse_number':independent['banker']}],
                           'method_b':{'method':'independent_hybrid_v1','status':'independent','banker':independent['banker']},'independent_tip':independent}
-                market=independent.get('market',[]);cold=independent.get('cold',[])
+                market=independent.get('legs',[]);cold=independent.get('cold',[])
                 saved_cold=cold if independent.get('cold_status')=='ready' else None
         except Exception:pass
+    if snapshot and snapshot.get('independent_tip'):
+        market=snapshot['independent_tip'].get('legs',[])
     result['date']=date;result['race']=number
     result['banker']=int(snapshot.get('method_b',{}).get('banker',snapshot['ranking'][0]['horse_number'])) if snapshot else None
     if snapshot and snapshot.get('method_b'):result['method_b']=snapshot['method_b']
@@ -324,7 +339,7 @@ async def result_job(race,date,folder,states,executor):
     atomic(destination,result);states[str(number)]={'status':'saved','top4':result['top4']}
     if snapshot and not result_marker.exists():
         positions={row['horse_number']:PLACE_LABELS.get(row['placing'],row['placing_text']) for row in result['entries'] if int(row['placing'])<=4}
-        message=format_tip_message(number,snapshot,market,cold,positions=positions,result=True)
+        message=format_tip_message(number,snapshot,market,cold,positions=positions,result=True,dividends=result.get('dividends',{}))
         message='正式賽果：'+'－'.join(str(x) for x in result['top4'])+'\n'+message
         if telegram_configured():
             for attempt in range(6):
@@ -542,3 +557,4 @@ if __name__=='__main__':
             with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('release='+release.isoformat()+'\n')
         print(json.dumps(c,ensure_ascii=False,indent=2))
     else:asyncio.run(run(a))
+

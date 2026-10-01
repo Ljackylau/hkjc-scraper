@@ -222,6 +222,11 @@ async def read_points(page,date,kind):
     return parse_points(raw,date,kind,now())
 
 
+def critical_quotes(context):
+    # Odds must be persisted before the frozen tip is calculated.
+    return any(180<=r['seconds_to_off']<=420 for r in context)
+
+
 async def collect(context,date,venue,clocks,numbers,parent,states,once=False):
     """Runs within existing shadow job. Own files; exceptions cannot stop race capture."""
     folder=Path(parent)/'challenge';folder.mkdir(parents=True,exist_ok=True)
@@ -240,10 +245,6 @@ async def collect(context,date,venue,clocks,numbers,parent,states,once=False):
                 # Complete visible table evidence retained; no account/credential content.
                 sample['raw_tables']=raw['tables']
                 sample['points_snapshot']=None
-                try:
-                    ps=await asyncio.wait_for(read_points(point_pages[kind],date,kind),timeout=18)
-                    sample['points_snapshot']=ps
-                except Exception as e:sample['points_error']=str(e)[:200]
                 history[kind].append(sample)
                 append(folder/f'{kind}.jsonl',sample)
                 for race in rc:
@@ -263,6 +264,14 @@ async def collect(context,date,venue,clocks,numbers,parent,states,once=False):
                         signal=market_drop_signal(history[kind],sample,race,rc)
                         atomic(folder/f'race_{race["race_number"]:02d}_tnc_signal.json',signal)
                 atomic(folder/f'{kind}_latest.json',sample)
+                # Never block odds persistence / the T-3 deadline on optional points.
+                if not critical_quotes(rc):
+                    try:
+                        ps=await asyncio.wait_for(read_points(point_pages[kind],date,kind),timeout=18)
+                        sample['points_snapshot']=ps
+                        atomic(folder/f'{kind}_points_latest.json',ps)
+                    except Exception as e:sample['points_error']=type(e).__name__
+                else:sample['points_deferred']='T-3 quote priority'
                 status['pools'][kind]={'state':sample['state'],'samples_this_run':old.get('samples_this_run',0)+1,
                     'received_at':sample['received_at'],'source_updated_at':sample['source_updated_at'],
                     'source_recent':sample['source_recent'],'source_age_seconds':sample['source_age_seconds'],
@@ -273,16 +282,21 @@ async def collect(context,date,venue,clocks,numbers,parent,states,once=False):
                 error={'at':now().isoformat(),'kind':kind,'error':str(e)[:250]}
                 append(folder/'errors.jsonl',error)
                 status['pools'][kind]={**old,'state':'retrying','error':error['error']}
-        while True:
-            tick=time.monotonic()
-            status['state']='collecting'
-            await asyncio.gather(*(cycle(k) for k in pages))
-            status['updated_at']=now().isoformat();atomic(folder/'status.json',status)
-            if once:break
-            rc=race_context(date,clocks,states,now())
-            last=max(datetime.fromisoformat(r['post_time']) for r in rc if r['race_number'] in numbers)
-            if now()>last+timedelta(minutes=5) or time.monotonic()-started>310*60:break
-            await asyncio.sleep(max(1,60-(time.monotonic()-tick)))
+        async def pool_loop(kind):
+            # Independent loops: a slow jockey/points page cannot delay trainer quotes.
+            while True:
+                tick=time.monotonic()
+                status['state']='collecting'
+                await cycle(kind)
+                status['updated_at']=now().isoformat();atomic(folder/'status.json',status)
+                if once:return
+                rc=race_context(date,clocks,states,now())
+                last=max(datetime.fromisoformat(r['post_time']) for r in rc if r['race_number'] in numbers)
+                if now()>last+timedelta(minutes=5) or time.monotonic()-started>310*60:return
+                interval=10 if critical_quotes(rc) else 60
+                status['interval_seconds']=interval
+                await asyncio.sleep(max(1,interval-(time.monotonic()-tick)))
+        await asyncio.gather(*(pool_loop(kind) for kind in pages))
         status['state']='finished'
     except asyncio.CancelledError:
         status['state']='cancelled';raise
@@ -293,3 +307,4 @@ async def collect(context,date,venue,clocks,numbers,parent,states,once=False):
         for page in [*pages.values(),*point_pages.values()]:
             try:await page.close()
             except Exception:pass
+

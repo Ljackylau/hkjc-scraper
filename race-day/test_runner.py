@@ -44,7 +44,7 @@ class Tests(unittest.TestCase):
   self.assertEqual([x['horse_number'] for x in entries[:4]],[4,9,3,10])
   snapshot={'ranking':[{'horse_number':4,'qp_amount':100},{'horse_number':9,'qp_amount':90}], 'live103_raw':{'candidates':[{'horseNumber':4},{'horseNumber':9}]}}
   text=r.format_tip_message(1,snapshot,[9,3,10],[],positions={4:'第一',9:'第二',3:'第三',10:'第四'},result=True)
-  self.assertIn('4號（第一）',text);self.assertIn('9號（第二）',text);self.assertIn('10號（第四）',text)
+  self.assertIn('4號（🥇）',text);self.assertIn('9號（🥈）',text);self.assertIn('10號（4️⃣）',text)
  def test_market_formula_normalizes_inverse_win_odds(self):
   snapshot={'ranking':[{'horse_number':1,'live_value_index':50,'qp_amount':100,'q_amount':100},{'horse_number':2,'live_value_index':50,'qp_amount':100,'q_amount':100}]}
   self.assertTrue(r.apply_market_formula(snapshot,{'1':'10','2':'2'}))
@@ -123,3 +123,4 @@ class Tests(unittest.TestCase):
    self.assertIn('late',git(root,'--git-dir='+str(origin),'show','race-day-data:race-day-data/2026-09-13/late/status.json'))
 
 if __name__=='__main__':unittest.main()
+

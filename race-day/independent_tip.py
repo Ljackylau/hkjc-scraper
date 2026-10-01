@@ -1,4 +1,4 @@
-"""Freeze independent banker + existing market legs before T-3."""
+"""Freeze independent banker + ranked four market legs before T-3."""
 import asyncio
 import json
 from datetime import datetime, timedelta
@@ -24,12 +24,15 @@ def prepare(samples,off,date,number,baseline=None,golden=None):
         # banker; never depend on Horse103 to remove a previous banker.
         market=[r['horse_number'] for r in movement(baseline,ends[-1])[:5]] if baseline else []
         gold=list(golden or [])
-        legs=[h for h in dict.fromkeys(gold+market) if h!=decision['banker']]
+        scores=decision.get('leg_scores') or {}
+        legs=[int(h) for h in sorted(scores,key=lambda h:(-float(scores[h]),int(h))) if int(h)!=decision['banker']][:4]
         rows=ends[-1].get('runner_rows',[])
         return {**common,**decision,'date':date,'race':number,'off':off.isoformat(),
                 'status':'ready','legs':legs,'market':list(dict.fromkeys(gold+market)),
-                'golden':[h for h in gold if h!=decision['banker']],
-                'legs_status':'ready' if baseline and market else 'unavailable',
+                'golden':[h for h in gold if h in legs],
+                'legs_method':'relative_support_f_v1',
+                'legs_reason':'' if legs else '缺有效T−10份額基準，無法計算新腳',
+                'legs_status':'ready' if legs else 'unavailable',
                 'baseline_received_at':bases[-1]['received_at'] if bases else None,
                 'long_baseline_received_at':baseline.get('received_at') if baseline else None,
                 'runner_rows':rows,'source_updated':ends[-1]['source_updated']}
@@ -38,7 +41,7 @@ def prepare(samples,off,date,number,baseline=None,golden=None):
 
 def message(number,tip):
     if tip.get('status')!='ready':
-        return f'⚠️ R{number}｜新方法 T−3 資料不足\n{tip.get("reason","未能取得有效快照")}\n未以較遲資料補作賽前推介。'
+        return f'⚠️ R{number}｜T−3 資料不足\n{tip.get("reason","未能取得有效快照")}\n未以較遲資料補作賽前推介。'
     main=tip['banker'];legs='、'.join(f'{h}號' for h in tip['legs']) if tip['legs_status']=='ready' else '資料未就緒'
     return (f'🏇 R{number}\n獨贏&位置信心馬：{main}號\n'
             f'連贏位置Q：{main}號 拖 {legs or "無"}\n最有可能爆冷馬：'
@@ -63,7 +66,8 @@ async def notify(number,tip,folder):
         try:
             await asyncio.to_thread(telegram_send,message(number,tip))
             atomic(marker,{'status':'sent','sent_at':now().isoformat(),'race':number,'cutoff':tip['cutoff'],
-                           'send_delay_seconds':round((now()-cutoff).total_seconds(),2),'message':message(number,tip)})
+                           'send_delay_seconds':round((now()-cutoff).total_seconds(),2),'message':message(number,tip),'legs_status':tip.get('legs_status'),
+                           'cold_status':tip.get('cold_status'),'cold_missing':tip.get('cold_missing',[])})
             return
         except Exception as e:
             # Never include request URLs / credentials in logs or public markers.
@@ -84,3 +88,4 @@ def cold_signal(tip,folder,number,clocks=None,states=None):
         tip.update(calculate(tip,rows))
     except (ValueError,KeyError,TypeError,OSError):
         tip['cold_reason']='練王歷史資料讀取失敗'
+
