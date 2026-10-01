@@ -5,11 +5,11 @@
   "pools": {
     "jkc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 6,
-      "received_at": "2026-10-01T14:10:38.218942+08:00",
+      "samples_this_run": 7,
+      "received_at": "2026-10-01T14:11:38.081236+08:00",
       "source_updated_at": "2026-10-01T14:02:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 518.2,
+      "source_age_seconds": 578.1,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -215,11 +215,11 @@
     },
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 6,
-      "received_at": "2026-10-01T14:10:38.091290+08:00",
-      "source_updated_at": "2026-10-01T14:02:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 518.1,
+      "samples_this_run": 7,
+      "received_at": "2026-10-01T14:11:38.180180+08:00",
+      "source_updated_at": "2026-10-01T14:11:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 38.2,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -363,6 +363,20 @@
           "normalized_implied_share": null
         },
         {
+          "selection_id": "13",
+          "name": "游達榮",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
           "selection_id": "7",
           "name": "告東尼",
           "is_other": false,
@@ -379,20 +393,6 @@
         {
           "selection_id": "9",
           "name": "沈集成",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "13",
-          "name": "游達榮",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -532,5 +532,5 @@
     10,
     11
   ],
-  "updated_at": "2026-10-01T14:10:39.718662+08:00"
+  "updated_at": "2026-10-01T14:11:38.239491+08:00"
 }
