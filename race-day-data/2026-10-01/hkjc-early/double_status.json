@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "updated_at": "2026-10-01T13:32:23.663438+08:00",
+  "updated_at": "2026-10-01T13:33:23.680656+08:00",
   "research_only": true,
   "pairs": {
     "1": {
@@ -25,7 +25,7 @@
       "matrix_complete": true
     },
     "3": {
-      "status": "collecting",
+      "status": "retrying",
       "first_race": 3,
       "second_race": 4,
       "error": "Double stale source timestamp",
