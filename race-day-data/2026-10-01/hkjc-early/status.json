@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "updated_at": "2026-10-01T13:02:23.227663+08:00",
+  "updated_at": "2026-10-01T13:03:25.129518+08:00",
   "mode": "shadow",
   "races": {
     "1": {
@@ -76,10 +76,13 @@
       "source": "HKJC odds movement; experimental"
     },
     "2": {
-      "status": "collecting",
+      "status": "retrying",
       "target": "2026-10-01T13:27:00+08:00",
-      "baseline": true,
-      "last_received": "2026-10-01T13:02:21.277348+08:00"
+      "errors": [
+        "Stale source timestamp",
+        "Stale source timestamp",
+        "Stale source timestamp"
+      ]
     },
     "3": {
       "status": "waiting",
