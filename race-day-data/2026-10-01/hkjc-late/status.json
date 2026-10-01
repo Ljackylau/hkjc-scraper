@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "updated_at": "2026-10-01T16:07:13.703811+08:00",
+  "updated_at": "2026-10-01T16:08:16.031440+08:00",
   "mode": "shadow",
   "races": {
     "6": {
@@ -79,11 +79,14 @@
       "status": "collecting",
       "target": "2026-10-01T16:12:00+08:00",
       "baseline": true,
-      "last_received": "2026-10-01T16:07:11.314062+08:00"
+      "last_received": "2026-10-01T16:08:11.539812+08:00"
     },
     "8": {
-      "status": "waiting",
-      "target": "2026-10-01T16:37:00+08:00"
+      "status": "retrying",
+      "target": "2026-10-01T16:42:00+08:00",
+      "errors": [
+        "Stale source timestamp"
+      ]
     },
     "9": {
       "status": "waiting",
