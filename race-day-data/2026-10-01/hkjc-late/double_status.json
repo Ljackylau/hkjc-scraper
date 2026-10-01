@@ -1,12 +1,13 @@
 {
   "date": "2026-10-01",
-  "updated_at": "2026-10-01T15:02:38.970308+08:00",
+  "updated_at": "2026-10-01T15:03:44.009964+08:00",
   "research_only": true,
   "pairs": {
     "6": {
-      "status": "waiting",
+      "status": "retrying",
       "first_race": 6,
-      "second_race": 7
+      "second_race": 7,
+      "error": "Double stale source timestamp"
     },
     "7": {
       "status": "waiting",
