@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "c660bd18-3f49-4110-b09b-0fa9bc7e351a",
+    "race_number": 9,
+    "post_time": "17:15",
+    "venue": "沙田",
+    "distance": 1400,
+    "course": "A"
+  },
+  "date": "2026-10-01",
+  "expected_lock": "2026-10-01T17:12:00+08:00",
+  "live_received_at": "2026-10-01T17:12:07.419262+08:00",
+  "capture_delay_seconds": 7.42,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-01T09:12:02.959Z",
+    "postTime": "2026-10-01T09:15:00.000Z",
+    "previewTime": "2026-10-01T09:08:00.000Z",
+    "lockTime": "2026-10-01T09:12:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 12,
+        "nameTc": "威利金箭",
+        "nameEn": "PUBLIC ATTENTION",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 69,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "超輕鬆",
+        "nameEn": "CHILL EASY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "飛鷹翱翔",
+        "nameEn": "DROMBEG BANNER",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "美麗星晨",
+        "nameEn": "BEAUTY BOLT",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "至尊瑰寶",
+        "nameEn": "REGAL GEM",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 2,
+        "nameTc": "喜慶寶",
+        "nameEn": "HOT DELIGHT",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "喜尊龍",
+        "nameEn": "TOP DRAGON",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "首飾天空",
+        "nameEn": "SKY JEWELLERY",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 3,
+      "nameTc": "超輕鬆",
+      "nameEn": "CHILL EASY",
+      "confidence": "high",
+      "reason": "近績強勁，兩連勝升班，試閘表現出色。周俊樂減磅，檔位雖差但可憑實力克服。",
+      "previewHorseNumber": null
+    }
+  }
+}
