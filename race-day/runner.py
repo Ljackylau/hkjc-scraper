@@ -85,12 +85,11 @@ def format_tip_message(number,snapshot,market=None,cold=None,positions=None,resu
     if independent.get('cold_status')=='unavailable':cold_text='無法判定：缺有效報價'
     elif independent.get('cold_quote_age_seconds',0)>120:
         cold_text+=f'（報價較舊：{round(independent["cold_quote_age_seconds"])}秒）'
-    title=f'🏁 R{number}｜正式賽果更新' if result else f'🏇 R{number}｜T−3 已鎖定'
+    title=f'🏁 R{number}｜正式賽果更新' if result else f'🏇 R{number}'
     return (title+'\n'
             f'獨贏&位置信心馬：{confidence_horses}\n'
             f'連贏位置Q：{annotated(main,positions)} 拖 {legs}\n'
-            f'最有可能爆冷馬：{cold_text}\n\n'
-            '查看完整資料：https://ljackylau.github.io/hkjc-scraper/race-day/')
+            f'最有可能爆冷馬：{cold_text}')
 
 def parse_result_html(body):
     match=re.search(r'<div[^>]*class="[^"]*performance[^"]*"[^>]*>.*?<tbody[^>]*>(.*?)</tbody>',body,re.I|re.S)

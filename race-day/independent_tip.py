@@ -39,10 +39,9 @@ def message(number,tip):
     if tip.get('status')!='ready':
         return f'⚠️ R{number}｜新方法 T−3 資料不足\n{tip.get("reason","未能取得有效快照")}\n未以較遲資料補作賽前推介。'
     main=tip['banker'];legs='、'.join(f'{h}號' for h in tip['legs']) if tip['legs_status']=='ready' else '資料未就緒'
-    return (f'🏇 R{number}｜T−3 新方法已鎖定\n獨贏&位置信心馬：{main}號\n'
+    return (f'🏇 R{number}\n獨贏&位置信心馬：{main}號\n'
             f'連贏位置Q：{main}號 拖 {legs or "無"}\n最有可能爆冷馬：'
-            +cold_text(tip)
-            +'\n\n查看完整資料：https://ljackylau.github.io/hkjc-scraper/race-day/')
+            +cold_text(tip))
 
 
 def cold_text(tip):
