@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "updated_at": "2026-10-01T16:11:45.913014+08:00",
+  "updated_at": "2026-10-01T16:12:02.908565+08:00",
   "mode": "shadow",
   "races": {
     "6": {
@@ -76,19 +76,87 @@
       "source": "HKJC odds movement; experimental"
     },
     "7": {
-      "status": "collecting",
+      "status": "shadow",
       "target": "2026-10-01T16:12:00+08:00",
-      "baseline": true,
-      "last_received": "2026-10-01T16:11:41.320106+08:00"
+      "received_at": "2026-10-01T16:12:02.602124+08:00",
+      "source_updated": {
+        "wp": "2026-10-01T16:11:00+08:00",
+        "wpq": "2026-10-01T16:11:00+08:00"
+      },
+      "baseline": {
+        "kind": "t30",
+        "received_at": "2026-10-01T15:46:11.011829+08:00",
+        "minutes_to_off": 28.82,
+        "source_updated": {
+          "wp": "2026-10-01T15:45:00+08:00",
+          "wpq": "2026-10-01T15:45:00+08:00"
+        }
+      },
+      "ranking": [
+        {
+          "horse_number": 14,
+          "score": 26.488,
+          "drops_pct": {
+            "WIN": 30.0,
+            "PLA": 9.09,
+            "QIN": 41.62,
+            "QPL": 26.96
+          }
+        },
+        {
+          "horse_number": 10,
+          "score": 25.085,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 27.78,
+            "QIN": 49.44,
+            "QPL": 41.26
+          }
+        },
+        {
+          "horse_number": 13,
+          "score": 14.892,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 36.41,
+            "QPL": 38.05
+          }
+        },
+        {
+          "horse_number": 2,
+          "score": 14.855,
+          "drops_pct": {
+            "WIN": 17.74,
+            "PLA": 0,
+            "QIN": 12.92,
+            "QPL": 30.31
+          }
+        },
+        {
+          "horse_number": 8,
+          "score": 13.514,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 32.7,
+            "QPL": 34.87
+          }
+        }
+      ],
+      "golden_legs": [
+        {
+          "horse_number": 14,
+          "score": 26.707
+        }
+      ],
+      "source": "HKJC odds movement; experimental"
     },
     "8": {
-      "status": "retrying",
+      "status": "collecting",
       "target": "2026-10-01T16:42:00+08:00",
-      "errors": [
-        "Stale source timestamp",
-        "Stale source timestamp",
-        "Stale source timestamp"
-      ]
+      "baseline": false,
+      "last_received": "2026-10-01T16:12:02.061813+08:00"
     },
     "9": {
       "status": "waiting",
