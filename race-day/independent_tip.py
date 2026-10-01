@@ -45,7 +45,7 @@ def message(number,tip):
 
 
 def cold_text(tip):
-    if tip.get('cold_status')!='ready':return '無法判定：缺有效報價'
+    if tip.get('cold_status')!='ready':return '無法判定：'+tip.get('cold_reason','缺有效報價')
     value='、'.join(f'{h}號' for h in tip.get('cold',[])) or '無'
     age=tip.get('cold_quote_age_seconds',0)
     return value+(f'（報價較舊：{round(age)}秒）' if age>120 else '')
@@ -88,6 +88,13 @@ def cold_signal(tip,folder,number,clocks=None,states=None):
             context=race_context(tip['date'],clocks,states or {},freeze)
             race=next(r for r in context if r['race_number']==number);previous=next(r for r in context if r['race_number']==number-1)
             previous_off=dt(previous['post_time'])
+            post=[s for s in history if previous_off<dt(s['source_updated_at'])<=dt(s['received_at'])]
+            if not post:
+                tip['cold_reason']='上一場後未有更新報價';return
+            newest=max(post,key=lambda s:dt(s['source_updated_at']))
+            age=round((freeze-dt(newest['source_updated_at'])).total_seconds())
+            if age>600:
+                tip['cold_reason']=f'練王報價已舊{age}秒；上限600秒';return
             current=[s for s in history if previous_off<dt(s['source_updated_at'])<=dt(s['received_at']) and 0<=(freeze-dt(s['source_updated_at'])).total_seconds()<=600]
             if not current:return
             sample=max(current,key=lambda s:(dt(s['source_updated_at']),dt(s['received_at'])))
@@ -104,7 +111,8 @@ def cold_signal(tip,folder,number,clocks=None,states=None):
             if not source or not baseline or not 0<=(dt(tip['freeze'])-dt(source)).total_seconds()<=600:return
             tip['cold_source_updated_at']=source;tip['cold_quote_age_seconds']=(dt(tip['freeze'])-dt(source)).total_seconds()
         else:return
-        if signal.get('status')!='observed':return
+        if signal.get('status')!='observed':
+            tip['cold_reason']='缺上一場開跑前的有效比較報價';return
         trainers={''.join(str(r['name']).split()) for r in signal.get('qualifying',[])}
         mapping={int(r[0]):''.join(str(r[6]).split()) for r in tip.get('runner_rows',[])}
         tip['cold']=[h for h in tip.get('market',[])[:5] if mapping.get(h) in trainers]
