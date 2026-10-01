@@ -112,9 +112,9 @@
     "banker": 1,
     "legs": [
       5,
-      4,
-      3,
-      13
+      10,
+      12,
+      6
     ],
     "banker_source": "fixed-baseline market movement",
     "banker_scores": {
@@ -339,14 +339,72 @@
       "wpq": "2026-10-01T12:55:00+08:00"
     },
     "cold": [],
-    "cold_status": "ready"
+    "cold_status": "ready",
+    "published_legs": [
+      5,
+      4,
+      3,
+      13
+    ],
+    "published_cold": [],
+    "published_cold_status": "ready",
+    "legs_f": [
+      5,
+      10
+    ],
+    "legs_qp": [
+      12,
+      6
+    ],
+    "banker_qp_odds": {
+      "2": 9.2,
+      "3": 18.0,
+      "4": 17.0,
+      "5": 3.6,
+      "6": 8.0,
+      "7": 14.0,
+      "8": 26.0,
+      "9": 52.0,
+      "10": 7.5,
+      "11": 42.0,
+      "12": 7.9,
+      "13": 42.0,
+      "14": 46.0
+    },
+    "legs_method": "f2_banker_qp2_v1",
+    "legs_reason": "",
+    "legs_recomputed": true,
+    "legs_recomputed_at": "2026-10-01T23:48:22.058465+08:00",
+    "legs_inputs_received_at": "2026-10-01T12:56:45.880974+08:00",
+    "legs_inputs_source_updated": {
+      "wp": "2026-10-01T12:56:00+08:00",
+      "wpq": "2026-10-01T12:55:00+08:00"
+    },
+    "cold_policy": "post_previous_off_receipt120_groups_exclude_banker_v6",
+    "cold_group": [],
+    "cold_excluded": [],
+    "cold_note": "首場沒有上一場比較",
+    "cold_backfill": {
+      "kind": "archived_pre_t3_reconstruction",
+      "updated_at": "2026-10-01T23:48:22.058465+08:00",
+      "not_sent_at_t3": true,
+      "policy_unchanged": true
+    }
   },
   "legs": [
+    5,
+    10,
+    12,
+    6
+  ],
+  "cold": [],
+  "cold_source": "archived_pre_t3_reconstruction",
+  "published_legs": [
     5,
     4,
     3,
     13
   ],
-  "cold": [],
-  "cold_source": "saved_tip"
+  "published_cold": [],
+  "legs_source": "archived_pre_t3_reconstruction"
 }

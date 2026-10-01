@@ -111,10 +111,10 @@
     "cutoff": "2026-10-01T16:12:00+08:00",
     "banker": 14,
     "legs": [
-      10,
-      13,
       2,
-      8
+      6,
+      10,
+      11
     ],
     "banker_source": "fixed-baseline market movement",
     "banker_scores": {
@@ -339,14 +339,116 @@
       "wpq": "2026-10-01T16:11:00+08:00"
     },
     "cold": [],
-    "cold_status": "unavailable"
+    "cold_status": "ready",
+    "published_legs": [
+      10,
+      13,
+      2,
+      8
+    ],
+    "published_cold": [],
+    "published_cold_status": "unavailable",
+    "legs_f": [
+      2,
+      6
+    ],
+    "legs_qp": [
+      10,
+      11
+    ],
+    "banker_qp_odds": {
+      "1": 40.0,
+      "2": 9.4,
+      "3": 57.0,
+      "4": 23.0,
+      "5": 79.0,
+      "6": 5.9,
+      "8": 106.0,
+      "9": 237.0,
+      "10": 7.5,
+      "11": 19.0,
+      "12": 127.0,
+      "13": 28.0,
+      "7": 55.0
+    },
+    "legs_method": "f2_banker_qp2_v1",
+    "legs_reason": "",
+    "legs_recomputed": true,
+    "legs_recomputed_at": "2026-10-01T23:48:22.058465+08:00",
+    "legs_inputs_received_at": "2026-10-01T16:11:31.295655+08:00",
+    "legs_inputs_source_updated": {
+      "wp": "2026-10-01T16:10:00+08:00",
+      "wpq": "2026-10-01T16:11:00+08:00"
+    },
+    "cold_policy": "post_previous_off_receipt120_groups_exclude_banker_v6",
+    "cold_group": [],
+    "cold_excluded": [
+      {
+        "horse": 10,
+        "trainer": "大衛希斯",
+        "reason": "練王選項已不能勝出；不是馬匹不能勝出"
+      }
+    ],
+    "cold_changes": [
+      {
+        "horse": 13,
+        "trainer": "羅富全",
+        "before_odds": 400.0,
+        "current_odds": 500.0,
+        "drop_pct": -25.0,
+        "selection_id": "8"
+      },
+      {
+        "horse": 2,
+        "trainer": "游達榮",
+        "before_odds": 600.0,
+        "current_odds": 1000.0,
+        "drop_pct": -66.66666666666667,
+        "selection_id": "13"
+      },
+      {
+        "horse": 8,
+        "trainer": "黎昭昇",
+        "before_odds": 2000.0,
+        "current_odds": 3000.0,
+        "drop_pct": -50.0,
+        "selection_id": "16"
+      }
+    ],
+    "cold_partial": false,
+    "cold_missing": [],
+    "cold_compared": [
+      13,
+      2,
+      8
+    ],
+    "cold_received_at": "2026-10-01T16:11:38.459217+08:00",
+    "cold_source_updated_at": "2026-10-01T16:04:00+08:00",
+    "cold_quote_age_seconds": 470.0,
+    "cold_receipt_age_seconds": 11.541,
+    "cold_baseline_source_updated_at": "2026-10-01T15:42:00+08:00",
+    "cold_baseline_received_at": "2026-10-01T15:44:38.415245+08:00",
+    "cold_backfill": {
+      "kind": "archived_pre_t3_reconstruction",
+      "updated_at": "2026-10-01T23:48:22.058465+08:00",
+      "not_sent_at_t3": true,
+      "policy_unchanged": true
+    }
   },
   "legs": [
+    2,
+    6,
+    10,
+    11
+  ],
+  "cold": [],
+  "cold_source": "archived_pre_t3_reconstruction",
+  "published_legs": [
     10,
     13,
     2,
     8
   ],
-  "cold": [],
-  "cold_source": "saved_tip"
+  "published_cold": [],
+  "legs_source": "archived_pre_t3_reconstruction"
 }

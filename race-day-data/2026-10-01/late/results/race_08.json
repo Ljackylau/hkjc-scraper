@@ -111,10 +111,10 @@
     "cutoff": "2026-10-01T16:42:00+08:00",
     "banker": 7,
     "legs": [
-      6,
+      5,
       4,
       11,
-      14
+      8
     ],
     "banker_source": "fixed-baseline market movement",
     "banker_scores": {
@@ -339,14 +339,118 @@
       "wpq": "2026-10-01T16:41:00+08:00"
     },
     "cold": [],
-    "cold_status": "unavailable"
+    "cold_status": "ready",
+    "published_legs": [
+      6,
+      4,
+      11,
+      14
+    ],
+    "published_cold": [],
+    "published_cold_status": "unavailable",
+    "legs_f": [
+      5,
+      4
+    ],
+    "legs_qp": [
+      11,
+      8
+    ],
+    "banker_qp_odds": {
+      "1": 77.0,
+      "2": 243.0,
+      "3": 150.0,
+      "4": 34.0,
+      "5": 83.0,
+      "6": 91.0,
+      "8": 73.0,
+      "9": 359.0,
+      "10": 209.0,
+      "11": 58.0,
+      "12": 118.0,
+      "13": 257.0,
+      "14": 121.0
+    },
+    "legs_method": "f2_banker_qp2_v1",
+    "legs_reason": "",
+    "legs_recomputed": true,
+    "legs_recomputed_at": "2026-10-01T23:48:22.058465+08:00",
+    "legs_inputs_received_at": "2026-10-01T16:41:31.298493+08:00",
+    "legs_inputs_source_updated": {
+      "wp": "2026-10-01T16:41:00+08:00",
+      "wpq": "2026-10-01T16:41:00+08:00"
+    },
+    "cold_policy": "post_previous_off_receipt120_groups_exclude_banker_v6",
+    "cold_group": [
+      {
+        "horse": 11,
+        "trainer": "甘敏斯",
+        "selection_id": "21",
+        "before_odds": null,
+        "current_odds": null,
+        "drop_pct": null,
+        "qualifies": false,
+        "scope": "collective_not_individual"
+      }
+    ],
+    "cold_excluded": [
+      {
+        "horse": 14,
+        "trainer": "鄭俊偉",
+        "reason": "練王選項已不能勝出；不是馬匹不能勝出"
+      }
+    ],
+    "cold_changes": [
+      {
+        "horse": 6,
+        "trainer": "賀賢",
+        "before_odds": 1.16,
+        "current_odds": 1.09,
+        "drop_pct": 6.034482758620676,
+        "selection_id": "10"
+      },
+      {
+        "horse": 4,
+        "trainer": "姚本輝",
+        "before_odds": 7.0,
+        "current_odds": 8.5,
+        "drop_pct": -21.428571428571427,
+        "selection_id": "2"
+      }
+    ],
+    "cold_partial": false,
+    "cold_missing": [],
+    "cold_compared": [
+      6,
+      4
+    ],
+    "cold_received_at": "2026-10-01T16:41:38.442059+08:00",
+    "cold_source_updated_at": "2026-10-01T16:29:00+08:00",
+    "cold_quote_age_seconds": 770.0,
+    "cold_receipt_age_seconds": 11.558,
+    "cold_baseline_source_updated_at": "2026-10-01T16:04:00+08:00",
+    "cold_baseline_received_at": "2026-10-01T16:14:38.300545+08:00",
+    "cold_backfill": {
+      "kind": "archived_pre_t3_reconstruction",
+      "updated_at": "2026-10-01T23:48:22.058465+08:00",
+      "not_sent_at_t3": true,
+      "policy_unchanged": true
+    }
   },
   "legs": [
+    5,
+    4,
+    11,
+    8
+  ],
+  "cold": [],
+  "cold_source": "archived_pre_t3_reconstruction",
+  "published_legs": [
     6,
     4,
     11,
     14
   ],
-  "cold": [],
-  "cold_source": "saved_tip"
+  "published_cold": [],
+  "legs_source": "archived_pre_t3_reconstruction"
 }

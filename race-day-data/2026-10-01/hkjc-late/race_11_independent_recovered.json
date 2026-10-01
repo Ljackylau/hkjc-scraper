@@ -6,12 +6,7 @@
   "method": "independent_hybrid_v1",
   "cutoff": "2026-10-01T18:17:00+08:00",
   "banker": 8,
-  "legs": [
-    6,
-    10,
-    5,
-    1
-  ],
+  "legs": [],
   "banker_source": "fixed-baseline market movement",
   "banker_scores": {
     "1": 9.0,
@@ -44,7 +39,7 @@
     1
   ],
   "golden": [],
-  "legs_status": "ready",
+  "legs_status": "unavailable",
   "baseline_received_at": null,
   "long_baseline_received_at": "2026-10-01T17:51:01.305805+08:00",
   "runner_rows": [
@@ -227,5 +222,38 @@
     "original_status": "unavailable",
     "reason": "Removed unnecessary T-10 dependency for valid long-window banker",
     "reconstructed_at": "2026-10-01T06:33:38.315156-04:00"
+  },
+  "published_legs": [
+    6,
+    10,
+    5,
+    1
+  ],
+  "published_cold": null,
+  "published_cold_status": null,
+  "legs_f": [],
+  "legs_qp": [],
+  "banker_qp_odds": {},
+  "legs_method": "f2_banker_qp2_v1",
+  "legs_reason": "缺有效T−10份額基準，無法計算F頭兩腳",
+  "legs_recomputed": true,
+  "legs_recomputed_at": "2026-10-01T23:48:22.058465+08:00",
+  "legs_inputs_received_at": "2026-10-01T18:16:40.928966+08:00",
+  "legs_inputs_source_updated": {
+    "wp": "2026-10-01T18:15:00+08:00",
+    "wpq": "2026-10-01T18:15:00+08:00"
+  },
+  "cold": [],
+  "cold_status": "ready",
+  "cold_policy": "post_previous_off_receipt120_groups_exclude_banker_v6",
+  "cold_group": [],
+  "cold_excluded": [],
+  "cold_applicable": false,
+  "cold_note": "本場不適用：練王已於尾二場開跑截止",
+  "cold_backfill": {
+    "kind": "archived_pre_t3_reconstruction",
+    "updated_at": "2026-10-01T23:48:22.058465+08:00",
+    "not_sent_at_t3": true,
+    "policy_unchanged": true
   }
 }

@@ -111,10 +111,10 @@
     "cutoff": "2026-10-01T14:32:00+08:00",
     "banker": 7,
     "legs": [
+      10,
+      14,
       6,
-      9,
-      12,
-      3
+      11
     ],
     "banker_source": "fixed-baseline market movement",
     "banker_scores": {
@@ -338,15 +338,126 @@
       "wp": "2026-10-01T14:30:00+08:00",
       "wpq": "2026-10-01T14:31:00+08:00"
     },
-    "cold": [],
-    "cold_status": "unavailable"
+    "cold": [
+      12,
+      3
+    ],
+    "cold_status": "ready",
+    "published_legs": [
+      6,
+      9,
+      12,
+      3
+    ],
+    "published_cold": [],
+    "published_cold_status": "unavailable",
+    "legs_f": [
+      10,
+      14
+    ],
+    "legs_qp": [
+      6,
+      11
+    ],
+    "banker_qp_odds": {
+      "1": 15.0,
+      "2": 37.0,
+      "3": 14.0,
+      "4": 24.0,
+      "5": 10.0,
+      "6": 3.2,
+      "8": 28.0,
+      "9": 9.4,
+      "10": 2.3,
+      "11": 5.9,
+      "12": 6.2,
+      "13": 19.0,
+      "14": 5.8
+    },
+    "legs_method": "f2_banker_qp2_v1",
+    "legs_reason": "",
+    "legs_recomputed": true,
+    "legs_recomputed_at": "2026-10-01T23:48:22.058465+08:00",
+    "legs_inputs_received_at": "2026-10-01T14:31:35.959947+08:00",
+    "legs_inputs_source_updated": {
+      "wp": "2026-10-01T14:30:00+08:00",
+      "wpq": "2026-10-01T14:31:00+08:00"
+    },
+    "cold_policy": "post_previous_off_receipt120_groups_exclude_banker_v6",
+    "cold_group": [],
+    "cold_excluded": [],
+    "cold_changes": [
+      {
+        "horse": 6,
+        "trainer": "姚本輝",
+        "before_odds": 4.5,
+        "current_odds": 4.5,
+        "drop_pct": 0.0,
+        "selection_id": "2"
+      },
+      {
+        "horse": 9,
+        "trainer": "沈集成",
+        "before_odds": 45.0,
+        "current_odds": 45.0,
+        "drop_pct": 0.0,
+        "selection_id": "9"
+      },
+      {
+        "horse": 12,
+        "trainer": "游達榮",
+        "before_odds": 45.0,
+        "current_odds": 25.0,
+        "drop_pct": 44.44444444444444,
+        "selection_id": "13"
+      },
+      {
+        "horse": 3,
+        "trainer": "呂健威",
+        "before_odds": 8.0,
+        "current_odds": 6.5,
+        "drop_pct": 18.75,
+        "selection_id": "3"
+      }
+    ],
+    "cold_partial": false,
+    "cold_missing": [],
+    "cold_compared": [
+      6,
+      9,
+      12,
+      3
+    ],
+    "cold_received_at": "2026-10-01T14:31:43.137205+08:00",
+    "cold_source_updated_at": "2026-10-01T14:20:00+08:00",
+    "cold_quote_age_seconds": 710.0,
+    "cold_receipt_age_seconds": 6.863,
+    "cold_baseline_source_updated_at": "2026-10-01T13:58:00+08:00",
+    "cold_baseline_received_at": "2026-10-01T13:59:42.928207+08:00",
+    "cold_backfill": {
+      "kind": "archived_pre_t3_reconstruction",
+      "updated_at": "2026-10-01T23:48:22.058465+08:00",
+      "not_sent_at_t3": true,
+      "policy_unchanged": true
+    }
   },
   "legs": [
+    10,
+    14,
+    6,
+    11
+  ],
+  "cold": [
+    12,
+    3
+  ],
+  "cold_source": "archived_pre_t3_reconstruction",
+  "published_legs": [
     6,
     9,
     12,
     3
   ],
-  "cold": [],
-  "cold_source": "saved_tip"
+  "published_cold": [],
+  "legs_source": "archived_pre_t3_reconstruction"
 }
