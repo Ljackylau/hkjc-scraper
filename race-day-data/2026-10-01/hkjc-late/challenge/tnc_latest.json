@@ -3,11 +3,11 @@
   "date": "2026-10-01",
   "venue": "ST",
   "kind": "tnc",
-  "received_at": "2026-10-01T16:27:38.328182+08:00",
+  "received_at": "2026-10-01T16:28:38.396053+08:00",
   "url": "https://bet.hkjc.com/ch/racing/tnc/2026-10-01/ST/1",
-  "source_updated_at": "2026-10-01T16:19:00+08:00",
-  "source_age_seconds": 518.3,
-  "source_recent": false,
+  "source_updated_at": "2026-10-01T16:27:00+08:00",
+  "source_age_seconds": 98.4,
+  "source_recent": true,
   "state": "no_numeric_quotes",
   "numeric_quotes": 0,
   "participants": [
@@ -138,20 +138,6 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "13",
-      "name": "游達榮",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
       "selection_id": "7",
       "name": "告東尼",
       "is_other": false,
@@ -222,6 +208,20 @@
       "normalized_implied_share": null
     },
     {
+      "selection_id": "13",
+      "name": "游達榮",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "未能勝出",
+      "opening_drop_pct": null,
+      "normalized_implied_share": null
+    },
+    {
       "selection_id": "19",
       "name": "文家良",
       "is_other": false,
@@ -231,7 +231,7 @@
       "opening_odds": null,
       "previous_odds": null,
       "current_odds": null,
-      "quote_text": "---",
+      "quote_text": "未能勝出",
       "opening_drop_pct": null,
       "normalized_implied_share": null
     },
@@ -306,74 +306,74 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "練馬師王\n1\n01/10/2026, 星期四, 沙田\n更新時間: 01/10/2026 16:19\n所有場次練馬師王 1 暫停即場投注。即時投注將於第 10 場前截止\n添加到投注區\n練馬師王統計\n練馬師王出馬表\n練馬師王賠率走勢圖\n全日練馬師分場表\n練馬師王積分\n玩法\n受注時間\n練馬師資料",
+  "header": "練馬師王\n1\n01/10/2026, 星期四, 沙田\n更新時間: 01/10/2026 16:27\n所有場次練馬師王 1 暫停即場投注。即時投注將於第 10 場前截止\n添加到投注區",
   "research_only": true,
   "race_context": [
     {
       "race_number": 1,
       "post_time": "2026-10-01T13:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -12458.3
+      "seconds_to_off": -12518.4
     },
     {
       "race_number": 2,
       "post_time": "2026-10-01T13:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -10658.3
+      "seconds_to_off": -10718.4
     },
     {
       "race_number": 3,
       "post_time": "2026-10-01T14:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -8858.3
+      "seconds_to_off": -8918.4
     },
     {
       "race_number": 4,
       "post_time": "2026-10-01T14:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -6758.3
+      "seconds_to_off": -6818.4
     },
     {
       "race_number": 5,
       "post_time": "2026-10-01T15:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -4958.3
+      "seconds_to_off": -5018.4
     },
     {
       "race_number": 6,
       "post_time": "2026-10-01T15:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2558.3
+      "seconds_to_off": -2618.4
     },
     {
       "race_number": 7,
       "post_time": "2026-10-01T16:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -758.3
+      "seconds_to_off": -818.4
     },
     {
       "race_number": 8,
       "post_time": "2026-10-01T16:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1041.7
+      "seconds_to_off": 981.6
     },
     {
       "race_number": 9,
       "post_time": "2026-10-01T17:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 2541.7
+      "seconds_to_off": 2481.6
     },
     {
       "race_number": 10,
       "post_time": "2026-10-01T17:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 4641.7
+      "seconds_to_off": 4581.6
     },
     {
       "race_number": 11,
       "post_time": "2026-10-01T18:20:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 6741.7
+      "seconds_to_off": 6681.6
     }
   ],
   "raw_tables": [
@@ -390,7 +390,7 @@
         "10",
         "賀賢",
         "36",
-        "2",
+        "1",
         "---",
         "---"
       ],
@@ -398,7 +398,7 @@
         "2",
         "姚本輝",
         "12",
-        "6",
+        "5",
         "---",
         "---"
       ],
@@ -406,7 +406,7 @@
         "3",
         "呂健威",
         "4",
-        "4",
+        "3",
         "---",
         "---"
       ],
@@ -438,7 +438,7 @@
         "5",
         "伍鵬志",
         "4",
-        "4",
+        "3",
         "---",
         "---"
       ],
@@ -446,7 +446,7 @@
         "8",
         "羅富全",
         "4",
-        "4",
+        "3",
         "---",
         "---"
       ],
@@ -455,14 +455,6 @@
         "廖康銘",
         "4",
         "4",
-        "---",
-        "---"
-      ],
-      [
-        "13",
-        "游達榮",
-        "12",
-        "2",
         "---",
         "---"
       ],
@@ -478,7 +470,7 @@
         "9",
         "沈集成",
         "0",
-        "4",
+        "3",
         "---",
         "---"
       ],
@@ -486,7 +478,7 @@
         "16",
         "黎昭昇",
         "0",
-        "5",
+        "4",
         "---",
         "---"
       ],
@@ -501,24 +493,32 @@
       [
         "14",
         "蘇偉賢",
-        "4",
-        "3",
+        "16",
+        "2",
         "---",
         "---"
+      ],
+      [
+        "13",
+        "游達榮",
+        "12",
+        "1",
+        "---",
+        "未能勝出"
       ],
       [
         "19",
         "文家良",
         "0",
-        "3",
+        "2",
         "---",
-        "---"
+        "未能勝出"
       ],
       [
         "11",
         "大衛希斯",
-        "6",
-        "2",
+        "12",
+        "1",
         "---",
         "未能勝出"
       ],
@@ -534,7 +534,7 @@
         "18",
         "葉楚航",
         "0",
-        "2",
+        "1",
         "---",
         "未能勝出"
       ],
@@ -542,14 +542,14 @@
         "20",
         "鄭俊偉",
         "0",
-        "2",
+        "1",
         "---",
         "未能勝出"
       ],
       [
         "21",
         "其他練馬師",
-        "6",
+        "10",
         "詳情",
         "---",
         "未能勝出"
@@ -559,7 +559,7 @@
   "points_snapshot": {
     "date": "2026-10-01",
     "kind": "tnc",
-    "received_at": "2026-10-01T16:27:38.716480+08:00",
+    "received_at": "2026-10-01T16:28:38.493805+08:00",
     "source_updated_at": null,
     "freshness": "not_verifiable",
     "url": "https://racing.hkjc.com/zh-hk/local/information/tncresult?racedate=2026/10/01",
