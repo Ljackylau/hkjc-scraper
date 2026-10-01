@@ -1,4 +1,4 @@
-"""Read-only JKC/TNC research archive; never contributes to Horse103 picks.
+"""JKC research and TNC cold-signal archive; banker/legs remain independent.
 
 Source timestamps are last-update times, not proof of a fresh quote. Missing
 points/remaining rides stay unknown. No retrospectively manufactured T-3 data.
@@ -49,7 +49,7 @@ def parse(raw,date,venue,kind,received):
         fmt='%d/%m/%Y %H:%M:%S' if len(match[2])==8 else '%d/%m/%Y %H:%M'
         updated=datetime.strptime(match[1]+' '+match[2],fmt).replace(tzinfo=HK)
         if updated>received+timedelta(seconds=60):raise ValueError('Future source timestamp')
-    found=[]
+    found=[];roster_ok=True
     for table in raw.get('tables',[]):
         for i,row in enumerate(table):
             cols=[compact(c) for c in row]
@@ -57,7 +57,8 @@ def parse(raw,date,venue,kind,received):
             name_col='騎師' if kind=='jkc' else '練馬師'
             if name_col not in cols:continue
             for cells in table[i+1:]:
-                if len(cells)!=len(cols):continue
+                if len(cells)!=len(cols):
+                    roster_ok=False;continue
                 d=dict(zip(cols,cells));sel=d.get('選項','')
                 if not sel.isdigit():continue
                 odds=number(d['現時賠率']);opening=number(d.get('開售賠率'))
@@ -84,7 +85,8 @@ def parse(raw,date,venue,kind,received):
     return {'schema_version':1,'date':date,'venue':venue,'kind':kind,'received_at':received.isoformat(),
         'url':url,'source_updated_at':updated.isoformat() if updated else None,'source_age_seconds':age,
         'source_recent':age is not None and 0<=age<=120,'state':state,'numeric_quotes':valid,
-        'participants':found,'header':header,'research_only':True}
+        'participants':found,'header':header,'research_only':True,
+            'selection_roster_complete':roster_ok and any(p['is_other'] for p in found)}
 
 
 def parse_points(raw,date,kind,received):
@@ -224,7 +226,7 @@ async def read_points(page,date,kind):
 
 def critical_quotes(context):
     # Odds must be persisted before the frozen tip is calculated.
-    return any(180<=r['seconds_to_off']<=420 for r in context)
+    return any(0<=r['seconds_to_off']<=420 for r in context)
 
 
 async def collect(context,date,venue,clocks,numbers,parent,states,once=False):

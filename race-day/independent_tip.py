@@ -59,6 +59,9 @@ async def notify(number,tip,folder):
         prior=json.loads(marker.read_text())
         if prior.get('status')=='sent':return
     cutoff=dt(tip['cutoff'])
+    if now()>cutoff+timedelta(seconds=90):
+        atomic(marker,{'status':'expired','at':now().isoformat(),'race':number,'reason':'T-3 send deadline exceeded'})
+        return
     while now()<cutoff:await asyncio.sleep(min(1,(cutoff-now()).total_seconds()))
     if not telegram_configured():
         atomic(marker,{'status':'not_configured','at':now().isoformat(),'race':number});return
@@ -67,12 +70,15 @@ async def notify(number,tip,folder):
             await asyncio.to_thread(telegram_send,message(number,tip))
             atomic(marker,{'status':'sent','sent_at':now().isoformat(),'race':number,'cutoff':tip['cutoff'],
                            'send_delay_seconds':round((now()-cutoff).total_seconds(),2),'message':message(number,tip),'legs_status':tip.get('legs_status'),
-                           'cold_status':tip.get('cold_status'),'cold_missing':tip.get('cold_missing',[])})
+                           'cold_status':tip.get('cold_status'),'cold_missing':tip.get('cold_missing',[]),
+                           'cold_group':tip.get('cold_group',[]),'cold_applicable':tip.get('cold_applicable',True),
+                           'cold_received_at':tip.get('cold_received_at'),'telegram_acknowledged':True})
             return
         except Exception as e:
             # Never include request URLs / credentials in logs or public markers.
             atomic(marker,{'status':'retrying','at':now().isoformat(),'race':number,'error_type':type(e).__name__})
             if attempt<2:await asyncio.sleep(2)
+    atomic(marker,{'status':'failed','at':now().isoformat(),'race':number,'reason':'Telegram retries exhausted'})
 
 
 def cold_signal(tip,folder,number,clocks=None,states=None):

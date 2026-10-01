@@ -41,6 +41,11 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m unittest discover -s race-day -p 'test_*.py' -v
+      - name: Check shared cold policy in browser
+        run: |
+          node --check race-day/cold-signal.js
+          node race-day/test_cold_receipt.js
+          node race-day/test_cold_groups.js
       - name: Check Horse103 connectivity and response schema
         env:
           RACE_DATE: ${{ inputs.date }}
@@ -229,3 +234,4 @@ jobs:
           name: hkjc-shadow-late-${{ github.run_id }}
           path: race-day-data/${{ inputs.date }}/hkjc-late/
           retention-days: 7
+

@@ -207,7 +207,7 @@ async def freeze_independent(inputs,folder,number,date,clocks,states):
             atomic(path,signal)
         await notify_independent(number,json.loads(path.read_text()),folder)
         marker=folder/f'race_{number:02d}_independent_notification.json'
-        if marker.exists() and json.loads(marker.read_text()).get('status') in ('sent','not_configured'):
+        if marker.exists() and json.loads(marker.read_text()).get('status') in ('sent','not_configured','expired'):
             return
         await asyncio.sleep(1)
 

@@ -27,6 +27,9 @@ def telegram_send(text):
     request=urllib.request.Request(f'https://api.telegram.org/bot{token}/sendMessage',data=body,method='POST')
     with urllib.request.urlopen(request,timeout=15) as response:
         if response.status!=200:raise RuntimeError(f'Telegram HTTP {response.status}')
+        payload=json.loads(response.read())
+        if payload.get('ok') is not True or not isinstance(payload.get('result',{}).get('message_id'),int):
+            raise RuntimeError('Telegram acknowledgement missing')
     return True
 
 def qp_concentrated(snapshot):

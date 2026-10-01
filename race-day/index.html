@@ -37,7 +37,7 @@ button{cursor:pointer;transition:background .15s,border-color .15s,transform .15
 <p class="muted footer-note">賽日頁約每15秒自動更新；正式派彩以馬會公布為準。</p></main>
 <script src="market-lines.js?v=20260930-golden-legs"></script>
 <script src="challenge.js?v=20260930-trainer-lines"></script>
-<script src="cold-signal.js?v=20261001-cold-history-sync"></script>
+<script src="cold-signal.js?v=20261001-cold-groups-v5"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hkToday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Hong_Kong',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts().map(x=>[x.type,x.value]));return `${p.year}-${p.month}-${p.day}`};
@@ -288,7 +288,7 @@ async function refreshOnce(){
    }
    if(tip.date!==selected||Number(tip.race)!==Number(n)||tip.method!=='independent_hybrid_v1')throw Error('推介日期／場次不符');
    if(tip.status==='ready'&&Date.parse(tip.received_at)>Date.parse(tip.freeze))throw Error('收到時間遲於截止');
-   if(tip.status==='ready')tip=await ColdSignal.update(tip,snapshotBase,d.phase);
+   tip=await ColdSignal.update(tip,snapshotBase,d.phase);
    // Recompute from already-frozen scores only; preserve the published record.
    if(tip.status==='ready'&&!tip.reconstruction){
     const scores=Object.entries(tip.leg_scores||{}).filter(([h,v])=>Number(h)!==Number(tip.banker)&&Number.isFinite(Number(v)));

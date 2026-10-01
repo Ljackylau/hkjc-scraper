@@ -41,7 +41,8 @@ class NewLegsTests(unittest.TestCase):
     def test_priority_window(self):
         self.assertTrue(critical_quotes([{'seconds_to_off':420}]))
         self.assertTrue(critical_quotes([{'seconds_to_off':190}]))
-        self.assertFalse(critical_quotes([{'seconds_to_off':179}]))
+        self.assertTrue(critical_quotes([{'seconds_to_off':179}]))
+        self.assertFalse(critical_quotes([{'seconds_to_off':-1}]))
 
 class CaptureTests(unittest.IsolatedAsyncioTestCase):
     async def test_odds_written_before_points(self):
