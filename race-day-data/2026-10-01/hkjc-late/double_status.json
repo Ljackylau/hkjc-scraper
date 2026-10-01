@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "updated_at": "2026-10-01T16:37:26.572138+08:00",
+  "updated_at": "2026-10-01T16:38:26.595681+08:00",
   "research_only": true,
   "pairs": {
     "6": {
@@ -31,12 +31,13 @@
       "second_race": 9,
       "error": "Double stale source timestamp",
       "target": "2026-10-01T16:41:50+08:00",
-      "last_received": "2026-10-01T16:37:01.179295+08:00"
+      "last_received": "2026-10-01T16:38:20.709197+08:00"
     },
     "9": {
-      "status": "waiting",
+      "status": "retrying",
       "first_race": 9,
-      "second_race": 10
+      "second_race": 10,
+      "error": "Double stale source timestamp"
     },
     "10": {
       "status": "waiting",
