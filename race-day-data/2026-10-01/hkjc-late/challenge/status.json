@@ -5,44 +5,16 @@
   "pools": {
     "jkc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 44,
-      "received_at": "2026-10-01T14:48:38.157273+08:00",
-      "source_updated_at": "2026-10-01T14:40:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 518.2,
+      "samples_this_run": 45,
+      "received_at": "2026-10-01T14:49:38.165246+08:00",
+      "source_updated_at": "2026-10-01T14:49:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 38.2,
       "numeric_quotes": 0,
       "participants": [
         {
           "selection_id": "1",
           "name": "潘頓",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "2",
-          "name": "艾兆禮",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "4",
-          "name": "周俊樂",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -69,8 +41,36 @@
           "normalized_implied_share": null
         },
         {
+          "selection_id": "2",
+          "name": "艾兆禮",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
           "selection_id": "10",
           "name": "巴度",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "4",
+          "name": "周俊樂",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -111,20 +111,6 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "3",
-          "name": "袁幸堯",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
           "selection_id": "6",
           "name": "艾道拿",
           "is_other": false,
@@ -139,8 +125,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "9",
-          "name": "梁家俊",
+          "selection_id": "3",
+          "name": "袁幸堯",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -155,6 +141,20 @@
         {
           "selection_id": "8",
           "name": "田泰安",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "9",
+          "name": "梁家俊",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -215,11 +215,11 @@
     },
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 44,
-      "received_at": "2026-10-01T14:48:38.267177+08:00",
+      "samples_this_run": 45,
+      "received_at": "2026-10-01T14:49:38.320131+08:00",
       "source_updated_at": "2026-10-01T14:40:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 518.3,
+      "source_age_seconds": 578.3,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -532,5 +532,5 @@
     10,
     11
   ],
-  "updated_at": "2026-10-01T14:48:38.997255+08:00"
+  "updated_at": "2026-10-01T14:49:39.155880+08:00"
 }
