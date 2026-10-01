@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "74d54ebe-8b57-41cd-a411-df27dbbd5074",
+    "race_number": 8,
+    "post_time": "16:45",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "A"
+  },
+  "date": "2026-10-01",
+  "expected_lock": "2026-10-01T16:42:00+08:00",
+  "live_received_at": "2026-10-01T16:42:06.196984+08:00",
+  "capture_delay_seconds": 6.2,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-01T08:42:01.149Z",
+    "postTime": "2026-10-01T08:45:00.000Z",
+    "previewTime": "2026-10-01T08:38:00.000Z",
+    "lockTime": "2026-10-01T08:42:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 4,
+        "nameTc": "明德輝煌",
+        "nameEn": "VIRTUS GLORY",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 75,
+        "valueTier": "high",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "天天更好",
+        "nameEn": "BETTER AND BETTER",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 71,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "全能勇士",
+        "nameEn": "ALMIGHTY WARRIOR",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 14,
+        "nameTc": "領航多福",
+        "nameEn": "CASA PRIMO",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 64,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "八玲瓏",
+        "nameEn": "PRIME ACE",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 57,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 11,
+        "nameTc": "閃電奇駿",
+        "nameEn": "SPEEDY POWER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "擅搏",
+        "nameEn": "PRIVATE WEALTH",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 13,
+        "nameTc": "花果猴王",
+        "nameEn": "MONTA FRUTTA",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 1,
+      "nameTc": "全能勇士",
+      "nameEn": "ALMIGHTY WARRIOR",
+      "confidence": "high",
+      "reason": "全能勇士上仗大勝姿態強勁，今仗雖負重磅兼排外檔，但潘頓季初成績大勇，馬匹操練及試閘俱佳，有力克服不利因素。",
+      "previewHorseNumber": null
+    }
+  }
+}
