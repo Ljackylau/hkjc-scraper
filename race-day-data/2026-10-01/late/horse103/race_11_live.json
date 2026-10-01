@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "3cd7ae12-af4d-48e8-aecf-5ff84cd0d7f3",
+    "race_number": 11,
+    "post_time": "18:20",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "A"
+  },
+  "date": "2026-10-01",
+  "expected_lock": "2026-10-01T18:17:00+08:00",
+  "live_received_at": "2026-10-01T18:17:07.254879+08:00",
+  "capture_delay_seconds": 7.25,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-01T10:17:01.686Z",
+    "postTime": "2026-10-01T10:20:00.000Z",
+    "previewTime": "2026-10-01T10:13:00.000Z",
+    "lockTime": "2026-10-01T10:17:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 10,
+        "nameTc": "利高八斗",
+        "nameEn": "LUCRATIVE EIGHT",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 72,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "金金小子",
+        "nameEn": "SUPER STRONG KID",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 70,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "超和平",
+        "nameEn": "ABSOLUTE HEART",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "辣得準",
+        "nameEn": "SPICY STANDARD",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "勇者為皇",
+        "nameEn": "MAJESTIC VALOUR",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 53,
+        "valueTier": "low",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 1,
+        "nameTc": "偵探傳奇",
+        "nameEn": "PI LEGEND",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "神衝萬里",
+        "nameEn": "GLORYSPEED",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "㩒住贏",
+        "nameEn": "EFFORTLESS WIN",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 9,
+        "nameTc": "星運少爵",
+        "nameEn": "THE HEIR"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 6,
+      "nameTc": "超和平",
+      "nameEn": "ABSOLUTE HEART",
+      "confidence": "high",
+      "reason": "「超和平」檔位極佳，預計領放有利，上季兩勝同程姿態輕鬆，操練積極，狀態勇銳。",
+      "previewHorseNumber": null
+    }
+  }
+}

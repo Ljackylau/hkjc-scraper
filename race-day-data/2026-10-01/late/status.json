@@ -1,7 +1,7 @@
 {
   "date": "2026-10-01",
   "phase": "late",
-  "updated_at": "2026-10-01T18:16:42.193792+08:00",
+  "updated_at": "2026-10-01T18:17:44.051382+08:00",
   "state": "running",
   "horse103": {
     "6": {
@@ -1319,8 +1319,80 @@
       }
     },
     "11": {
-      "status": "waiting",
-      "target": "2026-10-01T18:17:00+08:00"
+      "status": "saved",
+      "target": "2026-10-01T18:17:00+08:00",
+      "delay_seconds": 7.25,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 6,
+          "name_tc": "超和平",
+          "name_en": "ABSOLUTE HEART",
+          "formula_score": 0.75317,
+          "live_value_index": 68.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 3474000.0,
+          "q_amount": 3144000.0
+        },
+        {
+          "horse_number": 8,
+          "name_tc": "辣得準",
+          "name_en": "SPICY STANDARD",
+          "formula_score": 0.69881,
+          "live_value_index": 66.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 3407000.0,
+          "q_amount": 2422000.0
+        },
+        {
+          "horse_number": 10,
+          "name_tc": "利高八斗",
+          "name_en": "LUCRATIVE EIGHT",
+          "formula_score": 0.64699,
+          "live_value_index": 72.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2333000.0,
+          "q_amount": 1800000.0
+        },
+        {
+          "horse_number": 4,
+          "name_tc": "金金小子",
+          "name_en": "SUPER STRONG KID",
+          "formula_score": 0.62164,
+          "live_value_index": 70.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2138000.0,
+          "q_amount": 1735000.0
+        },
+        {
+          "horse_number": 11,
+          "name_tc": "勇者為皇",
+          "name_en": "MAJESTIC VALOUR",
+          "formula_score": 0.43008,
+          "live_value_index": 53.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1286000.0,
+          "q_amount": 873000.0
+        }
+      ],
+      "original": [
+        10,
+        4,
+        6,
+        8,
+        11
+      ]
     }
   },
   "results": {
