@@ -48,7 +48,7 @@ def cold_text(tip):
     if tip.get('cold_status')!='ready':return '無法判定：'+tip.get('cold_reason','缺有效報價')
     value='、'.join(f'{h}號' for h in tip.get('cold',[])) or '無'
     age=tip.get('cold_quote_age_seconds',0)
-    return value+(f'（報價較舊：{round(age)}秒）' if age>120 else '')
+    return value+(f'（報價發布距今：{round(age)}秒）' if age>120 else '')
 
 
 async def notify(number,tip,folder):
@@ -73,48 +73,15 @@ async def notify(number,tip,folder):
 
 
 def cold_signal(tip,folder,number,clocks=None,states=None):
-    tip['cold']=[];tip['cold_status']='unavailable';tip['cold_policy']='post_previous_off_max600_v2'
-    if number==1:
-        tip['cold_status']='ready';return
-    path=folder/'challenge'/f'race_{number:02d}_tnc_signal.json'
+    from cold_policy import calculate, POLICY
+    tip.update(cold=[],cold_status='unavailable',cold_policy=POLICY)
     try:
+        history_path=folder/'challenge'/'tnc.jsonl'
+        rows=[json.loads(line) for line in history_path.read_text().splitlines() if line.strip()] if history_path.exists() else []
         if clocks:
-            from challenge_shadow import market_drop_signal,race_context
-            history_path=folder/'challenge'/'tnc.jsonl'
-            if not history_path.exists():return
-            freeze=dt(tip['freeze'])
-            history=[json.loads(line) for line in history_path.read_text().splitlines() if line.strip()]
-            history=[s for s in history if dt(s['received_at'])<=freeze and s.get('state')=='observed' and s.get('source_updated_at')]
-            context=race_context(tip['date'],clocks,states or {},freeze)
-            race=next(r for r in context if r['race_number']==number);previous=next(r for r in context if r['race_number']==number-1)
-            previous_off=dt(previous['post_time'])
-            post=[s for s in history if previous_off<dt(s['source_updated_at'])<=dt(s['received_at'])]
-            if not post:
-                tip['cold_reason']='上一場後未有更新報價';return
-            newest=max(post,key=lambda s:dt(s['source_updated_at']))
-            age=round((freeze-dt(newest['source_updated_at'])).total_seconds())
-            if age>600:
-                tip['cold_reason']=f'練王報價已舊{age}秒；上限600秒';return
-            current=[s for s in history if previous_off<dt(s['source_updated_at'])<=dt(s['received_at']) and 0<=(freeze-dt(s['source_updated_at'])).total_seconds()<=600]
-            if not current:return
-            sample=max(current,key=lambda s:(dt(s['source_updated_at']),dt(s['received_at'])))
-            usable=[s for s in history if dt(s['received_at'])<=previous_off or dt(s['source_updated_at'])>previous_off]
-            usable=[s for s in usable if dt(s['source_updated_at'])>previous_off or 0<=(previous_off-dt(s['source_updated_at'])).total_seconds()<=600]
-            signal=market_drop_signal(usable,sample,race,context)
-            tip['cold_received_at']=sample['received_at']
-            tip['cold_source_updated_at']=sample['source_updated_at']
-            tip['cold_quote_age_seconds']=(freeze-dt(sample['source_updated_at'])).total_seconds()
-        elif path.exists():
-            signal=json.loads(path.read_text());stamp=signal.get('t3_received_at') or signal.get('received_at') or signal.get('at')
-            if not stamp or dt(stamp)>dt(tip['freeze']):return
-            source=signal.get('t3_source_updated_at');baseline=signal.get('baseline_source_updated_at')
-            if not source or not baseline or not 0<=(dt(tip['freeze'])-dt(source)).total_seconds()<=600:return
-            tip['cold_source_updated_at']=source;tip['cold_quote_age_seconds']=(dt(tip['freeze'])-dt(source)).total_seconds()
-        else:return
-        if signal.get('status')!='observed':
-            tip['cold_reason']='缺上一場開跑前的有效比較報價';return
-        trainers={''.join(str(r['name']).split()) for r in signal.get('qualifying',[])}
-        mapping={int(r[0]):''.join(str(r[6]).split()) for r in tip.get('runner_rows',[])}
-        tip['cold']=[h for h in tip.get('market',[])[:5] if mapping.get(h) in trainers]
-        tip['cold_status']='ready'
-    except (ValueError,KeyError,TypeError):pass
+            from challenge_shadow import race_context
+            context=race_context(tip['date'],clocks,states or {},dt(tip['freeze']))
+            rows=[{**r,'race_context':context} for r in rows]
+        tip.update(calculate(tip,rows))
+    except (ValueError,KeyError,TypeError,OSError):
+        tip['cold_reason']='練王歷史資料讀取失敗'

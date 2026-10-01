@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict'),{calculate,text}=require('./cold-signal.js');
+const tip={race:2,freeze:'2026-10-01T13:26:50+08:00',market:[13],runner_rows:[['13','','','','','','Trainer']]};
+const sample=(stamp,received,odds,state='observed')=>({state,source_updated_at:`2026-10-01T${stamp}+08:00`,received_at:`2026-10-01T${received}+08:00`,participants:[{name:'Trainer',selection_id:'1',current_odds:odds}],race_context:[{race_number:1,post_time:'2026-10-01T13:00:00+08:00'}]});
+const base=sample('12:40:00','12:59:20',100),end=sample('13:10:00','13:26:40',80);
+const ready=calculate(tip,[base,end]);assert.deepEqual(ready.cold,[13]);assert.equal(ready.cold_quote_age_seconds,1010);assert.equal(ready.cold_receipt_age_seconds,10);assert.match(text(ready),/1010秒/);
+assert.equal(calculate(tip,[base,end,sample('13:26:00','13:26:51',20)]).cold[0],13);
+assert.equal(calculate(tip,[base,sample('13:10:00','13:24:00',80)]).cold_status,'unavailable');
+assert.equal(calculate(tip,[base,sample('12:59:00','13:26:40',80)]).cold_status,'unavailable');
+assert.equal(calculate(tip,[sample('12:40:00','13:00:01',100),end]).cold_status,'unavailable');
+assert.equal(calculate(tip,[base,end,sample('13:10:00','13:26:45',80,'suspended_or_closed')]).cold_status,'unavailable');
+const mismatch=structuredClone(end);mismatch.participants[0].selection_id='2';assert.equal(calculate(tip,[base,mismatch]).cold_status,'unavailable');
+const missing=structuredClone(end);missing.participants[0].current_odds=null;assert.equal(calculate(tip,[base,missing]).cold_status,'unavailable');
+assert.deepEqual(calculate(tip,[base,sample('13:10:00','13:26:40',90)]).cold,[]);
+console.log('9 trainer receipt-policy checks passed');

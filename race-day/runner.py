@@ -84,7 +84,7 @@ def format_tip_message(number,snapshot,market=None,cold=None,positions=None,resu
     independent=snapshot.get('independent_tip',{})
     if independent.get('cold_status')=='unavailable':cold_text='無法判定：'+independent.get('cold_reason','缺有效報價')
     elif independent.get('cold_quote_age_seconds',0)>120:
-        cold_text+=f'（報價較舊：{round(independent["cold_quote_age_seconds"])}秒）'
+        cold_text+=f'（報價發布距今：{round(independent["cold_quote_age_seconds"])}秒）'
     title=f'🏁 R{number}｜正式賽果更新' if result else f'🏇 R{number}'
     return (title+'\n'
             f'獨贏&位置信心馬：{confidence_horses}\n'
