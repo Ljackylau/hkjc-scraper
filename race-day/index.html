@@ -32,12 +32,13 @@ button{cursor:pointer;transition:background .15s,border-color .15s,transform .15
 <section id="hkjc" class="tab-panel" hidden><h2>市場觀察</h2><p class="section-intro">HKJC 馬匹賠率變化與練馬師王逐場觀察；位置及位置Q份額變化只在 B 條件成立時換主膽。</p><div class="market-switch"><button id="marketOdds" class="active">馬匹市場</button><button id="marketChallenge">練馬師王</button></div><div id="hkjcCards" class="races"></div><div id="challenge" hidden><h3>每場 T−7 至 T−3 練馬師王走勢</h3>
 <p class="section-intro">只用 T−7 至 T−3 已收到的賠率；折線顯示相對區間起點的縮短百分比。只列末段賠率縮短的練馬師，來源偏舊會標明。</p><div class="history-tools"><label for="trainerRaceSelect">場次</label><select id="trainerRaceSelect"><option value="all">全部場次</option></select></div><div id="trainerRaceCards" class="races" style="grid-template-columns:1fr"><p class="muted">正在載入練馬師王逐場紀錄…</p></div>
 <details id="latestChallenge" class="utility"><summary>最後一次練馬師王報價</summary><p class="muted">賽日結束後報價可能已截止；逐場 T−3 紀錄請看上方。</p><div id="challengeCards" class="races"><p class="muted">正在檢查研究紀錄…</p></div></details></div></section>
-<section id="history" class="tab-panel" hidden><h2>推介及正式賽果</h2><p class="section-intro">賽前記錄保留原樣；派彩金額按馬會公布單位顯示。缺少舊紀錄會標明未有紀錄。</p><div class="history-tools"><label for="historyDate">賽日</label><select id="historyDate"><option value="all">全部日期</option></select><span id="historyCount" class="muted"></span></div><div id="historyRows" class="history-list"><p class="muted">正在載入…</p></div></section>
-<section id="system" class="tab-panel" hidden><h2>系統與資料狀態</h2><p class="section-intro">賽日啟動一次 Runner，系統會自動收集、通知及翌日覆核正式派彩。</p><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止 Race Day Runner ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-settlement.yml" target="_blank" rel="noopener">查看正式賽果覆核 ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載歷史備份 ↗</a><p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉網站不會停止收集。</p><details class="info"><summary>公式及訊號說明</summary><p class="muted">2026-10-01 起：新膽只用 HKJC 賽前數據。長窗分數＝35% 獨贏縮短＋25% 位置縮短＋20% 連贏組合縮短＋20% 位置Q組合縮短；長窗不足時用位置／獨贏／位置Q支持份額及增長排名。T−3 前10秒截止。拖腳保留市場排名及金色腳規則，只剔除新膽，不剔除 Horse103 舊膽。缺有效數據不出膽；舊賽日保留原推介。分數不是概率。</p></details></section>
+<section id="history" class="tab-panel" hidden><h2>推介及正式賽果</h2><p class="section-intro">賽前資料及原發送記錄可追溯；後續重算會標明，派彩金額按馬會公布單位顯示。缺少舊紀錄會標明未有紀錄。</p><div class="history-tools"><label for="historyDate">賽日</label><select id="historyDate"><option value="all">全部日期</option></select><span id="historyCount" class="muted"></span></div><div id="historyRows" class="history-list"><p class="muted">正在載入…</p></div></section>
+<section id="system" class="tab-panel" hidden><h2>系統與資料狀態</h2><p class="section-intro">賽日啟動一次 Runner，系統會自動收集、通知及翌日覆核正式派彩。</p><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止 Race Day Runner ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-settlement.yml" target="_blank" rel="noopener">查看正式賽果覆核 ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載歷史備份 ↗</a><p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉網站不會停止收集。</p><details class="info"><summary>公式及訊號說明</summary><p class="muted">2026-10-01 起：新膽只用 HKJC 賽前數據。長窗分數＝35% 獨贏縮短＋25% 位置縮短＋20% 連贏組合縮短＋20% 位置Q組合縮短；長窗不足時用位置／獨贏／位置Q支持份額及增長排名。T−3 前10秒截止。拖腳＝F最高兩匹＋主膽位置Q賠率最低兩組對應馬；排除主膽及重複馬，順延補足四腳。不剔除 Horse103 舊膽。缺有效數據不出膽；舊賽日保留原推介。分數不是概率。</p></details></section>
 <p class="muted footer-note">賽日頁約每15秒自動更新；正式派彩以馬會公布為準。</p></main>
 <script src="market-lines.js?v=20260930-golden-legs"></script>
 <script src="challenge.js?v=20260930-trainer-lines"></script>
 <script src="cold-signal.js?v=20261001-cold-exclude-banker-v6"></script>
+<script src="leg-selection.js?v=20261001-f2-qp2"></script>
 <script>
 const $=id=>document.getElementById(id);
 const hkToday=()=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Hong_Kong',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts().map(x=>[x.type,x.value]));return `${p.year}-${p.month}-${p.day}`};
@@ -92,7 +93,7 @@ function historyView(){
   const picks=[row.banker,...(row.additional_picks||[])].filter(x=>x!=null).map(x=>horse(x,positions)).join('、')||'未有紀錄';
   const legs=row.legs===null||row.legs===undefined?'未有紀錄':row.legs.length?row.legs.map(x=>horse(x,positions)).join('、'):'無';
   const cold=row.independent_tip?ColdSignal.text(row.independent_tip,x=>horse(x,positions)):row.cold===null||row.cold===undefined?'未有紀錄':row.cold.length?row.cold.map(x=>horse(x,positions)).join('、'):'無';
-  const coldNote=row.cold_source==='archived_preoff_reconstruction'?'（依保存的賽前來源重建）':'';
+  const coldNote=['archived_preoff_reconstruction','archived_pre_t3_reconstruction'].includes(row.cold_source)?'（依保存的賽前來源重建）':'';
   const methodNote=row.independent_tip?'新方法（HKJC 獨立揀膽）':row.method_b?.status==='switched'?`B 換膽（原 ${esc(row.method_b.original_banker)} 號）`:'';
   const pools=row.dividends||{};
   const payout=Object.entries(payoutNames).map(([pool,title])=>pools[pool]?.length?`<div class="dividend-item"><b>${title}</b>${pools[pool].map(x=>`<span>${esc(x.combination)}　HK$${esc(Number(x.dividend_hkd).toLocaleString('en-HK',{minimumFractionDigits:2}))}</span>`).join('<br>')}</div>`:'').join('');
@@ -118,7 +119,8 @@ async function refreshHistory(){
   await Promise.all(historyRows.map(async row=>{
    if(!row.independent_tip||row.date<'2026-10-01')return;
    const original=row.independent_tip,tip=await ColdSignal.update(original,`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${dataRef}/race-day-data/${row.date}`,'all');
-   row.independent_tip=tip;
+   const updated=HybridLegs.update(tip);row.independent_tip=updated;
+   row.legs=updated.legs;
    if(tip.cold_policy!==original.cold_policy){row.cold=tip.cold_status==='ready'?tip.cold:null;row.cold_source='archived_preoff_reconstruction'}
   }));
   const chosen=$('historyDate').value,dates=[...new Set(historyRows.map(row=>row.date))];
@@ -189,7 +191,7 @@ function effectiveMain(s){
 }
 function bNote(s){
  if(s.independent_tip?.reconstruction)return '賽前資料重算；未於T−3發送。'+(s.independent_tip.t10_note||'');
- if(s.independent_tip)return s.independent_tip.status==='ready'?`新方法：${s.independent_tip.banker_source}；HKJC 收取 ${s.independent_tip.received_at}；T−3 前10秒截止。拖腳：40%位置份額＋20%獨贏份額＋20%位置Q份額＋20%份額增長，各項同場百分位；排除主膽取前4。${s.independent_tip.legs_recomputed?'（依已保存賽前分數重算；歷史發送記錄不變）':''}`:`新方法資料不足：${s.independent_tip.reason}`;
+ if(s.independent_tip)return s.independent_tip.status==='ready'?`新方法：${s.independent_tip.banker_source}；HKJC 收取 ${s.independent_tip.received_at}；T−3 前10秒截止。拖腳：F最高兩匹＋主膽位置Q賠率最低兩組對應馬；排除主膽及重複馬，順延補足四腳。F＝40%位置份額＋20%獨贏份額＋20%位置Q份額＋20%份額增長，各項同場百分位。${s.independent_tip.legs_recomputed?'（依已保存賽前分數重算；歷史發送記錄不變）':''}`:`新方法資料不足：${s.independent_tip.reason}`;
  if(s.method_b?.status==='switched')return `B 換膽：原 ${s.method_b.original_banker} 號，獨贏 ${s.method_b.original_win?.join('→')}、位置 ${s.method_b.original_place?.join('→')}；改選 ${s.method_b.banker} 號。`;
  if(s.method_b?.status==='kept')return `B 保留原膽：${s.method_b.reason||'條件未達'}。`;
  return '';
@@ -289,12 +291,8 @@ async function refreshOnce(){
    if(tip.date!==selected||Number(tip.race)!==Number(n)||tip.method!=='independent_hybrid_v1')throw Error('推介日期／場次不符');
    if(tip.status==='ready'&&Date.parse(tip.received_at)>Date.parse(tip.freeze))throw Error('收到時間遲於截止');
    tip=await ColdSignal.update(tip,snapshotBase,d.phase);
-   // Recompute from already-frozen scores only; preserve the published record.
-   if(tip.status==='ready'&&!tip.reconstruction){
-    const scores=Object.entries(tip.leg_scores||{}).filter(([h,v])=>Number(h)!==Number(tip.banker)&&Number.isFinite(Number(v)));
-    const next=scores.sort((a,b)=>Number(b[1])-Number(a[1])||Number(a[0])-Number(b[0])).slice(0,4).map(([h])=>Number(h));
-    tip={...tip,published_legs:tip.legs,legs:next,golden:(tip.golden||[]).filter(h=>next.includes(Number(h))),legs_status:next.length?'ready':'unavailable',legs_reason:next.length?'':'缺有效T−10份額基準，無法計算新腳',legs_method:'relative_support_f_v1',legs_recomputed:tip.legs_method!=='relative_support_f_v1'};
-   }
+   // Use saved pre-deadline F scores and banker QP prices only.
+   if(tip.status==='ready')tip=HybridLegs.update(tip);
    s.independent_tip=tip;s.status=tip.status==='ready'?'saved':'unavailable';s.picks=tip.status==='ready'?[{horse_number:tip.banker}]:[];s.qpConfidence=null;
    s.reason=tip.status==='ready'?'':tip.reason;s.target=tip.cutoff;s.delay_seconds=null;
   }catch(e){s.status='waiting';s.picks=[];s.reason='新方法暫未載入：'+e.message}
@@ -325,7 +323,7 @@ async function refreshOnce(){
  const cold=s.independent_tip?ColdSignal.text(s.independent_tip,x=>annotatedHorse(x,s.resultPositions)):(s.market?.cold||[]).map(x=>annotatedHorse(x,s.resultPositions)).join('、')||'無';
  const state=s.independent_tip?.reconstruction?'賽前資料重算':s.status==='saved'?(d.results?.[n]?.status==='saved'?'已完賽':'T−3 已鎖定'):(labels[s.status]||s.status);
  const stateKind=s.status==='saved'?'':s.status==='waiting'?'waiting':'error';
- cards.push({n:+n,html:`<div class="card" data-race="${esc(n)}"><div class="card-head"><h2>R${esc(n)}</h2><span class="status-chip ${stateKind}">${esc(state)}</span></div>${horses?`<p class="signal-label">獨贏及位置信心馬</p><div class="signal-pick">${horses}${s.independent_tip?'<span class="status-chip">'+(s.independent_tip?.reconstruction?'賽前資料重算；未於T−3發送':'新方法')+'</span>':''}${s.qpConfidence?.qualified&&s.method_b?.status!=='switched'?'<span class="status-chip">QP 集中</span>':''}${s.method_b?.status==='switched'?'<span class="status-chip">B 換膽</span>':''}</div><p class="signal-line"><span class="signal-label">連贏／位置Q 拖腳</span><br>${legs}${s.market?.golden?.length?'<small class="muted">金色：T−7 至 T−3 無回調＋最新分數 ≥20；新腳按份額及增長分數排列。</small>':''}</p><p class="signal-line"><span class="signal-label">留意冷馬</span><br>${cold}</p>`:`<p class="signal-line">${esc(s.reason||s.error||state)}</p>`}<button class="copy-race" data-copy-race="${esc(n)}">複製本場推介</button><details><summary>詳細資料及原始快照</summary>${s.target?`<p class="muted">T−3 目標 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${picks.length?`<p>原主膽 ${esc(text[0])}</p>${bNote(s)?`<p class="muted">${esc(bNote(s))}</p>`:''}<p>其餘 ${esc(text.slice(1).join('、'))}</p><p class="muted">原解碼順序 ${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<p class="bad">${esc(s.error||s.reason||'')}</p>${s.status==='saved'?`<a href="${base()}/${s.independent_tip?'hkjc-'+d.phase:d.phase}/${s.independent_tip?'race_'+String(n).padStart(2,'0')+(s.independent_tip?.reconstruction?'_independent_recovered.json':'_independent.json'):'horse103/race_'+String(n).padStart(2,'0')+'.json'}" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</details></div>`});
+ cards.push({n:+n,html:`<div class="card" data-race="${esc(n)}"><div class="card-head"><h2>R${esc(n)}</h2><span class="status-chip ${stateKind}">${esc(state)}</span></div>${horses?`<p class="signal-label">獨贏及位置信心馬</p><div class="signal-pick">${horses}${s.independent_tip?'<span class="status-chip">'+(s.independent_tip?.reconstruction?'賽前資料重算；未於T−3發送':'新方法')+'</span>':''}${s.qpConfidence?.qualified&&s.method_b?.status!=='switched'?'<span class="status-chip">QP 集中</span>':''}${s.method_b?.status==='switched'?'<span class="status-chip">B 換膽</span>':''}</div><p class="signal-line"><span class="signal-label">連贏／位置Q 拖腳</span><br>${legs}${s.market?.golden?.length?'<small class="muted">金色：T−7 至 T−3 無回調＋最新分數 ≥20；四腳依F頭兩匹及主膽QP配搭排序。</small>':''}</p><p class="signal-line"><span class="signal-label">留意冷馬</span><br>${cold}</p>`:`<p class="signal-line">${esc(s.reason||s.error||state)}</p>`}<button class="copy-race" data-copy-race="${esc(n)}">複製本場推介</button><details><summary>詳細資料及原始快照</summary>${s.target?`<p class="muted">T−3 目標 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${picks.length?`<p>原主膽 ${esc(text[0])}</p>${bNote(s)?`<p class="muted">${esc(bNote(s))}</p>`:''}<p>其餘 ${esc(text.slice(1).join('、'))}</p><p class="muted">原解碼順序 ${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<p class="bad">${esc(s.error||s.reason||'')}</p>${s.status==='saved'?`<a href="${base()}/${s.independent_tip?'hkjc-'+d.phase:d.phase}/${s.independent_tip?'race_'+String(n).padStart(2,'0')+(s.independent_tip?.reconstruction?'_independent_recovered.json':'_independent.json'):'horse103/race_'+String(n).padStart(2,'0')+'.json'}" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</details></div>`});
  }
  cards.sort((a,b)=>a.n-b.n);
  $('cards').innerHTML=cards.map(c=>c.html).join('')||'<p>未有已啟動紀錄。請先在 GitHub 執行 Preflight；賽日執行 Run。</p>';
@@ -363,3 +361,4 @@ $('load').onclick=()=>{selected=$('date').value;dataRef='';refChecked=0;fallback
 addEventListener('resize',()=>setRace(selectedRace));
 selectTab(activeTab);refresh();refreshChallenges();setInterval(()=>{if(!document.hidden){refresh();refreshChallenges();if(activeTab==='history'){historyLoadedRef='';refreshHistory()}}},15000);
 </script></html>
+

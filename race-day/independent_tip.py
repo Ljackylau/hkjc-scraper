@@ -25,14 +25,14 @@ def prepare(samples,off,date,number,baseline=None,golden=None):
         market=[r['horse_number'] for r in movement(baseline,ends[-1])[:5]] if baseline else []
         gold=list(golden or [])
         scores=decision.get('leg_scores') or {}
-        legs=[int(h) for h in sorted(scores,key=lambda h:(-float(scores[h]),int(h))) if int(h)!=decision['banker']][:4]
+        from leg_selection import select
+        selection=select(decision['banker'],scores,ends[-1]['odds']['QPL'])
+        legs=selection['legs']
         rows=ends[-1].get('runner_rows',[])
         return {**common,**decision,'date':date,'race':number,'off':off.isoformat(),
                 'status':'ready','legs':legs,'market':list(dict.fromkeys(gold+market)),
                 'golden':[h for h in gold if h in legs],
-                'legs_method':'relative_support_f_v1',
-                'legs_reason':'' if legs else '缺有效T−10份額基準，無法計算新腳',
-                'legs_status':'ready' if legs else 'unavailable',
+                **selection,
                 'baseline_received_at':bases[-1]['received_at'] if bases else None,
                 'long_baseline_received_at':baseline.get('received_at') if baseline else None,
                 'runner_rows':rows,'source_updated':ends[-1]['source_updated']}
@@ -94,4 +94,5 @@ def cold_signal(tip,folder,number,clocks=None,states=None):
         tip.update(calculate(tip,rows))
     except (ValueError,KeyError,TypeError,OSError):
         tip['cold_reason']='練王歷史資料讀取失敗'
+
 

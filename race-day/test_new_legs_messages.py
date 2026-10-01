@@ -8,13 +8,14 @@ from runner import format_tip_message,now
 from challenge_shadow import collect,critical_quotes
 
 class NewLegsTests(unittest.TestCase):
-    def test_f_scores_top_four_excluding_banker(self):
+    def test_f_two_plus_two_banker_qp_excluding_duplicates(self):
         off,samples=test_independent_tip.TipTests().fixture()
         tip=prepare(samples,off,'2026-10-01',1,samples[0],golden=[6])
-        expected=[int(h) for h in sorted(tip['leg_scores'],key=lambda h:(-tip['leg_scores'][h],int(h))) if int(h)!=tip['banker']][:4]
+        from leg_selection import select
+        expected=select(tip['banker'],tip['leg_scores'],samples[-1]['odds']['QPL'])['legs']
         self.assertEqual(tip['legs'],expected)
         self.assertEqual(len(tip['legs']),4)
-        self.assertEqual(tip['legs_method'],'relative_support_f_v1')
+        self.assertEqual(tip['legs_method'],'f2_banker_qp2_v1')
     def test_long_only_cannot_invent_f_legs(self):
         off,samples=test_independent_tip.TipTests().fixture()
         tip=prepare([samples[-1]],off,'2026-10-01',1,samples[0])
@@ -82,3 +83,4 @@ class DeadlineTests(unittest.IsolatedAsyncioTestCase):
                 await hkjc_shadow.freeze_independent(lambda:(off,samples,samples[0]),folder,1,'2026-10-01',['13:00'],{})
             self.assertEqual(sent.call_count,1)
             self.assertTrue((folder/'race_01_independent.json').exists())
+
