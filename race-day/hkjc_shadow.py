@@ -216,6 +216,9 @@ async def freeze_independent(inputs,folder,number,date,clocks,states,cold_inputs
                 atomic(folder/f'race_{number:02d}_cold_v2.json',{'date':date,'race':number,
                        'generated_at':now().isoformat(),'signal':{k:v for k,v in signal.items() if k.startswith('cold')},**audit})
             else:cold_signal(signal,folder,number,clocks,states)
+            from leg_fusion import apply as fuse_legs, APPLY_FROM as LEGS_FROM
+            if date >= LEGS_FROM:
+                signal = fuse_legs(signal)
             signal['generated_at']=now().isoformat()
             atomic(path,signal)
         if frozen_tips is not None:frozen_tips[str(number)]=json.loads(path.read_text())

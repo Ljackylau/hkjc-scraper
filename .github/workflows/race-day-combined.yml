@@ -49,6 +49,8 @@ jobs:
           node race-day/test_cold_groups.js
           node --check race-day/live-tips.js
           node race-day/test_live_tips.js
+          node --check race-day/leg-selection.js
+          node race-day/test_leg_fusion.js
           python - <<'PY'
           from pathlib import Path
           import re, subprocess

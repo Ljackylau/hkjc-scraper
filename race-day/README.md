@@ -40,3 +40,5 @@ Official settlement now waits for the HKJC result **and complete W/P/Q/QP divide
 `python -m unittest discover -s race-day -p 'test_*.py' -v`
 
 Preflight validates startup schedule access and pure logic. It does not prove HKJC market availability from hosted runners on race day, nor guarantee service uptime. Before relying on the copy, inspect one real snapshot and keep the original ready as backup.
+
+From 2026-10-02, frozen four-leg cold fusion is applied after cold v2 preparation. Keep the first three original legs; a distinct cold runner with cutoff WIN >10 and <=30 may replace only the fourth. Missing cold data preserves the original four. See [LEG_FUSION.md](LEG_FUSION.md) for the fixed rule, audit fields and retrospective limits.

@@ -101,11 +101,13 @@ def format_tip_message(number,snapshot,market=None,cold=None,positions=None,resu
                     confidence_horses+=f'；{h}號{payout_label}派彩 {odds}倍（每$10派${amount:g}）'
                     break
     if independent.get('legs_status')=='unavailable':legs='資料未就緒：'+independent.get('legs_reason','缺有效基準')
+    from leg_fusion import note as leg_note
+    selection_note=leg_note(independent,lambda h:annotated(h,positions))
     title=f'🏁 R{number}｜正式賽果更新' if result else f'🏇 R{number}'
     return (title+'\n'
             f'獨贏&位置信心馬：{confidence_horses}\n'
             f'連贏位置Q：{annotated(main,positions)} 拖 {legs}\n'
-            f'最有可能爆冷馬：{cold_text}')
+            f'最有可能爆冷馬：{cold_text}'+(f'\n選腳：{selection_note}' if selection_note else ''))
 
 def parse_result_html(body):
     match=re.search(r'<div[^>]*class="[^"]*performance[^"]*"[^>]*>.*?<tbody[^>]*>(.*?)</tbody>',body,re.I|re.S)
@@ -560,4 +562,3 @@ if __name__=='__main__':
             with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('release='+release.isoformat()+'\n')
         print(json.dumps(c,ensure_ascii=False,indent=2))
     else:asyncio.run(run(a))
-
