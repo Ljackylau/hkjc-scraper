@@ -42,6 +42,7 @@
   return {...answer,cold_status:known?'ready':'unavailable',cold,cold_group:groups,cold_excluded:excluded,cold_changes:changes,cold_partial:!!missing.length,cold_missing:missing,cold_compared:compared,...(!known?{cold_reason:'市場頭5全部缺可比較練王報價'}:{}),cold_source_updated_at:latest.source_updated_at,cold_received_at:latest.received_at,cold_quote_age_seconds:(freeze-source)/1000,cold_receipt_age_seconds:Math.round((freeze-Date.parse(latest.received_at))/10)/100,cold_baseline_source_updated_at:baseline.source_updated_at,cold_baseline_received_at:baseline.received_at};
  }
  async function update(tip,base,phase){
+  if(tip.cold_policy==='cold_top2_priority_v2_exploratory_2026-10-02')return tip;
   if(tip.cold_policy===policy)return tip;
   const key=[tip.date,tip.race,tip.freeze].join('/');if(cache.has(key))return {...tip,...cache.get(key)};
   try{
@@ -54,6 +55,11 @@
   }catch(e){return {...tip,cold_status:'unavailable',cold_reason:'練王歷史資料讀取失敗，稍後自動重試'}}
  }
  function text(tip,horse=n=>`${n}號`){
+  if(tip.cold_policy==='cold_top2_priority_v2_exploratory_2026-10-02'){
+   if(tip.cold_status!=='ready')return '資料不足：'+(tip.cold_reason||'等待有效賽前快照');
+   const selected=tip.cold||[];if(!selected.length)return '無WIN>10候選';
+   return selected.map(horse).join('、')+(tip.cold_branch_label?'（'+tip.cold_branch_label+'）':'')+(tip.cold_partial?'；部分資料不足':'');
+  }
   if(tip.cold_applicable===false)return tip.cold_note;
   const missing=(tip.cold_missing||[]).map(r=>`${r.horse}號`).join('、');
   if(tip.cold_status!=='ready')return `無法判定：${tip.cold_reason||'缺有效報價'}`+(missing?`（資料不足：${missing}）`:'');

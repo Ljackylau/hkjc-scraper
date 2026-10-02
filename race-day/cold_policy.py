@@ -75,6 +75,13 @@ def calculate(tip,rows):
             'cold_receipt_age_seconds':round((freeze-stamp(latest['received_at'])).total_seconds(),3),'cold_baseline_source_updated_at':bs,'cold_baseline_received_at':baseline['received_at']}
 
 def format_cold(tip,horse=lambda n:f'{n}號'):
+    if tip.get('cold_policy')=='cold_top2_priority_v2_exploratory_2026-10-02':
+        if tip.get('cold_status')!='ready':return '資料不足：'+tip.get('cold_reason','等待有效賽前快照')
+        selected=tip.get('cold',[])
+        if not selected:return '無WIN>10候選'
+        value='、'.join(horse(n) for n in selected)
+        label=tip.get('cold_branch_label','')
+        return value+(f'（{label}）' if label else '')+('；部分資料不足' if tip.get('cold_partial') else '')
     if tip.get('cold_applicable') is False:return tip['cold_note']
     missing='、'.join(f'{r["horse"]}號' for r in tip.get('cold_missing',[]))
     if tip.get('cold_status')!='ready':return '無法判定：'+tip.get('cold_reason','缺有效報價')+(f'（資料不足：{missing}）' if missing else '')

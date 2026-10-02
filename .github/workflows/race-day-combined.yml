@@ -40,12 +40,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - run: pip install 'lxml>=5,<7'
       - run: python -m unittest discover -s race-day -p 'test_*.py' -v
       - name: Check shared cold policy in browser
         run: |
           node --check race-day/cold-signal.js
           node race-day/test_cold_receipt.js
           node race-day/test_cold_groups.js
+          node --check race-day/live-tips.js
+          node race-day/test_live_tips.js
+          python - <<'PY'
+          from pathlib import Path
+          import re, subprocess
+          page=Path('race-day/index.html').read_text()
+          script=re.findall(r'<script>([\s\S]*?)</script>',page)[-1]
+          subprocess.run(['node','--check'],input=script,text=True,check=True)
+          PY
       - name: Check Horse103 connectivity and response schema
         env:
           RACE_DATE: ${{ inputs.date }}
@@ -87,7 +97,7 @@ jobs:
         with:
           name: race-day-plan
           path: race-day
-      - run: pip install 'playwright>=1.45,<2' certifi
+      - run: pip install 'playwright>=1.45,<2' certifi 'lxml>=5,<7'
       - run: python -m playwright install --with-deps chromium
       - env:
           RACE_DATE: ${{ inputs.date }}
@@ -137,7 +147,7 @@ jobs:
         with:
           name: race-day-plan
           path: race-day
-      - run: pip install 'playwright>=1.45,<2' certifi
+      - run: pip install 'playwright>=1.45,<2' certifi 'lxml>=5,<7'
       - run: python -m playwright install --with-deps chromium
       - env:
           RACE_DATE: ${{ inputs.date }}
@@ -166,7 +176,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install 'playwright>=1.45,<2' certifi
+      - run: pip install 'playwright>=1.45,<2' certifi 'lxml>=5,<7'
       - run: python -m playwright install --with-deps chromium
       - name: Capture HKJC quotes and send independent T-3 tips
         env:
@@ -218,7 +228,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install 'playwright>=1.45,<2' certifi
+      - run: pip install 'playwright>=1.45,<2' certifi 'lxml>=5,<7'
       - run: python -m playwright install --with-deps chromium
       - name: Capture HKJC quotes and send independent T-3 tips
         env:
@@ -234,4 +244,3 @@ jobs:
           name: hkjc-shadow-late-${{ github.run_id }}
           path: race-day-data/${{ inputs.date }}/hkjc-late/
           retention-days: 7
-

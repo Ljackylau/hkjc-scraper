@@ -1,5 +1,10 @@
 # Race Day Runner — independent copy
 
+The 2026-10-02 cold top-two priority method and its race-day setup are
+documented in [COLD_TOP2.md](COLD_TOP2.md). Start **Run** at least 45 minutes
+before race 1; the new cold selector prepares history before the deadline
+and freezes at T−3:10. The recorded 14/30 is exploratory retrospective work.
+
 Original `dragon/`, `dragon-webapp/`, workflows and local Horse103 file are untouched.
 
 ## Use

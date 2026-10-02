@@ -33,11 +33,12 @@ button{cursor:pointer;transition:background .15s,border-color .15s,transform .15
 <p class="section-intro">只用 T−7 至 T−3 已收到的賠率；折線顯示相對區間起點的縮短百分比。只列末段賠率縮短的練馬師，來源偏舊會標明。</p><div class="history-tools"><label for="trainerRaceSelect">場次</label><select id="trainerRaceSelect"><option value="all">全部場次</option></select></div><div id="trainerRaceCards" class="races" style="grid-template-columns:1fr"><p class="muted">正在載入練馬師王逐場紀錄…</p></div>
 <details id="latestChallenge" class="utility"><summary>最後一次練馬師王報價</summary><p class="muted">賽日結束後報價可能已截止；逐場 T−3 紀錄請看上方。</p><div id="challengeCards" class="races"><p class="muted">正在檢查研究紀錄…</p></div></details></div></section>
 <section id="history" class="tab-panel" hidden><h2>推介及正式賽果</h2><p class="section-intro">賽前資料及原發送記錄可追溯；後續重算會標明，派彩金額按馬會公布單位顯示。缺少舊紀錄會標明未有紀錄。</p><div class="history-tools"><label for="historyDate">賽日</label><select id="historyDate"><option value="all">全部日期</option></select><span id="historyCount" class="muted"></span></div><div id="historyRows" class="history-list"><p class="muted">正在載入…</p></div></section>
-<section id="system" class="tab-panel" hidden><h2>系統與資料狀態</h2><p class="section-intro">賽日啟動一次 Runner，系統會自動收集、通知及翌日覆核正式派彩。</p><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止 Race Day Runner ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-settlement.yml" target="_blank" rel="noopener">查看正式賽果覆核 ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載歷史備份 ↗</a><p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉網站不會停止收集。</p><details class="info"><summary>公式及訊號說明</summary><p class="muted">2026-10-01 起：新膽只用 HKJC 賽前數據。長窗分數＝35% 獨贏縮短＋25% 位置縮短＋20% 連贏組合縮短＋20% 位置Q組合縮短；長窗不足時用位置／獨贏／位置Q支持份額及增長排名。T−3 前10秒截止。拖腳＝F最高兩匹＋主膽位置Q賠率最低兩組對應馬；排除主膽及重複馬，順延補足四腳。不剔除 Horse103 舊膽。缺有效數據不出膽；舊賽日保留原推介。分數不是概率。</p></details></section>
+<section id="system" class="tab-panel" hidden><h2>系統與資料狀態</h2><p class="section-intro">賽日啟動一次 Runner，系統會自動收集、通知及翌日覆核正式派彩。</p><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-combined.yml" target="_blank" rel="noopener">啟動／停止 Race Day Runner ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/race-day-settlement.yml" target="_blank" rel="noopener">查看正式賽果覆核 ↗</a><a class="system-link" href="https://github.com/Ljackylau/hkjc-scraper/actions/workflows/horse103-backup.yml" target="_blank" rel="noopener">下載歷史備份 ↗</a><p class="muted">啟動：Run workflow → 日期 → Run。停止：開啟該次執行 → Cancel workflow。關閉網站不會停止收集。</p><details class="info"><summary>公式及訊號說明</summary><p class="muted">2026-10-01 起：新膽只用 HKJC 賽前數據。長窗分數＝35% 獨贏縮短＋25% 位置縮短＋20% 連贏組合縮短＋20% 位置Q組合縮短；長窗不足時用位置／獨贏／位置Q支持份額及增長排名。T−3 前10秒截止。拖腳＝F最高兩匹＋主膽位置Q賠率最低兩組對應馬；排除主膽及重複馬，順延補足四腳。不剔除 Horse103 舊膽。缺有效數據不出膽；舊賽日保留原推介。分數不是概率。</p><p class="muted">2026-10-02起，留意冷馬採用頭二優先方法：末段新入訊號 → 強騎師＋有效試閘前三＋同場地跑道 → 原B及賽績確認 → 二重彩第二位支持。每場最多1匹截止WIN&gt;10。賽前準備往績及試閘，T−3:10鎖定；有結果即發布，末段網頁約每2秒刷新。14/30屬回看結果，未經新賽日驗證；缺資料會顯示原因。</p></details></section>
 <p class="muted footer-note">賽日頁約每15秒自動更新；正式派彩以馬會公布為準。</p></main>
 <script src="market-lines.js?v=20260930-golden-legs"></script>
 <script src="challenge.js?v=20260930-trainer-lines"></script>
-<script src="cold-signal.js?v=20261001-cold-exclude-banker-v6"></script>
+<script src="cold-signal.js?v=20261002-cold-top2-v2"></script>
+<script src="live-tips.js?v=20261002-cold-top2-v2"></script>
 <script src="leg-selection.js?v=20261001-f2-qp2"></script>
 <script>
 const $=id=>document.getElementById(id);
@@ -53,8 +54,10 @@ function barChart(items,empty='未有可讀數值'){
  const max=Math.max(...valid.map(x=>Math.abs(x.value)),0.01);
  return `<div class="bar-list" role="list">${valid.map(x=>{const width=x.value===0?0:Math.max(3,Math.min(100,Math.abs(x.value)/max*100));return `<div class="bar-item" role="listitem" aria-label="${esc(x.label)}：${esc(x.display)}${x.detail?'，'+esc(x.detail):''}"><span class="bar-name">${esc(x.label)}${x.detail?`<small class="bar-meta">${esc(x.detail)}</small>`:''}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill ${x.value<0?'negative':''}" style="width:${width.toFixed(1)}%"></span></span><span class="bar-value">${esc(x.display)}</span></div>`}).join('')}</div>`
 }
-const base=()=>`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${dataRef||'race-day-data'}/race-day-data/${selected}`;
+const liveDay=()=>selected===hkToday()&&selected>='2026-10-02';
+const base=()=>`https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/${liveDay()?'race-day-data':dataRef||'race-day-data'}/race-day-data/${selected}`;
 async function currentRef(){
+ if(liveDay())return 'race-day-data';
  if(dataRef&&Date.now()-refChecked<55000)return dataRef;
  try{const r=await fetch(`https://api.github.com/repos/Ljackylau/hkjc-scraper/branches/race-day-data?t=${Math.floor(Date.now()/55000)}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});
   if(!r.ok)throw Error('HTTP '+r.status);dataRef=(await r.json()).commit.sha;refChecked=Date.now()
@@ -198,6 +201,7 @@ function bNote(s){
 }
 function summary(n,s){
  const picks=s.picks||[];
+ if(s.independent_tip?.cold_policy==='cold_top2_priority_v2_exploratory_2026-10-02'&&s.independent_tip.status!=='ready')return `R${n}\n獨贏&位置信心馬：資料不足\n連贏位置Q：資料不足\n最有可能爆冷馬：${ColdSignal.text(s.independent_tip,h=>annotatedHorse(h,s.resultPositions))}`;
  if(s.status!=='saved'||!picks.length)return `R${n}\n獨贏&位置信心馬：${s.status==='partial'?'原始T−3已保存，排名未完成':'未能鎖定T−3'}\n連贏位置Q：無\n最有可能爆冷馬：無`;
  const main=effectiveMain(s),originalNumbers=(s.original||[]).map(Number);
  const original=new Set(originalNumbers);
@@ -244,9 +248,38 @@ async function copyText(value,label){
  }catch(e){$('copyStatus').textContent='未能自動複製，請長按文字複製'}
 }
 let refreshing=false;
+let liveTargets=[],livePhaseCache=new Map(),liveResults=new Map(),liveResultChecked=new Map();
+async function refreshLiveTips(){
+ const requested=selected,root=base();
+ const shadow=await Promise.all(['hkjc-early','hkjc-late'].map(async phase=>{
+  try{
+   const r=await fetch(`${root}/${phase}/status.json?live=${Date.now()}`,{cache:'no-store',signal:AbortSignal.timeout(4000)});
+   if(!r.ok)throw Error('HTTP '+r.status);
+   const data=await r.json();if(data.date!==requested)throw Error('日期不符');
+   const value={...data,phase};livePhaseCache.set(requested+'/'+phase,value);return value;
+  }catch(e){return livePhaseCache.get(requested+'/'+phase)||null}
+ }));
+ if(requested!==selected)return;
+ const data=LiveTips.phases(shadow,requested,tip=>tip.status==='ready'?HybridLegs.update(tip):tip);
+ liveTargets=data.flatMap(p=>Object.values(p.horse103).map(s=>s.target).filter(Boolean));
+ for(const d of data)for(const [n,s] of Object.entries(d.horse103)){
+  const result=liveResults.get(requested+'/'+n);
+  if(result){d.results[n]={status:'saved'};s.resultPositions=Object.fromEntries((result.top4||[]).map((h,i)=>[h,['第一','第二','第三','第四'][i]]))}
+ }
+ $('health').textContent=data.length?data.map(d=>`${d.phase==='early'?'前':'後'}半場｜更新 ${new Date(d.updated_at).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}${Date.now()-Date.parse(d.updated_at)>180000?'｜超過3分鐘未更新':''}`).join('　／　'):'等待賽日Runner啟動；請選Run模式。';
+ renderCards(data,shadow,root);
+ // Result reads never hold up the next race's tip display.
+ if(!LiveTips.critical(liveTargets))for(const d of data)for(const [n,s] of Object.entries(d.horse103)){
+  const tip=s.independent_tip,key=requested+'/'+n;
+  if(!tip?.off||Date.now()<Date.parse(tip.off)+30000||liveResults.has(key)||Date.now()-(liveResultChecked.get(key)||0)<30000)continue;
+  liveResultChecked.set(key,Date.now());
+  fetch(`${root}/${d.phase}/results/race_${String(n).padStart(2,'0')}.json?live=${Date.now()}`,{cache:'no-store',signal:AbortSignal.timeout(4000)}).then(async r=>{if(r.ok){const result=await r.json();if(result.top4?.length)liveResults.set(key,result)}}).catch(()=>{});
+ }
+}
 async function refresh(){if(refreshing)return;refreshing=true;try{await refreshOnce()}finally{refreshing=false}}
 async function refreshOnce(){
  if(!/^\d{4}-\d{2}-\d{2}$/.test(selected))return;
+ if(selected>='2026-10-02'){if(!liveDay())await currentRef();return refreshLiveTips()}
  try{await currentRef()}catch(e){$('health').textContent='暫時未能取得最新版本：'+e.message;return}
  const requested=selected;
  const data=await Promise.all(['early','late'].map(async p=>{try{const r=await fetch(`${base()}/${p}/status.json?v=${Math.floor(Date.now()/30000)}`,{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!r.ok)return {phase:p,missing:true};return {...await r.json(),phase:p}}catch(e){return {phase:p,missing:true}}}));
@@ -312,18 +345,21 @@ async function refreshOnce(){
   s.market.golden=golden;s.market.legs=[...new Set([...golden,...(s.market.legs||[])])];
  })));
  if(requested!==selected)return;
+ renderCards(data,shadow,snapshotBase);
+}
+function renderCards(data,shadow,snapshotBase){
  const cards=[];copyRows=new Map();
  for(const d of data)for(const [n,s]of Object.entries(d.horse103||{})){
  const picks=s.picks||[];const text=picks.map(h=>`${h.horse_number} ${h.name_tc||''}`);
- const line=summary(n,s);copyRows.set(+n,{text:line,saved:s.status==='saved'&&picks.length>0});
+ const line=summary(n,s);copyRows.set(+n,{text:line,saved:s.status==='saved'&&picks.length>0||s.independent_tip?.cold_status==='ready'&&s.independent_tip?.cold?.length>0});
  const main=effectiveMain(s),original=new Set((s.original||[]).map(Number));
  const extras=(s.independent_tip?[]:picks.slice(1,5)).filter(x=>!original.has(Number(x.horse_number))&&Number(x.horse_number)!==main).map(x=>Number(x.horse_number));
  const horses=[main,...extras].filter(Number.isInteger).map((number,i)=>`<span class="horse-number ${i?'secondary':''}">${esc(number)}號${s.resultPositions?.[number]?` <small style="display:inline;font-size:12px;margin:0 0 0 5px">${esc(s.resultPositions[number])}</small>`:''}</span>`).join('');
  const legs=s.independent_tip?.legs_status==='unavailable'?esc(s.independent_tip.legs_reason||'缺有效基準'):(s.market?.legs||[]).map(x=>(s.market?.golden||[]).includes(x)?`<span class="golden-leg" title="T−7 至 T−3 無回調且最新分數 ≥20">${esc(annotatedHorse(x,s.resultPositions))}</span>`:esc(annotatedHorse(x,s.resultPositions))).join('、')||'資料未有';
- const cold=s.independent_tip?ColdSignal.text(s.independent_tip,x=>annotatedHorse(x,s.resultPositions)):(s.market?.cold||[]).map(x=>annotatedHorse(x,s.resultPositions)).join('、')||'無';
- const state=s.independent_tip?.reconstruction?'賽前資料重算':s.status==='saved'?(d.results?.[n]?.status==='saved'?'已完賽':'T−3 已鎖定'):(labels[s.status]||s.status);
+ const cold=s.independent_tip?ColdSignal.text(s.independent_tip,x=>annotatedHorse(x,s.resultPositions)):liveDay()?'等待賽前快照鎖定':(s.market?.cold||[]).map(x=>annotatedHorse(x,s.resultPositions)).join('、')||'無';
+ const state=s.independent_tip?.reconstruction?'賽前資料重算':s.status==='saved'?(d.results?.[n]?.status==='saved'?'已完賽':'T−3 已鎖定'):s.independent_tip?.cold_status==='ready'?'冷馬已鎖定；主膽資料不足':(labels[s.status]||s.status);
  const stateKind=s.status==='saved'?'':s.status==='waiting'?'waiting':'error';
- cards.push({n:+n,html:`<div class="card" data-race="${esc(n)}"><div class="card-head"><h2>R${esc(n)}</h2><span class="status-chip ${stateKind}">${esc(state)}</span></div>${horses?`<p class="signal-label">獨贏及位置信心馬</p><div class="signal-pick">${horses}${s.independent_tip?'<span class="status-chip">'+(s.independent_tip?.reconstruction?'賽前資料重算；未於T−3發送':'新方法')+'</span>':''}${s.qpConfidence?.qualified&&s.method_b?.status!=='switched'?'<span class="status-chip">QP 集中</span>':''}${s.method_b?.status==='switched'?'<span class="status-chip">B 換膽</span>':''}</div><p class="signal-line"><span class="signal-label">連贏／位置Q 拖腳</span><br>${legs}${s.market?.golden?.length?'<small class="muted">金色：T−7 至 T−3 無回調＋最新分數 ≥20；四腳依F頭兩匹及主膽QP配搭排序。</small>':''}</p><p class="signal-line"><span class="signal-label">留意冷馬</span><br>${cold}</p>`:`<p class="signal-line">${esc(s.reason||s.error||state)}</p>`}<button class="copy-race" data-copy-race="${esc(n)}">複製本場推介</button><details><summary>詳細資料及原始快照</summary>${s.target?`<p class="muted">T−3 目標 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${picks.length?`<p>原主膽 ${esc(text[0])}</p>${bNote(s)?`<p class="muted">${esc(bNote(s))}</p>`:''}<p>其餘 ${esc(text.slice(1).join('、'))}</p><p class="muted">原解碼順序 ${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<p class="bad">${esc(s.error||s.reason||'')}</p>${s.status==='saved'?`<a href="${base()}/${s.independent_tip?'hkjc-'+d.phase:d.phase}/${s.independent_tip?'race_'+String(n).padStart(2,'0')+(s.independent_tip?.reconstruction?'_independent_recovered.json':'_independent.json'):'horse103/race_'+String(n).padStart(2,'0')+'.json'}" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</details></div>`});
+ cards.push({n:+n,html:`<div class="card" data-race="${esc(n)}"><div class="card-head"><h2>R${esc(n)}</h2><span class="status-chip ${stateKind}">${esc(state)}</span></div>${horses?`<p class="signal-label">獨贏及位置信心馬</p><div class="signal-pick">${horses}${s.independent_tip?'<span class="status-chip">'+(s.independent_tip?.reconstruction?'賽前資料重算；未於T−3發送':'新方法')+'</span>':''}${s.qpConfidence?.qualified&&s.method_b?.status!=='switched'?'<span class="status-chip">QP 集中</span>':''}${s.method_b?.status==='switched'?'<span class="status-chip">B 換膽</span>':''}</div><p class="signal-line"><span class="signal-label">連贏／位置Q 拖腳</span><br>${legs}${s.market?.golden?.length?'<small class="muted">金色：T−7 至 T−3 無回調＋最新分數 ≥20；四腳依F頭兩匹及主膽QP配搭排序。</small>':''}</p>`:`<p class="signal-line">${esc(s.reason||s.error||state)}</p>`}<p class="signal-line"><span class="signal-label">留意冷馬</span><br>${esc(cold)}</p><button class="copy-race" data-copy-race="${esc(n)}">複製本場推介</button><details><summary>詳細資料及原始快照</summary>${s.target?`<p class="muted">T−3 目標 ${new Date(s.target).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong'})}</p>`:''}${s.independent_tip?.cold_policy==='cold_top2_priority_v2_exploratory_2026-10-02'?`<p class="muted">冷馬：最多1匹賽前WIN&gt;10；目標頭二。${s.independent_tip.cold_win!=null?' 截止WIN：'+esc(s.independent_tip.cold_win):''}</p>`:''}${picks.length?`<p>原主膽 ${esc(text[0])}</p>${bNote(s)?`<p class="muted">${esc(bNote(s))}</p>`:''}<p>其餘 ${esc(text.slice(1).join('、'))}</p><p class="muted">原解碼順序 ${esc((s.original||[]).join('、'))}</p><small>接收延遲 ${esc(s.delay_seconds)} 秒</small>`:''}<p class="bad">${esc(s.error||s.reason||'')}</p>${s.independent_tip||s.status==='saved'?`<a href="${base()}/${s.independent_tip?'hkjc-'+d.phase:d.phase}/${s.independent_tip?'race_'+String(n).padStart(2,'0')+(s.independent_tip?.reconstruction?'_independent_recovered.json':'_independent.json'):'horse103/race_'+String(n).padStart(2,'0')+'.json'}" target="_blank" rel="noopener">原始快照 JSON ↗</a>`:''}</details></div>`});
  }
  cards.sort((a,b)=>a.n-b.n);
  $('cards').innerHTML=cards.map(c=>c.html).join('')||'<p>未有已啟動紀錄。請先在 GitHub 執行 Preflight；賽日執行 Run。</p>';
@@ -331,7 +367,7 @@ async function refreshOnce(){
  $('copyAll').hidden=![...copyRows.values()].some(x=>x.saved);
  marketLineStates=shadow.filter(Boolean).flatMap(phase=>Object.entries(phase.races||{}).map(([n,s])=>({n:Number(n),phase:phase.phase,state:s,root:snapshotBase})));
  $('hkjcCards').innerHTML=marketLineStates.sort((a,b)=>a.n-b.n).map(({n,state:s})=>`<div class="card"><h3>R${esc(n)}｜${esc(s.status)}</h3><p class="bar-meta">T−7 → T−3｜無回調馬匹賠率變化分數｜固定原比較基準 ${s.baseline?.minutes_to_off!=null?'T−'+esc(s.baseline.minutes_to_off):'待收集'}<br>獨贏 35%＋位置 25%＋連贏 20%＋位置Q 20%；不是勝出概率。</p><div class="market-line-chart" id="marketLine${n}"><p class="muted">開啟馬匹市場分頁後載入走勢。</p></div><p class="bad">${esc((s.errors||[]).slice(-1).join('')||s.reason||'')}</p></div>`).join('')||'<p class="muted">尚未開始獨立快照；賽日啟動 Run 後才會收集。</p>';
- if(activeTab==='hkjc')await refreshMarketLines();
+ if(activeTab==='hkjc')refreshMarketLines();
 }
 let marketLineStates=[],marketLineData=new Map(),marketLineVersion=0;
 async function refreshMarketLines(){
@@ -359,6 +395,16 @@ $('nextRace').onclick=()=>{const i=raceNumbers.indexOf(selectedRace);setRace(rac
 $('refreshNow').onclick=async()=>{const b=$('refreshNow');b.classList.add('refreshing');b.textContent='…';await Promise.all([refresh(),refreshChallenges()]);b.classList.remove('refreshing');b.textContent='↻'};
 $('load').onclick=()=>{selected=$('date').value;dataRef='';refChecked=0;fallbackNotice='';fallbackChecked=true;Promise.all([refresh(),refreshChallenges()])};
 addEventListener('resize',()=>setRace(selectedRace));
-selectTab(activeTab);refresh();refreshChallenges();setInterval(()=>{if(!document.hidden){refresh();refreshChallenges();if(activeTab==='history'){historyLoadedRef='';refreshHistory()}}},15000);
+let extrasChecked=0;
+async function poll(){
+ if(!document.hidden){
+  await refresh();
+  if(Date.now()-extrasChecked>=30000&&!LiveTips.critical(liveTargets)){
+   extrasChecked=Date.now();refreshChallenges();if(activeTab==='history'){historyLoadedRef='';refreshHistory()}
+  }
+ }
+ setTimeout(poll,liveDay()&&LiveTips.critical(liveTargets)?2000:15000);
+}
+addEventListener('visibilitychange',()=>{if(!document.hidden)refresh()});
+selectTab(activeTab);poll();
 </script></html>
-

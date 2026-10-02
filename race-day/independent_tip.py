@@ -41,7 +41,7 @@ def prepare(samples,off,date,number,baseline=None,golden=None):
 
 def message(number,tip):
     if tip.get('status')!='ready':
-        return f'⚠️ R{number}｜T−3 資料不足\n{tip.get("reason","未能取得有效快照")}\n未以較遲資料補作賽前推介。'
+        return f'⚠️ R{number}｜T−3 主膽資料不足\n{tip.get("reason","未能取得有效快照")}\n最有可能爆冷馬：{cold_text(tip)}\n未以較遲資料補作賽前推介。'
     main=tip['banker'];legs='、'.join(f'{h}號' for h in tip['legs']) if tip['legs_status']=='ready' else '資料未就緒'
     return (f'🏇 R{number}\n獨贏&位置信心馬：{main}號\n'
             f'連贏位置Q：{main}號 拖 {legs or "無"}\n最有可能爆冷馬：'
@@ -94,5 +94,4 @@ def cold_signal(tip,folder,number,clocks=None,states=None):
         tip.update(calculate(tip,rows))
     except (ValueError,KeyError,TypeError,OSError):
         tip['cold_reason']='練王歷史資料讀取失敗'
-
 
