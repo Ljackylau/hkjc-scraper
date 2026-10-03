@@ -24,7 +24,8 @@ check('do not use older complete tip if nearer race cold missing',()=>{
  const p=phase({...tip,cold:[]});const t={...tip,race:4,off:date+'T14:05:00+08:00',freeze:date+'T14:01:50+08:00',cutoff:date+'T14:02:00+08:00'};
  p.races[4]={target:t.cutoff};p.independent_tips[4]=t;assert.equal(choose([p]).race,3);assert.equal(choose([p]).status,'unavailable');
 });
-check('wait until T-3 release',()=>assert.equal(choose([phase()],Date.parse(freeze)).status,'waiting'));
+check('never expose a tip before its freeze',()=>assert.equal(choose([phase()],Date.parse(freeze)-1).status,'waiting'));
+check('published locked tip enables export without an extra wait to T-3',()=>assert.equal(choose([phase()],Date.parse(freeze)).status,'ready'));
 check('reject rescheduled off mismatch',()=>assert.equal(choose([{...phase(),races:{3:{target:date+'T13:28:00+08:00'}}}]).status,'unavailable'));
 check('reject late banker inputs',()=>assert.equal(choose([phase({...tip,received_at:cutoff})]).status,'unavailable'));
 check('reject late cold inputs',()=>assert.equal(choose([phase({...tip,cold_fct_received_at:cutoff})]).status,'unavailable'));

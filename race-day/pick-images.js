@@ -51,7 +51,7 @@
    const tip=validate(chosen.tip,date,chosen.race);
    if(tip.status!=='ready')return fail('unavailable','膽馬資料不足：'+(tip.reason||'等待有效賽前快照'),extra);
    if(Date.parse(tip.off)!==chosen.off||Date.parse(tip.freeze)!==chosen.off-190000||Date.parse(tip.cutoff)!==chosen.off-180000)throw Error('推介與目前開跑時間不符');
-   if(at<Date.parse(tip.cutoff))return fail('waiting','等待本場 T−3 推介發布。',extra);
+   if(at<Date.parse(tip.freeze))return fail('waiting','等待本場賽前推介鎖定。',extra);
    if(tip.reconstruction)throw Error('重建資料不作即場圖片');
    if(tip.cold_status!=='ready')return fail('unavailable','冷馬資料不足：'+(tip.cold_reason||'等待有效賽前快照'),extra);
    if((tip.cold||[]).length!==1)return fail('unavailable','本場沒有符合條件的冷馬，未能生成完整四張。',extra);
