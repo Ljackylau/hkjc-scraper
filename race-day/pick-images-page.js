@@ -3,7 +3,7 @@
  const P=window.PickImages,$=id=>document.getElementById(id);
  const source='https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/race-day-data/race-day-data/';
  let phases=[],selection=null,loading=null,busy=false,files=[],objectUrls=[];
- function numberView(){try{$('nextNumber').textContent=P.nextNumber(localStorage)}catch(e){$('nextNumber').textContent='無法保存';$('message').textContent=e.message}}
+ function numberView(){try{const n=P.nextNumber(localStorage);$('nextNumber').textContent=n;$('manualNextNumber').textContent=n}catch(e){$('nextNumber').textContent='無法保存';$('manualNextNumber').textContent='無法保存';$('message').textContent=e.message}}
  function view(){
   selection=P.resolve(phases,P.hkDay(),Date.now(),LiveTips.validate);
   const labels={ready:'推介已鎖定',waiting:'等待推介',unavailable:'資料未齊',finished:'等待下一場'};
@@ -14,6 +14,8 @@
   $('banker').textContent=selection.banker?`${selection.banker.number} ${selection.banker.name}`:'等待推介';
   $('cold').textContent=selection.cold?`${selection.cold.number} ${selection.cold.name}`:'等待推介';
   $('generate').disabled=busy||selection.status!=='ready';
+  $('manualGenerate').disabled=busy;$('useLive').disabled=busy||selection.status!=='ready';
+  $('autoMode').disabled=busy;$('manualMode').disabled=busy;
  }
  async function refresh(){
   if(loading)return loading;
@@ -31,9 +33,9 @@
   return loading;
  }
  async function renderPlans(plans){
-  if(document.fonts?.ready)await document.fonts.ready;
+  const assets=await P.prepare();
   const images=await Promise.all(plans.map(async plan=>{
-   const canvas=P.draw(plan,document.createElement('canvas'));
+   const canvas=P.draw(plan,document.createElement('canvas'),assets);
    return {plan,blob:await P.png(canvas),name:plan.filename};
   }));
   const archive=await P.zip(images);
@@ -52,16 +54,16 @@
    const card=document.createElement('article');card.className='image-card';
    const heading=document.createElement('h3');heading.textContent=`${image.plan.index} · ${image.plan.label}${image.plan.pool} $${image.plan.amount}`;
    const url=URL.createObjectURL(image.blob);objectUrls.push(url);
-   const img=document.createElement('img');img.src=url;img.width=1125;img.height=1100;
-   img.alt=`第${image.plan.race}場 ${image.plan.horse.number} ${image.plan.horse.name} ${image.plan.pool} $${image.plan.amount}，未提交投注，編號${result.number}`;
+   const img=document.createElement('img');img.src=url;img.width=P.reference.width;img.height=P.reference.height;
+   img.alt=`第${image.plan.race}場 ${image.plan.horse.number} ${image.plan.horse.name} ${image.plan.pool} $${image.plan.amount}，編號${result.number}`;
    const link=document.createElement('a');link.href=url;link.download=image.name;link.textContent='下載PNG圖片';
    card.append(heading,img,link);$('images').append(card);
   }
   const zipUrl=URL.createObjectURL(result.archive);objectUrls.push(zipUrl);
   $('zip').href=zipUrl;$('zip').download=`${result.selection.date}_R${result.selection.race}_${result.number}_四張推介.zip`;
-  $('batchTitle').textContent=result.demo?'版面示例 · 虛構馬名及場次':`${result.selection.venueName} 第${result.selection.race}場 · 編號${result.number}`;
+  $('batchTitle').textContent=result.preview?'原圖格式 · 四張圖片':`${result.manual?'手動輸入 · ':''}${result.selection.venueName} 第${result.selection.race}場 · 編號${result.number}`;
   $('share').hidden=!(navigator.share&&navigator.canShare?.({files}));
-  $('output').hidden=false;$('message').textContent=result.demo?'示例圖片已生成，未使用正式編號。':`已生成4張圖片，編號${result.number}。可下載或長按儲存。`;
+  $('output').hidden=false;$('message').textContent=result.preview?'已按原圖資料顯示四張圖片格式，編號沒有遞增。':`已生成4張圖片，編號${result.number}。可下載或長按儲存。`;
  }
  $('generate').addEventListener('click',async()=>{
   if(busy)return;busy=true;view();$('generate').textContent='正在生成…';$('message').textContent='正在核對最新推介…';
@@ -84,18 +86,60 @@
  $('preview').addEventListener('click',async()=>{
   if(busy)return;busy=true;view();$('preview').disabled=true;
   try{
-   const at=Date.now(),weekday=new Intl.DateTimeFormat('zh-HK',{timeZone:'Asia/Hong_Kong',weekday:'long'}).format(new Date(at));
-   const plans=P.plans.map((p,i)=>({...p,demo:true,index:i+1,number:'示例',date:P.hkDay(at),race:1,venue:'示例場地',weekday,time:P.timestamp(at),
-    horse:{number:p.role==='banker'?2:9,name:p.role==='banker'?'示例膽馬':'示例冷馬'},filename:`example_${i+1}_${p.label}_${p.pool}_${p.amount}.png`}));
-   display({...await renderPlans(plans),demo:true,number:'示例',selection:{date:P.hkDay(at),race:1,venueName:'示例場地'}});
+   const number=P.nextNumber(localStorage),date=P.hkDay();
+   const plans=P.plans.map((p,i)=>({...P.reference,...p,index:i+1,number,date,horse:{...P.reference.horse},filename:`format_${i+1}_${p.pool}_${p.amount}.png`}));
+   display({...await renderPlans(plans),preview:true,number,selection:{date,race:P.reference.race,venueName:P.reference.venue}});
    $('output').scrollIntoView({behavior:'smooth',block:'start'});
   }catch(e){$('message').textContent='未能預覽：'+e.message}
   finally{busy=false;view();$('preview').disabled=false}
  });
  $('refresh').addEventListener('click',refresh);
+ const draftKey='raceDay.pickImages.manualDraft.v1';
+ function setMode(manual){
+  if(busy)return;
+  document.querySelectorAll('[data-mode="auto"]').forEach(el=>el.hidden=manual);
+  $('manualPanel').hidden=!manual;$('autoMode').setAttribute('aria-pressed',String(!manual));$('manualMode').setAttribute('aria-pressed',String(manual));
+ }
+ $('autoMode').addEventListener('click',()=>setMode(false));$('manualMode').addEventListener('click',()=>setMode(true));
+ for(const [index,p] of P.plans.entries()){
+  const i=index+1,fieldset=document.createElement('fieldset');
+  fieldset.innerHTML=`<legend>圖片${i} · ${p.label}</legend><label>投注類別<select id="manualPool${i}"><option>獨贏</option><option>位置</option></select></label><label>投注／支出<input id="manualAmount${i}" type="number" min="0.01" max="9999999.99" step="0.01" value="${p.amount}" required></label><label>存入<input id="manualDeposit${i}" type="number" min="0" max="9999999.99" step="0.01" value="0" required></label>`;
+  $('manualEntries').append(fieldset);$('manualPool'+i).value=p.pool;
+ }
+ function saveDraft(){
+  try{localStorage.setItem(draftKey,JSON.stringify(Object.fromEntries([...$('manualForm').querySelectorAll('input,select')].map(el=>[el.id,el.value]))))}catch(e){}
+ }
+ $('manualDatetime').value=P.hkDay()+'T'+P.timestamp(Date.now()).slice(-5);
+ try{const draft=JSON.parse(localStorage.getItem(draftKey)||'{}');for(const el of $('manualForm').querySelectorAll('input,select'))if(typeof draft[el.id]==='string')el.value=draft[el.id]}catch(e){}
+ $('manualForm').addEventListener('input',saveDraft);$('manualForm').addEventListener('change',saveDraft);
+
+ $('useLive').addEventListener('click',()=>{
+  view();if(selection.status!=='ready')return;
+  $('manualDatetime').value=P.hkDay()+'T'+P.timestamp(Date.now()).slice(-5);$('manualVenue').value=selection.venue;$('manualRace').value=selection.race;
+  for(const [role,key] of [['banker','Banker'],['cold','Cold']]){$('manual'+key+'Number').value=selection[role].number;$('manual'+key+'Name').value=selection[role].name}
+  saveDraft();
+ });
+ $('manualForm').addEventListener('submit',async event=>{
+  event.preventDefault();if(busy)return;
+  const input={datetime:$('manualDatetime').value,venue:$('manualVenue').value,race:$('manualRace').value,
+   banker:{number:$('manualBankerNumber').value,name:$('manualBankerName').value},
+   cold:{number:$('manualColdNumber').value,name:$('manualColdName').value},
+   entries:P.plans.map((_,i)=>({pool:$('manualPool'+(i+1)).value,amount:$('manualAmount'+(i+1)).value,deposit:$('manualDeposit'+(i+1)).value}))};
+  busy=true;view();$('manualGenerate').textContent='正在生成…';$('message').textContent='正在生成圖片…';saveDraft();
+  try{
+   const generate=async()=>{
+    const number=P.nextNumber(localStorage),plans=P.manualBatch(input,number),result=await renderPlans(plans);
+    P.commitNumber(localStorage,number);
+    return {...result,manual:true,number,selection:{date:plans[0].date,race:plans[0].race,venueName:plans[0].venue}};
+   };
+   const result=navigator.locks?.request?await navigator.locks.request(P.numberKey,generate):await generate();
+   display(result);numberView();$('output').scrollIntoView({behavior:'smooth',block:'start'});
+  }catch(e){$('message').textContent='未能生成：'+e.message}
+  finally{busy=false;$('manualGenerate').textContent='生成4張圖片';view()}
+ });
  window.addEventListener('storage',e=>{if(e.key===P.numberKey)numberView()});
  document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh()});
- numberView();refresh();setInterval(()=>{view();if(!document.hidden&&!busy){
+ P.prepare().catch(()=>{});numberView();refresh();setInterval(()=>{view();if(!document.hidden&&!busy){
   const seconds=selection?.off?(selection.off-Date.now())/1000:Infinity;
   if(seconds<=280&&seconds>0||Date.now()-(window._pickImagesPoll||0)>=15000){window._pickImagesPoll=Date.now();refresh()}
  }},2000);

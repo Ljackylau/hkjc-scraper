@@ -3,7 +3,7 @@
 <head>
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <title>推介圖片｜Horse103 Race Day</title>
- <link rel="stylesheet" href="pick-images.css?v=20261003-1">
+ <link rel="stylesheet" href="pick-images.css?v=20261003-5">
 </head>
 <body><main>
  <header>
@@ -11,29 +11,49 @@
   <p class="eyebrow">RACE DAY · 圖片服務</p><h1>四張推介，一鍵生成</h1>
   <p class="intro">跟隨下一場未開跑賽事，使用網站已鎖定的膽馬和冷馬。</p>
  </header>
- <section class="live-panel" aria-label="最新場次">
+ <nav class="mode-switch" aria-label="資料來源"><button id="autoMode" class="quiet" type="button" aria-pressed="true">即場推介</button><button id="manualMode" class="quiet" type="button" aria-pressed="false">手動輸入</button></nav>
+ <section data-mode="auto" class="live-panel" aria-label="最新場次">
   <div class="live-heading"><span class="pill" id="stateLabel">正在載入</span><button id="refresh" type="button" class="quiet">↻ 更新</button></div>
   <h2 id="meeting">核對當日賽事…</h2><p id="reason" role="status" aria-live="polite">正在讀取最新推介。</p>
   <div class="horses"><div><span>推薦膽馬</span><strong id="banker">等待推介</strong></div><div><span>留意冷馬</span><strong id="cold">等待推介</strong></div></div>
   <p id="checked" class="small"></p>
  </section>
- <section class="generate-panel" aria-label="生成圖片">
+ <section data-mode="auto" class="generate-panel" aria-label="生成圖片">
   <div class="plans"><div><span>01 · 膽馬獨贏</span><b>$100</b></div><div><span>02 · 膽馬位置</span><b>$300</b></div><div><span>03 · 冷馬獨贏</span><b>$50</b></div><div><span>04 · 冷馬位置</span><b>$150</b></div></div>
   <div class="number-line"><span>下一組編號 <strong id="nextNumber">7720</strong></span><span>每組共用編號 · 每次＋3</span></div>
   <button id="generate" class="primary" type="button" disabled>一鍵生成4張圖片</button>
   <p class="small">每組合共$600。編號保存在此瀏覽器；成功生成才遞增，重新下載不加號。</p>
-  <p class="note">圖片標示「投注計劃／未提交」，供保存推介使用。</p>
-  <details class="example"><summary>查看圖片版面示例</summary><p class="small">使用示例馬名及場次預覽四張圖片，不使用正式編號。</p><button id="preview" class="quiet" type="button">預覽四張圖版面</button></details>
-  <p id="message" class="message" role="status" aria-live="polite"></p>
+  <p class="note">圖片使用原圖750 × 424尺寸及字眼，只更新右方資料。</p>
+  <details class="example"><summary>查看圖片格式</summary><p class="small">使用原圖的第4場、10志醒大將查看四張圖片格式，編號不會遞增。</p><button id="preview" class="quiet" type="button">查看四張圖格式</button></details>
  </section>
+ <section id="manualPanel" hidden aria-label="手動輸入">
+  <div class="live-heading"><h2>手動輸入</h2><button id="useLive" class="quiet" type="button" disabled>帶入即場推介</button></div>
+  <p class="small">隨時填寫資料生成圖片。資料自動保存在此瀏覽器，下次可繼續修改。</p>
+  <form id="manualForm">
+   <div class="manual-meta">
+    <label>日期 / 時間（香港）<input id="manualDatetime" type="datetime-local" required></label>
+    <label>場地<select id="manualVenue"><option value="ST">沙田</option><option value="HV">跑馬地</option></select></label>
+    <label>場次<input id="manualRace" type="number" min="1" max="14" step="1" required></label>
+   </div>
+   <div class="manual-horses">
+    <fieldset><legend>膽馬</legend><label>馬號<input id="manualBankerNumber" type="number" min="1" max="14" step="1" required></label><label>馬名<input id="manualBankerName" maxlength="24" required></label></fieldset>
+    <fieldset><legend>冷馬</legend><label>馬號<input id="manualColdNumber" type="number" min="1" max="14" step="1" required></label><label>馬名<input id="manualColdName" maxlength="24" required></label></fieldset>
+   </div>
+   <div id="manualEntries" class="manual-entries"></div>
+   <div class="number-line"><span>下一組編號 <strong id="manualNextNumber">7720</strong></span><span>每組共用編號 · 每次＋3</span></div>
+   <button id="manualGenerate" class="primary" type="submit">生成4張圖片</button>
+   <p class="small">存入金額由你填寫；成功生成才遞增編號。圖片保留原圖尺寸及字眼。</p>
+  </form>
+ </section>
+ <p id="message" class="message" role="status" aria-live="polite"></p>
  <section id="output" hidden aria-label="已生成圖片">
   <div class="output-heading"><div><p class="eyebrow">已生成</p><h2 id="batchTitle"></h2></div><div class="output-actions"><a id="zip" class="download" download>下載4張 ZIP</a><button id="share" type="button" class="quiet" hidden>分享4張圖片</button></div></div>
   <p class="small">手機可長按圖片儲存，或使用下方PNG下載。分享功能按瀏覽器支援顯示。</p>
   <div id="images" class="image-grid"></div>
  </section>
- <footer>推介鎖定後才可生成；缺膽馬、冷馬或馬名時會顯示原因。</footer>
+ <footer>即場模式使用已鎖定推介；手動模式可隨時填寫及生成。</footer>
 </main>
 <script src="live-tips.js?v=20261002-cold-fusion-legs"></script>
-<script src="pick-images.js?v=20261003-2"></script>
-<script src="pick-images-page.js?v=20261003-1"></script>
+<script src="pick-images.js?v=20261003-5"></script>
+<script src="pick-images-page.js?v=20261003-5"></script>
 </body></html>

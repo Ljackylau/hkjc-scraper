@@ -52,6 +52,18 @@ check('render failure alone does not consume a number',()=>{assert.throws(()=>P.
 check('storage failure is not a silent successful counter',()=>{const blocked={getItem:()=>null,setItem:()=>{throw Error('QuotaExceeded')}};assert.throws(()=>P.commitNumber(blocked,7720))});
 check('reject corrupt counter rather than reset and duplicate',()=>{values.set(P.numberKey,'broken');assert.throws(()=>P.nextNumber(storage))});
 check('CRC known vector',()=>assert.equal(P.crc32(new TextEncoder().encode('123456789')),0xcbf43926));
+const manual={datetime:'2026-09-06T13:48',venue:'ST',race:4,banker:{number:10,name:'志醒大將'},cold:{number:3,name:'開心三寶'},entries:P.plans.map(p=>({pool:p.pool,amount:p.amount,deposit:0}))};
+check('manual works without live data for past and future dates',()=>{
+ for(const datetime of ['2026-09-06T13:48','2027-01-01T00:00']){
+  const result=P.manualBatch({...manual,datetime},7720);assert.equal(result.length,4);assert.equal(result[0].date,datetime.slice(0,10));assert.equal(result[2].horse.name,'開心三寶');assert.equal(result[0].deposit,0);
+ }
+});
+check('manual keeps independently entered deposits and pools',()=>{const entries=manual.entries.map((p,i)=>({...p,pool:'位置',amount:100.25,deposit:i*25.5}));const result=P.manualBatch({...manual,entries},7720);assert.equal(result[3].deposit,76.5);assert.equal(result[0].amount,100.25);assert.equal(result[0].pool,'位置')});
+check('manual rejects invalid dates and times',()=>{for(const datetime of ['2026-02-30T13:00','2026-13-01T13:00','2026-09-06T25:00','2026-09-06'])assert.throws(()=>P.manualBatch({...manual,datetime},7720))});
+check('manual validates race horse and names',()=>{for(const changes of [{race:0},{race:15},{race:1.5},{venue:'XX'},{banker:{number:0,name:'馬'}},{cold:{number:2,name:'  '}}])assert.throws(()=>P.manualBatch({...manual,...changes},7720))});
+check('manual rejects missing negative nonfinite and fractional-cent money',()=>{for(const amount of ['',-1,0,Infinity,1.001,10000000])assert.throws(()=>P.manualBatch({...manual,entries:manual.entries.map(p=>({...p,amount}))},7720));assert.throws(()=>P.manualBatch({...manual,entries:manual.entries.map(p=>({...p,deposit:-1}))},7720))});
+check('manual validates all four entries',()=>{assert.throws(()=>P.manualBatch({...manual,entries:[]},7720));assert.throws(()=>P.manualBatch({...manual,entries:manual.entries.map(p=>({...p,pool:'未知'}))},7720))});
+check('reference uses requested labels dimensions and fields',()=>{assert.equal(P.reference.width,750);assert.equal(P.reference.height,424);assert.equal(P.fields(P.reference).length,6);assert(P.fields(P.reference).every(f=>f.value===f.original))});
 (async()=>{
  const files=images.map((p,i)=>({name:p.filename,blob:new Blob([`fixture-${i}`],{type:'image/png'})}));
  const blob=await P.zip(files),bytes=Buffer.from(await blob.arrayBuffer());

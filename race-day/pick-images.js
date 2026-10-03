@@ -1,4 +1,4 @@
-/* Deterministic plan images. All four images use one frozen race and one batch number. */
+/* All four images use one frozen race and one batch number. */
 (function(root){
  'use strict';
  const numberKey='raceDay.pickImages.nextNumber.v1',startNumber=7720,step=3;
@@ -69,50 +69,83 @@
  function batch(selection,number,at){
   if(selection.status!=='ready'||hkDay(at)!==selection.date||at>=selection.off)throw Error('本場已開跑或推介未就緒，請更新後再試。');
   const weekday=new Intl.DateTimeFormat('zh-HK',{timeZone:'Asia/Hong_Kong',weekday:'long'}).format(new Date(selection.off));
-  return plans.map((p,i)=>({...p,index:i+1,number,date:selection.date,race:selection.race,venue:selection.venueName,
+  return plans.map((p,i)=>({...p,deposit:0,index:i+1,number,date:selection.date,race:selection.race,venue:selection.venueName,
    horse:{...selection[p.role]},weekday,time:timestamp(at),generatedAt:at,
    filename:`${selection.date}_R${selection.race}_${number}_${i+1}_${p.label}_${p.pool}_${p.amount}.png`}));
  }
- function rounded(ctx,x,y,w,h,r){
-  ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);
-  ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();
- }
- const font='"PingFang TC","Microsoft JhengHei","Noto Sans CJK TC","Noto Sans TC",sans-serif';
- function text(ctx,value,x,y,size=46,color='#111',weight=500,maxWidth){
-  ctx.fillStyle=color;ctx.textBaseline='alphabetic';
-  let actual=size;ctx.font=`${weight} ${actual}px ${font}`;
-  while(maxWidth&&ctx.measureText(value).width>maxWidth&&actual>24){actual--;ctx.font=`${weight} ${actual}px ${font}`}
-  ctx.fillText(value,x,y);
- }
- function draw(plan,canvas){
-  canvas.width=1125;canvas.height=1100;
-  const c=canvas.getContext('2d');if(!c)throw Error('瀏覽器未能建立圖片。');
-  c.fillStyle='#f1f1f1';c.fillRect(0,0,1125,1100);c.fillStyle='#fff';c.fillRect(0,0,1125,165);
-  text(c,plan.demo?'版面示例':'投注計劃',36,69,58,'#111',700);text(c,'時間:'+plan.time,36,130,40,'#555',500);
-  c.fillStyle='#f9f9f9';c.fillRect(0,165,1125,136);
-  c.strokeStyle='#b97820';c.lineWidth=7;c.beginPath();c.arc(72,220,32,0,2*Math.PI);c.stroke();
-  c.beginPath();c.moveTo(72,198);c.lineTo(72,220);c.lineTo(89,230);c.stroke();
-  text(c,plan.demo?'示例圖片 · 虛構資料 · 未提交':'推介圖片 · 未提交投注',133,235,44,'#111',650,950);
-  const x=24,y=324,w=1077,h=690;
-  c.save();c.shadowColor='#00000018';c.shadowBlur=22;c.shadowOffsetY=8;rounded(c,x,y,w,h,24);c.fillStyle='#fff';c.fill();c.restore();
-  c.save();rounded(c,x,y,w,h,24);c.clip();c.fillStyle='#90918f';c.fillRect(x,y,w,100);
-  text(c,`圖${plan.index} · ${plan.label}`,60,390,52,'#fff',600);
-  rounded(c,807,339,265,75,38);c.fillStyle='#ffe000';c.fill();text(c,'投注計劃',848,391,43,'#111',600);
-  const rows=[{top:424,height:102,label:'狀況',value:'未提交投注',color:'#9a6111'},
-   {top:526,height:102,label:'編號',value:String(plan.number)},
-   {top:628,height:102,label:'投注類別',value:plan.pool},
-   {top:730,height:174,label:'細節'},
-   {top:904,height:110,label:'金額',value:'$'+plan.amount.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}];
-  for(const row of rows){
-   if(row.top===424){c.fillStyle='#fff4df';c.fillRect(410,row.top,w-386,row.height)}
-   c.strokeStyle='#ccc';c.lineWidth=3;c.beginPath();c.moveTo(24,row.top);c.lineTo(1101,row.top);c.stroke();
-   c.beginPath();c.moveTo(409,row.top+9);c.lineTo(409,row.top+row.height-9);c.stroke();
-   text(c,row.label,60,row.top+68,47,'#111',500);
-   if(row.value)text(c,row.value,446,row.top+68,49,row.color||'#111',500,622);
+ function manualBatch(input,number){
+  const value=String(input.datetime||'');
+  if(!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(value))throw Error('請填寫完整日期及時間。');
+  const at=Date.parse(value+':00+08:00');
+  if(!Number.isFinite(at)||hkDay(at)!==value.slice(0,10)||timestamp(at).slice(-5)!==value.slice(-5))throw Error('日期或時間無效。');
+  const race=Number(input.race);
+  if(!Number.isInteger(race)||race<1||race>14)throw Error('場次須為1至14。');
+  if(!['ST','HV'].includes(input.venue))throw Error('請選擇場地。');
+  const horses={};
+  for(const role of ['banker','cold']){
+   const h=input[role]||{},n=Number(h.number),name=String(h.name||'').trim().replace(/\s+/g,' ');
+   if(!Number.isInteger(n)||n<1||n>14||!name||name.length>24)throw Error('請填寫有效馬號（1至14）及馬名。');
+   horses[role]={number:n,name};
   }
-  text(c,`${plan.venue} ${plan.weekday} ${plan.pool} 第${plan.race}場`,446,795,40,'#111',500,625);
-  text(c,`${plan.horse.number} ${plan.horse.name} $${plan.amount}`,446,852,43,'#111',500,625);
-  c.restore();text(c,plan.demo?'版面示例｜馬名及場次均為示例，未提交投注':'推介計劃｜圖片不代表已投注或已接納',34,1070,28,'#666',500);
+  if(!Array.isArray(input.entries)||input.entries.length!==4)throw Error('需要四張圖片的投注資料。');
+  const money=(value,positive)=>{
+   const n=Number(value);
+   if(String(value??'').trim()===''||!Number.isFinite(n)||n<(positive?0.01:0)||n>9999999.99||Math.abs(n*100-Math.round(n*100))>0.00001)throw Error('金額須為有效數字，最多兩位小數。');
+   return n;
+  };
+  const date=hkDay(at),venue=input.venue==='ST'?'沙田':'跑馬地';
+  const weekday=new Intl.DateTimeFormat('zh-HK',{timeZone:'Asia/Hong_Kong',weekday:'long'}).format(new Date(at));
+  return plans.map((p,i)=>{
+   const entry=input.entries[i];if(!['獨贏','位置'].includes(entry.pool))throw Error('投注類別須為獨贏或位置。');
+   const amount=money(entry.amount,true),deposit=money(entry.deposit,false);
+   return {...p,pool:entry.pool,amount,deposit,index:i+1,number,date,race,venue,weekday,time:timestamp(at),horse:horses[p.role],
+    filename:`${date}_R${race}_${number}_${i+1}_${p.label}_${entry.pool}_${amount}.png`};
+  });
+ }
+ const reference={width:750,height:424,pool:'獨贏',venue:'沙田',weekday:'星期日',race:4,
+  horse:{number:10,name:'志醒大將'},amount:50000,deposit:200000,time:'06-09-2026 13:48'};
+ const assetBase='assets/';let assets=null,assetPromise=null;
+ function prepare(){
+  if(assetPromise)return assetPromise;
+  assetPromise=(async()=>{
+   if(typeof FontFace==='undefined'||!document.fonts)throw Error('瀏覽器未能載入圖片字體。');
+   const image=new Image();image.decoding='async';
+   const template=new Promise((resolve,reject)=>{
+    image.onload=()=>image.naturalWidth===reference.width&&image.naturalHeight===reference.height?resolve(image):reject(Error('原圖尺寸不符。'));
+    image.onerror=()=>reject(Error('原圖版面未能載入。'));image.src=assetBase+'record-layout-20261003.png';
+   });
+   const fontFiles=[['RecordCJK','record-cjk-500.woff2'],['RecordLatin','record-latin-500.ttf']];
+   const fonts=fontFiles.map(async([family,file])=>{
+    const face=await new FontFace(family,`url("${assetBase+file}")`,{style:'normal',weight:'400'}).load();
+    document.fonts.add(face);return face;
+   });
+   const [loaded]=await Promise.all([template,...fonts]);
+   assets={template:loaded};return assets;
+  })().catch(e=>{assetPromise=null;throw e});
+  return assetPromise;
+ }
+ function fields(plan){
+  return [
+   {value:plan.time,original:reference.time,rect:[304,6,410,55],x:309,y:43},
+   {value:plan.pool,original:reference.pool,rect:[304,79,410,54],x:309,y:117},
+   {value:`${plan.venue} ${plan.weekday} ${plan.pool} 第${plan.race}場`,original:'沙田 星期日 獨贏 第4場',rect:[304,151,410,48],x:309,y:189},
+   {value:`${plan.horse.number} ${plan.horse.name} $${plan.amount}`,original:'10 志醒大將 $50000',rect:[304,199,410,47],x:309,y:228},
+   {value:plan.amount.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),original:'50,000.00',rect:[328,263,386,55],x:327,y:301},
+   {value:(plan.deposit??0).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),original:'200,000.00',rect:[328,337,386,55],x:327,y:374}
+  ];
+ }
+ function draw(plan,canvas,loaded=assets){
+  if(!loaded?.template)throw Error('圖片版面及字體尚未載入，請稍後再試。');
+  canvas.width=reference.width;canvas.height=reference.height;
+  const c=canvas.getContext('2d');if(!c)throw Error('瀏覽器未能建立圖片。');
+  c.drawImage(loaded.template,0,0);
+  c.font='400 32px "RecordLatin","RecordCJK"';c.textBaseline='alphabetic';c.textAlign='left';
+  for(const field of fields(plan)){
+   if(field.value===field.original)continue;
+   if(c.measureText(field.value).width>field.rect[2]-6)throw Error('文字超出原圖欄位，未有更改字體大小。');
+   c.save();c.beginPath();c.rect(...field.rect);c.clip();c.fillStyle='#fff';c.fillRect(...field.rect);
+   c.fillStyle='#000';c.fillText(field.value,field.x,field.y);c.restore();
+  }
   return canvas;
  }
  function png(canvas){return new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('未能匯出PNG圖片。')),'image/png'))}
@@ -136,6 +169,6 @@
   e.setUint16(8,files.length,true);e.setUint16(10,files.length,true);e.setUint32(12,centralLength,true);e.setUint32(16,offset,true);
   return new Blob([...locals,...central,end],{type:'application/zip'});
  }
- const api={plans,numberKey,startNumber,step,hkDay,timestamp,nextNumber,commitNumber,resolve,batch,draw,png,zip,crc32};
+ const api={plans,numberKey,startNumber,step,hkDay,timestamp,nextNumber,commitNumber,resolve,batch,manualBatch,reference,prepare,fields,draw,png,zip,crc32};
  if(typeof module!=='undefined')module.exports=api;else root.PickImages=api;
 })(typeof window==='undefined'?globalThis:window);
