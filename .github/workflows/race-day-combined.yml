@@ -51,6 +51,9 @@ jobs:
           node race-day/test_live_tips.js
           node --check race-day/leg-selection.js
           node race-day/test_leg_fusion.js
+          node --check race-day/pick-images.js
+          node --check race-day/pick-images-page.js
+          node race-day/test_pick_images.js
           python - <<'PY'
           from pathlib import Path
           import re, subprocess

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>推介圖片｜Horse103 Race Day</title>
+ <link rel="stylesheet" href="pick-images.css?v=20261003-1">
+</head>
+<body><main>
+ <header>
+  <a class="back" href="./">‹ 返回賽日推介</a>
+  <p class="eyebrow">RACE DAY · 圖片服務</p><h1>四張推介，一鍵生成</h1>
+  <p class="intro">跟隨下一場未開跑賽事，使用網站已鎖定的膽馬和冷馬。</p>
+ </header>
+ <section class="live-panel" aria-label="最新場次">
+  <div class="live-heading"><span class="pill" id="stateLabel">正在載入</span><button id="refresh" type="button" class="quiet">↻ 更新</button></div>
+  <h2 id="meeting">核對當日賽事…</h2><p id="reason" role="status" aria-live="polite">正在讀取最新推介。</p>
+  <div class="horses"><div><span>推薦膽馬</span><strong id="banker">等待推介</strong></div><div><span>留意冷馬</span><strong id="cold">等待推介</strong></div></div>
+  <p id="checked" class="small"></p>
+ </section>
+ <section class="generate-panel" aria-label="生成圖片">
+  <div class="plans"><div><span>01 · 膽馬獨贏</span><b>$100</b></div><div><span>02 · 膽馬位置</span><b>$300</b></div><div><span>03 · 冷馬獨贏</span><b>$50</b></div><div><span>04 · 冷馬位置</span><b>$150</b></div></div>
+  <div class="number-line"><span>下一組編號 <strong id="nextNumber">7720</strong></span><span>每組共用編號 · 每次＋3</span></div>
+  <button id="generate" class="primary" type="button" disabled>一鍵生成4張圖片</button>
+  <p class="small">每組合共$600。編號保存在此瀏覽器；成功生成才遞增，重新下載不加號。</p>
+  <p class="note">圖片標示「投注計劃／未提交」，供保存推介使用。</p>
+  <details class="example"><summary>查看圖片版面示例</summary><p class="small">使用示例馬名及場次預覽四張圖片，不使用正式編號。</p><button id="preview" class="quiet" type="button">預覽四張圖版面</button></details>
+  <p id="message" class="message" role="status" aria-live="polite"></p>
+ </section>
+ <section id="output" hidden aria-label="已生成圖片">
+  <div class="output-heading"><div><p class="eyebrow">已生成</p><h2 id="batchTitle"></h2></div><div class="output-actions"><a id="zip" class="download" download>下載4張 ZIP</a><button id="share" type="button" class="quiet" hidden>分享4張圖片</button></div></div>
+  <p class="small">手機可長按圖片儲存，或使用下方PNG下載。分享功能按瀏覽器支援顯示。</p>
+  <div id="images" class="image-grid"></div>
+ </section>
+ <footer>推介鎖定後才可生成；缺膽馬、冷馬或馬名時會顯示原因。</footer>
+</main>
+<script src="live-tips.js?v=20261002-cold-fusion-legs"></script>
+<script src="pick-images.js?v=20261003-1"></script>
+<script src="pick-images-page.js?v=20261003-1"></script>
+</body></html>

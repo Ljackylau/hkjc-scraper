@@ -391,7 +391,7 @@ async def run(args):
         last=0
         try:
             while not all(t.done() for t in tasks):
-                atomic(folder/'status.json',{'date':args.date,'updated_at':now().isoformat(),'mode':'shadow','races':states,
+                atomic(folder/'status.json',{'date':args.date,'venue':args.venue,'updated_at':now().isoformat(),'mode':'shadow','races':states,
                                              'independent_tips':frozen_tips,
                                              'errors':[str(t.exception()) for t in tasks if t.done() and t.exception()]})
                 critical=any(s.get('target') and -90<=(datetime.fromisoformat(s['target'])-now()).total_seconds()<=70 for s in states.values())
@@ -408,7 +408,7 @@ async def run(args):
             await asyncio.gather(*tasks,return_exceptions=True)
             if trials_task and not trials_task.done():trials_task.cancel()
             if trials_task:await asyncio.gather(trials_task,return_exceptions=True)
-            atomic(folder/'status.json',{'date':args.date,'updated_at':now().isoformat(),'mode':'shadow','races':states,
+            atomic(folder/'status.json',{'date':args.date,'venue':args.venue,'updated_at':now().isoformat(),'mode':'shadow','races':states,
                                          'independent_tips':frozen_tips})
             if args.push:await asyncio.to_thread(publish,folder)
             await browser.close()
