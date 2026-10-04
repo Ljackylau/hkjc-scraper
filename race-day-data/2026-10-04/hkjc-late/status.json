@@ -1,7 +1,7 @@
 {
   "date": "2026-10-04",
   "venue": "ST",
-  "updated_at": "2026-10-04T16:40:56.750325+08:00",
+  "updated_at": "2026-10-04T16:41:02.928107+08:00",
   "mode": "shadow",
   "races": {
     "6": {
@@ -224,12 +224,13 @@
       "status": "collecting",
       "target": "2026-10-04T16:42:00+08:00",
       "baseline": true,
-      "last_received": "2026-10-04T16:40:56.228375+08:00"
+      "last_received": "2026-10-04T16:41:02.229284+08:00"
     },
     "10": {
       "status": "retrying",
       "target": "2026-10-04T17:12:00+08:00",
       "errors": [
+        "Stale source timestamp",
         "Stale source timestamp",
         "Stale source timestamp"
       ]
