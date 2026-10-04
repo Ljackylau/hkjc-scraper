@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "observed",
-      "samples_this_run": 309,
-      "received_at": "2026-10-04T14:29:23.803734+08:00",
+      "samples_this_run": 313,
+      "received_at": "2026-10-04T14:30:04.525371+08:00",
       "source_updated_at": "2026-10-04T14:24:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 323.8,
+      "source_age_seconds": 364.5,
       "numeric_quotes": 21,
       "participants": [
         {
@@ -307,17 +307,17 @@
           "normalized_implied_share": 0.000166
         }
       ],
-      "points_available": false,
+      "points_available": true,
       "points_freshness": "not_verifiable",
       "points_error": null
     },
     "jkc": {
       "state": "observed",
-      "samples_this_run": 309,
-      "received_at": "2026-10-04T14:29:23.719676+08:00",
+      "samples_this_run": 313,
+      "received_at": "2026-10-04T14:30:05.965754+08:00",
       "source_updated_at": "2026-10-04T14:28:00+08:00",
-      "source_recent": true,
-      "source_age_seconds": 83.7,
+      "source_recent": false,
+      "source_age_seconds": 126.0,
       "numeric_quotes": 14,
       "participants": [
         {
@@ -517,13 +517,13 @@
           "normalized_implied_share": 0.00017
         }
       ],
-      "points_available": false,
+      "points_available": true,
       "points_freshness": "not_verifiable",
       "points_error": null
     }
   },
   "research_only": true,
-  "interval_seconds": 10,
+  "interval_seconds": 60,
   "phase_races": [
     1,
     2,
@@ -531,5 +531,5 @@
     4,
     5
   ],
-  "updated_at": "2026-10-04T14:29:23.807968+08:00"
+  "updated_at": "2026-10-04T14:30:06.640269+08:00"
 }
