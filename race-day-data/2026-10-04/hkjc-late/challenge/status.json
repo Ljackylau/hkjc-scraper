@@ -5,11 +5,11 @@
   "pools": {
     "jkc": {
       "state": "observed",
-      "samples_this_run": 299,
-      "received_at": "2026-10-04T16:06:09.241229+08:00",
-      "source_updated_at": "2026-10-04T16:04:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 129.2,
+      "samples_this_run": 300,
+      "received_at": "2026-10-04T16:07:09.739231+08:00",
+      "source_updated_at": "2026-10-04T16:06:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 69.7,
       "numeric_quotes": 11,
       "participants": [
         {
@@ -24,7 +24,7 @@
           "current_odds": 1.07,
           "quote_text": "1.07",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.827238
+          "normalized_implied_share": 0.826611
         },
         {
           "selection_id": "4",
@@ -38,7 +38,7 @@
           "current_odds": 6.5,
           "quote_text": "6.50",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.136176
+          "normalized_implied_share": 0.136073
         },
         {
           "selection_id": "2",
@@ -52,7 +52,7 @@
           "current_odds": 55.0,
           "quote_text": "55",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.016094
+          "normalized_implied_share": 0.016081
         },
         {
           "selection_id": "5",
@@ -66,7 +66,21 @@
           "current_odds": 65.0,
           "quote_text": "65",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.013618
+          "normalized_implied_share": 0.013607
+        },
+        {
+          "selection_id": "3",
+          "name": "巴度",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 500.0,
+          "current_odds": 350.0,
+          "quote_text": "350",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.002527
         },
         {
           "selection_id": "9",
@@ -80,7 +94,7 @@
           "current_odds": 400.0,
           "quote_text": "400",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.002213
+          "normalized_implied_share": 0.002211
         },
         {
           "selection_id": "7",
@@ -94,21 +108,7 @@
           "current_odds": 500.0,
           "quote_text": "500",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.00177
-        },
-        {
-          "selection_id": "3",
-          "name": "巴度",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": 45.0,
-          "current_odds": 500.0,
-          "quote_text": "500",
-          "opening_drop_pct": null,
-          "normalized_implied_share": 0.00177
+          "normalized_implied_share": 0.001769
         },
         {
           "selection_id": "6",
@@ -215,11 +215,11 @@
     },
     "tnc": {
       "state": "observed",
-      "samples_this_run": 299,
-      "received_at": "2026-10-04T16:06:09.189387+08:00",
+      "samples_this_run": 300,
+      "received_at": "2026-10-04T16:07:09.130099+08:00",
       "source_updated_at": "2026-10-04T16:01:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 309.2,
+      "source_age_seconds": 369.1,
       "numeric_quotes": 16,
       "participants": [
         {
@@ -531,5 +531,5 @@
     9,
     10
   ],
-  "updated_at": "2026-10-04T16:06:10.414606+08:00"
+  "updated_at": "2026-10-04T16:07:09.801887+08:00"
 }
