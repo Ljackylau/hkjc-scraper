@@ -1,7 +1,7 @@
 {
   "date": "2026-10-04",
   "venue": "ST",
-  "updated_at": "2026-10-04T13:28:04.505119+08:00",
+  "updated_at": "2026-10-04T13:28:10.655085+08:00",
   "mode": "shadow",
   "races": {
     "1": {
@@ -221,8 +221,10 @@
       "source": "HKJC odds movement; experimental"
     },
     "4": {
-      "status": "waiting",
-      "target": "2026-10-04T13:57:00+08:00"
+      "status": "collecting",
+      "target": "2026-10-04T13:57:00+08:00",
+      "baseline": false,
+      "last_received": "2026-10-04T13:28:10.129674+08:00"
     },
     "5": {
       "status": "waiting",
