@@ -1,14 +1,17 @@
 {
   "date": "2026-10-04",
-  "updated_at": "2026-10-04T12:26:52.657699+08:00",
+  "updated_at": "2026-10-04T12:26:57.662062+08:00",
   "research_only": true,
   "pairs": {
     "1": {
-      "status": "collecting",
+      "status": "saved",
       "first_race": 1,
       "second_race": 2,
       "target": "2026-10-04T12:26:50+08:00",
-      "last_received": "2026-10-04T12:26:43.435176+08:00"
+      "last_received": "2026-10-04T12:26:53.538863+08:00",
+      "received_at": "2026-10-04T12:26:43.435176+08:00",
+      "source_updated": "2026-10-04T12:26:00+08:00",
+      "matrix_complete": true
     },
     "2": {
       "status": "waiting",
