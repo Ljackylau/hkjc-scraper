@@ -51,6 +51,10 @@ jobs:
           node race-day/test_live_tips.js
           node --check race-day/leg-selection.js
           node race-day/test_leg_fusion.js
+          node --check race-day/track-bias.js
+          node --check race-day/track-bias-page.js
+          node race-day/test_track_bias.js
+          node race-day/test_track_bias_page.js
           node --check race-day/pick-images.js
           node --check race-day/pick-images-page.js
           node race-day/test_pick_images.js
