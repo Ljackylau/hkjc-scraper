@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "observed",
-      "samples_this_run": 137,
-      "received_at": "2026-10-04T13:19:03.657832+08:00",
-      "source_updated_at": "2026-10-04T13:12:00+08:00",
+      "samples_this_run": 139,
+      "received_at": "2026-10-04T13:21:03.941699+08:00",
+      "source_updated_at": "2026-10-04T13:19:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 423.7,
+      "source_age_seconds": 123.9,
       "numeric_quotes": 21,
       "participants": [
         {
@@ -24,7 +24,7 @@
           "current_odds": 3.0,
           "quote_text": "3.00",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.276604
+          "normalized_implied_share": 0.276221
         },
         {
           "selection_id": "3",
@@ -34,11 +34,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 2.75,
-          "current_odds": 3.25,
-          "quote_text": "3.25",
+          "previous_odds": 3.25,
+          "current_odds": 3.2,
+          "quote_text": "3.20",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.255327
+          "normalized_implied_share": 0.258957
         },
         {
           "selection_id": "2",
@@ -52,7 +52,7 @@
           "current_odds": 9.0,
           "quote_text": "9.00",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.092201
+          "normalized_implied_share": 0.092074
         },
         {
           "selection_id": "4",
@@ -62,11 +62,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 11.0,
-          "current_odds": 10.0,
-          "quote_text": "10.0",
+          "previous_odds": 10.0,
+          "current_odds": 11.0,
+          "quote_text": "11.0",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.082981
+          "normalized_implied_share": 0.075333
         },
         {
           "selection_id": "7",
@@ -80,7 +80,7 @@
           "current_odds": 13.0,
           "quote_text": "13.0",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.063832
+          "normalized_implied_share": 0.063743
         },
         {
           "selection_id": "5",
@@ -94,7 +94,21 @@
           "current_odds": 14.0,
           "quote_text": "14.0",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.059272
+          "normalized_implied_share": 0.05919
+        },
+        {
+          "selection_id": "11",
+          "name": "呂健威",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 28.0,
+          "current_odds": 25.0,
+          "quote_text": "25",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.033147
         },
         {
           "selection_id": "6",
@@ -108,21 +122,7 @@
           "current_odds": 25.0,
           "quote_text": "25",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.033192
-        },
-        {
-          "selection_id": "11",
-          "name": "呂健威",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": 22.0,
-          "current_odds": 28.0,
-          "quote_text": "28",
-          "opening_drop_pct": null,
-          "normalized_implied_share": 0.029636
+          "normalized_implied_share": 0.033147
         },
         {
           "selection_id": "8",
@@ -136,7 +136,7 @@
           "current_odds": 28.0,
           "quote_text": "28",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.029636
+          "normalized_implied_share": 0.029595
         },
         {
           "selection_id": "9",
@@ -150,7 +150,7 @@
           "current_odds": 45.0,
           "quote_text": "45",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.01844
+          "normalized_implied_share": 0.018415
         },
         {
           "selection_id": "10",
@@ -164,7 +164,7 @@
           "current_odds": 45.0,
           "quote_text": "45",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.01844
+          "normalized_implied_share": 0.018415
         },
         {
           "selection_id": "12",
@@ -178,7 +178,7 @@
           "current_odds": 85.0,
           "quote_text": "85",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.009762
+          "normalized_implied_share": 0.009749
         },
         {
           "selection_id": "14",
@@ -192,7 +192,7 @@
           "current_odds": 100.0,
           "quote_text": "100",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.008298
+          "normalized_implied_share": 0.008287
         },
         {
           "selection_id": "13",
@@ -206,7 +206,7 @@
           "current_odds": 150.0,
           "quote_text": "150",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.005532
+          "normalized_implied_share": 0.005524
         },
         {
           "selection_id": "16",
@@ -220,7 +220,21 @@
           "current_odds": 200.0,
           "quote_text": "200",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.004149
+          "normalized_implied_share": 0.004143
+        },
+        {
+          "selection_id": "17",
+          "name": "黎昭昇",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 300.0,
+          "current_odds": 200.0,
+          "quote_text": "200",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.004143
         },
         {
           "selection_id": "15",
@@ -234,7 +248,7 @@
           "current_odds": 250.0,
           "quote_text": "250",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.003319
+          "normalized_implied_share": 0.003315
         },
         {
           "selection_id": "18",
@@ -248,21 +262,7 @@
           "current_odds": 250.0,
           "quote_text": "250",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.003319
-        },
-        {
-          "selection_id": "17",
-          "name": "黎昭昇",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": 100.0,
-          "current_odds": 300.0,
-          "quote_text": "300",
-          "opening_drop_pct": null,
-          "normalized_implied_share": 0.002766
+          "normalized_implied_share": 0.003315
         },
         {
           "selection_id": "20",
@@ -276,7 +276,7 @@
           "current_odds": 400.0,
           "quote_text": "400",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.002075
+          "normalized_implied_share": 0.002072
         },
         {
           "selection_id": "19",
@@ -290,7 +290,7 @@
           "current_odds": 1250.0,
           "quote_text": "1250",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.000664
+          "normalized_implied_share": 0.000663
         },
         {
           "selection_id": "21",
@@ -304,7 +304,7 @@
           "current_odds": 1500.0,
           "quote_text": "1500",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.000553
+          "normalized_implied_share": 0.000552
         }
       ],
       "points_available": true,
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "observed",
-      "samples_this_run": 137,
-      "received_at": "2026-10-04T13:19:04.163790+08:00",
+      "samples_this_run": 139,
+      "received_at": "2026-10-04T13:21:03.881945+08:00",
       "source_updated_at": "2026-10-04T13:17:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 124.2,
+      "source_age_seconds": 243.9,
       "numeric_quotes": 14,
       "participants": [
         {
@@ -531,5 +531,5 @@
     4,
     5
   ],
-  "updated_at": "2026-10-04T13:19:04.859921+08:00"
+  "updated_at": "2026-10-04T13:21:04.033406+08:00"
 }

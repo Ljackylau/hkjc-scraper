@@ -3,10 +3,10 @@
   "date": "2026-10-04",
   "venue": "ST",
   "kind": "tnc",
-  "received_at": "2026-10-04T13:19:03.657832+08:00",
+  "received_at": "2026-10-04T13:21:03.941699+08:00",
   "url": "https://bet.hkjc.com/ch/racing/tnc/2026-10-04/ST/1",
-  "source_updated_at": "2026-10-04T13:12:00+08:00",
-  "source_age_seconds": 423.7,
+  "source_updated_at": "2026-10-04T13:19:00+08:00",
+  "source_age_seconds": 123.9,
   "source_recent": false,
   "state": "observed",
   "numeric_quotes": 21,
@@ -23,7 +23,7 @@
       "current_odds": 3.0,
       "quote_text": "3.00",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.276604
+      "normalized_implied_share": 0.276221
     },
     {
       "selection_id": "3",
@@ -33,11 +33,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 2.75,
-      "current_odds": 3.25,
-      "quote_text": "3.25",
+      "previous_odds": 3.25,
+      "current_odds": 3.2,
+      "quote_text": "3.20",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.255327
+      "normalized_implied_share": 0.258957
     },
     {
       "selection_id": "2",
@@ -51,7 +51,7 @@
       "current_odds": 9.0,
       "quote_text": "9.00",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.092201
+      "normalized_implied_share": 0.092074
     },
     {
       "selection_id": "4",
@@ -61,11 +61,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 11.0,
-      "current_odds": 10.0,
-      "quote_text": "10.0",
+      "previous_odds": 10.0,
+      "current_odds": 11.0,
+      "quote_text": "11.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.082981
+      "normalized_implied_share": 0.075333
     },
     {
       "selection_id": "7",
@@ -79,7 +79,7 @@
       "current_odds": 13.0,
       "quote_text": "13.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.063832
+      "normalized_implied_share": 0.063743
     },
     {
       "selection_id": "5",
@@ -93,7 +93,21 @@
       "current_odds": 14.0,
       "quote_text": "14.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.059272
+      "normalized_implied_share": 0.05919
+    },
+    {
+      "selection_id": "11",
+      "name": "呂健威",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 28.0,
+      "current_odds": 25.0,
+      "quote_text": "25",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.033147
     },
     {
       "selection_id": "6",
@@ -107,21 +121,7 @@
       "current_odds": 25.0,
       "quote_text": "25",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.033192
-    },
-    {
-      "selection_id": "11",
-      "name": "呂健威",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": 22.0,
-      "current_odds": 28.0,
-      "quote_text": "28",
-      "opening_drop_pct": null,
-      "normalized_implied_share": 0.029636
+      "normalized_implied_share": 0.033147
     },
     {
       "selection_id": "8",
@@ -135,7 +135,7 @@
       "current_odds": 28.0,
       "quote_text": "28",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.029636
+      "normalized_implied_share": 0.029595
     },
     {
       "selection_id": "9",
@@ -149,7 +149,7 @@
       "current_odds": 45.0,
       "quote_text": "45",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.01844
+      "normalized_implied_share": 0.018415
     },
     {
       "selection_id": "10",
@@ -163,7 +163,7 @@
       "current_odds": 45.0,
       "quote_text": "45",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.01844
+      "normalized_implied_share": 0.018415
     },
     {
       "selection_id": "12",
@@ -177,7 +177,7 @@
       "current_odds": 85.0,
       "quote_text": "85",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.009762
+      "normalized_implied_share": 0.009749
     },
     {
       "selection_id": "14",
@@ -191,7 +191,7 @@
       "current_odds": 100.0,
       "quote_text": "100",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.008298
+      "normalized_implied_share": 0.008287
     },
     {
       "selection_id": "13",
@@ -205,7 +205,7 @@
       "current_odds": 150.0,
       "quote_text": "150",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.005532
+      "normalized_implied_share": 0.005524
     },
     {
       "selection_id": "16",
@@ -219,7 +219,21 @@
       "current_odds": 200.0,
       "quote_text": "200",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.004149
+      "normalized_implied_share": 0.004143
+    },
+    {
+      "selection_id": "17",
+      "name": "黎昭昇",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 300.0,
+      "current_odds": 200.0,
+      "quote_text": "200",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.004143
     },
     {
       "selection_id": "15",
@@ -233,7 +247,7 @@
       "current_odds": 250.0,
       "quote_text": "250",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.003319
+      "normalized_implied_share": 0.003315
     },
     {
       "selection_id": "18",
@@ -247,21 +261,7 @@
       "current_odds": 250.0,
       "quote_text": "250",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.003319
-    },
-    {
-      "selection_id": "17",
-      "name": "黎昭昇",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": 100.0,
-      "current_odds": 300.0,
-      "quote_text": "300",
-      "opening_drop_pct": null,
-      "normalized_implied_share": 0.002766
+      "normalized_implied_share": 0.003315
     },
     {
       "selection_id": "20",
@@ -275,7 +275,7 @@
       "current_odds": 400.0,
       "quote_text": "400",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.002075
+      "normalized_implied_share": 0.002072
     },
     {
       "selection_id": "19",
@@ -289,7 +289,7 @@
       "current_odds": 1250.0,
       "quote_text": "1250",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.000664
+      "normalized_implied_share": 0.000663
     },
     {
       "selection_id": "21",
@@ -303,10 +303,10 @@
       "current_odds": 1500.0,
       "quote_text": "1500",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.000553
+      "normalized_implied_share": 0.000552
     }
   ],
-  "header": "練馬師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 13:12\n田\nS4\n所有場次即時投注將於第 10 場前截止\n添加到投注區\n練馬師王統計\n練馬師王出馬表\n練馬師王賠率走勢圖\n全日練馬師分場表\n練馬師王積分\n玩法\n受注時間\n練馬師資料",
+  "header": "練馬師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 13:19\n田\nS4\n所有場次即時投注將於第 10 場前截止\n添加到投注區\n練馬師王統計\n練馬師王出馬表\n練馬師王賠率走勢圖\n全日練馬師分場表\n練馬師王積分\n玩法\n受注時間\n練馬師資料",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -314,61 +314,61 @@
       "race_number": 1,
       "post_time": "2026-10-04T12:30:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2943.7
+      "seconds_to_off": -3063.9
     },
     {
       "race_number": 2,
       "post_time": "2026-10-04T13:00:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -1143.7
+      "seconds_to_off": -1263.9
     },
     {
       "race_number": 3,
       "post_time": "2026-10-04T13:30:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 656.3
+      "seconds_to_off": 536.1
     },
     {
       "race_number": 4,
       "post_time": "2026-10-04T14:00:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 2456.3
+      "seconds_to_off": 2336.1
     },
     {
       "race_number": 5,
       "post_time": "2026-10-04T14:30:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 4256.3
+      "seconds_to_off": 4136.1
     },
     {
       "race_number": 6,
       "post_time": "2026-10-04T15:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 6056.3
+      "seconds_to_off": 5936.1
     },
     {
       "race_number": 7,
       "post_time": "2026-10-04T15:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 8156.3
+      "seconds_to_off": 8036.1
     },
     {
       "race_number": 8,
       "post_time": "2026-10-04T16:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 9956.3
+      "seconds_to_off": 9836.1
     },
     {
       "race_number": 9,
       "post_time": "2026-10-04T16:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 11756.3
+      "seconds_to_off": 11636.1
     },
     {
       "race_number": 10,
       "post_time": "2026-10-04T17:10:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 13856.3
+      "seconds_to_off": 13736.1
     }
   ],
   "raw_tables": [
@@ -394,8 +394,8 @@
         "姚本輝",
         "12",
         "8",
-        "2.75",
-        "3.25"
+        "3.25",
+        "3.20"
       ],
       [
         "2",
@@ -410,8 +410,8 @@
         "沈集成",
         "6",
         "9",
-        "11.0",
-        "10.0"
+        "10.0",
+        "11.0"
       ],
       [
         "7",
@@ -430,20 +430,20 @@
         "14.0"
       ],
       [
+        "11",
+        "呂健威",
+        "4",
+        "6",
+        "28",
+        "25"
+      ],
+      [
         "6",
         "游達榮",
         "0",
         "6",
         "17.0",
         "25"
-      ],
-      [
-        "11",
-        "呂健威",
-        "4",
-        "6",
-        "22",
-        "28"
       ],
       [
         "8",
@@ -502,6 +502,14 @@
         "200"
       ],
       [
+        "17",
+        "黎昭昇",
+        "0",
+        "5",
+        "300",
+        "200"
+      ],
+      [
         "15",
         "鄭俊偉",
         "0",
@@ -516,14 +524,6 @@
         "4",
         "300",
         "250"
-      ],
-      [
-        "17",
-        "黎昭昇",
-        "0",
-        "5",
-        "100",
-        "300"
       ],
       [
         "20",
