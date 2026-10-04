@@ -1,0 +1,92 @@
+{
+  "status": "observed",
+  "rule": "jkc odds from previous race off to this race T-3 observation",
+  "previous_race": 4,
+  "race": 5,
+  "t3_received_at": "2026-10-04T14:27:04.159028+08:00",
+  "t3_source_updated_at": "2026-10-04T14:21:00+08:00",
+  "baseline_source_updated_at": "2026-10-04T13:58:00+08:00",
+  "baseline_age_at_off_seconds": 120.0,
+  "t3_source_age_seconds": 364.2,
+  "source_recent": false,
+  "changes": [
+    {
+      "name": "班德禮",
+      "before_odds": 1000.0,
+      "t3_odds": 5000.0,
+      "drop_pct": -400.0
+    },
+    {
+      "name": "奧爾民",
+      "before_odds": 200.0,
+      "t3_odds": 600.0,
+      "drop_pct": -200.0
+    },
+    {
+      "name": "袁幸堯",
+      "before_odds": 40.0,
+      "t3_odds": 75.0,
+      "drop_pct": -87.5
+    },
+    {
+      "name": "潘明輝",
+      "before_odds": 250.0,
+      "t3_odds": 35.0,
+      "drop_pct": 86.0
+    },
+    {
+      "name": "巴度",
+      "before_odds": 65.0,
+      "t3_odds": 16.0,
+      "drop_pct": 75.38
+    },
+    {
+      "name": "周俊樂",
+      "before_odds": 85.0,
+      "t3_odds": 125.0,
+      "drop_pct": -47.06
+    },
+    {
+      "name": "霍宏聲",
+      "before_odds": 300.0,
+      "t3_odds": 400.0,
+      "drop_pct": -33.33
+    },
+    {
+      "name": "希威森",
+      "before_odds": 400.0,
+      "t3_odds": 300.0,
+      "drop_pct": 25.0
+    },
+    {
+      "name": "艾兆禮",
+      "before_odds": 400.0,
+      "t3_odds": 300.0,
+      "drop_pct": 25.0
+    },
+    {
+      "name": "金誠剛",
+      "before_odds": 500.0,
+      "t3_odds": 600.0,
+      "drop_pct": -20.0
+    },
+    {
+      "name": "何澤堯",
+      "before_odds": 6.5,
+      "t3_odds": 7.5,
+      "drop_pct": -15.38
+    },
+    {
+      "name": "田泰安",
+      "before_odds": 14.0,
+      "t3_odds": 13.0,
+      "drop_pct": 7.14
+    },
+    {
+      "name": "潘頓",
+      "before_odds": 1.15,
+      "t3_odds": 1.2,
+      "drop_pct": -4.35
+    }
+  ]
+}
