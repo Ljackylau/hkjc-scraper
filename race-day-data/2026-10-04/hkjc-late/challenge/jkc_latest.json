@@ -3,13 +3,13 @@
   "date": "2026-10-04",
   "venue": "ST",
   "kind": "jkc",
-  "received_at": "2026-10-04T17:23:09.384225+08:00",
+  "received_at": "2026-10-04T17:24:10.329560+08:00",
   "url": "https://bet.hkjc.com/ch/racing/jkc/2026-10-04/ST/1",
-  "source_updated_at": "2026-10-04T17:19:00+08:00",
-  "source_age_seconds": 249.4,
-  "source_recent": false,
-  "state": "observed",
-  "numeric_quotes": 7,
+  "source_updated_at": "2026-10-04T17:23:00+08:00",
+  "source_age_seconds": 70.3,
+  "source_recent": true,
+  "state": "no_numeric_quotes",
+  "numeric_quotes": 0,
   "participants": [
     {
       "selection_id": "1",
@@ -19,11 +19,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 1.25,
-      "current_odds": 1.22,
-      "quote_text": "1.22",
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.702238
+      "normalized_implied_share": null
     },
     {
       "selection_id": "4",
@@ -33,11 +33,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 4.65,
-      "current_odds": 5.0,
-      "quote_text": "5.00",
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.171346
+      "normalized_implied_share": null
     },
     {
       "selection_id": "3",
@@ -47,11 +47,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 25.0,
-      "current_odds": 10.0,
-      "quote_text": "10.0",
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.085673
+      "normalized_implied_share": null
     },
     {
       "selection_id": "9",
@@ -61,11 +61,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 40.0,
-      "current_odds": 45.0,
-      "quote_text": "45",
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.019038
+      "normalized_implied_share": null
     },
     {
       "selection_id": "2",
@@ -75,11 +75,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 100.0,
-      "current_odds": 75.0,
-      "quote_text": "75",
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.011423
+      "normalized_implied_share": null
     },
     {
       "selection_id": "7",
@@ -89,11 +89,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 200.0,
-      "current_odds": 125.0,
-      "quote_text": "125",
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.006854
+      "normalized_implied_share": null
     },
     {
       "selection_id": "5",
@@ -103,11 +103,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 2000.0,
-      "current_odds": 250.0,
-      "quote_text": "250",
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.003427
+      "normalized_implied_share": null
     },
     {
       "selection_id": "12",
@@ -208,7 +208,7 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "騎師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 17:19\n田\nS4\n所有場次即時投注將於第 10 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
+  "header": "騎師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 17:23\n田\nS4\n所有場次騎師王 1 暫停即場投注。即時投注將於第 10 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -216,61 +216,61 @@
       "race_number": 1,
       "post_time": "2026-10-04T12:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -17589.4
+      "seconds_to_off": -17650.3
     },
     {
       "race_number": 2,
       "post_time": "2026-10-04T13:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -15789.4
+      "seconds_to_off": -15850.3
     },
     {
       "race_number": 3,
       "post_time": "2026-10-04T13:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -13989.4
+      "seconds_to_off": -14050.3
     },
     {
       "race_number": 4,
       "post_time": "2026-10-04T14:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -12189.4
+      "seconds_to_off": -12250.3
     },
     {
       "race_number": 5,
       "post_time": "2026-10-04T14:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -10389.4
+      "seconds_to_off": -10450.3
     },
     {
       "race_number": 6,
       "post_time": "2026-10-04T15:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -7989.4
+      "seconds_to_off": -8050.3
     },
     {
       "race_number": 7,
       "post_time": "2026-10-04T15:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -5889.4
+      "seconds_to_off": -5950.3
     },
     {
       "race_number": 8,
       "post_time": "2026-10-04T16:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -4089.4
+      "seconds_to_off": -4150.3
     },
     {
       "race_number": 9,
       "post_time": "2026-10-04T16:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2289.4
+      "seconds_to_off": -2350.3
     },
     {
       "race_number": 10,
       "post_time": "2026-10-04T17:20:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -189.4
+      "seconds_to_off": -250.3
     }
   ],
   "raw_tables": [
@@ -288,56 +288,56 @@
         "潘頓",
         "34",
         "2",
-        "1.25",
-        "1.22"
+        "---",
+        "---"
       ],
       [
         "4",
         "田泰安",
         "34",
         "1",
-        "4.65",
-        "5.00"
+        "---",
+        "---"
       ],
       [
         "3",
         "巴度",
         "22",
         "2",
-        "25",
-        "10.0"
+        "---",
+        "---"
       ],
       [
         "9",
         "奧爾民",
         "18",
         "2",
-        "40",
-        "45"
+        "---",
+        "---"
       ],
       [
         "2",
         "何澤堯",
         "14",
         "2",
-        "100",
-        "75"
+        "---",
+        "---"
       ],
       [
         "7",
         "袁幸堯",
         "12",
         "2",
-        "200",
-        "125"
+        "---",
+        "---"
       ],
       [
         "5",
         "潘明輝",
         "22",
         "1",
-        "2000",
-        "250"
+        "---",
+        "---"
       ],
       [
         "12",
