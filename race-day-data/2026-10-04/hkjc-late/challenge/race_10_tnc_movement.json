@@ -1,0 +1,62 @@
+{
+  "status": "observed",
+  "rule": "tnc odds from previous race off to this race T-3 observation",
+  "previous_race": 9,
+  "race": 10,
+  "t3_received_at": "2026-10-04T17:17:09.328938+08:00",
+  "t3_source_updated_at": "2026-10-04T17:09:00+08:00",
+  "baseline_source_updated_at": "2026-10-04T16:39:00+08:00",
+  "baseline_age_at_off_seconds": 360.0,
+  "t3_source_age_seconds": 489.3,
+  "source_recent": false,
+  "changes": [
+    {
+      "name": "文家良",
+      "before_odds": 35.0,
+      "t3_odds": 400.0,
+      "drop_pct": -1042.86
+    },
+    {
+      "name": "徐雨石",
+      "before_odds": 300.0,
+      "t3_odds": 2000.0,
+      "drop_pct": -566.67
+    },
+    {
+      "name": "鄭俊偉",
+      "before_odds": 3.5,
+      "t3_odds": 18.0,
+      "drop_pct": -414.29
+    },
+    {
+      "name": "黎昭昇",
+      "before_odds": 25.0,
+      "t3_odds": 85.0,
+      "drop_pct": -240.0
+    },
+    {
+      "name": "羅富全",
+      "before_odds": 2.85,
+      "t3_odds": 9.0,
+      "drop_pct": -215.79
+    },
+    {
+      "name": "大衛希斯",
+      "before_odds": 7.0,
+      "t3_odds": 1.36,
+      "drop_pct": 80.57
+    },
+    {
+      "name": "沈集成",
+      "before_odds": 125.0,
+      "t3_odds": 200.0,
+      "drop_pct": -60.0
+    },
+    {
+      "name": "姚本輝",
+      "before_odds": 4.0,
+      "t3_odds": 4.25,
+      "drop_pct": -6.25
+    }
+  ]
+}
