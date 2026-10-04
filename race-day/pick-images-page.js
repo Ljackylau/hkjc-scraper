@@ -120,7 +120,7 @@
   select.replaceChildren(new Option(placeholder,''),...items.map(x=>new Option(x.label,x.value)));
  }
  async function readJson(url,headers){
-  const r=await fetch(url,{headers,cache:'no-store',signal:AbortSignal.timeout(7000)});
+  const r=await fetch(url,{headers,cache:'no-store',signal:AbortSignal.timeout(20000)});
   if(!r.ok)throw Error('HTTP '+r.status);return r.json();
  }
  function currentMeeting(){return meetings.find(r=>`${r.venue}:${r.race}`===$('manualMeetingRace').value)}
