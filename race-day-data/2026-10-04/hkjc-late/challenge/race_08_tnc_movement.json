@@ -1,0 +1,110 @@
+{
+  "status": "observed",
+  "rule": "tnc odds from previous race off to this race T-3 observation",
+  "previous_race": 7,
+  "race": 8,
+  "t3_received_at": "2026-10-04T16:12:08.873293+08:00",
+  "t3_source_updated_at": "2026-10-04T16:01:00+08:00",
+  "baseline_source_updated_at": "2026-10-04T15:36:00+08:00",
+  "baseline_age_at_off_seconds": 540.0,
+  "t3_source_age_seconds": 668.9,
+  "source_recent": false,
+  "changes": [
+    {
+      "name": "桂福特",
+      "before_odds": 200.0,
+      "t3_odds": 2000.0,
+      "drop_pct": -900.0
+    },
+    {
+      "name": "廖康銘",
+      "before_odds": 35.0,
+      "t3_odds": 175.0,
+      "drop_pct": -400.0
+    },
+    {
+      "name": "呂健威",
+      "before_odds": 75.0,
+      "t3_odds": 300.0,
+      "drop_pct": -300.0
+    },
+    {
+      "name": "文家良",
+      "before_odds": 9.0,
+      "t3_odds": 35.0,
+      "drop_pct": -288.89
+    },
+    {
+      "name": "徐雨石",
+      "before_odds": 175.0,
+      "t3_odds": 400.0,
+      "drop_pct": -128.57
+    },
+    {
+      "name": "鄭俊偉",
+      "before_odds": 15.0,
+      "t3_odds": 4.75,
+      "drop_pct": 68.33
+    },
+    {
+      "name": "大衛希斯",
+      "before_odds": 5.5,
+      "t3_odds": 9.0,
+      "drop_pct": -63.64
+    },
+    {
+      "name": "姚本輝",
+      "before_odds": 4.0,
+      "t3_odds": 2.75,
+      "drop_pct": 31.25
+    },
+    {
+      "name": "巫偉傑",
+      "before_odds": 100.0,
+      "t3_odds": 125.0,
+      "drop_pct": -25.0
+    },
+    {
+      "name": "葉楚航",
+      "before_odds": 200.0,
+      "t3_odds": 250.0,
+      "drop_pct": -25.0
+    },
+    {
+      "name": "黎昭昇",
+      "before_odds": 250.0,
+      "t3_odds": 300.0,
+      "drop_pct": -20.0
+    },
+    {
+      "name": "羅富全",
+      "before_odds": 3.0,
+      "t3_odds": 3.5,
+      "drop_pct": -16.67
+    },
+    {
+      "name": "蔡約翰",
+      "before_odds": 75.0,
+      "t3_odds": 85.0,
+      "drop_pct": -13.33
+    },
+    {
+      "name": "游達榮",
+      "before_odds": 12.0,
+      "t3_odds": 11.0,
+      "drop_pct": 8.33
+    },
+    {
+      "name": "沈集成",
+      "before_odds": 28.0,
+      "t3_odds": 30.0,
+      "drop_pct": -7.14
+    },
+    {
+      "name": "方嘉柏",
+      "before_odds": 40.0,
+      "t3_odds": 40.0,
+      "drop_pct": 0.0
+    }
+  ]
+}
