@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 129,
-      "received_at": "2026-10-04T13:11:03.922113+08:00",
+      "samples_this_run": 130,
+      "received_at": "2026-10-04T13:12:04.069809+08:00",
       "source_updated_at": "2026-10-04T13:03:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 483.9,
+      "source_age_seconds": 544.1,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 129,
-      "received_at": "2026-10-04T13:11:03.973894+08:00",
-      "source_updated_at": "2026-10-04T13:03:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 484.0,
+      "samples_this_run": 130,
+      "received_at": "2026-10-04T13:12:04.477164+08:00",
+      "source_updated_at": "2026-10-04T13:11:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 64.5,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -377,8 +377,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "6",
-          "name": "周俊樂",
+          "selection_id": "4",
+          "name": "田泰安",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -391,22 +391,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "14",
-          "name": "其他騎師",
-          "is_other": true,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "4",
-          "name": "田泰安",
+          "selection_id": "6",
+          "name": "周俊樂",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -422,6 +408,20 @@
           "selection_id": "5",
           "name": "潘明輝",
           "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "14",
+          "name": "其他騎師",
+          "is_other": true,
           "scheduled_rides": null,
           "remaining_rides": null,
           "points": null,
@@ -461,8 +461,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "12",
-          "name": "艾兆禮",
+          "selection_id": "11",
+          "name": "希威森",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -489,8 +489,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "11",
-          "name": "希威森",
+          "selection_id": "12",
+          "name": "艾兆禮",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -531,5 +531,5 @@
     4,
     5
   ],
-  "updated_at": "2026-10-04T13:11:04.379994+08:00"
+  "updated_at": "2026-10-04T13:12:05.072486+08:00"
 }
