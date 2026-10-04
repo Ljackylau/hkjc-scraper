@@ -1,0 +1,376 @@
+{
+  "captured_at": "2026-10-04T04:27:09.530768+00:00",
+  "formula": "S = 0.60 * (Live103 valueIndex / 100) + 0.20 * normalized QP amount + 0.20 * normalized Q amount",
+  "race": {
+    "id": "4b62a230-5894-4375-897e-bee6d16e9a0d",
+    "race_number": 1,
+    "post_time": "12:30",
+    "venue": "沙田",
+    "distance": 1650,
+    "course": "全天候"
+  },
+  "lock_time": "2026-10-04T04:27:00.000Z",
+  "live103_raw": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-04T04:27:02.678Z",
+    "postTime": "2026-10-04T04:30:00.000Z",
+    "previewTime": "2026-10-04T04:23:00.000Z",
+    "lockTime": "2026-10-04T04:27:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 4,
+        "nameTc": "神駒馬靈",
+        "nameEn": "SOARING BRONCO",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 74,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 13,
+        "nameTc": "上市魅力",
+        "nameEn": "GO GO GO",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "光輝歲月",
+        "nameEn": "HAILTOTHEVICTORS",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "東方魅影",
+        "nameEn": "ORIENTAL SURPRISE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 64,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "知恩圖報",
+        "nameEn": "MAZING GRACE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 62,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 14,
+        "nameTc": "一鹿歡騰",
+        "nameEn": "HAPPYDEARHAPPYDEER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "東方寶寶",
+        "nameEn": "DOUBLE BINGO",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "怪獸叉燒",
+        "nameEn": "VIVA TASTE",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 7,
+        "nameTc": "悠悠乾坤",
+        "nameEn": "CELESTIAL HARMONY"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 12,
+      "nameTc": "東方魅影",
+      "nameEn": "ORIENTAL SURPRISE",
+      "confidence": "high",
+      "reason": "東方魅影近績極佳，潘頓今季成績彪炳，曾於同程跑獲亞軍，狀態勇銳，有力爭勝。",
+      "previewHorseNumber": null
+    }
+  },
+  "ticket_cutoff": "2026-10-04T04:27:00.000Z",
+  "base_race_id": 24418,
+  "source_ticket_race_id": 24418,
+  "qp_max_amount": 0.0,
+  "q_max_amount": 30000.0,
+  "used_q_and_qp_tickets": [
+    {
+      "id": 454088,
+      "race_id": 24418,
+      "race_date": "2026-10-04",
+      "horse_or_combo": "11-14",
+      "bet_type": "Q",
+      "amount": 30000,
+      "amount_str": "30K",
+      "bet_time": "10:07",
+      "scraped_at": "2026-10-04T03:07:02.218981+00:00"
+    }
+  ],
+  "ranking": [
+    {
+      "horse_number": 11,
+      "name_tc": "知恩圖報",
+      "name_en": "MAZING GRACE",
+      "formula_score": 0.572,
+      "live_value_index": 62.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 30000.0
+    },
+    {
+      "horse_number": 4,
+      "name_tc": "神駒馬靈",
+      "name_en": "SOARING BRONCO",
+      "formula_score": 0.444,
+      "live_value_index": 74.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 13,
+      "name_tc": "上市魅力",
+      "name_en": "GO GO GO",
+      "formula_score": 0.408,
+      "live_value_index": 68.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "光輝歲月",
+      "name_en": "HAILTOTHEVICTORS",
+      "formula_score": 0.402,
+      "live_value_index": 67.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "東方魅影",
+      "name_en": "ORIENTAL SURPRISE",
+      "formula_score": 0.384,
+      "live_value_index": 64.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 14,
+      "name_tc": "一鹿歡騰",
+      "name_en": "HAPPYDEARHAPPYDEER",
+      "formula_score": 0.2,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 30000.0
+    },
+    {
+      "horse_number": 1,
+      "name_tc": "東方寶寶",
+      "name_en": "DOUBLE BINGO",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 3,
+      "name_tc": "順成之星",
+      "name_en": "FORTUNE SUPERNOVA",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 5,
+      "name_tc": "旭能精英",
+      "name_en": "RISING ELITE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 6,
+      "name_tc": "猛將兄",
+      "name_en": "SWAGGER BRO",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 7,
+      "name_tc": "悠悠乾坤",
+      "name_en": "CELESTIAL HARMONY",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 8,
+      "name_tc": "怪獸叉燒",
+      "name_en": "VIVA TASTE",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 9,
+      "name_tc": "藍爵爺",
+      "name_en": "BLUE BARON",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 10,
+      "name_tc": "至高心得",
+      "name_en": "KOLACHI",
+      "formula_score": 0.0,
+      "live_value_index": 0.0,
+      "live_command": null,
+      "live_capital_signal": null,
+      "is_live_candidate": false,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "main_pick": {
+    "horse_number": 11,
+    "name_tc": "知恩圖報",
+    "name_en": "MAZING GRACE",
+    "formula_score": 0.572,
+    "live_value_index": 62.0,
+    "live_command": "follow",
+    "live_capital_signal": "steady",
+    "is_live_candidate": true,
+    "qp_amount": 0.0,
+    "q_amount": 30000.0
+  },
+  "other_four": [
+    {
+      "horse_number": 4,
+      "name_tc": "神駒馬靈",
+      "name_en": "SOARING BRONCO",
+      "formula_score": 0.444,
+      "live_value_index": 74.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 13,
+      "name_tc": "上市魅力",
+      "name_en": "GO GO GO",
+      "formula_score": 0.408,
+      "live_value_index": 68.0,
+      "live_command": "aggressive",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 2,
+      "name_tc": "光輝歲月",
+      "name_en": "HAILTOTHEVICTORS",
+      "formula_score": 0.402,
+      "live_value_index": 67.0,
+      "live_command": "follow",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    },
+    {
+      "horse_number": 12,
+      "name_tc": "東方魅影",
+      "name_en": "ORIENTAL SURPRISE",
+      "formula_score": 0.384,
+      "live_value_index": 64.0,
+      "live_command": "observe",
+      "live_capital_signal": "steady",
+      "is_live_candidate": true,
+      "qp_amount": 0.0,
+      "q_amount": 0.0
+    }
+  ],
+  "live_received_at": "2026-10-04T12:27:08.469232+08:00",
+  "capture_delay_seconds": 8.47,
+  "timing_note": "First valid response after T-3; actual receipt timestamp retained.",
+  "source_data_quality": "ready",
+  "incomplete_live_candidates": []
+}

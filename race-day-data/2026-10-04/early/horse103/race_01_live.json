@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "4b62a230-5894-4375-897e-bee6d16e9a0d",
+    "race_number": 1,
+    "post_time": "12:30",
+    "venue": "沙田",
+    "distance": 1650,
+    "course": "全天候"
+  },
+  "date": "2026-10-04",
+  "expected_lock": "2026-10-04T12:27:00+08:00",
+  "live_received_at": "2026-10-04T12:27:08.469232+08:00",
+  "capture_delay_seconds": 8.47,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-04T04:27:02.678Z",
+    "postTime": "2026-10-04T04:30:00.000Z",
+    "previewTime": "2026-10-04T04:23:00.000Z",
+    "lockTime": "2026-10-04T04:27:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 4,
+        "nameTc": "神駒馬靈",
+        "nameEn": "SOARING BRONCO",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 74,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 13,
+        "nameTc": "上市魅力",
+        "nameEn": "GO GO GO",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "光輝歲月",
+        "nameEn": "HAILTOTHEVICTORS",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "東方魅影",
+        "nameEn": "ORIENTAL SURPRISE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 64,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "知恩圖報",
+        "nameEn": "MAZING GRACE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 62,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 14,
+        "nameTc": "一鹿歡騰",
+        "nameEn": "HAPPYDEARHAPPYDEER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "東方寶寶",
+        "nameEn": "DOUBLE BINGO",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "怪獸叉燒",
+        "nameEn": "VIVA TASTE",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 7,
+        "nameTc": "悠悠乾坤",
+        "nameEn": "CELESTIAL HARMONY"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 12,
+      "nameTc": "東方魅影",
+      "nameEn": "ORIENTAL SURPRISE",
+      "confidence": "high",
+      "reason": "東方魅影近績極佳，潘頓今季成績彪炳，曾於同程跑獲亞軍，狀態勇銳，有力爭勝。",
+      "previewHorseNumber": null
+    }
+  }
+}
