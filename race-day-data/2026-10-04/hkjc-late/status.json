@@ -1,14 +1,80 @@
 {
   "date": "2026-10-04",
   "venue": "ST",
-  "updated_at": "2026-10-04T15:06:56.356384+08:00",
+  "updated_at": "2026-10-04T15:07:02.525548+08:00",
   "mode": "shadow",
   "races": {
     "6": {
-      "status": "collecting",
+      "status": "shadow",
       "target": "2026-10-04T15:07:00+08:00",
-      "baseline": true,
-      "last_received": "2026-10-04T15:06:56.328272+08:00"
+      "received_at": "2026-10-04T15:07:00.351932+08:00",
+      "source_updated": {
+        "wp": "2026-10-04T15:06:00+08:00",
+        "wpq": "2026-10-04T15:06:00+08:00"
+      },
+      "baseline": {
+        "kind": "t30",
+        "received_at": "2026-10-04T14:40:00.179488+08:00",
+        "minutes_to_off": 30.0,
+        "source_updated": {
+          "wp": "2026-10-04T14:39:00+08:00",
+          "wpq": "2026-10-04T14:39:00+08:00"
+        }
+      },
+      "ranking": [
+        {
+          "horse_number": 8,
+          "score": 21.721,
+          "drops_pct": {
+            "WIN": 7.69,
+            "PLA": 34.38,
+            "QIN": 25.17,
+            "QPL": 27.0
+          }
+        },
+        {
+          "horse_number": 11,
+          "score": 15.524,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 38.95,
+            "QPL": 38.67
+          }
+        },
+        {
+          "horse_number": 9,
+          "score": 13.707,
+          "drops_pct": {
+            "WIN": 9.09,
+            "PLA": 7.14,
+            "QIN": 24.34,
+            "QPL": 19.36
+          }
+        },
+        {
+          "horse_number": 6,
+          "score": 13.684,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 37.99,
+            "QPL": 30.43
+          }
+        },
+        {
+          "horse_number": 3,
+          "score": 10.941,
+          "drops_pct": {
+            "WIN": 9.43,
+            "PLA": 5.26,
+            "QIN": 13.73,
+            "QPL": 17.9
+          }
+        }
+      ],
+      "golden_legs": [],
+      "source": "HKJC odds movement; experimental"
     },
     "7": {
       "status": "retrying",
