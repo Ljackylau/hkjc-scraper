@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "b2943b2b-64b2-4406-ba1e-91a92ab1219c",
+    "race_number": 3,
+    "post_time": "13:30",
+    "venue": "沙田",
+    "distance": 1650,
+    "course": "全天候"
+  },
+  "date": "2026-10-04",
+  "expected_lock": "2026-10-04T13:27:00+08:00",
+  "live_received_at": "2026-10-04T13:27:09.072884+08:00",
+  "capture_delay_seconds": 9.07,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-04T05:27:03.239Z",
+    "postTime": "2026-10-04T05:30:00.000Z",
+    "previewTime": "2026-10-04T05:23:00.000Z",
+    "lockTime": "2026-10-04T05:27:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 7,
+        "nameTc": "滿心星",
+        "nameEn": "SKY VINO",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 71,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "將睿",
+        "nameEn": "LOCH TAY",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "時時精準",
+        "nameEn": "DEFINITIVE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "昇瀧駒",
+        "nameEn": "SING DRAGON",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 51,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "精英雄心",
+        "nameEn": "TALENTS AMBITION",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 49,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 1,
+        "nameTc": "禪勝輝煌",
+        "nameEn": "CHANCHENG GLORY",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "華麗再勝",
+        "nameEn": "GORGEOUS WIN",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "非惟僥倖",
+        "nameEn": "AWESOME FLUKE",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 2,
+      "nameTc": "精英雄心",
+      "nameEn": "TALENTS AMBITION",
+      "confidence": "high",
+      "reason": "潘頓今季成績極佳，馬匹上仗同程輕鬆取勝，操練及試閘表現良好，檔位亦理想。",
+      "previewHorseNumber": null
+    }
+  }
+}

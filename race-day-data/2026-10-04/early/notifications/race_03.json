@@ -1,0 +1,239 @@
+{
+  "sent_at": "2026-10-04T13:27:00.505782+08:00",
+  "race": 3,
+  "status": "saved",
+  "message": "🏇 R3\n獨贏&位置信心馬：7號\n連贏位置Q：7號 拖 3號、2號、8號、5號\n最有可能爆冷馬：5號（二重彩第二位市場支持）\n選腳：第四腳換入冷馬5號（截止WIN 18倍）；原6號",
+  "method_b": {
+    "method": "independent_hybrid_v1",
+    "status": "independent",
+    "banker": 7,
+    "reason": "fixed-baseline market movement",
+    "received_at": "2026-10-04T13:26:48.274720+08:00"
+  },
+  "independent_tip": {
+    "date": "2026-10-04",
+    "race": 3,
+    "off": "2026-10-04T13:30:00+08:00",
+    "freeze": "2026-10-04T13:26:50+08:00",
+    "method": "independent_hybrid_v1",
+    "cutoff": "2026-10-04T13:27:00+08:00",
+    "banker": 7,
+    "legs": [
+      3,
+      2,
+      8,
+      5
+    ],
+    "banker_source": "fixed-baseline market movement",
+    "banker_scores": {
+      "1": 4.516,
+      "2": 1.228,
+      "3": 9.881,
+      "4": 1.072,
+      "5": 19.238,
+      "6": 15.013,
+      "7": 25.846,
+      "8": 18.812
+    },
+    "leg_scores": {
+      "1": 0.38571428571428573,
+      "2": 0.7428571428571429,
+      "3": 0.7714285714285716,
+      "4": 0.17142857142857143,
+      "5": 0.14285714285714285,
+      "6": 0.44285714285714284,
+      "7": 0.7714285714285715,
+      "8": 0.5714285714285714
+    },
+    "received_at": "2026-10-04T13:26:48.274720+08:00",
+    "experimental": true,
+    "not_a_probability": true,
+    "status": "ready",
+    "market": [
+      7,
+      5,
+      8,
+      6,
+      3
+    ],
+    "golden": [],
+    "legs_f": [
+      3,
+      2
+    ],
+    "legs_qp": [
+      8
+    ],
+    "banker_qp_odds": {
+      "1": 10.0,
+      "2": 2.5,
+      "3": 4.9,
+      "4": 18.0,
+      "5": 10.0,
+      "6": 5.4,
+      "8": 3.7
+    },
+    "legs_method": "f2_qp1_cold_10_30_exploratory_2026_10_02",
+    "legs_status": "ready",
+    "legs_reason": "",
+    "baseline_received_at": "2026-10-04T13:19:55.190235+08:00",
+    "long_baseline_received_at": "2026-10-04T13:02:40.157676+08:00",
+    "runner_rows": [
+      [
+        "1",
+        "",
+        "禪勝輝煌",
+        "2",
+        "135",
+        "周俊樂 (-2)",
+        "呂健威",
+        "13",
+        "3.6",
+        ""
+      ],
+      [
+        "2",
+        "",
+        "精英雄心",
+        "4",
+        "128",
+        "潘頓",
+        "廖康銘",
+        "2.2",
+        "1.7",
+        ""
+      ],
+      [
+        "3",
+        "",
+        "昇瀧駒",
+        "8",
+        "127",
+        "蔡明紹",
+        "蘇偉賢",
+        "6.6",
+        "1.8",
+        ""
+      ],
+      [
+        "4",
+        "",
+        "華麗再勝",
+        "5",
+        "122",
+        "金誠剛",
+        "沈集成",
+        "16",
+        "4.2",
+        ""
+      ],
+      [
+        "5",
+        "",
+        "非惟僥倖",
+        "3",
+        "120",
+        "袁幸堯 (-7)",
+        "姚本輝",
+        "18",
+        "4.9",
+        ""
+      ],
+      [
+        "6",
+        "",
+        "時時精準",
+        "7",
+        "115",
+        "田泰安",
+        "游達榮",
+        "13",
+        "1.9",
+        ""
+      ],
+      [
+        "7",
+        "",
+        "滿心星",
+        "1",
+        "115",
+        "巴度",
+        "方嘉柏",
+        "5.2",
+        "1.2",
+        ""
+      ],
+      [
+        "8",
+        "",
+        "將睿",
+        "6",
+        "115",
+        "班德禮",
+        "游達榮",
+        "6.8",
+        "2.4",
+        ""
+      ]
+    ],
+    "source_updated": {
+      "wp": "2026-10-04T13:26:00+08:00",
+      "wpq": "2026-10-04T13:26:00+08:00"
+    },
+    "cold": [
+      5
+    ],
+    "cold_status": "ready",
+    "cold_policy": "cold_top2_priority_v2_exploratory_2026-10-02",
+    "cold_freeze": "2026-10-04T13:26:50+08:00",
+    "cold_target": "top2",
+    "cold_probability_calibrated": false,
+    "cold_group": [],
+    "cold_missing": [],
+    "cold_branch": "market_second",
+    "cold_branch_label": "二重彩第二位市場支持",
+    "cold_win": 18.0,
+    "cold_received_at": "2026-10-04T13:26:48.274720+08:00",
+    "cold_fct_received_at": "2026-10-04T13:26:48.351914+08:00",
+    "cold_sources": {
+      "wp": {
+        "wp": "2026-10-04T13:26:00+08:00",
+        "wpq": "2026-10-04T13:26:00+08:00"
+      },
+      "fct": "2026-10-04T13:26:00+08:00",
+      "historical_prepared_at": "2026-10-04T12:09:09.386618+08:00"
+    },
+    "cold_partial": false,
+    "legs_original": [
+      3,
+      2,
+      8,
+      6
+    ],
+    "legs_original_method": "f2_banker_qp2_v1",
+    "legs_original_qp": [
+      8,
+      6
+    ],
+    "legs_fusion_changed": true,
+    "legs_added": 5,
+    "legs_removed": 6,
+    "legs_cold": [
+      5
+    ],
+    "legs_fusion_win": 18.0,
+    "legs_fusion_reason_code": "cold_replaces_fourth",
+    "legs_fusion_reason": "第四腳換入冷馬5號（截止WIN 18倍）；原6號",
+    "generated_at": "2026-10-04T13:26:50.016525+08:00"
+  },
+  "market": [
+    3,
+    2,
+    8,
+    5
+  ],
+  "golden": [],
+  "cold": [
+    5
+  ]
+}
