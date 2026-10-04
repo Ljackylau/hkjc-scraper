@@ -3,13 +3,13 @@
   "date": "2026-10-04",
   "venue": "ST",
   "kind": "jkc",
-  "received_at": "2026-10-04T15:56:09.235132+08:00",
+  "received_at": "2026-10-04T15:57:09.115183+08:00",
   "url": "https://bet.hkjc.com/ch/racing/jkc/2026-10-04/ST/1",
-  "source_updated_at": "2026-10-04T15:54:00+08:00",
-  "source_age_seconds": 129.2,
-  "source_recent": false,
+  "source_updated_at": "2026-10-04T15:56:00+08:00",
+  "source_age_seconds": 69.1,
+  "source_recent": true,
   "state": "observed",
-  "numeric_quotes": 12,
+  "numeric_quotes": 11,
   "participants": [
     {
       "selection_id": "1",
@@ -23,7 +23,7 @@
       "current_odds": 1.07,
       "quote_text": "1.07",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.830865
+      "normalized_implied_share": 0.83105
     },
     {
       "selection_id": "4",
@@ -37,7 +37,7 @@
       "current_odds": 6.5,
       "quote_text": "6.50",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.136773
+      "normalized_implied_share": 0.136804
     },
     {
       "selection_id": "2",
@@ -51,7 +51,7 @@
       "current_odds": 65.0,
       "quote_text": "65",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.013677
+      "normalized_implied_share": 0.01368
     },
     {
       "selection_id": "5",
@@ -65,7 +65,7 @@
       "current_odds": 75.0,
       "quote_text": "75",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.011854
+      "normalized_implied_share": 0.011856
     },
     {
       "selection_id": "9",
@@ -124,20 +124,6 @@
       "normalized_implied_share": 0.000296
     },
     {
-      "selection_id": "14",
-      "name": "其他騎師",
-      "is_other": true,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": 300.0,
-      "current_odds": 4000.0,
-      "quote_text": "4000",
-      "opening_drop_pct": null,
-      "normalized_implied_share": 0.000222
-    },
-    {
       "selection_id": "12",
       "name": "艾兆禮",
       "is_other": false,
@@ -180,6 +166,20 @@
       "normalized_implied_share": 0.000178
     },
     {
+      "selection_id": "14",
+      "name": "其他騎師",
+      "is_other": true,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "未能勝出",
+      "opening_drop_pct": null,
+      "normalized_implied_share": null
+    },
+    {
       "selection_id": "11",
       "name": "希威森",
       "is_other": false,
@@ -208,7 +208,7 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "騎師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 15:54\n田\nS4\n所有場次騎師王 1 暫停即場投注。即時投注將於第 10 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
+  "header": "騎師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 15:56\n田\nS4\n所有場次即時投注將於第 10 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -216,61 +216,61 @@
       "race_number": 1,
       "post_time": "2026-10-04T12:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -12369.2
+      "seconds_to_off": -12429.1
     },
     {
       "race_number": 2,
       "post_time": "2026-10-04T13:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -10569.2
+      "seconds_to_off": -10629.1
     },
     {
       "race_number": 3,
       "post_time": "2026-10-04T13:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -8769.2
+      "seconds_to_off": -8829.1
     },
     {
       "race_number": 4,
       "post_time": "2026-10-04T14:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -6969.2
+      "seconds_to_off": -7029.1
     },
     {
       "race_number": 5,
       "post_time": "2026-10-04T14:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -5169.2
+      "seconds_to_off": -5229.1
     },
     {
       "race_number": 6,
       "post_time": "2026-10-04T15:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2769.2
+      "seconds_to_off": -2829.1
     },
     {
       "race_number": 7,
       "post_time": "2026-10-04T15:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -669.2
+      "seconds_to_off": -729.1
     },
     {
       "race_number": 8,
       "post_time": "2026-10-04T16:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1130.8
+      "seconds_to_off": 1070.9
     },
     {
       "race_number": 9,
       "post_time": "2026-10-04T16:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 2330.8
+      "seconds_to_off": 2270.9
     },
     {
       "race_number": 10,
       "post_time": "2026-10-04T17:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 4430.8
+      "seconds_to_off": 4370.9
     }
   ],
   "raw_tables": [
@@ -348,14 +348,6 @@
         "3000"
       ],
       [
-        "14",
-        "其他騎師",
-        "6",
-        "詳情",
-        "300",
-        "4000"
-      ],
-      [
         "12",
         "艾兆禮",
         "0",
@@ -378,6 +370,14 @@
         "3",
         "3000",
         "5000"
+      ],
+      [
+        "14",
+        "其他騎師",
+        "6",
+        "詳情",
+        "---",
+        "未能勝出"
       ],
       [
         "11",
