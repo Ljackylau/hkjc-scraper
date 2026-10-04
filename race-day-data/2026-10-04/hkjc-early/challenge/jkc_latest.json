@@ -3,10 +3,10 @@
   "date": "2026-10-04",
   "venue": "ST",
   "kind": "jkc",
-  "received_at": "2026-10-04T13:40:03.989962+08:00",
+  "received_at": "2026-10-04T13:41:04.048361+08:00",
   "url": "https://bet.hkjc.com/ch/racing/jkc/2026-10-04/ST/1",
-  "source_updated_at": "2026-10-04T13:32:00+08:00",
-  "source_age_seconds": 484.0,
+  "source_updated_at": "2026-10-04T13:39:00+08:00",
+  "source_age_seconds": 124.0,
   "source_recent": false,
   "state": "no_numeric_quotes",
   "numeric_quotes": 0,
@@ -28,6 +28,20 @@
     {
       "selection_id": "2",
       "name": "何澤堯",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
+      "opening_drop_pct": null,
+      "normalized_implied_share": null
+    },
+    {
+      "selection_id": "4",
+      "name": "田泰安",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -68,20 +82,6 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "4",
-      "name": "田泰安",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
       "selection_id": "6",
       "name": "周俊樂",
       "is_other": false,
@@ -96,22 +96,8 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "14",
-      "name": "其他騎師",
-      "is_other": true,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
-      "selection_id": "8",
-      "name": "金誠剛",
+      "selection_id": "9",
+      "name": "奧爾民",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -152,20 +138,6 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "9",
-      "name": "奧爾民",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
       "selection_id": "10",
       "name": "霍宏聲",
       "is_other": false,
@@ -180,8 +152,36 @@
       "normalized_implied_share": null
     },
     {
+      "selection_id": "14",
+      "name": "其他騎師",
+      "is_other": true,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
+      "opening_drop_pct": null,
+      "normalized_implied_share": null
+    },
+    {
       "selection_id": "12",
       "name": "艾兆禮",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
+      "opening_drop_pct": null,
+      "normalized_implied_share": null
+    },
+    {
+      "selection_id": "8",
+      "name": "金誠剛",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -208,7 +208,7 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "騎師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 13:32\n田\nS4\n所有場次騎師王 1 暫停即場投注。即時投注將於第 10 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
+  "header": "騎師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 13:39\n田\nS4\n所有場次騎師王 1 暫停即場投注。即時投注將於第 10 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -216,61 +216,61 @@
       "race_number": 1,
       "post_time": "2026-10-04T12:30:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -4204.0
+      "seconds_to_off": -4264.0
     },
     {
       "race_number": 2,
       "post_time": "2026-10-04T13:00:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2404.0
+      "seconds_to_off": -2464.0
     },
     {
       "race_number": 3,
       "post_time": "2026-10-04T13:30:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -604.0
+      "seconds_to_off": -664.0
     },
     {
       "race_number": 4,
       "post_time": "2026-10-04T14:00:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1196.0
+      "seconds_to_off": 1136.0
     },
     {
       "race_number": 5,
       "post_time": "2026-10-04T14:30:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 2996.0
+      "seconds_to_off": 2936.0
     },
     {
       "race_number": 6,
       "post_time": "2026-10-04T15:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 4796.0
+      "seconds_to_off": 4736.0
     },
     {
       "race_number": 7,
       "post_time": "2026-10-04T15:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 6896.0
+      "seconds_to_off": 6836.0
     },
     {
       "race_number": 8,
       "post_time": "2026-10-04T16:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 8696.0
+      "seconds_to_off": 8636.0
     },
     {
       "race_number": 9,
       "post_time": "2026-10-04T16:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 10496.0
+      "seconds_to_off": 10436.0
     },
     {
       "race_number": 10,
       "post_time": "2026-10-04T17:10:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 12596.0
+      "seconds_to_off": 12536.0
     }
   ],
   "raw_tables": [
@@ -300,6 +300,14 @@
         "---"
       ],
       [
+        "4",
+        "田泰安",
+        "0",
+        "8",
+        "---",
+        "---"
+      ],
+      [
         "7",
         "袁幸堯",
         "12",
@@ -316,14 +324,6 @@
         "---"
       ],
       [
-        "4",
-        "田泰安",
-        "0",
-        "8",
-        "---",
-        "---"
-      ],
-      [
         "6",
         "周俊樂",
         "0",
@@ -332,18 +332,10 @@
         "---"
       ],
       [
-        "14",
-        "其他騎師",
-        "6",
-        "詳情",
-        "---",
-        "---"
-      ],
-      [
-        "8",
-        "金誠剛",
+        "9",
+        "奧爾民",
         "0",
-        "7",
+        "6",
         "---",
         "---"
       ],
@@ -364,14 +356,6 @@
         "---"
       ],
       [
-        "9",
-        "奧爾民",
-        "0",
-        "6",
-        "---",
-        "---"
-      ],
-      [
         "10",
         "霍宏聲",
         "0",
@@ -380,10 +364,26 @@
         "---"
       ],
       [
+        "14",
+        "其他騎師",
+        "6",
+        "詳情",
+        "---",
+        "---"
+      ],
+      [
         "12",
         "艾兆禮",
         "0",
         "5",
+        "---",
+        "---"
+      ],
+      [
+        "8",
+        "金誠剛",
+        "0",
+        "7",
         "---",
         "---"
       ],
