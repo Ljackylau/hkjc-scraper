@@ -28,7 +28,7 @@
    }));
    phases=results.filter(r=>r.status==='fulfilled').map(r=>r.value);
    $('checked').textContent='最後檢查：'+new Date().toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong',hour12:false});
-   view();numberView();
+   view();numberView();if($('manualMeetingDate').value===date)loadMeeting();
   })().catch(()=>{phases=[];view();$('reason').textContent='暫時未能讀取推介，請更新後再試。'}).finally(()=>{loading=null;$('refresh').disabled=false});
   return loading;
  }
@@ -113,11 +113,112 @@
  try{const draft=JSON.parse(localStorage.getItem(draftKey)||'{}');for(const el of $('manualForm').querySelectorAll('input,select'))if(typeof draft[el.id]==='string')el.value=draft[el.id]}catch(e){}
  $('manualForm').addEventListener('input',saveDraft);$('manualForm').addEventListener('change',saveDraft);
 
+ const publicApi='https://pkrdkibqjwwgtvfdtwya.supabase.co/rest/v1/';
+ const publicHeaders={apikey:'sb_publishable_pP988ZhTMZ4GDYKk8AAnYw_kAViFMFI'};
+ let meetings=[],horses=[],meetingRequest=0,horseRequest=0,autoTime=false,meetingChecked=0,meetingLoading=false,rosterKey='';
+ function options(select,items,placeholder){
+  select.replaceChildren(new Option(placeholder,''),...items.map(x=>new Option(x.label,x.value)));
+ }
+ async function readJson(url,headers){
+  const r=await fetch(url,{headers,cache:'no-store',signal:AbortSignal.timeout(7000)});
+  if(!r.ok)throw Error('HTTP '+r.status);return r.json();
+ }
+ function currentMeeting(){return meetings.find(r=>`${r.venue}:${r.race}`===$('manualMeetingRace').value)}
+ function fillHorse(key){
+  const h=horses.find(h=>h.number===Number($('manual'+key+'Number').value));
+  $('manual'+key+'Horse').value=h?String(h.number):'';
+  // Never retain a previous horse's name after changing its number.
+  $('manual'+key+'Name').value=h?h.name:'';saveDraft();
+ }
+ async function loadHorses(r,clear=false){
+  const token=++horseRequest,date=$('manualMeetingDate').value;
+  horses=[];rosterKey='';
+  for(const key of ['Banker','Cold']){
+   options($('manual'+key+'Horse'),[],'正在讀取馬匹…');
+   if(clear){$('manual'+key+'Number').value='';$('manual'+key+'Name').value=''}
+  }
+  let found=P.roster(r.tip?.runner_rows),from='HKJC';
+  if(!found.length&&r.id)try{
+   const params=new URLSearchParams({select:'horse_number,horses(name_tc)',race_id:'eq.'+r.id,is_standby:'eq.false',withdrawn_at:'is.null'});
+   found=P.roster(await readJson(publicApi+'race_entries?'+params,publicHeaders));from='Horse103';
+  }catch(e){}
+  if(!found.length){
+   for(const suffix of ['t3','t30'])try{
+    const value=await readJson(`${source}${date}/hkjc-${r.phase}/race_${String(r.race).padStart(2,'0')}_${suffix}.json`);
+    found=P.roster(value.runner_rows);if(found.length)break;
+   }catch(e){}
+  }
+  if(token!==horseRequest||$('manualMeetingRace').value!==`${r.venue}:${r.race}`||date!==$('manualMeetingDate').value)return;
+  horses=found;rosterKey=date+'/'+r.venue+':'+r.race;
+  for(const key of ['Banker','Cold']){
+   options($('manual'+key+'Horse'),horses.map(h=>({value:String(h.number),label:`${h.number} · ${h.name}`})),horses.length?'請選擇馬號':'未有馬匹資料，可手動填寫');
+   const h=horses.find(h=>h.number===Number($('manual'+key+'Number').value));
+   if(h){$('manual'+key+'Horse').value=String(h.number);$('manual'+key+'Name').value=h.name}
+  }
+  $('manualMeetingStatus').textContent=horses.length?`馬匹資料：${from}。選馬號會自動填入馬名；日期時間及馬名仍可手動修改。`:'暫時未能取得本場馬名，請更新賽事再試，或手動填寫。';saveDraft();
+ }
+ function applyMeeting(clear=true){
+  const r=currentMeeting();if(!r)return;
+  autoTime=true;$('manualDatetime').value=P.twoMinutesBefore(r.off);
+  $('manualVenue').value=r.venue;$('manualRace').value=r.race;
+  $('manualMeetingStatus').textContent='已填入開跑前2分鐘；正在讀取馬匹。';saveDraft();loadHorses(r,clear);
+ }
+ async function loadMeeting(force=false){
+  const date=$('manualMeetingDate').value;if(!/^\d{4}-\d{2}-\d{2}$/.test(date))return;
+  if(!force&&(meetingLoading||Date.now()-meetingChecked<15000))return;
+  const token=++meetingRequest;meetingLoading=true;meetingChecked=Date.now();
+  $('manualMeetingRefresh').disabled=true;
+  if(!meetings.length)$('manualMeetingStatus').textContent='正在讀取賽事…';
+  try{
+   const tasks=[readJson(publicApi+'races?'+new URLSearchParams({select:'id,race_number,post_time,venue',race_date:'eq.'+date,order:'race_number.asc'}),publicHeaders),
+    ...['early','late'].map(phase=>date===P.hkDay()?Promise.resolve(phases.find(p=>p.phase===phase)||null):readJson(`${source}${date}/hkjc-${phase}/status.json`).then(p=>({...p,phase})))];
+   const results=await Promise.allSettled(tasks);
+   if(token!==meetingRequest||date!==$('manualMeetingDate').value)return;
+   const rows=results[0].status==='fulfilled'&&Array.isArray(results[0].value)?results[0].value:[];
+   const statuses=results.slice(1).filter(r=>r.status==='fulfilled'&&r.value).map(r=>r.value);
+   const chosen=$('manualMeetingRace').value,old=currentMeeting();meetings=P.meeting(statuses,date,rows);
+   options($('manualMeetingRace'),meetings.map(r=>({value:`${r.venue}:${r.race}`,label:`${r.venue==='ST'?'沙田':'跑馬地'} 第${r.race}場 · 開跑 ${P.timestamp(r.off).slice(-5)} → ${P.timestamp(r.off-120000).slice(-5)}`})),'請選擇賽事');
+   $('manualMeetingRace').value=meetings.some(r=>`${r.venue}:${r.race}`===chosen)?chosen:'';
+   const r=currentMeeting();
+   if(r){
+    if(autoTime){$('manualDatetime').value=P.twoMinutesBefore(r.off);saveDraft()}
+    if(force||rosterKey!==date+'/'+r.venue+':'+r.race)loadHorses(r);
+    if(old&&old.off!==r.off&&autoTime)$('manualMeetingStatus').textContent='開跑時間已更新；日期時間已同步至新開跑前2分鐘。';
+   }else $('manualMeetingStatus').textContent=meetings.length?'選擇賽事即可填入開跑前2分鐘及場地、場次。':'這個日期未有賽事資料；仍可手動輸入日期時間、場次及馬名。';
+  }finally{if(token===meetingRequest){meetingLoading=false;$('manualMeetingRefresh').disabled=false}}
+ }
+ $('manualMeetingDate').value=$('manualMeetingDate').value||$('manualDatetime').value.slice(0,10)||P.hkDay();
+ $('manualMeetingRace').addEventListener('change',()=>{if(currentMeeting())applyMeeting();else autoTime=false});
+ $('manualMeetingRefresh').addEventListener('click',()=>loadMeeting(true));
+ $('manualMeetingDate').addEventListener('change',()=>{
+  ++horseRequest;meetings=[];horses=[];rosterKey='';autoTime=false;meetingChecked=0;
+  options($('manualMeetingRace'),[],'請選擇賽事');
+  for(const key of ['Banker','Cold']){options($('manual'+key+'Horse'),[],'請先選擇賽事');$('manual'+key+'Number').value='';$('manual'+key+'Name').value=''}
+  saveDraft();loadMeeting(true);
+ });
+ $('manualDatetime').addEventListener('input',()=>{
+  autoTime=false;const date=$('manualDatetime').value.slice(0,10);
+  if(date&&date!==$('manualMeetingDate').value){$('manualMeetingDate').value=date;$('manualMeetingDate').dispatchEvent(new Event('change'))}
+ });
+ for(const key of ['Banker','Cold']){
+  $('manual'+key+'Horse').addEventListener('change',()=>{$('manual'+key+'Number').value=$('manual'+key+'Horse').value;fillHorse(key)});
+  $('manual'+key+'Number').addEventListener('input',()=>fillHorse(key));
+ }
+ for(const id of ['manualVenue','manualRace'])$(id).addEventListener('change',()=>{
+  const key=$('manualVenue').value+':'+$('manualRace').value;
+  $('manualMeetingRace').value=meetings.some(r=>`${r.venue}:${r.race}`===key)?key:'';
+  ++horseRequest;horses=[];rosterKey='';
+  for(const role of ['Banker','Cold']){options($('manual'+role+'Horse'),[],'請先選擇賽事');$('manual'+role+'Number').value='';$('manual'+role+'Name').value=''}
+  if(currentMeeting())applyMeeting();else autoTime=false;saveDraft();
+ });
+ loadMeeting(true);
+
  $('useLive').addEventListener('click',()=>{
   view();if(selection.status!=='ready')return;
-  $('manualDatetime').value=P.hkDay()+'T'+P.timestamp(Date.now()).slice(-5);$('manualVenue').value=selection.venue;$('manualRace').value=selection.race;
+  $('manualMeetingDate').value=selection.date;$('manualDatetime').value=P.twoMinutesBefore(selection.off);$('manualVenue').value=selection.venue;$('manualRace').value=selection.race;
+  $('manualMeetingRace').value=selection.venue+':'+selection.race;autoTime=true;
   for(const [role,key] of [['banker','Banker'],['cold','Cold']]){$('manual'+key+'Number').value=selection[role].number;$('manual'+key+'Name').value=selection[role].name}
-  saveDraft();
+  saveDraft();const r=currentMeeting();if(r)loadHorses(r);
  });
  $('manualForm').addEventListener('submit',async event=>{
   event.preventDefault();if(busy)return;

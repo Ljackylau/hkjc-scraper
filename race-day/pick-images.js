@@ -102,6 +102,45 @@
     filename:`${date}_R${race}_${number}_${i+1}_${p.label}_${entry.pool}_${amount}.png`};
   });
  }
+ function meeting(phases,date,rows=[]){
+  const races=new Map();
+  const venueCode=v=>['ST','沙田'].includes(v)?'ST':['HV','跑馬地'].includes(v)?'HV':null;
+  for(const r of rows){
+   const venue=venueCode(r.venue),race=Number(r.race_number);
+   const clock=String(r.post_time||'');
+   const off=/^\d{2}:\d{2}(:\d{2})?$/.test(clock)?Date.parse(`${date}T${clock.length===5?clock+':00':clock}+08:00`):NaN;
+   if(venue&&Number.isInteger(race)&&race>=1&&race<=14&&Number.isFinite(off)&&hkDay(off)===date)
+    races.set(`${venue}:${race}`,{venue,race,off,id:r.id,phase:race<=Math.floor(rows.length/2)?'early':'late'});
+  }
+  for(const p of phases){
+   if(p.date!==date||!venueCode(p.venue))continue;
+   const venue=venueCode(p.venue);
+   for(const n of new Set([...Object.keys(p.races||{}),...Object.keys(p.independent_tips||{})])){
+    const race=Number(n),tip=p.independent_tips?.[n],off=p.races?.[n]?.target?Date.parse(p.races[n].target)+180000:Date.parse(tip?.off);
+    if(!Number.isInteger(race)||race<1||race>14||!Number.isFinite(off)||hkDay(off)!==date)continue;
+    const key=`${venue}:${race}`;
+    // A waiting collector still has the manually entered original schedule.
+    const effectiveOff=p.races?.[n]?.status==='waiting'&&races.has(key)?races.get(key).off:off;
+    races.set(key,{...races.get(key),venue,race,off:effectiveOff,phase:p.phase,tip});
+   }
+  }
+  return [...races.values()].sort((a,b)=>a.off-b.off||a.race-b.race);
+ }
+ function twoMinutesBefore(off){
+  if(!Number.isFinite(off))throw Error('未有有效開跑時間');
+  const p=hkParts(off-120000);return `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}`;
+ }
+ function roster(rows){
+  const horses=new Map();
+  for(const r of rows||[]){
+   const number=Number(Array.isArray(r)?r[0]:r.horse_number);
+   const name=String(Array.isArray(r)?r[2]||'':r.horses?.name_tc||'').trim();
+   if(!Number.isInteger(number)||number<1||number>14||!name)continue;
+   if(Array.isArray(r)&&/SCR|退出|退賽/i.test(r.join(' ')))continue;
+   horses.set(number,{number,name});
+  }
+  return [...horses.values()].sort((a,b)=>a.number-b.number);
+ }
  const reference={width:750,height:424,pool:'獨贏',venue:'沙田',weekday:'星期日',race:4,
   horse:{number:10,name:'志醒大將'},amount:50000,deposit:200000,time:'06-09-2026 13:48'};
  const assetBase='assets/';let assets=null,assetPromise=null;
@@ -169,6 +208,6 @@
   e.setUint16(8,files.length,true);e.setUint16(10,files.length,true);e.setUint32(12,centralLength,true);e.setUint32(16,offset,true);
   return new Blob([...locals,...central,end],{type:'application/zip'});
  }
- const api={plans,numberKey,startNumber,step,hkDay,timestamp,nextNumber,commitNumber,resolve,batch,manualBatch,reference,prepare,fields,draw,png,zip,crc32};
+ const api={plans,numberKey,startNumber,step,hkDay,timestamp,nextNumber,commitNumber,resolve,batch,manualBatch,meeting,twoMinutesBefore,roster,reference,prepare,fields,draw,png,zip,crc32};
  if(typeof module!=='undefined')module.exports=api;else root.PickImages=api;
 })(typeof window==='undefined'?globalThis:window);

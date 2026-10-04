@@ -38,6 +38,20 @@ check('no reconstructed result for a live image',()=>assert.equal(choose([phase(
 check('reject impossible freeze',()=>assert.equal(choose([phase({...tip,freeze:date+'T13:27:00+08:00'})]).status,'unavailable'));
 check('malformed schedule never selects another race',()=>assert.equal(choose([{...phase(),races:{3:{target:'invalid'}}}]).status,'unavailable'));
 const images=P.batch(choose(),7720,at);
+check('race picker uses revised HKJC schedule and retains roster lookup ID',()=>{
+ const rows=[{id:'r3',venue:'沙田',race_number:3,post_time:'13:30'}];
+ const meeting=P.meeting([{...phase(),races:{3:{target:date+'T13:37:00+08:00'}}}],date,rows);
+ assert.equal(meeting[0].id,'r3');assert.equal(P.twoMinutesBefore(meeting[0].off),date+'T13:38');
+});
+check('race picker ignores statuses for another date',()=>{
+ const rows=[{id:'r3',venue:'沙田',race_number:3,post_time:'13:30:00'}];
+ assert.equal(P.twoMinutesBefore(P.meeting([{...phase(),date:'2026-10-03'}],date,rows)[0].off),date+'T13:28');
+});
+check('T minus two crosses the Hong Kong date boundary',()=>assert.equal(P.twoMinutesBefore(Date.parse(date+'T00:01:00+08:00')),'2026-10-03T23:59'));
+check('roster sorts numbers, uses Chinese names and omits withdrawn horses',()=>{
+ assert.deepEqual(P.roster([['9','','冷馬'],['2','','膽馬'],['1','','退賽馬','SCR']]),[{number:2,name:'膽馬'},{number:9,name:'冷馬'}]);
+ assert.deepEqual(P.roster([{horse_number:2,horses:{name_tc:'膽馬'}}]),[{number:2,name:'膽馬'}]);
+});
 check('exact four allocations and names',()=>{
  assert.equal(images.length,4);assert.deepEqual(images.map(p=>p.amount),[100,300,50,150]);assert.deepEqual(images.map(p=>p.pool),['獨贏','位置','獨贏','位置']);
  assert.deepEqual(images.map(p=>p.horse.number),[2,2,9,9]);assert.equal(images.reduce((a,p)=>a+p.amount,0),600);

@@ -3,7 +3,7 @@
 <head>
  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
  <title>推介圖片｜Horse103 Race Day</title>
- <link rel="stylesheet" href="pick-images.css?v=20261003-5">
+ <link rel="stylesheet" href="pick-images.css?v=20261004-race-picker">
 </head>
 <body><main>
  <header>
@@ -31,13 +31,19 @@
   <p class="small">隨時填寫資料生成圖片。資料自動保存在此瀏覽器，下次可繼續修改。</p>
   <form id="manualForm">
    <div class="manual-meta">
+    <label>賽事日期<input id="manualMeetingDate" type="date"></label>
+    <label>選擇賽事（開跑前2分鐘）<select id="manualMeetingRace"><option value="">請選擇賽事</option></select></label>
+    <button id="manualMeetingRefresh" class="quiet" type="button">↻ 更新賽事</button>
+   </div>
+   <p id="manualMeetingStatus" class="small" role="status" aria-live="polite"></p>
+   <div class="manual-meta">
     <label>日期 / 時間（香港）<input id="manualDatetime" type="datetime-local" required></label>
     <label>場地<select id="manualVenue"><option value="ST">沙田</option><option value="HV">跑馬地</option></select></label>
     <label>場次<input id="manualRace" type="number" min="1" max="14" step="1" required></label>
    </div>
    <div class="manual-horses">
-    <fieldset><legend>膽馬</legend><label>馬號<input id="manualBankerNumber" type="number" min="1" max="14" step="1" required></label><label>馬名<input id="manualBankerName" maxlength="24" required></label></fieldset>
-    <fieldset><legend>冷馬</legend><label>馬號<input id="manualColdNumber" type="number" min="1" max="14" step="1" required></label><label>馬名<input id="manualColdName" maxlength="24" required></label></fieldset>
+    <fieldset><legend>膽馬</legend><label class="horse-picker">選擇馬匹<select id="manualBankerHorse"><option value="">請先選擇賽事</option></select></label><label>馬號<input id="manualBankerNumber" type="number" min="1" max="14" step="1" required></label><label>馬名<input id="manualBankerName" maxlength="24" required></label></fieldset>
+    <fieldset><legend>冷馬</legend><label class="horse-picker">選擇馬匹<select id="manualColdHorse"><option value="">請先選擇賽事</option></select></label><label>馬號<input id="manualColdNumber" type="number" min="1" max="14" step="1" required></label><label>馬名<input id="manualColdName" maxlength="24" required></label></fieldset>
    </div>
    <div id="manualEntries" class="manual-entries"></div>
    <div class="number-line"><span>下一組編號 <strong id="manualNextNumber">7720</strong></span><span>每組共用編號 · 每次＋3</span></div>
@@ -54,6 +60,6 @@
  <footer>即場模式使用已鎖定推介；手動模式可隨時填寫及生成。</footer>
 </main>
 <script src="live-tips.js?v=20261002-cold-fusion-legs"></script>
-<script src="pick-images.js?v=20261003-5"></script>
-<script src="pick-images-page.js?v=20261003-5"></script>
+<script src="pick-images.js?v=20261004-race-picker"></script>
+<script src="pick-images-page.js?v=20261004-race-picker"></script>
 </body></html>
