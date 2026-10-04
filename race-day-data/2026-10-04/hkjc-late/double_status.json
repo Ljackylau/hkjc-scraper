@@ -1,6 +1,6 @@
 {
   "date": "2026-10-04",
-  "updated_at": "2026-10-04T15:16:39.765879+08:00",
+  "updated_at": "2026-10-04T15:17:44.790361+08:00",
   "research_only": true,
   "pairs": {
     "6": {
@@ -15,12 +15,12 @@
       "matrix_complete": true
     },
     "7": {
-      "status": "retrying",
+      "status": "collecting",
       "first_race": 7,
       "second_race": 8,
       "error": "Double stale source timestamp",
       "target": "2026-10-04T15:41:50+08:00",
-      "last_received": "2026-10-04T15:14:01.116729+08:00"
+      "last_received": "2026-10-04T15:17:01.125829+08:00"
     },
     "8": {
       "status": "waiting",
