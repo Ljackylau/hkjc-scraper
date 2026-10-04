@@ -1,0 +1,104 @@
+{
+  "status": "observed",
+  "rule": "tnc odds from previous race off to this race T-3 observation",
+  "previous_race": 8,
+  "race": 9,
+  "t3_received_at": "2026-10-04T16:42:08.925066+08:00",
+  "t3_source_updated_at": "2026-10-04T16:39:00+08:00",
+  "baseline_source_updated_at": "2026-10-04T16:01:00+08:00",
+  "baseline_age_at_off_seconds": 840.0,
+  "t3_source_age_seconds": 188.9,
+  "source_recent": false,
+  "changes": [
+    {
+      "name": "蔡約翰",
+      "before_odds": 85.0,
+      "t3_odds": 1000.0,
+      "drop_pct": -1076.47
+    },
+    {
+      "name": "沈集成",
+      "before_odds": 30.0,
+      "t3_odds": 125.0,
+      "drop_pct": -316.67
+    },
+    {
+      "name": "方嘉柏",
+      "before_odds": 40.0,
+      "t3_odds": 150.0,
+      "drop_pct": -275.0
+    },
+    {
+      "name": "葉楚航",
+      "before_odds": 250.0,
+      "t3_odds": 600.0,
+      "drop_pct": -140.0
+    },
+    {
+      "name": "游達榮",
+      "before_odds": 11.0,
+      "t3_odds": 25.0,
+      "drop_pct": -127.27
+    },
+    {
+      "name": "黎昭昇",
+      "before_odds": 300.0,
+      "t3_odds": 25.0,
+      "drop_pct": 91.67
+    },
+    {
+      "name": "姚本輝",
+      "before_odds": 2.75,
+      "t3_odds": 4.0,
+      "drop_pct": -45.45
+    },
+    {
+      "name": "廖康銘",
+      "before_odds": 175.0,
+      "t3_odds": 250.0,
+      "drop_pct": -42.86
+    },
+    {
+      "name": "巫偉傑",
+      "before_odds": 125.0,
+      "t3_odds": 85.0,
+      "drop_pct": 32.0
+    },
+    {
+      "name": "鄭俊偉",
+      "before_odds": 4.75,
+      "t3_odds": 3.5,
+      "drop_pct": 26.32
+    },
+    {
+      "name": "徐雨石",
+      "before_odds": 400.0,
+      "t3_odds": 300.0,
+      "drop_pct": 25.0
+    },
+    {
+      "name": "大衛希斯",
+      "before_odds": 9.0,
+      "t3_odds": 7.0,
+      "drop_pct": 22.22
+    },
+    {
+      "name": "羅富全",
+      "before_odds": 3.5,
+      "t3_odds": 2.85,
+      "drop_pct": 18.57
+    },
+    {
+      "name": "呂健威",
+      "before_odds": 300.0,
+      "t3_odds": 250.0,
+      "drop_pct": 16.67
+    },
+    {
+      "name": "文家良",
+      "before_odds": 35.0,
+      "t3_odds": 35.0,
+      "drop_pct": 0.0
+    }
+  ]
+}
