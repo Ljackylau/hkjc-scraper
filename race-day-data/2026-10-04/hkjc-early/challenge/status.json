@@ -1,15 +1,15 @@
 {
   "date": "2026-10-04",
   "venue": "ST",
-  "state": "collecting",
+  "state": "finished",
   "pools": {
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 317,
-      "received_at": "2026-10-04T14:34:04.073189+08:00",
+      "samples_this_run": 318,
+      "received_at": "2026-10-04T14:35:04.114139+08:00",
       "source_updated_at": "2026-10-04T14:32:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 124.1,
+      "source_age_seconds": 184.1,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -313,11 +313,11 @@
     },
     "jkc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 317,
-      "received_at": "2026-10-04T14:34:04.214071+08:00",
+      "samples_this_run": 318,
+      "received_at": "2026-10-04T14:35:04.033917+08:00",
       "source_updated_at": "2026-10-04T14:32:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 124.2,
+      "source_age_seconds": 184.0,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -531,5 +531,5 @@
     4,
     5
   ],
-  "updated_at": "2026-10-04T14:34:04.965431+08:00"
+  "updated_at": "2026-10-04T14:35:04.167502+08:00"
 }
