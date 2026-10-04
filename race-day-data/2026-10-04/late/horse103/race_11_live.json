@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "4be40916-bf3b-41d8-a028-2b2719db3cb2",
+    "race_number": 11,
+    "post_time": "17:55",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "B"
+  },
+  "date": "2026-10-04",
+  "expected_lock": "2026-10-04T17:52:00+08:00",
+  "live_received_at": "2026-10-04T17:52:06.268366+08:00",
+  "capture_delay_seconds": 6.27,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-04T09:52:01.350Z",
+    "postTime": "2026-10-04T09:55:00.000Z",
+    "previewTime": "2026-10-04T09:48:00.000Z",
+    "lockTime": "2026-10-04T09:52:00.000Z",
+    "dataQuality": "partial",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 4,
+        "nameTc": "手機錶勁",
+        "nameEn": "GOLD PATCH",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 71,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "國千金",
+        "nameEn": "CITY GOLD BANNER",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "鑽石星空",
+        "nameEn": "LUCY IN THE SKY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "包裝明將",
+        "nameEn": "PACKING GLORY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "閃電小子",
+        "nameEn": "ALMIGHTY LIGHTNING",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": null,
+        "valueTier": null,
+        "verdictKey": "evidence_incomplete",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 2,
+        "nameTc": "實力股",
+        "nameEn": "SOLID STATE",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "喜蓮勁感",
+        "nameEn": "HELENE SUPAFEELING",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "神鵰",
+        "nameEn": "GRAND EAGLE",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 10,
+      "nameTc": "包裝明將",
+      "nameEn": "PACKING GLORY",
+      "confidence": "high",
+      "reason": "包裝明將近績穩定，上仗四班贏馬姿態輕鬆，今仗升班負輕磅，試閘表現出色，檔位雖差但有力克服。",
+      "previewHorseNumber": null
+    }
+  }
+}
