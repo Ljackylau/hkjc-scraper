@@ -1,0 +1,422 @@
+{
+  "source": "HKJC official local results",
+  "source_url": "https://racing.hkjc.com/en-us/local/information/archive/localresults?racedate=2026%2F10%2F04&Racecourse=ST&RaceNo=8",
+  "received_at": "2026-10-05T03:44:35.724823+08:00",
+  "entries": [
+    {
+      "placing": "1",
+      "placing_text": "1",
+      "horse_number": 8
+    },
+    {
+      "placing": "2",
+      "placing_text": "2",
+      "horse_number": 10
+    },
+    {
+      "placing": "3",
+      "placing_text": "3",
+      "horse_number": 11
+    },
+    {
+      "placing": "4",
+      "placing_text": "4",
+      "horse_number": 2
+    },
+    {
+      "placing": "5",
+      "placing_text": "5",
+      "horse_number": 9
+    },
+    {
+      "placing": "6",
+      "placing_text": "6",
+      "horse_number": 5
+    },
+    {
+      "placing": "7",
+      "placing_text": "7",
+      "horse_number": 3
+    },
+    {
+      "placing": "8",
+      "placing_text": "8",
+      "horse_number": 4
+    },
+    {
+      "placing": "9",
+      "placing_text": "9",
+      "horse_number": 7
+    },
+    {
+      "placing": "10",
+      "placing_text": "10",
+      "horse_number": 1
+    },
+    {
+      "placing": "11",
+      "placing_text": "11",
+      "horse_number": 6
+    }
+  ],
+  "top4": [
+    8,
+    10,
+    11,
+    2
+  ],
+  "dividends": {
+    "W": [
+      {
+        "combination": "8",
+        "dividend_hkd": 48.0
+      }
+    ],
+    "P": [
+      {
+        "combination": "8",
+        "dividend_hkd": 18.0
+      },
+      {
+        "combination": "10",
+        "dividend_hkd": 61.0
+      },
+      {
+        "combination": "11",
+        "dividend_hkd": 105.5
+      }
+    ],
+    "Q": [
+      {
+        "combination": "8,10",
+        "dividend_hkd": 583.5
+      }
+    ],
+    "QP": [
+      {
+        "combination": "8,10",
+        "dividend_hkd": 170.5
+      },
+      {
+        "combination": "8,11",
+        "dividend_hkd": 278.5
+      },
+      {
+        "combination": "10,11",
+        "dividend_hkd": 1002.5
+      }
+    ],
+    "FCT": [
+      {
+        "combination": "8,10",
+        "dividend_hkd": 1094.0
+      }
+    ],
+    "TIERCE": [
+      {
+        "combination": "8,10,11",
+        "dividend_hkd": 20411.0
+      }
+    ],
+    "TRIO": [
+      {
+        "combination": "8,10,11",
+        "dividend_hkd": 5528.0
+      }
+    ],
+    "FIRST4": [
+      {
+        "combination": "2,8,10,11",
+        "dividend_hkd": 38891.0
+      }
+    ],
+    "QUARTET": [
+      {
+        "combination": "8,10,11,2",
+        "dividend_hkd": 587750.0
+      }
+    ]
+  },
+  "dividend_unit": "HKJC published HK$ unit",
+  "settlement_status": "complete",
+  "date": "2026-10-04",
+  "race": 8,
+  "tip_sent_at": "2026-10-04T16:12:00.581664+08:00",
+  "banker": 8,
+  "legs": [
+    5,
+    9,
+    3,
+    4
+  ],
+  "additional_picks": [],
+  "independent_tip": {
+    "date": "2026-10-04",
+    "race": 8,
+    "off": "2026-10-04T16:15:00+08:00",
+    "freeze": "2026-10-04T16:11:50+08:00",
+    "method": "independent_hybrid_v1",
+    "cutoff": "2026-10-04T16:12:00+08:00",
+    "banker": 8,
+    "legs": [
+      5,
+      9,
+      3,
+      4
+    ],
+    "banker_source": "fixed-baseline market movement",
+    "banker_scores": {
+      "1": 10.42,
+      "2": 7.056,
+      "3": 6.312,
+      "4": 7.692,
+      "5": 8.163,
+      "6": 2.24,
+      "7": 6.456,
+      "8": 38.62,
+      "9": 22.136,
+      "10": 4.592,
+      "11": 10.832
+    },
+    "leg_scores": {
+      "1": 0.28,
+      "2": 0.28,
+      "3": 0.74,
+      "4": 0.56,
+      "5": 0.8,
+      "6": 0.6799999999999999,
+      "7": 0.2,
+      "8": 0.6800000000000002,
+      "9": 0.7400000000000001,
+      "10": 0.44000000000000006,
+      "11": 0.1
+    },
+    "received_at": "2026-10-04T16:11:48.330348+08:00",
+    "experimental": true,
+    "not_a_probability": true,
+    "status": "ready",
+    "market": [
+      8,
+      9,
+      11,
+      1,
+      5
+    ],
+    "golden": [],
+    "legs_f": [
+      5,
+      9
+    ],
+    "legs_qp": [
+      3,
+      4
+    ],
+    "banker_qp_odds": {
+      "1": 15.0,
+      "9": 5.1,
+      "2": 23.0,
+      "10": 15.0,
+      "3": 10.0,
+      "11": 32.0,
+      "4": 10.0,
+      "5": 3.5,
+      "6": 15.0,
+      "7": 23.0
+    },
+    "legs_method": "f2_qp1_cold_10_30_exploratory_2026_10_02",
+    "legs_status": "ready",
+    "legs_reason": "",
+    "baseline_received_at": "2026-10-04T16:04:55.213107+08:00",
+    "long_baseline_received_at": "2026-10-04T15:47:40.215259+08:00",
+    "runner_rows": [
+      [
+        "1",
+        "",
+        "榮駿大道",
+        "5",
+        "135",
+        "班德禮",
+        "葉楚航",
+        "23",
+        "5.9",
+        ""
+      ],
+      [
+        "2",
+        "",
+        "展雄志",
+        "10",
+        "130",
+        "艾道拿",
+        "大衛希斯",
+        "22",
+        "5.3",
+        ""
+      ],
+      [
+        "3",
+        "",
+        "千禧龍",
+        "2",
+        "128",
+        "潘明輝",
+        "沈集成",
+        "9.0",
+        "2.5",
+        ""
+      ],
+      [
+        "4",
+        "",
+        "川河耀駒",
+        "8",
+        "128",
+        "周俊樂 (-2)",
+        "游達榮",
+        "15",
+        "4.0",
+        ""
+      ],
+      [
+        "5",
+        "",
+        "細水長流",
+        "7",
+        "126",
+        "潘頓",
+        "蔡約翰",
+        "2.2",
+        "1.3",
+        ""
+      ],
+      [
+        "6",
+        "",
+        "勁大威猛",
+        "9",
+        "126",
+        "巫顯東 (-2)",
+        "姚本輝",
+        "10",
+        "2.9",
+        ""
+      ],
+      [
+        "7",
+        "",
+        "勁無限",
+        "6",
+        "122",
+        "金誠剛",
+        "沈集成",
+        "38",
+        "8.9",
+        ""
+      ],
+      [
+        "8",
+        "",
+        "大回報",
+        "1",
+        "120",
+        "巴度",
+        "黎昭昇",
+        "8.6",
+        "2.0",
+        ""
+      ],
+      [
+        "9",
+        "",
+        "北斗福星",
+        "11",
+        "119",
+        "何澤堯",
+        "方嘉柏",
+        "5.5",
+        "1.5",
+        ""
+      ],
+      [
+        "10",
+        "",
+        "年年友福",
+        "3",
+        "118",
+        "艾兆禮",
+        "沈集成",
+        "18",
+        "5.1",
+        ""
+      ],
+      [
+        "11",
+        "",
+        "同心同夢",
+        "4",
+        "116",
+        "田泰安",
+        "桂福特",
+        "47",
+        "11",
+        ""
+      ]
+    ],
+    "source_updated": {
+      "wp": "2026-10-04T16:11:00+08:00",
+      "wpq": "2026-10-04T16:11:00+08:00"
+    },
+    "cold": [
+      7
+    ],
+    "cold_status": "ready",
+    "cold_policy": "cold_top2_priority_v2_exploratory_2026-10-02",
+    "cold_freeze": "2026-10-04T16:11:50+08:00",
+    "cold_target": "top2",
+    "cold_probability_calibrated": false,
+    "cold_group": [],
+    "cold_missing": [],
+    "cold_branch": "market_second",
+    "cold_branch_label": "二重彩第二位市場支持",
+    "cold_win": 38.0,
+    "cold_received_at": "2026-10-04T16:11:48.330348+08:00",
+    "cold_fct_received_at": "2026-10-04T16:11:48.561791+08:00",
+    "cold_sources": {
+      "wp": {
+        "wp": "2026-10-04T16:11:00+08:00",
+        "wpq": "2026-10-04T16:11:00+08:00"
+      },
+      "fct": "2026-10-04T16:11:00+08:00",
+      "historical_prepared_at": "2026-10-04T13:30:53.052902+08:00"
+    },
+    "cold_partial": false,
+    "legs_original": [
+      5,
+      9,
+      3,
+      4
+    ],
+    "legs_original_method": "f2_banker_qp2_v1",
+    "legs_original_qp": [
+      3,
+      4
+    ],
+    "legs_fusion_changed": false,
+    "legs_added": null,
+    "legs_removed": null,
+    "legs_cold": [],
+    "legs_fusion_win": 38.0,
+    "legs_fusion_reason_code": "cold_win_outside_gate",
+    "legs_fusion_reason": "冷馬WIN不在10至30倍範圍，保留原四腳",
+    "generated_at": "2026-10-04T16:11:50.030770+08:00"
+  },
+  "method_b": {
+    "method": "independent_hybrid_v1",
+    "status": "independent",
+    "banker": 8
+  },
+  "cold": [
+    7
+  ],
+  "cold_source": "frozen_independent_tip"
+}
