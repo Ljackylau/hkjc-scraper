@@ -3,12 +3,12 @@
   "rule": "jkc odds from previous race off to this race T-3 observation",
   "previous_race": 5,
   "race": 6,
-  "t3_received_at": "2026-10-04T15:07:08.872495+08:00",
-  "t3_source_updated_at": "2026-10-04T15:01:00+08:00",
+  "t3_received_at": "2026-10-04T15:07:39.080554+08:00",
+  "t3_source_updated_at": "2026-10-04T15:07:00+08:00",
   "baseline_source_updated_at": "2026-10-04T14:28:00+08:00",
   "baseline_age_at_off_seconds": 120.0,
-  "t3_source_age_seconds": 368.9,
-  "source_recent": false,
+  "t3_source_age_seconds": 39.1,
+  "source_recent": true,
   "changes": [
     {
       "name": "金誠剛",
@@ -43,8 +43,8 @@
     {
       "name": "田泰安",
       "before_odds": 13.0,
-      "t3_odds": 7.5,
-      "drop_pct": 42.31
+      "t3_odds": 7.0,
+      "drop_pct": 46.15
     },
     {
       "name": "艾兆禮",
@@ -79,8 +79,8 @@
     {
       "name": "潘頓",
       "before_odds": 1.2,
-      "t3_odds": 1.2,
-      "drop_pct": 0.0
+      "t3_odds": 1.22,
+      "drop_pct": -1.67
     },
     {
       "name": "班德禮",
