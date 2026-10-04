@@ -3,11 +3,11 @@
   "date": "2026-10-04",
   "venue": "ST",
   "kind": "jkc",
-  "received_at": "2026-10-04T14:28:29.139158+08:00",
+  "received_at": "2026-10-04T14:29:28.706464+08:00",
   "url": "https://bet.hkjc.com/ch/racing/jkc/2026-10-04/ST/1",
-  "source_updated_at": "2026-10-04T14:21:00+08:00",
-  "source_age_seconds": 449.1,
-  "source_recent": false,
+  "source_updated_at": "2026-10-04T14:28:00+08:00",
+  "source_age_seconds": 88.7,
+  "source_recent": true,
   "state": "observed",
   "numeric_quotes": 14,
   "participants": [
@@ -23,7 +23,7 @@
       "current_odds": 1.2,
       "quote_text": "1.20",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.711018
+      "normalized_implied_share": 0.70664
     },
     {
       "selection_id": "2",
@@ -37,7 +37,7 @@
       "current_odds": 7.5,
       "quote_text": "7.50",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.113763
+      "normalized_implied_share": 0.113062
     },
     {
       "selection_id": "4",
@@ -51,7 +51,7 @@
       "current_odds": 13.0,
       "quote_text": "13.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.065632
+      "normalized_implied_share": 0.065228
     },
     {
       "selection_id": "3",
@@ -65,7 +65,7 @@
       "current_odds": 16.0,
       "quote_text": "16.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.053326
+      "normalized_implied_share": 0.052998
     },
     {
       "selection_id": "5",
@@ -75,11 +75,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 250.0,
-      "current_odds": 35.0,
-      "quote_text": "35",
+      "previous_odds": 35.0,
+      "current_odds": 30.0,
+      "quote_text": "30",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.024378
+      "normalized_implied_share": 0.028266
     },
     {
       "selection_id": "7",
@@ -93,7 +93,7 @@
       "current_odds": 75.0,
       "quote_text": "75",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.011376
+      "normalized_implied_share": 0.011306
     },
     {
       "selection_id": "6",
@@ -107,7 +107,21 @@
       "current_odds": 125.0,
       "quote_text": "125",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.006826
+      "normalized_implied_share": 0.006784
+    },
+    {
+      "selection_id": "14",
+      "name": "其他騎師",
+      "is_other": true,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 300.0,
+      "current_odds": 200.0,
+      "quote_text": "200",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.00424
     },
     {
       "selection_id": "11",
@@ -121,21 +135,7 @@
       "current_odds": 300.0,
       "quote_text": "300",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.002844
-    },
-    {
-      "selection_id": "14",
-      "name": "其他騎師",
-      "is_other": true,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": 400.0,
-      "current_odds": 300.0,
-      "quote_text": "300",
-      "opening_drop_pct": null,
-      "normalized_implied_share": 0.002844
+      "normalized_implied_share": 0.002827
     },
     {
       "selection_id": "12",
@@ -149,7 +149,21 @@
       "current_odds": 300.0,
       "quote_text": "300",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.002844
+      "normalized_implied_share": 0.002827
+    },
+    {
+      "selection_id": "8",
+      "name": "金誠剛",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 600.0,
+      "current_odds": 400.0,
+      "quote_text": "400",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.00212
     },
     {
       "selection_id": "10",
@@ -163,21 +177,7 @@
       "current_odds": 400.0,
       "quote_text": "400",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.002133
-    },
-    {
-      "selection_id": "8",
-      "name": "金誠剛",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": 500.0,
-      "current_odds": 600.0,
-      "quote_text": "600",
-      "opening_drop_pct": null,
-      "normalized_implied_share": 0.001422
+      "normalized_implied_share": 0.00212
     },
     {
       "selection_id": "9",
@@ -191,7 +191,7 @@
       "current_odds": 600.0,
       "quote_text": "600",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.001422
+      "normalized_implied_share": 0.001413
     },
     {
       "selection_id": "13",
@@ -205,10 +205,10 @@
       "current_odds": 5000.0,
       "quote_text": "5000",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.000171
+      "normalized_implied_share": 0.00017
     }
   ],
-  "header": "騎師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 14:21\n田\nS4\n所有場次即時投注將於第 10 場前截止\n添加到投注區",
+  "header": "騎師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 14:28\n田\nS4\n所有場次即時投注將於第 10 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -216,61 +216,61 @@
       "race_number": 1,
       "post_time": "2026-10-04T12:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -7109.1
+      "seconds_to_off": -7168.7
     },
     {
       "race_number": 2,
       "post_time": "2026-10-04T13:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -5309.1
+      "seconds_to_off": -5368.7
     },
     {
       "race_number": 3,
       "post_time": "2026-10-04T13:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -3509.1
+      "seconds_to_off": -3568.7
     },
     {
       "race_number": 4,
       "post_time": "2026-10-04T14:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -1709.1
+      "seconds_to_off": -1768.7
     },
     {
       "race_number": 5,
       "post_time": "2026-10-04T14:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 90.9
+      "seconds_to_off": 31.3
     },
     {
       "race_number": 6,
       "post_time": "2026-10-04T15:00:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1890.9
+      "seconds_to_off": 1831.3
     },
     {
       "race_number": 7,
       "post_time": "2026-10-04T15:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 3990.9
+      "seconds_to_off": 3931.3
     },
     {
       "race_number": 8,
       "post_time": "2026-10-04T16:05:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 5790.9
+      "seconds_to_off": 5731.3
     },
     {
       "race_number": 9,
       "post_time": "2026-10-04T16:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 7590.9
+      "seconds_to_off": 7531.3
     },
     {
       "race_number": 10,
       "post_time": "2026-10-04T17:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 9690.9
+      "seconds_to_off": 9631.3
     }
   ],
   "raw_tables": [
@@ -320,8 +320,8 @@
         "潘明輝",
         "12",
         "5",
-        "250",
-        "35"
+        "35",
+        "30"
       ],
       [
         "7",
@@ -340,18 +340,18 @@
         "125"
       ],
       [
-        "11",
-        "希威森",
-        "6",
-        "5",
-        "400",
-        "300"
-      ],
-      [
         "14",
         "其他騎師",
         "6",
         "詳情",
+        "300",
+        "200"
+      ],
+      [
+        "11",
+        "希威森",
+        "6",
+        "5",
         "400",
         "300"
       ],
@@ -364,20 +364,20 @@
         "300"
       ],
       [
+        "8",
+        "金誠剛",
+        "0",
+        "5",
+        "600",
+        "400"
+      ],
+      [
         "10",
         "霍宏聲",
         "0",
         "5",
         "300",
         "400"
-      ],
-      [
-        "8",
-        "金誠剛",
-        "0",
-        "5",
-        "500",
-        "600"
       ],
       [
         "9",
