@@ -3,31 +3,17 @@
   "date": "2026-10-04",
   "venue": "ST",
   "kind": "jkc",
-  "received_at": "2026-10-04T14:51:08.774960+08:00",
+  "received_at": "2026-10-04T14:52:09.060898+08:00",
   "url": "https://bet.hkjc.com/ch/racing/jkc/2026-10-04/ST/1",
-  "source_updated_at": "2026-10-04T14:32:00+08:00",
-  "source_age_seconds": 1148.8,
-  "source_recent": false,
+  "source_updated_at": "2026-10-04T14:51:00+08:00",
+  "source_age_seconds": 69.1,
+  "source_recent": true,
   "state": "no_numeric_quotes",
   "numeric_quotes": 0,
   "participants": [
     {
       "selection_id": "1",
       "name": "潘頓",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
-      "selection_id": "2",
-      "name": "何澤堯",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -54,8 +40,8 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "3",
-      "name": "巴度",
+      "selection_id": "2",
+      "name": "何澤堯",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -96,6 +82,34 @@
       "normalized_implied_share": null
     },
     {
+      "selection_id": "3",
+      "name": "巴度",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
+      "opening_drop_pct": null,
+      "normalized_implied_share": null
+    },
+    {
+      "selection_id": "9",
+      "name": "奧爾民",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
+      "opening_drop_pct": null,
+      "normalized_implied_share": null
+    },
+    {
       "selection_id": "6",
       "name": "周俊樂",
       "is_other": false,
@@ -124,20 +138,6 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "11",
-      "name": "希威森",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
       "selection_id": "12",
       "name": "艾兆禮",
       "is_other": false,
@@ -152,8 +152,8 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "8",
-      "name": "金誠剛",
+      "selection_id": "11",
+      "name": "希威森",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -180,8 +180,8 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "9",
-      "name": "奧爾民",
+      "selection_id": "8",
+      "name": "金誠剛",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -208,7 +208,7 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "騎師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 14:32\n田\nS4\n所有場次騎師王 1 暫停即場投注。即時投注將於第 10 場前截止\n添加到投注區",
+  "header": "騎師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 14:51\n田\nS4\n所有場次騎師王 1 暫停即場投注。即時投注將於第 10 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -216,61 +216,61 @@
       "race_number": 1,
       "post_time": "2026-10-04T12:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -8468.8
+      "seconds_to_off": -8529.1
     },
     {
       "race_number": 2,
       "post_time": "2026-10-04T13:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -6668.8
+      "seconds_to_off": -6729.1
     },
     {
       "race_number": 3,
       "post_time": "2026-10-04T13:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -4868.8
+      "seconds_to_off": -4929.1
     },
     {
       "race_number": 4,
       "post_time": "2026-10-04T14:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -3068.8
+      "seconds_to_off": -3129.1
     },
     {
       "race_number": 5,
       "post_time": "2026-10-04T14:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -1268.8
+      "seconds_to_off": -1329.1
     },
     {
       "race_number": 6,
       "post_time": "2026-10-04T15:05:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 831.2
+      "seconds_to_off": 770.9
     },
     {
       "race_number": 7,
       "post_time": "2026-10-04T15:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 2631.2
+      "seconds_to_off": 2570.9
     },
     {
       "race_number": 8,
       "post_time": "2026-10-04T16:05:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 4431.2
+      "seconds_to_off": 4370.9
     },
     {
       "race_number": 9,
       "post_time": "2026-10-04T16:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 6231.2
+      "seconds_to_off": 6170.9
     },
     {
       "race_number": 10,
       "post_time": "2026-10-04T17:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 8331.2
+      "seconds_to_off": 8270.9
     }
   ],
   "raw_tables": [
@@ -292,14 +292,6 @@
         "---"
       ],
       [
-        "2",
-        "何澤堯",
-        "8",
-        "7",
-        "---",
-        "---"
-      ],
-      [
         "4",
         "田泰安",
         "12",
@@ -308,10 +300,10 @@
         "---"
       ],
       [
-        "3",
-        "巴度",
-        "10",
-        "6",
+        "2",
+        "何澤堯",
+        "8",
+        "7",
         "---",
         "---"
       ],
@@ -332,6 +324,22 @@
         "---"
       ],
       [
+        "3",
+        "巴度",
+        "10",
+        "6",
+        "---",
+        "---"
+      ],
+      [
+        "9",
+        "奧爾民",
+        "0",
+        "5",
+        "---",
+        "---"
+      ],
+      [
         "6",
         "周俊樂",
         "0",
@@ -348,14 +356,6 @@
         "---"
       ],
       [
-        "11",
-        "希威森",
-        "6",
-        "5",
-        "---",
-        "---"
-      ],
-      [
         "12",
         "艾兆禮",
         "0",
@@ -364,9 +364,9 @@
         "---"
       ],
       [
-        "8",
-        "金誠剛",
-        "0",
+        "11",
+        "希威森",
+        "6",
         "5",
         "---",
         "---"
@@ -380,8 +380,8 @@
         "---"
       ],
       [
-        "9",
-        "奧爾民",
+        "8",
+        "金誠剛",
         "0",
         "5",
         "---",
