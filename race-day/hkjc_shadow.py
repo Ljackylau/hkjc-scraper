@@ -219,6 +219,14 @@ async def freeze_independent(inputs,folder,number,date,clocks,states,cold_inputs
             from leg_fusion import apply as fuse_legs, APPLY_FROM as LEGS_FROM
             if date >= LEGS_FROM:
                 signal = fuse_legs(signal)
+            # Research observations are archived separately; never replace live tips.
+            from turf_research import observe
+            try:
+                atomic(folder/f'race_{number:02d}_turf_research.json',
+                       observe(signal, samples, target, history if cold_inputs is not None else {}, folder))
+            except (ValueError, TypeError, KeyError, OSError):
+                atomic(folder/f'race_{number:02d}_turf_research.json',
+                       {'observation_only': True, 'status': 'unavailable'})
             signal['generated_at']=now().isoformat()
             atomic(path,signal)
         if frozen_tips is not None:frozen_tips[str(number)]=json.loads(path.read_text())

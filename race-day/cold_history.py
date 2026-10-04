@@ -83,7 +83,11 @@ def parse_card(data, date, venue, number):
                       'jockeyid': query_id(jockey_links[0], 'jockeyid') if jockey_links else None}
     if not entries:
         raise ValueError('Racecard has no declared runners')
+    distance = re.search(r'\b(\d{3,4})\s*m\b', surface)
+    rail = re.search(r'["\u201c]([abc](?:\+\d+)?)["\u201d]\s*course', surface)
     return {'date': date, 'race': number, 'venue': venue, 'track': track,
+            'distance': int(distance[1]) if distance else None,
+            'rail': rail[1].upper() if rail else None,
             'post_time': match[4], 'entries': entries}
 
 
@@ -206,6 +210,7 @@ def load_race(date, venue, number, trials):
     with ThreadPoolExecutor(max_workers=4) as pool:
         results = list(pool.map(one, card['entries'].items()))
     return {'status': 'ready', 'date': date, 'race': number, 'venue': venue, 'track': card['track'],
+            'distance': card.get('distance'), 'rail': card.get('rail'),
             'post_time': card['post_time'],
             'prepared_at': now().isoformat(), 'source': 'HKJC pre-race card + strictly earlier races/trials',
             'jockey_prior_season': '2025/26', 'source_url': url,
