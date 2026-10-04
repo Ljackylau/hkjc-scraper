@@ -5,11 +5,11 @@
   "pools": {
     "jkc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 286,
-      "received_at": "2026-10-04T15:53:08.733420+08:00",
-      "source_updated_at": "2026-10-04T15:45:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 488.7,
+      "samples_this_run": 287,
+      "received_at": "2026-10-04T15:54:09.100782+08:00",
+      "source_updated_at": "2026-10-04T15:53:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 69.1,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -69,20 +69,6 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "3",
-          "name": "巴度",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
           "selection_id": "9",
           "name": "奧爾民",
           "is_other": false,
@@ -99,6 +85,20 @@
         {
           "selection_id": "7",
           "name": "袁幸堯",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "3",
+          "name": "巴度",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -153,8 +153,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "11",
-          "name": "希威森",
+          "selection_id": "13",
+          "name": "班德禮",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -181,6 +181,20 @@
           "normalized_implied_share": null
         },
         {
+          "selection_id": "11",
+          "name": "希威森",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "未能勝出",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
           "selection_id": "8",
           "name": "金誠剛",
           "is_other": false,
@@ -190,21 +204,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "13",
-          "name": "班德禮",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         }
@@ -215,11 +215,11 @@
     },
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 286,
-      "received_at": "2026-10-04T15:53:08.879446+08:00",
-      "source_updated_at": "2026-10-04T15:45:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 488.9,
+      "samples_this_run": 287,
+      "received_at": "2026-10-04T15:54:09.190438+08:00",
+      "source_updated_at": "2026-10-04T15:53:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 69.2,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -377,20 +377,6 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "9",
-          "name": "賀賢",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
           "selection_id": "12",
           "name": "巫偉傑",
           "is_other": false,
@@ -461,6 +447,20 @@
           "normalized_implied_share": null
         },
         {
+          "selection_id": "9",
+          "name": "賀賢",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "未能勝出",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
           "selection_id": "20",
           "name": "伍鵬志",
           "is_other": false,
@@ -470,7 +470,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -484,7 +484,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -498,7 +498,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -531,5 +531,5 @@
     9,
     10
   ],
-  "updated_at": "2026-10-04T15:53:08.954248+08:00"
+  "updated_at": "2026-10-04T15:54:09.727980+08:00"
 }

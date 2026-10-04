@@ -3,11 +3,11 @@
   "date": "2026-10-04",
   "venue": "ST",
   "kind": "tnc",
-  "received_at": "2026-10-04T15:53:08.879446+08:00",
+  "received_at": "2026-10-04T15:54:09.190438+08:00",
   "url": "https://bet.hkjc.com/ch/racing/tnc/2026-10-04/ST/1",
-  "source_updated_at": "2026-10-04T15:45:00+08:00",
-  "source_age_seconds": 488.9,
-  "source_recent": false,
+  "source_updated_at": "2026-10-04T15:53:00+08:00",
+  "source_age_seconds": 69.2,
+  "source_recent": true,
   "state": "no_numeric_quotes",
   "numeric_quotes": 0,
   "participants": [
@@ -166,20 +166,6 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "9",
-      "name": "賀賢",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
       "selection_id": "12",
       "name": "巫偉傑",
       "is_other": false,
@@ -250,6 +236,20 @@
       "normalized_implied_share": null
     },
     {
+      "selection_id": "9",
+      "name": "賀賢",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "未能勝出",
+      "opening_drop_pct": null,
+      "normalized_implied_share": null
+    },
+    {
       "selection_id": "20",
       "name": "伍鵬志",
       "is_other": false,
@@ -259,7 +259,7 @@
       "opening_odds": null,
       "previous_odds": null,
       "current_odds": null,
-      "quote_text": "---",
+      "quote_text": "未能勝出",
       "opening_drop_pct": null,
       "normalized_implied_share": null
     },
@@ -273,7 +273,7 @@
       "opening_odds": null,
       "previous_odds": null,
       "current_odds": null,
-      "quote_text": "---",
+      "quote_text": "未能勝出",
       "opening_drop_pct": null,
       "normalized_implied_share": null
     },
@@ -287,7 +287,7 @@
       "opening_odds": null,
       "previous_odds": null,
       "current_odds": null,
-      "quote_text": "---",
+      "quote_text": "未能勝出",
       "opening_drop_pct": null,
       "normalized_implied_share": null
     },
@@ -306,7 +306,7 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "練馬師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 15:45\n田\nS4\n所有場次練馬師王 1 暫停即場投注。即時投注將於第 10 場前截止\n添加到投注區\n練馬師王統計\n練馬師王出馬表\n練馬師王賠率走勢圖\n全日練馬師分場表\n練馬師王積分\n玩法\n受注時間\n練馬師資料",
+  "header": "練馬師王\n1\n04/10/2026, 星期日, 沙田\n更新時間: 04/10/2026 15:53\n田\nS4\n所有場次練馬師王 1 暫停即場投注。即時投注將於第 10 場前截止\n添加到投注區",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -314,61 +314,61 @@
       "race_number": 1,
       "post_time": "2026-10-04T12:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -12188.9
+      "seconds_to_off": -12249.2
     },
     {
       "race_number": 2,
       "post_time": "2026-10-04T13:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -10388.9
+      "seconds_to_off": -10449.2
     },
     {
       "race_number": 3,
       "post_time": "2026-10-04T13:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -8588.9
+      "seconds_to_off": -8649.2
     },
     {
       "race_number": 4,
       "post_time": "2026-10-04T14:00:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -6788.9
+      "seconds_to_off": -6849.2
     },
     {
       "race_number": 5,
       "post_time": "2026-10-04T14:30:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -4988.9
+      "seconds_to_off": -5049.2
     },
     {
       "race_number": 6,
       "post_time": "2026-10-04T15:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2588.9
+      "seconds_to_off": -2649.2
     },
     {
       "race_number": 7,
       "post_time": "2026-10-04T15:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -488.9
+      "seconds_to_off": -549.2
     },
     {
       "race_number": 8,
       "post_time": "2026-10-04T16:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1311.1
+      "seconds_to_off": 1250.8
     },
     {
       "race_number": 9,
       "post_time": "2026-10-04T16:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 2511.1
+      "seconds_to_off": 2450.8
     },
     {
       "race_number": 10,
       "post_time": "2026-10-04T17:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 4611.1
+      "seconds_to_off": 4550.8
     }
   ],
   "raw_tables": [
@@ -385,15 +385,15 @@
         "5",
         "羅富全",
         "12",
-        "4",
+        "3",
         "---",
         "---"
       ],
       [
         "3",
         "姚本輝",
-        "12",
-        "5",
+        "16",
+        "4",
         "---",
         "---"
       ],
@@ -401,7 +401,7 @@
         "1",
         "大衛希斯",
         "16",
-        "4",
+        "3",
         "---",
         "---"
       ],
@@ -409,7 +409,7 @@
         "7",
         "文家良",
         "6",
-        "5",
+        "4",
         "---",
         "---"
       ],
@@ -424,8 +424,8 @@
       [
         "15",
         "鄭俊偉",
-        "12",
-        "2",
+        "24",
+        "1",
         "---",
         "---"
       ],
@@ -441,7 +441,7 @@
         "2",
         "廖康銘",
         "6",
-        "3",
+        "2",
         "---",
         "---"
       ],
@@ -457,23 +457,15 @@
         "11",
         "呂健威",
         "4",
-        "3",
+        "2",
         "---",
         "---"
       ],
       [
         "18",
         "蔡約翰",
-        "---",
-        "4",
-        "---",
-        "---"
-      ],
-      [
-        "9",
-        "賀賢",
-        "4",
-        "2",
+        "0",
+        "3",
         "---",
         "---"
       ],
@@ -481,7 +473,7 @@
         "12",
         "巫偉傑",
         "0",
-        "4",
+        "3",
         "---",
         "---"
       ],
@@ -489,7 +481,7 @@
         "10",
         "徐雨石",
         "0",
-        "4",
+        "3",
         "---",
         "---"
       ],
@@ -505,7 +497,7 @@
         "16",
         "桂福特",
         "0",
-        "3",
+        "2",
         "---",
         "---"
       ],
@@ -513,9 +505,17 @@
         "17",
         "黎昭昇",
         "0",
-        "4",
+        "3",
         "---",
         "---"
+      ],
+      [
+        "9",
+        "賀賢",
+        "10",
+        "1",
+        "---",
+        "未能勝出"
       ],
       [
         "20",
@@ -523,7 +523,7 @@
         "16",
         "0",
         "---",
-        "---"
+        "未能勝出"
       ],
       [
         "21",
@@ -531,15 +531,15 @@
         "6",
         "詳情",
         "---",
-        "---"
+        "未能勝出"
       ],
       [
         "13",
         "蘇偉賢",
         "6",
-        "1",
+        "0",
         "---",
-        "---"
+        "未能勝出"
       ],
       [
         "19",
