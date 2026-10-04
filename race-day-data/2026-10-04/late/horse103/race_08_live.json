@@ -1,0 +1,120 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "97c3c0e1-4c6f-4bac-96a7-c9636091ee28",
+    "race_number": 8,
+    "post_time": "16:15",
+    "venue": "沙田",
+    "distance": 1800,
+    "course": "B"
+  },
+  "date": "2026-10-04",
+  "expected_lock": "2026-10-04T16:12:00+08:00",
+  "live_received_at": "2026-10-04T16:12:08.927371+08:00",
+  "capture_delay_seconds": 8.93,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-04T08:12:01.920Z",
+    "postTime": "2026-10-04T08:15:00.000Z",
+    "previewTime": "2026-10-04T08:08:00.000Z",
+    "lockTime": "2026-10-04T08:12:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 8,
+        "nameTc": "大回報",
+        "nameEn": "BIG RETURN",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 69,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "川河耀駒",
+        "nameEn": "GLITTERING LEGEND",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "榮駿大道",
+        "nameEn": "SMART AVENUE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "北斗福星",
+        "nameEn": "HYMNBOOK",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "年年友福",
+        "nameEn": "FOREVER FOLKS",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 5,
+        "nameTc": "細水長流",
+        "nameEn": "FLOW WATER FLOW",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "千禧龍",
+        "nameEn": "CALL ME MAGNIFIQUE",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "勁大威猛",
+        "nameEn": "MIGHTY STRENGTH",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 5,
+        "nameTc": "細水長流",
+        "nameEn": "FLOW WATER FLOW"
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "千禧龍",
+        "nameEn": "CALL ME MAGNIFIQUE"
+      }
+    ],
+    "secondLook": null
+  }
+}
