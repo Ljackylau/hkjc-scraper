@@ -1,7 +1,7 @@
 {
   "date": "2026-10-04",
   "phase": "early",
-  "updated_at": "2026-10-04T14:28:25.244650+08:00",
+  "updated_at": "2026-10-04T14:29:28.658398+08:00",
   "state": "running",
   "horse103": {
     "1": {
@@ -1314,5 +1314,5 @@
     }
   },
   "errors": [],
-  "publish_error": null
+  "publish_error": "Command '['git', 'push', 'origin', 'HEAD:refs/heads/race-day-data']' returned non-zero exit status 1."
 }
