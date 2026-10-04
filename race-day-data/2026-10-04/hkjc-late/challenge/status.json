@@ -5,11 +5,11 @@
   "pools": {
     "jkc": {
       "state": "observed",
-      "samples_this_run": 474,
-      "received_at": "2026-10-04T17:19:29.497662+08:00",
-      "source_updated_at": "2026-10-04T17:17:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 149.5,
+      "samples_this_run": 478,
+      "received_at": "2026-10-04T17:20:08.932889+08:00",
+      "source_updated_at": "2026-10-04T17:19:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 68.9,
       "numeric_quotes": 7,
       "participants": [
         {
@@ -20,11 +20,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 1.28,
-          "current_odds": 1.25,
-          "quote_text": "1.25",
+          "previous_odds": 1.25,
+          "current_odds": 1.22,
+          "quote_text": "1.22",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.686467
+          "normalized_implied_share": 0.702238
         },
         {
           "selection_id": "4",
@@ -34,11 +34,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 4.5,
-          "current_odds": 4.65,
-          "quote_text": "4.65",
+          "previous_odds": 4.65,
+          "current_odds": 5.0,
+          "quote_text": "5.00",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.184534
+          "normalized_implied_share": 0.171346
         },
         {
           "selection_id": "3",
@@ -52,7 +52,7 @@
           "current_odds": 10.0,
           "quote_text": "10.0",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.085808
+          "normalized_implied_share": 0.085673
         },
         {
           "selection_id": "9",
@@ -62,11 +62,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 150.0,
-          "current_odds": 40.0,
-          "quote_text": "40",
+          "previous_odds": 40.0,
+          "current_odds": 45.0,
+          "quote_text": "45",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.021452
+          "normalized_implied_share": 0.019038
         },
         {
           "selection_id": "2",
@@ -80,7 +80,7 @@
           "current_odds": 75.0,
           "quote_text": "75",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.011441
+          "normalized_implied_share": 0.011423
         },
         {
           "selection_id": "7",
@@ -94,7 +94,7 @@
           "current_odds": 125.0,
           "quote_text": "125",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.006865
+          "normalized_implied_share": 0.006854
         },
         {
           "selection_id": "5",
@@ -108,7 +108,7 @@
           "current_odds": 250.0,
           "quote_text": "250",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.003432
+          "normalized_implied_share": 0.003427
         },
         {
           "selection_id": "12",
@@ -209,17 +209,17 @@
           "normalized_implied_share": null
         }
       ],
-      "points_available": false,
+      "points_available": true,
       "points_freshness": "not_verifiable",
       "points_error": null
     },
     "tnc": {
       "state": "observed",
-      "samples_this_run": 474,
-      "received_at": "2026-10-04T17:19:28.940964+08:00",
+      "samples_this_run": 478,
+      "received_at": "2026-10-04T17:20:09.377591+08:00",
       "source_updated_at": "2026-10-04T17:17:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 148.9,
+      "source_age_seconds": 189.4,
       "numeric_quotes": 8,
       "participants": [
         {
@@ -517,13 +517,13 @@
           "normalized_implied_share": null
         }
       ],
-      "points_available": false,
+      "points_available": true,
       "points_freshness": "not_verifiable",
       "points_error": null
     }
   },
   "research_only": true,
-  "interval_seconds": 10,
+  "interval_seconds": 60,
   "phase_races": [
     6,
     7,
@@ -531,5 +531,5 @@
     9,
     10
   ],
-  "updated_at": "2026-10-04T17:19:29.499662+08:00"
+  "updated_at": "2026-10-04T17:20:09.909809+08:00"
 }
