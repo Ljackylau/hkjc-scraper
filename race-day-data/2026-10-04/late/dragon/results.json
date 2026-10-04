@@ -6100,7 +6100,7 @@
     {
       "race": 10,
       "off_time": "17:10",
-      "status": "收集中",
+      "status": "已停止取樣；保留最後資料",
       "baselines": {
         "FCT": {
           "captured": "2026-10-04T16:11:00.018544+08:00",
@@ -7973,7 +7973,7 @@
         13,
         14
       ],
-      "last_attempt": "2026-10-04T17:24:00.084867+08:00",
+      "last_attempt": "2026-10-04T17:25:00.083842+08:00",
       "errors": [],
       "pools": [
         {
@@ -8005,9 +8005,9 @@
           "compared_pairs": 182,
           "missing_at_end": [],
           "baseline_time": "2026-10-04T16:46:00.015445+08:00",
-          "final_time": "2026-10-04T17:24:00.083933+08:00",
+          "final_time": "2026-10-04T17:25:00.082909+08:00",
           "source_updated": "2026-10-04T17:23:00+08:00",
-          "fresh": true,
+          "fresh": false,
           "comparison_ready": true,
           "baseline_label": "首次可用取樣；非 T−60 比較",
           "current_odds": {
@@ -8211,5 +8211,5 @@
       "snapshots": {}
     }
   ],
-  "published_at": "2026-10-04T17:24:06.105296+08:00"
+  "published_at": "2026-10-04T17:25:06.028081+08:00"
 }
