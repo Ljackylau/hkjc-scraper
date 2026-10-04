@@ -1,12 +1,84 @@
 {
   "date": "2026-10-04",
   "phase": "late",
-  "updated_at": "2026-10-04T14:56:12.439250+08:00",
+  "updated_at": "2026-10-04T14:57:13.892409+08:00",
   "state": "running",
   "horse103": {
     "6": {
-      "status": "waiting",
-      "target": "2026-10-04T14:57:00+08:00"
+      "status": "saved",
+      "target": "2026-10-04T14:57:00+08:00",
+      "delay_seconds": 5.17,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 2,
+          "name_tc": "手機錶能",
+          "name_en": "GRAND PATCH",
+          "formula_score": 0.742,
+          "live_value_index": 57.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 1290000.0,
+          "q_amount": 973000.0
+        },
+        {
+          "horse_number": 6,
+          "name_tc": "紅衣醒目",
+          "name_en": "MR COOL",
+          "formula_score": 0.65116,
+          "live_value_index": 72.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 870000.0,
+          "q_amount": 410000.0
+        },
+        {
+          "horse_number": 8,
+          "name_tc": "喜駿昇星",
+          "name_en": "HERO RISING",
+          "formula_score": 0.5473,
+          "live_value_index": 71.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 610000.0,
+          "q_amount": 130000.0
+        },
+        {
+          "horse_number": 9,
+          "name_tc": "盛勢威楓",
+          "name_en": "SHOTGUN",
+          "formula_score": 0.53775,
+          "live_value_index": 67.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 690000.0,
+          "q_amount": 140000.0
+        },
+        {
+          "horse_number": 11,
+          "name_tc": "天比高",
+          "name_en": "TOP TO SKY",
+          "formula_score": 0.336,
+          "live_value_index": 56.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 0.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        6,
+        8,
+        9,
+        11,
+        2
+      ]
     },
     "7": {
       "status": "waiting",
