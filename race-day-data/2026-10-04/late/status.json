@@ -1,7 +1,7 @@
 {
   "date": "2026-10-04",
   "phase": "late",
-  "updated_at": "2026-10-04T15:41:34.642567+08:00",
+  "updated_at": "2026-10-04T15:42:36.384286+08:00",
   "state": "running",
   "horse103": {
     "6": {
@@ -81,8 +81,385 @@
       ]
     },
     "7": {
-      "status": "waiting",
-      "target": "2026-10-04T15:42:00+08:00"
+      "status": "saved",
+      "target": "2026-10-04T15:42:00+08:00",
+      "delay_seconds": 7.36,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 14,
+          "name_tc": "飛躍成就",
+          "name_en": "QUICK CONTRIBUTION",
+          "formula_score": 0.73944,
+          "live_value_index": 68.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1270000.0,
+          "q_amount": 629000.0
+        },
+        {
+          "horse_number": 12,
+          "name_tc": "北極之錶",
+          "name_en": "POLAR PATCH",
+          "formula_score": 0.52621,
+          "live_value_index": 65.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 546000.0,
+          "q_amount": 243000.0
+        },
+        {
+          "horse_number": 11,
+          "name_tc": "幸福約定",
+          "name_en": "HAPPY PROMISE",
+          "formula_score": 0.43098,
+          "live_value_index": 59.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 390000.0,
+          "q_amount": 85000.0
+        },
+        {
+          "horse_number": 2,
+          "name_tc": "加州熱浪",
+          "name_en": "CALIFORNIA WAVES",
+          "formula_score": 0.40213,
+          "live_value_index": 55.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 368000.0,
+          "q_amount": 78000.0
+        },
+        {
+          "horse_number": 3,
+          "name_tc": "愛馬心",
+          "name_en": "LADY'S LOVE",
+          "formula_score": 0.4,
+          "live_value_index": 0.0,
+          "live_command": null,
+          "live_capital_signal": null,
+          "is_live_candidate": false,
+          "qp_amount": 1357000.0,
+          "q_amount": 872000.0
+        }
+      ],
+      "original": [
+        14,
+        12,
+        11,
+        10,
+        2
+      ],
+      "independent_tip": {
+        "date": "2026-10-04",
+        "race": 7,
+        "off": "2026-10-04T15:45:00+08:00",
+        "freeze": "2026-10-04T15:41:50+08:00",
+        "method": "independent_hybrid_v1",
+        "cutoff": "2026-10-04T15:42:00+08:00",
+        "banker": 12,
+        "legs": [
+          3,
+          14,
+          8,
+          11
+        ],
+        "banker_source": "fixed-baseline market movement",
+        "banker_scores": {
+          "1": 4.634,
+          "2": 3.66,
+          "3": 15.252,
+          "4": 6.462,
+          "5": 3.832,
+          "6": 10.059,
+          "7": 4.446,
+          "8": 9.66,
+          "9": 11.642,
+          "10": 27.306,
+          "11": 10.221,
+          "12": 33.262,
+          "13": 3.084,
+          "14": 14.862
+        },
+        "leg_scores": {
+          "1": 0.07692307692307693,
+          "2": 0.47692307692307695,
+          "3": 0.9692307692307693,
+          "4": 0.16923076923076924,
+          "5": 0.26153846153846155,
+          "6": 0.3230769230769231,
+          "7": 0.5076923076923077,
+          "8": 0.6923076923076924,
+          "9": 0.5307692307692309,
+          "10": 0.36923076923076925,
+          "11": 0.5384615384615385,
+          "12": 0.6846153846153846,
+          "13": 0.5076923076923077,
+          "14": 0.8923076923076924
+        },
+        "received_at": "2026-10-04T15:41:48.396030+08:00",
+        "experimental": true,
+        "not_a_probability": true,
+        "status": "ready",
+        "market": [
+          12,
+          10,
+          3,
+          14,
+          9
+        ],
+        "golden": [],
+        "legs_f": [
+          3,
+          14
+        ],
+        "legs_qp": [
+          8,
+          11
+        ],
+        "banker_qp_odds": {
+          "1": 196.0,
+          "2": 16.0,
+          "3": 6.2,
+          "4": 120.0,
+          "8": 8.0,
+          "9": 14.0,
+          "10": 27.0,
+          "11": 12.0,
+          "5": 80.0,
+          "13": 24.0,
+          "6": 128.0,
+          "14": 6.2,
+          "7": 31.0
+        },
+        "legs_method": "f2_qp1_cold_10_30_exploratory_2026_10_02",
+        "legs_status": "ready",
+        "legs_reason": "",
+        "baseline_received_at": "2026-10-04T15:34:50.226513+08:00",
+        "long_baseline_received_at": "2026-10-04T15:16:00.205880+08:00",
+        "runner_rows": [
+          [
+            "1",
+            "",
+            "龍文瑞安",
+            "11",
+            "135",
+            "楊明綸",
+            "黎昭昇",
+            "84",
+            "25",
+            ""
+          ],
+          [
+            "2",
+            "",
+            "加州熱浪",
+            "10",
+            "130",
+            "艾道拿",
+            "巫偉傑",
+            "14",
+            "4.2",
+            ""
+          ],
+          [
+            "3",
+            "",
+            "愛馬心",
+            "1",
+            "129",
+            "潘頓",
+            "鄭俊偉",
+            "3.2",
+            "1.7",
+            ""
+          ],
+          [
+            "4",
+            "",
+            "鬥志",
+            "13",
+            "128",
+            "奧爾民",
+            "蘇偉賢",
+            "57",
+            "14",
+            ""
+          ],
+          [
+            "5",
+            "",
+            "澄心知遇",
+            "4",
+            "127",
+            "蔡明紹",
+            "蔡約翰",
+            "40",
+            "12",
+            ""
+          ],
+          [
+            "6",
+            "",
+            "好運多彩",
+            "2",
+            "126",
+            "田泰安",
+            "羅富全",
+            "45",
+            "12",
+            ""
+          ],
+          [
+            "7",
+            "",
+            "團結戰靈",
+            "8",
+            "125",
+            "希威森",
+            "桂福特",
+            "25",
+            "7.0",
+            ""
+          ],
+          [
+            "8",
+            "",
+            "金運齊來",
+            "6",
+            "123",
+            "梁家俊",
+            "文家良",
+            "6.4",
+            "2.3",
+            ""
+          ],
+          [
+            "9",
+            "",
+            "你知我寶",
+            "5",
+            "123",
+            "金誠剛",
+            "姚本輝",
+            "9.6",
+            "3.4",
+            ""
+          ],
+          [
+            "10",
+            "",
+            "歷勝",
+            "14",
+            "123",
+            "何澤堯",
+            "呂健威",
+            "38",
+            "7.1",
+            ""
+          ],
+          [
+            "11",
+            "",
+            "幸福約定",
+            "7",
+            "121",
+            "艾兆禮",
+            "大衛希斯",
+            "9.8",
+            "2.6",
+            ""
+          ],
+          [
+            "12",
+            "",
+            "北極之錶",
+            "9",
+            "121",
+            "周俊樂 (-2)",
+            "廖康銘",
+            "9.6",
+            "2.3",
+            ""
+          ],
+          [
+            "13",
+            "",
+            "領袖勁力",
+            "12",
+            "120",
+            "巴度",
+            "徐雨石",
+            "16",
+            "4.5",
+            ""
+          ],
+          [
+            "14",
+            "",
+            "飛躍成就",
+            "3",
+            "119",
+            "潘明輝",
+            "賀賢",
+            "6.2",
+            "2.0",
+            ""
+          ]
+        ],
+        "source_updated": {
+          "wp": "2026-10-04T15:41:00+08:00",
+          "wpq": "2026-10-04T15:41:00+08:00"
+        },
+        "cold": [
+          10
+        ],
+        "cold_status": "ready",
+        "cold_policy": "cold_top2_priority_v2_exploratory_2026-10-02",
+        "cold_freeze": "2026-10-04T15:41:50+08:00",
+        "cold_target": "top2",
+        "cold_probability_calibrated": false,
+        "cold_group": [],
+        "cold_missing": [],
+        "cold_branch": "market_second",
+        "cold_branch_label": "二重彩第二位市場支持",
+        "cold_win": 38.0,
+        "cold_received_at": "2026-10-04T15:41:48.396030+08:00",
+        "cold_fct_received_at": "2026-10-04T15:41:48.595447+08:00",
+        "cold_sources": {
+          "wp": {
+            "wp": "2026-10-04T15:41:00+08:00",
+            "wpq": "2026-10-04T15:41:00+08:00"
+          },
+          "fct": "2026-10-04T15:41:00+08:00",
+          "historical_prepared_at": "2026-10-04T13:30:53.132241+08:00"
+        },
+        "cold_partial": false,
+        "legs_original": [
+          3,
+          14,
+          8,
+          11
+        ],
+        "legs_original_method": "f2_banker_qp2_v1",
+        "legs_original_qp": [
+          8,
+          11
+        ],
+        "legs_fusion_changed": false,
+        "legs_added": null,
+        "legs_removed": null,
+        "legs_cold": [],
+        "legs_fusion_win": 38.0,
+        "legs_fusion_reason_code": "cold_win_outside_gate",
+        "legs_fusion_reason": "冷馬WIN不在10至30倍範圍，保留原四腳",
+        "generated_at": "2026-10-04T15:41:50.047796+08:00"
+      }
     },
     "8": {
       "status": "waiting",

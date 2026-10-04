@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "3227dbe4-a9ea-4c0c-8c29-fc04ce455f96",
+    "race_number": 7,
+    "post_time": "15:45",
+    "venue": "沙田",
+    "distance": 1400,
+    "course": "B"
+  },
+  "date": "2026-10-04",
+  "expected_lock": "2026-10-04T15:42:00+08:00",
+  "live_received_at": "2026-10-04T15:42:07.356459+08:00",
+  "capture_delay_seconds": 7.36,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-04T07:42:02.578Z",
+    "postTime": "2026-10-04T07:45:00.000Z",
+    "previewTime": "2026-10-04T07:38:00.000Z",
+    "lockTime": "2026-10-04T07:42:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 14,
+        "nameTc": "飛躍成就",
+        "nameEn": "QUICK CONTRIBUTION",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "北極之錶",
+        "nameEn": "POLAR PATCH",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "幸福約定",
+        "nameEn": "HAPPY PROMISE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "歷勝",
+        "nameEn": "NEXT FORTUNE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 53,
+        "valueTier": "low",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "加州熱浪",
+        "nameEn": "CALIFORNIA WAVES",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 55,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 3,
+        "nameTc": "愛馬心",
+        "nameEn": "LADY'S LOVE",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "金運齊來",
+        "nameEn": "GOLDEN WIN",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "你知我寶",
+        "nameEn": "MIGHTY FIGHTER",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 9,
+        "nameTc": "你知我寶",
+        "nameEn": "MIGHTY FIGHTER"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 14,
+      "nameTc": "飛躍成就",
+      "nameEn": "QUICK CONTRIBUTION",
+      "confidence": "high",
+      "reason": "飛躍成就近三戰1400米表現極佳，檔位統計有利，負磅輕，操練及試閘俱佳，評分下調有利爭勝。",
+      "previewHorseNumber": null
+    }
+  }
+}
