@@ -1,0 +1,66 @@
+{
+  "status": "observed",
+  "rule": "trainer odds shortened >=15% after previous race to T-3",
+  "threshold_pct": 15,
+  "previous_race": 9,
+  "baseline_source_updated_at": "2026-10-04T16:39:00+08:00",
+  "t3_source_updated_at": "2026-10-04T17:17:00+08:00",
+  "changes": [
+    {
+      "name": "大衛希斯",
+      "before_odds": 7.0,
+      "t3_odds": 1.36,
+      "drop_pct": 80.57
+    },
+    {
+      "name": "姚本輝",
+      "before_odds": 4.0,
+      "t3_odds": 4.25,
+      "drop_pct": -6.25
+    },
+    {
+      "name": "羅富全",
+      "before_odds": 2.85,
+      "t3_odds": 9.0,
+      "drop_pct": -215.79
+    },
+    {
+      "name": "鄭俊偉",
+      "before_odds": 3.5,
+      "t3_odds": 18.0,
+      "drop_pct": -414.29
+    },
+    {
+      "name": "黎昭昇",
+      "before_odds": 25.0,
+      "t3_odds": 70.0,
+      "drop_pct": -180.0
+    },
+    {
+      "name": "沈集成",
+      "before_odds": 125.0,
+      "t3_odds": 200.0,
+      "drop_pct": -60.0
+    },
+    {
+      "name": "文家良",
+      "before_odds": 35.0,
+      "t3_odds": 400.0,
+      "drop_pct": -1042.86
+    },
+    {
+      "name": "徐雨石",
+      "before_odds": 300.0,
+      "t3_odds": 2000.0,
+      "drop_pct": -566.67
+    }
+  ],
+  "qualifying": [
+    {
+      "name": "大衛希斯",
+      "before_odds": 7.0,
+      "t3_odds": 1.36,
+      "drop_pct": 80.57
+    }
+  ]
+}
