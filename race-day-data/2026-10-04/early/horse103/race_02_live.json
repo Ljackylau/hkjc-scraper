@@ -1,0 +1,123 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "6d781fcf-1a76-496e-87a7-0758f896ba8d",
+    "race_number": 2,
+    "post_time": "13:00",
+    "venue": "沙田",
+    "distance": 1200,
+    "course": "B"
+  },
+  "date": "2026-10-04",
+  "expected_lock": "2026-10-04T12:57:00+08:00",
+  "live_received_at": "2026-10-04T12:57:08.225698+08:00",
+  "capture_delay_seconds": 8.23,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-04T04:57:02.923Z",
+    "postTime": "2026-10-04T05:00:00.000Z",
+    "previewTime": "2026-10-04T04:53:00.000Z",
+    "lockTime": "2026-10-04T04:57:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 2,
+        "nameTc": "狼來了",
+        "nameEn": "WOLF COMING",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 71,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 13,
+        "nameTc": "鋁主角",
+        "nameEn": "KOL",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "合夥智能",
+        "nameEn": "COPARTNER A I",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 58,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "傳承精神",
+        "nameEn": "SHANDONG SPIRIT",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 55,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "十分愛",
+        "nameEn": "TEN LOVES",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 54,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 14,
+        "nameTc": "有你有我",
+        "nameEn": "SAME TO YOU",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "潮流勇駒",
+        "nameEn": "TRENDY RUSH",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "銀刺勇士",
+        "nameEn": "SILVER SPURS",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 7,
+        "nameTc": "銀刺勇士",
+        "nameEn": "SILVER SPURS"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 13,
+      "nameTc": "鋁主角",
+      "nameEn": "KOL",
+      "confidence": "high",
+      "reason": "潘頓接手，檔位理想，上仗第四名表現進步，今仗負磅輕，有望爭勝。",
+      "previewHorseNumber": null
+    }
+  }
+}
