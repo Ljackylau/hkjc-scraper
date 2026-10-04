@@ -5,11 +5,11 @@
   "pools": {
     "tnc": {
       "state": "observed",
-      "samples_this_run": 244,
-      "received_at": "2026-10-04T13:59:23.968473+08:00",
-      "source_updated_at": "2026-10-04T13:54:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 324.0,
+      "samples_this_run": 248,
+      "received_at": "2026-10-04T14:00:04.060286+08:00",
+      "source_updated_at": "2026-10-04T13:59:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 64.1,
       "numeric_quotes": 21,
       "participants": [
         {
@@ -55,20 +55,6 @@
           "normalized_implied_share": 0.097281
         },
         {
-          "selection_id": "6",
-          "name": "游達榮",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": 22.0,
-          "current_odds": 11.0,
-          "quote_text": "11.0",
-          "opening_drop_pct": null,
-          "normalized_implied_share": 0.075172
-        },
-        {
           "selection_id": "5",
           "name": "羅富全",
           "is_other": false,
@@ -76,7 +62,21 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 14.0,
+          "previous_odds": 12.0,
+          "current_odds": 11.0,
+          "quote_text": "11.0",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.075172
+        },
+        {
+          "selection_id": "6",
+          "name": "游達榮",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 11.0,
           "current_odds": 12.0,
           "quote_text": "12.0",
           "opening_drop_pct": null,
@@ -307,17 +307,17 @@
           "normalized_implied_share": 0.000413
         }
       ],
-      "points_available": false,
+      "points_available": true,
       "points_freshness": "not_verifiable",
       "points_error": null
     },
     "jkc": {
       "state": "observed",
-      "samples_this_run": 244,
-      "received_at": "2026-10-04T13:59:24.014020+08:00",
+      "samples_this_run": 248,
+      "received_at": "2026-10-04T14:00:03.981320+08:00",
       "source_updated_at": "2026-10-04T13:58:00+08:00",
-      "source_recent": true,
-      "source_age_seconds": 84.0,
+      "source_recent": false,
+      "source_age_seconds": 124.0,
       "numeric_quotes": 14,
       "participants": [
         {
@@ -517,13 +517,13 @@
           "normalized_implied_share": 0.000855
         }
       ],
-      "points_available": false,
+      "points_available": true,
       "points_freshness": "not_verifiable",
       "points_error": null
     }
   },
   "research_only": true,
-  "interval_seconds": 10,
+  "interval_seconds": 60,
   "phase_races": [
     1,
     2,
@@ -531,5 +531,5 @@
     4,
     5
   ],
-  "updated_at": "2026-10-04T13:59:24.015410+08:00"
+  "updated_at": "2026-10-04T14:00:05.414498+08:00"
 }
