@@ -1,7 +1,7 @@
 {
   "date": "2026-10-04",
   "phase": "early",
-  "updated_at": "2026-10-04T13:56:23.402967+08:00",
+  "updated_at": "2026-10-04T13:57:25.335812+08:00",
   "state": "running",
   "horse103": {
     "1": {
@@ -523,8 +523,386 @@
       ]
     },
     "4": {
-      "status": "waiting",
-      "target": "2026-10-04T13:57:00+08:00"
+      "status": "saved",
+      "target": "2026-10-04T13:57:00+08:00",
+      "delay_seconds": 8.12,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 12,
+          "name_tc": "添喜運",
+          "name_en": "TEAM HAPPY",
+          "formula_score": 0.42251,
+          "live_value_index": 69.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 57000.0,
+          "q_amount": 0.0
+        },
+        {
+          "horse_number": 2,
+          "name_tc": "悠然常勝",
+          "name_en": "LIGHTNING ACE",
+          "formula_score": 0.42069,
+          "live_value_index": 66.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 67000.0,
+          "q_amount": 66000.0
+        },
+        {
+          "horse_number": 9,
+          "name_tc": "多彩多姿",
+          "name_en": "COLOURFUL WINNER",
+          "formula_score": 0.40912,
+          "live_value_index": 62.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 110000.0,
+          "q_amount": 93000.0
+        },
+        {
+          "horse_number": 5,
+          "name_tc": "明亮光輝",
+          "name_en": "MADE FOR LIFE",
+          "formula_score": 0.408,
+          "live_value_index": 68.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 0.0,
+          "q_amount": 0.0
+        },
+        {
+          "horse_number": 8,
+          "name_tc": "文武全能",
+          "name_en": "THE ALL ROUNDER",
+          "formula_score": 0.4,
+          "live_value_index": 0.0,
+          "live_command": null,
+          "live_capital_signal": null,
+          "is_live_candidate": false,
+          "qp_amount": 1339000.0,
+          "q_amount": 899000.0
+        }
+      ],
+      "original": [
+        12,
+        5,
+        2,
+        9,
+        11
+      ],
+      "independent_tip": {
+        "date": "2026-10-04",
+        "race": 4,
+        "off": "2026-10-04T14:00:00+08:00",
+        "freeze": "2026-10-04T13:56:50+08:00",
+        "method": "independent_hybrid_v1",
+        "cutoff": "2026-10-04T13:57:00+08:00",
+        "banker": 9,
+        "legs": [
+          8,
+          6,
+          13,
+          12
+        ],
+        "banker_source": "fixed-baseline market movement",
+        "banker_scores": {
+          "1": 9.076,
+          "2": 17.746,
+          "3": 5.056,
+          "4": 14.655,
+          "5": 4.84,
+          "6": 11.791,
+          "7": 2.818,
+          "8": 6.958,
+          "9": 35.483,
+          "10": 15.067,
+          "11": 13.534,
+          "12": 13.11,
+          "13": 9.373,
+          "14": 7.1
+        },
+        "leg_scores": {
+          "1": 0.30000000000000004,
+          "2": 0.676923076923077,
+          "3": 0.3230769230769231,
+          "4": 0.676923076923077,
+          "5": 0.4076923076923077,
+          "6": 0.7384615384615385,
+          "7": 0.4307692307692308,
+          "8": 0.8153846153846154,
+          "9": 0.6307692307692307,
+          "10": 0.1076923076923077,
+          "11": 0.2,
+          "12": 0.5692307692307692,
+          "13": 0.7384615384615385,
+          "14": 0.38461538461538464
+        },
+        "received_at": "2026-10-04T13:56:48.292884+08:00",
+        "experimental": true,
+        "not_a_probability": true,
+        "status": "ready",
+        "market": [
+          9,
+          2,
+          10,
+          4,
+          11
+        ],
+        "golden": [],
+        "legs_f": [
+          8,
+          6
+        ],
+        "legs_qp": [
+          13
+        ],
+        "banker_qp_odds": {
+          "1": 42.0,
+          "8": 8.0,
+          "2": 16.0,
+          "10": 97.0,
+          "3": 45.0,
+          "11": 36.0,
+          "4": 13.0,
+          "12": 20.0,
+          "5": 24.0,
+          "13": 10.0,
+          "6": 10.0,
+          "14": 29.0,
+          "7": 27.0
+        },
+        "legs_method": "f2_qp1_cold_10_30_exploratory_2026_10_02",
+        "legs_status": "ready",
+        "legs_reason": "",
+        "baseline_received_at": "2026-10-04T13:49:55.201688+08:00",
+        "long_baseline_received_at": "2026-10-04T13:33:10.180471+08:00",
+        "runner_rows": [
+          [
+            "1",
+            "",
+            "天外富天",
+            "3",
+            "135",
+            "班德禮",
+            "大衛希斯",
+            "29",
+            "8.3",
+            ""
+          ],
+          [
+            "2",
+            "",
+            "悠然常勝",
+            "8",
+            "134",
+            "蔡明紹",
+            "巫偉傑",
+            "19",
+            "5.2",
+            ""
+          ],
+          [
+            "3",
+            "",
+            "海鑽石",
+            "13",
+            "134",
+            "袁幸堯 (-7)",
+            "沈集成",
+            "27",
+            "7.9",
+            ""
+          ],
+          [
+            "4",
+            "",
+            "籐王駒",
+            "10",
+            "133",
+            "霍宏聲",
+            "文家良",
+            "9.2",
+            "2.8",
+            ""
+          ],
+          [
+            "5",
+            "",
+            "明亮光輝",
+            "5",
+            "131",
+            "金誠剛",
+            "廖康銘",
+            "29",
+            "7.5",
+            ""
+          ],
+          [
+            "6",
+            "",
+            "增旺",
+            "7",
+            "131",
+            "奧爾民",
+            "賀賢",
+            "7.6",
+            "2.0",
+            ""
+          ],
+          [
+            "7",
+            "",
+            "海洋帝君",
+            "6",
+            "120",
+            "田泰安",
+            "徐雨石",
+            "18",
+            "6.0",
+            ""
+          ],
+          [
+            "8",
+            "",
+            "文武全能",
+            "4",
+            "130",
+            "何澤堯",
+            "伍鵬志",
+            "2.8",
+            "1.5",
+            ""
+          ],
+          [
+            "9",
+            "",
+            "多彩多姿",
+            "9",
+            "126",
+            "楊明綸",
+            "蘇偉賢",
+            "9.8",
+            "2.0",
+            ""
+          ],
+          [
+            "10",
+            "",
+            "君智盛",
+            "14",
+            "125",
+            "艾道拿",
+            "姚本輝",
+            "69",
+            "20",
+            ""
+          ],
+          [
+            "11",
+            "",
+            "美神來",
+            "12",
+            "124",
+            "周俊樂 (-2)",
+            "羅富全",
+            "36",
+            "10",
+            ""
+          ],
+          [
+            "12",
+            "",
+            "添喜運",
+            "1",
+            "124",
+            "潘明輝",
+            "鄭俊偉",
+            "21",
+            "5.7",
+            ""
+          ],
+          [
+            "13",
+            "",
+            "巴閉佬",
+            "11",
+            "123",
+            "潘頓",
+            "呂健威",
+            "5.6",
+            "2.2",
+            ""
+          ],
+          [
+            "14",
+            "",
+            "紅旺繽紛",
+            "2",
+            "120",
+            "巴度",
+            "韋達",
+            "25",
+            "6.6",
+            ""
+          ]
+        ],
+        "source_updated": {
+          "wp": "2026-10-04T13:56:00+08:00",
+          "wpq": "2026-10-04T13:56:00+08:00"
+        },
+        "cold": [
+          12
+        ],
+        "cold_status": "ready",
+        "cold_policy": "cold_top2_priority_v2_exploratory_2026-10-02",
+        "cold_freeze": "2026-10-04T13:56:50+08:00",
+        "cold_target": "top2",
+        "cold_probability_calibrated": false,
+        "cold_group": [],
+        "cold_missing": [],
+        "cold_branch": "confirmed_prior_form",
+        "cold_branch_label": "原B＋賽績確認",
+        "cold_win": 21.0,
+        "cold_received_at": "2026-10-04T13:56:48.292884+08:00",
+        "cold_fct_received_at": "2026-10-04T13:56:48.364821+08:00",
+        "cold_sources": {
+          "wp": {
+            "wp": "2026-10-04T13:56:00+08:00",
+            "wpq": "2026-10-04T13:56:00+08:00"
+          },
+          "fct": "2026-10-04T13:56:00+08:00",
+          "historical_prepared_at": "2026-10-04T12:09:08.130387+08:00"
+        },
+        "cold_partial": false,
+        "legs_original": [
+          8,
+          6,
+          13,
+          4
+        ],
+        "legs_original_method": "f2_banker_qp2_v1",
+        "legs_original_qp": [
+          13,
+          4
+        ],
+        "legs_fusion_changed": true,
+        "legs_added": 12,
+        "legs_removed": 4,
+        "legs_cold": [
+          12
+        ],
+        "legs_fusion_win": 21.0,
+        "legs_fusion_reason_code": "cold_replaces_fourth",
+        "legs_fusion_reason": "第四腳換入冷馬12號（截止WIN 21倍）；原4號",
+        "generated_at": "2026-10-04T13:56:50.054915+08:00"
+      }
     },
     "5": {
       "status": "waiting",

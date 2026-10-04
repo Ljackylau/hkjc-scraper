@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "e589c974-8910-4b3c-8457-fe52ad2c6e21",
+    "race_number": 4,
+    "post_time": "14:00",
+    "venue": "沙田",
+    "distance": 1400,
+    "course": "B"
+  },
+  "date": "2026-10-04",
+  "expected_lock": "2026-10-04T13:57:00+08:00",
+  "live_received_at": "2026-10-04T13:57:08.121684+08:00",
+  "capture_delay_seconds": 8.12,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-04T05:57:02.149Z",
+    "postTime": "2026-10-04T06:00:00.000Z",
+    "previewTime": "2026-10-04T05:53:00.000Z",
+    "lockTime": "2026-10-04T05:57:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 12,
+        "nameTc": "添喜運",
+        "nameEn": "TEAM HAPPY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 69,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "明亮光輝",
+        "nameEn": "MADE FOR LIFE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "悠然常勝",
+        "nameEn": "LIGHTNING ACE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "多彩多姿",
+        "nameEn": "COLOURFUL WINNER",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 62,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "美神來",
+        "nameEn": "MY FLYING ANGEL",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 55,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 8,
+        "nameTc": "文武全能",
+        "nameEn": "THE ALL ROUNDER",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 13,
+        "nameTc": "巴閉佬",
+        "nameEn": "SUPERB GUY",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "增旺",
+        "nameEn": "PERIDOT",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 12,
+      "nameTc": "添喜運",
+      "nameEn": "TEAM HAPPY",
+      "confidence": "medium",
+      "reason": "檔位統計極佳，上仗贏馬姿態良好，評分雖加但負磅合理。練馬師今季成績不俗，馬匹狀態持續勇進。",
+      "previewHorseNumber": null
+    }
+  }
+}
