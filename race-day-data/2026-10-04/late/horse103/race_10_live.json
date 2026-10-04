@@ -1,0 +1,128 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "987fea58-6c68-4f34-890e-b0e2d6862210",
+    "race_number": 10,
+    "post_time": "17:15",
+    "venue": "沙田",
+    "distance": 1000,
+    "course": "B"
+  },
+  "date": "2026-10-04",
+  "expected_lock": "2026-10-04T17:12:00+08:00",
+  "live_received_at": "2026-10-04T17:12:08.137874+08:00",
+  "capture_delay_seconds": 8.14,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-04T09:12:02.542Z",
+    "postTime": "2026-10-04T09:15:00.000Z",
+    "previewTime": "2026-10-04T09:08:00.000Z",
+    "lockTime": "2026-10-04T09:12:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 2,
+        "nameTc": "星運傳奇",
+        "nameEn": "ALPHA STRIKE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 66,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": false
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "星月飛雲",
+        "nameEn": "CELESTIAL HERO",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 64,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "無敵好瑪",
+        "nameEn": "INVINCIBLE STEED",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "從化之星",
+        "nameEn": "CONGHUA GALAXY",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 57,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "領航君子",
+        "nameEn": "CASA OF HONOR",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 50,
+        "valueTier": "low",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 13,
+        "nameTc": "幸運糖",
+        "nameEn": "LUCKY CANDY",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "叻叻豬",
+        "nameEn": "SMART OINK",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 14,
+        "nameTc": "拉合爾",
+        "nameEn": "LAHORE",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [
+      {
+        "horseNumber": 3,
+        "nameTc": "精彩福星",
+        "nameEn": "METRO POWER"
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "連連幸運",
+        "nameEn": "ETERNAL FORTUNE"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 9,
+      "nameTc": "從化之星",
+      "nameEn": "CONGHUA GALAXY",
+      "confidence": "high",
+      "reason": "初出即跑獲季軍，表現出色。今仗負磅輕，操練良好，有望再進一步。",
+      "previewHorseNumber": null
+    }
+  }
+}
