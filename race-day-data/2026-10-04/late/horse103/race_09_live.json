@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "c9b2819f-8d8e-42e3-ad80-449d268cd179",
+    "race_number": 9,
+    "post_time": "16:35",
+    "venue": "沙田",
+    "distance": 1650,
+    "course": "全天候"
+  },
+  "date": "2026-10-04",
+  "expected_lock": "2026-10-04T16:32:00+08:00",
+  "live_received_at": "2026-10-04T16:32:05.325170+08:00",
+  "capture_delay_seconds": 5.33,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-04T08:32:01.966Z",
+    "postTime": "2026-10-04T08:35:00.000Z",
+    "previewTime": "2026-10-04T08:28:00.000Z",
+    "lockTime": "2026-10-04T08:32:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 12,
+        "nameTc": "量子力奇",
+        "nameEn": "QUANTUM LEGEND",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "榮利雙收",
+        "nameEn": "ALL ROUND WINNER",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "瑪瑙",
+        "nameEn": "KEEFY",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 57,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "勁勇皇駒",
+        "nameEn": "KING DANCE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 53,
+        "valueTier": "low",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "哪吒",
+        "nameEn": "NEZHA",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 58,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 4,
+        "nameTc": "富國兄弟",
+        "nameEn": "THRIVING BROTHERS",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "花開",
+        "nameEn": "BLOSSOMY",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "翠兒威威",
+        "nameEn": "STORMI",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 9,
+      "nameTc": "勁勇皇駒",
+      "nameEn": "KING DANCE",
+      "confidence": "medium",
+      "reason": "勁勇皇駒檔位有利，何澤堯今季成績出色，馬匹在同程全天候賽績良好，操練及試閘表現亦佳。",
+      "previewHorseNumber": null
+    }
+  }
+}
