@@ -3487,7 +3487,7 @@
     {
       "race": 8,
       "off_time": "16:05",
-      "status": "收集中",
+      "status": "已停止取樣；保留最後資料",
       "baselines": {
         "FCT": {
           "captured": "2026-10-04T15:06:00.013689+08:00",
@@ -5071,7 +5071,7 @@
         11,
         12
       ],
-      "last_attempt": "2026-10-04T16:19:00.064493+08:00",
+      "last_attempt": "2026-10-04T16:20:00.069984+08:00",
       "errors": [],
       "pools": [
         {
@@ -5174,7 +5174,7 @@
           "compared_pairs": 110,
           "missing_at_end": [],
           "baseline_time": "2026-10-04T15:36:00.025297+08:00",
-          "final_time": "2026-10-04T16:19:00.063798+08:00",
+          "final_time": "2026-10-04T16:20:00.069116+08:00",
           "source_updated": "2026-10-04T16:17:00+08:00",
           "fresh": false,
           "comparison_ready": true,
@@ -5545,7 +5545,7 @@
         13,
         14
       ],
-      "last_attempt": "2026-10-04T16:19:00.028349+08:00",
+      "last_attempt": "2026-10-04T16:20:00.034783+08:00",
       "errors": [],
       "pools": [
         {
@@ -5555,9 +5555,9 @@
           "compared_pairs": 182,
           "missing_at_end": [],
           "baseline_time": "2026-10-04T16:11:00.018544+08:00",
-          "final_time": "2026-10-04T16:19:00.027518+08:00",
+          "final_time": "2026-10-04T16:20:00.033778+08:00",
           "source_updated": "2026-10-04T16:18:00+08:00",
-          "fresh": true,
+          "fresh": false,
           "comparison_ready": true,
           "baseline_label": "首次可用取樣；非 T−60 比較",
           "current_odds": {
@@ -5755,5 +5755,5 @@
       "status": "正在開啟"
     }
   ],
-  "published_at": "2026-10-04T16:19:06.044793+08:00"
+  "published_at": "2026-10-04T16:20:06.027301+08:00"
 }
