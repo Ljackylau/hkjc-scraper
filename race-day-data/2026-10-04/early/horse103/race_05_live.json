@@ -1,0 +1,117 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "5de69523-0051-462a-9163-9bf945acb237",
+    "race_number": 5,
+    "post_time": "14:30",
+    "venue": "沙田",
+    "distance": 1650,
+    "course": "全天候"
+  },
+  "date": "2026-10-04",
+  "expected_lock": "2026-10-04T14:27:00+08:00",
+  "live_received_at": "2026-10-04T14:27:11.324439+08:00",
+  "capture_delay_seconds": 11.32,
+  "live": {
+    "engineVersion": "live103-v3.5.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-04T06:27:03.418Z",
+    "postTime": "2026-10-04T06:30:00.000Z",
+    "previewTime": "2026-10-04T06:23:00.000Z",
+    "lockTime": "2026-10-04T06:27:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 4,
+        "nameTc": "隨緣得勝",
+        "nameEn": "VIVACIOUS WIN",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "風起雲湧",
+        "nameEn": "FIREFOOT",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 64,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "飛躍星伴",
+        "nameEn": "LEAPING STAR",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 62,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "林寶精神",
+        "nameEn": "BULL ATTITUDE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 11,
+        "nameTc": "天威",
+        "nameEn": "NEVER PETER OUT",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [
+      {
+        "horseNumber": 7,
+        "nameTc": "超加加",
+        "nameEn": "CHILL KAKA",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "午夜快車",
+        "nameEn": "NIGHT PUROSANGUE",
+        "capitalSignal": "none"
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "開心宇宙",
+        "nameEn": "HAPPY UNIVERSE",
+        "capitalSignal": "none"
+      }
+    ],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 4,
+      "nameTc": "隨緣得勝",
+      "nameEn": "VIVACIOUS WIN",
+      "confidence": "high",
+      "reason": "潘頓今季成績極佳，此駒負磅雖重但評分合理，檔位理想，近績穩定且曾勝同程，操練及試閘表現良好，預計步速亦合發揮。",
+      "previewHorseNumber": null
+    }
+  }
+}
