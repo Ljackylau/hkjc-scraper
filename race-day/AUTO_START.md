@@ -1,0 +1,13 @@
+# Automatic race-day startup
+
+`Race Day Automatic Start` runs at HK 09:07..19:52 every 15 minutes. It reads today's structured meeting schedule using the same Horse103 source as the existing Runner, validates a contiguous complete field of 1–14 races, one ST/HV venue, and increasing HH:MM times, and dispatches `Race Day Runner (Independent)` on main with date, venue and all times populated. It never substitutes another date.
+
+A meeting is submitted on the first check in the first-race T−120..T−60 window. Setup and GitHub scheduling may take time; two hours is a target, not a guarantee. Existing HKJC collectors still observe advertised clock revisions during collection. The new scheduler does not independently verify the initial list against an official HKJC racecard. An empty source list skips this check; later scheduled checks retry discovery. Invalid schedules or API access failures fail closed and alert via the existing Telegram secrets.
+
+New Run titles include `Race Day YYYY-MM-DD · Run · VENUE`. Any matching manual or automatic run in that date's GitHub history blocks an automatic repeat, including failed runs; manually retry a failed Run after checking its cause. The short scheduler has its own concurrency group, separate from long-running collectors, so periodic checks cannot cancel collectors or queue repeated full-day workers. Dispatch accepted notifications do not claim that every collector is healthy. Runner failure/cancellation notification is sent after collector jobs finish. Existing per-race notifications remain unchanged.
+
+No extra token secret is required: scheduler `GITHUB_TOKEN` has repository-scoped actions:write. Existing `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` are reused; there are no outbound notifications if they are absent. Public-repository inactivity may disable GitHub cron after 60 days. Scheduled jobs can be delayed or dropped by GitHub.
+
+Manual scheduler runs default to dry_run=true and inspect only. Manual combined Preflight and Run remain available. An accepted dispatch whose notification fails is still considered submitted by subsequent run-history checks. A missed T−60 window is reported and never silently replaced by after-cutoff data. The scheduler does not automatically retry failed full-day runs, because those can have already published partial tips.
+
+Verification: `python -m unittest discover -s race-day -p test_auto_start.py -v`; complete existing Python suite and workflow YAML parse. Synthetic tests cover invalid/mixed/incomplete schedules, time-window boundaries, prior manual/failed runs, dry-run behavior and notification failure after an accepted dispatch.

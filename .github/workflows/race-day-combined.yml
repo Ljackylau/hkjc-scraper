@@ -1,4 +1,5 @@
 name: Race Day Runner (Independent)
+run-name: "Race Day ${{ inputs.date || 'checks' }} · ${{ inputs.mode || 'Checks' }} · ${{ inputs.venue || '' }}"
 on:
   push:
     branches: [main]
@@ -253,3 +254,24 @@ jobs:
           name: hkjc-shadow-late-${{ github.run_id }}
           path: race-day-data/${{ inputs.date }}/hkjc-late/
           retention-days: 7
+
+  report-failures:
+    needs: [prepare, early, late, hkjc-early, hkjc-late]
+    if: always() && inputs.mode == 'Run'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install 'lxml>=5,<7'
+      - env:
+          JOB_RESULTS: ${{ toJSON(needs) }}
+          RACE_DATE: ${{ inputs.date }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python race-day/auto_start.py --report-results
