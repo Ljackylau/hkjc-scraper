@@ -1,0 +1,112 @@
+{
+  "source": "HKJC official local results",
+  "source_url": "https://racing.hkjc.com/en-us/local/information/archive/localresults?racedate=2026%2F10%2F07&Racecourse=HV&RaceNo=1",
+  "received_at": "2026-10-07T18:46:43.944578+08:00",
+  "entries": [
+    {
+      "placing": "1",
+      "placing_text": "1",
+      "horse_number": 9
+    },
+    {
+      "placing": "2",
+      "placing_text": "2",
+      "horse_number": 4
+    },
+    {
+      "placing": "3",
+      "placing_text": "3",
+      "horse_number": 8
+    },
+    {
+      "placing": "4",
+      "placing_text": "4",
+      "horse_number": 11
+    }
+  ],
+  "top4": [
+    9,
+    4,
+    8,
+    11
+  ],
+  "dividends": {
+    "W": [
+      {
+        "combination": "9",
+        "dividend_hkd": 47.5
+      }
+    ],
+    "P": [
+      {
+        "combination": "9",
+        "dividend_hkd": 18.5
+      },
+      {
+        "combination": "4",
+        "dividend_hkd": 24.0
+      },
+      {
+        "combination": "8",
+        "dividend_hkd": 38.0
+      }
+    ],
+    "Q": [
+      {
+        "combination": "4,9",
+        "dividend_hkd": 157.0
+      }
+    ],
+    "QP": [
+      {
+        "combination": "4,9",
+        "dividend_hkd": 58.5
+      },
+      {
+        "combination": "8,9",
+        "dividend_hkd": 113.5
+      },
+      {
+        "combination": "4,8",
+        "dividend_hkd": 151.5
+      }
+    ],
+    "FCT": [
+      {
+        "combination": "9,4",
+        "dividend_hkd": 293.0
+      }
+    ],
+    "TIERCE": [
+      {
+        "combination": "9,4,8",
+        "dividend_hkd": 3256.0
+      }
+    ],
+    "TRIO": [
+      {
+        "combination": "4,8,9",
+        "dividend_hkd": 797.0
+      }
+    ],
+    "FIRST4": [
+      {
+        "combination": "4,8,9,11",
+        "dividend_hkd": 2189.0
+      }
+    ],
+    "QUARTET": [
+      {
+        "combination": "9,4,8,11",
+        "dividend_hkd": 35242.0
+      }
+    ]
+  },
+  "dividend_unit": "HKJC published HK$ unit",
+  "settlement_status": "complete",
+  "date": "2026-10-07",
+  "race": 1,
+  "banker": null,
+  "legs": [],
+  "cold": null
+}

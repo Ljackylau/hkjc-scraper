@@ -1,10 +1,47 @@
 {
   "date": "2026-10-07",
   "phase": "early",
-  "updated_at": "2026-10-07T18:46:41.571444+08:00",
+  "updated_at": "2026-10-07T18:47:43.890143+08:00",
   "state": "running",
-  "horse103": {},
-  "results": {},
+  "horse103": {
+    "1": {
+      "status": "missed",
+      "target": "2026-10-07T18:32:00+08:00",
+      "reason": "Started more than 90 seconds after T-3"
+    },
+    "2": {
+      "status": "waiting",
+      "target": "2026-10-07T19:02:00+08:00"
+    },
+    "3": {
+      "status": "waiting",
+      "target": "2026-10-07T19:32:00+08:00"
+    },
+    "4": {
+      "status": "waiting",
+      "target": "2026-10-07T20:07:00+08:00"
+    }
+  },
+  "results": {
+    "1": {
+      "status": "saved",
+      "top4": [
+        9,
+        4,
+        8,
+        11
+      ]
+    },
+    "2": {
+      "status": "waiting"
+    },
+    "3": {
+      "status": "waiting"
+    },
+    "4": {
+      "status": "waiting"
+    }
+  },
   "errors": [],
   "publish_error": null
 }

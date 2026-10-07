@@ -1,0 +1,25 @@
+{
+  "status": "failed",
+  "race": 1,
+  "reason": "Independent Telegram send not confirmed",
+  "independent_tip": {
+    "date": "2026-10-07",
+    "race": 1,
+    "off": "2026-10-07T18:35:00+08:00",
+    "freeze": "2026-10-07T18:31:50+08:00",
+    "method": "independent_hybrid_v1",
+    "cutoff": "2026-10-07T18:32:00+08:00",
+    "status": "unavailable",
+    "reason": "缺截止前120秒內完整HKJC快照",
+    "cold": [],
+    "cold_status": "unavailable",
+    "cold_policy": "cold_top2_priority_v2_exploratory_2026-10-02",
+    "cold_freeze": "2026-10-07T18:31:50+08:00",
+    "cold_target": "top2",
+    "cold_probability_calibrated": false,
+    "cold_group": [],
+    "cold_missing": [],
+    "cold_reason": "缺T−3截止前120秒內完整獨贏／位置／連贏／位置Q快照",
+    "generated_at": "2026-10-07T18:46:19.250072+08:00"
+  }
+}
