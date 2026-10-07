@@ -4,13 +4,13 @@
   "state": "collecting",
   "pools": {
     "jkc": {
-      "state": "no_numeric_quotes",
-      "samples_this_run": 335,
-      "received_at": "2026-10-07T21:53:08.015974+08:00",
-      "source_updated_at": "2026-10-07T21:52:00+08:00",
+      "state": "observed",
+      "samples_this_run": 336,
+      "received_at": "2026-10-07T21:54:07.907838+08:00",
+      "source_updated_at": "2026-10-07T21:53:00+08:00",
       "source_recent": true,
-      "source_age_seconds": 68.0,
-      "numeric_quotes": 0,
+      "source_age_seconds": 67.9,
+      "numeric_quotes": 6,
       "participants": [
         {
           "selection_id": "1",
@@ -20,11 +20,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 1.8,
+          "current_odds": 1.7,
+          "quote_text": "1.70",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.503468
         },
         {
           "selection_id": "9",
@@ -34,11 +34,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 2.85,
+          "current_odds": 2.6,
+          "quote_text": "2.60",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.329191
         },
         {
           "selection_id": "4",
@@ -48,11 +48,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 22.0,
+          "current_odds": 6.5,
+          "quote_text": "6.50",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.131676
         },
         {
           "selection_id": "5",
@@ -62,11 +62,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 5.5,
+          "current_odds": 35.0,
+          "quote_text": "35",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.024454
         },
         {
           "selection_id": "3",
@@ -76,11 +76,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 45.0,
+          "current_odds": 85.0,
+          "quote_text": "85",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.010069
         },
         {
           "selection_id": "12",
@@ -90,23 +90,23 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 200.0,
+          "current_odds": 750.0,
+          "quote_text": "750",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.001141
         },
         {
-          "selection_id": "14",
-          "name": "其他騎師",
-          "is_other": true,
+          "selection_id": "2",
+          "name": "艾兆禮",
+          "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -120,7 +120,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -134,21 +134,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "2",
-          "name": "艾兆禮",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -207,6 +193,20 @@
           "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
+        },
+        {
+          "selection_id": "14",
+          "name": "其他騎師",
+          "is_other": true,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "未能勝出",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
         }
       ],
       "points_available": true,
@@ -215,11 +215,11 @@
     },
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 335,
-      "received_at": "2026-10-07T21:53:08.229539+08:00",
-      "source_updated_at": "2026-10-07T21:45:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 488.2,
+      "samples_this_run": 336,
+      "received_at": "2026-10-07T21:54:08.110412+08:00",
+      "source_updated_at": "2026-10-07T21:53:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 68.1,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -288,7 +288,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -302,7 +302,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -316,7 +316,7 @@
           "opening_odds": null,
           "previous_odds": null,
           "current_odds": null,
-          "quote_text": "---",
+          "quote_text": "未能勝出",
           "opening_drop_pct": null,
           "normalized_implied_share": null
         },
@@ -531,5 +531,5 @@
     8,
     9
   ],
-  "updated_at": "2026-10-07T21:53:08.275293+08:00"
+  "updated_at": "2026-10-07T21:54:08.628529+08:00"
 }
