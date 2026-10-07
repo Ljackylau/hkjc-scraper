@@ -1,0 +1,98 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "39e14e51-ddc9-4738-955c-4794a930cdc8",
+    "race_number": 7,
+    "post_time": "21:45",
+    "venue": "跑馬地",
+    "distance": 1200,
+    "course": "C+3"
+  },
+  "date": "2026-10-07",
+  "expected_lock": "2026-10-07T21:42:00+08:00",
+  "live_received_at": "2026-10-07T21:42:08.089277+08:00",
+  "capture_delay_seconds": 8.09,
+  "live": {
+    "engineVersion": "live103-v3.7.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-07T13:42:02.392Z",
+    "postTime": "2026-10-07T13:45:00.000Z",
+    "previewTime": "2026-10-07T13:38:00.000Z",
+    "lockTime": "2026-10-07T13:42:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 9,
+        "nameTc": "朗日自強",
+        "nameEn": "BRIGHT DAY",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 3,
+        "nameTc": "快活英雄",
+        "nameEn": "JUBILANT WINNER",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 4,
+        "nameTc": "幸運星球",
+        "nameEn": "LUCKY PLANET",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 57,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "天馬行雲",
+        "nameEn": "QUANTUM CLOUD",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 57,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "關鍵所在",
+        "nameEn": "MATTERS MOST",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 9,
+      "nameTc": "朗日自強",
+      "nameEn": "BRIGHT DAY",
+      "confidence": "high",
+      "reason": "朗日自強上仗四班輕勝姿態出色，升班後負輕磅，檔位有利，騎練今季成績俱佳，狀態大勇。",
+      "previewHorseNumber": null
+    }
+  }
+}
