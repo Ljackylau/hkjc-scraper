@@ -1,7 +1,7 @@
 {
   "date": "2026-10-07",
   "phase": "late",
-  "updated_at": "2026-10-07T22:47:12.144084+08:00",
+  "updated_at": "2026-10-07T22:48:15.502110+08:00",
   "state": "running",
   "horse103": {
     "5": {
@@ -1409,8 +1409,80 @@
       }
     },
     "9": {
-      "status": "waiting",
+      "status": "saved",
       "target": "2026-10-07T22:47:00+08:00",
+      "delay_seconds": 13.43,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 7,
+          "name_tc": "星運少爵",
+          "name_en": "THE HEIR",
+          "formula_score": 0.838,
+          "live_value_index": 73.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 4556000.0,
+          "q_amount": 4199000.0
+        },
+        {
+          "horse_number": 6,
+          "name_tc": "盈妍威楓",
+          "name_en": "PRESTIGE ALWAYS",
+          "formula_score": 0.6533,
+          "live_value_index": 73.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2665000.0,
+          "q_amount": 2064000.0
+        },
+        {
+          "horse_number": 9,
+          "name_tc": "烈焰光芒",
+          "name_en": "LIVE WIRE",
+          "formula_score": 0.56646,
+          "live_value_index": 63.0,
+          "live_command": "observe",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2327000.0,
+          "q_amount": 1812000.0
+        },
+        {
+          "horse_number": 8,
+          "name_tc": "可靠大師",
+          "name_en": "HONEST WITNESS",
+          "formula_score": 0.43946,
+          "live_value_index": 60.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1387000.0,
+          "q_amount": 390000.0
+        },
+        {
+          "horse_number": 5,
+          "name_tc": "傑出雷霆",
+          "name_en": "THUNDER KIT",
+          "formula_score": 0.4202,
+          "live_value_index": 60.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 996000.0,
+          "q_amount": 346000.0
+        }
+      ],
+      "original": [
+        6,
+        7,
+        9,
+        5,
+        8
+      ],
       "independent_tip": {
         "date": "2026-10-07",
         "race": 9,

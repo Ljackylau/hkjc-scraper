@@ -1,0 +1,98 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "ac47d318-2754-4fb7-84e9-3863cb6f4f3f",
+    "race_number": 9,
+    "post_time": "22:50",
+    "venue": "跑馬地",
+    "distance": 1200,
+    "course": "C+3"
+  },
+  "date": "2026-10-07",
+  "expected_lock": "2026-10-07T22:47:00+08:00",
+  "live_received_at": "2026-10-07T22:47:13.428357+08:00",
+  "capture_delay_seconds": 13.43,
+  "live": {
+    "engineVersion": "live103-v3.7.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-07T14:47:02.887Z",
+    "postTime": "2026-10-07T14:50:00.000Z",
+    "previewTime": "2026-10-07T14:43:00.000Z",
+    "lockTime": "2026-10-07T14:47:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 6,
+        "nameTc": "盈妍威楓",
+        "nameEn": "PRESTIGE ALWAYS",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 73,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "星運少爵",
+        "nameEn": "THE HEIR",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 73,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "烈焰光芒",
+        "nameEn": "LIVE WIRE",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "傑出雷霆",
+        "nameEn": "THUNDER KIT",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "可靠大師",
+        "nameEn": "HONEST WITNESS",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 60,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 6,
+      "nameTc": "盈妍威楓",
+      "nameEn": "PRESTIGE ALWAYS",
+      "confidence": "high",
+      "reason": "上仗同程同班贏得輕鬆，評分雖加但負磅仍輕。騎練今季成績俱佳，檔位理想，預計走位有利。",
+      "previewHorseNumber": null
+    }
+  }
+}
