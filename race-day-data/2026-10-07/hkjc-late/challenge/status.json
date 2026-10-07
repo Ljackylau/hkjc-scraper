@@ -5,44 +5,16 @@
   "pools": {
     "jkc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 199,
-      "received_at": "2026-10-07T20:47:07.395619+08:00",
-      "source_updated_at": "2026-10-07T20:40:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 427.4,
+      "samples_this_run": 200,
+      "received_at": "2026-10-07T20:48:07.358671+08:00",
+      "source_updated_at": "2026-10-07T20:47:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 67.4,
       "numeric_quotes": 0,
       "participants": [
         {
           "selection_id": "1",
           "name": "潘頓",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "3",
-          "name": "巴度",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "9",
-          "name": "楊明綸",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -69,8 +41,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "4",
-          "name": "梁家俊",
+          "selection_id": "9",
+          "name": "楊明綸",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -83,8 +55,22 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "2",
-          "name": "艾兆禮",
+          "selection_id": "3",
+          "name": "巴度",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "4",
+          "name": "梁家俊",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -111,8 +97,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "13",
-          "name": "班德禮",
+          "selection_id": "2",
+          "name": "艾兆禮",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -153,8 +139,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "10",
-          "name": "金誠剛",
+          "selection_id": "6",
+          "name": "黃智弘",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -167,8 +153,22 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "6",
-          "name": "黃智弘",
+          "selection_id": "13",
+          "name": "班德禮",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "10",
+          "name": "金誠剛",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -215,11 +215,11 @@
     },
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 199,
-      "received_at": "2026-10-07T20:47:07.543529+08:00",
+      "samples_this_run": 200,
+      "received_at": "2026-10-07T20:48:07.295676+08:00",
       "source_updated_at": "2026-10-07T20:40:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 427.5,
+      "source_age_seconds": 487.3,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -531,5 +531,5 @@
     8,
     9
   ],
-  "updated_at": "2026-10-07T20:47:08.004217+08:00"
+  "updated_at": "2026-10-07T20:48:07.406657+08:00"
 }
