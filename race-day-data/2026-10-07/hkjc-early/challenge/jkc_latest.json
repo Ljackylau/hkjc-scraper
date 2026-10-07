@@ -3,11 +3,11 @@
   "date": "2026-10-07",
   "venue": "HV",
   "kind": "jkc",
-  "received_at": "2026-10-07T19:14:10.353980+08:00",
+  "received_at": "2026-10-07T19:15:10.361646+08:00",
   "url": "https://bet.hkjc.com/ch/racing/jkc/2026-10-07/HV/1",
-  "source_updated_at": "2026-10-07T19:05:00+08:00",
-  "source_age_seconds": 550.4,
-  "source_recent": false,
+  "source_updated_at": "2026-10-07T19:14:00+08:00",
+  "source_age_seconds": 70.4,
+  "source_recent": true,
   "state": "no_numeric_quotes",
   "numeric_quotes": 0,
   "participants": [
@@ -28,6 +28,20 @@
     {
       "selection_id": "3",
       "name": "巴度",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
+      "opening_drop_pct": null,
+      "normalized_implied_share": null
+    },
+    {
+      "selection_id": "9",
+      "name": "楊明綸",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -96,34 +110,6 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "7",
-      "name": "袁幸堯",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
-      "selection_id": "9",
-      "name": "楊明綸",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
       "selection_id": "6",
       "name": "黃智弘",
       "is_other": false,
@@ -138,8 +124,8 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "8",
-      "name": "霍宏聲",
+      "selection_id": "7",
+      "name": "袁幸堯",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -166,8 +152,8 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "11",
-      "name": "田泰安",
+      "selection_id": "12",
+      "name": "黃寶妮",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -180,8 +166,8 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "12",
-      "name": "黃寶妮",
+      "selection_id": "11",
+      "name": "田泰安",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -206,9 +192,23 @@
       "quote_text": "---",
       "opening_drop_pct": null,
       "normalized_implied_share": null
+    },
+    {
+      "selection_id": "8",
+      "name": "霍宏聲",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
+      "opening_drop_pct": null,
+      "normalized_implied_share": null
     }
   ],
-  "header": "騎師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 19:05\n所有場次騎師王 1 暫停即場投注。即時投注將於第 8 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
+  "header": "騎師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 19:14\n所有場次騎師王 1 暫停即場投注。即時投注將於第 8 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -216,55 +216,55 @@
       "race_number": 1,
       "post_time": "2026-10-07T18:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2350.4
+      "seconds_to_off": -2410.4
     },
     {
       "race_number": 2,
       "post_time": "2026-10-07T19:05:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -550.4
+      "seconds_to_off": -610.4
     },
     {
       "race_number": 3,
       "post_time": "2026-10-07T19:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1249.6
+      "seconds_to_off": 1189.6
     },
     {
       "race_number": 4,
       "post_time": "2026-10-07T20:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 3349.6
+      "seconds_to_off": 3289.6
     },
     {
       "race_number": 5,
       "post_time": "2026-10-07T20:40:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 5149.6
+      "seconds_to_off": 5089.6
     },
     {
       "race_number": 6,
       "post_time": "2026-10-07T21:10:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 6949.6
+      "seconds_to_off": 6889.6
     },
     {
       "race_number": 7,
       "post_time": "2026-10-07T21:45:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 9049.6
+      "seconds_to_off": 8989.6
     },
     {
       "race_number": 8,
       "post_time": "2026-10-07T22:15:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 10849.6
+      "seconds_to_off": 10789.6
     },
     {
       "race_number": 9,
       "post_time": "2026-10-07T22:50:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 12949.6
+      "seconds_to_off": 12889.6
     }
   ],
   "raw_tables": [
@@ -290,6 +290,14 @@
         "巴度",
         "---",
         "7",
+        "---",
+        "---"
+      ],
+      [
+        "9",
+        "楊明綸",
+        "6",
+        "5",
         "---",
         "---"
       ],
@@ -326,22 +334,6 @@
         "---"
       ],
       [
-        "7",
-        "袁幸堯",
-        "---",
-        "5",
-        "---",
-        "---"
-      ],
-      [
-        "9",
-        "楊明綸",
-        "6",
-        "5",
-        "---",
-        "---"
-      ],
-      [
         "6",
         "黃智弘",
         "0",
@@ -350,10 +342,10 @@
         "---"
       ],
       [
-        "8",
-        "霍宏聲",
-        "0",
-        "4",
+        "7",
+        "袁幸堯",
+        "---",
+        "5",
         "---",
         "---"
       ],
@@ -361,6 +353,14 @@
         "10",
         "金誠剛",
         "0",
+        "6",
+        "---",
+        "---"
+      ],
+      [
+        "12",
+        "黃寶妮",
+        "---",
         "6",
         "---",
         "---"
@@ -374,18 +374,18 @@
         "---"
       ],
       [
-        "12",
-        "黃寶妮",
-        "---",
-        "6",
-        "---",
-        "---"
-      ],
-      [
         "13",
         "班德禮",
         "---",
         "5",
+        "---",
+        "---"
+      ],
+      [
+        "8",
+        "霍宏聲",
+        "0",
+        "4",
         "---",
         "---"
       ]

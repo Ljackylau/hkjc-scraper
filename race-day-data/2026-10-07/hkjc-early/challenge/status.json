@@ -5,11 +5,11 @@
   "pools": {
     "jkc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 63,
-      "received_at": "2026-10-07T19:14:10.353980+08:00",
-      "source_updated_at": "2026-10-07T19:05:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 550.4,
+      "samples_this_run": 64,
+      "received_at": "2026-10-07T19:15:10.361646+08:00",
+      "source_updated_at": "2026-10-07T19:14:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 70.4,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -29,6 +29,20 @@
         {
           "selection_id": "3",
           "name": "巴度",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
+        },
+        {
+          "selection_id": "9",
+          "name": "楊明綸",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -97,34 +111,6 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "7",
-          "name": "袁幸堯",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "9",
-          "name": "楊明綸",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
           "selection_id": "6",
           "name": "黃智弘",
           "is_other": false,
@@ -139,8 +125,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "8",
-          "name": "霍宏聲",
+          "selection_id": "7",
+          "name": "袁幸堯",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -167,8 +153,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "11",
-          "name": "田泰安",
+          "selection_id": "12",
+          "name": "黃寶妮",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -181,8 +167,8 @@
           "normalized_implied_share": null
         },
         {
-          "selection_id": "12",
-          "name": "黃寶妮",
+          "selection_id": "11",
+          "name": "田泰安",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
@@ -207,6 +193,20 @@
           "quote_text": "---",
           "opening_drop_pct": null,
           "normalized_implied_share": null
+        },
+        {
+          "selection_id": "8",
+          "name": "霍宏聲",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
+          "opening_drop_pct": null,
+          "normalized_implied_share": null
         }
       ],
       "points_available": true,
@@ -215,11 +215,11 @@
     },
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 62,
-      "received_at": "2026-10-07T19:14:00.438202+08:00",
+      "samples_this_run": 63,
+      "received_at": "2026-10-07T19:15:00.514046+08:00",
       "source_updated_at": "2026-10-07T19:05:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 540.4,
+      "source_age_seconds": 600.5,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -530,5 +530,5 @@
     3,
     4
   ],
-  "updated_at": "2026-10-07T19:14:10.397401+08:00"
+  "updated_at": "2026-10-07T19:15:10.787946+08:00"
 }
