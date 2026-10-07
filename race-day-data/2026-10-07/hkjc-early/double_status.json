@@ -1,6 +1,6 @@
 {
   "date": "2026-10-07",
-  "updated_at": "2026-10-07T19:37:30.742411+08:00",
+  "updated_at": "2026-10-07T19:38:35.822169+08:00",
   "research_only": true,
   "pairs": {
     "1": {
@@ -31,9 +31,11 @@
       "matrix_complete": true
     },
     "4": {
-      "status": "waiting",
+      "status": "collecting",
       "first_race": 4,
-      "second_race": 5
+      "second_race": 5,
+      "target": "2026-10-07T20:06:50+08:00",
+      "last_received": "2026-10-07T19:38:03.077562+08:00"
     }
   }
 }
