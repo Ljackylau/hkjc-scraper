@@ -1,7 +1,7 @@
 {
   "date": "2026-10-07",
   "venue": "HV",
-  "updated_at": "2026-10-07T20:38:18.499493+08:00",
+  "updated_at": "2026-10-07T20:38:25.027033+08:00",
   "mode": "shadow",
   "races": {
     "5": {
@@ -80,6 +80,7 @@
       "status": "retrying",
       "target": "2026-10-07T21:07:00+08:00",
       "errors": [
+        "Stale source timestamp",
         "Stale source timestamp",
         "Stale source timestamp"
       ]
