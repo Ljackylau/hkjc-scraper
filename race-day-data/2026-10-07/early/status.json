@@ -1,7 +1,7 @@
 {
   "date": "2026-10-07",
   "phase": "early",
-  "updated_at": "2026-10-07T19:09:32.653470+08:00",
+  "updated_at": "2026-10-07T19:10:34.778962+08:00",
   "state": "running",
   "horse103": {
     "1": {
@@ -105,8 +105,13 @@
       ]
     },
     "2": {
-      "status": "waiting",
-      "error": "Official result table not ready"
+      "status": "saved",
+      "top4": [
+        7,
+        5,
+        9,
+        2
+      ]
     },
     "3": {
       "status": "waiting"

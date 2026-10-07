@@ -1,0 +1,355 @@
+{
+  "source": "HKJC official local results",
+  "source_url": "https://racing.hkjc.com/en-us/local/information/archive/localresults?racedate=2026%2F10%2F07&Racecourse=HV&RaceNo=2",
+  "received_at": "2026-10-07T19:09:42.531112+08:00",
+  "entries": [
+    {
+      "placing": "1",
+      "placing_text": "1",
+      "horse_number": 7
+    },
+    {
+      "placing": "2",
+      "placing_text": "2",
+      "horse_number": 5
+    },
+    {
+      "placing": "3",
+      "placing_text": "3",
+      "horse_number": 9
+    },
+    {
+      "placing": "4",
+      "placing_text": "4",
+      "horse_number": 2
+    }
+  ],
+  "top4": [
+    7,
+    5,
+    9,
+    2
+  ],
+  "dividends": {
+    "W": [
+      {
+        "combination": "7",
+        "dividend_hkd": 99.0
+      }
+    ],
+    "P": [
+      {
+        "combination": "7",
+        "dividend_hkd": 30.0
+      },
+      {
+        "combination": "5",
+        "dividend_hkd": 20.0
+      },
+      {
+        "combination": "9",
+        "dividend_hkd": 55.5
+      }
+    ],
+    "Q": [
+      {
+        "combination": "5,7",
+        "dividend_hkd": 376.5
+      }
+    ],
+    "QP": [
+      {
+        "combination": "5,7",
+        "dividend_hkd": 108.5
+      },
+      {
+        "combination": "7,9",
+        "dividend_hkd": 300.5
+      },
+      {
+        "combination": "5,9",
+        "dividend_hkd": 266.5
+      }
+    ]
+  },
+  "dividend_unit": "HKJC published HK$ unit",
+  "settlement_status": "complete",
+  "date": "2026-10-07",
+  "race": 2,
+  "banker": 12,
+  "method_b": {
+    "method": "independent_hybrid_v1",
+    "status": "independent",
+    "banker": 12,
+    "reason": "fixed-baseline market movement",
+    "received_at": "2026-10-07T19:01:48.366816+08:00"
+  },
+  "independent_tip": {
+    "date": "2026-10-07",
+    "race": 2,
+    "off": "2026-10-07T19:05:00+08:00",
+    "freeze": "2026-10-07T19:01:50+08:00",
+    "method": "independent_hybrid_v1",
+    "cutoff": "2026-10-07T19:02:00+08:00",
+    "banker": 12,
+    "legs": [
+      10,
+      5,
+      2,
+      6
+    ],
+    "banker_source": "fixed-baseline market movement",
+    "banker_scores": {
+      "1": 7.148,
+      "2": 5.924,
+      "3": 7.788,
+      "4": 8.374,
+      "5": 6.848,
+      "6": 7.726,
+      "7": 9.988,
+      "8": 8.596,
+      "9": 14.408,
+      "10": 15.552,
+      "11": 6.84,
+      "12": 17.447
+    },
+    "leg_scores": {
+      "1": 0.38181818181818183,
+      "2": 0.7454545454545455,
+      "3": 0.09090909090909091,
+      "4": 0.6000000000000001,
+      "5": 0.8000000000000002,
+      "6": 0.6727272727272727,
+      "7": 0.4727272727272727,
+      "8": 0.29090909090909095,
+      "9": 0.2909090909090909,
+      "10": 1.0,
+      "11": 0.18181818181818182,
+      "12": 0.4727272727272728
+    },
+    "received_at": "2026-10-07T19:01:48.366816+08:00",
+    "experimental": true,
+    "not_a_probability": true,
+    "status": "ready",
+    "market": [
+      12,
+      10,
+      9,
+      7,
+      8
+    ],
+    "golden": [],
+    "legs_f": [
+      10,
+      5
+    ],
+    "legs_qp": [
+      2,
+      6
+    ],
+    "banker_qp_odds": {
+      "1": 53.0,
+      "2": 26.0,
+      "3": 315.0,
+      "4": 43.0,
+      "8": 105.0,
+      "9": 74.0,
+      "10": 10.0,
+      "11": 88.0,
+      "5": 26.0,
+      "6": 26.0,
+      "7": 38.0
+    },
+    "legs_method": "f2_qp1_cold_10_30_exploratory_2026_10_02",
+    "legs_status": "ready",
+    "legs_reason": "",
+    "baseline_received_at": "2026-10-07T18:54:59.287542+08:00",
+    "long_baseline_received_at": "2026-10-07T18:46:24.194954+08:00",
+    "runner_rows": [
+      [
+        "1",
+        "",
+        "本領多好",
+        "8",
+        "135",
+        "希威森",
+        "桂福特",
+        "18",
+        "4.8",
+        ""
+      ],
+      [
+        "2",
+        "",
+        "幸運愉快",
+        "10",
+        "134",
+        "潘明輝",
+        "巫偉傑",
+        "7.6",
+        "2.0",
+        ""
+      ],
+      [
+        "3",
+        "",
+        "銳喜",
+        "2",
+        "132",
+        "黃智弘 (-3)",
+        "徐雨石",
+        "65",
+        "18",
+        ""
+      ],
+      [
+        "4",
+        "",
+        "紅錢到",
+        "12",
+        "131",
+        "霍宏聲",
+        "呂健威",
+        "13",
+        "3.7",
+        ""
+      ],
+      [
+        "5",
+        "",
+        "環球英雄",
+        "3",
+        "130",
+        "班德禮",
+        "大衛希斯",
+        "7.2",
+        "2.2",
+        ""
+      ],
+      [
+        "6",
+        "",
+        "千杯敬典",
+        "4",
+        "129",
+        "袁幸堯 (-7)",
+        "姚本輝",
+        "6.8",
+        "2.2",
+        ""
+      ],
+      [
+        "7",
+        "",
+        "新力",
+        "5",
+        "126",
+        "楊明綸",
+        "鄭俊偉",
+        "15",
+        "2.5",
+        ""
+      ],
+      [
+        "8",
+        "",
+        "勝利君子",
+        "6",
+        "122",
+        "何澤堯",
+        "方嘉柏",
+        "34",
+        "8.2",
+        ""
+      ],
+      [
+        "9",
+        "",
+        "駿馬之光",
+        "9",
+        "119",
+        "鍾易禮 (-2)",
+        "告東尼",
+        "27",
+        "7.3",
+        ""
+      ],
+      [
+        "10",
+        "",
+        "天下寵兒",
+        "1",
+        "119",
+        "艾兆禮",
+        "廖康銘",
+        "2.1",
+        "1.3",
+        ""
+      ],
+      [
+        "11",
+        "",
+        "威威神駒",
+        "11",
+        "118",
+        "田泰安",
+        "韋達",
+        "52",
+        "10",
+        ""
+      ],
+      [
+        "12",
+        "",
+        "智勝攻略",
+        "7",
+        "116",
+        "巴度",
+        "黎昭昇",
+        "26",
+        "5.3",
+        ""
+      ]
+    ],
+    "source_updated": {
+      "wp": "2026-10-07T19:01:00+08:00",
+      "wpq": "2026-10-07T19:01:00+08:00"
+    },
+    "cold": [],
+    "cold_status": "unavailable",
+    "cold_policy": "cold_top2_priority_v2_exploratory_2026-10-02",
+    "cold_freeze": "2026-10-07T19:01:50+08:00",
+    "cold_target": "top2",
+    "cold_probability_calibrated": false,
+    "cold_group": [],
+    "cold_missing": [],
+    "cold_reason": "缺T−32至T−25有效比較基準；請提早啟動Runner",
+    "legs_original": [
+      10,
+      5,
+      2,
+      6
+    ],
+    "legs_original_method": "f2_banker_qp2_v1",
+    "legs_original_qp": [
+      2,
+      6
+    ],
+    "legs_fusion_changed": false,
+    "legs_added": null,
+    "legs_removed": null,
+    "legs_cold": [],
+    "legs_fusion_win": null,
+    "legs_fusion_reason_code": "cold_unavailable",
+    "legs_fusion_reason": "冷馬資料未就緒，保留原四腳",
+    "generated_at": "2026-10-07T19:01:50.055679+08:00"
+  },
+  "legs": [
+    10,
+    5,
+    2,
+    6
+  ],
+  "cold": [],
+  "cold_source": "saved_tip"
+}
