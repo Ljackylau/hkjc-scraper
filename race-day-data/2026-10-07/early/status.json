@@ -1,7 +1,7 @@
 {
   "date": "2026-10-07",
   "phase": "early",
-  "updated_at": "2026-10-07T19:01:13.862326+08:00",
+  "updated_at": "2026-10-07T19:02:16.087354+08:00",
   "state": "running",
   "horse103": {
     "1": {
@@ -10,8 +10,80 @@
       "reason": "Started more than 90 seconds after T-3"
     },
     "2": {
-      "status": "waiting",
-      "target": "2026-10-07T19:02:00+08:00"
+      "status": "saved",
+      "target": "2026-10-07T19:02:00+08:00",
+      "delay_seconds": 7.23,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 2,
+          "name_tc": "幸運愉快",
+          "name_en": "LUCKY MCQUEEN",
+          "formula_score": 0.59322,
+          "live_value_index": 59.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 1150000.0,
+          "q_amount": 985000.0
+        },
+        {
+          "horse_number": 5,
+          "name_tc": "環球英雄",
+          "name_en": "WORLD HERO",
+          "formula_score": 0.54678,
+          "live_value_index": 65.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 818000.0,
+          "q_amount": 580000.0
+        },
+        {
+          "horse_number": 4,
+          "name_tc": "紅錢到",
+          "name_en": "WINNING MONEY",
+          "formula_score": 0.54396,
+          "live_value_index": 72.0,
+          "live_command": "follow",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 548000.0,
+          "q_amount": 451000.0
+        },
+        {
+          "horse_number": 7,
+          "name_tc": "新力",
+          "name_en": "NEW POWER",
+          "formula_score": 0.4856,
+          "live_value_index": 67.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 509000.0,
+          "q_amount": 235000.0
+        },
+        {
+          "horse_number": 10,
+          "name_tc": "天下寵兒",
+          "name_en": "LOVING VIBES",
+          "formula_score": 0.4,
+          "live_value_index": 0.0,
+          "live_command": null,
+          "live_capital_signal": null,
+          "is_live_candidate": false,
+          "qp_amount": 1769000.0,
+          "q_amount": 1804000.0
+        }
+      ],
+      "original": [
+        4,
+        7,
+        5,
+        8,
+        2
+      ]
     },
     "3": {
       "status": "waiting",

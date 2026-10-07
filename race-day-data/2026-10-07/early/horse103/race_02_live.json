@@ -1,0 +1,90 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "d489f2c8-04bf-4a6f-a19d-992c56d5c50b",
+    "race_number": 2,
+    "post_time": "19:05",
+    "venue": "跑馬地",
+    "distance": 1200,
+    "course": "C+3"
+  },
+  "date": "2026-10-07",
+  "expected_lock": "2026-10-07T19:02:00+08:00",
+  "live_received_at": "2026-10-07T19:02:07.229190+08:00",
+  "capture_delay_seconds": 7.23,
+  "live": {
+    "engineVersion": "live103-v3.7.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-07T11:02:01.739Z",
+    "postTime": "2026-10-07T11:05:00.000Z",
+    "previewTime": "2026-10-07T10:58:00.000Z",
+    "lockTime": "2026-10-07T11:02:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 4,
+        "nameTc": "紅錢到",
+        "nameEn": "WINNING MONEY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 72,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 7,
+        "nameTc": "新力",
+        "nameEn": "NEW POWER",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 67,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "環球英雄",
+        "nameEn": "WORLD HERO",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "勝利君子",
+        "nameEn": "I AM BACK",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 2,
+        "nameTc": "幸運愉快",
+        "nameEn": "LUCKY MCQUEEN",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [],
+    "previewOnly": [],
+    "secondLook": null
+  }
+}
