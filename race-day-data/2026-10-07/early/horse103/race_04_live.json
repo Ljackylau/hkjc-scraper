@@ -1,0 +1,104 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "b2ccb36a-4cd8-4648-907e-ca29da41906e",
+    "race_number": 4,
+    "post_time": "20:10",
+    "venue": "跑馬地",
+    "distance": 1650,
+    "course": "C+3"
+  },
+  "date": "2026-10-07",
+  "expected_lock": "2026-10-07T20:07:00+08:00",
+  "live_received_at": "2026-10-07T20:07:08.526995+08:00",
+  "capture_delay_seconds": 8.53,
+  "live": {
+    "engineVersion": "live103-v3.7.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-07T12:07:02.020Z",
+    "postTime": "2026-10-07T12:10:00.000Z",
+    "previewTime": "2026-10-07T12:03:00.000Z",
+    "lockTime": "2026-10-07T12:07:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 2,
+        "nameTc": "深心星",
+        "nameEn": "SKY DEEP",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 73,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "準希望",
+        "nameEn": "PRECISION HOPE",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "瑞祺威楓",
+        "nameEn": "PRESTIGE RICKY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "超開心",
+        "nameEn": "ABSOLUTE HONOUR",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 63,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "奮鬥輝煌",
+        "nameEn": "AMAZING AWARD",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 52,
+        "valueTier": "low",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [],
+    "previewOnly": [
+      {
+        "horseNumber": 11,
+        "nameTc": "焦點",
+        "nameEn": "PODIUM"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 10,
+      "nameTc": "準希望",
+      "nameEn": "PRECISION HOPE",
+      "confidence": "high",
+      "reason": "檔位極佳，騎練今季成績俱佳。近績穩定，上仗同程表現不俗，體重回落，狀態應勇，有力爭勝。",
+      "previewHorseNumber": null
+    }
+  }
+}
