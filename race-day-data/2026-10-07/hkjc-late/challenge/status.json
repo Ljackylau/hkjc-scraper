@@ -215,11 +215,11 @@
     },
     "tnc": {
       "state": "observed",
-      "samples_this_run": 365,
-      "received_at": "2026-10-07T22:10:37.485272+08:00",
-      "source_updated_at": "2026-10-07T22:00:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 637.5,
+      "samples_this_run": 366,
+      "received_at": "2026-10-07T22:10:47.425689+08:00",
+      "source_updated_at": "2026-10-07T22:10:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 47.4,
       "numeric_quotes": 4,
       "participants": [
         {
@@ -230,11 +230,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 1.85,
-          "current_odds": 1.95,
-          "quote_text": "1.95",
+          "previous_odds": 1.95,
+          "current_odds": 2.0,
+          "quote_text": "2.00",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.450772
+          "normalized_implied_share": 0.438604
         },
         {
           "selection_id": "6",
@@ -248,7 +248,7 @@
           "current_odds": 2.45,
           "quote_text": "2.45",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.358777
+          "normalized_implied_share": 0.358044
         },
         {
           "selection_id": "1",
@@ -258,11 +258,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 6.5,
-          "current_odds": 6.0,
-          "quote_text": "6.00",
+          "previous_odds": 6.0,
+          "current_odds": 5.5,
+          "quote_text": "5.50",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.146501
+          "normalized_implied_share": 0.159492
         },
         {
           "selection_id": "3",
@@ -276,7 +276,7 @@
           "current_odds": 20.0,
           "quote_text": "20",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.04395
+          "normalized_implied_share": 0.04386
         },
         {
           "selection_id": "4",
@@ -531,5 +531,5 @@
     8,
     9
   ],
-  "updated_at": "2026-10-07T22:10:46.902744+08:00"
+  "updated_at": "2026-10-07T22:10:47.427006+08:00"
 }
