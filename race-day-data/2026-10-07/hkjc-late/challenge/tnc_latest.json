@@ -3,13 +3,13 @@
   "date": "2026-10-07",
   "venue": "HV",
   "kind": "tnc",
-  "received_at": "2026-10-07T22:17:07.479247+08:00",
+  "received_at": "2026-10-07T22:18:07.484638+08:00",
   "url": "https://bet.hkjc.com/ch/racing/tnc/2026-10-07/HV/1",
-  "source_updated_at": "2026-10-07T22:10:00+08:00",
-  "source_age_seconds": 427.5,
-  "source_recent": false,
-  "state": "observed",
-  "numeric_quotes": 4,
+  "source_updated_at": "2026-10-07T22:17:00+08:00",
+  "source_age_seconds": 67.5,
+  "source_recent": true,
+  "state": "no_numeric_quotes",
+  "numeric_quotes": 0,
   "participants": [
     {
       "selection_id": "2",
@@ -19,11 +19,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 1.95,
-      "current_odds": 2.0,
-      "quote_text": "2.00",
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.438604
+      "normalized_implied_share": null
     },
     {
       "selection_id": "6",
@@ -33,11 +33,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 2.6,
-      "current_odds": 2.45,
-      "quote_text": "2.45",
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.358044
+      "normalized_implied_share": null
     },
     {
       "selection_id": "1",
@@ -47,11 +47,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 6.0,
-      "current_odds": 5.5,
-      "quote_text": "5.50",
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.159492
+      "normalized_implied_share": null
     },
     {
       "selection_id": "3",
@@ -61,11 +61,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": 22.0,
-      "current_odds": 20.0,
-      "quote_text": "20",
+      "previous_odds": null,
+      "current_odds": null,
+      "quote_text": "---",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.04386
+      "normalized_implied_share": null
     },
     {
       "selection_id": "4",
@@ -306,7 +306,7 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "練馬師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 22:10\n所有場次即時投注將於第 8 場前截止\n添加到投注區",
+  "header": "練馬師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 22:17\n所有場次練馬師王 1 暫停即場投注。即時投注將於第 8 場前截止\n添加到投注區\n練馬師王統計\n練馬師王出馬表\n練馬師王賠率走勢圖\n全日練馬師分場表\n練馬師王積分\n玩法\n受注時間\n練馬師資料",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -314,55 +314,55 @@
       "race_number": 1,
       "post_time": "2026-10-07T18:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -13327.5
+      "seconds_to_off": -13387.5
     },
     {
       "race_number": 2,
       "post_time": "2026-10-07T19:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -11527.5
+      "seconds_to_off": -11587.5
     },
     {
       "race_number": 3,
       "post_time": "2026-10-07T19:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -9727.5
+      "seconds_to_off": -9787.5
     },
     {
       "race_number": 4,
       "post_time": "2026-10-07T20:10:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -7627.5
+      "seconds_to_off": -7687.5
     },
     {
       "race_number": 5,
       "post_time": "2026-10-07T20:40:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -5827.5
+      "seconds_to_off": -5887.5
     },
     {
       "race_number": 6,
       "post_time": "2026-10-07T21:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -4027.5
+      "seconds_to_off": -4087.5
     },
     {
       "race_number": 7,
       "post_time": "2026-10-07T21:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -1927.5
+      "seconds_to_off": -1987.5
     },
     {
       "race_number": 8,
       "post_time": "2026-10-07T22:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -127.5
+      "seconds_to_off": -187.5
     },
     {
       "race_number": 9,
       "post_time": "2026-10-07T22:50:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1972.5
+      "seconds_to_off": 1912.5
     }
   ],
   "raw_tables": [
@@ -380,32 +380,32 @@
         "告東尼",
         "26",
         "2",
-        "1.95",
-        "2.00"
+        "---",
+        "---"
       ],
       [
         "6",
         "文家良",
         "24",
         "2",
-        "2.60",
-        "2.45"
+        "---",
+        "---"
       ],
       [
         "1",
         "方嘉柏",
         "18",
         "2",
-        "6.00",
-        "5.50"
+        "---",
+        "---"
       ],
       [
         "3",
         "伍鵬志",
         "8",
         "2",
-        "22",
-        "20"
+        "---",
+        "---"
       ],
       [
         "4",
