@@ -1,0 +1,38 @@
+{
+  "status": "observed",
+  "rule": "tnc odds from previous race off to this race T-3 observation",
+  "previous_race": 7,
+  "race": 8,
+  "t3_received_at": "2026-10-07T22:12:07.025627+08:00",
+  "t3_source_updated_at": "2026-10-07T22:10:00+08:00",
+  "baseline_source_updated_at": "2026-10-07T21:34:00+08:00",
+  "baseline_age_at_off_seconds": 660.0,
+  "t3_source_age_seconds": 127.0,
+  "source_recent": false,
+  "changes": [
+    {
+      "name": "文家良",
+      "before_odds": 11.0,
+      "t3_odds": 2.45,
+      "drop_pct": 77.73
+    },
+    {
+      "name": "告東尼",
+      "before_odds": 1.22,
+      "t3_odds": 2.0,
+      "drop_pct": -63.93
+    },
+    {
+      "name": "伍鵬志",
+      "before_odds": 25.0,
+      "t3_odds": 20.0,
+      "drop_pct": 20.0
+    },
+    {
+      "name": "方嘉柏",
+      "before_odds": 6.5,
+      "t3_odds": 5.5,
+      "drop_pct": 15.38
+    }
+  ]
+}
