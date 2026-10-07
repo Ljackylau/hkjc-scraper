@@ -1,0 +1,104 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "1d42cd05-ad84-4e4d-9162-553eeda45309",
+    "race_number": 8,
+    "post_time": "22:15",
+    "venue": "跑馬地",
+    "distance": 1650,
+    "course": "C+3"
+  },
+  "date": "2026-10-07",
+  "expected_lock": "2026-10-07T22:12:00+08:00",
+  "live_received_at": "2026-10-07T22:12:14.622102+08:00",
+  "capture_delay_seconds": 14.62,
+  "live": {
+    "engineVersion": "live103-v3.7.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-07T14:12:02.021Z",
+    "postTime": "2026-10-07T14:15:00.000Z",
+    "previewTime": "2026-10-07T14:08:00.000Z",
+    "lockTime": "2026-10-07T14:12:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 2,
+        "nameTc": "幸運派彩",
+        "nameEn": "POPE CODY",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 69,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "一定超",
+        "nameEn": "DAZZLING FIT",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 68,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 5,
+        "nameTc": "自動自覺",
+        "nameEn": "RUN RUN SMART",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 65,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 10,
+        "nameTc": "財富非凡",
+        "nameEn": "FLYING FORTUNE",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 62,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 9,
+        "nameTc": "大千雄心",
+        "nameEn": "AUDACIOUS PURSUIT",
+        "capitalSignal": "steady",
+        "command": "observe",
+        "valueIndex": 59,
+        "valueTier": "mid",
+        "verdictKey": "risk_unresolved",
+        "isFill": false,
+        "inPreview": false
+      }
+    ],
+    "fakeFavorites": [],
+    "previewOnly": [
+      {
+        "horseNumber": 11,
+        "nameTc": "開心三寶",
+        "nameEn": "URANUS STAR"
+      }
+    ],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 2,
+      "nameTc": "幸運派彩",
+      "nameEn": "POPE CODY",
+      "confidence": "high",
+      "reason": "上仗同程同班輕磅贏馬姿態出色，評分雖加但負磅仍輕，檔位佳，騎練今季成績理想。",
+      "previewHorseNumber": null
+    }
+  }
+}
