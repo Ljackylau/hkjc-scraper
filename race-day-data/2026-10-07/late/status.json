@@ -1,7 +1,7 @@
 {
   "date": "2026-10-07",
   "phase": "late",
-  "updated_at": "2026-10-07T20:46:02.406543+08:00",
+  "updated_at": "2026-10-07T20:47:04.605165+08:00",
   "state": "running",
   "horse103": {
     "5": {
@@ -374,8 +374,13 @@
   },
   "results": {
     "5": {
-      "status": "waiting",
-      "error": "Official dividends not ready"
+      "status": "saved",
+      "top4": [
+        8,
+        10,
+        2,
+        7
+      ]
     },
     "6": {
       "status": "waiting"
