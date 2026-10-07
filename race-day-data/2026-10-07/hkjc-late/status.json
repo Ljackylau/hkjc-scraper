@@ -1,7 +1,7 @@
 {
   "date": "2026-10-07",
   "venue": "HV",
-  "updated_at": "2026-10-07T22:46:57.543321+08:00",
+  "updated_at": "2026-10-07T22:47:04.478463+08:00",
   "mode": "shadow",
   "races": {
     "5": {
@@ -293,10 +293,76 @@
       "source": "HKJC odds movement; experimental"
     },
     "9": {
-      "status": "collecting",
+      "status": "shadow",
       "target": "2026-10-07T22:47:00+08:00",
-      "baseline": true,
-      "last_received": "2026-10-07T22:46:56.250951+08:00"
+      "received_at": "2026-10-07T22:47:00.252740+08:00",
+      "source_updated": {
+        "wp": "2026-10-07T22:46:00+08:00",
+        "wpq": "2026-10-07T22:46:00+08:00"
+      },
+      "baseline": {
+        "kind": "t30",
+        "received_at": "2026-10-07T22:20:50.201544+08:00",
+        "minutes_to_off": 29.16,
+        "source_updated": {
+          "wp": "2026-10-07T22:20:00+08:00",
+          "wpq": "2026-10-07T22:20:00+08:00"
+        }
+      },
+      "ranking": [
+        {
+          "horse_number": 7,
+          "score": 30.829,
+          "drops_pct": {
+            "WIN": 2.04,
+            "PLA": 47.62,
+            "QIN": 45.42,
+            "QPL": 45.63
+          }
+        },
+        {
+          "horse_number": 9,
+          "score": 19.288,
+          "drops_pct": {
+            "WIN": 3.95,
+            "PLA": 0,
+            "QIN": 39.77,
+            "QPL": 49.76
+          }
+        },
+        {
+          "horse_number": 12,
+          "score": 17.028,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 41.37,
+            "QPL": 43.77
+          }
+        },
+        {
+          "horse_number": 8,
+          "score": 13.902,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 27.37,
+            "QPL": 42.14
+          }
+        },
+        {
+          "horse_number": 11,
+          "score": 12.288,
+          "drops_pct": {
+            "WIN": 0,
+            "PLA": 0,
+            "QIN": 34.12,
+            "QPL": 27.32
+          }
+        }
+      ],
+      "golden_legs": [],
+      "source": "HKJC odds movement; experimental"
     }
   },
   "independent_tips": {
