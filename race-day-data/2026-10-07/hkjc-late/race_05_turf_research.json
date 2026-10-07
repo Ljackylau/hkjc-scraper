@@ -1,0 +1,27 @@
+{
+  "version": "turf_cold_shadow_2026_10_04",
+  "observation_only": true,
+  "turf": {
+    "version": "turf_cold_shadow_2026_10_04",
+    "status": "not_applicable",
+    "observation_only": true,
+    "banker": 12,
+    "legs": [
+      8,
+      4,
+      6,
+      1
+    ],
+    "changed": false,
+    "reason": "泥地、直路及其他途程獨立處理"
+  },
+  "cold_divergence": {
+    "version": "turf_cold_shadow_2026_10_04",
+    "status": "ready",
+    "candidates": [],
+    "freeze": "2026-10-07T20:36:50+08:00",
+    "observation_only": true,
+    "start_received_at": "2026-10-07T20:11:50.121546+08:00",
+    "end_received_at": "2026-10-07T20:36:48.225823+08:00"
+  }
+}
