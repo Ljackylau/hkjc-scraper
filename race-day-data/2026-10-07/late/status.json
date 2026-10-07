@@ -1,7 +1,7 @@
 {
   "date": "2026-10-07",
   "phase": "late",
-  "updated_at": "2026-10-07T21:06:42.224207+08:00",
+  "updated_at": "2026-10-07T21:07:44.296740+08:00",
   "state": "running",
   "horse103": {
     "5": {
@@ -356,8 +356,355 @@
       }
     },
     "6": {
-      "status": "waiting",
-      "target": "2026-10-07T21:07:00+08:00"
+      "status": "saved",
+      "target": "2026-10-07T21:07:00+08:00",
+      "delay_seconds": 10.55,
+      "data_quality": "ready",
+      "incomplete_live_candidates": [],
+      "picks": [
+        {
+          "horse_number": 9,
+          "name_tc": "後無來者",
+          "name_en": "NO OTHER CHOICE",
+          "formula_score": 0.808,
+          "live_value_index": 68.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 2646000.0,
+          "q_amount": 2803000.0
+        },
+        {
+          "horse_number": 10,
+          "name_tc": "頑童",
+          "name_en": "KWAI CHUNG TALENTS",
+          "formula_score": 0.71578,
+          "live_value_index": 69.0,
+          "live_command": "aggressive",
+          "live_capital_signal": "steady",
+          "is_live_candidate": true,
+          "qp_amount": 1997000.0,
+          "q_amount": 2114000.0
+        },
+        {
+          "horse_number": 5,
+          "name_tc": "加州勇勝",
+          "name_en": "CALIFORNIA BAY",
+          "formula_score": 0.55241,
+          "live_value_index": 61.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 1626000.0,
+          "q_amount": 890000.0
+        },
+        {
+          "horse_number": 6,
+          "name_tc": "勝多多",
+          "name_en": "KING OBERON",
+          "formula_score": 0.35124,
+          "live_value_index": 54.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 266000.0,
+          "q_amount": 100000.0
+        },
+        {
+          "horse_number": 8,
+          "name_tc": "萬眾開心",
+          "name_en": "HAPPY UNITED",
+          "formula_score": 0.34903,
+          "live_value_index": 57.0,
+          "live_command": "observe",
+          "live_capital_signal": "none",
+          "is_live_candidate": true,
+          "qp_amount": 93000.0,
+          "q_amount": 0.0
+        }
+      ],
+      "original": [
+        10,
+        9,
+        5,
+        8,
+        6
+      ],
+      "independent_tip": {
+        "date": "2026-10-07",
+        "race": 6,
+        "off": "2026-10-07T21:10:00+08:00",
+        "freeze": "2026-10-07T21:06:50+08:00",
+        "method": "independent_hybrid_v1",
+        "cutoff": "2026-10-07T21:07:00+08:00",
+        "banker": 9,
+        "legs": [
+          10,
+          2,
+          5,
+          6
+        ],
+        "banker_source": "fixed-baseline market movement",
+        "banker_scores": {
+          "1": 0.852,
+          "2": 1.79,
+          "3": 0.0,
+          "4": 3.998,
+          "5": 8.328,
+          "6": 7.068,
+          "7": 0.426,
+          "8": 6.248,
+          "9": 25.546,
+          "10": 13.265,
+          "11": 1.662,
+          "12": 2.982
+        },
+        "leg_scores": {
+          "1": 0.3090909090909091,
+          "2": 0.7272727272727274,
+          "3": 0.4818181818181819,
+          "4": 0.5181818181818183,
+          "5": 0.6727272727272728,
+          "6": 0.7000000000000002,
+          "7": 0.5727272727272728,
+          "8": 0.2363636363636364,
+          "9": 0.8,
+          "10": 0.7636363636363637,
+          "11": 0.09090909090909091,
+          "12": 0.1272727272727273
+        },
+        "received_at": "2026-10-07T21:06:48.240602+08:00",
+        "experimental": true,
+        "not_a_probability": true,
+        "status": "ready",
+        "market": [
+          9,
+          10,
+          5,
+          6,
+          8
+        ],
+        "golden": [],
+        "legs_f": [
+          10,
+          2
+        ],
+        "legs_qp": [
+          5,
+          6
+        ],
+        "banker_qp_odds": {
+          "1": 20.0,
+          "8": 13.0,
+          "2": 7.5,
+          "10": 2.0,
+          "3": 11.0,
+          "11": 61.0,
+          "4": 11.0,
+          "12": 19.0,
+          "5": 2.7,
+          "6": 7.4,
+          "7": 12.0
+        },
+        "legs_method": "f2_qp1_cold_10_30_exploratory_2026_10_02",
+        "legs_status": "ready",
+        "legs_reason": "",
+        "baseline_received_at": "2026-10-07T20:59:55.159885+08:00",
+        "long_baseline_received_at": "2026-10-07T20:41:50.130100+08:00",
+        "runner_rows": [
+          [
+            "1",
+            "",
+            "添開心",
+            "11",
+            "135",
+            "艾兆禮",
+            "伍鵬志",
+            "28",
+            "7.0",
+            ""
+          ],
+          [
+            "2",
+            "",
+            "龍虎精神",
+            "7",
+            "132",
+            "何澤堯",
+            "羅富全",
+            "13",
+            "3.4",
+            ""
+          ],
+          [
+            "3",
+            "",
+            "星威心得",
+            "8",
+            "128",
+            "金誠剛",
+            "大衛希斯",
+            "20",
+            "5.8",
+            ""
+          ],
+          [
+            "4",
+            "",
+            "銳不可當",
+            "12",
+            "128",
+            "梁家俊",
+            "沈集成",
+            "20",
+            "5.5",
+            ""
+          ],
+          [
+            "5",
+            "",
+            "加州勇勝",
+            "2",
+            "125",
+            "田泰安",
+            "告東尼",
+            "5.7",
+            "2.3",
+            ""
+          ],
+          [
+            "6",
+            "",
+            "勝多多",
+            "9",
+            "123",
+            "黃寶妮 (-7)",
+            "韋達",
+            "17",
+            "4.2",
+            ""
+          ],
+          [
+            "7",
+            "",
+            "文采風流",
+            "4",
+            "123",
+            "奧爾民",
+            "蘇偉賢",
+            "17",
+            "4.3",
+            ""
+          ],
+          [
+            "8",
+            "",
+            "萬眾開心",
+            "5",
+            "120",
+            "蔡明紹",
+            "黎昭昇",
+            "36",
+            "8.6",
+            ""
+          ],
+          [
+            "9",
+            "",
+            "後無來者",
+            "1",
+            "120",
+            "巴度",
+            "方嘉柏",
+            "2.4",
+            "1.0",
+            ""
+          ],
+          [
+            "10",
+            "",
+            "頑童",
+            "6",
+            "119",
+            "楊明綸",
+            "鄭俊偉",
+            "4.1",
+            "1.5",
+            ""
+          ],
+          [
+            "11",
+            "",
+            "觀萬象",
+            "3",
+            "119",
+            "潘明輝",
+            "葉楚航",
+            "74",
+            "15",
+            ""
+          ],
+          [
+            "12",
+            "",
+            "首駿",
+            "10",
+            "117",
+            "班德禮",
+            "游達榮",
+            "46",
+            "9.9",
+            ""
+          ]
+        ],
+        "source_updated": {
+          "wp": "2026-10-07T21:06:00+08:00",
+          "wpq": "2026-10-07T21:06:00+08:00"
+        },
+        "cold": [
+          6
+        ],
+        "cold_status": "ready",
+        "cold_policy": "cold_top2_priority_v2_exploratory_2026-10-02",
+        "cold_freeze": "2026-10-07T21:06:50+08:00",
+        "cold_target": "top2",
+        "cold_probability_calibrated": false,
+        "cold_group": [],
+        "cold_missing": [],
+        "cold_branch": "market_second",
+        "cold_branch_label": "二重彩第二位市場支持",
+        "cold_win": 17.0,
+        "cold_received_at": "2026-10-07T21:06:48.240602+08:00",
+        "cold_fct_received_at": "2026-10-07T21:06:48.319997+08:00",
+        "cold_sources": {
+          "wp": {
+            "wp": "2026-10-07T21:06:00+08:00",
+            "wpq": "2026-10-07T21:06:00+08:00"
+          },
+          "fct": "2026-10-07T21:06:00+08:00",
+          "historical_prepared_at": "2026-10-07T19:11:00.272081+08:00"
+        },
+        "cold_partial": false,
+        "legs_original": [
+          10,
+          2,
+          5,
+          6
+        ],
+        "legs_original_method": "f2_banker_qp2_v1",
+        "legs_original_qp": [
+          5,
+          6
+        ],
+        "legs_fusion_changed": false,
+        "legs_added": null,
+        "legs_removed": null,
+        "legs_cold": [],
+        "legs_fusion_win": 17.0,
+        "legs_fusion_reason_code": "cold_already_selected",
+        "legs_fusion_reason": "冷馬已在原四腳內，保留原四腳",
+        "generated_at": "2026-10-07T21:06:50.037864+08:00"
+      }
     },
     "7": {
       "status": "waiting",
