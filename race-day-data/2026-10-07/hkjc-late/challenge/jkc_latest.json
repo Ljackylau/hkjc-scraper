@@ -3,11 +3,11 @@
   "date": "2026-10-07",
   "venue": "HV",
   "kind": "jkc",
-  "received_at": "2026-10-07T21:52:07.771713+08:00",
+  "received_at": "2026-10-07T21:53:08.015974+08:00",
   "url": "https://bet.hkjc.com/ch/racing/jkc/2026-10-07/HV/1",
-  "source_updated_at": "2026-10-07T21:45:00+08:00",
-  "source_age_seconds": 427.8,
-  "source_recent": false,
+  "source_updated_at": "2026-10-07T21:52:00+08:00",
+  "source_age_seconds": 68.0,
+  "source_recent": true,
   "state": "no_numeric_quotes",
   "numeric_quotes": 0,
   "participants": [
@@ -40,8 +40,8 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "5",
-      "name": "鍾易禮",
+      "selection_id": "4",
+      "name": "梁家俊",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -54,8 +54,8 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "4",
-      "name": "梁家俊",
+      "selection_id": "5",
+      "name": "鍾易禮",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -82,8 +82,8 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "7",
-      "name": "袁幸堯",
+      "selection_id": "12",
+      "name": "黃寶妮",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -96,9 +96,9 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "12",
-      "name": "黃寶妮",
-      "is_other": false,
+      "selection_id": "14",
+      "name": "其他騎師",
+      "is_other": true,
       "scheduled_rides": null,
       "remaining_rides": null,
       "points": null,
@@ -124,8 +124,8 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "2",
-      "name": "艾兆禮",
+      "selection_id": "7",
+      "name": "袁幸堯",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
@@ -138,9 +138,9 @@
       "normalized_implied_share": null
     },
     {
-      "selection_id": "14",
-      "name": "其他騎師",
-      "is_other": true,
+      "selection_id": "2",
+      "name": "艾兆禮",
+      "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
       "points": null,
@@ -208,7 +208,7 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "騎師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 21:45\n所有場次騎師王 1 暫停即場投注。即時投注將於第 8 場前截止\n添加到投注區",
+  "header": "騎師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 21:52\n所有場次騎師王 1 暫停即場投注。即時投注將於第 8 場前截止\n添加到投注區",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -216,55 +216,55 @@
       "race_number": 1,
       "post_time": "2026-10-07T18:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -11827.8
+      "seconds_to_off": -11888.0
     },
     {
       "race_number": 2,
       "post_time": "2026-10-07T19:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -10027.8
+      "seconds_to_off": -10088.0
     },
     {
       "race_number": 3,
       "post_time": "2026-10-07T19:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -8227.8
+      "seconds_to_off": -8288.0
     },
     {
       "race_number": 4,
       "post_time": "2026-10-07T20:10:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -6127.8
+      "seconds_to_off": -6188.0
     },
     {
       "race_number": 5,
       "post_time": "2026-10-07T20:40:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -4327.8
+      "seconds_to_off": -4388.0
     },
     {
       "race_number": 6,
       "post_time": "2026-10-07T21:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2527.8
+      "seconds_to_off": -2588.0
     },
     {
       "race_number": 7,
       "post_time": "2026-10-07T21:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -427.8
+      "seconds_to_off": -488.0
     },
     {
       "race_number": 8,
       "post_time": "2026-10-07T22:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1372.2
+      "seconds_to_off": 1312.0
     },
     {
       "race_number": 9,
       "post_time": "2026-10-07T22:50:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 3472.2
+      "seconds_to_off": 3412.0
     }
   ],
   "raw_tables": [
@@ -294,14 +294,6 @@
         "---"
       ],
       [
-        "5",
-        "鍾易禮",
-        "16",
-        "3",
-        "---",
-        "---"
-      ],
-      [
         "4",
         "梁家俊",
         "10",
@@ -310,16 +302,16 @@
         "---"
       ],
       [
-        "3",
-        "巴度",
-        "4",
+        "5",
+        "鍾易禮",
+        "16",
         "3",
         "---",
         "---"
       ],
       [
-        "7",
-        "袁幸堯",
+        "3",
+        "巴度",
         "4",
         "3",
         "---",
@@ -334,6 +326,14 @@
         "---"
       ],
       [
+        "14",
+        "其他騎師",
+        "12",
+        "詳情",
+        "---",
+        "---"
+      ],
+      [
         "6",
         "黃智弘",
         "6",
@@ -342,18 +342,18 @@
         "---"
       ],
       [
-        "2",
-        "艾兆禮",
-        "0",
+        "7",
+        "袁幸堯",
+        "4",
         "3",
         "---",
         "---"
       ],
       [
-        "14",
-        "其他騎師",
-        "12",
-        "詳情",
+        "2",
+        "艾兆禮",
+        "0",
+        "3",
         "---",
         "---"
       ],
