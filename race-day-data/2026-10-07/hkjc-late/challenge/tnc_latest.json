@@ -3,10 +3,10 @@
   "date": "2026-10-07",
   "venue": "HV",
   "kind": "tnc",
-  "received_at": "2026-10-07T22:26:07.053309+08:00",
+  "received_at": "2026-10-07T22:27:07.572509+08:00",
   "url": "https://bet.hkjc.com/ch/racing/tnc/2026-10-07/HV/1",
-  "source_updated_at": "2026-10-07T22:17:00+08:00",
-  "source_age_seconds": 547.1,
+  "source_updated_at": "2026-10-07T22:25:00+08:00",
+  "source_age_seconds": 127.6,
   "source_recent": false,
   "state": "no_numeric_quotes",
   "numeric_quotes": 0,
@@ -63,7 +63,7 @@
       "opening_odds": null,
       "previous_odds": null,
       "current_odds": null,
-      "quote_text": "---",
+      "quote_text": "未能勝出",
       "opening_drop_pct": null,
       "normalized_implied_share": null
     },
@@ -306,7 +306,7 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "練馬師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 22:17\n所有場次練馬師王 1 暫停即場投注。即時投注將於第 8 場前截止\n添加到投注區",
+  "header": "練馬師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 22:25\n所有場次練馬師王 1 暫停即場投注。即時投注將於第 8 場前截止\n添加到投注區\n練馬師王統計\n練馬師王出馬表\n練馬師王賠率走勢圖\n全日練馬師分場表\n練馬師王積分\n玩法\n受注時間\n練馬師資料",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -314,55 +314,55 @@
       "race_number": 1,
       "post_time": "2026-10-07T18:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -13867.1
+      "seconds_to_off": -13927.6
     },
     {
       "race_number": 2,
       "post_time": "2026-10-07T19:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -12067.1
+      "seconds_to_off": -12127.6
     },
     {
       "race_number": 3,
       "post_time": "2026-10-07T19:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -10267.1
+      "seconds_to_off": -10327.6
     },
     {
       "race_number": 4,
       "post_time": "2026-10-07T20:10:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -8167.1
+      "seconds_to_off": -8227.6
     },
     {
       "race_number": 5,
       "post_time": "2026-10-07T20:40:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -6367.1
+      "seconds_to_off": -6427.6
     },
     {
       "race_number": 6,
       "post_time": "2026-10-07T21:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -4567.1
+      "seconds_to_off": -4627.6
     },
     {
       "race_number": 7,
       "post_time": "2026-10-07T21:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -2467.1
+      "seconds_to_off": -2527.6
     },
     {
       "race_number": 8,
       "post_time": "2026-10-07T22:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -667.1
+      "seconds_to_off": -727.6
     },
     {
       "race_number": 9,
       "post_time": "2026-10-07T22:50:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1432.9
+      "seconds_to_off": 1372.4
     }
   ],
   "raw_tables": [
@@ -379,7 +379,7 @@
         "2",
         "告東尼",
         "26",
-        "2",
+        "1",
         "---",
         "---"
       ],
@@ -387,15 +387,15 @@
         "6",
         "文家良",
         "24",
-        "2",
+        "1",
         "---",
         "---"
       ],
       [
         "1",
         "方嘉柏",
-        "18",
-        "2",
+        "30",
+        "1",
         "---",
         "---"
       ],
@@ -403,15 +403,15 @@
         "3",
         "伍鵬志",
         "8",
-        "2",
+        "1",
         "---",
-        "---"
+        "未能勝出"
       ],
       [
         "4",
         "羅富全",
         "12",
-        "1",
+        "0",
         "---",
         "未能勝出"
       ],
@@ -427,7 +427,7 @@
         "7",
         "廖康銘",
         "0",
-        "1",
+        "0",
         "---",
         "未能勝出"
       ],
@@ -443,7 +443,7 @@
         "9",
         "呂健威",
         "0",
-        "2",
+        "1",
         "---",
         "未能勝出"
       ],
@@ -458,8 +458,8 @@
       [
         "11",
         "姚本輝",
-        "4",
-        "1",
+        "8",
+        "0",
         "---",
         "未能勝出"
       ],
@@ -467,7 +467,7 @@
         "12",
         "徐雨石",
         "6",
-        "1",
+        "0",
         "---",
         "未能勝出"
       ],
@@ -475,7 +475,7 @@
         "13",
         "游達榮",
         "0",
-        "1",
+        "0",
         "---",
         "未能勝出"
       ],
@@ -499,7 +499,7 @@
         "16",
         "巫偉傑",
         "0",
-        "2",
+        "1",
         "---",
         "未能勝出"
       ],
@@ -514,8 +514,8 @@
       [
         "18",
         "賀賢",
+        "6",
         "0",
-        "1",
         "---",
         "未能勝出"
       ],
