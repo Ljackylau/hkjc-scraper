@@ -4,13 +4,13 @@
   "state": "collecting",
   "pools": {
     "jkc": {
-      "state": "observed",
-      "samples_this_run": 328,
-      "received_at": "2026-10-07T21:46:07.583657+08:00",
-      "source_updated_at": "2026-10-07T21:41:00+08:00",
+      "state": "no_numeric_quotes",
+      "samples_this_run": 329,
+      "received_at": "2026-10-07T21:47:07.418954+08:00",
+      "source_updated_at": "2026-10-07T21:45:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 307.6,
-      "numeric_quotes": 10,
+      "source_age_seconds": 127.4,
+      "numeric_quotes": 0,
       "participants": [
         {
           "selection_id": "1",
@@ -20,11 +20,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 1.85,
-          "current_odds": 1.8,
-          "quote_text": "1.80",
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.471886
+          "normalized_implied_share": null
         },
         {
           "selection_id": "9",
@@ -34,11 +34,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 2.75,
-          "current_odds": 2.85,
-          "quote_text": "2.85",
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.298033
+          "normalized_implied_share": null
         },
         {
           "selection_id": "5",
@@ -48,11 +48,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 4.5,
-          "current_odds": 5.5,
-          "quote_text": "5.50",
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.154435
+          "normalized_implied_share": null
         },
         {
           "selection_id": "4",
@@ -62,11 +62,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 25.0,
-          "current_odds": 22.0,
-          "quote_text": "22",
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.038609
+          "normalized_implied_share": null
         },
         {
           "selection_id": "3",
@@ -76,11 +76,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 7.0,
-          "current_odds": 45.0,
-          "quote_text": "45",
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.018875
+          "normalized_implied_share": null
         },
         {
           "selection_id": "7",
@@ -90,11 +90,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 45.0,
-          "current_odds": 100.0,
-          "quote_text": "100",
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.008494
+          "normalized_implied_share": null
         },
         {
           "selection_id": "12",
@@ -104,11 +104,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 85.0,
-          "current_odds": 200.0,
-          "quote_text": "200",
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.004247
+          "normalized_implied_share": null
         },
         {
           "selection_id": "6",
@@ -118,11 +118,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 250.0,
-          "current_odds": 350.0,
-          "quote_text": "350",
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.002427
+          "normalized_implied_share": null
         },
         {
           "selection_id": "2",
@@ -132,11 +132,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 500.0,
-          "current_odds": 350.0,
-          "quote_text": "350",
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.002427
+          "normalized_implied_share": null
         },
         {
           "selection_id": "14",
@@ -146,11 +146,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 2000.0,
-          "current_odds": 1500.0,
-          "quote_text": "1500",
+          "previous_odds": null,
+          "current_odds": null,
+          "quote_text": "---",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.000566
+          "normalized_implied_share": null
         },
         {
           "selection_id": "8",
@@ -215,11 +215,11 @@
     },
     "tnc": {
       "state": "no_numeric_quotes",
-      "samples_this_run": 328,
-      "received_at": "2026-10-07T21:46:07.399929+08:00",
-      "source_updated_at": "2026-10-07T21:34:00+08:00",
+      "samples_this_run": 329,
+      "received_at": "2026-10-07T21:47:07.503808+08:00",
+      "source_updated_at": "2026-10-07T21:45:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 727.4,
+      "source_age_seconds": 127.5,
       "numeric_quotes": 0,
       "participants": [
         {
@@ -531,5 +531,5 @@
     8,
     9
   ],
-  "updated_at": "2026-10-07T21:46:07.702324+08:00"
+  "updated_at": "2026-10-07T21:47:07.545630+08:00"
 }
