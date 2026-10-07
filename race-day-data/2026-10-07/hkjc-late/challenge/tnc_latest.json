@@ -3,11 +3,11 @@
   "date": "2026-10-07",
   "venue": "HV",
   "kind": "tnc",
-  "received_at": "2026-10-07T21:33:07.686296+08:00",
+  "received_at": "2026-10-07T21:34:07.545402+08:00",
   "url": "https://bet.hkjc.com/ch/racing/tnc/2026-10-07/HV/1",
-  "source_updated_at": "2026-10-07T21:29:00+08:00",
-  "source_age_seconds": 247.7,
-  "source_recent": false,
+  "source_updated_at": "2026-10-07T21:33:00+08:00",
+  "source_age_seconds": 67.5,
+  "source_recent": true,
   "state": "observed",
   "numeric_quotes": 7,
   "participants": [
@@ -23,7 +23,7 @@
       "current_odds": 1.22,
       "quote_text": "1.22",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.709284
+      "normalized_implied_share": 0.70774
     },
     {
       "selection_id": "1",
@@ -37,7 +37,7 @@
       "current_odds": 6.5,
       "quote_text": "6.50",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.133127
+      "normalized_implied_share": 0.132837
     },
     {
       "selection_id": "6",
@@ -51,7 +51,7 @@
       "current_odds": 11.0,
       "quote_text": "11.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.078666
+      "normalized_implied_share": 0.078495
     },
     {
       "selection_id": "3",
@@ -65,7 +65,7 @@
       "current_odds": 22.0,
       "quote_text": "22",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.039333
+      "normalized_implied_share": 0.039247
     },
     {
       "selection_id": "12",
@@ -79,7 +79,21 @@
       "current_odds": 45.0,
       "quote_text": "45",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.019229
+      "normalized_implied_share": 0.019188
+    },
+    {
+      "selection_id": "10",
+      "name": "黎昭昇",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 85.0,
+      "current_odds": 70.0,
+      "quote_text": "70",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.012335
     },
     {
       "selection_id": "4",
@@ -93,21 +107,7 @@
       "current_odds": 85.0,
       "quote_text": "85",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.01018
-    },
-    {
-      "selection_id": "10",
-      "name": "黎昭昇",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": 75.0,
-      "current_odds": 85.0,
-      "quote_text": "85",
-      "opening_drop_pct": null,
-      "normalized_implied_share": 0.01018
+      "normalized_implied_share": 0.010158
     },
     {
       "selection_id": "5",
@@ -306,7 +306,7 @@
       "normalized_implied_share": null
     }
   ],
-  "header": "練馬師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 21:29\n所有場次即時投注將於第 8 場前截止\n添加到投注區",
+  "header": "練馬師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 21:33\n所有場次即時投注將於第 8 場前截止\n添加到投注區",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -314,55 +314,55 @@
       "race_number": 1,
       "post_time": "2026-10-07T18:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -10687.7
+      "seconds_to_off": -10747.5
     },
     {
       "race_number": 2,
       "post_time": "2026-10-07T19:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -8887.7
+      "seconds_to_off": -8947.5
     },
     {
       "race_number": 3,
       "post_time": "2026-10-07T19:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -7087.7
+      "seconds_to_off": -7147.5
     },
     {
       "race_number": 4,
       "post_time": "2026-10-07T20:10:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -4987.7
+      "seconds_to_off": -5047.5
     },
     {
       "race_number": 5,
       "post_time": "2026-10-07T20:40:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -3187.7
+      "seconds_to_off": -3247.5
     },
     {
       "race_number": 6,
       "post_time": "2026-10-07T21:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -1387.7
+      "seconds_to_off": -1447.5
     },
     {
       "race_number": 7,
       "post_time": "2026-10-07T21:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 712.3
+      "seconds_to_off": 652.5
     },
     {
       "race_number": 8,
       "post_time": "2026-10-07T22:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 2512.3
+      "seconds_to_off": 2452.5
     },
     {
       "race_number": 9,
       "post_time": "2026-10-07T22:50:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 4612.3
+      "seconds_to_off": 4552.5
     }
   ],
   "raw_tables": [
@@ -416,16 +416,16 @@
         "45"
       ],
       [
-        "4",
-        "羅富全",
-        "12",
-        "2",
-        "75",
-        "85"
-      ],
-      [
         "10",
         "黎昭昇",
+        "12",
+        "2",
+        "85",
+        "70"
+      ],
+      [
+        "4",
+        "羅富全",
         "12",
         "2",
         "75",
