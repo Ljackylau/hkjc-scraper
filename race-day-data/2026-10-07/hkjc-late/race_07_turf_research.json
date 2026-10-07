@@ -1,0 +1,36 @@
+{
+  "version": "turf_cold_shadow_2026_10_04",
+  "observation_only": true,
+  "turf": {
+    "version": "turf_cold_shadow_2026_10_04",
+    "status": "ready",
+    "observation_only": true,
+    "banker": 12,
+    "legs": [
+      2,
+      11,
+      5,
+      9
+    ],
+    "changed": false,
+    "prior_races": [
+      {
+        "race": 2,
+        "received_at": "2026-10-07T19:09:42.531112+08:00",
+        "observed": 1,
+        "expected": 1.6469109984243067
+      }
+    ],
+    "inside_excess": -0.6469109984243067,
+    "active": false
+  },
+  "cold_divergence": {
+    "version": "turf_cold_shadow_2026_10_04",
+    "status": "ready",
+    "candidates": [],
+    "freeze": "2026-10-07T21:41:50+08:00",
+    "observation_only": true,
+    "start_received_at": "2026-10-07T21:15:00.122770+08:00",
+    "end_received_at": "2026-10-07T21:41:48.239092+08:00"
+  }
+}
