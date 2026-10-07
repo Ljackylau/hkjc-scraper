@@ -3,11 +3,11 @@
   "date": "2026-10-07",
   "venue": "HV",
   "kind": "jkc",
-  "received_at": "2026-10-07T20:27:06.786152+08:00",
+  "received_at": "2026-10-07T20:28:06.782654+08:00",
   "url": "https://bet.hkjc.com/ch/racing/jkc/2026-10-07/HV/1",
   "source_updated_at": "2026-10-07T20:26:00+08:00",
-  "source_age_seconds": 66.8,
-  "source_recent": true,
+  "source_age_seconds": 126.8,
+  "source_recent": false,
   "state": "observed",
   "numeric_quotes": 13,
   "participants": [
@@ -23,7 +23,7 @@
       "current_odds": 1.1,
       "quote_text": "1.10",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.772348
+      "normalized_implied_share": 0.771801
     },
     {
       "selection_id": "3",
@@ -37,7 +37,7 @@
       "current_odds": 12.0,
       "quote_text": "12.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.070799
+      "normalized_implied_share": 0.070748
     },
     {
       "selection_id": "9",
@@ -51,7 +51,7 @@
       "current_odds": 13.0,
       "quote_text": "13.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.065353
+      "normalized_implied_share": 0.065306
     },
     {
       "selection_id": "5",
@@ -65,7 +65,7 @@
       "current_odds": 20.0,
       "quote_text": "20",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.042479
+      "normalized_implied_share": 0.042449
     },
     {
       "selection_id": "4",
@@ -79,7 +79,7 @@
       "current_odds": 45.0,
       "quote_text": "45",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.01888
+      "normalized_implied_share": 0.018866
     },
     {
       "selection_id": "2",
@@ -93,7 +93,7 @@
       "current_odds": 85.0,
       "quote_text": "85",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.009995
+      "normalized_implied_share": 0.009988
     },
     {
       "selection_id": "7",
@@ -107,7 +107,7 @@
       "current_odds": 175.0,
       "quote_text": "175",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.004855
+      "normalized_implied_share": 0.004851
     },
     {
       "selection_id": "13",
@@ -121,7 +121,7 @@
       "current_odds": 200.0,
       "quote_text": "200",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.004248
+      "normalized_implied_share": 0.004245
     },
     {
       "selection_id": "12",
@@ -135,7 +135,21 @@
       "current_odds": 250.0,
       "quote_text": "250",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.003398
+      "normalized_implied_share": 0.003396
+    },
+    {
+      "selection_id": "14",
+      "name": "其他騎師",
+      "is_other": true,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 400.0,
+      "current_odds": 300.0,
+      "quote_text": "300",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.00283
     },
     {
       "selection_id": "10",
@@ -149,21 +163,7 @@
       "current_odds": 300.0,
       "quote_text": "300",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.002832
-    },
-    {
-      "selection_id": "14",
-      "name": "其他騎師",
-      "is_other": true,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": 20.0,
-      "current_odds": 400.0,
-      "quote_text": "400",
-      "opening_drop_pct": null,
-      "normalized_implied_share": 0.002124
+      "normalized_implied_share": 0.00283
     },
     {
       "selection_id": "6",
@@ -177,7 +177,7 @@
       "current_odds": 400.0,
       "quote_text": "400",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.002124
+      "normalized_implied_share": 0.002122
     },
     {
       "selection_id": "11",
@@ -216,55 +216,55 @@
       "race_number": 1,
       "post_time": "2026-10-07T18:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -6726.8
+      "seconds_to_off": -6786.8
     },
     {
       "race_number": 2,
       "post_time": "2026-10-07T19:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -4926.8
+      "seconds_to_off": -4986.8
     },
     {
       "race_number": 3,
       "post_time": "2026-10-07T19:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -3126.8
+      "seconds_to_off": -3186.8
     },
     {
       "race_number": 4,
       "post_time": "2026-10-07T20:10:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -1026.8
+      "seconds_to_off": -1086.8
     },
     {
       "race_number": 5,
       "post_time": "2026-10-07T20:40:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 773.2
+      "seconds_to_off": 713.2
     },
     {
       "race_number": 6,
       "post_time": "2026-10-07T21:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 2573.2
+      "seconds_to_off": 2513.2
     },
     {
       "race_number": 7,
       "post_time": "2026-10-07T21:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 4673.2
+      "seconds_to_off": 4613.2
     },
     {
       "race_number": 8,
       "post_time": "2026-10-07T22:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 6473.2
+      "seconds_to_off": 6413.2
     },
     {
       "race_number": 9,
       "post_time": "2026-10-07T22:50:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 8573.2
+      "seconds_to_off": 8513.2
     }
   ],
   "raw_tables": [
@@ -350,20 +350,20 @@
         "250"
       ],
       [
+        "14",
+        "其他騎師",
+        "12",
+        "詳情",
+        "400",
+        "300"
+      ],
+      [
         "10",
         "金誠剛",
         "0",
         "4",
         "60",
         "300"
-      ],
-      [
-        "14",
-        "其他騎師",
-        "12",
-        "詳情",
-        "20",
-        "400"
       ],
       [
         "6",
