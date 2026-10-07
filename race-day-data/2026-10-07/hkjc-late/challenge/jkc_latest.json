@@ -3,13 +3,13 @@
   "date": "2026-10-07",
   "venue": "HV",
   "kind": "jkc",
-  "received_at": "2026-10-07T19:42:07.049569+08:00",
+  "received_at": "2026-10-07T19:44:07.147754+08:00",
   "url": "https://bet.hkjc.com/ch/racing/jkc/2026-10-07/HV/1",
-  "source_updated_at": "2026-10-07T19:35:00+08:00",
-  "source_age_seconds": 427.0,
-  "source_recent": false,
-  "state": "no_numeric_quotes",
-  "numeric_quotes": 0,
+  "source_updated_at": "2026-10-07T19:43:00+08:00",
+  "source_age_seconds": 67.1,
+  "source_recent": true,
+  "state": "observed",
+  "numeric_quotes": 14,
   "participants": [
     {
       "selection_id": "1",
@@ -19,25 +19,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
+      "previous_odds": 3.0,
+      "current_odds": 1.95,
+      "quote_text": "1.95",
       "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
-      "selection_id": "9",
-      "name": "楊明綸",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
+      "normalized_implied_share": 0.427813
     },
     {
       "selection_id": "3",
@@ -47,39 +33,25 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
+      "previous_odds": 4.5,
+      "current_odds": 4.75,
+      "quote_text": "4.75",
       "opening_drop_pct": null,
-      "normalized_implied_share": null
+      "normalized_implied_share": 0.175628
     },
     {
-      "selection_id": "14",
-      "name": "其他騎師",
-      "is_other": true,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
-      "selection_id": "2",
-      "name": "艾兆禮",
+      "selection_id": "9",
+      "name": "楊明綸",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
+      "previous_odds": 4.5,
+      "current_odds": 5.5,
+      "quote_text": "5.50",
       "opening_drop_pct": null,
-      "normalized_implied_share": null
+      "normalized_implied_share": 0.151679
     },
     {
       "selection_id": "5",
@@ -89,11 +61,25 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
+      "previous_odds": 12.0,
+      "current_odds": 11.0,
+      "quote_text": "11.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": null
+      "normalized_implied_share": 0.07584
+    },
+    {
+      "selection_id": "14",
+      "name": "其他騎師",
+      "is_other": true,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 8.5,
+      "current_odds": 20.0,
+      "quote_text": "20",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.041712
     },
     {
       "selection_id": "4",
@@ -103,39 +89,25 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
+      "previous_odds": 25.0,
+      "current_odds": 28.0,
+      "quote_text": "28",
       "opening_drop_pct": null,
-      "normalized_implied_share": null
+      "normalized_implied_share": 0.029794
     },
     {
-      "selection_id": "6",
-      "name": "黃智弘",
+      "selection_id": "2",
+      "name": "艾兆禮",
       "is_other": false,
       "scheduled_rides": null,
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
+      "previous_odds": 11.0,
+      "current_odds": 28.0,
+      "quote_text": "28",
       "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
-      "selection_id": "7",
-      "name": "袁幸堯",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
+      "normalized_implied_share": 0.029794
     },
     {
       "selection_id": "10",
@@ -145,11 +117,25 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
+      "previous_odds": 45.0,
+      "current_odds": 60.0,
+      "quote_text": "60",
       "opening_drop_pct": null,
-      "normalized_implied_share": null
+      "normalized_implied_share": 0.013904
+    },
+    {
+      "selection_id": "7",
+      "name": "袁幸堯",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 45.0,
+      "current_odds": 65.0,
+      "quote_text": "65",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.012834
     },
     {
       "selection_id": "12",
@@ -159,25 +145,11 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
+      "previous_odds": 45.0,
+      "current_odds": 65.0,
+      "quote_text": "65",
       "opening_drop_pct": null,
-      "normalized_implied_share": null
-    },
-    {
-      "selection_id": "13",
-      "name": "班德禮",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
-      "opening_drop_pct": null,
-      "normalized_implied_share": null
+      "normalized_implied_share": 0.012834
     },
     {
       "selection_id": "11",
@@ -187,11 +159,39 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
+      "previous_odds": 65.0,
+      "current_odds": 85.0,
+      "quote_text": "85",
       "opening_drop_pct": null,
-      "normalized_implied_share": null
+      "normalized_implied_share": 0.009815
+    },
+    {
+      "selection_id": "13",
+      "name": "班德禮",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 65.0,
+      "current_odds": 100.0,
+      "quote_text": "100",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.008342
+    },
+    {
+      "selection_id": "6",
+      "name": "黃智弘",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 45.0,
+      "current_odds": 100.0,
+      "quote_text": "100",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.008342
     },
     {
       "selection_id": "8",
@@ -201,14 +201,14 @@
       "remaining_rides": null,
       "points": null,
       "opening_odds": null,
-      "previous_odds": null,
-      "current_odds": null,
-      "quote_text": "---",
+      "previous_odds": 125.0,
+      "current_odds": 500.0,
+      "quote_text": "500",
       "opening_drop_pct": null,
-      "normalized_implied_share": null
+      "normalized_implied_share": 0.001668
     }
   ],
-  "header": "騎師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 19:35\n所有場次騎師王 1 暫停即場投注。即時投注將於第 8 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
+  "header": "騎師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 19:43\n所有場次即時投注將於第 8 場前截止\n添加到投注區\n騎師王統計\n騎師王坐騎表\n騎師王賠率走勢圖\n全日騎師分場表\n騎師王積分\n玩法\n受注時間\n騎師資料",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -216,55 +216,55 @@
       "race_number": 1,
       "post_time": "2026-10-07T18:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -4027.0
+      "seconds_to_off": -4147.1
     },
     {
       "race_number": 2,
       "post_time": "2026-10-07T19:05:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -2227.0
+      "seconds_to_off": -2347.1
     },
     {
       "race_number": 3,
       "post_time": "2026-10-07T19:35:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": -427.0
+      "seconds_to_off": -547.1
     },
     {
       "race_number": 4,
       "post_time": "2026-10-07T20:10:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 1673.0
+      "seconds_to_off": 1552.9
     },
     {
       "race_number": 5,
       "post_time": "2026-10-07T20:40:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 3473.0
+      "seconds_to_off": 3352.9
     },
     {
       "race_number": 6,
       "post_time": "2026-10-07T21:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 5273.0
+      "seconds_to_off": 5152.9
     },
     {
       "race_number": 7,
       "post_time": "2026-10-07T21:45:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 7373.0
+      "seconds_to_off": 7252.9
     },
     {
       "race_number": 8,
       "post_time": "2026-10-07T22:15:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 9173.0
+      "seconds_to_off": 9052.9
     },
     {
       "race_number": 9,
       "post_time": "2026-10-07T22:50:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 11273.0
+      "seconds_to_off": 11152.9
     }
   ],
   "raw_tables": [
@@ -280,114 +280,114 @@
       [
         "1",
         "潘頓",
-        "0",
-        "5",
-        "---",
-        "---"
-      ],
-      [
-        "9",
-        "楊明綸",
-        "18",
+        "12",
         "4",
-        "---",
-        "---"
+        "3.00",
+        "1.95"
       ],
       [
         "3",
         "巴度",
         "0",
         "6",
-        "---",
-        "---"
+        "4.50",
+        "4.75"
       ],
       [
-        "14",
-        "其他騎師",
-        "12",
-        "詳情",
-        "---",
-        "---"
-      ],
-      [
-        "2",
-        "艾兆禮",
-        "0",
-        "7",
-        "---",
-        "---"
+        "9",
+        "楊明綸",
+        "18",
+        "3",
+        "4.50",
+        "5.50"
       ],
       [
         "5",
         "鍾易禮",
         "4",
         "4",
-        "---",
-        "---"
+        "12.0",
+        "11.0"
+      ],
+      [
+        "14",
+        "其他騎師",
+        "12",
+        "詳情",
+        "8.50",
+        "20"
       ],
       [
         "4",
         "梁家俊",
         "4",
         "5",
-        "---",
-        "---"
+        "25",
+        "28"
       ],
       [
-        "6",
-        "黃智弘",
+        "2",
+        "艾兆禮",
         "0",
-        "4",
-        "---",
-        "---"
+        "6",
+        "11.0",
+        "28"
+      ],
+      [
+        "10",
+        "金誠剛",
+        "0",
+        "5",
+        "45",
+        "60"
       ],
       [
         "7",
         "袁幸堯",
         "0",
         "4",
-        "---",
-        "---"
-      ],
-      [
-        "10",
-        "金誠剛",
-        "0",
-        "6",
-        "---",
-        "---"
+        "45",
+        "65"
       ],
       [
         "12",
         "黃寶妮",
         "---",
         "6",
-        "---",
-        "---"
-      ],
-      [
-        "13",
-        "班德禮",
-        "6",
-        "4",
-        "---",
-        "---"
+        "45",
+        "65"
       ],
       [
         "11",
         "田泰安",
         "0",
         "3",
-        "---",
-        "---"
+        "65",
+        "85"
+      ],
+      [
+        "13",
+        "班德禮",
+        "6",
+        "3",
+        "65",
+        "100"
+      ],
+      [
+        "6",
+        "黃智弘",
+        "0",
+        "3",
+        "45",
+        "100"
       ],
       [
         "8",
         "霍宏聲",
-        "0",
-        "3",
-        "---",
-        "---"
+        "6",
+        "2",
+        "125",
+        "500"
       ]
     ]
   ],
