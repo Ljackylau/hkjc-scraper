@@ -5,11 +5,11 @@
   "pools": {
     "jkc": {
       "state": "observed",
-      "samples_this_run": 67,
-      "received_at": "2026-10-07T19:45:07.106946+08:00",
-      "source_updated_at": "2026-10-07T19:43:00+08:00",
+      "samples_this_run": 68,
+      "received_at": "2026-10-07T19:46:07.047950+08:00",
+      "source_updated_at": "2026-10-07T19:44:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 127.1,
+      "source_age_seconds": 127.0,
       "numeric_quotes": 14,
       "participants": [
         {
@@ -24,7 +24,7 @@
           "current_odds": 1.95,
           "quote_text": "1.95",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.427813
+          "normalized_implied_share": 0.425386
         },
         {
           "selection_id": "3",
@@ -38,7 +38,7 @@
           "current_odds": 4.75,
           "quote_text": "4.75",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.175628
+          "normalized_implied_share": 0.174632
         },
         {
           "selection_id": "9",
@@ -52,7 +52,7 @@
           "current_odds": 5.5,
           "quote_text": "5.50",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.151679
+          "normalized_implied_share": 0.150819
         },
         {
           "selection_id": "5",
@@ -66,7 +66,7 @@
           "current_odds": 11.0,
           "quote_text": "11.0",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.07584
+          "normalized_implied_share": 0.075409
         },
         {
           "selection_id": "14",
@@ -80,7 +80,7 @@
           "current_odds": 20.0,
           "quote_text": "20",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.041712
+          "normalized_implied_share": 0.041475
         },
         {
           "selection_id": "4",
@@ -94,7 +94,7 @@
           "current_odds": 28.0,
           "quote_text": "28",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.029794
+          "normalized_implied_share": 0.029625
         },
         {
           "selection_id": "2",
@@ -108,7 +108,21 @@
           "current_odds": 28.0,
           "quote_text": "28",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.029794
+          "normalized_implied_share": 0.029625
+        },
+        {
+          "selection_id": "12",
+          "name": "黃寶妮",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 65.0,
+          "current_odds": 45.0,
+          "quote_text": "45",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.018433
         },
         {
           "selection_id": "10",
@@ -122,7 +136,7 @@
           "current_odds": 60.0,
           "quote_text": "60",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.013904
+          "normalized_implied_share": 0.013825
         },
         {
           "selection_id": "7",
@@ -136,21 +150,7 @@
           "current_odds": 65.0,
           "quote_text": "65",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.012834
-        },
-        {
-          "selection_id": "12",
-          "name": "黃寶妮",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": 45.0,
-          "current_odds": 65.0,
-          "quote_text": "65",
-          "opening_drop_pct": null,
-          "normalized_implied_share": 0.012834
+          "normalized_implied_share": 0.012762
         },
         {
           "selection_id": "11",
@@ -164,7 +164,7 @@
           "current_odds": 85.0,
           "quote_text": "85",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.009815
+          "normalized_implied_share": 0.009759
         },
         {
           "selection_id": "13",
@@ -178,7 +178,7 @@
           "current_odds": 100.0,
           "quote_text": "100",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.008342
+          "normalized_implied_share": 0.008295
         },
         {
           "selection_id": "6",
@@ -192,7 +192,7 @@
           "current_odds": 100.0,
           "quote_text": "100",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.008342
+          "normalized_implied_share": 0.008295
         },
         {
           "selection_id": "8",
@@ -206,7 +206,7 @@
           "current_odds": 500.0,
           "quote_text": "500",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.001668
+          "normalized_implied_share": 0.001659
         }
       ],
       "points_available": true,
@@ -214,28 +214,14 @@
       "points_error": null
     },
     "tnc": {
-      "state": "no_numeric_quotes",
-      "samples_this_run": 67,
-      "received_at": "2026-10-07T19:45:07.087621+08:00",
-      "source_updated_at": "2026-10-07T19:43:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 127.1,
-      "numeric_quotes": 0,
+      "state": "observed",
+      "samples_this_run": 68,
+      "received_at": "2026-10-07T19:46:07.258481+08:00",
+      "source_updated_at": "2026-10-07T19:45:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 67.3,
+      "numeric_quotes": 21,
       "participants": [
-        {
-          "selection_id": "2",
-          "name": "告東尼",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
         {
           "selection_id": "1",
           "name": "方嘉柏",
@@ -244,11 +230,25 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 2.7,
+          "current_odds": 2.4,
+          "quote_text": "2.40",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.3517
+        },
+        {
+          "selection_id": "2",
+          "name": "告東尼",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 2.3,
+          "current_odds": 3.0,
+          "quote_text": "3.00",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.28136
         },
         {
           "selection_id": "6",
@@ -258,39 +258,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 7.0,
+          "current_odds": 6.5,
+          "quote_text": "6.50",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "3",
-          "name": "伍鵬志",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "5",
-          "name": "大衛希斯",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.129859
         },
         {
           "selection_id": "10",
@@ -300,25 +272,39 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 35.0,
+          "current_odds": 15.0,
+          "quote_text": "15.0",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.056272
         },
         {
-          "selection_id": "17",
-          "name": "鄭俊偉",
+          "selection_id": "5",
+          "name": "大衛希斯",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 18.0,
+          "current_odds": 16.0,
+          "quote_text": "16.0",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.052755
+        },
+        {
+          "selection_id": "3",
+          "name": "伍鵬志",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 17.0,
+          "current_odds": 18.0,
+          "quote_text": "18.0",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.046893
         },
         {
           "selection_id": "4",
@@ -328,11 +314,25 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 40.0,
+          "current_odds": 45.0,
+          "quote_text": "45",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.018757
+        },
+        {
+          "selection_id": "17",
+          "name": "鄭俊偉",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 45.0,
+          "current_odds": 65.0,
+          "quote_text": "65",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.012986
         },
         {
           "selection_id": "13",
@@ -342,11 +342,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 45.0,
+          "current_odds": 85.0,
+          "quote_text": "85",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.00993
         },
         {
           "selection_id": "11",
@@ -356,25 +356,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 85.0,
+          "current_odds": 100.0,
+          "quote_text": "100",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "8",
-          "name": "韋達",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.008441
         },
         {
           "selection_id": "9",
@@ -384,11 +370,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 85.0,
+          "current_odds": 100.0,
+          "quote_text": "100",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.008441
         },
         {
           "selection_id": "12",
@@ -398,25 +384,25 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 70.0,
+          "current_odds": 100.0,
+          "quote_text": "100",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.008441
         },
         {
-          "selection_id": "7",
-          "name": "廖康銘",
+          "selection_id": "8",
+          "name": "韋達",
           "is_other": false,
           "scheduled_rides": null,
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 100.0,
+          "current_odds": 175.0,
+          "quote_text": "175",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.004823
         },
         {
           "selection_id": "14",
@@ -426,25 +412,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 175.0,
+          "current_odds": 200.0,
+          "quote_text": "200",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
-        },
-        {
-          "selection_id": "15",
-          "name": "沈集成",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
-          "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.00422
         },
         {
           "selection_id": "16",
@@ -454,11 +426,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 500.0,
+          "current_odds": 600.0,
+          "quote_text": "600",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.001407
         },
         {
           "selection_id": "21",
@@ -468,11 +440,39 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 600.0,
+          "current_odds": 750.0,
+          "quote_text": "750",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.001125
+        },
+        {
+          "selection_id": "15",
+          "name": "沈集成",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 300.0,
+          "current_odds": 800.0,
+          "quote_text": "800",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.001055
+        },
+        {
+          "selection_id": "7",
+          "name": "廖康銘",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 175.0,
+          "current_odds": 1500.0,
+          "quote_text": "1500",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.000563
         },
         {
           "selection_id": "20",
@@ -482,11 +482,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 500.0,
+          "current_odds": 2000.0,
+          "quote_text": "2000",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.000422
         },
         {
           "selection_id": "18",
@@ -496,11 +496,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 1500.0,
+          "current_odds": 2500.0,
+          "quote_text": "2500",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.000338
         },
         {
           "selection_id": "19",
@@ -510,11 +510,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": null,
-          "current_odds": null,
-          "quote_text": "---",
+          "previous_odds": 3000.0,
+          "current_odds": 4000.0,
+          "quote_text": "4000",
           "opening_drop_pct": null,
-          "normalized_implied_share": null
+          "normalized_implied_share": 0.000211
         }
       ],
       "points_available": true,
@@ -531,5 +531,5 @@
     8,
     9
   ],
-  "updated_at": "2026-10-07T19:45:07.760402+08:00"
+  "updated_at": "2026-10-07T19:46:07.302745+08:00"
 }
