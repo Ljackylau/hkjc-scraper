@@ -1,0 +1,372 @@
+{
+  "source": "HKJC official local results",
+  "source_url": "https://racing.hkjc.com/en-us/local/information/archive/localresults?racedate=2026%2F10%2F07&Racecourse=HV&RaceNo=7",
+  "received_at": "2026-10-07T21:52:25.375131+08:00",
+  "entries": [
+    {
+      "placing": "1",
+      "placing_text": "1",
+      "horse_number": 9
+    },
+    {
+      "placing": "2",
+      "placing_text": "2",
+      "horse_number": 5
+    },
+    {
+      "placing": "3",
+      "placing_text": "3",
+      "horse_number": 10
+    },
+    {
+      "placing": "4",
+      "placing_text": "4",
+      "horse_number": 1
+    }
+  ],
+  "top4": [
+    9,
+    5,
+    10,
+    1
+  ],
+  "dividends": {
+    "W": [
+      {
+        "combination": "9",
+        "dividend_hkd": 72.5
+      }
+    ],
+    "P": [
+      {
+        "combination": "9",
+        "dividend_hkd": 25.0
+      },
+      {
+        "combination": "5",
+        "dividend_hkd": 21.0
+      },
+      {
+        "combination": "10",
+        "dividend_hkd": 40.5
+      }
+    ],
+    "Q": [
+      {
+        "combination": "5,9",
+        "dividend_hkd": 194.5
+      }
+    ],
+    "QP": [
+      {
+        "combination": "5,9",
+        "dividend_hkd": 65.5
+      },
+      {
+        "combination": "9,10",
+        "dividend_hkd": 156.0
+      },
+      {
+        "combination": "5,10",
+        "dividend_hkd": 154.5
+      }
+    ]
+  },
+  "dividend_unit": "HKJC published HK$ unit",
+  "settlement_status": "complete",
+  "date": "2026-10-07",
+  "race": 7,
+  "banker": 12,
+  "method_b": {
+    "method": "independent_hybrid_v1",
+    "status": "independent",
+    "banker": 12,
+    "reason": "fixed-baseline market movement",
+    "received_at": "2026-10-07T21:41:48.239092+08:00"
+  },
+  "independent_tip": {
+    "date": "2026-10-07",
+    "race": 7,
+    "off": "2026-10-07T21:45:00+08:00",
+    "freeze": "2026-10-07T21:41:50+08:00",
+    "method": "independent_hybrid_v1",
+    "cutoff": "2026-10-07T21:42:00+08:00",
+    "banker": 12,
+    "legs": [
+      2,
+      11,
+      5,
+      9
+    ],
+    "banker_source": "fixed-baseline market movement",
+    "banker_scores": {
+      "1": 5.36,
+      "2": 15.481,
+      "3": 10.316,
+      "4": 0.686,
+      "5": 6.068,
+      "6": 8.966,
+      "7": 5.172,
+      "8": 15.542,
+      "9": 17.453,
+      "10": 6.252,
+      "11": 21.22,
+      "12": 23.14
+    },
+    "leg_scores": {
+      "1": 0.18181818181818185,
+      "2": 0.9818181818181817,
+      "3": 0.4727272727272727,
+      "4": 0.2909090909090909,
+      "5": 0.7090909090909092,
+      "6": 0.14545454545454548,
+      "7": 0.4363636363636364,
+      "8": 0.2545454545454546,
+      "9": 0.5818181818181819,
+      "10": 0.6000000000000001,
+      "11": 0.7636363636363638,
+      "12": 0.5818181818181819
+    },
+    "received_at": "2026-10-07T21:41:48.239092+08:00",
+    "experimental": true,
+    "not_a_probability": true,
+    "status": "ready",
+    "market": [
+      12,
+      11,
+      9,
+      8,
+      2
+    ],
+    "golden": [],
+    "legs_f": [
+      2,
+      11
+    ],
+    "legs_qp": [
+      5,
+      9
+    ],
+    "banker_qp_odds": {
+      "1": 48.0,
+      "2": 8.6,
+      "3": 32.0,
+      "4": 36.0,
+      "8": 40.0,
+      "9": 11.0,
+      "10": 26.0,
+      "11": 7.5,
+      "5": 10.0,
+      "6": 57.0,
+      "7": 33.0
+    },
+    "legs_method": "f2_qp1_cold_10_30_exploratory_2026_10_02",
+    "legs_status": "ready",
+    "legs_reason": "",
+    "baseline_received_at": "2026-10-07T21:34:55.158922+08:00",
+    "long_baseline_received_at": "2026-10-07T21:15:00.122770+08:00",
+    "runner_rows": [
+      [
+        "1",
+        "",
+        "晨曦儷人",
+        "9",
+        "135",
+        "楊明綸",
+        "伍鵬志",
+        "26",
+        "7.0",
+        ""
+      ],
+      [
+        "2",
+        "",
+        "東來欣賞",
+        "5",
+        "130",
+        "袁幸堯 (-7)",
+        "告東尼",
+        "3.9",
+        "1.6",
+        ""
+      ],
+      [
+        "3",
+        "",
+        "快活英雄",
+        "4",
+        "129",
+        "黃寶妮 (-7)",
+        "黎昭昇",
+        "20",
+        "5.2",
+        ""
+      ],
+      [
+        "4",
+        "",
+        "幸運星球",
+        "3",
+        "129",
+        "潘明輝",
+        "丁冠豪",
+        "24",
+        "6.3",
+        ""
+      ],
+      [
+        "5",
+        "",
+        "觀眾之力",
+        "7",
+        "128",
+        "巴度",
+        "方嘉柏",
+        "4.0",
+        "1.9",
+        ""
+      ],
+      [
+        "6",
+        "",
+        "電源之駒",
+        "11",
+        "123",
+        "霍宏聲",
+        "廖康銘",
+        "44",
+        "10",
+        ""
+      ],
+      [
+        "7",
+        "",
+        "耀寶",
+        "10",
+        "121",
+        "艾兆禮",
+        "羅富全",
+        "18",
+        "5.4",
+        ""
+      ],
+      [
+        "8",
+        "",
+        "關鍵所在",
+        "12",
+        "120",
+        "黃智弘 (-3)",
+        "沈集成",
+        "33",
+        "9.0",
+        ""
+      ],
+      [
+        "9",
+        "",
+        "朗日自強",
+        "1",
+        "119",
+        "梁家俊",
+        "文家良",
+        "10",
+        "2.1",
+        ""
+      ],
+      [
+        "10",
+        "",
+        "天馬行雲",
+        "2",
+        "118",
+        "希威森",
+        "桂福特",
+        "16",
+        "4.3",
+        ""
+      ],
+      [
+        "11",
+        "",
+        "丞匡掠影",
+        "6",
+        "117",
+        "鍾易禮 (-2)",
+        "徐雨石",
+        "3.8",
+        "1.7",
+        ""
+      ],
+      [
+        "12",
+        "",
+        "競駿非凡",
+        "8",
+        "117",
+        "蔡明紹",
+        "韋達",
+        "17",
+        "2.8",
+        ""
+      ]
+    ],
+    "source_updated": {
+      "wp": "2026-10-07T21:41:00+08:00",
+      "wpq": "2026-10-07T21:41:00+08:00"
+    },
+    "cold": [
+      12
+    ],
+    "cold_status": "ready",
+    "cold_policy": "cold_top2_priority_v2_exploratory_2026-10-02",
+    "cold_freeze": "2026-10-07T21:41:50+08:00",
+    "cold_target": "top2",
+    "cold_probability_calibrated": false,
+    "cold_group": [],
+    "cold_missing": [],
+    "cold_branch": "confirmed_prior_form",
+    "cold_branch_label": "原B＋賽績確認",
+    "cold_win": 17.0,
+    "cold_received_at": "2026-10-07T21:41:48.239092+08:00",
+    "cold_fct_received_at": "2026-10-07T21:41:48.356052+08:00",
+    "cold_sources": {
+      "wp": {
+        "wp": "2026-10-07T21:41:00+08:00",
+        "wpq": "2026-10-07T21:41:00+08:00"
+      },
+      "fct": "2026-10-07T21:41:00+08:00",
+      "historical_prepared_at": "2026-10-07T19:10:56.205608+08:00"
+    },
+    "cold_partial": false,
+    "legs_original": [
+      2,
+      11,
+      5,
+      9
+    ],
+    "legs_original_method": "f2_banker_qp2_v1",
+    "legs_original_qp": [
+      5,
+      9
+    ],
+    "legs_fusion_changed": false,
+    "legs_added": null,
+    "legs_removed": null,
+    "legs_cold": [],
+    "legs_fusion_win": 17.0,
+    "legs_fusion_reason_code": "cold_is_banker",
+    "legs_fusion_reason": "冷馬已是主膽，保留原四腳",
+    "generated_at": "2026-10-07T21:41:50.037859+08:00"
+  },
+  "legs": [
+    2,
+    11,
+    5,
+    9
+  ],
+  "cold": [
+    12
+  ],
+  "cold_source": "saved_tip"
+}
