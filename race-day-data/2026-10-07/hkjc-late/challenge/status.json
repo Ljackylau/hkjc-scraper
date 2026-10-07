@@ -5,11 +5,11 @@
   "pools": {
     "jkc": {
       "state": "observed",
-      "samples_this_run": 271,
-      "received_at": "2026-10-07T21:24:07.294761+08:00",
+      "samples_this_run": 272,
+      "received_at": "2026-10-07T21:25:07.454192+08:00",
       "source_updated_at": "2026-10-07T21:18:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 367.3,
+      "source_age_seconds": 427.5,
       "numeric_quotes": 10,
       "participants": [
         {
@@ -215,11 +215,11 @@
     },
     "tnc": {
       "state": "observed",
-      "samples_this_run": 271,
-      "received_at": "2026-10-07T21:24:07.424406+08:00",
-      "source_updated_at": "2026-10-07T21:19:00+08:00",
+      "samples_this_run": 272,
+      "received_at": "2026-10-07T21:25:07.459565+08:00",
+      "source_updated_at": "2026-10-07T21:23:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 307.4,
+      "source_age_seconds": 127.5,
       "numeric_quotes": 7,
       "participants": [
         {
@@ -230,11 +230,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 1.75,
-          "current_odds": 1.3,
-          "quote_text": "1.30",
+          "previous_odds": 1.3,
+          "current_odds": 1.26,
+          "quote_text": "1.26",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.663686
+          "normalized_implied_share": 0.68561
         },
         {
           "selection_id": "1",
@@ -244,11 +244,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 2.7,
-          "current_odds": 5.0,
-          "quote_text": "5.00",
+          "previous_odds": 5.0,
+          "current_odds": 5.5,
+          "quote_text": "5.50",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.172558
+          "normalized_implied_share": 0.157067
         },
         {
           "selection_id": "6",
@@ -262,7 +262,7 @@
           "current_odds": 11.0,
           "quote_text": "11.0",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.078436
+          "normalized_implied_share": 0.078533
         },
         {
           "selection_id": "3",
@@ -272,11 +272,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 30.0,
-          "current_odds": 20.0,
-          "quote_text": "20",
+          "previous_odds": 20.0,
+          "current_odds": 22.0,
+          "quote_text": "22",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.04314
+          "normalized_implied_share": 0.039267
         },
         {
           "selection_id": "12",
@@ -290,7 +290,7 @@
           "current_odds": 45.0,
           "quote_text": "45",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.019173
+          "normalized_implied_share": 0.019197
         },
         {
           "selection_id": "4",
@@ -300,11 +300,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 22.0,
-          "current_odds": 75.0,
-          "quote_text": "75",
+          "previous_odds": 75.0,
+          "current_odds": 85.0,
+          "quote_text": "85",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.011504
+          "normalized_implied_share": 0.010163
         },
         {
           "selection_id": "10",
@@ -314,11 +314,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 30.0,
-          "current_odds": 75.0,
-          "quote_text": "75",
+          "previous_odds": 75.0,
+          "current_odds": 85.0,
+          "quote_text": "85",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.011504
+          "normalized_implied_share": 0.010163
         },
         {
           "selection_id": "5",
@@ -531,5 +531,5 @@
     8,
     9
   ],
-  "updated_at": "2026-10-07T21:24:07.482314+08:00"
+  "updated_at": "2026-10-07T21:25:08.398500+08:00"
 }
