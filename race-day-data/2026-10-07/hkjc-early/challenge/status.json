@@ -5,11 +5,11 @@
   "pools": {
     "jkc": {
       "state": "observed",
-      "samples_this_run": 177,
-      "received_at": "2026-10-07T20:08:10.222228+08:00",
-      "source_updated_at": "2026-10-07T20:02:00+08:00",
-      "source_recent": false,
-      "source_age_seconds": 370.2,
+      "samples_this_run": 178,
+      "received_at": "2026-10-07T20:08:20.612897+08:00",
+      "source_updated_at": "2026-10-07T20:07:00+08:00",
+      "source_recent": true,
+      "source_age_seconds": 80.6,
       "numeric_quotes": 14,
       "participants": [
         {
@@ -24,7 +24,7 @@
           "current_odds": 1.95,
           "quote_text": "1.95",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.424156
+          "normalized_implied_share": 0.424868
         },
         {
           "selection_id": "3",
@@ -34,11 +34,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 4.5,
-          "current_odds": 4.25,
-          "quote_text": "4.25",
+          "previous_odds": 4.25,
+          "current_odds": 4.0,
+          "quote_text": "4.00",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.194613
+          "normalized_implied_share": 0.207123
         },
         {
           "selection_id": "9",
@@ -52,7 +52,7 @@
           "current_odds": 6.5,
           "quote_text": "6.50",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.127247
+          "normalized_implied_share": 0.127461
         },
         {
           "selection_id": "5",
@@ -62,11 +62,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 12.0,
-          "current_odds": 11.0,
-          "quote_text": "11.0",
+          "previous_odds": 11.0,
+          "current_odds": 12.0,
+          "quote_text": "12.0",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.075191
+          "normalized_implied_share": 0.069041
         },
         {
           "selection_id": "14",
@@ -80,7 +80,7 @@
           "current_odds": 20.0,
           "quote_text": "20",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.041355
+          "normalized_implied_share": 0.041425
         },
         {
           "selection_id": "2",
@@ -94,7 +94,7 @@
           "current_odds": 22.0,
           "quote_text": "22",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.037596
+          "normalized_implied_share": 0.037659
         },
         {
           "selection_id": "4",
@@ -104,11 +104,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 25.0,
-          "current_odds": 28.0,
-          "quote_text": "28",
+          "previous_odds": 28.0,
+          "current_odds": 30.0,
+          "quote_text": "30",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.029539
+          "normalized_implied_share": 0.027616
         },
         {
           "selection_id": "12",
@@ -118,11 +118,11 @@
           "remaining_rides": null,
           "points": null,
           "opening_odds": null,
-          "previous_odds": 45.0,
-          "current_odds": 40.0,
-          "quote_text": "40",
+          "previous_odds": 40.0,
+          "current_odds": 45.0,
+          "quote_text": "45",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.020678
+          "normalized_implied_share": 0.018411
         },
         {
           "selection_id": "10",
@@ -136,7 +136,7 @@
           "current_odds": 60.0,
           "quote_text": "60",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.013785
+          "normalized_implied_share": 0.013808
         },
         {
           "selection_id": "7",
@@ -150,35 +150,7 @@
           "current_odds": 75.0,
           "quote_text": "75",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.011028
-        },
-        {
-          "selection_id": "6",
-          "name": "黃智弘",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": 45.0,
-          "current_odds": 100.0,
-          "quote_text": "100",
-          "opening_drop_pct": null,
-          "normalized_implied_share": 0.008271
-        },
-        {
-          "selection_id": "11",
-          "name": "田泰安",
-          "is_other": false,
-          "scheduled_rides": null,
-          "remaining_rides": null,
-          "points": null,
-          "opening_odds": null,
-          "previous_odds": 85.0,
-          "current_odds": 100.0,
-          "quote_text": "100",
-          "opening_drop_pct": null,
-          "normalized_implied_share": 0.008271
+          "normalized_implied_share": 0.011047
         },
         {
           "selection_id": "13",
@@ -192,7 +164,35 @@
           "current_odds": 125.0,
           "quote_text": "125",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.006617
+          "normalized_implied_share": 0.006628
+        },
+        {
+          "selection_id": "6",
+          "name": "黃智弘",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 100.0,
+          "current_odds": 125.0,
+          "quote_text": "125",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.006628
+        },
+        {
+          "selection_id": "11",
+          "name": "田泰安",
+          "is_other": false,
+          "scheduled_rides": null,
+          "remaining_rides": null,
+          "points": null,
+          "opening_odds": null,
+          "previous_odds": 100.0,
+          "current_odds": 125.0,
+          "quote_text": "125",
+          "opening_drop_pct": null,
+          "normalized_implied_share": 0.006628
         },
         {
           "selection_id": "8",
@@ -206,7 +206,7 @@
           "current_odds": 500.0,
           "quote_text": "500",
           "opening_drop_pct": null,
-          "normalized_implied_share": 0.001654
+          "normalized_implied_share": 0.001657
         }
       ],
       "points_available": false,
@@ -215,11 +215,11 @@
     },
     "tnc": {
       "state": "observed",
-      "samples_this_run": 177,
-      "received_at": "2026-10-07T20:08:10.641600+08:00",
+      "samples_this_run": 178,
+      "received_at": "2026-10-07T20:08:20.234678+08:00",
       "source_updated_at": "2026-10-07T19:59:00+08:00",
       "source_recent": false,
-      "source_age_seconds": 550.6,
+      "source_age_seconds": 560.2,
       "numeric_quotes": 21,
       "participants": [
         {
@@ -530,5 +530,5 @@
     3,
     4
   ],
-  "updated_at": "2026-10-07T20:08:10.643452+08:00"
+  "updated_at": "2026-10-07T20:08:20.615007+08:00"
 }
