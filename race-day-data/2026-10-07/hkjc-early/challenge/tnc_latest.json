@@ -3,11 +3,11 @@
   "date": "2026-10-07",
   "venue": "HV",
   "kind": "tnc",
-  "received_at": "2026-10-07T19:02:39.890944+08:00",
+  "received_at": "2026-10-07T19:02:50.486039+08:00",
   "url": "https://bet.hkjc.com/ch/racing/tnc/2026-10-07/HV/1",
-  "source_updated_at": "2026-10-07T19:00:00+08:00",
-  "source_age_seconds": 159.9,
-  "source_recent": false,
+  "source_updated_at": "2026-10-07T19:02:00+08:00",
+  "source_age_seconds": 50.5,
+  "source_recent": true,
   "state": "observed",
   "numeric_quotes": 21,
   "participants": [
@@ -23,7 +23,7 @@
       "current_odds": 2.75,
       "quote_text": "2.75",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.299054
+      "normalized_implied_share": 0.297887
     },
     {
       "selection_id": "1",
@@ -37,7 +37,7 @@
       "current_odds": 3.0,
       "quote_text": "3.00",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.274133
+      "normalized_implied_share": 0.273063
     },
     {
       "selection_id": "6",
@@ -51,7 +51,7 @@
       "current_odds": 6.5,
       "quote_text": "6.50",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.126523
+      "normalized_implied_share": 0.126029
     },
     {
       "selection_id": "3",
@@ -65,7 +65,7 @@
       "current_odds": 12.0,
       "quote_text": "12.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.068533
+      "normalized_implied_share": 0.068266
     },
     {
       "selection_id": "5",
@@ -79,7 +79,7 @@
       "current_odds": 18.0,
       "quote_text": "18.0",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.045689
+      "normalized_implied_share": 0.045511
     },
     {
       "selection_id": "7",
@@ -93,7 +93,21 @@
       "current_odds": 22.0,
       "quote_text": "22",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.037382
+      "normalized_implied_share": 0.037236
+    },
+    {
+      "selection_id": "10",
+      "name": "黎昭昇",
+      "is_other": false,
+      "scheduled_rides": null,
+      "remaining_rides": null,
+      "points": null,
+      "opening_odds": null,
+      "previous_odds": 35.0,
+      "current_odds": 30.0,
+      "quote_text": "30",
+      "opening_drop_pct": null,
+      "normalized_implied_share": 0.027306
     },
     {
       "selection_id": "9",
@@ -107,21 +121,7 @@
       "current_odds": 35.0,
       "quote_text": "35",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.023497
-    },
-    {
-      "selection_id": "10",
-      "name": "黎昭昇",
-      "is_other": false,
-      "scheduled_rides": null,
-      "remaining_rides": null,
-      "points": null,
-      "opening_odds": null,
-      "previous_odds": 30.0,
-      "current_odds": 35.0,
-      "quote_text": "35",
-      "opening_drop_pct": null,
-      "normalized_implied_share": 0.023497
+      "normalized_implied_share": 0.023405
     },
     {
       "selection_id": "4",
@@ -135,7 +135,7 @@
       "current_odds": 40.0,
       "quote_text": "40",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.02056
+      "normalized_implied_share": 0.02048
     },
     {
       "selection_id": "11",
@@ -149,7 +149,7 @@
       "current_odds": 40.0,
       "quote_text": "40",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.02056
+      "normalized_implied_share": 0.02048
     },
     {
       "selection_id": "13",
@@ -163,7 +163,7 @@
       "current_odds": 45.0,
       "quote_text": "45",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.018276
+      "normalized_implied_share": 0.018204
     },
     {
       "selection_id": "12",
@@ -177,7 +177,7 @@
       "current_odds": 70.0,
       "quote_text": "70",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.011749
+      "normalized_implied_share": 0.011703
     },
     {
       "selection_id": "8",
@@ -191,7 +191,7 @@
       "current_odds": 85.0,
       "quote_text": "85",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.009675
+      "normalized_implied_share": 0.009638
     },
     {
       "selection_id": "16",
@@ -205,7 +205,7 @@
       "current_odds": 125.0,
       "quote_text": "125",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.006579
+      "normalized_implied_share": 0.006554
     },
     {
       "selection_id": "14",
@@ -219,7 +219,7 @@
       "current_odds": 175.0,
       "quote_text": "175",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.004699
+      "normalized_implied_share": 0.004681
     },
     {
       "selection_id": "15",
@@ -233,7 +233,7 @@
       "current_odds": 250.0,
       "quote_text": "250",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.00329
+      "normalized_implied_share": 0.003277
     },
     {
       "selection_id": "17",
@@ -247,7 +247,7 @@
       "current_odds": 400.0,
       "quote_text": "400",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.002056
+      "normalized_implied_share": 0.002048
     },
     {
       "selection_id": "20",
@@ -261,7 +261,7 @@
       "current_odds": 500.0,
       "quote_text": "500",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.001645
+      "normalized_implied_share": 0.001638
     },
     {
       "selection_id": "21",
@@ -275,7 +275,7 @@
       "current_odds": 500.0,
       "quote_text": "500",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.001645
+      "normalized_implied_share": 0.001638
     },
     {
       "selection_id": "18",
@@ -289,7 +289,7 @@
       "current_odds": 1500.0,
       "quote_text": "1500",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.000548
+      "normalized_implied_share": 0.000546
     },
     {
       "selection_id": "19",
@@ -303,10 +303,10 @@
       "current_odds": 2000.0,
       "quote_text": "2000",
       "opening_drop_pct": null,
-      "normalized_implied_share": 0.000411
+      "normalized_implied_share": 0.00041
     }
   ],
-  "header": "練馬師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 19:00\n所有場次即時投注將於第 8 場前截止\n添加到投注區\n練馬師王統計\n練馬師王出馬表\n練馬師王賠率走勢圖\n全日練馬師分場表\n練馬師王積分\n玩法\n受注時間\n練馬師資料",
+  "header": "練馬師王\n1\n07/10/2026, 星期三, 跑馬地\n更新時間: 07/10/2026 19:02\n所有場次即時投注將於第 8 場前截止\n添加到投注區\n練馬師王統計\n練馬師王出馬表\n練馬師王賠率走勢圖\n全日練馬師分場表\n練馬師王積分\n玩法\n受注時間\n練馬師資料",
   "research_only": true,
   "selection_roster_complete": true,
   "race_context": [
@@ -314,55 +314,55 @@
       "race_number": 1,
       "post_time": "2026-10-07T18:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": -1659.9
+      "seconds_to_off": -1670.5
     },
     {
       "race_number": 2,
       "post_time": "2026-10-07T19:05:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 140.1
+      "seconds_to_off": 129.5
     },
     {
       "race_number": 3,
       "post_time": "2026-10-07T19:35:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 1940.1
+      "seconds_to_off": 1929.5
     },
     {
       "race_number": 4,
       "post_time": "2026-10-07T20:10:00+08:00",
       "schedule_source": "hkjc_shadow",
-      "seconds_to_off": 4040.1
+      "seconds_to_off": 4029.5
     },
     {
       "race_number": 5,
       "post_time": "2026-10-07T20:40:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 5840.1
+      "seconds_to_off": 5829.5
     },
     {
       "race_number": 6,
       "post_time": "2026-10-07T21:10:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 7640.1
+      "seconds_to_off": 7629.5
     },
     {
       "race_number": 7,
       "post_time": "2026-10-07T21:45:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 9740.1
+      "seconds_to_off": 9729.5
     },
     {
       "race_number": 8,
       "post_time": "2026-10-07T22:15:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 11540.1
+      "seconds_to_off": 11529.5
     },
     {
       "race_number": 9,
       "post_time": "2026-10-07T22:50:00+08:00",
       "schedule_source": "workflow_input",
-      "seconds_to_off": 13640.1
+      "seconds_to_off": 13629.5
     }
   ],
   "raw_tables": [
@@ -424,19 +424,19 @@
         "22"
       ],
       [
+        "10",
+        "黎昭昇",
+        "---",
+        "6",
+        "35",
+        "30"
+      ],
+      [
         "9",
         "呂健威",
         "---",
         "4",
         "45",
-        "35"
-      ],
-      [
-        "10",
-        "黎昭昇",
-        "---",
-        "6",
-        "30",
         "35"
       ],
       [
