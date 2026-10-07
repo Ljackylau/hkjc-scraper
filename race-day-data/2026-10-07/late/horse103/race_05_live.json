@@ -1,0 +1,98 @@
+{
+  "source": "103.plus Live103",
+  "race": {
+    "id": "83352d4d-5e96-4b80-8084-c0d86ab660e8",
+    "race_number": 5,
+    "post_time": "20:40",
+    "venue": "跑馬地",
+    "distance": 1000,
+    "course": "C+3"
+  },
+  "date": "2026-10-07",
+  "expected_lock": "2026-10-07T20:37:00+08:00",
+  "live_received_at": "2026-10-07T20:37:08.564432+08:00",
+  "capture_delay_seconds": 8.56,
+  "live": {
+    "engineVersion": "live103-v3.7.0",
+    "phase": "locked",
+    "generatedAt": "2026-10-07T12:37:02.103Z",
+    "postTime": "2026-10-07T12:40:00.000Z",
+    "previewTime": "2026-10-07T12:33:00.000Z",
+    "lockTime": "2026-10-07T12:37:00.000Z",
+    "dataQuality": "ready",
+    "freshness": "live",
+    "candidates": [
+      {
+        "horseNumber": 4,
+        "nameTc": "巴閉王",
+        "nameEn": "SUPERB KING",
+        "capitalSignal": "steady",
+        "command": "aggressive",
+        "valueIndex": 70,
+        "valueTier": "mid",
+        "verdictKey": "capital_clean",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 12,
+        "nameTc": "馬運高",
+        "nameEn": "MAPOGO",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 64,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 6,
+        "nameTc": "美麗登場",
+        "nameEn": "BEAUTY SHOW",
+        "capitalSignal": "steady",
+        "command": "follow",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "capital_overrides",
+        "isFill": false,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 8,
+        "nameTc": "佐治傳奇",
+        "nameEn": "GEORGIAN SIGMA",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 61,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      },
+      {
+        "horseNumber": 1,
+        "nameTc": "鴻圖新星",
+        "nameEn": "GRAND NOVA",
+        "capitalSignal": "none",
+        "command": "observe",
+        "valueIndex": 56,
+        "valueTier": "mid",
+        "verdictKey": "fill_no_trigger",
+        "isFill": true,
+        "inPreview": true
+      }
+    ],
+    "fakeFavorites": [],
+    "previewOnly": [],
+    "secondLook": {
+      "phase": "preview",
+      "horseNumber": 4,
+      "nameTc": "巴閉王",
+      "nameEn": "SUPERB KING",
+      "confidence": "high",
+      "reason": "潘頓策騎，近績穩定，上仗同程跑第三表現良佳。操練正常，負磅合理，有力爭勝。",
+      "previewHorseNumber": null
+    }
+  }
+}
