@@ -1,7 +1,7 @@
 {
   "date": "2026-10-07",
   "venue": "HV",
-  "updated_at": "2026-10-07T18:46:21.351770+08:00",
+  "updated_at": "2026-10-07T18:47:23.717548+08:00",
   "mode": "shadow",
   "races": {
     "1": {
@@ -10,8 +10,10 @@
       "errors": []
     },
     "2": {
-      "status": "waiting",
-      "target": "2026-10-07T19:02:00+08:00"
+      "status": "collecting",
+      "target": "2026-10-07T19:02:00+08:00",
+      "baseline": true,
+      "last_received": "2026-10-07T18:47:19.277762+08:00"
     },
     "3": {
       "status": "waiting",

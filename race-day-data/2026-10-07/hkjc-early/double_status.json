@@ -1,6 +1,30 @@
 {
   "date": "2026-10-07",
-  "updated_at": "2026-10-07T18:46:19.008255+08:00",
+  "updated_at": "2026-10-07T18:47:19.108561+08:00",
   "research_only": true,
-  "pairs": {}
+  "pairs": {
+    "1": {
+      "status": "unavailable",
+      "first_race": 1,
+      "second_race": 2,
+      "error": "Strict cutoff missed"
+    },
+    "2": {
+      "status": "collecting",
+      "first_race": 2,
+      "second_race": 3,
+      "target": "2026-10-07T19:01:50+08:00",
+      "last_received": "2026-10-07T18:46:24.043560+08:00"
+    },
+    "3": {
+      "status": "waiting",
+      "first_race": 3,
+      "second_race": 4
+    },
+    "4": {
+      "status": "waiting",
+      "first_race": 4,
+      "second_race": 5
+    }
+  }
 }
