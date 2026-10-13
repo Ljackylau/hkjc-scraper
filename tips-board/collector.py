@@ -1,7 +1,7 @@
 """Date-validated expert tips, pre-off index capture and official results.
 All persisted timestamps use Asia/Hong_Kong. No retrospective index selection.
 """
-import argparse,base64,concurrent.futures,hashlib,json,os,re,subprocess,time,urllib.parse,urllib.request
+import argparse,copy,base64,concurrent.futures,hashlib,json,os,re,subprocess,time,urllib.parse,urllib.request
 from datetime import datetime,timedelta
 from zoneinfo import ZoneInfo
 from pathlib import Path
@@ -145,7 +145,7 @@ def capture_index(meeting,shell):
     captured=now()
     for r in meeting['races']:
         off=datetime.fromisoformat(r['off'])
-        if not (off-timedelta(minutes=3)<=captured<off) or r['index']['status']=='ready':continue
+        if r.get('locked') or not (off-timedelta(minutes=3)<=captured<off) or r['index']['status']=='ready':continue
         rid=meeting['date'].replace('-','')+'-'+meeting['venue']+f'-{r["race"]:02}'
         rows=j.get('index_top4_by_race',{}).get(rid,[])
         if not rows:
@@ -249,9 +249,39 @@ def dispatch(store):
         gh('actions/workflows/'+workflow+'/dispatches',{'ref':'main','inputs':{'date':m['date'],'mode':mode}})
         print('Dispatched',name)
 
+def collect_manual(m):
+    """One bounded source pass. Never revise any race that has started."""
+    started=stamp();candidate=copy.deepcopy(m)
+    candidate['tips_checked_at']=None
+    candidate['races']=[r for r in candidate['races'] if not r.get('locked') and now()<datetime.fromisoformat(r['off'])]
+    for r in candidate['races']:
+        r['tips']={k:{'status':'pending','horses':[]} for k in ['meiji',*EXPERTS]}
+    if candidate['races']:collect_tips(candidate)
+    errors=[]
+    for fresh in candidate['races']:
+        r=next(r for r in m['races'] if r['race']==fresh['race'])
+        if r.get('locked') or now()>=datetime.fromisoformat(r['off']):continue
+        for key,tip in fresh['tips'].items():
+            if tip['status'] in ('ready','absent'):r['tips'][key]=tip
+            else:errors.append({'race':r['race'],'source':key,'status':tip['status'],'error':tip.get('error')})
+        choose(r)
+    if any(not r.get('locked') and datetime.fromisoformat(r['off'])-timedelta(minutes=3)<=now()<datetime.fromisoformat(r['off']) and r['index']['status']!='ready' for r in m['races']):
+        try:capture_index(m,request('https://66888.hk/raceid/'+m['date'].replace('-','')+'-'+m['venue']+'-01'))
+        except Exception as e:errors.append({'source':'index','error':str(e)})
+    for r in m['races']:
+        if now()>=datetime.fromisoformat(r['off'])+timedelta(minutes=3) and (not r['result'] or not r['result'].get('dividends')):
+            try:r['result']=official_result(m,r)
+            except Exception as e:errors.append({'race':r['race'],'source':'result','error':str(e)})
+    m['manual_checked_at']=stamp()
+    m.setdefault('manual_checks',[]).append({'started_at':started,'finished_at':m['manual_checked_at'],'errors':errors})
+
 def run(store,date,mode):
+    if date=='latest':date=(store.read('latest.json') or {})['date']
     m=store.read(date+'.json')
     if not m:raise ValueError('Meeting not initialized')
+    if mode=='manual':
+        if (store.read('latest.json') or {}).get('date')!=date:raise ValueError('Manual collection is restricted to the latest meeting')
+        collect_manual(m);store.save(m);return
     due=datetime.fromisoformat(m['tips_due_at'])
     if mode=='tips':
         while now()<due:time.sleep(min(20,max(0,(due-now()).total_seconds())))
@@ -302,7 +332,7 @@ def reconcile(store):
             if (store.read('latest.json') or {}).get('date')==m['date']:store.write('latest.json',m)
     if store.publish:store.push()
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('command',choices=['bootstrap','dispatch','run','reconcile']);p.add_argument('--data',default='tips-board/data');p.add_argument('--publish',action='store_true');p.add_argument('--date');p.add_argument('--mode',choices=['tips','live']);a=p.parse_args();s=Store(a.data,a.publish)
+    p=argparse.ArgumentParser();p.add_argument('command',choices=['bootstrap','dispatch','run','reconcile']);p.add_argument('--data',default='tips-board/data');p.add_argument('--publish',action='store_true');p.add_argument('--date');p.add_argument('--mode',choices=['tips','live','manual']);a=p.parse_args();s=Store(a.data,a.publish)
     if a.command=='bootstrap':print(json.dumps(initialize(s),ensure_ascii=False)[:500])
     elif a.command=='dispatch':dispatch(s)
     elif a.command=='reconcile':reconcile(s)

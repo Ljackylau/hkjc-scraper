@@ -1,6 +1,6 @@
 import unittest,copy
 from unittest.mock import patch
-from collector import choose,empty_meeting,parse_meiji,safe_horses,official_result,parse_dividends
+from collector import choose,empty_meeting,parse_meiji,safe_horses,official_result,parse_dividends,collect_manual
 class Rules(unittest.TestCase):
  def setUp(self):
   self.r=empty_meeting({'date':'2026-10-14','venue':'HV','races':[{'race':1,'off':'2026-10-14T18:35:00+08:00','horses':[{'no':n,'name':str(n)} for n in range(1,13)]}]})['races'][0]
@@ -35,4 +35,26 @@ class Rules(unittest.TestCase):
   html='<table><tr><td>獨贏</td><td>3</td><td>82.50</td></tr><tr><td>位置</td><td>3</td><td>26.00</td></tr><tr><td>7</td><td>40.00</td></tr><tr><td>連贏</td><td>3,7</td><td>574.50</td></tr><tr><td>位置Q</td><td>3,7</td><td>174.00</td></tr><tr><td>二重彩</td><td>3,7</td><td>1,107.00</td></tr></table>'
   d=parse_dividends(BeautifulSoup(html,'html.parser').table)
   self.assertEqual(len(d['P']),2);self.assertEqual(d['W'][0]['dividend_hkd'],82.5);self.assertEqual(len(d['QP']),1)
+ def test_manual_preserves_locked_and_automatic_check(self):
+  from datetime import datetime
+  m=empty_meeting({'date':'2026-10-14','venue':'HV','races':[copy.deepcopy(self.r)]})
+  m['races'][0]=copy.deepcopy(self.r);m['tips_checked_at']=None
+  locked=copy.deepcopy(self.r);locked['race']=2;locked['locked']=True;m['races'].append(locked)
+  previous=copy.deepcopy(locked)
+  def fetch(candidate):
+   self.assertEqual([r['race'] for r in candidate['races']],[1])
+   candidate['tips_checked_at']='automatic-temporary'
+   candidate['races'][0]['tips']['ball']={'status':'ready','horses':[{'no':3,'name':'3'}]}
+  with patch('collector.now',return_value=datetime.fromisoformat('2026-10-13T19:00:00+08:00')),patch('collector.collect_tips',side_effect=fetch):collect_manual(m)
+  self.assertIsNone(m['tips_checked_at']);self.assertEqual(m['races'][1],previous)
+  self.assertEqual(m['races'][0]['tips']['ball']['horses'][0]['no'],3)
+  self.assertEqual(len(m['manual_checks']),1)
+ def test_manual_failures_keep_previous_valid_tips(self):
+  from datetime import datetime
+  m=empty_meeting({'date':'2026-10-14','venue':'HV','races':[copy.deepcopy(self.r)]});m['races'][0]=copy.deepcopy(self.r)
+  previous=copy.deepcopy(m['races'][0]['tips'])
+  def fetch(candidate):
+   for tip in candidate['races'][0]['tips'].values():tip['status']='error'
+  with patch('collector.now',return_value=datetime.fromisoformat('2026-10-13T19:00:00+08:00')),patch('collector.collect_tips',side_effect=fetch):collect_manual(m)
+  self.assertEqual(m['races'][0]['tips'],previous);self.assertEqual(len(m['manual_checks'][0]['errors']),4)
 if __name__=='__main__':unittest.main()

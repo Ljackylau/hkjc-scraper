@@ -4,17 +4,19 @@ on:
   workflow_dispatch:
     inputs:
       date:
-        description: 'Race date YYYY-MM-DD'
+        description: 'Race date YYYY-MM-DD (manual may use latest)'
+        default: latest
         required: true
       mode:
         type: choice
-        description: 'tips = first race minus two hours; live = index and results'
-        options: [tips, live]
+        description: 'manual = collect now; tips = scheduled check; live = race monitor'
+        options: [manual, tips, live]
+        default: manual
         required: true
 permissions:
   contents: write
 concurrency:
-  group: expert-tips-${{ inputs.date }}-${{ inputs.mode }}
+  group: expert-tips-collector
   cancel-in-progress: false
 jobs:
   collect:

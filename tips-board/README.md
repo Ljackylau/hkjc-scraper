@@ -44,3 +44,9 @@ Backfill operates in its own destination and never overwrites `latest.json`. The
 Each W/P/Q/QP line is matched against HKJC's paid winning combinations. W/P shows the number of selected horses paid; Q/QP shows winning combinations out of all pairs in the compact horse list. Every winning combination displays its own official dividend divided by HK$10, including principal. This is a payout multiple, not net profit. Optional methods are evaluated separately. Missing dividends remain pending; races that did not offer a pool are labelled unavailable; withdrawn combinations are labelled refunded. No stake or aggregate profit is assumed.
 
 `node tips-board/test_settlement.mjs` verifies pool matching, reversed pairs, multiple QP wins, dead heats, refunds and unavailable pools.
+
+## Manual source collection
+
+The latest page has a **要求抓取（GitHub）** button. It opens the authenticated workflow page; the repository owner selects `manual` and confirms **Run workflow**. This is a GitHub confirmation handoff, not a one-click backend endpoint. GitHub Pages cannot securely dispatch an authenticated workflow by itself. A real one-click button needs an authenticated backend; no repository token is embedded in the page.
+
+Manual mode defaults to `latest` and does one bounded pass: refresh date-validated expert tips for unstarted races, attempt index only in its original pre-off window, and check eligible official results at least three minutes after off. A failed or stale manual fetch retains the last valid tips and records an error. It never changes tips or selections for a started/locked race, and does not consume the automatic T-2h check. Each pass records its times and errors. All collector modes share a concurrency group to prevent competing record writes; requests queue behind an active collector.
