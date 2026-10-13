@@ -1,0 +1,49 @@
+name: Expert Tips Automatic Schedule
+on:
+  schedule:
+    - cron: '3,18,33,48 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['tips-board/**', '.github/workflows/expert-tips-*.yml']
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: expert-tips-schedule
+  cancel-in-progress: false
+jobs:
+  schedule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r source/tips-board/requirements.txt
+      - name: Open persistent data branch
+        run: |
+          git clone --no-checkout "https://x-access-token:${TASK_GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" data
+          cd data
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git show-ref --verify --quiet refs/remotes/origin/tips-data; then
+            git checkout -b tips-data origin/tips-data
+          else
+            git checkout --orphan tips-data
+            git rm -rf .
+            mkdir -p records
+            cp ../source/tips-board/data/*.json records/
+            git add records
+            git commit -m 'Initialize expert tips archive'
+            git push origin tips-data
+          fi
+        env:
+          TASK_GITHUB_TOKEN: ${{ github.token }}
+      - name: Discover official meeting and dispatch due collectors
+        run: python source/tips-board/collector.py dispatch --data data/records --publish
+        env:
+          GH_TOKEN: ${{ github.token }}

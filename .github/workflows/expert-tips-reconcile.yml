@@ -1,0 +1,31 @@
+name: Expert Tips Result Recovery
+on:
+  schedule:
+    - cron: '20 16 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: expert-tips-recovery
+  cancel-in-progress: false
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+      - uses: actions/checkout@v4
+        with:
+          path: data
+          ref: tips-data
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r source/tips-board/requirements.txt
+      - run: |
+          git -C data config user.name 'github-actions[bot]'
+          git -C data config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python source/tips-board/collector.py reconcile --data data/records --publish

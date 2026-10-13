@@ -1,0 +1,44 @@
+name: Expert Tips Collector
+run-name: 'Expert Tips ${{ inputs.date }} · ${{ inputs.mode }}'
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Race date YYYY-MM-DD'
+        required: true
+      mode:
+        type: choice
+        description: 'tips = first race minus two hours; live = index and results'
+        options: [tips, live]
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: expert-tips-${{ inputs.date }}-${{ inputs.mode }}
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: source
+      - uses: actions/checkout@v4
+        with:
+          ref: tips-data
+          path: data
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r source/tips-board/requirements.txt
+      - name: Set archive author
+        run: |
+          git -C data config user.name 'github-actions[bot]'
+          git -C data config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Collect and publish durable records
+        env:
+          TASK_RACE_DATE: ${{ inputs.date }}
+          TASK_MODE: ${{ inputs.mode }}
+        run: python source/tips-board/collector.py run --data data/records --publish --date "$TASK_RACE_DATE" --mode "$TASK_MODE"
