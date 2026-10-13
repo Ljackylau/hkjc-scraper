@@ -263,7 +263,9 @@ def collect_manual(m):
         if r.get('locked') or now()>=datetime.fromisoformat(r['off']):continue
         for key,tip in fresh['tips'].items():
             if tip['status'] in ('ready','absent'):r['tips'][key]=tip
-            else:errors.append({'race':r['race'],'source':key,'status':tip['status'],'error':tip.get('error')})
+            else:
+                errors.append({'race':r['race'],'source':key,'status':tip['status'],'source_date':tip.get('source_date'),'error':tip.get('error')})
+                if r['tips'][key]['status'] not in ('ready','absent'):r['tips'][key]=tip
         choose(r)
     if any(not r.get('locked') and datetime.fromisoformat(r['off'])-timedelta(minutes=3)<=now()<datetime.fromisoformat(r['off']) and r['index']['status']!='ready' for r in m['races']):
         try:capture_index(m,request('https://66888.hk/raceid/'+m['date'].replace('-','')+'-'+m['venue']+'-01'))
