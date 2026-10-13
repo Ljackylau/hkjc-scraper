@@ -28,3 +28,13 @@ Score is the number of nonempty selections from 波仔, 馬觀微 and 電腦評�
 `python tips-board/collector.py bootstrap`
 
 Workflow status: `.github/workflows/expert-tips-{schedule,run,reconcile}.yml`.
+
+## Historical backfill (2026-09-01 through 2026-10-13)
+
+`backfill.py` reads date-specific On.cc archives, Star `raceDay`, `raceEntry` and `expertTips` records, the index site's spotlight archive and explicit per-race `race_ai.index_top4` archive, and HKJC official results. Each source is matched to the date, venue, race and declared horses. Results use the selected date header, never a date present only in the navigation.
+
+Historical meetings carry `record_type: historical_backfill`; their selections are `reconstructed`, not contemporaneous selections. Some per-race index archives report creation times at or after the published off time. These are displayed with a warning and must not be treated as verified T-2 captures or a leakage-free backtest. Current-day live records retain their original semantics.
+
+A single unsupported Big5 glyph (`?` or replacement character) is repaired only when the horse number, name length and all remaining characters match the dated declaration; the original source name is retained. Other name mismatches stay errors.
+
+Backfill operates in its own destination and never overwrites `latest.json`. The history index preserves later contemporaneous records when published.

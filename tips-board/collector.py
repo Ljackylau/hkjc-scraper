@@ -58,9 +58,13 @@ def safe_horses(items,race):
     field={r['no']:r['name'] for r in race['horses']};out=[]
     for h in items:
         n=int(h['no']);name=h.get('name','').replace(' ','')
-        if n not in field or (name and name!=field[n].replace(' ','')):raise ValueError('Horse number/name mismatch')
+        canonical=field.get(n,'').replace(' ','')
+        # Old Big5 archives sometimes publish a literal '?' for an unsupported glyph.
+        # Repair only one missing glyph when every other character and horse number match.
+        repaired=name!=canonical and len(name)==len(canonical) and len(name)>=3 and sum(c in '?�' for c in name)==1 and all(a==b or a in '?�' for a,b in zip(name,canonical))
+        if n not in field or (name and name!=canonical and not repaired):raise ValueError('Horse number/name mismatch')
         if n in [x['no'] for x in out]:raise ValueError('Duplicate horse')
-        out.append({'no':n,'name':field[n]})
+        out.append({'no':n,'name':field[n],**({'source_name':h.get('name'),'name_repair':'single missing archive glyph; other characters match'} if repaired else {})})
     return out
 
 def parse_meiji(body,date):
@@ -157,7 +161,10 @@ def official_result(m,r):
     soup=BeautifulSoup(request(url),'html.parser');table=soup.select_one('.performance tbody')
     if not table:raise ValueError('Official result not published')
     body=soup.get_text(' ',strip=True)
-    if not re.search(r'(?:'+str(int(m['date'][8:]))+r'/'+str(int(m['date'][5:7]))+r'/'+m['date'][:4]+r'|'+m['date'].replace('-','/')+r')',body):raise ValueError('Official result date not verified')
+    declared=re.search(r'賽事日期\s*[：:]\s*(\d{1,2})/(\d{1,2})/(\d{4})',body)
+    actual_date=f'{int(declared[3]):04}-{int(declared[2]):02}-{int(declared[1]):02}' if declared else None
+    actual_race=re.search(r'第\s*(\d+)\s*場',body)
+    if actual_date!=m['date'] or not actual_race or int(actual_race[1])!=r['race']:raise ValueError('Official result selected date/race not verified')
     rows=[]
     for tr in table.select('tr'):
         c=[x.get_text(' ',strip=True) for x in tr.find_all('td')]
@@ -168,7 +175,7 @@ def official_result(m,r):
     for h in rows[:4]:
         if h['no'] not in field:raise ValueError('Official result field mismatch')
         h['name']=field[h['no']]
-    return {'horses':rows[:4],'source':url,'captured_at':stamp()}
+    return {'horses':rows[:4],'source':url,'captured_at':stamp(),'verified_date':actual_date,'verified_race':int(actual_race[1])}
 class Store:
     def __init__(self,path,publish=False):self.path=Path(path);self.path.mkdir(parents=True,exist_ok=True);self.publish=publish
     def read(self,name,default=None):

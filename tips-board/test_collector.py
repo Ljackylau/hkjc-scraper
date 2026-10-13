@@ -1,5 +1,6 @@
 import unittest,copy
-from collector import choose,empty_meeting,parse_meiji,safe_horses
+from unittest.mock import patch
+from collector import choose,empty_meeting,parse_meiji,safe_horses,official_result
 class Rules(unittest.TestCase):
  def setUp(self):
   self.r=empty_meeting({'date':'2026-10-14','venue':'HV','races':[{'race':1,'off':'2026-10-14T18:35:00+08:00','horses':[{'no':n,'name':str(n)} for n in range(1,13)]}]})['races'][0]
@@ -21,4 +22,12 @@ class Rules(unittest.TestCase):
   date,rows=parse_meiji('<div>賽事日期：11/10/2026 明治朗貼士 第1場 3馬甲 7馬乙 10馬丙 11馬丁</div>','2026-10-14');self.assertEqual(rows,{})
  def test_wrong_horse_rejected(self):
   with self.assertRaises(ValueError):safe_horses([{'no':3,'name':'另一匹'}],self.r)
+ def test_archive_single_bad_glyph_repaired_with_evidence(self):
+  r={'horses':[{'no':6,'name':'綫路英雄'}]}
+  h=safe_horses([{'no':6,'name':'?路英雄'}],r)[0]
+  self.assertEqual(h['name'],'綫路英雄');self.assertEqual(h['source_name'],'?路英雄')
+ def test_result_date_navigation_cannot_validate_wrong_selected_date(self):
+  markup='<div>賽事日期: 09/09/2026 06/09/2026 第1場</div><div class="performance"><table><tbody></tbody></table></div>'
+  with patch('collector.request',return_value=markup):
+   with self.assertRaises(ValueError):official_result({'date':'2026-09-06','venue':'ST'},{'race':1,'horses':[]})
 if __name__=='__main__':unittest.main()
