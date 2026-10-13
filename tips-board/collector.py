@@ -230,7 +230,12 @@ def run(store,date,mode):
         collect_tips(m);store.save(m);return
     shell=None;end=time.monotonic()+335*60;last_publish=0;result_try={};calendar_try={}
     while time.monotonic()<end:
-        t=now();changed=False;m['heartbeat']=t.isoformat();m['status']='live'
+        cycle_start=time.monotonic();t=now();changed=False;m['heartbeat']=t.isoformat();m['status']='live'
+        if any(datetime.fromisoformat(r['off'])-timedelta(minutes=3)<=t<datetime.fromisoformat(r['off']) and r['index']['status']!='ready' for r in m['races']):
+            try:
+                if not shell:shell=request('https://66888.hk/raceid/'+date.replace('-','')+'-'+m['venue']+'-01')
+                before=json.dumps([r['index'] for r in m['races']]);capture_index(m,shell);changed|=before!=json.dumps([r['index'] for r in m['races']]);m['index_error']=None
+            except Exception as e:m['index_error']=str(e)
         # Respect single preflight check. Live mode never silently fetches the experts again.
         for r in m['races']:
             off=datetime.fromisoformat(r['off']);n=r['race']
@@ -247,15 +252,10 @@ def run(store,date,mode):
                 result_try[n]=time.monotonic()
                 try:r['result']=official_result(m,r);r.pop('result_error',None);changed=True
                 except Exception as e:r['result_error']=str(e)
-        if any(datetime.fromisoformat(r['off'])-timedelta(minutes=3)<=t<datetime.fromisoformat(r['off']) and r['index']['status']!='ready' for r in m['races']):
-            try:
-                if not shell:shell=request('https://66888.hk/raceid/'+date.replace('-','')+'-'+m['venue']+'-01')
-                before=json.dumps([r['index'] for r in m['races']]);capture_index(m,shell);changed|=before!=json.dumps([r['index'] for r in m['races']]);m['index_error']=None
-            except Exception as e:m['index_error']=str(e)
         last=datetime.fromisoformat(m['races'][-1]['off'])
         if all(r['result'] for r in m['races']) or t>=last+timedelta(minutes=45):m['status']='archived';store.save(m);return
         if changed or time.monotonic()-last_publish>=60:store.save(m);last_publish=time.monotonic()
-        time.sleep(20)
+        time.sleep(max(0,20-(time.monotonic()-cycle_start)))
     m['status']='archived' if now()>=datetime.fromisoformat(m['races'][-1]['off'])+timedelta(minutes=3) else 'interrupted';store.save(m)
 
 def reconcile(store):
