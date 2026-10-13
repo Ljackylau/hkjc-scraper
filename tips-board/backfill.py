@@ -8,7 +8,9 @@ from collector import request,api,HK,empty_meeting,safe_horses,parse_meiji,choos
 CACHE=Path('/tmp/tips-backfill-cache');CACHE.mkdir(exist_ok=True)
 def cached(key,getter):
     path=CACHE/(key+'.json')
-    if path.exists():return json.loads(path.read_text())
+    if path.exists():
+        saved=json.loads(path.read_text())
+        if not (key.startswith('result-') and not saved.get('dividends')):return saved
     for attempt in range(3):
         try:
             j=getter();path.write_text(json.dumps(j,ensure_ascii=False));return j

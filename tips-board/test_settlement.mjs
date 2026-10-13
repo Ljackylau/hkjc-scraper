@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {settle} from './settlement.mjs';
+const result={dividends:{W:[{combination:'3',dividend_hkd:82.5}],P:[{combination:'3',dividend_hkd:26},{combination:'7',dividend_hkd:40},{combination:'12',dividend_hkd:20.5}],Q:[{combination:'3,7',dividend_hkd:574.5}],QP:[{combination:'3,7',dividend_hkd:174},{combination:'3,12',dividend_hkd:78.5},{combination:'7,12',dividend_hkd:132.5}]}};
+let s=settle('W',[3,10],result);assert.equal(s.hits.length,1);assert.equal(s.total,2);assert.equal(s.hits[0].multiple,8.25);
+s=settle('P',[3,7],result);assert.equal(s.hits.length,2);
+s=settle('QP',[3,7,10],result);assert.equal(s.total,3);assert.equal(s.hits.length,1);assert.equal(s.hits[0].multiple,17.4);
+assert.equal(settle('Q',[7,3,10],result).hits.length,1);
+assert.equal(settle('W',[7,10],result).status,'miss');
+assert.equal(settle('W',[3,10],{horses:[{no:3,placing:'1'}]}).status,'pending');
+assert.equal(settle('QP',[3,7,12],result).hits.length,3);
+assert.equal(settle('W',[3,7],{dividends:{W:[{combination:'3',dividend_hkd:30},{combination:'7',dividend_hkd:60}]}}).hits.length,2);
+assert.equal(settle('W',[10],{...result,withdrawn:[10]}).status,'refund');
+console.log('Settlement: W/P, three-horse Q/QP, reversed pairs, miss, missing dividends, dead heat and refund PASS');
+assert.equal(settle('QP',[3,7,10],{dividends:{},pool_status:{QP:'not_offered'}}).status,'not_offered');

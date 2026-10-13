@@ -155,6 +155,23 @@ def capture_index(meeting,shell):
         r['index']={'status':'ready','horses':safe_horses(rows,r),'captured_at':captured.isoformat(),'source':INDEX,'source_updated_at':j.get('updated_at'),'raceid':rid}
         choose(r)
 
+def parse_dividends(table,require_qp=True):
+    if table is None:raise ValueError('Official dividends not published')
+    names={'獨贏':'W','位置':'P','連贏':'Q','位置Q':'QP','WIN':'W','PLACE':'P','QUINELLA':'Q','QUINELLAPLACE':'QP'}
+    found={};current=None
+    for tr in table.select('tr'):
+        c=[x.get_text(' ',strip=True) for x in tr.find_all('td')]
+        if len(c)==3:
+            current=names.get(re.sub(r'\s+','',c[0]).upper());combination,amount=c[1:]
+        elif len(c)==2 and current:combination,amount=c
+        else:continue
+        if not current:continue
+        try:value=float(amount.replace(',','').replace('$',''))
+        except ValueError:continue
+        if value>=0 and re.fullmatch(r'\d+(?:\s*[,，]\s*\d+)*',combination):found.setdefault(current,[]).append({'combination':combination,'dividend_hkd':value})
+    if not all(found.get(k) for k in (('W','P','Q','QP') if require_qp else ('W','P','Q'))):raise ValueError('Official W/P/Q/QP dividends incomplete')
+    return found
+
 def official_result(m,r):
     q=urllib.parse.urlencode({'racedate':m['date'].replace('-','/'),'Racecourse':m['venue'],'RaceNo':r['race']})
     url='https://racing.hkjc.com/zh-hk/local/information/archive/localresults?'+q
@@ -175,7 +192,12 @@ def official_result(m,r):
     for h in rows[:4]:
         if h['no'] not in field:raise ValueError('Official result field mismatch')
         h['name']=field[h['no']]
-    return {'horses':rows[:4],'source':url,'captured_at':stamp(),'verified_date':actual_date,'verified_race':int(actual_race[1])}
+    dividends=parse_dividends(soup.select_one('.dividend_tab table'),require_qp=len(r['horses'])>=7)
+    withdrawn=[]
+    for tr in table.select('tr'):
+        c=[x.get_text(' ',strip=True) for x in tr.find_all('td')]
+        if len(c)>=2 and c[1].isdigit() and ('退出' in c[0] or c[0].upper() in ('WV','WX','WD')):withdrawn.append(int(c[1]))
+    return {'horses':rows[:4],'source':url,'captured_at':stamp(),'verified_date':actual_date,'verified_race':int(actual_race[1]),'dividends':dividends,'pool_status':{k:('settled' if dividends.get(k) else 'not_offered') for k in ('W','P','Q','QP')},'dividend_unit':'HKD per $10 stake, including principal','withdrawn':withdrawn}
 class Store:
     def __init__(self,path,publish=False):self.path=Path(path);self.path.mkdir(parents=True,exist_ok=True);self.publish=publish
     def read(self,name,default=None):
@@ -271,7 +293,7 @@ def reconcile(store):
         if not (now()-timedelta(days=3)).date().isoformat()<=m['date']<=now().date().isoformat():continue
         changed=False
         for r in m['races']:
-            if not r['result'] and now()>=datetime.fromisoformat(r['off'])+timedelta(minutes=3):
+            if (not r['result'] or not r['result'].get('dividends')) and now()>=datetime.fromisoformat(r['off'])+timedelta(minutes=3):
                 try:r['result']=official_result(m,r);changed=True
                 except Exception:pass
         if changed:

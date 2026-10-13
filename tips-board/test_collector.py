@@ -1,6 +1,6 @@
 import unittest,copy
 from unittest.mock import patch
-from collector import choose,empty_meeting,parse_meiji,safe_horses,official_result
+from collector import choose,empty_meeting,parse_meiji,safe_horses,official_result,parse_dividends
 class Rules(unittest.TestCase):
  def setUp(self):
   self.r=empty_meeting({'date':'2026-10-14','venue':'HV','races':[{'race':1,'off':'2026-10-14T18:35:00+08:00','horses':[{'no':n,'name':str(n)} for n in range(1,13)]}]})['races'][0]
@@ -30,4 +30,9 @@ class Rules(unittest.TestCase):
   markup='<div>賽事日期: 09/09/2026 06/09/2026 第1場</div><div class="performance"><table><tbody></tbody></table></div>'
   with patch('collector.request',return_value=markup):
    with self.assertRaises(ValueError):official_result({'date':'2026-09-06','venue':'ST'},{'race':1,'horses':[]})
+ def test_dividend_rowspan_and_pool_boundary(self):
+  from bs4 import BeautifulSoup
+  html='<table><tr><td>獨贏</td><td>3</td><td>82.50</td></tr><tr><td>位置</td><td>3</td><td>26.00</td></tr><tr><td>7</td><td>40.00</td></tr><tr><td>連贏</td><td>3,7</td><td>574.50</td></tr><tr><td>位置Q</td><td>3,7</td><td>174.00</td></tr><tr><td>二重彩</td><td>3,7</td><td>1,107.00</td></tr></table>'
+  d=parse_dividends(BeautifulSoup(html,'html.parser').table)
+  self.assertEqual(len(d['P']),2);self.assertEqual(d['W'][0]['dividend_hkd'],82.5);self.assertEqual(len(d['QP']),1)
 if __name__=='__main__':unittest.main()

@@ -38,3 +38,9 @@ Historical meetings carry `record_type: historical_backfill`; their selections a
 A single unsupported Big5 glyph (`?` or replacement character) is repaired only when the horse number, name length and all remaining characters match the dated declaration; the original source name is retained. Other name mismatches stay errors.
 
 Backfill operates in its own destination and never overwrites `latest.json`. The history index preserves later contemporaneous records when published.
+
+## Buy-method settlement
+
+Each W/P/Q/QP line is matched against HKJC's paid winning combinations. W/P shows the number of selected horses paid; Q/QP shows winning combinations out of all pairs in the compact horse list. Every winning combination displays its own official dividend divided by HK$10, including principal. This is a payout multiple, not net profit. Optional methods are evaluated separately. Missing dividends remain pending; races that did not offer a pool are labelled unavailable; withdrawn combinations are labelled refunded. No stake or aggregate profit is assumed.
+
+`node tips-board/test_settlement.mjs` verifies pool matching, reversed pairs, multiple QP wins, dead heats, refunds and unavailable pools.
