@@ -1570,13 +1570,14 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "missed",
         "horses": []
       },
       "score": 0,
       "selection": null,
       "result": null,
-      "locked": false
+      "locked": true,
+      "locked_at": "2026-10-14T22:15:05+08:00"
     },
     {
       "date": "2026-10-14",
@@ -1690,11 +1691,11 @@
       "locked": false
     }
   ],
-  "updated_at": "2026-10-14T22:14:43+08:00",
+  "updated_at": "2026-10-14T22:15:05+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-14T16:35:00+08:00",
-  "heartbeat": "2026-10-14T22:14:24.138686+08:00",
+  "heartbeat": "2026-10-14T22:15:05.357132+08:00",
   "errors": [],
   "manual_checked_at": "2026-10-14T08:31:08+08:00",
   "manual_checks": [
@@ -1893,5 +1894,5 @@
       "errors": []
     }
   ],
-  "index_error": "The read operation timed out"
+  "index_error": null
 }
