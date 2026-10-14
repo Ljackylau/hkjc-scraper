@@ -1159,10 +1159,86 @@
       },
       "score": 0,
       "selection": null,
-      "result": null,
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 2,
+            "name": "大至尊"
+          },
+          {
+            "placing": "2",
+            "no": 3,
+            "name": "喜蓮勇感"
+          },
+          {
+            "placing": "3",
+            "no": 1,
+            "name": "勁速威龍"
+          },
+          {
+            "placing": "4",
+            "no": 6,
+            "name": "君子傳承"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F14&Racecourse=HV&RaceNo=6",
+        "captured_at": "2026-10-14T21:16:10+08:00",
+        "verified_date": "2026-10-14",
+        "verified_race": 6,
+        "dividends": {
+          "W": [
+            {
+              "combination": "2",
+              "dividend_hkd": 95.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "2",
+              "dividend_hkd": 26.5
+            },
+            {
+              "combination": "3",
+              "dividend_hkd": 30.0
+            },
+            {
+              "combination": "1",
+              "dividend_hkd": 36.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "2,3",
+              "dividend_hkd": 503.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "2,3",
+              "dividend_hkd": 134.0
+            },
+            {
+              "combination": "1,2",
+              "dividend_hkd": 176.5
+            },
+            {
+              "combination": "1,3",
+              "dividend_hkd": 150.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "withdrawn": []
+      },
       "locked": true,
-      "locked_at": "2026-10-14T21:10:29+08:00",
-      "result_error": "Official result not published"
+      "locked_at": "2026-10-14T21:10:29+08:00"
     },
     {
       "date": "2026-10-14",
@@ -1498,11 +1574,11 @@
       "locked": false
     }
   ],
-  "updated_at": "2026-10-14T21:15:49+08:00",
+  "updated_at": "2026-10-14T21:16:10+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-14T16:35:00+08:00",
-  "heartbeat": "2026-10-14T21:15:49.198341+08:00",
+  "heartbeat": "2026-10-14T21:16:09.198463+08:00",
   "errors": [],
   "manual_checked_at": "2026-10-14T08:31:08+08:00",
   "manual_checks": [
