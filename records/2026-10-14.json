@@ -1386,10 +1386,86 @@
         "optional": [],
         "generated_at": "2026-10-14T21:42:12+08:00"
       },
-      "result": null,
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 3,
+            "name": "輝灑自如"
+          },
+          {
+            "placing": "2",
+            "no": 5,
+            "name": "快樂神駒"
+          },
+          {
+            "placing": "3",
+            "no": 12,
+            "name": "有盈勇士"
+          },
+          {
+            "placing": "4",
+            "no": 1,
+            "name": "伶俐驫駒"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F14&Racecourse=HV&RaceNo=7",
+        "captured_at": "2026-10-14T21:50:10+08:00",
+        "verified_date": "2026-10-14",
+        "verified_race": 7,
+        "dividends": {
+          "W": [
+            {
+              "combination": "3",
+              "dividend_hkd": 77.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "3",
+              "dividend_hkd": 25.0
+            },
+            {
+              "combination": "5",
+              "dividend_hkd": 13.0
+            },
+            {
+              "combination": "12",
+              "dividend_hkd": 32.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "3,5",
+              "dividend_hkd": 106.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "3,5",
+              "dividend_hkd": 45.5
+            },
+            {
+              "combination": "3,12",
+              "dividend_hkd": 141.0
+            },
+            {
+              "combination": "5,12",
+              "dividend_hkd": 59.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "withdrawn": []
+      },
       "locked": true,
-      "locked_at": "2026-10-14T21:45:09+08:00",
-      "result_error": "Official result not published"
+      "locked_at": "2026-10-14T21:45:09+08:00"
     },
     {
       "date": "2026-10-14",
@@ -1614,11 +1690,11 @@
       "locked": false
     }
   ],
-  "updated_at": "2026-10-14T21:49:11+08:00",
+  "updated_at": "2026-10-14T21:50:10+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-14T16:35:00+08:00",
-  "heartbeat": "2026-10-14T21:49:09.210706+08:00",
+  "heartbeat": "2026-10-14T21:50:09.211079+08:00",
   "errors": [],
   "manual_checked_at": "2026-10-14T08:31:08+08:00",
   "manual_checks": [
