@@ -106,13 +106,91 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "missed",
         "horses": []
       },
       "score": 0,
       "selection": null,
-      "result": null,
-      "locked": false
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 1,
+            "name": "開心旺財"
+          },
+          {
+            "placing": "2",
+            "no": 12,
+            "name": "鑽得勝"
+          },
+          {
+            "placing": "3",
+            "no": 11,
+            "name": "威威父子"
+          },
+          {
+            "placing": "4",
+            "no": 7,
+            "name": "多利神駒"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F14&Racecourse=HV&RaceNo=1",
+        "captured_at": "2026-10-14T21:08:07+08:00",
+        "verified_date": "2026-10-14",
+        "verified_race": 1,
+        "dividends": {
+          "W": [
+            {
+              "combination": "1",
+              "dividend_hkd": 42.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "1",
+              "dividend_hkd": 17.5
+            },
+            {
+              "combination": "12",
+              "dividend_hkd": 28.0
+            },
+            {
+              "combination": "11",
+              "dividend_hkd": 14.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "1,12",
+              "dividend_hkd": 206.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "1,12",
+              "dividend_hkd": 73.0
+            },
+            {
+              "combination": "1,11",
+              "dividend_hkd": 37.0
+            },
+            {
+              "combination": "11,12",
+              "dividend_hkd": 59.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "withdrawn": []
+      },
+      "locked": true,
+      "locked_at": "2026-10-14T21:08:05+08:00"
     },
     {
       "date": "2026-10-14",
@@ -260,7 +338,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "missed",
         "horses": []
       },
       "score": 3,
@@ -288,8 +366,86 @@
         ],
         "generated_at": "2026-10-14T08:31:08+08:00"
       },
-      "result": null,
-      "locked": false
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 3,
+            "name": "蹺妙"
+          },
+          {
+            "placing": "2",
+            "no": 8,
+            "name": "同心"
+          },
+          {
+            "placing": "3",
+            "no": 10,
+            "name": "得意佳作"
+          },
+          {
+            "placing": "4",
+            "no": 6,
+            "name": "赤風驪"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F14&Racecourse=HV&RaceNo=2",
+        "captured_at": "2026-10-14T21:08:08+08:00",
+        "verified_date": "2026-10-14",
+        "verified_race": 2,
+        "dividends": {
+          "W": [
+            {
+              "combination": "3",
+              "dividend_hkd": 23.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "3",
+              "dividend_hkd": 13.0
+            },
+            {
+              "combination": "8",
+              "dividend_hkd": 20.0
+            },
+            {
+              "combination": "10",
+              "dividend_hkd": 16.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "3,8",
+              "dividend_hkd": 84.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "3,8",
+              "dividend_hkd": 34.0
+            },
+            {
+              "combination": "3,10",
+              "dividend_hkd": 27.5
+            },
+            {
+              "combination": "8,10",
+              "dividend_hkd": 42.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "withdrawn": []
+      },
+      "locked": true,
+      "locked_at": "2026-10-14T21:08:07+08:00"
     },
     {
       "date": "2026-10-14",
@@ -420,7 +576,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "missed",
         "horses": []
       },
       "score": 2,
@@ -448,8 +604,86 @@
         ],
         "generated_at": "2026-10-14T08:31:08+08:00"
       },
-      "result": null,
-      "locked": false
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 2,
+            "name": "贏玥"
+          },
+          {
+            "placing": "2",
+            "no": 10,
+            "name": "瑞祺威楓"
+          },
+          {
+            "placing": "3",
+            "no": 1,
+            "name": "星願無限"
+          },
+          {
+            "placing": "4",
+            "no": 9,
+            "name": "紅磚戰士"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F14&Racecourse=HV&RaceNo=3",
+        "captured_at": "2026-10-14T21:08:09+08:00",
+        "verified_date": "2026-10-14",
+        "verified_race": 3,
+        "dividends": {
+          "W": [
+            {
+              "combination": "2",
+              "dividend_hkd": 40.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "2",
+              "dividend_hkd": 13.0
+            },
+            {
+              "combination": "10",
+              "dividend_hkd": 17.5
+            },
+            {
+              "combination": "1",
+              "dividend_hkd": 30.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "2,10",
+              "dividend_hkd": 88.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "2,10",
+              "dividend_hkd": 31.0
+            },
+            {
+              "combination": "1,2",
+              "dividend_hkd": 69.0
+            },
+            {
+              "combination": "1,10",
+              "dividend_hkd": 77.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "withdrawn": []
+      },
+      "locked": true,
+      "locked_at": "2026-10-14T21:08:08+08:00"
     },
     {
       "date": "2026-10-14",
@@ -554,13 +788,91 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "missed",
         "horses": []
       },
       "score": 0,
       "selection": null,
-      "result": null,
-      "locked": false
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 4,
+            "name": "風采人生"
+          },
+          {
+            "placing": "2",
+            "no": 12,
+            "name": "有你有我"
+          },
+          {
+            "placing": "3",
+            "no": 10,
+            "name": "鄉村威龍"
+          },
+          {
+            "placing": "4",
+            "no": 7,
+            "name": "至合拍"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F14&Racecourse=HV&RaceNo=4",
+        "captured_at": "2026-10-14T21:08:11+08:00",
+        "verified_date": "2026-10-14",
+        "verified_race": 4,
+        "dividends": {
+          "W": [
+            {
+              "combination": "4",
+              "dividend_hkd": 110.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "4",
+              "dividend_hkd": 31.5
+            },
+            {
+              "combination": "12",
+              "dividend_hkd": 17.0
+            },
+            {
+              "combination": "10",
+              "dividend_hkd": 27.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "4,12",
+              "dividend_hkd": 216.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "4,12",
+              "dividend_hkd": 79.5
+            },
+            {
+              "combination": "4,10",
+              "dividend_hkd": 179.0
+            },
+            {
+              "combination": "10,12",
+              "dividend_hkd": 74.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "withdrawn": []
+      },
+      "locked": true,
+      "locked_at": "2026-10-14T21:08:09+08:00"
     },
     {
       "date": "2026-10-14",
@@ -665,13 +977,91 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "missed",
         "horses": []
       },
       "score": 0,
       "selection": null,
-      "result": null,
-      "locked": false
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 5,
+            "name": "輕功猛男"
+          },
+          {
+            "placing": "2",
+            "no": 6,
+            "name": "花好月盈"
+          },
+          {
+            "placing": "3",
+            "no": 2,
+            "name": "沙井之友"
+          },
+          {
+            "placing": "4",
+            "no": 1,
+            "name": "星辰千帥"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F14&Racecourse=HV&RaceNo=5",
+        "captured_at": "2026-10-14T21:08:12+08:00",
+        "verified_date": "2026-10-14",
+        "verified_race": 5,
+        "dividends": {
+          "W": [
+            {
+              "combination": "5",
+              "dividend_hkd": 115.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "5",
+              "dividend_hkd": 34.0
+            },
+            {
+              "combination": "6",
+              "dividend_hkd": 18.5
+            },
+            {
+              "combination": "2",
+              "dividend_hkd": 15.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "5,6",
+              "dividend_hkd": 318.0
+            }
+          ],
+          "QP": [
+            {
+              "combination": "5,6",
+              "dividend_hkd": 104.5
+            },
+            {
+              "combination": "2,5",
+              "dividend_hkd": 79.0
+            },
+            {
+              "combination": "2,6",
+              "dividend_hkd": 48.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "withdrawn": []
+      },
+      "locked": true,
+      "locked_at": "2026-10-14T21:08:11+08:00"
     },
     {
       "date": "2026-10-14",
@@ -1106,11 +1496,11 @@
       "locked": false
     }
   ],
-  "updated_at": "2026-10-14T08:31:08+08:00",
-  "status": "upcoming",
+  "updated_at": "2026-10-14T21:08:13+08:00",
+  "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-14T16:35:00+08:00",
-  "heartbeat": null,
+  "heartbeat": "2026-10-14T21:07:56.622953+08:00",
   "errors": [],
   "manual_checked_at": "2026-10-14T08:31:08+08:00",
   "manual_checks": [
@@ -1308,5 +1698,6 @@
       "finished_at": "2026-10-14T08:31:08+08:00",
       "errors": []
     }
-  ]
+  ],
+  "index_error": null
 }
