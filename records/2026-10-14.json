@@ -1764,17 +1764,93 @@
       },
       "score": 0,
       "selection": null,
-      "result": null,
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 5,
+            "name": "長勝隊長"
+          },
+          {
+            "placing": "2",
+            "no": 6,
+            "name": "馭跑得"
+          },
+          {
+            "placing": "3",
+            "no": 7,
+            "name": "何方來聲"
+          },
+          {
+            "placing": "4",
+            "no": 4,
+            "name": "乘數表"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F14&Racecourse=HV&RaceNo=9",
+        "captured_at": "2026-10-14T22:59:18+08:00",
+        "verified_date": "2026-10-14",
+        "verified_race": 9,
+        "dividends": {
+          "W": [
+            {
+              "combination": "5",
+              "dividend_hkd": 59.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "5",
+              "dividend_hkd": 21.0
+            },
+            {
+              "combination": "6",
+              "dividend_hkd": 18.0
+            },
+            {
+              "combination": "7",
+              "dividend_hkd": 27.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "5,6",
+              "dividend_hkd": 155.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "5,6",
+              "dividend_hkd": 55.5
+            },
+            {
+              "combination": "5,7",
+              "dividend_hkd": 93.5
+            },
+            {
+              "combination": "6,7",
+              "dividend_hkd": 73.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "withdrawn": []
+      },
       "locked": true,
-      "locked_at": "2026-10-14T22:50:16+08:00",
-      "result_error": "Official W/P/Q/QP dividends incomplete"
+      "locked_at": "2026-10-14T22:50:16+08:00"
     }
   ],
-  "updated_at": "2026-10-14T22:58:18+08:00",
-  "status": "live",
+  "updated_at": "2026-10-14T22:59:18+08:00",
+  "status": "archived",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-14T16:35:00+08:00",
-  "heartbeat": "2026-10-14T22:58:16.777160+08:00",
+  "heartbeat": "2026-10-14T22:59:16.777465+08:00",
   "errors": [],
   "manual_checked_at": "2026-10-14T08:31:08+08:00",
   "manual_checks": [
