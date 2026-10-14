@@ -60,32 +60,49 @@
       ],
       "tips": {
         "meiji": {
-          "status": "stale",
-          "source_date": "2026-10-11",
+          "status": "ready",
+          "source_date": "2026-10-14",
           "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
-          "captured_at": "2026-10-13T19:52:20+08:00",
-          "horses": []
+          "captured_at": "2026-10-14T08:30:57+08:00",
+          "horses": [
+            {
+              "no": 11,
+              "name": "威威父子"
+            },
+            {
+              "no": 10,
+              "name": "東方魅影"
+            },
+            {
+              "no": 1,
+              "name": "開心旺財"
+            },
+            {
+              "no": 5,
+              "name": "文武全能"
+            }
+          ]
         },
         "ball": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:52:46+08:00"
+          "captured_at": "2026-10-14T08:31:00+08:00"
         },
         "ma": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:52:46+08:00"
+          "captured_at": "2026-10-14T08:31:00+08:00"
         },
         "computer": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:52:46+08:00"
+          "captured_at": "2026-10-14T08:31:00+08:00"
         }
       },
       "index": {
@@ -146,11 +163,28 @@
       ],
       "tips": {
         "meiji": {
-          "status": "stale",
-          "source_date": "2026-10-11",
+          "status": "ready",
+          "source_date": "2026-10-14",
           "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
-          "captured_at": "2026-10-13T19:52:20+08:00",
-          "horses": []
+          "captured_at": "2026-10-14T08:30:57+08:00",
+          "horses": [
+            {
+              "no": 8,
+              "name": "同心"
+            },
+            {
+              "no": 10,
+              "name": "得意佳作"
+            },
+            {
+              "no": 3,
+              "name": "蹺妙"
+            },
+            {
+              "no": 4,
+              "name": "領航天子"
+            }
+          ]
         },
         "ball": {
           "status": "ready",
@@ -174,7 +208,7 @@
           ],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:52:55+08:00"
+          "captured_at": "2026-10-14T08:31:01+08:00"
         },
         "ma": {
           "status": "ready",
@@ -198,7 +232,7 @@
           ],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:52:55+08:00"
+          "captured_at": "2026-10-14T08:31:01+08:00"
         },
         "computer": {
           "status": "ready",
@@ -222,7 +256,7 @@
           ],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:52:55+08:00"
+          "captured_at": "2026-10-14T08:31:01+08:00"
         }
       },
       "index": {
@@ -230,7 +264,30 @@
         "horses": []
       },
       "score": 3,
-      "selection": null,
+      "selection": {
+        "horses": [
+          {
+            "no": 8,
+            "name": "同心"
+          },
+          {
+            "no": 10,
+            "name": "得意佳作"
+          },
+          {
+            "no": 3,
+            "name": "蹺妙"
+          }
+        ],
+        "main": [
+          "QP"
+        ],
+        "optional": [
+          "W",
+          "Q"
+        ],
+        "generated_at": "2026-10-14T08:31:08+08:00"
+      },
       "result": null,
       "locked": false
     },
@@ -283,11 +340,28 @@
       ],
       "tips": {
         "meiji": {
-          "status": "stale",
-          "source_date": "2026-10-11",
+          "status": "ready",
+          "source_date": "2026-10-14",
           "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
-          "captured_at": "2026-10-13T19:52:20+08:00",
-          "horses": []
+          "captured_at": "2026-10-14T08:30:57+08:00",
+          "horses": [
+            {
+              "no": 9,
+              "name": "紅磚戰士"
+            },
+            {
+              "no": 2,
+              "name": "贏玥"
+            },
+            {
+              "no": 10,
+              "name": "瑞祺威楓"
+            },
+            {
+              "no": 6,
+              "name": "有情有義"
+            }
+          ]
         },
         "ball": {
           "status": "ready",
@@ -311,7 +385,7 @@
           ],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:02+08:00"
+          "captured_at": "2026-10-14T08:31:01+08:00"
         },
         "ma": {
           "status": "ready",
@@ -335,14 +409,14 @@
           ],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:02+08:00"
+          "captured_at": "2026-10-14T08:31:01+08:00"
         },
         "computer": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:02+08:00"
+          "captured_at": "2026-10-14T08:31:01+08:00"
         }
       },
       "index": {
@@ -350,7 +424,30 @@
         "horses": []
       },
       "score": 2,
-      "selection": null,
+      "selection": {
+        "horses": [
+          {
+            "no": 9,
+            "name": "紅磚戰士"
+          },
+          {
+            "no": 2,
+            "name": "贏玥"
+          },
+          {
+            "no": 10,
+            "name": "瑞祺威楓"
+          }
+        ],
+        "main": [
+          "QP"
+        ],
+        "optional": [
+          "W",
+          "Q"
+        ],
+        "generated_at": "2026-10-14T08:31:08+08:00"
+      },
       "result": null,
       "locked": false
     },
@@ -411,32 +508,49 @@
       ],
       "tips": {
         "meiji": {
-          "status": "stale",
-          "source_date": "2026-10-11",
+          "status": "ready",
+          "source_date": "2026-10-14",
           "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
-          "captured_at": "2026-10-13T19:52:20+08:00",
-          "horses": []
+          "captured_at": "2026-10-14T08:30:57+08:00",
+          "horses": [
+            {
+              "no": 7,
+              "name": "至合拍"
+            },
+            {
+              "no": 2,
+              "name": "博愛先鋒"
+            },
+            {
+              "no": 5,
+              "name": "應龍飛影"
+            },
+            {
+              "no": 1,
+              "name": "騰龍四海"
+            }
+          ]
         },
         "ball": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:14+08:00"
+          "captured_at": "2026-10-14T08:31:03+08:00"
         },
         "ma": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:14+08:00"
+          "captured_at": "2026-10-14T08:31:03+08:00"
         },
         "computer": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:14+08:00"
+          "captured_at": "2026-10-14T08:31:03+08:00"
         }
       },
       "index": {
@@ -505,32 +619,49 @@
       ],
       "tips": {
         "meiji": {
-          "status": "stale",
-          "source_date": "2026-10-11",
+          "status": "ready",
+          "source_date": "2026-10-14",
           "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
-          "captured_at": "2026-10-13T19:52:20+08:00",
-          "horses": []
+          "captured_at": "2026-10-14T08:30:57+08:00",
+          "horses": [
+            {
+              "no": 2,
+              "name": "沙井之友"
+            },
+            {
+              "no": 7,
+              "name": "維港激流"
+            },
+            {
+              "no": 1,
+              "name": "星辰千帥"
+            },
+            {
+              "no": 6,
+              "name": "花好月盈"
+            }
+          ]
         },
         "ball": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:24+08:00"
+          "captured_at": "2026-10-14T08:31:03+08:00"
         },
         "ma": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:24+08:00"
+          "captured_at": "2026-10-14T08:31:03+08:00"
         },
         "computer": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:24+08:00"
+          "captured_at": "2026-10-14T08:31:03+08:00"
         }
       },
       "index": {
@@ -587,32 +718,49 @@
       ],
       "tips": {
         "meiji": {
-          "status": "stale",
-          "source_date": "2026-10-11",
+          "status": "ready",
+          "source_date": "2026-10-14",
           "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
-          "captured_at": "2026-10-13T19:52:20+08:00",
-          "horses": []
+          "captured_at": "2026-10-14T08:30:57+08:00",
+          "horses": [
+            {
+              "no": 7,
+              "name": "極光之子"
+            },
+            {
+              "no": 9,
+              "name": "加州動員"
+            },
+            {
+              "no": 5,
+              "name": "銀亮奔騰"
+            },
+            {
+              "no": 3,
+              "name": "喜蓮勇感"
+            }
+          ]
         },
         "ball": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:31+08:00"
+          "captured_at": "2026-10-14T08:31:05+08:00"
         },
         "ma": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:31+08:00"
+          "captured_at": "2026-10-14T08:31:05+08:00"
         },
         "computer": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:31+08:00"
+          "captured_at": "2026-10-14T08:31:05+08:00"
         }
       },
       "index": {
@@ -681,32 +829,49 @@
       ],
       "tips": {
         "meiji": {
-          "status": "stale",
-          "source_date": "2026-10-11",
+          "status": "ready",
+          "source_date": "2026-10-14",
           "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
-          "captured_at": "2026-10-13T19:52:20+08:00",
-          "horses": []
+          "captured_at": "2026-10-14T08:30:57+08:00",
+          "horses": [
+            {
+              "no": 6,
+              "name": "比特星"
+            },
+            {
+              "no": 12,
+              "name": "有盈勇士"
+            },
+            {
+              "no": 3,
+              "name": "輝灑自如"
+            },
+            {
+              "no": 5,
+              "name": "快樂神駒"
+            }
+          ]
         },
         "ball": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:38+08:00"
+          "captured_at": "2026-10-14T08:31:06+08:00"
         },
         "ma": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:38+08:00"
+          "captured_at": "2026-10-14T08:31:06+08:00"
         },
         "computer": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:38+08:00"
+          "captured_at": "2026-10-14T08:31:06+08:00"
         }
       },
       "index": {
@@ -775,32 +940,49 @@
       ],
       "tips": {
         "meiji": {
-          "status": "stale",
-          "source_date": "2026-10-11",
+          "status": "ready",
+          "source_date": "2026-10-14",
           "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
-          "captured_at": "2026-10-13T19:52:20+08:00",
-          "horses": []
+          "captured_at": "2026-10-14T08:30:57+08:00",
+          "horses": [
+            {
+              "no": 3,
+              "name": "好實力"
+            },
+            {
+              "no": 9,
+              "name": "中國心"
+            },
+            {
+              "no": 1,
+              "name": "將義"
+            },
+            {
+              "no": 12,
+              "name": "年年友福"
+            }
+          ]
         },
         "ball": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:45+08:00"
+          "captured_at": "2026-10-14T08:31:07+08:00"
         },
         "ma": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:45+08:00"
+          "captured_at": "2026-10-14T08:31:07+08:00"
         },
         "computer": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:45+08:00"
+          "captured_at": "2026-10-14T08:31:07+08:00"
         }
       },
       "index": {
@@ -869,32 +1051,49 @@
       ],
       "tips": {
         "meiji": {
-          "status": "stale",
-          "source_date": "2026-10-11",
+          "status": "ready",
+          "source_date": "2026-10-14",
           "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
-          "captured_at": "2026-10-13T19:52:20+08:00",
-          "horses": []
+          "captured_at": "2026-10-14T08:30:57+08:00",
+          "horses": [
+            {
+              "no": 7,
+              "name": "何方來聲"
+            },
+            {
+              "no": 5,
+              "name": "長勝隊長"
+            },
+            {
+              "no": 8,
+              "name": "官金騏"
+            },
+            {
+              "no": 10,
+              "name": "首飾悟空"
+            }
+          ]
         },
         "ball": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:52+08:00"
+          "captured_at": "2026-10-14T08:31:08+08:00"
         },
         "ma": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:52+08:00"
+          "captured_at": "2026-10-14T08:31:08+08:00"
         },
         "computer": {
           "status": "absent",
           "horses": [],
           "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261014",
           "source_date": "2026-10-14",
-          "captured_at": "2026-10-13T19:53:52+08:00"
+          "captured_at": "2026-10-14T08:31:08+08:00"
         }
       },
       "index": {
@@ -907,13 +1106,13 @@
       "locked": false
     }
   ],
-  "updated_at": "2026-10-13T19:53:52+08:00",
+  "updated_at": "2026-10-14T08:31:08+08:00",
   "status": "upcoming",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-14T16:35:00+08:00",
   "heartbeat": null,
   "errors": [],
-  "manual_checked_at": "2026-10-13T19:53:52+08:00",
+  "manual_checked_at": "2026-10-14T08:31:08+08:00",
   "manual_checks": [
     {
       "started_at": "2026-10-13T19:46:01+08:00",
@@ -1103,6 +1302,11 @@
           "error": null
         }
       ]
+    },
+    {
+      "started_at": "2026-10-14T08:30:57+08:00",
+      "finished_at": "2026-10-14T08:31:08+08:00",
+      "errors": []
     }
   ]
 }
