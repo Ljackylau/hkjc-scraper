@@ -1575,10 +1575,86 @@
       },
       "score": 0,
       "selection": null,
-      "result": null,
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 9,
+            "name": "中國心"
+          },
+          {
+            "placing": "2",
+            "no": 2,
+            "name": "紫荊傳令"
+          },
+          {
+            "placing": "3",
+            "no": 10,
+            "name": "紫辰之星"
+          },
+          {
+            "placing": "4",
+            "no": 3,
+            "name": "好實力"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F14&Racecourse=HV&RaceNo=8",
+        "captured_at": "2026-10-14T22:24:06+08:00",
+        "verified_date": "2026-10-14",
+        "verified_race": 8,
+        "dividends": {
+          "W": [
+            {
+              "combination": "9",
+              "dividend_hkd": 34.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "9",
+              "dividend_hkd": 15.0
+            },
+            {
+              "combination": "2",
+              "dividend_hkd": 34.5
+            },
+            {
+              "combination": "10",
+              "dividend_hkd": 26.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "2,9",
+              "dividend_hkd": 189.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "2,9",
+              "dividend_hkd": 73.0
+            },
+            {
+              "combination": "9,10",
+              "dividend_hkd": 55.0
+            },
+            {
+              "combination": "2,10",
+              "dividend_hkd": 166.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "withdrawn": []
+      },
       "locked": true,
-      "locked_at": "2026-10-14T22:15:05+08:00",
-      "result_error": "Official dividends not published"
+      "locked_at": "2026-10-14T22:15:05+08:00"
     },
     {
       "date": "2026-10-14",
@@ -1692,11 +1768,11 @@
       "locked": false
     }
   ],
-  "updated_at": "2026-10-14T22:23:06+08:00",
+  "updated_at": "2026-10-14T22:24:06+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-14T16:35:00+08:00",
-  "heartbeat": "2026-10-14T22:23:05.360140+08:00",
+  "heartbeat": "2026-10-14T22:24:05.360536+08:00",
   "errors": [],
   "manual_checked_at": "2026-10-14T08:31:08+08:00",
   "manual_checks": [
