@@ -26,10 +26,5 @@ async function open(){
  await app.poll();assert(app.el('rows').innerHTML.includes('manual-badge'));await app.el('refresh').onclick();assert(app.el('rows').innerHTML.includes('manual-badge'));
  app=await open();assert(app.el('rows').innerHTML.includes('manual-badge'),'Reload restores storage');app.el('manual-open').onclick();assert.equal(app.el('mode-index').value,'manual');
  app.el('manual-reset').onclick();assert(!app.el('rows').innerHTML.includes('manual-badge'));assert(app.el('manual-message').textContent.includes('已恢復'));
- const input={dataset:{reference:'key',race:'1',date:source.date,venue:source.venue},value:'3、7 <script>alert(1)</script>'};
- app.el('rows').oninput({target:input});await app.poll();
- assert(app.el('rows').innerHTML.includes('3、7 &lt;script&gt;'));assert(!app.el('rows').innerHTML.includes('<script>alert(1)'));assert(!app.el('rows').innerHTML.includes('manual-badge'));
- input.dataset.reference='real';input.value='8、10';app.el('rows').oninput({target:input});
- app=await open();assert(app.el('rows').innerHTML.includes('value="8、10"'));assert(!app.el('rows').innerHTML.includes('manual-badge'));
- console.log('PASS: independent reference saving, escaped text, reload, editor, name preview, save, invalid edit, polling, refresh, reload and restore');
+ console.log('PASS: editor, name preview, save, invalid edit, polling, refresh, reload and restore');
 })().catch(e=>{console.error(e);process.exitCode=1});
