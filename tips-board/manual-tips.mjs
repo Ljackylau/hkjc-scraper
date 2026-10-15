@@ -21,6 +21,14 @@ export function chooseShaTin(r){
  const nos=[...new Set(order)].filter(n=>field.has(n)&&!scratched.has(n)).slice(0,3);if(nos.length!==3)return;
  r.selection={horses:nos.map(n=>({no:n,name:field.get(n).name})),main:h===0?['QP']:['Q','QP'],optional:[],method:ST_METHOD,roles:h===0?'新D':'M3+T2+T3'};
 }
+export function confidenceReason(r){
+ if(r.venue!=='ST'||![0,1].includes(r.score)||r.selection?.method!==ST_METHOD||r.selection.horses.length!==3)return null;
+ const b=r.banker_initial,m=r.tips.meiji;
+ if(m.status!=='ready'||!m.horses.length||b?.status!=='ready'||b.as_of_race_no!==0||b.reason!=='initial'||b.numbers?.length!==5||b.date!==r.date||b.venue!=='ST'||b.race!==r.race)return null;
+ if(b.numbers.slice(0,3).map(Number).includes(Number(m.horses[0].no)))return null;
+ if(r.score===0&&r.track!=='TURF')return null;
+ return (r.score===0?'沙田T=0・草地':'沙田T=1')+'：明治朗首選不在膽拖網初版「膽、腳1、腳2」內';
+}
 export function applyShaTin(source,time=Date.now()){
  const m=structuredClone(source);if(m.venue!=='ST')return m;
  for(const r of m.races){
