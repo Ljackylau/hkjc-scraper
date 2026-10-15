@@ -85,3 +85,10 @@ Star expert identities use professional_list IDs (including AI rating ID
 65e9600b960d550012a89716), and the expertTips system, not notes or HKJC ratings.
 Collector captures only pre-off and preserves locked races. Declared-field
 refresh handles pre-off withdrawals. Archived races can be reconstructed separately with `backfill-four`. This only adds initial-card/indicator fields, preserves original selections, locks and results, and marks the new indicator as historical reconstruction, not an independently sealed pre-off receipt. Future meetings use the live pre-off capture path.
+
+
+The adjacent 馬會膽拖網推介 column shows all five initial-card numbers and
+canonical horse names, labeled 膽/腳1/腳2/腳3/腳4, for both ST and HV. It uses
+`banker_initial` only, never table order or 同程檔位排序. The separate four-number
+indicator remains ST-only. Live pre-off capture now saves initial cards for
+both venues; historical receipts remain explicitly marked as reconstruction.

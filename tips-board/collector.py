@@ -302,7 +302,7 @@ def run(store,date,mode):
                 if not shell:shell=request('https://66888.hk/raceid/'+date.replace('-','')+'-'+m['venue']+'-01')
                 before=json.dumps([r['index'] for r in m['races']]);capture_index(m,shell);changed|=before!=json.dumps([r['index'] for r in m['races']]);m['index_error']=None
             except Exception as e:m['index_error']=str(e)
-        if m['venue']=='ST' and time.monotonic()-four_try>=90:
+        if time.monotonic()-four_try>=90:
             four_try=time.monotonic()
             capture_four(m,request,stamp,now)
             t=now()

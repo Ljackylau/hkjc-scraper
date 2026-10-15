@@ -3,6 +3,7 @@ from unittest.mock import patch
 from collector import choose,empty_meeting,parse_meiji,safe_horses,official_result,parse_dividends,collect_manual
 class Rules(unittest.TestCase):
  def setUp(self):
+  capture=patch('collector.capture_four');capture.start();self.addCleanup(capture.stop)
   self.r=empty_meeting({'date':'2026-10-14','venue':'HV','races':[{'race':1,'off':'2026-10-14T18:35:00+08:00','horses':[{'no':n,'name':str(n)} for n in range(1,13)]}]})['races'][0]
   for k in self.r['tips']:self.r['tips'][k]={'status':'absent','horses':[]}
   self.r['tips']['meiji']={'status':'ready','horses':[{'no':n,'name':str(n)} for n in [3,7,10,11]]}

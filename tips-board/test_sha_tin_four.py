@@ -39,5 +39,7 @@ class Four(unittest.TestCase):
  def test_parser_uses_summary_not_table_or_ranking(self):
   html='<h1>第1場</h1><div>2026年10月19日 · 沙田</div><a href="/race/2026-10-19~ST~1?v=1">v1賽前排位</a><section><span class="silk-banker">12</span>'+''.join(f'<span class="silk-leg">{n}</span>' for n in [1,4,14,9])+'</section><table><span class="silk-banker">3</span></table>'
   self.assertEqual(parse_initial(html,'2026-10-19',1)['numbers'],[12,1,4,14,9])
+  hv=html.replace('沙田','跑馬地').replace('~ST~','~HV~')
+  self.assertEqual(parse_initial(hv,'2026-10-19',1,'HV')['venue'],'HV')
   with self.assertRaises(ValueError):parse_initial(html.replace('賽前排位','偏差更新'),'2026-10-19',1)
 if __name__=='__main__':unittest.main()
