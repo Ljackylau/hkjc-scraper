@@ -8,7 +8,8 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from cryptography.hazmat.primitives.ciphers import Cipher,algorithms,modes
 from cryptography.hazmat.primitives.padding import PKCS7
-from sha_tin_four import capture_four, PRO_IDS
+from sha_tin_four import capture_four as capture_initial, PRO_IDS
+from sha_tin_patterns import choose_st
 import jockey_top5
 HK=ZoneInfo('Asia/Hong_Kong')
 ONCC='https://racing.on.cc/racing/fav/current/rjfavf0201x0.html'
@@ -125,9 +126,19 @@ def collect_tips(meeting):
     for r in meeting['races']:choose(r)
     capture_four(meeting,request,stamp,now)
 
+def capture_four(meeting,request,stamp,now):
+    capture_initial(meeting,request,stamp,now)
+    for r in meeting['races']:
+        r.setdefault('venue',meeting['venue']);r.setdefault('date',meeting['date'])
+        if not r.get('locked') and now()<datetime.fromisoformat(r['off']):choose(r)
+
 def choose(r):
     if r.get('locked'):return
     sources=[r['tips'][k] for k in EXPERTS]
+    if r.get('venue')=='ST' and all(s['status'] in ('ready','absent') for s in sources) and sum(bool(s['horses']) for s in sources)<2:
+        choose_st(r)
+        if r.get('selection'):r['selection']['generated_at']=stamp()
+        return
     if any(s['status'] not in ('ready','absent') for s in sources):r['score']=None;r['selection']=None;return
     r['score']=sum(bool(s['horses']) for s in sources);h=r['score'];m=r['tips']['meiji']['horses'];p=[]
     if h==0:p=r['index']['horses'][:2]
@@ -340,6 +351,7 @@ def run(store,date,mode):
                         for k in ('distance','track','rail'):
                             if k in fresh:r[k]=fresh[k]
                         r['jockey_top5']=jockey_top5.rank(m,r,jockey_history)
+                        choose(r)
                         if m['venue']=='ST':
                             from sha_tin_four import choose_four
                             r['sha_tin_four']=choose_four(r)

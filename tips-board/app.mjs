@@ -1,5 +1,5 @@
 import {settle} from './settlement.mjs';
-import {parseManual,applyManual} from './manual-tips.mjs';
+import {parseManual,applyManual} from './manual-tips.mjs?v=20261015-st-newd-qqp';
 const RAW='https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/tips-data/records/';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=id=>document.getElementById(id),history=document.body.dataset.history==='true';let meeting=null,sourceMeeting=null,busy=false,base=RAW,revisionCheckedAt=0;
@@ -25,7 +25,12 @@ function jockeyTop5(r){
  const title=`${v.distance}米・${v.track==='AWT'?'全天候':v.rail+'欄'}`;
  return `<div class="muted">${e(title)}</div>`+(v.riders.length?v.riders.map((h,i)=>`<div class="horse"><span class="muted">${i+1}.</span><span class="num">${e(h.no)}</span><span>${e(h.jockey)}<br><small>${(h.rate*100).toFixed(1)}%（${h.placed}/${h.starts}）${h.starts<15?'・少樣本':''}</small></span></div>`).join(''):'<span class="muted">當場騎師無同條件往績</span>');
 }
-function pattern(r){if(r.score==null)return '待確認條件分';return r.score===0?'指數馬第1、2匹':r.score===1?'有貼士專家首選＋明治朗首選<br><span class="muted">重覆則明治朗第2匹</span>':'明治朗第1、2、3匹'}
+function pattern(r){
+ if(r.score==null)return r.venue==='ST'?'待確認條件分<br><span class="muted">T=0：新D位置Q；T=1：M3＋T2＋T3，Q＋位置Q</span>':'待確認條件分';
+ if(r.venue==='ST'&&r.score===0)return 'T=0 新D｜三馬互拖位置Q<br><span class="muted">先 M1＋B1（去重）；M2–M4 中與 B1–B3 相交者優先，再按明治朗原序補滿3匹</span>';
+ if(r.venue==='ST'&&r.score===1)return 'T=1｜M3＋T2＋T3<br><span class="muted">T＝唯一有貼士專家；三馬互拖Q＋位置Q<br>去重候補：B1→B4→M1→M2→M4→B2→T1→T4→B3→B5</span>';
+ return r.score===0?'指數馬第1、2匹':r.score===1?'有貼士專家首選＋明治朗首選<br><span class="muted">重覆則明治朗第2匹</span>':'明治朗第1、2、3匹'
+}
 const labels={W:'獨贏W',P:'位置P',QP:'位置Q',Q:'連贏Q'};
 function betLine(pool,r){
  const nos=r.selection.horses.map(h=>h.no),p=settle(pool,nos,r.result),unit=pool==='W'||pool==='P'?'匹':'組';
@@ -36,11 +41,12 @@ function betLine(pool,r){
   else if(p.status==='hit')text=`<div class="bet-result hit">有中 ${p.hits.length}/${p.total}${unit}<br>${p.hits.map(h=>`${e(h.horses.join('–'))}${h.horses.length===1?'號':''}：<b title="每$10派$${h.dividend.toFixed(2)}，包含本金">${new Intl.NumberFormat('zh-HK',{maximumFractionDigits:3}).format(h.multiple)}倍</b>`).join('<br>')}${p.refunds?`<br>${p.refunds}${unit}退款`:''}</div>`;
   else text=`<div class="bet-result ${p.status==='refund'?'muted':'miss'}">${p.status==='refund'?'退款':`未中（0/${p.total}${unit}）`}${p.refunds&&p.status!=='refund'?`；${p.refunds}${unit}退款`:''}</div>`;
  }
- return `<div class="bet-item"><div class="bets">${labels[pool]} ${e(nos.join('、'))}</div>${text}</div>`;
+ return `<div class="bet-item"><div class="bets">${labels[pool]} ${e(nos.join('、'))}${r.selection.method?' 互拖（3組）':''}</div>${text}</div>`;
 }
-function bets(r){const s=r.selection;if(!s)return '<span class="muted">'+(r.locked?(r.lock_type==='historical_reconstruction'?'歷史資料不足，未重建買法':'賽前資料不足，未產生買法'):'等待所需貼士')+'</span>';return s.main.map(k=>betLine(k,r)).join('')+`<div class="muted">${e(s.horses.map(h=>h.no+'.'+h.name).join('　'))}</div>`+(s.optional.length?`<div class="optional">可選：${s.optional.map(k=>betLine(k,r)).join('')}</div>`:'')+(r.locked?'<div class="locked">'+(r.lock_type==='historical_reconstruction'?'按歷史存檔重建':r.manual_local?'已鎖定手動選擇（本機）':'已鎖定賽前選擇')+'</div>':'')}
+function bets(r){const s=r.selection;if(!s)return '<span class="muted">'+(r.locked?(r.lock_type==='historical_reconstruction'?'歷史資料不足，未重建買法':'賽前資料不足，未產生買法'):'等待所需貼士')+'</span>';return s.main.map(k=>betLine(k,r)).join('')+`<div class="muted">${e(s.horses.map(h=>h.no+'.'+h.name).join('　'))}</div>`+(s.optional.length?`<div class="optional">可選：${s.optional.map(k=>betLine(k,r)).join('')}</div>`:'')+(r.locked?'<div class="locked">'+(r.strategy_recalculated?'按新規則回算（非原賽前買法）':r.lock_type==='historical_reconstruction'?'按歷史存檔重建':r.manual_local?'已鎖定手動選擇（本機）':'已鎖定賽前選擇')+'</div>':'')}
 
 function render(source){sourceMeeting=source;let saved=getManual(source),m=applyManual(source,saved);if(saved)persistManual(saved);meeting=m;$('title').textContent=m.date+' · '+(m.venue==='HV'?'跑馬地':'沙田');$('eyebrow').textContent=history?'歷史紀錄':'最新賽日';$('subtitle').textContent=`${m.races.length}場 · 第一場 ${clock(m.races[0].off).slice(0,5)} · 馬號及馬名按官方排位核對`;$('status').textContent=m.status==='archived'?'全日紀錄已保存':m.status==='live'?'賽日收集中':m.status==='interrupted'?'抓取中斷':'等待賽日';$('updated').textContent='最近保存：'+clock(m.updated_at)+(m.manual_checked_at?' · 手動檢查：'+clock(m.manual_checked_at):'');$('cutoff').textContent=m.record_type==='historical_backfill'?'歷史補錄：'+m.backfilled_at.slice(0,10)+' '+clock(m.backfilled_at):m.tips_checked_at?'貼士已檢查：'+clock(m.tips_checked_at):'貼士檢查時間：'+m.tips_due_at.slice(0,10)+' '+clock(m.tips_due_at);const stale=m.heartbeat&&(Date.now()-Date.parse(m.heartbeat)>180000)&&m.status==='live';$('notice').textContent=m.record_type==='historical_backfill'?m.notice:stale?'抓取狀態超過3分鐘未更新，請查看工作狀態。':m.status==='interrupted'?'抓取工作中斷；未取得的資料會保留缺失狀態。':'';
+if(m.venue==='ST')$('notice').textContent+=($('notice').textContent?' ':'')+'M＝明治朗原次序；B＝膽拖網初版：B1膽、B2腳1、B3腳2、B4腳3、B5腳4。T=0／1指條件分；T1–T4指唯一有貼士專家原次序。退出馬剔除後順延。';
 if(m.races.some(r=>r.manual_local))$('notice').textContent+=($('notice').textContent?' ':'')+'本頁含目前瀏覽器保存的手動貼士及選擇。';
 $('rows').innerHTML=m.races.map(r=>`<tr><td><b>第${e(r.race)}場</b><div class="clock">${e(clock(r.off).slice(0,5))}</div></td><td data-result>${r.result?r.result.horses.map((h,i)=>`<div class="horse"><span class="muted">${(['','冠','亞','季','四'][parseInt(h.placing)]||e(h.placing))}</span><span class="num">${e(h.no)}</span>${e(h.name)}</div>`).join(''):'<span class="muted">'+(r.locked?'待官方賽果':'未開跑')+'</span>'}</td><td data-score>${r.score==null?'<span class="muted">待確認</span>':`<span class="score">${r.score}</span>`}</td><td>${tips(r.tips.meiji)}</td><td data-banker-tips>${bankerTips(r)}</td><td data-jockey-top5>${jockeyTop5(r)}</td><td>${tips(r.tips.ball)}</td><td>${tips(r.tips.ma)}</td><td>${tips(r.tips.computer)}</td><td>${tips(r.index,true)}</td><td class="pattern">${pattern(r)}</td><td>${bets(r)}</td></tr>`).join('')}
 async function load(){if(busy)return;busy=true;try{if(!history)await pinDataRevision();if(history){if($('dates').value)render(await read($('dates').value+'.json'))}else render(await read('latest.json'))}catch(err){$('notice').textContent=err.message+'；保留最後成功讀取資料。'}finally{busy=false}}

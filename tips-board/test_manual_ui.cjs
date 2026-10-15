@@ -12,7 +12,7 @@ async function open(){
  },get innerHTML(){return this._html}}}
  const ctx=vm.createContext({document:{body:{dataset:{}},getElementById:el},window:{open(){}},localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},structuredClone,Date:Clock,Intl,setInterval:f=>{poll=f},fetch:async url=>({ok:true,json:async()=>url.includes('/git/refs/')?{object:{sha:'a'.repeat(40)}}:structuredClone(source)})});
  const main=new vm.SourceTextModule(fs.readFileSync(path.join(root,'app.mjs'),'utf8'),{context:ctx});
- await main.link(spec=>new vm.SourceTextModule(fs.readFileSync(path.join(root,spec),'utf8'),{context:ctx}));await main.evaluate();return{el,poll};
+ await main.link(spec=>new vm.SourceTextModule(fs.readFileSync(path.join(root,spec.split('?')[0]),'utf8'),{context:ctx}));await main.evaluate();return{el,poll};
 }
 (async()=>{
  let app=await open();app.el('manual-open').onclick();assert.equal(app.el('manual-panel').hidden,false);
