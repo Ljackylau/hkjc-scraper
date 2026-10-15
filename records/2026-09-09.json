@@ -1,1 +1,2687 @@
-{"date":"2026-09-09","venue":"HV","source":"https://racing.stheadline.com/api/raceDay?date=20260909","status":"archived","record_type":"historical_backfill","backfilled_at":"2026-10-13T14:12:15+08:00","updated_at":"2026-10-13T14:12:15+08:00","tips_checked_at":null,"tips_due_at":null,"heartbeat":null,"errors":[],"races":[{"date":"2026-09-09","venue":"HV","race":1,"off":"2026-09-09T19:05:00+08:00","horses":[{"no":1,"name":"閃電星福"},{"no":2,"name":"神異金剛"},{"no":3,"name":"順成之星"},{"no":4,"name":"閃電武士"},{"no":5,"name":"金風萬里"},{"no":6,"name":"果然僥倖"},{"no":7,"name":"魅力知福"},{"no":8,"name":"洛河"},{"no":9,"name":"迅意"},{"no":10,"name":"電訊驕陽"},{"no":11,"name":"建測精英"},{"no":12,"name":"添喜運"}],"tips":{"meiji":{"status":"ready","horses":[{"no":6,"name":"果然僥倖"},{"no":5,"name":"金風萬里"},{"no":1,"name":"閃電星福"},{"no":7,"name":"魅力知福"}],"source":"https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill","source_sha256":"1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":10,"name":"電訊驕陽"},{"no":5,"name":"金風萬里"},{"no":6,"name":"果然僥倖"},{"no":11,"name":"建測精英"}],"raceid":"20260909-HV-01","source":"https://data.66888.hk/runtime/board_pack/20260909-HV-01.json","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","reported_live_created_at":"2026-09-09 19:01:55","pack_generated_at":1788969543,"reported_seconds_from_advertised_off":-185.0,"timing_note":"歷史來源標示時間；未驗證T−2發佈版本"},"score":0,"selection":{"horses":[{"no":10,"name":"電訊驕陽"},{"no":5,"name":"金風萬里"}],"main":["W","P"],"optional":[],"generated_at":"2026-10-13T14:11:47+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":12,"name":"添喜運"},{"placing":"2","no":11,"name":"建測精英"},{"placing":"3","no":5,"name":"金風萬里"},{"placing":"4","no":10,"name":"電訊驕陽"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=1","captured_at":"2026-10-13T14:11:59+08:00","verified_date":"2026-09-09","verified_race":1,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","verification_sha256":"f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9","dividends":{"W":[{"combination":"12","dividend_hkd":82.5}],"P":[{"combination":"12","dividend_hkd":26.0},{"combination":"11","dividend_hkd":40.0},{"combination":"5","dividend_hkd":20.5}],"Q":[{"combination":"11,12","dividend_hkd":574.5}],"QP":[{"combination":"11,12","dividend_hkd":174.0},{"combination":"5,12","dividend_hkd":78.5},{"combination":"5,11","dividend_hkd":132.5}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","dividends_captured_at":"2026-10-13T19:20:05+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:11:47+08:00","lock_type":"historical_reconstruction"},{"date":"2026-09-09","venue":"HV","race":2,"off":"2026-09-09T19:35:00+08:00","horses":[{"no":1,"name":"勁進駒"},{"no":2,"name":"加州活力"},{"no":3,"name":"紅海勁"},{"no":4,"name":"領航天子"},{"no":5,"name":"有情有義"},{"no":6,"name":"追風"},{"no":7,"name":"風起雲湧"},{"no":8,"name":"馬上盈"},{"no":9,"name":"準希望"},{"no":10,"name":"電路一百"}],"tips":{"meiji":{"status":"ready","horses":[{"no":7,"name":"風起雲湧"},{"no":9,"name":"準希望"},{"no":1,"name":"勁進駒"},{"no":3,"name":"紅海勁"}],"source":"https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill","source_sha256":"1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"},"ball":{"status":"ready","horses":[{"no":1,"name":"勁進駒"},{"no":9,"name":"準希望"},{"no":4,"name":"領航天子"},{"no":7,"name":"風起雲湧"}],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill"},"ma":{"status":"ready","horses":[{"no":9,"name":"準希望"},{"no":1,"name":"勁進駒"},{"no":3,"name":"紅海勁"},{"no":4,"name":"領航天子"}],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill"},"computer":{"status":"ready","horses":[{"no":1,"name":"勁進駒"},{"no":9,"name":"準希望"},{"no":2,"name":"加州活力"},{"no":7,"name":"風起雲湧"}],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":5,"name":"有情有義"},{"no":1,"name":"勁進駒"},{"no":4,"name":"領航天子"},{"no":9,"name":"準希望"}],"raceid":"20260909-HV-02","source":"https://data.66888.hk/runtime/board_pack/20260909-HV-02.json","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","reported_live_created_at":"2026-09-09 19:42:07","pack_generated_at":1788969581,"reported_seconds_from_advertised_off":427.0,"timing_note":"來源標示時間在公布開跑時間之後，非已驗證T−2快照"},"score":3,"selection":{"horses":[{"no":7,"name":"風起雲湧"},{"no":9,"name":"準希望"},{"no":1,"name":"勁進駒"}],"main":["QP"],"optional":["W","Q"],"generated_at":"2026-10-13T14:11:47+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":1,"name":"勁進駒"},{"placing":"2","no":7,"name":"風起雲湧"},{"placing":"3","no":10,"name":"電路一百"},{"placing":"4","no":9,"name":"準希望"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=2","captured_at":"2026-10-13T14:11:59+08:00","verified_date":"2026-09-09","verified_race":2,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","verification_sha256":"f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9","dividends":{"W":[{"combination":"1","dividend_hkd":49.0}],"P":[{"combination":"1","dividend_hkd":14.5},{"combination":"7","dividend_hkd":19.5},{"combination":"10","dividend_hkd":160.0}],"Q":[{"combination":"1,7","dividend_hkd":145.5}],"QP":[{"combination":"1,7","dividend_hkd":45.5},{"combination":"1,10","dividend_hkd":514.0},{"combination":"7,10","dividend_hkd":718.0}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","dividends_captured_at":"2026-10-13T19:20:05+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:11:47+08:00","lock_type":"historical_reconstruction"},{"date":"2026-09-09","venue":"HV","race":3,"off":"2026-09-09T20:05:00+08:00","horses":[{"no":1,"name":"翠湖烈風"},{"no":2,"name":"精益大師"},{"no":3,"name":"猛將兄"},{"no":4,"name":"銀亮濠俠"},{"no":5,"name":"勇者無敵"},{"no":6,"name":"後無來者"},{"no":7,"name":"銳高"},{"no":8,"name":"駿先生"},{"no":9,"name":"千杯"},{"no":10,"name":"鑽得勝"},{"no":11,"name":"東方魅影"},{"no":12,"name":"戰騎飛"}],"tips":{"meiji":{"status":"ready","horses":[{"no":7,"name":"銳高"},{"no":1,"name":"翠湖烈風"},{"no":10,"name":"鑽得勝"},{"no":2,"name":"精益大師"}],"source":"https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:48+08:00","record_type":"historical_backfill","source_sha256":"1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:48+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:48+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:48+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":4,"name":"銀亮濠俠"},{"no":11,"name":"東方魅影"},{"no":1,"name":"翠湖烈風"},{"no":2,"name":"精益大師"}],"raceid":"20260909-HV-03","source":"https://data.66888.hk/runtime/board_pack/20260909-HV-03.json","captured_at":"2026-10-13T14:11:48+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","reported_live_created_at":"2026-09-09 20:11:57","pack_generated_at":1788969622,"reported_seconds_from_advertised_off":417.0,"timing_note":"來源標示時間在公布開跑時間之後，非已驗證T−2快照"},"score":0,"selection":{"horses":[{"no":4,"name":"銀亮濠俠"},{"no":11,"name":"東方魅影"}],"main":["W","P"],"optional":[],"generated_at":"2026-10-13T14:11:48+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":6,"name":"後無來者"},{"placing":"2","no":1,"name":"翠湖烈風"},{"placing":"3","no":11,"name":"東方魅影"},{"placing":"4","no":4,"name":"銀亮濠俠"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=3","captured_at":"2026-10-13T14:11:59+08:00","verified_date":"2026-09-09","verified_race":3,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","verification_sha256":"f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9","dividends":{"W":[{"combination":"6","dividend_hkd":499.0}],"P":[{"combination":"6","dividend_hkd":119.5},{"combination":"1","dividend_hkd":21.0},{"combination":"11","dividend_hkd":17.5}],"Q":[{"combination":"1,6","dividend_hkd":1185.5}],"QP":[{"combination":"1,6","dividend_hkd":332.5},{"combination":"6,11","dividend_hkd":351.5},{"combination":"1,11","dividend_hkd":48.5}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","dividends_captured_at":"2026-10-13T19:20:05+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:11:48+08:00","lock_type":"historical_reconstruction"},{"date":"2026-09-09","venue":"HV","race":4,"off":"2026-09-09T20:35:00+08:00","horses":[{"no":1,"name":"劍飛聲"},{"no":2,"name":"深心星"},{"no":3,"name":"贏玥"},{"no":4,"name":"卓越蒨鋒"},{"no":5,"name":"妙算強人"},{"no":6,"name":"創科群英"},{"no":7,"name":"浪漫老撾"},{"no":8,"name":"孤風潛影"},{"no":9,"name":"顏色的顏"},{"no":10,"name":"凝妙星"},{"no":11,"name":"森林之王"}],"tips":{"meiji":{"status":"ready","horses":[{"no":2,"name":"深心星"},{"no":4,"name":"卓越蒨鋒"},{"no":6,"name":"創科群英"},{"no":10,"name":"凝妙星"}],"source":"https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:48+08:00","record_type":"historical_backfill","source_sha256":"1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:48+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:48+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:48+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":10,"name":"凝妙星"},{"no":2,"name":"深心星"},{"no":6,"name":"創科群英"},{"no":8,"name":"孤風潛影"}],"raceid":"20260909-HV-04","source":"https://data.66888.hk/runtime/board_pack/20260909-HV-04.json","captured_at":"2026-10-13T14:11:48+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","reported_live_created_at":"2026-09-09 20:46:04","pack_generated_at":1788969660,"reported_seconds_from_advertised_off":664.0,"timing_note":"來源標示時間在公布開跑時間之後，非已驗證T−2快照"},"score":0,"selection":{"horses":[{"no":10,"name":"凝妙星"},{"no":2,"name":"深心星"}],"main":["W","P"],"optional":[],"generated_at":"2026-10-13T14:11:48+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":10,"name":"凝妙星"},{"placing":"2","no":4,"name":"卓越蒨鋒"},{"placing":"3","no":6,"name":"創科群英"},{"placing":"4","no":2,"name":"深心星"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=4","captured_at":"2026-10-13T14:11:57+08:00","verified_date":"2026-09-09","verified_race":4,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","verification_sha256":"f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9","dividends":{"W":[{"combination":"10","dividend_hkd":29.5}],"P":[{"combination":"10","dividend_hkd":14.5},{"combination":"4","dividend_hkd":20.0},{"combination":"6","dividend_hkd":38.0}],"Q":[{"combination":"4,10","dividend_hkd":133.0}],"QP":[{"combination":"4,10","dividend_hkd":47.5},{"combination":"6,10","dividend_hkd":85.0},{"combination":"4,6","dividend_hkd":123.0}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","dividends_captured_at":"2026-10-13T19:20:05+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:11:48+08:00","lock_type":"historical_reconstruction"},{"date":"2026-09-09","venue":"HV","race":5,"off":"2026-09-09T21:10:00+08:00","horses":[{"no":1,"name":"時時精準"},{"no":2,"name":"一定掂"},{"no":3,"name":"中國心"},{"no":4,"name":"做好自己"},{"no":5,"name":"紫辰之星"},{"no":6,"name":"暴風之子"},{"no":7,"name":"瑪瑙"},{"no":8,"name":"建測羣英"},{"no":9,"name":"風將"},{"no":10,"name":"將義"},{"no":11,"name":"同心同夢"},{"no":12,"name":"上浦福旺"}],"tips":{"meiji":{"status":"ready","horses":[{"no":5,"name":"紫辰之星"},{"no":4,"name":"做好自己"},{"no":8,"name":"建測羣英","source_name":"建測?英","name_repair":"single missing archive glyph; other characters match"},{"no":2,"name":"一定掂"}],"source":"https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill","source_sha256":"1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill"},"ma":{"status":"ready","horses":[{"no":4,"name":"做好自己"},{"no":5,"name":"紫辰之星"},{"no":1,"name":"時時精準"},{"no":3,"name":"中國心"}],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":4,"name":"做好自己"},{"no":12,"name":"上浦福旺"},{"no":5,"name":"紫辰之星"},{"no":3,"name":"中國心"}],"raceid":"20260909-HV-05","source":"https://data.66888.hk/runtime/board_pack/20260909-HV-05.json","captured_at":"2026-10-13T14:11:47+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","reported_live_created_at":"2026-09-09 21:22:38","pack_generated_at":1788969696,"reported_seconds_from_advertised_off":758.0,"timing_note":"來源標示時間在公布開跑時間之後，非已驗證T−2快照"},"score":1,"selection":{"horses":[{"no":4,"name":"做好自己"},{"no":5,"name":"紫辰之星"}],"main":["W","P"],"optional":["QP"],"generated_at":"2026-10-13T14:11:47+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":10,"name":"將義"},{"placing":"2","no":9,"name":"風將"},{"placing":"3","no":3,"name":"中國心"},{"placing":"4","no":5,"name":"紫辰之星"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=5","captured_at":"2026-10-13T14:11:59+08:00","verified_date":"2026-09-09","verified_race":5,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","verification_sha256":"f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9","dividends":{"W":[{"combination":"10","dividend_hkd":94.0}],"P":[{"combination":"10","dividend_hkd":32.5},{"combination":"9","dividend_hkd":41.5},{"combination":"3","dividend_hkd":24.5}],"Q":[{"combination":"9,10","dividend_hkd":728.5}],"QP":[{"combination":"9,10","dividend_hkd":233.0},{"combination":"3,10","dividend_hkd":157.5},{"combination":"3,9","dividend_hkd":213.5}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","dividends_captured_at":"2026-10-13T19:20:05+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:11:47+08:00","lock_type":"historical_reconstruction"},{"date":"2026-09-09","venue":"HV","race":6,"off":"2026-09-09T21:45:00+08:00","horses":[{"no":1,"name":"藍地球"},{"no":2,"name":"美麗登場"},{"no":3,"name":"巴閉王"},{"no":4,"name":"升升雙息"},{"no":5,"name":"佐治傳奇"},{"no":6,"name":"福進"},{"no":7,"name":"巨靈神"},{"no":8,"name":"天火同人"},{"no":9,"name":"瑤瑤日上"},{"no":10,"name":"幸運二十"},{"no":11,"name":"天外富天"},{"no":12,"name":"精算奕然"}],"tips":{"meiji":{"status":"ready","horses":[{"no":9,"name":"瑤瑤日上"},{"no":2,"name":"美麗登場"},{"no":8,"name":"天火同人"},{"no":6,"name":"福進"}],"source":"https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:02+08:00","record_type":"historical_backfill","source_sha256":"1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:02+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:02+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:02+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":9,"name":"瑤瑤日上"},{"no":2,"name":"美麗登場"},{"no":3,"name":"巴閉王"},{"no":6,"name":"福進"}],"raceid":"20260909-HV-06","source":"https://data.66888.hk/runtime/board_pack/20260909-HV-06.json","captured_at":"2026-10-13T14:12:02+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","reported_live_created_at":"2026-09-09 21:57:29","pack_generated_at":1788969734,"reported_seconds_from_advertised_off":749.0,"timing_note":"來源標示時間在公布開跑時間之後，非已驗證T−2快照"},"score":0,"selection":{"horses":[{"no":9,"name":"瑤瑤日上"},{"no":2,"name":"美麗登場"}],"main":["W","P"],"optional":[],"generated_at":"2026-10-13T14:12:02+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":6,"name":"福進"},{"placing":"2","no":3,"name":"巴閉王"},{"placing":"3","no":5,"name":"佐治傳奇"},{"placing":"4","no":8,"name":"天火同人"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=6","captured_at":"2026-10-13T14:12:14+08:00","verified_date":"2026-09-09","verified_race":6,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","verification_sha256":"f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9","dividends":{"W":[{"combination":"6","dividend_hkd":54.0}],"P":[{"combination":"6","dividend_hkd":18.0},{"combination":"3","dividend_hkd":17.5},{"combination":"5","dividend_hkd":19.0}],"Q":[{"combination":"3,6","dividend_hkd":110.0}],"QP":[{"combination":"3,6","dividend_hkd":46.0},{"combination":"5,6","dividend_hkd":46.5},{"combination":"3,5","dividend_hkd":43.0}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","dividends_captured_at":"2026-10-13T19:20:05+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:12:02+08:00","lock_type":"historical_reconstruction"},{"date":"2026-09-09","venue":"HV","race":7,"off":"2026-09-09T22:15:00+08:00","horses":[{"no":1,"name":"官金騏"},{"no":2,"name":"博愛先鋒"},{"no":3,"name":"合夥飛馳"},{"no":4,"name":"應龍飛影"},{"no":5,"name":"贏得威楓"},{"no":6,"name":"至合拍"},{"no":7,"name":"寶成智好"},{"no":8,"name":"勝多多"},{"no":9,"name":"奇異歡星"},{"no":10,"name":"龍威心得"},{"no":11,"name":"比特星"},{"no":12,"name":"領袖勁力"}],"tips":{"meiji":{"status":"ready","horses":[{"no":6,"name":"至合拍"},{"no":12,"name":"領袖勁力"},{"no":1,"name":"官金騏"},{"no":8,"name":"勝多多"}],"source":"https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:03+08:00","record_type":"historical_backfill","source_sha256":"1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"},"ball":{"status":"ready","horses":[{"no":1,"name":"官金騏"},{"no":7,"name":"寶成智好"},{"no":4,"name":"應龍飛影"},{"no":12,"name":"領袖勁力"}],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:03+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:03+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:03+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":1,"name":"官金騏"},{"no":2,"name":"博愛先鋒"},{"no":4,"name":"應龍飛影"},{"no":9,"name":"奇異歡星"}],"raceid":"20260909-HV-07","source":"https://data.66888.hk/runtime/board_pack/20260909-HV-07.json","captured_at":"2026-10-13T14:12:03+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","reported_live_created_at":"2026-09-09 22:27:26","pack_generated_at":1788969772,"reported_seconds_from_advertised_off":746.0,"timing_note":"來源標示時間在公布開跑時間之後，非已驗證T−2快照"},"score":1,"selection":{"horses":[{"no":1,"name":"官金騏"},{"no":6,"name":"至合拍"}],"main":["W","P"],"optional":["QP"],"generated_at":"2026-10-13T14:12:03+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":1,"name":"官金騏"},{"placing":"2","no":2,"name":"博愛先鋒"},{"placing":"3","no":12,"name":"領袖勁力"},{"placing":"4","no":4,"name":"應龍飛影"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=7","captured_at":"2026-10-13T14:12:14+08:00","verified_date":"2026-09-09","verified_race":7,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","verification_sha256":"f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9","dividends":{"W":[{"combination":"1","dividend_hkd":20.5}],"P":[{"combination":"1","dividend_hkd":10.5},{"combination":"2","dividend_hkd":47.5},{"combination":"12","dividend_hkd":25.5}],"Q":[{"combination":"1,2","dividend_hkd":224.0}],"QP":[{"combination":"1,2","dividend_hkd":86.0},{"combination":"1,12","dividend_hkd":40.5},{"combination":"2,12","dividend_hkd":168.0}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","dividends_captured_at":"2026-10-13T19:20:05+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:12:03+08:00","lock_type":"historical_reconstruction"},{"date":"2026-09-09","venue":"HV","race":8,"off":"2026-09-09T22:50:00+08:00","horses":[{"no":1,"name":"志滿同行"},{"no":2,"name":"人和家興"},{"no":3,"name":"馬達"},{"no":4,"name":"財將"},{"no":5,"name":"北地烈馬"},{"no":6,"name":"電源之駒"},{"no":7,"name":"安康萬里"},{"no":8,"name":"關鍵所在"},{"no":9,"name":"勇霸龍"},{"no":10,"name":"正本唐心"},{"no":11,"name":"長勝隊長"},{"no":12,"name":"十二神將"}],"tips":{"meiji":{"status":"ready","horses":[{"no":11,"name":"長勝隊長"},{"no":8,"name":"關鍵所在"},{"no":3,"name":"馬達"},{"no":4,"name":"財將"}],"source":"https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:02+08:00","record_type":"historical_backfill","source_sha256":"1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:02+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:02+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20260909","source_date":"2026-09-09","captured_at":"2026-10-13T14:12:02+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":4,"name":"財將"},{"no":9,"name":"勇霸龍"},{"no":7,"name":"安康萬里"},{"no":3,"name":"馬達"}],"raceid":"20260909-HV-08","source":"https://data.66888.hk/runtime/board_pack/20260909-HV-08.json","captured_at":"2026-10-13T14:12:02+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","reported_live_created_at":"2026-09-09 23:00:48","pack_generated_at":1788969807,"reported_seconds_from_advertised_off":648.0,"timing_note":"來源標示時間在公布開跑時間之後，非已驗證T−2快照"},"score":0,"selection":{"horses":[{"no":4,"name":"財將"},{"no":9,"name":"勇霸龍"}],"main":["W","P"],"optional":[],"generated_at":"2026-10-13T14:12:02+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":11,"name":"長勝隊長"},{"placing":"2","no":4,"name":"財將"},{"placing":"3","no":1,"name":"志滿同行"},{"placing":"4","no":8,"name":"關鍵所在"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=8","captured_at":"2026-10-13T14:12:15+08:00","verified_date":"2026-09-09","verified_race":8,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","verification_sha256":"f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9","dividends":{"W":[{"combination":"11","dividend_hkd":44.0}],"P":[{"combination":"11","dividend_hkd":16.5},{"combination":"4","dividend_hkd":19.5},{"combination":"1","dividend_hkd":25.5}],"Q":[{"combination":"4,11","dividend_hkd":104.0}],"QP":[{"combination":"4,11","dividend_hkd":45.5},{"combination":"1,11","dividend_hkd":60.5},{"combination":"1,4","dividend_hkd":66.5}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09","dividends_captured_at":"2026-10-13T19:20:05+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:12:02+08:00","lock_type":"historical_reconstruction"}],"notice":"歷史補錄：按來源現存日期存檔重建，並非當日即時保存；沒有驗證賽前發佈版本；部分指數來源時間在公布開跑時間之後，不能視作T−2實盤回測。缺失指數馬不會用其他AI選馬代替。"}
+{
+  "date": "2026-09-09",
+  "venue": "HV",
+  "source": "https://racing.stheadline.com/api/raceDay?date=20260909",
+  "status": "archived",
+  "record_type": "historical_backfill",
+  "backfilled_at": "2026-10-13T14:12:15+08:00",
+  "updated_at": "2026-10-13T14:12:15+08:00",
+  "tips_checked_at": null,
+  "tips_due_at": null,
+  "heartbeat": null,
+  "errors": [],
+  "races": [
+    {
+      "date": "2026-09-09",
+      "venue": "HV",
+      "race": 1,
+      "off": "2026-09-09T19:05:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "閃電星福",
+          "jockey": "金誠剛",
+          "jockey_id": "KRW"
+        },
+        {
+          "no": 2,
+          "name": "神異金剛",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 3,
+          "name": "順成之星",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 4,
+          "name": "閃電武士",
+          "jockey": "艾道拿",
+          "jockey_id": "AVB"
+        },
+        {
+          "no": 5,
+          "name": "金風萬里",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 6,
+          "name": "果然僥倖",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 7,
+          "name": "魅力知福",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 8,
+          "name": "洛河",
+          "jockey": "楊明綸",
+          "jockey_id": "YML"
+        },
+        {
+          "no": 9,
+          "name": "迅意",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 10,
+          "name": "電訊驕陽",
+          "jockey": "班德禮",
+          "jockey_id": "BHW"
+        },
+        {
+          "no": 11,
+          "name": "建測精英",
+          "jockey": "潘明輝",
+          "jockey_id": "PMF"
+        },
+        {
+          "no": 12,
+          "name": "添喜運",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 6,
+              "name": "果然僥倖"
+            },
+            {
+              "no": 5,
+              "name": "金風萬里"
+            },
+            {
+              "no": 1,
+              "name": "閃電星福"
+            },
+            {
+              "no": 7,
+              "name": "魅力知福"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 10,
+            "name": "電訊驕陽"
+          },
+          {
+            "no": 5,
+            "name": "金風萬里"
+          },
+          {
+            "no": 6,
+            "name": "果然僥倖"
+          },
+          {
+            "no": 11,
+            "name": "建測精英"
+          }
+        ],
+        "raceid": "20260909-HV-01",
+        "source": "https://data.66888.hk/runtime/board_pack/20260909-HV-01.json",
+        "captured_at": "2026-10-13T14:11:47+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "reported_live_created_at": "2026-09-09 19:01:55",
+        "pack_generated_at": 1788969543,
+        "reported_seconds_from_advertised_off": -185.0,
+        "timing_note": "歷史來源標示時間；未驗證T−2發佈版本"
+      },
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 10,
+            "name": "電訊驕陽"
+          },
+          {
+            "no": 5,
+            "name": "金風萬里"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [],
+        "generated_at": "2026-10-13T14:11:47+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 12,
+            "name": "添喜運"
+          },
+          {
+            "placing": "2",
+            "no": 11,
+            "name": "建測精英"
+          },
+          {
+            "placing": "3",
+            "no": 5,
+            "name": "金風萬里"
+          },
+          {
+            "placing": "4",
+            "no": 10,
+            "name": "電訊驕陽"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=1",
+        "captured_at": "2026-10-13T14:11:59+08:00",
+        "verified_date": "2026-09-09",
+        "verified_race": 1,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "verification_sha256": "f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9",
+        "dividends": {
+          "W": [
+            {
+              "combination": "12",
+              "dividend_hkd": 82.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "12",
+              "dividend_hkd": 26.0
+            },
+            {
+              "combination": "11",
+              "dividend_hkd": 40.0
+            },
+            {
+              "combination": "5",
+              "dividend_hkd": 20.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "11,12",
+              "dividend_hkd": 574.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "11,12",
+              "dividend_hkd": 174.0
+            },
+            {
+              "combination": "5,12",
+              "dividend_hkd": 78.5
+            },
+            {
+              "combination": "5,11",
+              "dividend_hkd": 132.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "dividends_captured_at": "2026-10-13T19:20:05+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:11:47+08:00",
+      "lock_type": "historical_reconstruction",
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 5,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 8,
+            "starts": 19,
+            "rate": 0.42105263157894735
+          },
+          {
+            "no": 9,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "placed": 2,
+            "starts": 5,
+            "rate": 0.4
+          },
+          {
+            "no": 7,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 5,
+            "starts": 13,
+            "rate": 0.38461538461538464
+          },
+          {
+            "no": 1,
+            "jockey": "金誠剛",
+            "jockey_id": "KRW",
+            "placed": 4,
+            "starts": 13,
+            "rate": 0.3076923076923077
+          },
+          {
+            "no": 2,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "placed": 3,
+            "starts": 10,
+            "rate": 0.3
+          }
+        ],
+        "cutoff": "2026-09-09 R1",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "venue": "HV",
+      "race": 2,
+      "off": "2026-09-09T19:35:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "勁進駒",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 2,
+          "name": "加州活力",
+          "jockey": "艾道拿",
+          "jockey_id": "AVB"
+        },
+        {
+          "no": 3,
+          "name": "紅海勁",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 4,
+          "name": "領航天子",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 5,
+          "name": "有情有義",
+          "jockey": "黃智弘",
+          "jockey_id": "WEC"
+        },
+        {
+          "no": 6,
+          "name": "追風",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 7,
+          "name": "風起雲湧",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 8,
+          "name": "馬上盈",
+          "jockey": "金誠剛",
+          "jockey_id": "KRW"
+        },
+        {
+          "no": 9,
+          "name": "準希望",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 10,
+          "name": "電路一百",
+          "jockey": "巫顯東",
+          "jockey_id": "MHT"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 7,
+              "name": "風起雲湧"
+            },
+            {
+              "no": 9,
+              "name": "準希望"
+            },
+            {
+              "no": 1,
+              "name": "勁進駒"
+            },
+            {
+              "no": 3,
+              "name": "紅海勁"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"
+        },
+        "ball": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 1,
+              "name": "勁進駒"
+            },
+            {
+              "no": 9,
+              "name": "準希望"
+            },
+            {
+              "no": 4,
+              "name": "領航天子"
+            },
+            {
+              "no": 7,
+              "name": "風起雲湧"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 9,
+              "name": "準希望"
+            },
+            {
+              "no": 1,
+              "name": "勁進駒"
+            },
+            {
+              "no": 3,
+              "name": "紅海勁"
+            },
+            {
+              "no": 4,
+              "name": "領航天子"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 1,
+              "name": "勁進駒"
+            },
+            {
+              "no": 9,
+              "name": "準希望"
+            },
+            {
+              "no": 2,
+              "name": "加州活力"
+            },
+            {
+              "no": 7,
+              "name": "風起雲湧"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 5,
+            "name": "有情有義"
+          },
+          {
+            "no": 1,
+            "name": "勁進駒"
+          },
+          {
+            "no": 4,
+            "name": "領航天子"
+          },
+          {
+            "no": 9,
+            "name": "準希望"
+          }
+        ],
+        "raceid": "20260909-HV-02",
+        "source": "https://data.66888.hk/runtime/board_pack/20260909-HV-02.json",
+        "captured_at": "2026-10-13T14:11:47+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "reported_live_created_at": "2026-09-09 19:42:07",
+        "pack_generated_at": 1788969581,
+        "reported_seconds_from_advertised_off": 427.0,
+        "timing_note": "來源標示時間在公布開跑時間之後，非已驗證T−2快照"
+      },
+      "score": 3,
+      "selection": {
+        "horses": [
+          {
+            "no": 7,
+            "name": "風起雲湧"
+          },
+          {
+            "no": 9,
+            "name": "準希望"
+          },
+          {
+            "no": 1,
+            "name": "勁進駒"
+          }
+        ],
+        "main": [
+          "QP"
+        ],
+        "optional": [
+          "W",
+          "Q"
+        ],
+        "generated_at": "2026-10-13T14:11:47+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 1,
+            "name": "勁進駒"
+          },
+          {
+            "placing": "2",
+            "no": 7,
+            "name": "風起雲湧"
+          },
+          {
+            "placing": "3",
+            "no": 10,
+            "name": "電路一百"
+          },
+          {
+            "placing": "4",
+            "no": 9,
+            "name": "準希望"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=2",
+        "captured_at": "2026-10-13T14:11:59+08:00",
+        "verified_date": "2026-09-09",
+        "verified_race": 2,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "verification_sha256": "f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9",
+        "dividends": {
+          "W": [
+            {
+              "combination": "1",
+              "dividend_hkd": 49.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "1",
+              "dividend_hkd": 14.5
+            },
+            {
+              "combination": "7",
+              "dividend_hkd": 19.5
+            },
+            {
+              "combination": "10",
+              "dividend_hkd": 160.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "1,7",
+              "dividend_hkd": 145.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "1,7",
+              "dividend_hkd": 45.5
+            },
+            {
+              "combination": "1,10",
+              "dividend_hkd": 514.0
+            },
+            {
+              "combination": "7,10",
+              "dividend_hkd": 718.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "dividends_captured_at": "2026-10-13T19:20:05+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:11:47+08:00",
+      "lock_type": "historical_reconstruction",
+      "distance": 1650,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1650,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 1,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 11,
+            "starts": 17,
+            "rate": 0.6470588235294118
+          },
+          {
+            "no": 4,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "placed": 6,
+            "starts": 18,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 5,
+            "jockey": "黃智弘",
+            "jockey_id": "WEC",
+            "placed": 1,
+            "starts": 3,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 3,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "placed": 3,
+            "starts": 10,
+            "rate": 0.3
+          },
+          {
+            "no": 6,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 3,
+            "starts": 11,
+            "rate": 0.2727272727272727
+          }
+        ],
+        "cutoff": "2026-09-09 R2",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "venue": "HV",
+      "race": 3,
+      "off": "2026-09-09T20:05:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "翠湖烈風",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 2,
+          "name": "精益大師",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 3,
+          "name": "猛將兄",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 4,
+          "name": "銀亮濠俠",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 5,
+          "name": "勇者無敵",
+          "jockey": "金誠剛",
+          "jockey_id": "KRW"
+        },
+        {
+          "no": 6,
+          "name": "後無來者",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 7,
+          "name": "銳高",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 8,
+          "name": "駿先生",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 9,
+          "name": "千杯",
+          "jockey": "鍾易禮",
+          "jockey_id": "CCY"
+        },
+        {
+          "no": 10,
+          "name": "鑽得勝",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 11,
+          "name": "東方魅影",
+          "jockey": "班德禮",
+          "jockey_id": "BHW"
+        },
+        {
+          "no": 12,
+          "name": "戰騎飛",
+          "jockey": "楊明綸",
+          "jockey_id": "YML"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 7,
+              "name": "銳高"
+            },
+            {
+              "no": 1,
+              "name": "翠湖烈風"
+            },
+            {
+              "no": 10,
+              "name": "鑽得勝"
+            },
+            {
+              "no": 2,
+              "name": "精益大師"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:48+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:48+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:48+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:48+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 4,
+            "name": "銀亮濠俠"
+          },
+          {
+            "no": 11,
+            "name": "東方魅影"
+          },
+          {
+            "no": 1,
+            "name": "翠湖烈風"
+          },
+          {
+            "no": 2,
+            "name": "精益大師"
+          }
+        ],
+        "raceid": "20260909-HV-03",
+        "source": "https://data.66888.hk/runtime/board_pack/20260909-HV-03.json",
+        "captured_at": "2026-10-13T14:11:48+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "reported_live_created_at": "2026-09-09 20:11:57",
+        "pack_generated_at": 1788969622,
+        "reported_seconds_from_advertised_off": 417.0,
+        "timing_note": "來源標示時間在公布開跑時間之後，非已驗證T−2快照"
+      },
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 4,
+            "name": "銀亮濠俠"
+          },
+          {
+            "no": 11,
+            "name": "東方魅影"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [],
+        "generated_at": "2026-10-13T14:11:48+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 6,
+            "name": "後無來者"
+          },
+          {
+            "placing": "2",
+            "no": 1,
+            "name": "翠湖烈風"
+          },
+          {
+            "placing": "3",
+            "no": 11,
+            "name": "東方魅影"
+          },
+          {
+            "placing": "4",
+            "no": 4,
+            "name": "銀亮濠俠"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=3",
+        "captured_at": "2026-10-13T14:11:59+08:00",
+        "verified_date": "2026-09-09",
+        "verified_race": 3,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "verification_sha256": "f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9",
+        "dividends": {
+          "W": [
+            {
+              "combination": "6",
+              "dividend_hkd": 499.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "6",
+              "dividend_hkd": 119.5
+            },
+            {
+              "combination": "1",
+              "dividend_hkd": 21.0
+            },
+            {
+              "combination": "11",
+              "dividend_hkd": 17.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "1,6",
+              "dividend_hkd": 1185.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "1,6",
+              "dividend_hkd": 332.5
+            },
+            {
+              "combination": "6,11",
+              "dividend_hkd": 351.5
+            },
+            {
+              "combination": "1,11",
+              "dividend_hkd": 48.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "dividends_captured_at": "2026-10-13T19:20:05+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:11:48+08:00",
+      "lock_type": "historical_reconstruction",
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 1,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 9,
+            "starts": 20,
+            "rate": 0.45
+          },
+          {
+            "no": 10,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 5,
+            "starts": 14,
+            "rate": 0.35714285714285715
+          },
+          {
+            "no": 3,
+            "jockey": "巴度",
+            "jockey_id": "BA",
+            "placed": 5,
+            "starts": 15,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 9,
+            "jockey": "鍾易禮",
+            "jockey_id": "CCY",
+            "placed": 4,
+            "starts": 12,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 4,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "placed": 4,
+            "starts": 14,
+            "rate": 0.2857142857142857
+          }
+        ],
+        "cutoff": "2026-09-09 R3",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "venue": "HV",
+      "race": 4,
+      "off": "2026-09-09T20:35:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "劍飛聲",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 2,
+          "name": "深心星",
+          "jockey": "黃智弘",
+          "jockey_id": "WEC"
+        },
+        {
+          "no": 3,
+          "name": "贏玥",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 4,
+          "name": "卓越蒨鋒",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 5,
+          "name": "妙算強人",
+          "jockey": "蔡明紹",
+          "jockey_id": "CML"
+        },
+        {
+          "no": 6,
+          "name": "創科群英",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 7,
+          "name": "浪漫老撾",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 8,
+          "name": "孤風潛影",
+          "jockey": "楊明綸",
+          "jockey_id": "YML"
+        },
+        {
+          "no": 9,
+          "name": "顏色的顏",
+          "jockey": "艾道拿",
+          "jockey_id": "AVB"
+        },
+        {
+          "no": 10,
+          "name": "凝妙星",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 11,
+          "name": "森林之王",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 2,
+              "name": "深心星"
+            },
+            {
+              "no": 4,
+              "name": "卓越蒨鋒"
+            },
+            {
+              "no": 6,
+              "name": "創科群英"
+            },
+            {
+              "no": 10,
+              "name": "凝妙星"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:48+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:48+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:48+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:48+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 10,
+            "name": "凝妙星"
+          },
+          {
+            "no": 2,
+            "name": "深心星"
+          },
+          {
+            "no": 6,
+            "name": "創科群英"
+          },
+          {
+            "no": 8,
+            "name": "孤風潛影"
+          }
+        ],
+        "raceid": "20260909-HV-04",
+        "source": "https://data.66888.hk/runtime/board_pack/20260909-HV-04.json",
+        "captured_at": "2026-10-13T14:11:48+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "reported_live_created_at": "2026-09-09 20:46:04",
+        "pack_generated_at": 1788969660,
+        "reported_seconds_from_advertised_off": 664.0,
+        "timing_note": "來源標示時間在公布開跑時間之後，非已驗證T−2快照"
+      },
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 10,
+            "name": "凝妙星"
+          },
+          {
+            "no": 2,
+            "name": "深心星"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [],
+        "generated_at": "2026-10-13T14:11:48+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 10,
+            "name": "凝妙星"
+          },
+          {
+            "placing": "2",
+            "no": 4,
+            "name": "卓越蒨鋒"
+          },
+          {
+            "placing": "3",
+            "no": 6,
+            "name": "創科群英"
+          },
+          {
+            "placing": "4",
+            "no": 2,
+            "name": "深心星"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=4",
+        "captured_at": "2026-10-13T14:11:57+08:00",
+        "verified_date": "2026-09-09",
+        "verified_race": 4,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "verification_sha256": "f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9",
+        "dividends": {
+          "W": [
+            {
+              "combination": "10",
+              "dividend_hkd": 29.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "10",
+              "dividend_hkd": 14.5
+            },
+            {
+              "combination": "4",
+              "dividend_hkd": 20.0
+            },
+            {
+              "combination": "6",
+              "dividend_hkd": 38.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "4,10",
+              "dividend_hkd": 133.0
+            }
+          ],
+          "QP": [
+            {
+              "combination": "4,10",
+              "dividend_hkd": 47.5
+            },
+            {
+              "combination": "6,10",
+              "dividend_hkd": 85.0
+            },
+            {
+              "combination": "4,6",
+              "dividend_hkd": 123.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "dividends_captured_at": "2026-10-13T19:20:05+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:11:48+08:00",
+      "lock_type": "historical_reconstruction",
+      "distance": 1650,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1650,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 4,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 12,
+            "starts": 18,
+            "rate": 0.6666666666666666
+          },
+          {
+            "no": 7,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "placed": 6,
+            "starts": 19,
+            "rate": 0.3157894736842105
+          },
+          {
+            "no": 1,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "placed": 3,
+            "starts": 11,
+            "rate": 0.2727272727272727
+          },
+          {
+            "no": 11,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 3,
+            "starts": 12,
+            "rate": 0.25
+          },
+          {
+            "no": 2,
+            "jockey": "黃智弘",
+            "jockey_id": "WEC",
+            "placed": 1,
+            "starts": 4,
+            "rate": 0.25
+          }
+        ],
+        "cutoff": "2026-09-09 R4",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "venue": "HV",
+      "race": 5,
+      "off": "2026-09-09T21:10:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "時時精準",
+          "jockey": "金誠剛",
+          "jockey_id": "KRW"
+        },
+        {
+          "no": 2,
+          "name": "一定掂",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 3,
+          "name": "中國心",
+          "jockey": "楊明綸",
+          "jockey_id": "YML"
+        },
+        {
+          "no": 4,
+          "name": "做好自己",
+          "jockey": "艾道拿",
+          "jockey_id": "AVB"
+        },
+        {
+          "no": 5,
+          "name": "紫辰之星",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 6,
+          "name": "暴風之子",
+          "jockey": "黃寶妮",
+          "jockey_id": "WPN"
+        },
+        {
+          "no": 7,
+          "name": "瑪瑙",
+          "jockey": "潘明輝",
+          "jockey_id": "PMF"
+        },
+        {
+          "no": 8,
+          "name": "建測羣英",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 9,
+          "name": "風將",
+          "jockey": "蔡明紹",
+          "jockey_id": "CML"
+        },
+        {
+          "no": 10,
+          "name": "將義",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 11,
+          "name": "同心同夢",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 12,
+          "name": "上浦福旺",
+          "jockey": "鍾易禮",
+          "jockey_id": "CCY"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 5,
+              "name": "紫辰之星"
+            },
+            {
+              "no": 4,
+              "name": "做好自己"
+            },
+            {
+              "no": 8,
+              "name": "建測羣英",
+              "source_name": "建測?英",
+              "name_repair": "single missing archive glyph; other characters match"
+            },
+            {
+              "no": 2,
+              "name": "一定掂"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 4,
+              "name": "做好自己"
+            },
+            {
+              "no": 5,
+              "name": "紫辰之星"
+            },
+            {
+              "no": 1,
+              "name": "時時精準"
+            },
+            {
+              "no": 3,
+              "name": "中國心"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:11:47+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 4,
+            "name": "做好自己"
+          },
+          {
+            "no": 12,
+            "name": "上浦福旺"
+          },
+          {
+            "no": 5,
+            "name": "紫辰之星"
+          },
+          {
+            "no": 3,
+            "name": "中國心"
+          }
+        ],
+        "raceid": "20260909-HV-05",
+        "source": "https://data.66888.hk/runtime/board_pack/20260909-HV-05.json",
+        "captured_at": "2026-10-13T14:11:47+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "reported_live_created_at": "2026-09-09 21:22:38",
+        "pack_generated_at": 1788969696,
+        "reported_seconds_from_advertised_off": 758.0,
+        "timing_note": "來源標示時間在公布開跑時間之後，非已驗證T−2快照"
+      },
+      "score": 1,
+      "selection": {
+        "horses": [
+          {
+            "no": 4,
+            "name": "做好自己"
+          },
+          {
+            "no": 5,
+            "name": "紫辰之星"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [
+          "QP"
+        ],
+        "generated_at": "2026-10-13T14:11:47+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 10,
+            "name": "將義"
+          },
+          {
+            "placing": "2",
+            "no": 9,
+            "name": "風將"
+          },
+          {
+            "placing": "3",
+            "no": 3,
+            "name": "中國心"
+          },
+          {
+            "placing": "4",
+            "no": 5,
+            "name": "紫辰之星"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=5",
+        "captured_at": "2026-10-13T14:11:59+08:00",
+        "verified_date": "2026-09-09",
+        "verified_race": 5,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "verification_sha256": "f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9",
+        "dividends": {
+          "W": [
+            {
+              "combination": "10",
+              "dividend_hkd": 94.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "10",
+              "dividend_hkd": 32.5
+            },
+            {
+              "combination": "9",
+              "dividend_hkd": 41.5
+            },
+            {
+              "combination": "3",
+              "dividend_hkd": 24.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "9,10",
+              "dividend_hkd": 728.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "9,10",
+              "dividend_hkd": 233.0
+            },
+            {
+              "combination": "3,10",
+              "dividend_hkd": 157.5
+            },
+            {
+              "combination": "3,9",
+              "dividend_hkd": 213.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "dividends_captured_at": "2026-10-13T19:20:05+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:11:47+08:00",
+      "lock_type": "historical_reconstruction",
+      "distance": 1650,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1650,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 8,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 13,
+            "starts": 19,
+            "rate": 0.6842105263157895
+          },
+          {
+            "no": 2,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "placed": 6,
+            "starts": 20,
+            "rate": 0.3
+          },
+          {
+            "no": 5,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "placed": 5,
+            "starts": 18,
+            "rate": 0.2777777777777778
+          },
+          {
+            "no": 10,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "placed": 3,
+            "starts": 12,
+            "rate": 0.25
+          },
+          {
+            "no": 11,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 3,
+            "starts": 13,
+            "rate": 0.23076923076923078
+          }
+        ],
+        "cutoff": "2026-09-09 R5",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "venue": "HV",
+      "race": 6,
+      "off": "2026-09-09T21:45:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "藍地球",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 2,
+          "name": "美麗登場",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 3,
+          "name": "巴閉王",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 4,
+          "name": "升升雙息",
+          "jockey": "潘明輝",
+          "jockey_id": "PMF"
+        },
+        {
+          "no": 5,
+          "name": "佐治傳奇",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 6,
+          "name": "福進",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 7,
+          "name": "巨靈神",
+          "jockey": "巫顯東",
+          "jockey_id": "MHT"
+        },
+        {
+          "no": 8,
+          "name": "天火同人",
+          "jockey": "黃寶妮",
+          "jockey_id": "WPN"
+        },
+        {
+          "no": 9,
+          "name": "瑤瑤日上",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 10,
+          "name": "幸運二十",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 11,
+          "name": "天外富天",
+          "jockey": "班德禮",
+          "jockey_id": "BHW"
+        },
+        {
+          "no": 12,
+          "name": "精算奕然",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 9,
+              "name": "瑤瑤日上"
+            },
+            {
+              "no": 2,
+              "name": "美麗登場"
+            },
+            {
+              "no": 8,
+              "name": "天火同人"
+            },
+            {
+              "no": 6,
+              "name": "福進"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:02+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:02+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:02+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:02+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 9,
+            "name": "瑤瑤日上"
+          },
+          {
+            "no": 2,
+            "name": "美麗登場"
+          },
+          {
+            "no": 3,
+            "name": "巴閉王"
+          },
+          {
+            "no": 6,
+            "name": "福進"
+          }
+        ],
+        "raceid": "20260909-HV-06",
+        "source": "https://data.66888.hk/runtime/board_pack/20260909-HV-06.json",
+        "captured_at": "2026-10-13T14:12:02+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "reported_live_created_at": "2026-09-09 21:57:29",
+        "pack_generated_at": 1788969734,
+        "reported_seconds_from_advertised_off": 749.0,
+        "timing_note": "來源標示時間在公布開跑時間之後，非已驗證T−2快照"
+      },
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 9,
+            "name": "瑤瑤日上"
+          },
+          {
+            "no": 2,
+            "name": "美麗登場"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [],
+        "generated_at": "2026-10-13T14:12:02+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 6,
+            "name": "福進"
+          },
+          {
+            "placing": "2",
+            "no": 3,
+            "name": "巴閉王"
+          },
+          {
+            "placing": "3",
+            "no": 5,
+            "name": "佐治傳奇"
+          },
+          {
+            "placing": "4",
+            "no": 8,
+            "name": "天火同人"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=6",
+        "captured_at": "2026-10-13T14:12:14+08:00",
+        "verified_date": "2026-09-09",
+        "verified_race": 6,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "verification_sha256": "f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9",
+        "dividends": {
+          "W": [
+            {
+              "combination": "6",
+              "dividend_hkd": 54.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "6",
+              "dividend_hkd": 18.0
+            },
+            {
+              "combination": "3",
+              "dividend_hkd": 17.5
+            },
+            {
+              "combination": "5",
+              "dividend_hkd": 19.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "3,6",
+              "dividend_hkd": 110.0
+            }
+          ],
+          "QP": [
+            {
+              "combination": "3,6",
+              "dividend_hkd": 46.0
+            },
+            {
+              "combination": "5,6",
+              "dividend_hkd": 46.5
+            },
+            {
+              "combination": "3,5",
+              "dividend_hkd": 43.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "dividends_captured_at": "2026-10-13T19:20:05+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:12:02+08:00",
+      "lock_type": "historical_reconstruction",
+      "distance": 1000,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1000,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 3,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "placed": 2,
+            "starts": 4,
+            "rate": 0.5
+          },
+          {
+            "no": 6,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "placed": 2,
+            "starts": 4,
+            "rate": 0.5
+          },
+          {
+            "no": 2,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 3,
+            "starts": 7,
+            "rate": 0.42857142857142855
+          },
+          {
+            "no": 9,
+            "jockey": "巴度",
+            "jockey_id": "BA",
+            "placed": 1,
+            "starts": 5,
+            "rate": 0.2
+          },
+          {
+            "no": 11,
+            "jockey": "班德禮",
+            "jockey_id": "BHW",
+            "placed": 0,
+            "starts": 5,
+            "rate": 0.0
+          }
+        ],
+        "cutoff": "2026-09-09 R6",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "venue": "HV",
+      "race": 7,
+      "off": "2026-09-09T22:15:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "官金騏",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 2,
+          "name": "博愛先鋒",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 3,
+          "name": "合夥飛馳",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 4,
+          "name": "應龍飛影",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 5,
+          "name": "贏得威楓",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 6,
+          "name": "至合拍",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 7,
+          "name": "寶成智好",
+          "jockey": "鍾易禮",
+          "jockey_id": "CCY"
+        },
+        {
+          "no": 8,
+          "name": "勝多多",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 9,
+          "name": "奇異歡星",
+          "jockey": "黃智弘",
+          "jockey_id": "WEC"
+        },
+        {
+          "no": 10,
+          "name": "龍威心得",
+          "jockey": "班德禮",
+          "jockey_id": "BHW"
+        },
+        {
+          "no": 11,
+          "name": "比特星",
+          "jockey": "黃寶妮",
+          "jockey_id": "WPN"
+        },
+        {
+          "no": 12,
+          "name": "領袖勁力",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 6,
+              "name": "至合拍"
+            },
+            {
+              "no": 12,
+              "name": "領袖勁力"
+            },
+            {
+              "no": 1,
+              "name": "官金騏"
+            },
+            {
+              "no": 8,
+              "name": "勝多多"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:03+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"
+        },
+        "ball": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 1,
+              "name": "官金騏"
+            },
+            {
+              "no": 7,
+              "name": "寶成智好"
+            },
+            {
+              "no": 4,
+              "name": "應龍飛影"
+            },
+            {
+              "no": 12,
+              "name": "領袖勁力"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:03+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:03+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:03+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 1,
+            "name": "官金騏"
+          },
+          {
+            "no": 2,
+            "name": "博愛先鋒"
+          },
+          {
+            "no": 4,
+            "name": "應龍飛影"
+          },
+          {
+            "no": 9,
+            "name": "奇異歡星"
+          }
+        ],
+        "raceid": "20260909-HV-07",
+        "source": "https://data.66888.hk/runtime/board_pack/20260909-HV-07.json",
+        "captured_at": "2026-10-13T14:12:03+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "reported_live_created_at": "2026-09-09 22:27:26",
+        "pack_generated_at": 1788969772,
+        "reported_seconds_from_advertised_off": 746.0,
+        "timing_note": "來源標示時間在公布開跑時間之後，非已驗證T−2快照"
+      },
+      "score": 1,
+      "selection": {
+        "horses": [
+          {
+            "no": 1,
+            "name": "官金騏"
+          },
+          {
+            "no": 6,
+            "name": "至合拍"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [
+          "QP"
+        ],
+        "generated_at": "2026-10-13T14:12:03+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 1,
+            "name": "官金騏"
+          },
+          {
+            "placing": "2",
+            "no": 2,
+            "name": "博愛先鋒"
+          },
+          {
+            "placing": "3",
+            "no": 12,
+            "name": "領袖勁力"
+          },
+          {
+            "placing": "4",
+            "no": 4,
+            "name": "應龍飛影"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=7",
+        "captured_at": "2026-10-13T14:12:14+08:00",
+        "verified_date": "2026-09-09",
+        "verified_race": 7,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "verification_sha256": "f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9",
+        "dividends": {
+          "W": [
+            {
+              "combination": "1",
+              "dividend_hkd": 20.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "1",
+              "dividend_hkd": 10.5
+            },
+            {
+              "combination": "2",
+              "dividend_hkd": 47.5
+            },
+            {
+              "combination": "12",
+              "dividend_hkd": 25.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "1,2",
+              "dividend_hkd": 224.0
+            }
+          ],
+          "QP": [
+            {
+              "combination": "1,2",
+              "dividend_hkd": 86.0
+            },
+            {
+              "combination": "1,12",
+              "dividend_hkd": 40.5
+            },
+            {
+              "combination": "2,12",
+              "dividend_hkd": 168.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "dividends_captured_at": "2026-10-13T19:20:05+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:12:03+08:00",
+      "lock_type": "historical_reconstruction",
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 1,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 10,
+            "starts": 21,
+            "rate": 0.47619047619047616
+          },
+          {
+            "no": 5,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 5,
+            "starts": 15,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 8,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "placed": 4,
+            "starts": 12,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 2,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "placed": 2,
+            "starts": 6,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 10,
+            "jockey": "班德禮",
+            "jockey_id": "BHW",
+            "placed": 5,
+            "starts": 16,
+            "rate": 0.3125
+          }
+        ],
+        "cutoff": "2026-09-09 R7",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "venue": "HV",
+      "race": 8,
+      "off": "2026-09-09T22:50:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "志滿同行",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 2,
+          "name": "人和家興",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 3,
+          "name": "馬達",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 4,
+          "name": "財將",
+          "jockey": "鍾易禮",
+          "jockey_id": "CCY"
+        },
+        {
+          "no": 5,
+          "name": "北地烈馬",
+          "jockey": "黃寶妮",
+          "jockey_id": "WPN"
+        },
+        {
+          "no": 6,
+          "name": "電源之駒",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 7,
+          "name": "安康萬里",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 8,
+          "name": "關鍵所在",
+          "jockey": "黃智弘",
+          "jockey_id": "WEC"
+        },
+        {
+          "no": 9,
+          "name": "勇霸龍",
+          "jockey": "艾道拿",
+          "jockey_id": "AVB"
+        },
+        {
+          "no": 10,
+          "name": "正本唐心",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 11,
+          "name": "長勝隊長",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 12,
+          "name": "十二神將",
+          "jockey": "班德禮",
+          "jockey_id": "BHW"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 11,
+              "name": "長勝隊長"
+            },
+            {
+              "no": 8,
+              "name": "關鍵所在"
+            },
+            {
+              "no": 3,
+              "name": "馬達"
+            },
+            {
+              "no": 4,
+              "name": "財將"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20260909/rjfavf0201x0.html",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:02+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "1cb40acb71d8c4d587b397e5d528b58409de66cdefe41806f084cdf7c9960267"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:02+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:02+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20260909",
+          "source_date": "2026-09-09",
+          "captured_at": "2026-10-13T14:12:02+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 4,
+            "name": "財將"
+          },
+          {
+            "no": 9,
+            "name": "勇霸龍"
+          },
+          {
+            "no": 7,
+            "name": "安康萬里"
+          },
+          {
+            "no": 3,
+            "name": "馬達"
+          }
+        ],
+        "raceid": "20260909-HV-08",
+        "source": "https://data.66888.hk/runtime/board_pack/20260909-HV-08.json",
+        "captured_at": "2026-10-13T14:12:02+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "reported_live_created_at": "2026-09-09 23:00:48",
+        "pack_generated_at": 1788969807,
+        "reported_seconds_from_advertised_off": 648.0,
+        "timing_note": "來源標示時間在公布開跑時間之後，非已驗證T−2快照"
+      },
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 4,
+            "name": "財將"
+          },
+          {
+            "no": 9,
+            "name": "勇霸龍"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [],
+        "generated_at": "2026-10-13T14:12:02+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 11,
+            "name": "長勝隊長"
+          },
+          {
+            "placing": "2",
+            "no": 4,
+            "name": "財將"
+          },
+          {
+            "placing": "3",
+            "no": 1,
+            "name": "志滿同行"
+          },
+          {
+            "placing": "4",
+            "no": 8,
+            "name": "關鍵所在"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F09%2F09&Racecourse=HV&RaceNo=8",
+        "captured_at": "2026-10-13T14:12:15+08:00",
+        "verified_date": "2026-09-09",
+        "verified_race": 8,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "verification_sha256": "f208de0a93b0d8ce3ccef7699ec25352ab3438242e8df80b866af665897231a9",
+        "dividends": {
+          "W": [
+            {
+              "combination": "11",
+              "dividend_hkd": 44.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "11",
+              "dividend_hkd": 16.5
+            },
+            {
+              "combination": "4",
+              "dividend_hkd": 19.5
+            },
+            {
+              "combination": "1",
+              "dividend_hkd": 25.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "4,11",
+              "dividend_hkd": 104.0
+            }
+          ],
+          "QP": [
+            {
+              "combination": "4,11",
+              "dividend_hkd": 45.5
+            },
+            {
+              "combination": "1,11",
+              "dividend_hkd": 60.5
+            },
+            {
+              "combination": "1,4",
+              "dividend_hkd": 66.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=HV&racedate=2026/09/09",
+        "dividends_captured_at": "2026-10-13T19:20:05+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:12:02+08:00",
+      "lock_type": "historical_reconstruction",
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 1,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 11,
+            "starts": 22,
+            "rate": 0.5
+          },
+          {
+            "no": 3,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "placed": 5,
+            "starts": 16,
+            "rate": 0.3125
+          },
+          {
+            "no": 6,
+            "jockey": "巴度",
+            "jockey_id": "BA",
+            "placed": 5,
+            "starts": 16,
+            "rate": 0.3125
+          },
+          {
+            "no": 10,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 5,
+            "starts": 16,
+            "rate": 0.3125
+          },
+          {
+            "no": 12,
+            "jockey": "班德禮",
+            "jockey_id": "BHW",
+            "placed": 5,
+            "starts": 17,
+            "rate": 0.29411764705882354
+          }
+        ],
+        "cutoff": "2026-09-09 R8",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    }
+  ],
+  "notice": "歷史補錄：按來源現存日期存檔重建，並非當日即時保存；沒有驗證賽前發佈版本；部分指數來源時間在公布開跑時間之後，不能視作T−2實盤回測。缺失指數馬不會用其他AI選馬代替。"
+}

@@ -1,1 +1,4089 @@
-{"date":"2026-10-01","venue":"ST","source":"https://racing.stheadline.com/api/raceDay?date=20261001","status":"archived","record_type":"historical_backfill","backfilled_at":"2026-10-13T14:16:00+08:00","updated_at":"2026-10-13T14:16:00+08:00","tips_checked_at":null,"tips_due_at":null,"heartbeat":null,"errors":[],"races":[{"date":"2026-10-01","venue":"ST","race":1,"off":"2026-10-01T13:00:00+08:00","horses":[{"no":1,"name":"新力驕"},{"no":2,"name":"靖哥哥"},{"no":3,"name":"閃電星福"},{"no":4,"name":"錶之無限"},{"no":5,"name":"同有運"},{"no":6,"name":"魅力知福"},{"no":7,"name":"萬里雲"},{"no":8,"name":"高感"},{"no":9,"name":"傳承效應"},{"no":10,"name":"爆熱"},{"no":11,"name":"不勞而獲"},{"no":12,"name":"怡昌奇兵"},{"no":13,"name":"鑽得勝"},{"no":14,"name":"星之願"}],"tips":{"meiji":{"status":"ready","horses":[{"no":5,"name":"同有運"},{"no":2,"name":"靖哥哥"},{"no":1,"name":"新力驕"},{"no":12,"name":"怡昌奇兵"}],"source":"https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill","source_sha256":"2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":5,"name":"同有運"},{"no":1,"name":"新力驕"},{"no":12,"name":"怡昌奇兵"},{"no":10,"name":"爆熱"}],"raceid":"20261001-ST-01","source":"https://data.66888.hk/runtime/cache/tips_new_oss_state.json","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","timing_note":"歷史存檔；未保存該場T−2取得時間"},"score":0,"selection":{"horses":[{"no":5,"name":"同有運"},{"no":1,"name":"新力驕"}],"main":["W","P"],"optional":[],"generated_at":"2026-10-13T14:15:25+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":7,"name":"萬里雲"},{"placing":"2","no":2,"name":"靖哥哥"},{"placing":"3","no":1,"name":"新力驕"},{"placing":"4","no":4,"name":"錶之無限"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=1","captured_at":"2026-10-13T14:15:37+08:00","verified_date":"2026-10-01","verified_race":1,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","verification_sha256":"b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107","dividends":{"W":[{"combination":"7","dividend_hkd":124.5}],"P":[{"combination":"7","dividend_hkd":34.5},{"combination":"2","dividend_hkd":34.0},{"combination":"1","dividend_hkd":18.0}],"Q":[{"combination":"2,7","dividend_hkd":554.5}],"QP":[{"combination":"2,7","dividend_hkd":162.0},{"combination":"1,7","dividend_hkd":133.0},{"combination":"1,2","dividend_hkd":121.0}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","dividends_captured_at":"2026-10-13T19:19:54+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:15:25+08:00","lock_type":"historical_reconstruction","banker_initial":{"status":"ready","date":"2026-10-01","venue":"ST","race":1,"as_of_race_no":0,"reason":"initial","numbers":[1,6,10,12,5],"verification":"published v1 賽前排位 label","source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~1?v=1","captured_at":"2026-10-15T09:19:06+08:00","record_type":"historical_initial_reconstruction"},"sha_tin_four":{"status":"ready","numbers":[1,6,10,5],"fourth_source":"meiji","initial_source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~1?v=1","generated_at":"2026-10-15T09:19:06+08:00","record_type":"historical_initial_reconstruction","timing_note":"按來源現存初版重建，非當日獨立封存"}},{"date":"2026-10-01","venue":"ST","race":2,"off":"2026-10-01T13:30:00+08:00","horses":[{"no":1,"name":"君達得"},{"no":2,"name":"綫路福將"},{"no":3,"name":"彭玥"},{"no":4,"name":"堅多福"},{"no":5,"name":"全神貫注"},{"no":6,"name":"志醒大將"},{"no":7,"name":"我最好"},{"no":8,"name":"萬事勝利"},{"no":9,"name":"開心三多"},{"no":10,"name":"發財金戈"},{"no":11,"name":"駟跑得"},{"no":12,"name":"精算特殊"},{"no":13,"name":"快樂之友"},{"no":14,"name":"常常感恩"}],"tips":{"meiji":{"status":"ready","horses":[{"no":6,"name":"志醒大將"},{"no":7,"name":"我最好"},{"no":1,"name":"君達得"},{"no":9,"name":"開心三多"}],"source":"https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill","source_sha256":"2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"},"ball":{"status":"ready","horses":[{"no":7,"name":"我最好"},{"no":6,"name":"志醒大將"},{"no":1,"name":"君達得"},{"no":9,"name":"開心三多"}],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":9,"name":"開心三多"},{"no":6,"name":"志醒大將"},{"no":1,"name":"君達得"},{"no":10,"name":"發財金戈"}],"raceid":"20261001-ST-02","source":"https://data.66888.hk/runtime/cache/tips_new_oss_state.json","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","timing_note":"歷史存檔；未保存該場T−2取得時間"},"score":1,"selection":{"horses":[{"no":7,"name":"我最好"},{"no":6,"name":"志醒大將"}],"main":["W","P"],"optional":["QP"],"generated_at":"2026-10-13T14:15:25+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":9,"name":"開心三多"},{"placing":"2","no":10,"name":"發財金戈"},{"placing":"3","no":7,"name":"我最好"},{"placing":"4","no":1,"name":"君達得"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=2","captured_at":"2026-10-13T14:15:38+08:00","verified_date":"2026-10-01","verified_race":2,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","verification_sha256":"b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107","dividends":{"W":[{"combination":"9","dividend_hkd":46.5}],"P":[{"combination":"9","dividend_hkd":16.5},{"combination":"10","dividend_hkd":31.5},{"combination":"7","dividend_hkd":37.5}],"Q":[{"combination":"9,10","dividend_hkd":225.0}],"QP":[{"combination":"9,10","dividend_hkd":79.5},{"combination":"7,9","dividend_hkd":94.0},{"combination":"7,10","dividend_hkd":193.0}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","dividends_captured_at":"2026-10-13T19:19:54+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:15:25+08:00","lock_type":"historical_reconstruction","banker_initial":{"status":"ready","date":"2026-10-01","venue":"ST","race":2,"as_of_race_no":0,"reason":"initial","numbers":[1,9,6,13,10],"verification":"published v1 賽前排位 label","source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~2?v=1","captured_at":"2026-10-15T09:19:06+08:00","record_type":"historical_initial_reconstruction"},"sha_tin_four":{"status":"ready","numbers":[1,9,6,7],"fourth_source":"ball","initial_source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~2?v=1","generated_at":"2026-10-15T09:19:06+08:00","record_type":"historical_initial_reconstruction","timing_note":"按來源現存初版重建，非當日獨立封存"}},{"date":"2026-10-01","venue":"ST","race":3,"off":"2026-10-01T14:00:00+08:00","horses":[{"no":1,"name":"精算暴雪"},{"no":2,"name":"翠紅"},{"no":3,"name":"美麗第一"},{"no":4,"name":"顏色之皇"},{"no":5,"name":"好友心得"},{"no":6,"name":"天天同樂"},{"no":7,"name":"魔術控制"},{"no":8,"name":"玩笑"}],"tips":{"meiji":{"status":"ready","horses":[{"no":6,"name":"天天同樂"},{"no":7,"name":"魔術控制"},{"no":4,"name":"顏色之皇"},{"no":2,"name":"翠紅"}],"source":"https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill","source_sha256":"2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":4,"name":"顏色之皇"},{"no":7,"name":"魔術控制"},{"no":2,"name":"翠紅"},{"no":1,"name":"精算暴雪"}],"raceid":"20261001-ST-03","source":"https://data.66888.hk/runtime/cache/tips_new_oss_state.json","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","timing_note":"歷史存檔；未保存該場T−2取得時間"},"score":0,"selection":{"horses":[{"no":4,"name":"顏色之皇"},{"no":7,"name":"魔術控制"}],"main":["W","P"],"optional":[],"generated_at":"2026-10-13T14:15:25+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":4,"name":"顏色之皇"},{"placing":"2","no":7,"name":"魔術控制"},{"placing":"3","no":6,"name":"天天同樂"},{"placing":"4","no":1,"name":"精算暴雪"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=3","captured_at":"2026-10-13T14:15:37+08:00","verified_date":"2026-10-01","verified_race":3,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","verification_sha256":"b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107","dividends":{"W":[{"combination":"4","dividend_hkd":22.0}],"P":[{"combination":"4","dividend_hkd":12.0},{"combination":"7","dividend_hkd":15.0},{"combination":"6","dividend_hkd":20.0}],"Q":[{"combination":"4,7","dividend_hkd":52.5}],"QP":[{"combination":"4,7","dividend_hkd":23.0},{"combination":"4,6","dividend_hkd":32.0},{"combination":"6,7","dividend_hkd":44.5}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","dividends_captured_at":"2026-10-13T19:19:54+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:15:25+08:00","lock_type":"historical_reconstruction","banker_initial":{"status":"ready","date":"2026-10-01","venue":"ST","race":3,"as_of_race_no":0,"reason":"initial","numbers":[6,4,2,7,5],"verification":"published v1 賽前排位 label","source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~3?v=1","captured_at":"2026-10-15T09:19:06+08:00","record_type":"historical_initial_reconstruction"},"sha_tin_four":{"status":"ready","numbers":[6,4,2,7],"fourth_source":"meiji","initial_source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~3?v=1","generated_at":"2026-10-15T09:19:06+08:00","record_type":"historical_initial_reconstruction","timing_note":"按來源現存初版重建，非當日獨立封存"}},{"date":"2026-10-01","venue":"ST","race":4,"off":"2026-10-01T14:35:00+08:00","horses":[{"no":1,"name":"星價"},{"no":2,"name":"勝兄弟"},{"no":3,"name":"超拍檔"},{"no":4,"name":"時尚歡笑"},{"no":5,"name":"錶之翠河"},{"no":6,"name":"盈妮威楓"},{"no":7,"name":"實力加"},{"no":8,"name":"銀騎士"},{"no":9,"name":"總統輝煌"},{"no":10,"name":"遨遊波士"},{"no":11,"name":"豐功偉績"},{"no":12,"name":"馬上盈"},{"no":13,"name":"鑽飾閃耀"},{"no":14,"name":"久久為軍"}],"tips":{"meiji":{"status":"ready","horses":[{"no":7,"name":"實力加"},{"no":10,"name":"遨遊波士"},{"no":14,"name":"久久為軍"},{"no":13,"name":"鑽飾閃耀"}],"source":"https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill","source_sha256":"2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"},"ma":{"status":"ready","horses":[{"no":7,"name":"實力加"},{"no":10,"name":"遨遊波士"},{"no":12,"name":"馬上盈"},{"no":11,"name":"豐功偉績"}],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":7,"name":"實力加"},{"no":3,"name":"超拍檔"},{"no":12,"name":"馬上盈"},{"no":6,"name":"盈妮威楓"}],"raceid":"20261001-ST-04","source":"https://data.66888.hk/runtime/cache/tips_new_oss_state.json","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","timing_note":"歷史存檔；未保存該場T−2取得時間"},"score":1,"selection":{"horses":[{"no":7,"name":"實力加"},{"no":10,"name":"遨遊波士"}],"main":["W","P"],"optional":["QP"],"generated_at":"2026-10-13T14:15:25+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":7,"name":"實力加"},{"placing":"2","no":6,"name":"盈妮威楓"},{"placing":"3","no":3,"name":"超拍檔"},{"placing":"4","no":14,"name":"久久為軍"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=4","captured_at":"2026-10-13T14:15:38+08:00","verified_date":"2026-10-01","verified_race":4,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","verification_sha256":"b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107","dividends":{"W":[{"combination":"7","dividend_hkd":19.0}],"P":[{"combination":"7","dividend_hkd":11.5},{"combination":"6","dividend_hkd":21.5},{"combination":"3","dividend_hkd":73.5}],"Q":[{"combination":"6,7","dividend_hkd":77.0}],"QP":[{"combination":"6,7","dividend_hkd":30.0},{"combination":"3,7","dividend_hkd":99.0},{"combination":"3,6","dividend_hkd":294.5}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","dividends_captured_at":"2026-10-13T19:19:54+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:15:25+08:00","lock_type":"historical_reconstruction","banker_initial":{"status":"ready","date":"2026-10-01","venue":"ST","race":4,"as_of_race_no":0,"reason":"initial","numbers":[10,7,6,11,13],"verification":"published v1 賽前排位 label","source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~4?v=1","captured_at":"2026-10-15T09:19:11+08:00","record_type":"historical_initial_reconstruction"},"sha_tin_four":{"status":"ready","numbers":[10,7,6,12],"fourth_source":"ma","initial_source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~4?v=1","generated_at":"2026-10-15T09:19:11+08:00","record_type":"historical_initial_reconstruction","timing_note":"按來源現存初版重建，非當日獨立封存"}},{"date":"2026-10-01","venue":"ST","race":5,"off":"2026-10-01T15:10:00+08:00","horses":[{"no":1,"name":"星球勇士"},{"no":2,"name":"怡昌光輝"},{"no":3,"name":"嘉應耀昇"},{"no":4,"name":"輕功猛男"},{"no":5,"name":"星月峰雲"},{"no":6,"name":"盈俊天下"},{"no":7,"name":"有意無意"},{"no":8,"name":"數據派"},{"no":9,"name":"精英奪冠"},{"no":10,"name":"經典多寶"},{"no":11,"name":"升升雙息"},{"no":12,"name":"天寶威威"},{"no":13,"name":"豪邁先登"},{"no":14,"name":"勝萬家"}],"tips":{"meiji":{"status":"ready","horses":[{"no":1,"name":"星球勇士"},{"no":3,"name":"嘉應耀昇"},{"no":12,"name":"天寶威威"},{"no":6,"name":"盈俊天下"}],"source":"https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill","source_sha256":"2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":1,"name":"星球勇士"},{"no":3,"name":"嘉應耀昇"},{"no":11,"name":"升升雙息"},{"no":2,"name":"怡昌光輝"}],"raceid":"20261001-ST-05","source":"https://data.66888.hk/runtime/cache/tips_new_oss_state.json","captured_at":"2026-10-13T14:15:25+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","timing_note":"歷史存檔；未保存該場T−2取得時間"},"score":0,"selection":{"horses":[{"no":1,"name":"星球勇士"},{"no":3,"name":"嘉應耀昇"}],"main":["W","P"],"optional":[],"generated_at":"2026-10-13T14:15:25+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":3,"name":"嘉應耀昇"},{"placing":"2","no":1,"name":"星球勇士"},{"placing":"3","no":6,"name":"盈俊天下"},{"placing":"4","no":2,"name":"怡昌光輝"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=5","captured_at":"2026-10-13T14:15:37+08:00","verified_date":"2026-10-01","verified_race":5,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","verification_sha256":"b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107","dividends":{"W":[{"combination":"3","dividend_hkd":47.0}],"P":[{"combination":"3","dividend_hkd":16.0},{"combination":"1","dividend_hkd":13.0},{"combination":"6","dividend_hkd":26.0}],"Q":[{"combination":"1,3","dividend_hkd":46.5}],"QP":[{"combination":"1,3","dividend_hkd":23.0},{"combination":"3,6","dividend_hkd":59.0},{"combination":"1,6","dividend_hkd":41.5}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","dividends_captured_at":"2026-10-13T19:19:54+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:15:25+08:00","lock_type":"historical_reconstruction","banker_initial":{"status":"ready","date":"2026-10-01","venue":"ST","race":5,"as_of_race_no":0,"reason":"initial","numbers":[3,1,6,4,2],"verification":"published v1 賽前排位 label","source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~5?v=1","captured_at":"2026-10-15T09:19:11+08:00","record_type":"historical_initial_reconstruction"},"sha_tin_four":{"status":"ready","numbers":[3,1,6,12],"fourth_source":"meiji","initial_source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~5?v=1","generated_at":"2026-10-15T09:19:11+08:00","record_type":"historical_initial_reconstruction","timing_note":"按來源現存初版重建，非當日獨立封存"}},{"date":"2026-10-01","venue":"ST","race":6,"off":"2026-10-01T15:45:00+08:00","horses":[{"no":1,"name":"捷威"},{"no":2,"name":"騰龍踏雪"},{"no":3,"name":"佰勝金龍"},{"no":4,"name":"浪漫老撾"},{"no":5,"name":"熒光"},{"no":6,"name":"夢照發"},{"no":7,"name":"好運年"},{"no":8,"name":"智多多寶"},{"no":9,"name":"勁步速"},{"no":10,"name":"小飛俠"},{"no":11,"name":"大輝煌"},{"no":12,"name":"齊歡最樂"},{"no":13,"name":"禾道威"},{"no":14,"name":"電路一百"}],"tips":{"meiji":{"status":"ready","horses":[{"no":8,"name":"智多多寶"},{"no":6,"name":"夢照發"},{"no":1,"name":"捷威"},{"no":3,"name":"佰勝金龍"}],"source":"https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill","source_sha256":"2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":1,"name":"捷威"},{"no":6,"name":"夢照發"},{"no":7,"name":"好運年"},{"no":3,"name":"佰勝金龍"}],"raceid":"20261001-ST-06","source":"https://data.66888.hk/runtime/cache/tips_new_oss_state.json","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","timing_note":"歷史存檔；未保存該場T−2取得時間"},"score":0,"selection":{"horses":[{"no":1,"name":"捷威"},{"no":6,"name":"夢照發"}],"main":["W","P"],"optional":[],"generated_at":"2026-10-13T14:15:37+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":3,"name":"佰勝金龍"},{"placing":"2","no":1,"name":"捷威"},{"placing":"3","no":8,"name":"智多多寶"},{"placing":"4","no":4,"name":"浪漫老撾"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=6","captured_at":"2026-10-13T14:15:50+08:00","verified_date":"2026-10-01","verified_race":6,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","verification_sha256":"b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107","dividends":{"W":[{"combination":"3","dividend_hkd":50.0}],"P":[{"combination":"3","dividend_hkd":17.5},{"combination":"1","dividend_hkd":17.5},{"combination":"8","dividend_hkd":29.5}],"Q":[{"combination":"1,3","dividend_hkd":88.5}],"QP":[{"combination":"1,3","dividend_hkd":38.5},{"combination":"3,8","dividend_hkd":108.5},{"combination":"1,8","dividend_hkd":77.5}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","dividends_captured_at":"2026-10-13T19:19:54+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:15:37+08:00","lock_type":"historical_reconstruction","banker_initial":{"status":"ready","date":"2026-10-01","venue":"ST","race":6,"as_of_race_no":0,"reason":"initial","numbers":[3,1,6,7,10],"verification":"published v1 賽前排位 label","source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~6?v=1","captured_at":"2026-10-15T09:19:11+08:00","record_type":"historical_initial_reconstruction"},"sha_tin_four":{"status":"ready","numbers":[3,1,6,8],"fourth_source":"meiji","initial_source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~6?v=1","generated_at":"2026-10-15T09:19:11+08:00","record_type":"historical_initial_reconstruction","timing_note":"按來源現存初版重建，非當日獨立封存"}},{"date":"2026-10-01","venue":"ST","race":7,"off":"2026-10-01T16:15:00+08:00","horses":[{"no":1,"name":"長勝金剛"},{"no":2,"name":"光年程祥"},{"no":3,"name":"永福"},{"no":4,"name":"莊家班"},{"no":5,"name":"自力更生"},{"no":6,"name":"烈進駒"},{"no":7,"name":"領駿精彩"},{"no":8,"name":"多利旺駒"},{"no":9,"name":"高明豐勝"},{"no":10,"name":"嘉應光彩"},{"no":11,"name":"同喜"},{"no":12,"name":"金津寶駒"},{"no":13,"name":"凱旋王者"},{"no":14,"name":"翠湖烈風"}],"tips":{"meiji":{"status":"ready","horses":[{"no":10,"name":"嘉應光彩"},{"no":6,"name":"烈進駒"},{"no":2,"name":"光年程祥"},{"no":13,"name":"凱旋王者"}],"source":"https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill","source_sha256":"2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"},"ball":{"status":"ready","horses":[{"no":10,"name":"嘉應光彩"},{"no":6,"name":"烈進駒"},{"no":2,"name":"光年程祥"},{"no":1,"name":"長勝金剛"}],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":2,"name":"光年程祥"},{"no":6,"name":"烈進駒"},{"no":10,"name":"嘉應光彩"},{"no":14,"name":"翠湖烈風"}],"raceid":"20261001-ST-07","source":"https://data.66888.hk/runtime/cache/tips_new_oss_state.json","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","timing_note":"歷史存檔；未保存該場T−2取得時間"},"score":1,"selection":{"horses":[{"no":10,"name":"嘉應光彩"},{"no":6,"name":"烈進駒"}],"main":["W","P"],"optional":["QP"],"generated_at":"2026-10-13T14:15:37+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":7,"name":"領駿精彩"},{"placing":"2","no":10,"name":"嘉應光彩"},{"placing":"3","no":11,"name":"同喜"},{"placing":"4","no":2,"name":"光年程祥"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=7","captured_at":"2026-10-13T14:15:49+08:00","verified_date":"2026-10-01","verified_race":7,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","verification_sha256":"b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107","dividends":{"W":[{"combination":"7","dividend_hkd":380.0}],"P":[{"combination":"7","dividend_hkd":78.0},{"combination":"10","dividend_hkd":14.5},{"combination":"11","dividend_hkd":33.5}],"Q":[{"combination":"7,10","dividend_hkd":758.5}],"QP":[{"combination":"7,10","dividend_hkd":232.0},{"combination":"7,11","dividend_hkd":645.0},{"combination":"10,11","dividend_hkd":75.0}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","dividends_captured_at":"2026-10-13T19:19:54+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:15:37+08:00","lock_type":"historical_reconstruction","banker_initial":{"status":"ready","date":"2026-10-01","venue":"ST","race":7,"as_of_race_no":0,"reason":"initial","numbers":[6,10,2,14,4],"verification":"published v1 賽前排位 label","source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~7?v=1","captured_at":"2026-10-15T09:19:15+08:00","record_type":"historical_initial_reconstruction"},"sha_tin_four":{"status":"ready","numbers":[6,10,2,1],"fourth_source":"ball","initial_source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~7?v=1","generated_at":"2026-10-15T09:19:15+08:00","record_type":"historical_initial_reconstruction","timing_note":"按來源現存初版重建，非當日獨立封存"}},{"date":"2026-10-01","venue":"ST","race":8,"off":"2026-10-01T16:45:00+08:00","horses":[{"no":1,"name":"全能勇士"},{"no":2,"name":"添開心"},{"no":3,"name":"鋁神"},{"no":4,"name":"明德輝煌"},{"no":5,"name":"八玲瓏"},{"no":6,"name":"擅搏"},{"no":7,"name":"金鼓大班"},{"no":8,"name":"天天更好"},{"no":9,"name":"電子好好"},{"no":10,"name":"笑必勝"},{"no":11,"name":"閃電奇駿"},{"no":12,"name":"騰達勇士"},{"no":13,"name":"花果猴王"},{"no":14,"name":"領航多福"}],"tips":{"meiji":{"status":"ready","horses":[{"no":1,"name":"全能勇士"},{"no":11,"name":"閃電奇駿"},{"no":8,"name":"天天更好"},{"no":4,"name":"明德輝煌"}],"source":"https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill","source_sha256":"2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill"},"ma":{"status":"ready","horses":[{"no":4,"name":"明德輝煌"},{"no":5,"name":"八玲瓏"},{"no":8,"name":"天天更好"},{"no":1,"name":"全能勇士"}],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":4,"name":"明德輝煌"},{"no":1,"name":"全能勇士"},{"no":8,"name":"天天更好"},{"no":11,"name":"閃電奇駿"}],"raceid":"20261001-ST-08","source":"https://data.66888.hk/runtime/cache/tips_new_oss_state.json","captured_at":"2026-10-13T14:15:37+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","timing_note":"歷史存檔；未保存該場T−2取得時間"},"score":1,"selection":{"horses":[{"no":4,"name":"明德輝煌"},{"no":1,"name":"全能勇士"}],"main":["W","P"],"optional":["QP"],"generated_at":"2026-10-13T14:15:37+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":9,"name":"電子好好"},{"placing":"2","no":4,"name":"明德輝煌"},{"placing":"3","no":11,"name":"閃電奇駿"},{"placing":"4","no":8,"name":"天天更好"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=8","captured_at":"2026-10-13T14:15:48+08:00","verified_date":"2026-10-01","verified_race":8,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","verification_sha256":"b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107","dividends":{"W":[{"combination":"9","dividend_hkd":500.5}],"P":[{"combination":"9","dividend_hkd":97.0},{"combination":"4","dividend_hkd":15.0},{"combination":"11","dividend_hkd":18.0}],"Q":[{"combination":"4,9","dividend_hkd":658.0}],"QP":[{"combination":"4,9","dividend_hkd":198.0},{"combination":"9,11","dividend_hkd":373.0},{"combination":"4,11","dividend_hkd":36.5}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","dividends_captured_at":"2026-10-13T19:19:54+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:15:37+08:00","lock_type":"historical_reconstruction","banker_initial":{"status":"ready","date":"2026-10-01","venue":"ST","race":8,"as_of_race_no":0,"reason":"initial","numbers":[1,5,4,8,3],"verification":"published v1 賽前排位 label","source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~8?v=1","captured_at":"2026-10-15T09:19:15+08:00","record_type":"historical_initial_reconstruction"},"sha_tin_four":{"status":"ready","numbers":[1,5,4,8],"fourth_source":"ma","initial_source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~8?v=1","generated_at":"2026-10-15T09:19:15+08:00","record_type":"historical_initial_reconstruction","timing_note":"按來源現存初版重建，非當日獨立封存"}},{"date":"2026-10-01","venue":"ST","race":9,"off":"2026-10-01T17:15:00+08:00","horses":[{"no":1,"name":"首飾天空"},{"no":2,"name":"喜慶寶"},{"no":3,"name":"超輕鬆"},{"no":4,"name":"喜尊龍"},{"no":5,"name":"樂勝天下"},{"no":6,"name":"美麗星晨"},{"no":7,"name":"會當凌"},{"no":8,"name":"勇謀神駒"},{"no":9,"name":"晒冷"},{"no":10,"name":"至尊瑰寶"},{"no":11,"name":"飛鷹翱翔"},{"no":12,"name":"威利金箭"}],"tips":{"meiji":{"status":"ready","horses":[{"no":5,"name":"樂勝天下"},{"no":4,"name":"喜尊龍"},{"no":12,"name":"威利金箭"},{"no":9,"name":"晒冷"}],"source":"https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:38+08:00","record_type":"historical_backfill","source_sha256":"2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:38+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:38+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:38+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":2,"name":"喜慶寶"},{"no":1,"name":"首飾天空"},{"no":11,"name":"飛鷹翱翔"},{"no":3,"name":"超輕鬆"}],"raceid":"20261001-ST-09","source":"https://data.66888.hk/runtime/cache/tips_new_oss_state.json","captured_at":"2026-10-13T14:15:38+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","timing_note":"歷史存檔；未保存該場T−2取得時間"},"score":0,"selection":{"horses":[{"no":2,"name":"喜慶寶"},{"no":1,"name":"首飾天空"}],"main":["W","P"],"optional":[],"generated_at":"2026-10-13T14:15:38+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":1,"name":"首飾天空"},{"placing":"2","no":2,"name":"喜慶寶"},{"placing":"3","no":11,"name":"飛鷹翱翔"},{"placing":"4","no":9,"name":"晒冷"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=9","captured_at":"2026-10-13T14:15:48+08:00","verified_date":"2026-10-01","verified_race":9,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","verification_sha256":"b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107","dividends":{"W":[{"combination":"1","dividend_hkd":81.5}],"P":[{"combination":"1","dividend_hkd":27.5},{"combination":"2","dividend_hkd":17.5},{"combination":"11","dividend_hkd":19.0}],"Q":[{"combination":"1,2","dividend_hkd":140.5}],"QP":[{"combination":"1,2","dividend_hkd":55.5},{"combination":"1,11","dividend_hkd":86.0},{"combination":"2,11","dividend_hkd":50.5}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","dividends_captured_at":"2026-10-13T19:19:54+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:15:38+08:00","lock_type":"historical_reconstruction","banker_initial":{"status":"ready","date":"2026-10-01","venue":"ST","race":9,"as_of_race_no":0,"reason":"initial","numbers":[2,3,4,12,5],"verification":"published v1 賽前排位 label","source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~9?v=1","captured_at":"2026-10-15T09:19:15+08:00","record_type":"historical_initial_reconstruction"},"sha_tin_four":{"status":"ready","numbers":[2,3,4,5],"fourth_source":"meiji","initial_source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~9?v=1","generated_at":"2026-10-15T09:19:15+08:00","record_type":"historical_initial_reconstruction","timing_note":"按來源現存初版重建，非當日獨立封存"}},{"date":"2026-10-01","venue":"ST","race":10,"off":"2026-10-01T17:45:00+08:00","horses":[{"no":1,"name":"超寫意"},{"no":2,"name":"歡欣神駒"},{"no":3,"name":"友瑩亮"},{"no":4,"name":"非凡豪傑"},{"no":5,"name":"縱橫天地"},{"no":6,"name":"火焰閃爍"},{"no":7,"name":"巴閉精"},{"no":8,"name":"金錢遊戲"},{"no":9,"name":"禾道豐"},{"no":10,"name":"建測羣英"},{"no":11,"name":"皮具英雄"},{"no":12,"name":"天然數字"},{"no":13,"name":"佛亮老撾"},{"no":14,"name":"八仟好運"}],"tips":{"meiji":{"status":"ready","horses":[{"no":8,"name":"金錢遊戲"},{"no":9,"name":"禾道豐"},{"no":3,"name":"友瑩亮"},{"no":4,"name":"非凡豪傑"}],"source":"https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:38+08:00","record_type":"historical_backfill","source_sha256":"2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:38+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:38+08:00","record_type":"historical_backfill"},"computer":{"status":"ready","horses":[{"no":4,"name":"非凡豪傑"},{"no":14,"name":"八仟好運"},{"no":3,"name":"友瑩亮"},{"no":7,"name":"巴閉精"}],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:38+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":14,"name":"八仟好運"},{"no":7,"name":"巴閉精"},{"no":3,"name":"友瑩亮"},{"no":4,"name":"非凡豪傑"}],"raceid":"20261001-ST-10","source":"https://data.66888.hk/runtime/cache/tips_new_oss_state.json","captured_at":"2026-10-13T14:15:38+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","timing_note":"歷史存檔；未保存該場T−2取得時間"},"score":1,"selection":{"horses":[{"no":4,"name":"非凡豪傑"},{"no":8,"name":"金錢遊戲"}],"main":["W","P"],"optional":["QP"],"generated_at":"2026-10-13T14:15:38+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":3,"name":"友瑩亮"},{"placing":"2","no":1,"name":"超寫意"},{"placing":"3","no":7,"name":"巴閉精"},{"placing":"4","no":14,"name":"八仟好運"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=10","captured_at":"2026-10-13T14:15:50+08:00","verified_date":"2026-10-01","verified_race":10,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","verification_sha256":"b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107","dividends":{"W":[{"combination":"3","dividend_hkd":56.0}],"P":[{"combination":"3","dividend_hkd":18.5},{"combination":"1","dividend_hkd":41.0},{"combination":"7","dividend_hkd":17.5}],"Q":[{"combination":"1,3","dividend_hkd":352.0}],"QP":[{"combination":"1,3","dividend_hkd":113.0},{"combination":"3,7","dividend_hkd":43.0},{"combination":"1,7","dividend_hkd":113.0}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","dividends_captured_at":"2026-10-13T19:19:54+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:15:38+08:00","lock_type":"historical_reconstruction","banker_initial":{"status":"ready","date":"2026-10-01","venue":"ST","race":10,"as_of_race_no":0,"reason":"initial","numbers":[7,14,9,3,13],"verification":"published v1 賽前排位 label","source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~10?v=1","captured_at":"2026-10-15T09:19:20+08:00","record_type":"historical_initial_reconstruction"},"sha_tin_four":{"status":"ready","numbers":[7,14,9,4],"fourth_source":"computer","initial_source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~10?v=1","generated_at":"2026-10-15T09:19:20+08:00","record_type":"historical_initial_reconstruction","timing_note":"按來源現存初版重建，非當日獨立封存"}},{"date":"2026-10-01","venue":"ST","race":11,"off":"2026-10-01T18:20:00+08:00","horses":[{"no":1,"name":"偵探傳奇"},{"no":2,"name":"精彩駿將"},{"no":3,"name":"㩒住贏"},{"no":4,"name":"金金小子"},{"no":5,"name":"赤海"},{"no":6,"name":"超和平"},{"no":7,"name":"神衝萬里"},{"no":8,"name":"辣得準"},{"no":9,"name":"星運少爵"},{"no":10,"name":"利高八斗"},{"no":11,"name":"勇者為皇"},{"no":12,"name":"飛龍在天"},{"no":13,"name":"千杯不醉"},{"no":14,"name":"勇闖高峰"}],"tips":{"meiji":{"status":"ready","horses":[{"no":1,"name":"偵探傳奇"},{"no":8,"name":"辣得準"},{"no":4,"name":"金金小子"},{"no":9,"name":"星運少爵"}],"source":"https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:48+08:00","record_type":"historical_backfill","source_sha256":"2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"},"ball":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:48+08:00","record_type":"historical_backfill"},"ma":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:48+08:00","record_type":"historical_backfill"},"computer":{"status":"absent","horses":[],"source":"https://racing.stheadline.com/api/raceDay/expertTips?date=20261001","source_date":"2026-10-01","captured_at":"2026-10-13T14:15:48+08:00","record_type":"historical_backfill"}},"index":{"status":"ready","horses":[{"no":6,"name":"超和平"},{"no":10,"name":"利高八斗"},{"no":8,"name":"辣得準"},{"no":9,"name":"星運少爵"}],"raceid":"20261001-ST-11","source":"https://data.66888.hk/runtime/cache/tips_new_oss_state.json","captured_at":"2026-10-13T14:15:48+08:00","record_type":"historical_backfill","source_updated_at":"2026-10-11T14:59:55+00:00","timing_note":"歷史存檔；未保存該場T−2取得時間"},"score":0,"selection":{"horses":[{"no":6,"name":"超和平"},{"no":10,"name":"利高八斗"}],"main":["W","P"],"optional":[],"generated_at":"2026-10-13T14:15:48+08:00","reconstructed":true},"result":{"horses":[{"placing":"1","no":6,"name":"超和平"},{"placing":"2","no":11,"name":"勇者為皇"},{"placing":"3","no":13,"name":"千杯不醉"},{"placing":"4","no":7,"name":"神衝萬里"}],"source":"https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=11","captured_at":"2026-10-13T14:16:00+08:00","verified_date":"2026-10-01","verified_race":11,"verification_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","verification_sha256":"b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107","dividends":{"W":[{"combination":"6","dividend_hkd":55.5}],"P":[{"combination":"6","dividend_hkd":23.0},{"combination":"11","dividend_hkd":27.5},{"combination":"13","dividend_hkd":178.0}],"Q":[{"combination":"6,11","dividend_hkd":240.5}],"QP":[{"combination":"6,11","dividend_hkd":96.0},{"combination":"6,13","dividend_hkd":742.0},{"combination":"11,13","dividend_hkd":765.0}]},"pool_status":{"W":"settled","P":"settled","Q":"settled","QP":"settled"},"dividend_unit":"HKD per $10 stake, including principal","dividends_source":"https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01","dividends_captured_at":"2026-10-13T19:19:54+08:00","withdrawn":[]},"locked":true,"record_type":"historical_backfill","backfilled_at":"2026-10-13T14:15:48+08:00","lock_type":"historical_reconstruction","banker_initial":{"status":"ready","date":"2026-10-01","venue":"ST","race":11,"as_of_race_no":0,"reason":"initial","numbers":[10,9,8,11,1],"verification":"published v1 賽前排位 label","source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~11?v=1","captured_at":"2026-10-15T09:19:20+08:00","record_type":"historical_initial_reconstruction"},"sha_tin_four":{"status":"ready","numbers":[10,9,8,1],"fourth_source":"meiji","initial_source":"https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~11?v=1","generated_at":"2026-10-15T09:19:20+08:00","record_type":"historical_initial_reconstruction","timing_note":"按來源現存初版重建，非當日獨立封存"}}],"notice":"歷史補錄：按來源現存日期存檔重建，並非當日即時保存；沒有驗證賽前發佈版本；部分指數來源時間在公布開跑時間之後，不能視作T−2實盤回測。缺失指數馬不會用其他AI選馬代替。"}
+{
+  "date": "2026-10-01",
+  "venue": "ST",
+  "source": "https://racing.stheadline.com/api/raceDay?date=20261001",
+  "status": "archived",
+  "record_type": "historical_backfill",
+  "backfilled_at": "2026-10-13T14:16:00+08:00",
+  "updated_at": "2026-10-13T14:16:00+08:00",
+  "tips_checked_at": null,
+  "tips_due_at": null,
+  "heartbeat": null,
+  "errors": [],
+  "races": [
+    {
+      "date": "2026-10-01",
+      "venue": "ST",
+      "race": 1,
+      "off": "2026-10-01T13:00:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "新力驕",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 2,
+          "name": "靖哥哥",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 3,
+          "name": "閃電星福",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 4,
+          "name": "錶之無限",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 5,
+          "name": "同有運",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 6,
+          "name": "魅力知福",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 7,
+          "name": "萬里雲",
+          "jockey": "潘明輝",
+          "jockey_id": "PMF"
+        },
+        {
+          "no": 8,
+          "name": "高感",
+          "jockey": "黃寶妮",
+          "jockey_id": "WPN"
+        },
+        {
+          "no": 9,
+          "name": "傳承效應",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 10,
+          "name": "爆熱",
+          "jockey": "艾道拿",
+          "jockey_id": "AVB"
+        },
+        {
+          "no": 11,
+          "name": "不勞而獲",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 12,
+          "name": "怡昌奇兵",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 13,
+          "name": "鑽得勝",
+          "jockey": "金誠剛",
+          "jockey_id": "KRW"
+        },
+        {
+          "no": 14,
+          "name": "星之願",
+          "jockey": "希威森",
+          "jockey_id": "HEL"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 5,
+              "name": "同有運"
+            },
+            {
+              "no": 2,
+              "name": "靖哥哥"
+            },
+            {
+              "no": 1,
+              "name": "新力驕"
+            },
+            {
+              "no": 12,
+              "name": "怡昌奇兵"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 5,
+            "name": "同有運"
+          },
+          {
+            "no": 1,
+            "name": "新力驕"
+          },
+          {
+            "no": 12,
+            "name": "怡昌奇兵"
+          },
+          {
+            "no": 10,
+            "name": "爆熱"
+          }
+        ],
+        "raceid": "20261001-ST-01",
+        "source": "https://data.66888.hk/runtime/cache/tips_new_oss_state.json",
+        "captured_at": "2026-10-13T14:15:25+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "timing_note": "歷史存檔；未保存該場T−2取得時間"
+      },
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 5,
+            "name": "同有運"
+          },
+          {
+            "no": 1,
+            "name": "新力驕"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [],
+        "generated_at": "2026-10-13T14:15:25+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 7,
+            "name": "萬里雲"
+          },
+          {
+            "placing": "2",
+            "no": 2,
+            "name": "靖哥哥"
+          },
+          {
+            "placing": "3",
+            "no": 1,
+            "name": "新力驕"
+          },
+          {
+            "placing": "4",
+            "no": 4,
+            "name": "錶之無限"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=1",
+        "captured_at": "2026-10-13T14:15:37+08:00",
+        "verified_date": "2026-10-01",
+        "verified_race": 1,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "verification_sha256": "b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107",
+        "dividends": {
+          "W": [
+            {
+              "combination": "7",
+              "dividend_hkd": 124.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "7",
+              "dividend_hkd": 34.5
+            },
+            {
+              "combination": "2",
+              "dividend_hkd": 34.0
+            },
+            {
+              "combination": "1",
+              "dividend_hkd": 18.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "2,7",
+              "dividend_hkd": 554.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "2,7",
+              "dividend_hkd": 162.0
+            },
+            {
+              "combination": "1,7",
+              "dividend_hkd": 133.0
+            },
+            {
+              "combination": "1,2",
+              "dividend_hkd": 121.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "dividends_captured_at": "2026-10-13T19:19:54+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:15:25+08:00",
+      "lock_type": "historical_reconstruction",
+      "banker_initial": {
+        "status": "ready",
+        "date": "2026-10-01",
+        "venue": "ST",
+        "race": 1,
+        "as_of_race_no": 0,
+        "reason": "initial",
+        "numbers": [
+          1,
+          6,
+          10,
+          12,
+          5
+        ],
+        "verification": "published v1 賽前排位 label",
+        "source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~1?v=1",
+        "captured_at": "2026-10-15T09:19:06+08:00",
+        "record_type": "historical_initial_reconstruction"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          1,
+          6,
+          10,
+          5
+        ],
+        "fourth_source": "meiji",
+        "initial_source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~1?v=1",
+        "generated_at": "2026-10-15T09:19:06+08:00",
+        "record_type": "historical_initial_reconstruction",
+        "timing_note": "按來源現存初版重建，非當日獨立封存"
+      },
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 6,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 15,
+            "starts": 25,
+            "rate": 0.6
+          },
+          {
+            "no": 5,
+            "jockey": "袁幸堯",
+            "jockey_id": "YHY",
+            "placed": 5,
+            "starts": 12,
+            "rate": 0.4166666666666667
+          },
+          {
+            "no": 2,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "placed": 7,
+            "starts": 21,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 4,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "placed": 5,
+            "starts": 17,
+            "rate": 0.29411764705882354
+          },
+          {
+            "no": 12,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "placed": 8,
+            "starts": 29,
+            "rate": 0.27586206896551724
+          }
+        ],
+        "cutoff": "2026-10-01 R1",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "venue": "ST",
+      "race": 2,
+      "off": "2026-10-01T13:30:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "君達得",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 2,
+          "name": "綫路福將",
+          "jockey": "蔡明紹",
+          "jockey_id": "CML"
+        },
+        {
+          "no": 3,
+          "name": "彭玥",
+          "jockey": "霍宏聲",
+          "jockey_id": "FEL"
+        },
+        {
+          "no": 4,
+          "name": "堅多福",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 5,
+          "name": "全神貫注",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 6,
+          "name": "志醒大將",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 7,
+          "name": "我最好",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 8,
+          "name": "萬事勝利",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 9,
+          "name": "開心三多",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 10,
+          "name": "發財金戈",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 11,
+          "name": "駟跑得",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 12,
+          "name": "精算特殊",
+          "jockey": "巫顯東",
+          "jockey_id": "MHT"
+        },
+        {
+          "no": 13,
+          "name": "快樂之友",
+          "jockey": "希威森",
+          "jockey_id": "HEL"
+        },
+        {
+          "no": 14,
+          "name": "常常感恩",
+          "jockey": "楊明綸",
+          "jockey_id": "YML"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 6,
+              "name": "志醒大將"
+            },
+            {
+              "no": 7,
+              "name": "我最好"
+            },
+            {
+              "no": 1,
+              "name": "君達得"
+            },
+            {
+              "no": 9,
+              "name": "開心三多"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"
+        },
+        "ball": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 7,
+              "name": "我最好"
+            },
+            {
+              "no": 6,
+              "name": "志醒大將"
+            },
+            {
+              "no": 1,
+              "name": "君達得"
+            },
+            {
+              "no": 9,
+              "name": "開心三多"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 9,
+            "name": "開心三多"
+          },
+          {
+            "no": 6,
+            "name": "志醒大將"
+          },
+          {
+            "no": 1,
+            "name": "君達得"
+          },
+          {
+            "no": 10,
+            "name": "發財金戈"
+          }
+        ],
+        "raceid": "20261001-ST-02",
+        "source": "https://data.66888.hk/runtime/cache/tips_new_oss_state.json",
+        "captured_at": "2026-10-13T14:15:25+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "timing_note": "歷史存檔；未保存該場T−2取得時間"
+      },
+      "score": 1,
+      "selection": {
+        "horses": [
+          {
+            "no": 7,
+            "name": "我最好"
+          },
+          {
+            "no": 6,
+            "name": "志醒大將"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [
+          "QP"
+        ],
+        "generated_at": "2026-10-13T14:15:25+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 9,
+            "name": "開心三多"
+          },
+          {
+            "placing": "2",
+            "no": 10,
+            "name": "發財金戈"
+          },
+          {
+            "placing": "3",
+            "no": 7,
+            "name": "我最好"
+          },
+          {
+            "placing": "4",
+            "no": 1,
+            "name": "君達得"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=2",
+        "captured_at": "2026-10-13T14:15:38+08:00",
+        "verified_date": "2026-10-01",
+        "verified_race": 2,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "verification_sha256": "b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107",
+        "dividends": {
+          "W": [
+            {
+              "combination": "9",
+              "dividend_hkd": 46.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "9",
+              "dividend_hkd": 16.5
+            },
+            {
+              "combination": "10",
+              "dividend_hkd": 31.5
+            },
+            {
+              "combination": "7",
+              "dividend_hkd": 37.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "9,10",
+              "dividend_hkd": 225.0
+            }
+          ],
+          "QP": [
+            {
+              "combination": "9,10",
+              "dividend_hkd": 79.5
+            },
+            {
+              "combination": "7,9",
+              "dividend_hkd": 94.0
+            },
+            {
+              "combination": "7,10",
+              "dividend_hkd": 193.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "dividends_captured_at": "2026-10-13T19:19:54+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:15:25+08:00",
+      "lock_type": "historical_reconstruction",
+      "banker_initial": {
+        "status": "ready",
+        "date": "2026-10-01",
+        "venue": "ST",
+        "race": 2,
+        "as_of_race_no": 0,
+        "reason": "initial",
+        "numbers": [
+          1,
+          9,
+          6,
+          13,
+          10
+        ],
+        "verification": "published v1 賽前排位 label",
+        "source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~2?v=1",
+        "captured_at": "2026-10-15T09:19:06+08:00",
+        "record_type": "historical_initial_reconstruction"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          1,
+          9,
+          6,
+          7
+        ],
+        "fourth_source": "ball",
+        "initial_source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~2?v=1",
+        "generated_at": "2026-10-15T09:19:06+08:00",
+        "record_type": "historical_initial_reconstruction",
+        "timing_note": "按來源現存初版重建，非當日獨立封存"
+      },
+      "distance": 1600,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1600,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 9,
+            "jockey": "巴度",
+            "jockey_id": "BA",
+            "placed": 6,
+            "starts": 10,
+            "rate": 0.6
+          },
+          {
+            "no": 1,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 8,
+            "starts": 14,
+            "rate": 0.5714285714285714
+          },
+          {
+            "no": 6,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 5,
+            "starts": 11,
+            "rate": 0.45454545454545453
+          },
+          {
+            "no": 4,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "placed": 3,
+            "starts": 8,
+            "rate": 0.375
+          },
+          {
+            "no": 8,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "placed": 3,
+            "starts": 15,
+            "rate": 0.2
+          }
+        ],
+        "cutoff": "2026-10-01 R2",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "venue": "ST",
+      "race": 3,
+      "off": "2026-10-01T14:00:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "精算暴雪",
+          "jockey": "艾道拿",
+          "jockey_id": "AVB"
+        },
+        {
+          "no": 2,
+          "name": "翠紅",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 3,
+          "name": "美麗第一",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 4,
+          "name": "顏色之皇",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 5,
+          "name": "好友心得",
+          "jockey": "班德禮",
+          "jockey_id": "BHW"
+        },
+        {
+          "no": 6,
+          "name": "天天同樂",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 7,
+          "name": "魔術控制",
+          "jockey": "蔡明紹",
+          "jockey_id": "CML"
+        },
+        {
+          "no": 8,
+          "name": "玩笑",
+          "jockey": "楊明綸",
+          "jockey_id": "YML"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 6,
+              "name": "天天同樂"
+            },
+            {
+              "no": 7,
+              "name": "魔術控制"
+            },
+            {
+              "no": 4,
+              "name": "顏色之皇"
+            },
+            {
+              "no": 2,
+              "name": "翠紅"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 4,
+            "name": "顏色之皇"
+          },
+          {
+            "no": 7,
+            "name": "魔術控制"
+          },
+          {
+            "no": 2,
+            "name": "翠紅"
+          },
+          {
+            "no": 1,
+            "name": "精算暴雪"
+          }
+        ],
+        "raceid": "20261001-ST-03",
+        "source": "https://data.66888.hk/runtime/cache/tips_new_oss_state.json",
+        "captured_at": "2026-10-13T14:15:25+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "timing_note": "歷史存檔；未保存該場T−2取得時間"
+      },
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 4,
+            "name": "顏色之皇"
+          },
+          {
+            "no": 7,
+            "name": "魔術控制"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [],
+        "generated_at": "2026-10-13T14:15:25+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 4,
+            "name": "顏色之皇"
+          },
+          {
+            "placing": "2",
+            "no": 7,
+            "name": "魔術控制"
+          },
+          {
+            "placing": "3",
+            "no": 6,
+            "name": "天天同樂"
+          },
+          {
+            "placing": "4",
+            "no": 1,
+            "name": "精算暴雪"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=3",
+        "captured_at": "2026-10-13T14:15:37+08:00",
+        "verified_date": "2026-10-01",
+        "verified_race": 3,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "verification_sha256": "b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107",
+        "dividends": {
+          "W": [
+            {
+              "combination": "4",
+              "dividend_hkd": 22.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "4",
+              "dividend_hkd": 12.0
+            },
+            {
+              "combination": "7",
+              "dividend_hkd": 15.0
+            },
+            {
+              "combination": "6",
+              "dividend_hkd": 20.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "4,7",
+              "dividend_hkd": 52.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "4,7",
+              "dividend_hkd": 23.0
+            },
+            {
+              "combination": "4,6",
+              "dividend_hkd": 32.0
+            },
+            {
+              "combination": "6,7",
+              "dividend_hkd": 44.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "dividends_captured_at": "2026-10-13T19:19:54+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:15:25+08:00",
+      "lock_type": "historical_reconstruction",
+      "banker_initial": {
+        "status": "ready",
+        "date": "2026-10-01",
+        "venue": "ST",
+        "race": 3,
+        "as_of_race_no": 0,
+        "reason": "initial",
+        "numbers": [
+          6,
+          4,
+          2,
+          7,
+          5
+        ],
+        "verification": "published v1 賽前排位 label",
+        "source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~3?v=1",
+        "captured_at": "2026-10-15T09:19:06+08:00",
+        "record_type": "historical_initial_reconstruction"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          6,
+          4,
+          2,
+          7
+        ],
+        "fourth_source": "meiji",
+        "initial_source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~3?v=1",
+        "generated_at": "2026-10-15T09:19:06+08:00",
+        "record_type": "historical_initial_reconstruction",
+        "timing_note": "按來源現存初版重建，非當日獨立封存"
+      },
+      "distance": 1000,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1000,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 4,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 2,
+            "starts": 3,
+            "rate": 0.6666666666666666
+          },
+          {
+            "no": 5,
+            "jockey": "班德禮",
+            "jockey_id": "BHW",
+            "placed": 1,
+            "starts": 2,
+            "rate": 0.5
+          },
+          {
+            "no": 6,
+            "jockey": "巴度",
+            "jockey_id": "BA",
+            "placed": 1,
+            "starts": 2,
+            "rate": 0.5
+          },
+          {
+            "no": 1,
+            "jockey": "艾道拿",
+            "jockey_id": "AVB",
+            "placed": 1,
+            "starts": 3,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 8,
+            "jockey": "楊明綸",
+            "jockey_id": "YML",
+            "placed": 0,
+            "starts": 3,
+            "rate": 0.0
+          }
+        ],
+        "cutoff": "2026-10-01 R3",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "venue": "ST",
+      "race": 4,
+      "off": "2026-10-01T14:35:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "星價",
+          "jockey": "巫顯東",
+          "jockey_id": "MHT"
+        },
+        {
+          "no": 2,
+          "name": "勝兄弟",
+          "jockey": "黃寶妮",
+          "jockey_id": "WPN"
+        },
+        {
+          "no": 3,
+          "name": "超拍檔",
+          "jockey": "楊明綸",
+          "jockey_id": "YML"
+        },
+        {
+          "no": 4,
+          "name": "時尚歡笑",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 5,
+          "name": "錶之翠河",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 6,
+          "name": "盈妮威楓",
+          "jockey": "金誠剛",
+          "jockey_id": "KRW"
+        },
+        {
+          "no": 7,
+          "name": "實力加",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 8,
+          "name": "銀騎士",
+          "jockey": "希威森",
+          "jockey_id": "HEL"
+        },
+        {
+          "no": 9,
+          "name": "總統輝煌",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 10,
+          "name": "遨遊波士",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 11,
+          "name": "豐功偉績",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 12,
+          "name": "馬上盈",
+          "jockey": "潘明輝",
+          "jockey_id": "PMF"
+        },
+        {
+          "no": 13,
+          "name": "鑽飾閃耀",
+          "jockey": "蔡明紹",
+          "jockey_id": "CML"
+        },
+        {
+          "no": 14,
+          "name": "久久為軍",
+          "jockey": "鍾易禮",
+          "jockey_id": "CCY"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 7,
+              "name": "實力加"
+            },
+            {
+              "no": 10,
+              "name": "遨遊波士"
+            },
+            {
+              "no": 14,
+              "name": "久久為軍"
+            },
+            {
+              "no": 13,
+              "name": "鑽飾閃耀"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 7,
+              "name": "實力加"
+            },
+            {
+              "no": 10,
+              "name": "遨遊波士"
+            },
+            {
+              "no": 12,
+              "name": "馬上盈"
+            },
+            {
+              "no": 11,
+              "name": "豐功偉績"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 7,
+            "name": "實力加"
+          },
+          {
+            "no": 3,
+            "name": "超拍檔"
+          },
+          {
+            "no": 12,
+            "name": "馬上盈"
+          },
+          {
+            "no": 6,
+            "name": "盈妮威楓"
+          }
+        ],
+        "raceid": "20261001-ST-04",
+        "source": "https://data.66888.hk/runtime/cache/tips_new_oss_state.json",
+        "captured_at": "2026-10-13T14:15:25+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "timing_note": "歷史存檔；未保存該場T−2取得時間"
+      },
+      "score": 1,
+      "selection": {
+        "horses": [
+          {
+            "no": 7,
+            "name": "實力加"
+          },
+          {
+            "no": 10,
+            "name": "遨遊波士"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [
+          "QP"
+        ],
+        "generated_at": "2026-10-13T14:15:25+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 7,
+            "name": "實力加"
+          },
+          {
+            "placing": "2",
+            "no": 6,
+            "name": "盈妮威楓"
+          },
+          {
+            "placing": "3",
+            "no": 3,
+            "name": "超拍檔"
+          },
+          {
+            "placing": "4",
+            "no": 14,
+            "name": "久久為軍"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=4",
+        "captured_at": "2026-10-13T14:15:38+08:00",
+        "verified_date": "2026-10-01",
+        "verified_race": 4,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "verification_sha256": "b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107",
+        "dividends": {
+          "W": [
+            {
+              "combination": "7",
+              "dividend_hkd": 19.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "7",
+              "dividend_hkd": 11.5
+            },
+            {
+              "combination": "6",
+              "dividend_hkd": 21.5
+            },
+            {
+              "combination": "3",
+              "dividend_hkd": 73.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "6,7",
+              "dividend_hkd": 77.0
+            }
+          ],
+          "QP": [
+            {
+              "combination": "6,7",
+              "dividend_hkd": 30.0
+            },
+            {
+              "combination": "3,7",
+              "dividend_hkd": 99.0
+            },
+            {
+              "combination": "3,6",
+              "dividend_hkd": 294.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "dividends_captured_at": "2026-10-13T19:19:54+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:15:25+08:00",
+      "lock_type": "historical_reconstruction",
+      "banker_initial": {
+        "status": "ready",
+        "date": "2026-10-01",
+        "venue": "ST",
+        "race": 4,
+        "as_of_race_no": 0,
+        "reason": "initial",
+        "numbers": [
+          10,
+          7,
+          6,
+          11,
+          13
+        ],
+        "verification": "published v1 賽前排位 label",
+        "source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~4?v=1",
+        "captured_at": "2026-10-15T09:19:11+08:00",
+        "record_type": "historical_initial_reconstruction"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          10,
+          7,
+          6,
+          12
+        ],
+        "fourth_source": "ma",
+        "initial_source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~4?v=1",
+        "generated_at": "2026-10-15T09:19:11+08:00",
+        "record_type": "historical_initial_reconstruction",
+        "timing_note": "按來源現存初版重建，非當日獨立封存"
+      },
+      "distance": 1400,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1400,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 9,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "placed": 8,
+            "starts": 22,
+            "rate": 0.36363636363636365
+          },
+          {
+            "no": 11,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 7,
+            "starts": 22,
+            "rate": 0.3181818181818182
+          },
+          {
+            "no": 10,
+            "jockey": "袁幸堯",
+            "jockey_id": "YHY",
+            "placed": 1,
+            "starts": 5,
+            "rate": 0.2
+          },
+          {
+            "no": 4,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "placed": 4,
+            "starts": 21,
+            "rate": 0.19047619047619047
+          },
+          {
+            "no": 2,
+            "jockey": "黃寶妮",
+            "jockey_id": "WPN",
+            "placed": 2,
+            "starts": 11,
+            "rate": 0.18181818181818182
+          }
+        ],
+        "cutoff": "2026-10-01 R4",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "venue": "ST",
+      "race": 5,
+      "off": "2026-10-01T15:10:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "星球勇士",
+          "jockey": "艾道拿",
+          "jockey_id": "AVB"
+        },
+        {
+          "no": 2,
+          "name": "怡昌光輝",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 3,
+          "name": "嘉應耀昇",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 4,
+          "name": "輕功猛男",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 5,
+          "name": "星月峰雲",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 6,
+          "name": "盈俊天下",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 7,
+          "name": "有意無意",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 8,
+          "name": "數據派",
+          "jockey": "金誠剛",
+          "jockey_id": "KRW"
+        },
+        {
+          "no": 9,
+          "name": "精英奪冠",
+          "jockey": "楊明綸",
+          "jockey_id": "YML"
+        },
+        {
+          "no": 10,
+          "name": "經典多寶",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 11,
+          "name": "升升雙息",
+          "jockey": "潘明輝",
+          "jockey_id": "PMF"
+        },
+        {
+          "no": 12,
+          "name": "天寶威威",
+          "jockey": "巫顯東",
+          "jockey_id": "MHT"
+        },
+        {
+          "no": 13,
+          "name": "豪邁先登",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 14,
+          "name": "勝萬家",
+          "jockey": "霍宏聲",
+          "jockey_id": "FEL"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 1,
+              "name": "星球勇士"
+            },
+            {
+              "no": 3,
+              "name": "嘉應耀昇"
+            },
+            {
+              "no": 12,
+              "name": "天寶威威"
+            },
+            {
+              "no": 6,
+              "name": "盈俊天下"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:25+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 1,
+            "name": "星球勇士"
+          },
+          {
+            "no": 3,
+            "name": "嘉應耀昇"
+          },
+          {
+            "no": 11,
+            "name": "升升雙息"
+          },
+          {
+            "no": 2,
+            "name": "怡昌光輝"
+          }
+        ],
+        "raceid": "20261001-ST-05",
+        "source": "https://data.66888.hk/runtime/cache/tips_new_oss_state.json",
+        "captured_at": "2026-10-13T14:15:25+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "timing_note": "歷史存檔；未保存該場T−2取得時間"
+      },
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 1,
+            "name": "星球勇士"
+          },
+          {
+            "no": 3,
+            "name": "嘉應耀昇"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [],
+        "generated_at": "2026-10-13T14:15:25+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 3,
+            "name": "嘉應耀昇"
+          },
+          {
+            "placing": "2",
+            "no": 1,
+            "name": "星球勇士"
+          },
+          {
+            "placing": "3",
+            "no": 6,
+            "name": "盈俊天下"
+          },
+          {
+            "placing": "4",
+            "no": 2,
+            "name": "怡昌光輝"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=5",
+        "captured_at": "2026-10-13T14:15:37+08:00",
+        "verified_date": "2026-10-01",
+        "verified_race": 5,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "verification_sha256": "b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107",
+        "dividends": {
+          "W": [
+            {
+              "combination": "3",
+              "dividend_hkd": 47.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "3",
+              "dividend_hkd": 16.0
+            },
+            {
+              "combination": "1",
+              "dividend_hkd": 13.0
+            },
+            {
+              "combination": "6",
+              "dividend_hkd": 26.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "1,3",
+              "dividend_hkd": 46.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "1,3",
+              "dividend_hkd": 23.0
+            },
+            {
+              "combination": "3,6",
+              "dividend_hkd": 59.0
+            },
+            {
+              "combination": "1,6",
+              "dividend_hkd": 41.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "dividends_captured_at": "2026-10-13T19:19:54+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:15:25+08:00",
+      "lock_type": "historical_reconstruction",
+      "banker_initial": {
+        "status": "ready",
+        "date": "2026-10-01",
+        "venue": "ST",
+        "race": 5,
+        "as_of_race_no": 0,
+        "reason": "initial",
+        "numbers": [
+          3,
+          1,
+          6,
+          4,
+          2
+        ],
+        "verification": "published v1 賽前排位 label",
+        "source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~5?v=1",
+        "captured_at": "2026-10-15T09:19:11+08:00",
+        "record_type": "historical_initial_reconstruction"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          3,
+          1,
+          6,
+          12
+        ],
+        "fourth_source": "meiji",
+        "initial_source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~5?v=1",
+        "generated_at": "2026-10-15T09:19:11+08:00",
+        "record_type": "historical_initial_reconstruction",
+        "timing_note": "按來源現存初版重建，非當日獨立封存"
+      },
+      "distance": 1000,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1000,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 5,
+            "jockey": "巴度",
+            "jockey_id": "BA",
+            "placed": 2,
+            "starts": 3,
+            "rate": 0.6666666666666666
+          },
+          {
+            "no": 4,
+            "jockey": "袁幸堯",
+            "jockey_id": "YHY",
+            "placed": 1,
+            "starts": 2,
+            "rate": 0.5
+          },
+          {
+            "no": 13,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "placed": 1,
+            "starts": 2,
+            "rate": 0.5
+          },
+          {
+            "no": 1,
+            "jockey": "艾道拿",
+            "jockey_id": "AVB",
+            "placed": 1,
+            "starts": 4,
+            "rate": 0.25
+          },
+          {
+            "no": 9,
+            "jockey": "楊明綸",
+            "jockey_id": "YML",
+            "placed": 0,
+            "starts": 4,
+            "rate": 0.0
+          }
+        ],
+        "cutoff": "2026-10-01 R5",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "venue": "ST",
+      "race": 6,
+      "off": "2026-10-01T15:45:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "捷威",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 2,
+          "name": "騰龍踏雪",
+          "jockey": "金誠剛",
+          "jockey_id": "KRW"
+        },
+        {
+          "no": 3,
+          "name": "佰勝金龍",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 4,
+          "name": "浪漫老撾",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 5,
+          "name": "熒光",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 6,
+          "name": "夢照發",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 7,
+          "name": "好運年",
+          "jockey": "班德禮",
+          "jockey_id": "BHW"
+        },
+        {
+          "no": 8,
+          "name": "智多多寶",
+          "jockey": "霍宏聲",
+          "jockey_id": "FEL"
+        },
+        {
+          "no": 9,
+          "name": "勁步速",
+          "jockey": "蔡明紹",
+          "jockey_id": "CML"
+        },
+        {
+          "no": 10,
+          "name": "小飛俠",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 11,
+          "name": "大輝煌",
+          "jockey": "鍾易禮",
+          "jockey_id": "CCY"
+        },
+        {
+          "no": 12,
+          "name": "齊歡最樂",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 13,
+          "name": "禾道威",
+          "jockey": "楊明綸",
+          "jockey_id": "YML"
+        },
+        {
+          "no": 14,
+          "name": "電路一百",
+          "jockey": "巫顯東",
+          "jockey_id": "MHT"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 8,
+              "name": "智多多寶"
+            },
+            {
+              "no": 6,
+              "name": "夢照發"
+            },
+            {
+              "no": 1,
+              "name": "捷威"
+            },
+            {
+              "no": 3,
+              "name": "佰勝金龍"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 1,
+            "name": "捷威"
+          },
+          {
+            "no": 6,
+            "name": "夢照發"
+          },
+          {
+            "no": 7,
+            "name": "好運年"
+          },
+          {
+            "no": 3,
+            "name": "佰勝金龍"
+          }
+        ],
+        "raceid": "20261001-ST-06",
+        "source": "https://data.66888.hk/runtime/cache/tips_new_oss_state.json",
+        "captured_at": "2026-10-13T14:15:37+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "timing_note": "歷史存檔；未保存該場T−2取得時間"
+      },
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 1,
+            "name": "捷威"
+          },
+          {
+            "no": 6,
+            "name": "夢照發"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [],
+        "generated_at": "2026-10-13T14:15:37+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 3,
+            "name": "佰勝金龍"
+          },
+          {
+            "placing": "2",
+            "no": 1,
+            "name": "捷威"
+          },
+          {
+            "placing": "3",
+            "no": 8,
+            "name": "智多多寶"
+          },
+          {
+            "placing": "4",
+            "no": 4,
+            "name": "浪漫老撾"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=6",
+        "captured_at": "2026-10-13T14:15:50+08:00",
+        "verified_date": "2026-10-01",
+        "verified_race": 6,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "verification_sha256": "b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107",
+        "dividends": {
+          "W": [
+            {
+              "combination": "3",
+              "dividend_hkd": 50.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "3",
+              "dividend_hkd": 17.5
+            },
+            {
+              "combination": "1",
+              "dividend_hkd": 17.5
+            },
+            {
+              "combination": "8",
+              "dividend_hkd": 29.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "1,3",
+              "dividend_hkd": 88.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "1,3",
+              "dividend_hkd": 38.5
+            },
+            {
+              "combination": "3,8",
+              "dividend_hkd": 108.5
+            },
+            {
+              "combination": "1,8",
+              "dividend_hkd": 77.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "dividends_captured_at": "2026-10-13T19:19:54+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:15:37+08:00",
+      "lock_type": "historical_reconstruction",
+      "banker_initial": {
+        "status": "ready",
+        "date": "2026-10-01",
+        "venue": "ST",
+        "race": 6,
+        "as_of_race_no": 0,
+        "reason": "initial",
+        "numbers": [
+          3,
+          1,
+          6,
+          7,
+          10
+        ],
+        "verification": "published v1 賽前排位 label",
+        "source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~6?v=1",
+        "captured_at": "2026-10-15T09:19:11+08:00",
+        "record_type": "historical_initial_reconstruction"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          3,
+          1,
+          6,
+          8
+        ],
+        "fourth_source": "meiji",
+        "initial_source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~6?v=1",
+        "generated_at": "2026-10-15T09:19:11+08:00",
+        "record_type": "historical_initial_reconstruction",
+        "timing_note": "按來源現存初版重建，非當日獨立封存"
+      },
+      "distance": 1800,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1800,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 7,
+            "jockey": "班德禮",
+            "jockey_id": "BHW",
+            "placed": 1,
+            "starts": 1,
+            "rate": 1.0
+          },
+          {
+            "no": 4,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "placed": 2,
+            "starts": 3,
+            "rate": 0.6666666666666666
+          },
+          {
+            "no": 3,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "placed": 1,
+            "starts": 2,
+            "rate": 0.5
+          },
+          {
+            "no": 8,
+            "jockey": "霍宏聲",
+            "jockey_id": "FEL",
+            "placed": 1,
+            "starts": 2,
+            "rate": 0.5
+          },
+          {
+            "no": 14,
+            "jockey": "巫顯東",
+            "jockey_id": "MHT",
+            "placed": 1,
+            "starts": 2,
+            "rate": 0.5
+          }
+        ],
+        "cutoff": "2026-10-01 R6",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "venue": "ST",
+      "race": 7,
+      "off": "2026-10-01T16:15:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "長勝金剛",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 2,
+          "name": "光年程祥",
+          "jockey": "霍宏聲",
+          "jockey_id": "FEL"
+        },
+        {
+          "no": 3,
+          "name": "永福",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 4,
+          "name": "莊家班",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 5,
+          "name": "自力更生",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 6,
+          "name": "烈進駒",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 7,
+          "name": "領駿精彩",
+          "jockey": "楊明綸",
+          "jockey_id": "YML"
+        },
+        {
+          "no": 8,
+          "name": "多利旺駒",
+          "jockey": "蔡明紹",
+          "jockey_id": "CML"
+        },
+        {
+          "no": 9,
+          "name": "高明豐勝",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 10,
+          "name": "嘉應光彩",
+          "jockey": "潘明輝",
+          "jockey_id": "PMF"
+        },
+        {
+          "no": 11,
+          "name": "同喜",
+          "jockey": "希威森",
+          "jockey_id": "HEL"
+        },
+        {
+          "no": 12,
+          "name": "金津寶駒",
+          "jockey": "黃寶妮",
+          "jockey_id": "WPN"
+        },
+        {
+          "no": 13,
+          "name": "凱旋王者",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 14,
+          "name": "翠湖烈風",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 10,
+              "name": "嘉應光彩"
+            },
+            {
+              "no": 6,
+              "name": "烈進駒"
+            },
+            {
+              "no": 2,
+              "name": "光年程祥"
+            },
+            {
+              "no": 13,
+              "name": "凱旋王者"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"
+        },
+        "ball": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 10,
+              "name": "嘉應光彩"
+            },
+            {
+              "no": 6,
+              "name": "烈進駒"
+            },
+            {
+              "no": 2,
+              "name": "光年程祥"
+            },
+            {
+              "no": 1,
+              "name": "長勝金剛"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 2,
+            "name": "光年程祥"
+          },
+          {
+            "no": 6,
+            "name": "烈進駒"
+          },
+          {
+            "no": 10,
+            "name": "嘉應光彩"
+          },
+          {
+            "no": 14,
+            "name": "翠湖烈風"
+          }
+        ],
+        "raceid": "20261001-ST-07",
+        "source": "https://data.66888.hk/runtime/cache/tips_new_oss_state.json",
+        "captured_at": "2026-10-13T14:15:37+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "timing_note": "歷史存檔；未保存該場T−2取得時間"
+      },
+      "score": 1,
+      "selection": {
+        "horses": [
+          {
+            "no": 10,
+            "name": "嘉應光彩"
+          },
+          {
+            "no": 6,
+            "name": "烈進駒"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [
+          "QP"
+        ],
+        "generated_at": "2026-10-13T14:15:37+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 7,
+            "name": "領駿精彩"
+          },
+          {
+            "placing": "2",
+            "no": 10,
+            "name": "嘉應光彩"
+          },
+          {
+            "placing": "3",
+            "no": 11,
+            "name": "同喜"
+          },
+          {
+            "placing": "4",
+            "no": 2,
+            "name": "光年程祥"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=7",
+        "captured_at": "2026-10-13T14:15:49+08:00",
+        "verified_date": "2026-10-01",
+        "verified_race": 7,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "verification_sha256": "b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107",
+        "dividends": {
+          "W": [
+            {
+              "combination": "7",
+              "dividend_hkd": 380.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "7",
+              "dividend_hkd": 78.0
+            },
+            {
+              "combination": "10",
+              "dividend_hkd": 14.5
+            },
+            {
+              "combination": "11",
+              "dividend_hkd": 33.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "7,10",
+              "dividend_hkd": 758.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "7,10",
+              "dividend_hkd": 232.0
+            },
+            {
+              "combination": "7,11",
+              "dividend_hkd": 645.0
+            },
+            {
+              "combination": "10,11",
+              "dividend_hkd": 75.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "dividends_captured_at": "2026-10-13T19:19:54+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:15:37+08:00",
+      "lock_type": "historical_reconstruction",
+      "banker_initial": {
+        "status": "ready",
+        "date": "2026-10-01",
+        "venue": "ST",
+        "race": 7,
+        "as_of_race_no": 0,
+        "reason": "initial",
+        "numbers": [
+          6,
+          10,
+          2,
+          14,
+          4
+        ],
+        "verification": "published v1 賽前排位 label",
+        "source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~7?v=1",
+        "captured_at": "2026-10-15T09:19:15+08:00",
+        "record_type": "historical_initial_reconstruction"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          6,
+          10,
+          2,
+          1
+        ],
+        "fourth_source": "ball",
+        "initial_source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~7?v=1",
+        "generated_at": "2026-10-15T09:19:15+08:00",
+        "record_type": "historical_initial_reconstruction",
+        "timing_note": "按來源現存初版重建，非當日獨立封存"
+      },
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 6,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 15,
+            "starts": 26,
+            "rate": 0.5769230769230769
+          },
+          {
+            "no": 1,
+            "jockey": "袁幸堯",
+            "jockey_id": "YHY",
+            "placed": 5,
+            "starts": 13,
+            "rate": 0.38461538461538464
+          },
+          {
+            "no": 5,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "placed": 8,
+            "starts": 22,
+            "rate": 0.36363636363636365
+          },
+          {
+            "no": 2,
+            "jockey": "霍宏聲",
+            "jockey_id": "FEL",
+            "placed": 3,
+            "starts": 9,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 14,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 8,
+            "starts": 27,
+            "rate": 0.2962962962962963
+          }
+        ],
+        "cutoff": "2026-10-01 R7",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "venue": "ST",
+      "race": 8,
+      "off": "2026-10-01T16:45:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "全能勇士",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 2,
+          "name": "添開心",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 3,
+          "name": "鋁神",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 4,
+          "name": "明德輝煌",
+          "jockey": "艾道拿",
+          "jockey_id": "AVB"
+        },
+        {
+          "no": 5,
+          "name": "八玲瓏",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 6,
+          "name": "擅搏",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 7,
+          "name": "金鼓大班",
+          "jockey": "霍宏聲",
+          "jockey_id": "FEL"
+        },
+        {
+          "no": 8,
+          "name": "天天更好",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 9,
+          "name": "電子好好",
+          "jockey": "班德禮",
+          "jockey_id": "BHW"
+        },
+        {
+          "no": 10,
+          "name": "笑必勝",
+          "jockey": "蔡明紹",
+          "jockey_id": "CML"
+        },
+        {
+          "no": 11,
+          "name": "閃電奇駿",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 12,
+          "name": "騰達勇士",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 13,
+          "name": "花果猴王",
+          "jockey": "鍾易禮",
+          "jockey_id": "CCY"
+        },
+        {
+          "no": 14,
+          "name": "領航多福",
+          "jockey": "金誠剛",
+          "jockey_id": "KRW"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 1,
+              "name": "全能勇士"
+            },
+            {
+              "no": 11,
+              "name": "閃電奇駿"
+            },
+            {
+              "no": 8,
+              "name": "天天更好"
+            },
+            {
+              "no": 4,
+              "name": "明德輝煌"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 4,
+              "name": "明德輝煌"
+            },
+            {
+              "no": 5,
+              "name": "八玲瓏"
+            },
+            {
+              "no": 8,
+              "name": "天天更好"
+            },
+            {
+              "no": 1,
+              "name": "全能勇士"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:37+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 4,
+            "name": "明德輝煌"
+          },
+          {
+            "no": 1,
+            "name": "全能勇士"
+          },
+          {
+            "no": 8,
+            "name": "天天更好"
+          },
+          {
+            "no": 11,
+            "name": "閃電奇駿"
+          }
+        ],
+        "raceid": "20261001-ST-08",
+        "source": "https://data.66888.hk/runtime/cache/tips_new_oss_state.json",
+        "captured_at": "2026-10-13T14:15:37+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "timing_note": "歷史存檔；未保存該場T−2取得時間"
+      },
+      "score": 1,
+      "selection": {
+        "horses": [
+          {
+            "no": 4,
+            "name": "明德輝煌"
+          },
+          {
+            "no": 1,
+            "name": "全能勇士"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [
+          "QP"
+        ],
+        "generated_at": "2026-10-13T14:15:37+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 9,
+            "name": "電子好好"
+          },
+          {
+            "placing": "2",
+            "no": 4,
+            "name": "明德輝煌"
+          },
+          {
+            "placing": "3",
+            "no": 11,
+            "name": "閃電奇駿"
+          },
+          {
+            "placing": "4",
+            "no": 8,
+            "name": "天天更好"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=8",
+        "captured_at": "2026-10-13T14:15:48+08:00",
+        "verified_date": "2026-10-01",
+        "verified_race": 8,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "verification_sha256": "b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107",
+        "dividends": {
+          "W": [
+            {
+              "combination": "9",
+              "dividend_hkd": 500.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "9",
+              "dividend_hkd": 97.0
+            },
+            {
+              "combination": "4",
+              "dividend_hkd": 15.0
+            },
+            {
+              "combination": "11",
+              "dividend_hkd": 18.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "4,9",
+              "dividend_hkd": 658.0
+            }
+          ],
+          "QP": [
+            {
+              "combination": "4,9",
+              "dividend_hkd": 198.0
+            },
+            {
+              "combination": "9,11",
+              "dividend_hkd": 373.0
+            },
+            {
+              "combination": "4,11",
+              "dividend_hkd": 36.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "dividends_captured_at": "2026-10-13T19:19:54+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:15:37+08:00",
+      "lock_type": "historical_reconstruction",
+      "banker_initial": {
+        "status": "ready",
+        "date": "2026-10-01",
+        "venue": "ST",
+        "race": 8,
+        "as_of_race_no": 0,
+        "reason": "initial",
+        "numbers": [
+          1,
+          5,
+          4,
+          8,
+          3
+        ],
+        "verification": "published v1 賽前排位 label",
+        "source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~8?v=1",
+        "captured_at": "2026-10-15T09:19:15+08:00",
+        "record_type": "historical_initial_reconstruction"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          1,
+          5,
+          4,
+          8
+        ],
+        "fourth_source": "ma",
+        "initial_source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~8?v=1",
+        "generated_at": "2026-10-15T09:19:15+08:00",
+        "record_type": "historical_initial_reconstruction",
+        "timing_note": "按來源現存初版重建，非當日獨立封存"
+      },
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 1,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 15,
+            "starts": 27,
+            "rate": 0.5555555555555556
+          },
+          {
+            "no": 2,
+            "jockey": "袁幸堯",
+            "jockey_id": "YHY",
+            "placed": 5,
+            "starts": 14,
+            "rate": 0.35714285714285715
+          },
+          {
+            "no": 6,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "placed": 8,
+            "starts": 23,
+            "rate": 0.34782608695652173
+          },
+          {
+            "no": 7,
+            "jockey": "霍宏聲",
+            "jockey_id": "FEL",
+            "placed": 3,
+            "starts": 10,
+            "rate": 0.3
+          },
+          {
+            "no": 11,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 8,
+            "starts": 28,
+            "rate": 0.2857142857142857
+          }
+        ],
+        "cutoff": "2026-10-01 R8",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "venue": "ST",
+      "race": 9,
+      "off": "2026-10-01T17:15:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "首飾天空",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 2,
+          "name": "喜慶寶",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 3,
+          "name": "超輕鬆",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 4,
+          "name": "喜尊龍",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 5,
+          "name": "樂勝天下",
+          "jockey": "潘明輝",
+          "jockey_id": "PMF"
+        },
+        {
+          "no": 6,
+          "name": "美麗星晨",
+          "jockey": "鍾易禮",
+          "jockey_id": "CCY"
+        },
+        {
+          "no": 7,
+          "name": "會當凌",
+          "jockey": "班德禮",
+          "jockey_id": "BHW"
+        },
+        {
+          "no": 8,
+          "name": "勇謀神駒",
+          "jockey": "希威森",
+          "jockey_id": "HEL"
+        },
+        {
+          "no": 9,
+          "name": "晒冷",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 10,
+          "name": "至尊瑰寶",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 11,
+          "name": "飛鷹翱翔",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 12,
+          "name": "威利金箭",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 5,
+              "name": "樂勝天下"
+            },
+            {
+              "no": 4,
+              "name": "喜尊龍"
+            },
+            {
+              "no": 12,
+              "name": "威利金箭"
+            },
+            {
+              "no": 9,
+              "name": "晒冷"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:38+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:38+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:38+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:38+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 2,
+            "name": "喜慶寶"
+          },
+          {
+            "no": 1,
+            "name": "首飾天空"
+          },
+          {
+            "no": 11,
+            "name": "飛鷹翱翔"
+          },
+          {
+            "no": 3,
+            "name": "超輕鬆"
+          }
+        ],
+        "raceid": "20261001-ST-09",
+        "source": "https://data.66888.hk/runtime/cache/tips_new_oss_state.json",
+        "captured_at": "2026-10-13T14:15:38+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "timing_note": "歷史存檔；未保存該場T−2取得時間"
+      },
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 2,
+            "name": "喜慶寶"
+          },
+          {
+            "no": 1,
+            "name": "首飾天空"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [],
+        "generated_at": "2026-10-13T14:15:38+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 1,
+            "name": "首飾天空"
+          },
+          {
+            "placing": "2",
+            "no": 2,
+            "name": "喜慶寶"
+          },
+          {
+            "placing": "3",
+            "no": 11,
+            "name": "飛鷹翱翔"
+          },
+          {
+            "placing": "4",
+            "no": 9,
+            "name": "晒冷"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=9",
+        "captured_at": "2026-10-13T14:15:48+08:00",
+        "verified_date": "2026-10-01",
+        "verified_race": 9,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "verification_sha256": "b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107",
+        "dividends": {
+          "W": [
+            {
+              "combination": "1",
+              "dividend_hkd": 81.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "1",
+              "dividend_hkd": 27.5
+            },
+            {
+              "combination": "2",
+              "dividend_hkd": 17.5
+            },
+            {
+              "combination": "11",
+              "dividend_hkd": 19.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "1,2",
+              "dividend_hkd": 140.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "1,2",
+              "dividend_hkd": 55.5
+            },
+            {
+              "combination": "1,11",
+              "dividend_hkd": 86.0
+            },
+            {
+              "combination": "2,11",
+              "dividend_hkd": 50.5
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "dividends_captured_at": "2026-10-13T19:19:54+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:15:38+08:00",
+      "lock_type": "historical_reconstruction",
+      "banker_initial": {
+        "status": "ready",
+        "date": "2026-10-01",
+        "venue": "ST",
+        "race": 9,
+        "as_of_race_no": 0,
+        "reason": "initial",
+        "numbers": [
+          2,
+          3,
+          4,
+          12,
+          5
+        ],
+        "verification": "published v1 賽前排位 label",
+        "source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~9?v=1",
+        "captured_at": "2026-10-15T09:19:15+08:00",
+        "record_type": "historical_initial_reconstruction"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "fourth_source": "meiji",
+        "initial_source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~9?v=1",
+        "generated_at": "2026-10-15T09:19:15+08:00",
+        "record_type": "historical_initial_reconstruction",
+        "timing_note": "按來源現存初版重建，非當日獨立封存"
+      },
+      "distance": 1400,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1400,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 2,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "placed": 7,
+            "starts": 16,
+            "rate": 0.4375
+          },
+          {
+            "no": 4,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 10,
+            "starts": 26,
+            "rate": 0.38461538461538464
+          },
+          {
+            "no": 9,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 7,
+            "starts": 23,
+            "rate": 0.30434782608695654
+          },
+          {
+            "no": 1,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "placed": 3,
+            "starts": 12,
+            "rate": 0.25
+          },
+          {
+            "no": 3,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "placed": 4,
+            "starts": 22,
+            "rate": 0.18181818181818182
+          }
+        ],
+        "cutoff": "2026-10-01 R9",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "venue": "ST",
+      "race": 10,
+      "off": "2026-10-01T17:45:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "超寫意",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 2,
+          "name": "歡欣神駒",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 3,
+          "name": "友瑩亮",
+          "jockey": "袁幸堯",
+          "jockey_id": "YHY"
+        },
+        {
+          "no": 4,
+          "name": "非凡豪傑",
+          "jockey": "班德禮",
+          "jockey_id": "BHW"
+        },
+        {
+          "no": 5,
+          "name": "縱橫天地",
+          "jockey": "黃寶妮",
+          "jockey_id": "WPN"
+        },
+        {
+          "no": 6,
+          "name": "火焰閃爍",
+          "jockey": "艾道拿",
+          "jockey_id": "AVB"
+        },
+        {
+          "no": 7,
+          "name": "巴閉精",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 8,
+          "name": "金錢遊戲",
+          "jockey": "奧爾民",
+          "jockey_id": "OJM"
+        },
+        {
+          "no": 9,
+          "name": "禾道豐",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 10,
+          "name": "建測羣英",
+          "jockey": "希威森",
+          "jockey_id": "HEL"
+        },
+        {
+          "no": 11,
+          "name": "皮具英雄",
+          "jockey": "潘明輝",
+          "jockey_id": "PMF"
+        },
+        {
+          "no": 12,
+          "name": "天然數字",
+          "jockey": "蔡明紹",
+          "jockey_id": "CML"
+        },
+        {
+          "no": 13,
+          "name": "佛亮老撾",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 14,
+          "name": "八仟好運",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 8,
+              "name": "金錢遊戲"
+            },
+            {
+              "no": 9,
+              "name": "禾道豐"
+            },
+            {
+              "no": 3,
+              "name": "友瑩亮"
+            },
+            {
+              "no": 4,
+              "name": "非凡豪傑"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:38+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:38+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:38+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 4,
+              "name": "非凡豪傑"
+            },
+            {
+              "no": 14,
+              "name": "八仟好運"
+            },
+            {
+              "no": 3,
+              "name": "友瑩亮"
+            },
+            {
+              "no": 7,
+              "name": "巴閉精"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:38+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 14,
+            "name": "八仟好運"
+          },
+          {
+            "no": 7,
+            "name": "巴閉精"
+          },
+          {
+            "no": 3,
+            "name": "友瑩亮"
+          },
+          {
+            "no": 4,
+            "name": "非凡豪傑"
+          }
+        ],
+        "raceid": "20261001-ST-10",
+        "source": "https://data.66888.hk/runtime/cache/tips_new_oss_state.json",
+        "captured_at": "2026-10-13T14:15:38+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "timing_note": "歷史存檔；未保存該場T−2取得時間"
+      },
+      "score": 1,
+      "selection": {
+        "horses": [
+          {
+            "no": 4,
+            "name": "非凡豪傑"
+          },
+          {
+            "no": 8,
+            "name": "金錢遊戲"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [
+          "QP"
+        ],
+        "generated_at": "2026-10-13T14:15:38+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 3,
+            "name": "友瑩亮"
+          },
+          {
+            "placing": "2",
+            "no": 1,
+            "name": "超寫意"
+          },
+          {
+            "placing": "3",
+            "no": 7,
+            "name": "巴閉精"
+          },
+          {
+            "placing": "4",
+            "no": 14,
+            "name": "八仟好運"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=10",
+        "captured_at": "2026-10-13T14:15:50+08:00",
+        "verified_date": "2026-10-01",
+        "verified_race": 10,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "verification_sha256": "b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107",
+        "dividends": {
+          "W": [
+            {
+              "combination": "3",
+              "dividend_hkd": 56.0
+            }
+          ],
+          "P": [
+            {
+              "combination": "3",
+              "dividend_hkd": 18.5
+            },
+            {
+              "combination": "1",
+              "dividend_hkd": 41.0
+            },
+            {
+              "combination": "7",
+              "dividend_hkd": 17.5
+            }
+          ],
+          "Q": [
+            {
+              "combination": "1,3",
+              "dividend_hkd": 352.0
+            }
+          ],
+          "QP": [
+            {
+              "combination": "1,3",
+              "dividend_hkd": 113.0
+            },
+            {
+              "combination": "3,7",
+              "dividend_hkd": 43.0
+            },
+            {
+              "combination": "1,7",
+              "dividend_hkd": 113.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "dividends_captured_at": "2026-10-13T19:19:54+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:15:38+08:00",
+      "lock_type": "historical_reconstruction",
+      "banker_initial": {
+        "status": "ready",
+        "date": "2026-10-01",
+        "venue": "ST",
+        "race": 10,
+        "as_of_race_no": 0,
+        "reason": "initial",
+        "numbers": [
+          7,
+          14,
+          9,
+          3,
+          13
+        ],
+        "verification": "published v1 賽前排位 label",
+        "source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~10?v=1",
+        "captured_at": "2026-10-15T09:19:20+08:00",
+        "record_type": "historical_initial_reconstruction"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          7,
+          14,
+          9,
+          4
+        ],
+        "fourth_source": "computer",
+        "initial_source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~10?v=1",
+        "generated_at": "2026-10-15T09:19:20+08:00",
+        "record_type": "historical_initial_reconstruction",
+        "timing_note": "按來源現存初版重建，非當日獨立封存"
+      },
+      "distance": 1400,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1400,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 9,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "placed": 8,
+            "starts": 17,
+            "rate": 0.47058823529411764
+          },
+          {
+            "no": 7,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 10,
+            "starts": 27,
+            "rate": 0.37037037037037035
+          },
+          {
+            "no": 13,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "placed": 8,
+            "starts": 23,
+            "rate": 0.34782608695652173
+          },
+          {
+            "no": 8,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "placed": 4,
+            "starts": 13,
+            "rate": 0.3076923076923077
+          },
+          {
+            "no": 14,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 7,
+            "starts": 24,
+            "rate": 0.2916666666666667
+          }
+        ],
+        "cutoff": "2026-10-01 R10",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "venue": "ST",
+      "race": 11,
+      "off": "2026-10-01T18:20:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "偵探傳奇",
+          "jockey": "田泰安",
+          "jockey_id": "TEK"
+        },
+        {
+          "no": 2,
+          "name": "精彩駿將",
+          "jockey": "何澤堯",
+          "jockey_id": "HCY"
+        },
+        {
+          "no": 3,
+          "name": "㩒住贏",
+          "jockey": "周俊樂",
+          "jockey_id": "CJE"
+        },
+        {
+          "no": 4,
+          "name": "金金小子",
+          "jockey": "霍宏聲",
+          "jockey_id": "FEL"
+        },
+        {
+          "no": 5,
+          "name": "赤海",
+          "jockey": "艾兆禮",
+          "jockey_id": "AA"
+        },
+        {
+          "no": 6,
+          "name": "超和平",
+          "jockey": "梁家俊",
+          "jockey_id": "LDE"
+        },
+        {
+          "no": 7,
+          "name": "神衝萬里",
+          "jockey": "鍾易禮",
+          "jockey_id": "CCY"
+        },
+        {
+          "no": 8,
+          "name": "辣得準",
+          "jockey": "艾道拿",
+          "jockey_id": "AVB"
+        },
+        {
+          "no": 9,
+          "name": "星運少爵",
+          "jockey": "班德禮",
+          "jockey_id": "BHW"
+        },
+        {
+          "no": 10,
+          "name": "利高八斗",
+          "jockey": "潘明輝",
+          "jockey_id": "PMF"
+        },
+        {
+          "no": 11,
+          "name": "勇者為皇",
+          "jockey": "潘頓",
+          "jockey_id": "PZ"
+        },
+        {
+          "no": 12,
+          "name": "飛龍在天",
+          "jockey": "巴度",
+          "jockey_id": "BA"
+        },
+        {
+          "no": 13,
+          "name": "千杯不醉",
+          "jockey": "希威森",
+          "jockey_id": "HEL"
+        },
+        {
+          "no": 14,
+          "name": "勇闖高峰",
+          "jockey": "楊明綸",
+          "jockey_id": "YML"
+        }
+      ],
+      "tips": {
+        "meiji": {
+          "status": "ready",
+          "horses": [
+            {
+              "no": 1,
+              "name": "偵探傳奇"
+            },
+            {
+              "no": 8,
+              "name": "辣得準"
+            },
+            {
+              "no": 4,
+              "name": "金金小子"
+            },
+            {
+              "no": 9,
+              "name": "星運少爵"
+            }
+          ],
+          "source": "https://racing.on.cc/racing/fav/20261001/rjfavf0201x0.html",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:48+08:00",
+          "record_type": "historical_backfill",
+          "source_sha256": "2c3161b1cc37754e93c5615658e03cc0eeb18728abd94ab4dc90d50f5c7edd18"
+        },
+        "ball": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:48+08:00",
+          "record_type": "historical_backfill"
+        },
+        "ma": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:48+08:00",
+          "record_type": "historical_backfill"
+        },
+        "computer": {
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261001",
+          "source_date": "2026-10-01",
+          "captured_at": "2026-10-13T14:15:48+08:00",
+          "record_type": "historical_backfill"
+        }
+      },
+      "index": {
+        "status": "ready",
+        "horses": [
+          {
+            "no": 6,
+            "name": "超和平"
+          },
+          {
+            "no": 10,
+            "name": "利高八斗"
+          },
+          {
+            "no": 8,
+            "name": "辣得準"
+          },
+          {
+            "no": 9,
+            "name": "星運少爵"
+          }
+        ],
+        "raceid": "20261001-ST-11",
+        "source": "https://data.66888.hk/runtime/cache/tips_new_oss_state.json",
+        "captured_at": "2026-10-13T14:15:48+08:00",
+        "record_type": "historical_backfill",
+        "source_updated_at": "2026-10-11T14:59:55+00:00",
+        "timing_note": "歷史存檔；未保存該場T−2取得時間"
+      },
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 6,
+            "name": "超和平"
+          },
+          {
+            "no": 10,
+            "name": "利高八斗"
+          }
+        ],
+        "main": [
+          "W",
+          "P"
+        ],
+        "optional": [],
+        "generated_at": "2026-10-13T14:15:48+08:00",
+        "reconstructed": true
+      },
+      "result": {
+        "horses": [
+          {
+            "placing": "1",
+            "no": 6,
+            "name": "超和平"
+          },
+          {
+            "placing": "2",
+            "no": 11,
+            "name": "勇者為皇"
+          },
+          {
+            "placing": "3",
+            "no": 13,
+            "name": "千杯不醉"
+          },
+          {
+            "placing": "4",
+            "no": 7,
+            "name": "神衝萬里"
+          }
+        ],
+        "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F01&Racecourse=ST&RaceNo=11",
+        "captured_at": "2026-10-13T14:16:00+08:00",
+        "verified_date": "2026-10-01",
+        "verified_race": 11,
+        "verification_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "verification_sha256": "b77a851ff08933507121e84173599b7f4d001848f883304eb9f657bb4814c107",
+        "dividends": {
+          "W": [
+            {
+              "combination": "6",
+              "dividend_hkd": 55.5
+            }
+          ],
+          "P": [
+            {
+              "combination": "6",
+              "dividend_hkd": 23.0
+            },
+            {
+              "combination": "11",
+              "dividend_hkd": 27.5
+            },
+            {
+              "combination": "13",
+              "dividend_hkd": 178.0
+            }
+          ],
+          "Q": [
+            {
+              "combination": "6,11",
+              "dividend_hkd": 240.5
+            }
+          ],
+          "QP": [
+            {
+              "combination": "6,11",
+              "dividend_hkd": 96.0
+            },
+            {
+              "combination": "6,13",
+              "dividend_hkd": 742.0
+            },
+            {
+              "combination": "11,13",
+              "dividend_hkd": 765.0
+            }
+          ]
+        },
+        "pool_status": {
+          "W": "settled",
+          "P": "settled",
+          "Q": "settled",
+          "QP": "settled"
+        },
+        "dividend_unit": "HKD per $10 stake, including principal",
+        "dividends_source": "https://racing.hkjc.com/zh-hk/local/information/resultsall?Racecourse=ST&racedate=2026/10/01",
+        "dividends_captured_at": "2026-10-13T19:19:54+08:00",
+        "withdrawn": []
+      },
+      "locked": true,
+      "record_type": "historical_backfill",
+      "backfilled_at": "2026-10-13T14:15:48+08:00",
+      "lock_type": "historical_reconstruction",
+      "banker_initial": {
+        "status": "ready",
+        "date": "2026-10-01",
+        "venue": "ST",
+        "race": 11,
+        "as_of_race_no": 0,
+        "reason": "initial",
+        "numbers": [
+          10,
+          9,
+          8,
+          11,
+          1
+        ],
+        "verification": "published v1 賽前排位 label",
+        "source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~11?v=1",
+        "captured_at": "2026-10-15T09:19:20+08:00",
+        "record_type": "historical_initial_reconstruction"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          10,
+          9,
+          8,
+          1
+        ],
+        "fourth_source": "meiji",
+        "initial_source": "https://hkjc-banker-live.l-jackylau1.workers.dev/race/2026-10-01~ST~11?v=1",
+        "generated_at": "2026-10-15T09:19:20+08:00",
+        "record_type": "historical_initial_reconstruction",
+        "timing_note": "按來源現存初版重建，非當日獨立封存"
+      },
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "A",
+      "scratched": [],
+      "jockey_top5": {
+        "status": "ready",
+        "year": 2026,
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "A",
+        "riders": [
+          {
+            "no": 11,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "placed": 15,
+            "starts": 28,
+            "rate": 0.5357142857142857
+          },
+          {
+            "no": 5,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "placed": 9,
+            "starts": 29,
+            "rate": 0.3103448275862069
+          },
+          {
+            "no": 4,
+            "jockey": "霍宏聲",
+            "jockey_id": "FEL",
+            "placed": 3,
+            "starts": 11,
+            "rate": 0.2727272727272727
+          },
+          {
+            "no": 1,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "placed": 8,
+            "starts": 31,
+            "rate": 0.25806451612903225
+          },
+          {
+            "no": 2,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "placed": 5,
+            "starts": 20,
+            "rate": 0.25
+          }
+        ],
+        "cutoff": "2026-10-01 R11",
+        "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      }
+    }
+  ],
+  "notice": "歷史補錄：按來源現存日期存檔重建，並非當日即時保存；沒有驗證賽前發佈版本；部分指數來源時間在公布開跑時間之後，不能視作T−2實盤回測。缺失指數馬不會用其他AI選馬代替。"
+}
