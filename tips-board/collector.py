@@ -348,8 +348,18 @@ def reconcile(store):
             if (store.read('latest.json') or {}).get('date')==m['date']:store.write('latest.json',m)
     if store.publish:store.push()
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('command',choices=['bootstrap','dispatch','run','reconcile']);p.add_argument('--data',default='tips-board/data');p.add_argument('--publish',action='store_true');p.add_argument('--date');p.add_argument('--mode',choices=['tips','live','manual']);a=p.parse_args();s=Store(a.data,a.publish)
+    p=argparse.ArgumentParser();p.add_argument('command',choices=['bootstrap','dispatch','run','reconcile','backfill-four']);p.add_argument('--data',default='tips-board/data');p.add_argument('--publish',action='store_true');p.add_argument('--date');p.add_argument('--mode',choices=['tips','live','manual']);a=p.parse_args();s=Store(a.data,a.publish)
     if a.command=='bootstrap':print(json.dumps(initialize(s),ensure_ascii=False)[:500])
     elif a.command=='dispatch':dispatch(s)
     elif a.command=='reconcile':reconcile(s)
+    elif a.command=='backfill-four':
+        from sha_tin_four import backfill_four
+        paths=[s.path/(a.date+'.json')] if a.date else sorted(s.path.glob('20??-??-??.json'))
+        for path in paths:
+            m=s.read(path.name)
+            if m['venue']!='ST' or m.get('status')!='archived':continue
+            backfill_four(m,request,stamp);s.write(path.name,m)
+            if (s.read('latest.json') or {}).get('date')==m['date']:s.write('latest.json',m)
+            print(m['date'],sum(r.get('sha_tin_four',{}).get('status')=='ready' for r in m['races']),'/',len(m['races']),flush=True)
+        if s.publish:s.push()
     else:run(s,a.date,a.mode)

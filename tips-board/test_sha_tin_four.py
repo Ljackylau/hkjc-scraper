@@ -1,5 +1,6 @@
 import copy,unittest
-from sha_tin_four import choose_four,parse_initial,capture_four
+from sha_tin_four import choose_four,parse_initial,capture_four,backfill_four
+from unittest.mock import patch
 from datetime import datetime
 class Four(unittest.TestCase):
  def setUp(self):
@@ -24,6 +25,14 @@ class Four(unittest.TestCase):
   self.tip('ball',[8,9,10,11]);self.assertEqual(len(choose_four(self.r)['numbers']),4);self.r['venue']='HV';self.assertIsNone(choose_four(self.r))
  def test_insufficient_field_no_partial_output(self):
   self.r['horses']=self.r['horses'][:2];self.assertEqual(choose_four(self.r)['numbers'],[])
+ def test_historical_reconstruction_preserves_original(self):
+  self.tip('ball',[13]);self.r['locked']=True;self.r['selection']={'horses':[{'no':7}]};self.r['result']={'horses':[{'no':7}], 'withdrawn':[]}
+  before=copy.deepcopy(self.r);m={'date':self.r['date'],'venue':'ST','races':[self.r]}
+  with patch('sha_tin_four.parse_initial',return_value=self.r['banker_initial']):backfill_four(m,lambda u:'initial html',lambda:'captured')
+  self.assertEqual(self.r['sha_tin_four']['numbers'],[12,1,4,13])
+  self.assertEqual(self.r['sha_tin_four']['record_type'],'historical_initial_reconstruction')
+  for key,value in before.items():
+   if key not in ('banker_initial','sha_tin_four'):self.assertEqual(self.r[key],value)
  def test_preoff_lock(self):
   m={'date':self.r['date'],'venue':'ST','races':[self.r]};self.r['sha_tin_four']={'numbers':[1,2,3,4]};self.r['locked']=True;before=copy.deepcopy(self.r)
   capture_four(m,lambda u: (_ for _ in ()).throw(Exception('must not fetch')),lambda:'now',lambda:datetime.fromisoformat('2026-10-19T12:00:00+08:00'));self.assertEqual(self.r,before)

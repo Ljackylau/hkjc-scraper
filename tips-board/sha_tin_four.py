@@ -73,3 +73,25 @@ def capture_four(meeting,request,stamp,now):
             r['sha_tin_four']={**choose_four(r),'generated_at':stamp()}
         except Exception as e:
             r['sha_tin_four']={'status':'pending','numbers':[],'error':str(e)}
+
+def backfill_four(meeting,request,stamp):
+    """Add a separate historical indicator; never rewrite original bets/results."""
+    import concurrent.futures
+    if meeting['venue']!='ST':return
+    def get(r):
+        url=f'{BANKER}/race/{meeting["date"]}~ST~{r["race"]}?v=1'
+        try:
+            initial={**parse_initial(request(url),meeting['date'],r['race']),
+                     'captured_at':stamp(),'record_type':'historical_initial_reconstruction'}
+            # Only official withdrawal identity is used, never finishing order/odds.
+            context={**r,'banker_initial':initial,
+                     'scratched':list(set(r.get('scratched',[]))|set((r.get('result') or {}).get('withdrawn',[])))}
+            indicator={**choose_four(context),'generated_at':stamp(),
+                       'record_type':'historical_initial_reconstruction',
+                       'timing_note':'按來源現存初版重建，非當日獨立封存'}
+            return r,initial,indicator
+        except Exception as e:return r,None,{'status':'pending','numbers':[],'error':str(e),'record_type':'historical_initial_reconstruction'}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+        for r,initial,indicator in pool.map(get,meeting['races']):
+            if initial:r['banker_initial']=initial
+            r['sha_tin_four']=indicator

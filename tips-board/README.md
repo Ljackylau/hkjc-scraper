@@ -84,4 +84,4 @@ contains exactly four saddle numbers. Does not create betting instructions.
 Star expert identities use professional_list IDs (including AI rating ID
 65e9600b960d550012a89716), and the expertTips system, not notes or HKJC ratings.
 Collector captures only pre-off and preserves locked races. Declared-field
-refresh handles pre-off withdrawals. Existing archived races are not backfilled.
+refresh handles pre-off withdrawals. Archived races can be reconstructed separately with `backfill-four`. This only adds initial-card/indicator fields, preserves original selections, locks and results, and marks the new indicator as historical reconstruction, not an independently sealed pre-off receipt. Future meetings use the live pre-off capture path.
