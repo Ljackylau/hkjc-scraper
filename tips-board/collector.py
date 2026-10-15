@@ -8,6 +8,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from cryptography.hazmat.primitives.ciphers import Cipher,algorithms,modes
 from cryptography.hazmat.primitives.padding import PKCS7
+from sha_tin_four import capture_four, PRO_IDS
 HK=ZoneInfo('Asia/Hong_Kong')
 ONCC='https://racing.on.cc/racing/fav/current/rjfavf0201x0.html'
 ST='https://racing.stheadline.com/api'
@@ -33,14 +34,15 @@ def parse_card(body):
     d=re.search(r'(\d{4})年(\d+)月(\d+)日',text);n=re.search(r'第\s*(\d+)\s*場',text);clock=re.search(r'\b(\d{1,2}:\d{2})\b',text)
     if not (d and n and clock):raise ValueError('Official race card date/time missing')
     date=f'{int(d[1]):04}-{int(d[2]):02}-{int(d[3]):02}';venue='HV' if '跑馬地' in text else 'ST' if '沙田' in text else None
-    horses=[]
+    horses=[];scratched=[]
     for row in soup.select('#racecardlist tr'):
         cells=row.find_all('td',recursive=False)
         if len(cells)>=4 and cells[0].get_text(strip=True).isdigit():
             horses.append({'no':int(cells[0].get_text(strip=True)),'name':cells[3].get_text(' ',strip=True)})
+            if re.search(r'退出|WITHDRAWN|SCRATCHED',row.get_text(' ',strip=True),re.I):scratched.append(int(cells[0].get_text(strip=True)))
     if not venue or len(horses)<4:raise ValueError('Official declared field incomplete')
     off=datetime.fromisoformat(date+'T'+clock[1]+':00').replace(tzinfo=HK).isoformat()
-    return {'date':date,'venue':venue,'race':int(n[1]),'off':off,'horses':horses}
+    return {'date':date,'venue':venue,'race':int(n[1]),'off':off,'horses':horses,'scratched':scratched}
 def calendar():
     body=request(CARD);one=parse_card(body);count=max([1]+[int(n) for n in re.findall(r'RaceNo=(\d+)',body,re.I)])
     def get(n):
@@ -88,9 +90,10 @@ def collect_tips(meeting):
     if meeting.get('tips_checked_at'):return
     meeting['tips_checked_at']=stamp()
     try:
-        date,m=parse_meiji(request(ONCC),meeting['date'])
+        meiji_url='https://racing.on.cc/racing/fav/'+meeting['date'].replace('-','')+'/rjfavf0201x0.html'
+        date,m=parse_meiji(request(meiji_url),meeting['date'])
         for r in meeting['races']:
-            r['tips']['meiji']={'status':'ready' if r['race'] in m else 'stale' if date!=meeting['date'] else 'error','source_date':date,'source':ONCC,'captured_at':stamp(),'horses':safe_horses(m.get(r['race'],[]),r)}
+            r['tips']['meiji']={'status':'ready' if r['race'] in m else 'stale' if date!=meeting['date'] else 'error','source_date':date,'source':meiji_url,'captured_at':stamp(),'horses':safe_horses(m.get(r['race'],[]),r)}
     except Exception as e:
         for r in meeting['races']:r['tips']['meiji']={'status':'error','horses':[],'error':str(e)}
     try:
@@ -102,7 +105,7 @@ def collect_tips(meeting):
             if datetime.fromisoformat(entry['raceDate'].replace('Z','+00:00')).astimezone(HK).date().isoformat()!=meeting['date'] or entry['raceNo']!=r['race']:raise ValueError('Star entry date/race mismatch')
             lookup={x['jcIdHorse']:x for x in entry['raceEntries'] if not x.get('standby')}
             for key,name in EXPERTS.items():
-                expert=next((x for x in experts if x.get('expert',{}).get('name')==name),None)
+                expert=next((x for x in experts if (str(x.get('expert',{}).get('_id',x.get('expert',{}).get('id','')))==PRO_IDS[key] if key in PRO_IDS else x.get('expert',{}).get('name')==name)),None)
                 if expert is None:r['tips'][key]={'status':'error','horses':[],'error':'Expert missing'};continue
                 tip=next((t for t in expert['tipsList'] if t['raceNo']==r['race']),None)
                 ids=[tip.get('jcIdHorse'+str(i)) for i in range(1,5)] if tip else []
@@ -117,6 +120,7 @@ def collect_tips(meeting):
             for key in EXPERTS:
                 if r['tips'][key]['status']=='pending':r['tips'][key]={'status':'error','horses':[],'error':str(e)}
     for r in meeting['races']:choose(r)
+    capture_four(meeting,request,stamp,now)
 
 def choose(r):
     if r.get('locked'):return
@@ -274,6 +278,7 @@ def collect_manual(m):
         if now()>=datetime.fromisoformat(r['off'])+timedelta(minutes=3) and (not r['result'] or not r['result'].get('dividends')):
             try:r['result']=official_result(m,r)
             except Exception as e:errors.append({'race':r['race'],'source':'result','error':str(e)})
+    capture_four(m,request,stamp,now)
     m['manual_checked_at']=stamp()
     m.setdefault('manual_checks',[]).append({'started_at':started,'finished_at':m['manual_checked_at'],'errors':errors})
 
@@ -289,7 +294,7 @@ def run(store,date,mode):
         while now()<due:time.sleep(min(20,max(0,(due-now()).total_seconds())))
         if now()>=datetime.fromisoformat(m['races'][0]['off']):raise ValueError('Tips cutoff missed; refusing post-race collection')
         collect_tips(m);store.save(m);return
-    shell=None;end=time.monotonic()+335*60;last_publish=0;result_try={};calendar_try={}
+    shell=None;end=time.monotonic()+335*60;last_publish=0;result_try={};calendar_try={};four_try=0
     while time.monotonic()<end:
         cycle_start=time.monotonic();t=now();changed=False;m['heartbeat']=t.isoformat();m['status']='live'
         if any(datetime.fromisoformat(r['off'])-timedelta(minutes=3)<=t<datetime.fromisoformat(r['off']) and r['index']['status']!='ready' for r in m['races']):
@@ -297,6 +302,10 @@ def run(store,date,mode):
                 if not shell:shell=request('https://66888.hk/raceid/'+date.replace('-','')+'-'+m['venue']+'-01')
                 before=json.dumps([r['index'] for r in m['races']]);capture_index(m,shell);changed|=before!=json.dumps([r['index'] for r in m['races']]);m['index_error']=None
             except Exception as e:m['index_error']=str(e)
+        if m['venue']=='ST' and time.monotonic()-four_try>=90:
+            four_try=time.monotonic()
+            capture_four(m,request,stamp,now)
+            t=now()
         # Respect single preflight check. Live mode never silently fetches the experts again.
         for r in m['races']:
             off=datetime.fromisoformat(r['off']);n=r['race']
@@ -304,7 +313,12 @@ def run(store,date,mode):
                 calendar_try[n]=time.monotonic()
                 try:
                     q=urllib.parse.urlencode({'racedate':m['date'].replace('-','/'),'Racecourse':m['venue'],'RaceNo':n});fresh=parse_card(request(CARD+'?'+q))
-                    if (fresh['date'],fresh['venue'],fresh['race'])==(m['date'],m['venue'],n) and fresh['off']!=r['off']:r['off']=fresh['off'];off=datetime.fromisoformat(r['off']);changed=True
+                    if (fresh['date'],fresh['venue'],fresh['race'])==(m['date'],m['venue'],n):
+                        if fresh['off']!=r['off']:r['off']=fresh['off'];off=datetime.fromisoformat(r['off']);changed=True
+                        r['horses']=fresh['horses'];r['scratched']=fresh.get('scratched',[])
+                        if m['venue']=='ST':
+                            from sha_tin_four import choose_four
+                            r['sha_tin_four']=choose_four(r)
                 except Exception as e:r['schedule_error']=str(e)
             if t>=off and not r['locked']:
                 r['locked']=True;r['locked_at']=stamp();changed=True

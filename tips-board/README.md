@@ -62,3 +62,26 @@ Overrides live in browser localStorage per date/venue, not in the public GitHub 
 ## Formula reference columns
 
 賽馬方程式key and 賽馬方程式real are free-text reference fields (up to 200 characters), entered directly in the latest table. Each keystroke saves to separate browser storage per meeting and race. They do not alter tips, H, selections or settlement, and can be edited after off because they are references only. Polling does not replace the input while typing. History displays the locally saved reference text, escaped as text. These fields share the existing local-only/device limitation.
+
+
+## Sha Tin initial-card four (2026-10-15)
+
+Independent `sha_tin_four` column, only ST. The banker site's initial H=0 is
+**not** the expert-count score. Fetch `/race/DATE~ST~R?v=1`; require the published
+`v1賽前排位` label and matching date/venue/race. That public label is the available
+verification of initial/as-of-zero; the site HTML does not expose the database
+`reason`/`as_of_race_no` columns themselves. Never parse the current/latest card
+or the 同程檔位排序/table ordering. Preserve that captured five-pick initial list.
+
+Take its first three active distinct runners. Fourth: the first published
+source with any picks in ball → ma → computer → meiji order; take its first
+active nonduplicate in published order. If that source has no eligible distinct
+pick, use initial leg3 then leg4 (never a lower-priority tipster). Remove known
+withdrawals and shift along the same list. Missing/failed higher sources are
+unknown, not absent; emit pending with no partial list. Ready output always
+contains exactly four saddle numbers. Does not create betting instructions.
+
+Star expert identities use professional_list IDs (including AI rating ID
+65e9600b960d550012a89716), and the expertTips system, not notes or HKJC ratings.
+Collector captures only pre-off and preserves locked races. Declared-field
+refresh handles pre-off withdrawals. Existing archived races are not backfilled.
