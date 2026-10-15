@@ -92,3 +92,26 @@ canonical horse names, labeled 膽/腳1/腳2/腳3/腳4, for both ST and HV. It u
 `banker_initial` only, never table order or 同程檔位排序. The separate four-number
 indicator remains ST-only. Live pre-off capture now saves initial cards for
 both venues; historical receipts remain explicitly marked as reconstruction.
+
+
+## 2026 exact-condition jockey top 5
+
+The column immediately after the initial banker list ranks only riders declared
+in the target race by top-three finishes / actual starts since 2026-01-01.
+Venue, surface, distance and rail must all match. AWT is its own track/rail.
+No minimum sample exclusion and no fallback to other rails; zero starts are
+unranked, and samples below 15 are labeled. Ties use starts descending then
+saddle number ascending. Withdrawals/TNP do not count; DNF counts as a start;
+dead-heat positions count at their published numeric placing.
+
+`records/jockey-2026.json` holds the official full-field results cache (including
+stable HKJC jockey IDs). Only dates before the target date, or earlier races
+at the same meeting, can contribute. The target result and later races cannot
+contribute. Current official card refresh handles rider changes/withdrawals,
+and the rank locks at the off. Archived rankings are explicitly reconstructed
+from final official starters, not represented as sealed pre-race receipts.
+
+`python tips-board/collector.py refresh-jockeys --data data/records` rebuilds the
+historical column and prepares the latest meeting without changing betting
+selections, expert tips or results. The collector updates the durable results
+cache on subsequent meetings; no calendar-2025 history is used.

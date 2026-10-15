@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 from cryptography.hazmat.primitives.ciphers import Cipher,algorithms,modes
 from cryptography.hazmat.primitives.padding import PKCS7
 from sha_tin_four import capture_four, PRO_IDS
+import jockey_top5
 HK=ZoneInfo('Asia/Hong_Kong')
 ONCC='https://racing.on.cc/racing/fav/current/rjfavf0201x0.html'
 ST='https://racing.stheadline.com/api'
@@ -38,11 +39,13 @@ def parse_card(body):
     for row in soup.select('#racecardlist tr'):
         cells=row.find_all('td',recursive=False)
         if len(cells)>=4 and cells[0].get_text(strip=True).isdigit():
-            horses.append({'no':int(cells[0].get_text(strip=True)),'name':cells[3].get_text(' ',strip=True)})
+            horses.append({'no':int(cells[0].get_text(strip=True)),'name':cells[3].get_text(' ',strip=True),**jockey_top5.rider(row)})
             if re.search(r'退出|WITHDRAWN|SCRATCHED',row.get_text(' ',strip=True),re.I):scratched.append(int(cells[0].get_text(strip=True)))
     if not venue or len(horses)<4:raise ValueError('Official declared field incomplete')
     off=datetime.fromisoformat(date+'T'+clock[1]+':00').replace(tzinfo=HK).isoformat()
-    return {'date':date,'venue':venue,'race':int(n[1]),'off':off,'horses':horses,'scratched':scratched}
+    try:ctx=jockey_top5.context(text)
+    except ValueError:ctx={}
+    return {'date':date,'venue':venue,'race':int(n[1]),'off':off,'horses':horses,'scratched':scratched,**ctx}
 def calendar():
     body=request(CARD);one=parse_card(body);count=max([1]+[int(n) for n in re.findall(r'RaceNo=(\d+)',body,re.I)])
     def get(n):
@@ -225,13 +228,29 @@ class Store:
             git('pull','--rebase','origin','tips-data');time.sleep(2)
         raise RuntimeError('Could not publish data branch')
 
+def prepare_jockeys(store,m):
+    history=jockey_top5.update_history(store,request,now().date().isoformat())
+    for r in m['races']:
+        if r.get('locked'):continue
+        if not r.get('rail') or any(not h.get('jockey_id') for h in r['horses'] if h['no'] not in r.get('scratched',[])):
+            try:
+                q=urllib.parse.urlencode({'racedate':m['date'].replace('-','/'),'Racecourse':m['venue'],'RaceNo':r['race']})
+                fresh=parse_card(request(CARD+'?'+q))
+                if (fresh['date'],fresh['venue'],fresh['race'])!=(m['date'],m['venue'],r['race']):raise ValueError('Official card mismatch')
+                for k in ('distance','track','rail','horses','scratched'):
+                    if k in fresh:r[k]=fresh[k]
+            except Exception as e:r['jockey_error']=str(e)
+        r['jockey_top5']=jockey_top5.rank(m,r,history)
+    return history
+
 def initialize(store):
     old=store.read('latest.json')
     if old and old['date']==now().date().isoformat() and now()<datetime.fromisoformat(old['races'][-1]['off'])+timedelta(hours=1):return old
     c=calendar()
     if c['date']<now().date().isoformat():raise ValueError('Official calendar is stale')
     m=store.read(c['date']+'.json') or empty_meeting(c)
-    if not old or old['date']!=m['date']:store.save(m)
+    if not old or old['date']!=m['date']:
+        prepare_jockeys(store,m);store.save(m)
     return m
 
 def dispatch(store):
@@ -286,6 +305,7 @@ def run(store,date,mode):
     if date=='latest':date=(store.read('latest.json') or {})['date']
     m=store.read(date+'.json')
     if not m:raise ValueError('Meeting not initialized')
+    jockey_history=prepare_jockeys(store,m)
     if mode=='manual':
         if (store.read('latest.json') or {}).get('date')!=date:raise ValueError('Manual collection is restricted to the latest meeting')
         collect_manual(m);store.save(m);return
@@ -305,6 +325,7 @@ def run(store,date,mode):
         if time.monotonic()-four_try>=90:
             four_try=time.monotonic()
             capture_four(m,request,stamp,now)
+            jockey_history=prepare_jockeys(store,m)
             t=now()
         # Respect single preflight check. Live mode never silently fetches the experts again.
         for r in m['races']:
@@ -316,6 +337,9 @@ def run(store,date,mode):
                     if (fresh['date'],fresh['venue'],fresh['race'])==(m['date'],m['venue'],n):
                         if fresh['off']!=r['off']:r['off']=fresh['off'];off=datetime.fromisoformat(r['off']);changed=True
                         r['horses']=fresh['horses'];r['scratched']=fresh.get('scratched',[])
+                        for k in ('distance','track','rail'):
+                            if k in fresh:r[k]=fresh[k]
+                        r['jockey_top5']=jockey_top5.rank(m,r,jockey_history)
                         if m['venue']=='ST':
                             from sha_tin_four import choose_four
                             r['sha_tin_four']=choose_four(r)
@@ -348,10 +372,13 @@ def reconcile(store):
             if (store.read('latest.json') or {}).get('date')==m['date']:store.write('latest.json',m)
     if store.publish:store.push()
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('command',choices=['bootstrap','dispatch','run','reconcile','backfill-four']);p.add_argument('--data',default='tips-board/data');p.add_argument('--publish',action='store_true');p.add_argument('--date');p.add_argument('--mode',choices=['tips','live','manual']);a=p.parse_args();s=Store(a.data,a.publish)
+    p=argparse.ArgumentParser();p.add_argument('command',choices=['bootstrap','dispatch','run','reconcile','backfill-four','refresh-jockeys']);p.add_argument('--data',default='tips-board/data');p.add_argument('--publish',action='store_true');p.add_argument('--date');p.add_argument('--mode',choices=['tips','live','manual']);a=p.parse_args();s=Store(a.data,a.publish)
     if a.command=='bootstrap':print(json.dumps(initialize(s),ensure_ascii=False)[:500])
     elif a.command=='dispatch':dispatch(s)
     elif a.command=='reconcile':reconcile(s)
+    elif a.command=='refresh-jockeys':
+        jockey_top5.rebuild(s,request,now().date().isoformat(),prepare_jockeys)
+        if s.publish:s.push()
     elif a.command=='backfill-four':
         from sha_tin_four import backfill_four
         paths=[s.path/(a.date+'.json')] if a.date else sorted(s.path.glob('20??-??-??.json'))
