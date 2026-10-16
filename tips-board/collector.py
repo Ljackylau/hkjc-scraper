@@ -1,4 +1,4 @@
-"""Date-validated expert tips, pre-off index capture and official results.
+"""Date-validated expert tips and prior-day draw history; no live index/results.
 All persisted timestamps use Asia/Hong_Kong. No retrospective index selection.
 """
 import argparse,copy,base64,concurrent.futures,hashlib,json,os,re,subprocess,time,urllib.parse,urllib.request
@@ -11,6 +11,7 @@ from cryptography.hazmat.primitives.padding import PKCS7
 from sha_tin_four import capture_four as capture_initial, PRO_IDS
 from sha_tin_patterns import choose_st
 import jockey_top5
+import draw_stats
 HK=ZoneInfo('Asia/Hong_Kong')
 ONCC='https://racing.on.cc/racing/fav/current/rjfavf0201x0.html'
 ST='https://racing.stheadline.com/api'
@@ -40,7 +41,7 @@ def parse_card(body):
     for row in soup.select('#racecardlist tr'):
         cells=row.find_all('td',recursive=False)
         if len(cells)>=4 and cells[0].get_text(strip=True).isdigit():
-            horses.append({'no':int(cells[0].get_text(strip=True)),'name':cells[3].get_text(' ',strip=True),**jockey_top5.rider(row)})
+            horses.append({'no':int(cells[0].get_text(strip=True)),'name':cells[3].get_text(' ',strip=True),**jockey_top5.rider(row),**draw_stats.card_draw(row)})
             if re.search(r'退出|WITHDRAWN|SCRATCHED',row.get_text(' ',strip=True),re.I):scratched.append(int(cells[0].get_text(strip=True)))
     if not venue or len(horses)<4:raise ValueError('Official declared field incomplete')
     off=datetime.fromisoformat(date+'T'+clock[1]+':00').replace(tzinfo=HK).isoformat()
@@ -224,7 +225,7 @@ class Store:
         p=self.path/name;p.parent.mkdir(parents=True,exist_ok=True);tmp=p.with_suffix('.tmp');tmp.write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n');tmp.replace(p)
     def save(self,m):
         m['updated_at']=stamp();self.write(m['date']+'.json',m);self.write('latest.json',m)
-        hist=self.read('history.json',{'meetings':[]});row={'date':m['date'],'venue':m['venue'],'status':m['status'],'complete':all(r['result'] for r in m['races'])}
+        hist=self.read('history.json',{'meetings':[]});row={'date':m['date'],'venue':m['venue'],'status':m['status'],'complete':all(r['result'] for r in m['races']),'results_enabled':m.get('collection_policy',{}).get('results',True)}
         if m['status']=='archived':
             hist['meetings']=[x for x in hist['meetings'] if x['date']!=m['date']]+[row];hist['meetings'].sort(key=lambda x:x['date'],reverse=True);self.write('history.json',hist)
         if self.publish:self.push()
@@ -239,19 +240,19 @@ class Store:
             git('pull','--rebase','origin','tips-data');time.sleep(2)
         raise RuntimeError('Could not publish data branch')
 
-def prepare_jockeys(store,m):
-    history=jockey_top5.update_history(store,request,now().date().isoformat())
+def prepare_draws(store,m,history=None):
+    if history is None:history=draw_stats.update_history(store,request,min(m['date'],now().date().isoformat()))['races']
     for r in m['races']:
         if r.get('locked'):continue
-        if not r.get('rail') or any(not h.get('jockey_id') for h in r['horses'] if h['no'] not in r.get('scratched',[])):
+        if not r.get('rail') or any(not h.get('draw') for h in r['horses'] if h['no'] not in r.get('scratched',[])):
             try:
                 q=urllib.parse.urlencode({'racedate':m['date'].replace('-','/'),'Racecourse':m['venue'],'RaceNo':r['race']})
                 fresh=parse_card(request(CARD+'?'+q))
                 if (fresh['date'],fresh['venue'],fresh['race'])!=(m['date'],m['venue'],r['race']):raise ValueError('Official card mismatch')
                 for k in ('distance','track','rail','horses','scratched'):
                     if k in fresh:r[k]=fresh[k]
-            except Exception as e:r['jockey_error']=str(e)
-        r['jockey_top5']=jockey_top5.rank(m,r,history)
+            except Exception as e:r['draw_error']=str(e)
+        r['draw_top5']=draw_stats.rank(m,r,history)
     return history
 
 def initialize(store):
@@ -261,7 +262,7 @@ def initialize(store):
     if c['date']<now().date().isoformat():raise ValueError('Official calendar is stale')
     m=store.read(c['date']+'.json') or empty_meeting(c)
     if not old or old['date']!=m['date']:
-        prepare_jockeys(store,m);store.save(m)
+        prepare_draws(store,m);store.save(m)
     return m
 
 def dispatch(store):
@@ -301,13 +302,6 @@ def collect_manual(m):
                 errors.append({'race':r['race'],'source':key,'status':tip['status'],'source_date':tip.get('source_date'),'error':tip.get('error')})
                 if r['tips'][key]['status'] not in ('ready','absent'):r['tips'][key]=tip
         choose(r)
-    if any(not r.get('locked') and datetime.fromisoformat(r['off'])-timedelta(minutes=3)<=now()<datetime.fromisoformat(r['off']) and r['index']['status']!='ready' for r in m['races']):
-        try:capture_index(m,request('https://66888.hk/raceid/'+m['date'].replace('-','')+'-'+m['venue']+'-01'))
-        except Exception as e:errors.append({'source':'index','error':str(e)})
-    for r in m['races']:
-        if now()>=datetime.fromisoformat(r['off'])+timedelta(minutes=3) and (not r['result'] or not r['result'].get('dividends')):
-            try:r['result']=official_result(m,r)
-            except Exception as e:errors.append({'race':r['race'],'source':'result','error':str(e)})
     capture_four(m,request,stamp,now)
     m['manual_checked_at']=stamp()
     m.setdefault('manual_checks',[]).append({'started_at':started,'finished_at':m['manual_checked_at'],'errors':errors})
@@ -316,7 +310,10 @@ def run(store,date,mode):
     if date=='latest':date=(store.read('latest.json') or {})['date']
     m=store.read(date+'.json')
     if not m:raise ValueError('Meeting not initialized')
-    jockey_history=prepare_jockeys(store,m)
+    m['collection_policy']={'index':False,'results':False,'draw_start_date':draw_stats.START}
+    for r in m['races']:
+        if r['index']['status']!='ready':r['index']['status']='disabled'
+    draw_history=prepare_draws(store,m)
     if mode=='manual':
         if (store.read('latest.json') or {}).get('date')!=date:raise ValueError('Manual collection is restricted to the latest meeting')
         collect_manual(m);store.save(m);return
@@ -325,18 +322,13 @@ def run(store,date,mode):
         while now()<due:time.sleep(min(20,max(0,(due-now()).total_seconds())))
         if now()>=datetime.fromisoformat(m['races'][0]['off']):raise ValueError('Tips cutoff missed; refusing post-race collection')
         collect_tips(m);store.save(m);return
-    shell=None;end=time.monotonic()+335*60;last_publish=0;result_try={};calendar_try={};four_try=0
+    end=time.monotonic()+335*60;last_publish=0;calendar_try={};four_try=0
     while time.monotonic()<end:
         cycle_start=time.monotonic();t=now();changed=False;m['heartbeat']=t.isoformat();m['status']='live'
-        if any(datetime.fromisoformat(r['off'])-timedelta(minutes=3)<=t<datetime.fromisoformat(r['off']) and r['index']['status']!='ready' for r in m['races']):
-            try:
-                if not shell:shell=request('https://66888.hk/raceid/'+date.replace('-','')+'-'+m['venue']+'-01')
-                before=json.dumps([r['index'] for r in m['races']]);capture_index(m,shell);changed|=before!=json.dumps([r['index'] for r in m['races']]);m['index_error']=None
-            except Exception as e:m['index_error']=str(e)
         if time.monotonic()-four_try>=90:
             four_try=time.monotonic()
             capture_four(m,request,stamp,now)
-            jockey_history=prepare_jockeys(store,m)
+            prepare_draws(store,m,draw_history)
             t=now()
         # Respect single preflight check. Live mode never silently fetches the experts again.
         for r in m['races']:
@@ -350,7 +342,7 @@ def run(store,date,mode):
                         r['horses']=fresh['horses'];r['scratched']=fresh.get('scratched',[])
                         for k in ('distance','track','rail'):
                             if k in fresh:r[k]=fresh[k]
-                        r['jockey_top5']=jockey_top5.rank(m,r,jockey_history)
+                        r['draw_top5']=draw_stats.rank(m,r,draw_history)
                         choose(r)
                         if m['venue']=='ST':
                             from sha_tin_four import choose_four
@@ -358,38 +350,24 @@ def run(store,date,mode):
                 except Exception as e:r['schedule_error']=str(e)
             if t>=off and not r['locked']:
                 r['locked']=True;r['locked_at']=stamp();changed=True
-                if r['index']['status']!='ready':r['index']['status']='missed'
-            if t>=off+timedelta(minutes=3) and not r['result'] and time.monotonic()-result_try.get(n,0)>=60:
-                result_try[n]=time.monotonic()
-                try:r['result']=official_result(m,r);r.pop('result_error',None);changed=True
-                except Exception as e:r['result_error']=str(e)
+                if r['index']['status']!='ready':r['index']['status']='disabled'
         last=datetime.fromisoformat(m['races'][-1]['off'])
-        if all(r['result'] for r in m['races']) or t>=last+timedelta(minutes=45):m['status']='archived';store.save(m);return
+        if t>=last+timedelta(minutes=3):m['status']='archived';store.save(m);return
         if changed or time.monotonic()-last_publish>=60:store.save(m);last_publish=time.monotonic()
         time.sleep(max(0,20-(time.monotonic()-cycle_start)))
     m['status']='archived' if now()>=datetime.fromisoformat(m['races'][-1]['off'])+timedelta(minutes=3) else 'interrupted';store.save(m)
 
 def reconcile(store):
-    for path in store.path.glob('20??-??-??.json'):
-        m=store.read(path.name)
-        if not (now()-timedelta(days=3)).date().isoformat()<=m['date']<=now().date().isoformat():continue
-        changed=False
-        for r in m['races']:
-            if (not r['result'] or not r['result'].get('dividends')) and now()>=datetime.fromisoformat(r['off'])+timedelta(minutes=3):
-                try:r['result']=official_result(m,r);changed=True
-                except Exception:pass
-        if changed:
-            m['status']='archived';store.write(path.name,m)
-            hist=store.read('history.json',{'meetings':[]});hist['meetings']=[x for x in hist['meetings'] if x['date']!=m['date']]+[{'date':m['date'],'venue':m['venue'],'status':'archived','complete':all(r['result'] for r in m['races'])}];hist['meetings'].sort(key=lambda x:x['date'],reverse=True);store.write('history.json',hist)
-            if (store.read('latest.json') or {}).get('date')==m['date']:store.write('latest.json',m)
-    if store.publish:store.push()
+    # Legacy entry point retained for existing workflow references. Result collection is disabled.
+    return
+
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('command',choices=['bootstrap','dispatch','run','reconcile','backfill-four','refresh-jockeys']);p.add_argument('--data',default='tips-board/data');p.add_argument('--publish',action='store_true');p.add_argument('--date');p.add_argument('--mode',choices=['tips','live','manual']);a=p.parse_args();s=Store(a.data,a.publish)
+    p=argparse.ArgumentParser();p.add_argument('command',choices=['bootstrap','dispatch','run','reconcile','backfill-four','refresh-jockeys','refresh-draws']);p.add_argument('--data',default='tips-board/data');p.add_argument('--publish',action='store_true');p.add_argument('--date');p.add_argument('--mode',choices=['tips','live','manual']);a=p.parse_args();s=Store(a.data,a.publish)
     if a.command=='bootstrap':print(json.dumps(initialize(s),ensure_ascii=False)[:500])
     elif a.command=='dispatch':dispatch(s)
     elif a.command=='reconcile':reconcile(s)
-    elif a.command=='refresh-jockeys':
-        jockey_top5.rebuild(s,request,now().date().isoformat(),prepare_jockeys)
+    elif a.command in ('refresh-jockeys','refresh-draws'):
+        print(json.dumps(draw_stats.rebuild(s,request,parse_card,now().date().isoformat()),ensure_ascii=False))
         if s.publish:s.push()
     elif a.command=='backfill-four':
         from sha_tin_four import backfill_four

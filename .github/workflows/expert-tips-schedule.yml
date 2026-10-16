@@ -43,6 +43,8 @@ jobs:
           fi
         env:
           TASK_GITHUB_TOKEN: ${{ github.token }}
+      - name: Refresh draw history from completed prior days
+        run: python source/tips-board/collector.py refresh-draws --data data/records --publish
       - name: Discover official meeting and dispatch due collectors
         run: python source/tips-board/collector.py dispatch --data data/records --publish
         env:

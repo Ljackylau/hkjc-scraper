@@ -115,3 +115,12 @@ from final official starters, not represented as sealed pre-race receipts.
 historical column and prepares the latest meeting without changing betting
 selections, expert tips or results. The collector updates the durable results
 cache on subsequent meetings; no calendar-2025 history is used.
+
+
+## October 16 collection and draw-statistics update
+
+The tips board no longer requests the index feed or per-race official results in live, tips or manual collection. `reconcile` is a disabled legacy entry point; the former recovery workflow refreshes draw history from completed prior days only. Existing stored results and settlement displays are retained.
+
+The table hides the index column. Draw performance replaces jockey rankings: actual barrier draw, exact venue/track/distance/rail, top-three finishes divided by actual starts, from 2026-09-01 through the day before the selected meeting. Same-day and future results are excluded. Current runners are ranked by rate, sample size, then saddle number; only the first five with history are displayed. No condition fallback or inferred draw numbers.
+
+`python tips-board/collector.py refresh-draws --data data/records --publish` fills the durable `draw-history.json` cache and recomputes archive/latest `draw_top5` without replacing original selections or board results. Future cards supply the actual draws; historical cards are explicitly reconstructions of the final field.

@@ -1,4 +1,4 @@
-name: Expert Tips Result Recovery
+name: Expert Tips Draw History Refresh
 on:
   schedule:
     - cron: '20 16 * * *'
@@ -28,4 +28,4 @@ jobs:
       - run: |
           git -C data config user.name 'github-actions[bot]'
           git -C data config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          python source/tips-board/collector.py reconcile --data data/records --publish
+          python source/tips-board/collector.py refresh-draws --data data/records --publish
