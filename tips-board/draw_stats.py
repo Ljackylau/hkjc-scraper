@@ -1,4 +1,4 @@
-"""Draw place rates since September 2026; completed prior days only."""
+"""Jockey place rates at the current draw since September 2026; prior days only."""
 import concurrent.futures,re,urllib.parse
 from collections import defaultdict
 from bs4 import BeautifulSoup
@@ -30,10 +30,10 @@ def card_draw(row):
 
 def rank(meeting,race,history,errors=None):
     ctx={k:race.get(k) for k in ('distance','track','rail')}
-    out={'status':'pending','start_date':START,'before_date':meeting['date'],**ctx,'horses':[],
-         'method':'top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc'}
+    out={'status':'pending','start_date':START,'before_date':meeting['date'],**ctx,'riders':[],'method_version':'jockey_draw_v1',
+         'method':'top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc'}
     active=[h for h in race['horses'] if h['no'] not in race.get('scratched',[])]
-    if not all(ctx.values()) or any(not h.get('draw') for h in active):return out
+    if not all(ctx.values()) or any(not h.get('draw') or not h.get('jockey_id') for h in active):return out
     stats=defaultdict(lambda:[0,0]);seen=set()
     for past in history:
         key=(past['date'],past['venue'],past['race'])
@@ -42,12 +42,12 @@ def rank(meeting,race,history,errors=None):
         if not START<=past['date']<meeting['date']:continue
         if past['venue']!=meeting['venue'] or any(past.get(k)!=v for k,v in ctx.items()):continue
         for h in past['runners']:
-            if not h.get('draw'):continue
-            s=stats[int(h['draw'])];s[1]+=1;s[0]+=int(h['top3'])
+            if not h.get('draw') or not h.get('jockey_id'):continue
+            s=stats[(h['jockey_id'],int(h['draw']))];s[1]+=1;s[0]+=int(h['top3'])
     for h in active:
-        placed,starts=stats[int(h['draw'])]
-        if starts:out['horses'].append({'no':h['no'],'name':h['name'],'draw':h['draw'],'placed':placed,'starts':starts,'rate':placed/starts})
-    out['horses'].sort(key=lambda h:(-h['rate'],-h['starts'],h['no']));out['horses']=out['horses'][:5]
+        placed,starts=stats[(h['jockey_id'],int(h['draw']))]
+        if starts:out['riders'].append({'no':h['no'],'jockey':h['jockey'],'jockey_id':h['jockey_id'],'draw':h['draw'],'placed':placed,'starts':starts,'rate':placed/starts})
+    out['riders'].sort(key=lambda h:(-h['rate'],-h['starts'],h['no']));out['riders']=out['riders'][:5]
     out['status']='ready'
     if errors:out['coverage_note']='部分歷史場次待補'
     return out

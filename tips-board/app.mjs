@@ -1,5 +1,5 @@
 import {settle} from './settlement.mjs';
-import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261016-draws';
+import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261016-jockey-draws';
 const RAW='https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/tips-data/records/';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=id=>document.getElementById(id),history=document.body.dataset.history==='true';let meeting=null,sourceMeeting=null,busy=false,base=RAW,revisionCheckedAt=0;
@@ -20,9 +20,9 @@ function bankerTips(r){
  return b.numbers.map((no,i)=>`<div class="horse"><span class="muted">${roles[i]}</span><span class="num">${e(no)}</span><span>${e(field.get(Number(no))||'')}</span></div>`).join('');
 }
 function drawTop5(r){
- const v=r.draw_top5;if(v?.status!=='ready')return '<span class="muted">待檔位往績</span>';
+ const v=r.draw_top5;if((v?.status!=='ready'||v.method_version!=='jockey_draw_v1'))return '<span class="muted">待騎師同檔往績</span>';
  const title=`${v.distance}米・${v.track==='AWT'?'全天候':v.rail+'欄'}`;
- return `<div class="muted">${e(title)}<br>2026-09-01起・賽日前往績</div>`+(v.coverage_note?`<div class="error">${e(v.coverage_note)}</div>`:'')+(v.horses.length?v.horses.map((h,i)=>`<div class="horse"><span class="muted">${i+1}.</span><span class="num">${e(h.no)}</span><span>${e(h.name)}・${e(h.draw)}檔<br><small>${(h.rate*100).toFixed(1)}%（${h.placed}/${h.starts}）</small></span></div>`).join(''):'<span class="muted">當場檔位無同條件往績</span>');
+ return `<div class="muted">${e(title)}<br>2026-09-01起・賽日前往績</div>`+(v.coverage_note?`<div class="error">${e(v.coverage_note)}</div>`:'')+(v.riders.length?v.riders.map((h,i)=>`<div class="horse"><span class="muted">${i+1}.</span><span class="num">${e(h.no)}</span><span>${e(h.jockey)}・${e(h.draw)}檔<br><small>${(h.rate*100).toFixed(1)}%（${h.placed}/${h.starts}）</small></span></div>`).join(''):'<span class="muted">當場騎師無同檔同條件往績</span>');
 }
 
 function pattern(r){
