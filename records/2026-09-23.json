@@ -21,73 +21,85 @@
           "no": 1,
           "name": "堅多福",
           "jockey": "何澤堯",
-          "jockey_id": "HCY"
+          "jockey_id": "HCY",
+          "draw": 12
         },
         {
           "no": 2,
           "name": "一風雲",
           "jockey": "金誠剛",
-          "jockey_id": "KRW"
+          "jockey_id": "KRW",
+          "draw": 5
         },
         {
           "no": 3,
           "name": "神駒馬靈",
           "jockey": "霍宏聲",
-          "jockey_id": "FEL"
+          "jockey_id": "FEL",
+          "draw": 4
         },
         {
           "no": 4,
           "name": "紅磚戰士",
           "jockey": "周俊樂",
-          "jockey_id": "CJE"
+          "jockey_id": "CJE",
+          "draw": 1
         },
         {
           "no": 5,
           "name": "極速滿貫",
           "jockey": "奧爾民",
-          "jockey_id": "OJM"
+          "jockey_id": "OJM",
+          "draw": 10
         },
         {
           "no": 6,
           "name": "開心三多",
           "jockey": "希威森",
-          "jockey_id": "HEL"
+          "jockey_id": "HEL",
+          "draw": 11
         },
         {
           "no": 7,
           "name": "綫路達飛",
           "jockey": "楊明綸",
-          "jockey_id": "YML"
+          "jockey_id": "YML",
+          "draw": 6
         },
         {
           "no": 8,
           "name": "電訊驕陽",
           "jockey": "袁幸堯",
-          "jockey_id": "YHY"
+          "jockey_id": "YHY",
+          "draw": 8
         },
         {
           "no": 9,
           "name": "至高心得",
           "jockey": "梁家俊",
-          "jockey_id": "LDE"
+          "jockey_id": "LDE",
+          "draw": 2
         },
         {
           "no": 10,
           "name": "威威父子",
           "jockey": "田泰安",
-          "jockey_id": "TEK"
+          "jockey_id": "TEK",
+          "draw": 7
         },
         {
           "no": 11,
           "name": "東方魅影",
           "jockey": "潘頓",
-          "jockey_id": "PZ"
+          "jockey_id": "PZ",
+          "draw": 3
         },
         {
           "no": 12,
           "name": "幸運同行",
           "jockey": "艾兆禮",
-          "jockey_id": "AA"
+          "jockey_id": "AA",
+          "draw": 9
         }
       ],
       "tips": {
@@ -333,6 +345,18 @@
         "cutoff": "2026-09-23 R1",
         "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
+      },
+      "draw_stats_scratched": [],
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-09-23",
+        "distance": 1650,
+        "track": "TURF",
+        "rail": "C",
+        "horses": [],
+        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
       }
     },
     {
@@ -345,73 +369,85 @@
           "no": 1,
           "name": "紅愛舍",
           "jockey": "楊明綸",
-          "jockey_id": "YML"
+          "jockey_id": "YML",
+          "draw": 12
         },
         {
           "no": 2,
           "name": "銳喜",
           "jockey": "蔡明紹",
-          "jockey_id": "CML"
+          "jockey_id": "CML",
+          "draw": 2
         },
         {
           "no": 3,
           "name": "路路勁",
           "jockey": "田泰安",
-          "jockey_id": "TEK"
+          "jockey_id": "TEK",
+          "draw": 8
         },
         {
           "no": 4,
           "name": "馬馳登",
           "jockey": "艾兆禮",
-          "jockey_id": "AA"
+          "jockey_id": "AA",
+          "draw": 7
         },
         {
           "no": 5,
           "name": "飛輪霸",
           "jockey": "潘明輝",
-          "jockey_id": "PMF"
+          "jockey_id": "PMF",
+          "draw": 11
         },
         {
           "no": 6,
           "name": "金珀尖子",
           "jockey": "金誠剛",
-          "jockey_id": "KRW"
+          "jockey_id": "KRW",
+          "draw": 6
         },
         {
           "no": 7,
           "name": "銀刺勇士",
           "jockey": "黃智弘",
-          "jockey_id": "WEC"
+          "jockey_id": "WEC",
+          "draw": 1
         },
         {
           "no": 8,
           "name": "鄉村威龍",
           "jockey": "艾道拿",
-          "jockey_id": "AVB"
+          "jockey_id": "AVB",
+          "draw": 10
         },
         {
           "no": 9,
           "name": "開心五月",
           "jockey": "鍾易禮",
-          "jockey_id": "CCY"
+          "jockey_id": "CCY",
+          "draw": 4
         },
         {
           "no": 10,
           "name": "比特星",
           "jockey": "潘頓",
-          "jockey_id": "PZ"
+          "jockey_id": "PZ",
+          "draw": 5
         },
         {
           "no": 11,
           "name": "有盈勇士",
           "jockey": "希威森",
-          "jockey_id": "HEL"
+          "jockey_id": "HEL",
+          "draw": 9
         },
         {
           "no": 12,
           "name": "首駿",
           "jockey": "班德禮",
-          "jockey_id": "BHW"
+          "jockey_id": "BHW",
+          "draw": 3
         }
       ],
       "tips": {
@@ -654,6 +690,18 @@
         "cutoff": "2026-09-23 R2",
         "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
+      },
+      "draw_stats_scratched": [],
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-09-23",
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "C",
+        "horses": [],
+        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
       }
     },
     {
@@ -666,73 +714,85 @@
           "no": 1,
           "name": "星願無限",
           "jockey": "希威森",
-          "jockey_id": "HEL"
+          "jockey_id": "HEL",
+          "draw": 11
         },
         {
           "no": 2,
           "name": "贏玥",
           "jockey": "潘頓",
-          "jockey_id": "PZ"
+          "jockey_id": "PZ",
+          "draw": 7
         },
         {
           "no": 3,
           "name": "彩虹七色",
           "jockey": "何澤堯",
-          "jockey_id": "HCY"
+          "jockey_id": "HCY",
+          "draw": 5
         },
         {
           "no": 4,
           "name": "睿智多寶",
           "jockey": "艾道拿",
-          "jockey_id": "AVB"
+          "jockey_id": "AVB",
+          "draw": 6
         },
         {
           "no": 5,
           "name": "凝妙星",
           "jockey": "奧爾民",
-          "jockey_id": "OJM"
+          "jockey_id": "OJM",
+          "draw": 3
         },
         {
           "no": 6,
           "name": "領航天子",
           "jockey": "霍宏聲",
-          "jockey_id": "FEL"
+          "jockey_id": "FEL",
+          "draw": 10
         },
         {
           "no": 7,
           "name": "有情有義",
           "jockey": "黃智弘",
-          "jockey_id": "WEC"
+          "jockey_id": "WEC",
+          "draw": 4
         },
         {
           "no": 8,
           "name": "蹺妙",
           "jockey": "周俊樂",
-          "jockey_id": "CJE"
+          "jockey_id": "CJE",
+          "draw": 2
         },
         {
           "no": 9,
           "name": "越駿齊歡",
           "jockey": "梁家俊",
-          "jockey_id": "LDE"
+          "jockey_id": "LDE",
+          "draw": 1
         },
         {
           "no": 10,
           "name": "加州活力",
           "jockey": "艾兆禮",
-          "jockey_id": "AA"
+          "jockey_id": "AA",
+          "draw": 8
         },
         {
           "no": 11,
           "name": "光明傳承",
           "jockey": "班德禮",
-          "jockey_id": "BHW"
+          "jockey_id": "BHW",
+          "draw": 9
         },
         {
           "no": 12,
           "name": "得意佳作",
           "jockey": "田泰安",
-          "jockey_id": "TEK"
+          "jockey_id": "TEK",
+          "draw": 12
         }
       ],
       "tips": {
@@ -975,6 +1035,18 @@
         "cutoff": "2026-09-23 R3",
         "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
+      },
+      "draw_stats_scratched": [],
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-09-23",
+        "distance": 1650,
+        "track": "TURF",
+        "rail": "C",
+        "horses": [],
+        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
       }
     },
     {
@@ -987,13 +1059,15 @@
           "no": 1,
           "name": "沙井之友",
           "jockey": "周俊樂",
-          "jockey_id": "CJE"
+          "jockey_id": "CJE",
+          "draw": 7
         },
         {
           "no": 2,
           "name": "智勝一籌",
           "jockey": "蔡明紹",
-          "jockey_id": "CML"
+          "jockey_id": "CML",
+          "draw": 9
         },
         {
           "no": 3,
@@ -1003,19 +1077,22 @@
           "no": 4,
           "name": "星辰千帥",
           "jockey": "艾道拿",
-          "jockey_id": "AVB"
+          "jockey_id": "AVB",
+          "draw": 6
         },
         {
           "no": 5,
           "name": "莊家班",
           "jockey": "黃智弘",
-          "jockey_id": "WEC"
+          "jockey_id": "WEC",
+          "draw": 3
         },
         {
           "no": 6,
           "name": "快樂神駒",
           "jockey": "潘頓",
-          "jockey_id": "PZ"
+          "jockey_id": "PZ",
+          "draw": 2
         },
         {
           "no": 7,
@@ -1025,31 +1102,36 @@
           "no": 8,
           "name": "禪勝閃亮",
           "jockey": "希威森",
-          "jockey_id": "HEL"
+          "jockey_id": "HEL",
+          "draw": 5
         },
         {
           "no": 9,
           "name": "將傲",
           "jockey": "奧爾民",
-          "jockey_id": "OJM"
+          "jockey_id": "OJM",
+          "draw": 4
         },
         {
           "no": 10,
           "name": "平天雄",
           "jockey": "潘明輝",
-          "jockey_id": "PMF"
+          "jockey_id": "PMF",
+          "draw": 8
         },
         {
           "no": 11,
           "name": "焦點",
           "jockey": "田泰安",
-          "jockey_id": "TEK"
+          "jockey_id": "TEK",
+          "draw": 1
         },
         {
           "no": 12,
           "name": "三強",
           "jockey": "楊明綸",
-          "jockey_id": "YML"
+          "jockey_id": "YML",
+          "draw": 10
         }
       ],
       "tips": {
@@ -1335,6 +1417,21 @@
         "cutoff": "2026-09-23 R4",
         "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
+      },
+      "draw_stats_scratched": [
+        3,
+        7
+      ],
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-09-23",
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "C",
+        "horses": [],
+        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
       }
     },
     {
@@ -1347,73 +1444,85 @@
           "no": 1,
           "name": "本領非凡",
           "jockey": "何澤堯",
-          "jockey_id": "HCY"
+          "jockey_id": "HCY",
+          "draw": 9
         },
         {
           "no": 2,
           "name": "大文豪",
           "jockey": "奧爾民",
-          "jockey_id": "OJM"
+          "jockey_id": "OJM",
+          "draw": 5
         },
         {
           "no": 3,
           "name": "大學生",
           "jockey": "金誠剛",
-          "jockey_id": "KRW"
+          "jockey_id": "KRW",
+          "draw": 1
         },
         {
           "no": 4,
           "name": "赤風驪",
           "jockey": "霍宏聲",
-          "jockey_id": "FEL"
+          "jockey_id": "FEL",
+          "draw": 2
         },
         {
           "no": 5,
           "name": "創科群英",
           "jockey": "周俊樂",
-          "jockey_id": "CJE"
+          "jockey_id": "CJE",
+          "draw": 3
         },
         {
           "no": 6,
           "name": "越駿聯歡",
           "jockey": "梁家俊",
-          "jockey_id": "LDE"
+          "jockey_id": "LDE",
+          "draw": 6
         },
         {
           "no": 7,
           "name": "滿洛城",
           "jockey": "班德禮",
-          "jockey_id": "BHW"
+          "jockey_id": "BHW",
+          "draw": 7
         },
         {
           "no": 8,
           "name": "金駒永騰",
           "jockey": "黃智弘",
-          "jockey_id": "WEC"
+          "jockey_id": "WEC",
+          "draw": 12
         },
         {
           "no": 9,
           "name": "爆竹",
           "jockey": "田泰安",
-          "jockey_id": "TEK"
+          "jockey_id": "TEK",
+          "draw": 11
         },
         {
           "no": 10,
           "name": "揀馬之皇",
           "jockey": "潘明輝",
-          "jockey_id": "PMF"
+          "jockey_id": "PMF",
+          "draw": 8
         },
         {
           "no": 11,
           "name": "健康小馬",
           "jockey": "楊明綸",
-          "jockey_id": "YML"
+          "jockey_id": "YML",
+          "draw": 4
         },
         {
           "no": 12,
           "name": "同心",
           "jockey": "蔡明紹",
-          "jockey_id": "CML"
+          "jockey_id": "CML",
+          "draw": 10
         }
       ],
       "tips": {
@@ -1656,6 +1765,18 @@
         "cutoff": "2026-09-23 R5",
         "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
+      },
+      "draw_stats_scratched": [],
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-09-23",
+        "distance": 1650,
+        "track": "TURF",
+        "rail": "C",
+        "horses": [],
+        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
       }
     },
     {
@@ -1668,73 +1789,85 @@
           "no": 1,
           "name": "福進",
           "jockey": "何澤堯",
-          "jockey_id": "HCY"
+          "jockey_id": "HCY",
+          "draw": 6
         },
         {
           "no": 2,
           "name": "友駿同心",
           "jockey": "梁家俊",
-          "jockey_id": "LDE"
+          "jockey_id": "LDE",
+          "draw": 4
         },
         {
           "no": 3,
           "name": "藍地球",
           "jockey": "奧爾民",
-          "jockey_id": "OJM"
+          "jockey_id": "OJM",
+          "draw": 8
         },
         {
           "no": 4,
           "name": "巴閉王",
           "jockey": "周俊樂",
-          "jockey_id": "CJE"
+          "jockey_id": "CJE",
+          "draw": 3
         },
         {
           "no": 5,
           "name": "佐治傳奇",
           "jockey": "艾兆禮",
-          "jockey_id": "AA"
+          "jockey_id": "AA",
+          "draw": 12
         },
         {
           "no": 6,
           "name": "升升雙息",
           "jockey": "潘明輝",
-          "jockey_id": "PMF"
+          "jockey_id": "PMF",
+          "draw": 10
         },
         {
           "no": 7,
           "name": "雙劍合璧",
           "jockey": "班德禮",
-          "jockey_id": "BHW"
+          "jockey_id": "BHW",
+          "draw": 2
         },
         {
           "no": 8,
           "name": "螢影飛馳",
           "jockey": "袁幸堯",
-          "jockey_id": "YHY"
+          "jockey_id": "YHY",
+          "draw": 11
         },
         {
           "no": 9,
           "name": "天火同人",
           "jockey": "黃寶妮",
-          "jockey_id": "WPN"
+          "jockey_id": "WPN",
+          "draw": 7
         },
         {
           "no": 10,
           "name": "領航多財",
           "jockey": "巫顯東",
-          "jockey_id": "MHT"
+          "jockey_id": "MHT",
+          "draw": 5
         },
         {
           "no": 11,
           "name": "萬眾開心",
           "jockey": "蔡明紹",
-          "jockey_id": "CML"
+          "jockey_id": "CML",
+          "draw": 9
         },
         {
           "no": 12,
           "name": "馬運高",
           "jockey": "田泰安",
-          "jockey_id": "TEK"
+          "jockey_id": "TEK",
+          "draw": 1
         }
       ],
       "tips": {
@@ -1999,6 +2132,18 @@
         "cutoff": "2026-09-23 R6",
         "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
+      },
+      "draw_stats_scratched": [],
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-09-23",
+        "distance": 1000,
+        "track": "TURF",
+        "rail": "C",
+        "horses": [],
+        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
       }
     },
     {
@@ -2011,73 +2156,85 @@
           "no": 1,
           "name": "東來欣賞",
           "jockey": "周俊樂",
-          "jockey_id": "CJE"
+          "jockey_id": "CJE",
+          "draw": 4
         },
         {
           "no": 2,
           "name": "乘數表",
           "jockey": "艾道拿",
-          "jockey_id": "AVB"
+          "jockey_id": "AVB",
+          "draw": 3
         },
         {
           "no": 3,
           "name": "天星",
           "jockey": "潘頓",
-          "jockey_id": "PZ"
+          "jockey_id": "PZ",
+          "draw": 10
         },
         {
           "no": 4,
           "name": "競駿皇者",
           "jockey": "霍宏聲",
-          "jockey_id": "FEL"
+          "jockey_id": "FEL",
+          "draw": 12
         },
         {
           "no": 5,
           "name": "傲聖",
           "jockey": "潘明輝",
-          "jockey_id": "PMF"
+          "jockey_id": "PMF",
+          "draw": 5
         },
         {
           "no": 6,
           "name": "電源之駒",
           "jockey": "梁家俊",
-          "jockey_id": "LDE"
+          "jockey_id": "LDE",
+          "draw": 7
         },
         {
           "no": 7,
           "name": "加州本事",
           "jockey": "蔡明紹",
-          "jockey_id": "CML"
+          "jockey_id": "CML",
+          "draw": 11
         },
         {
           "no": 8,
           "name": "首飾悟空",
           "jockey": "艾兆禮",
-          "jockey_id": "AA"
+          "jockey_id": "AA",
+          "draw": 2
         },
         {
           "no": 9,
           "name": "安康萬里",
           "jockey": "班德禮",
-          "jockey_id": "BHW"
+          "jockey_id": "BHW",
+          "draw": 1
         },
         {
           "no": 10,
           "name": "正極",
           "jockey": "黃智弘",
-          "jockey_id": "WEC"
+          "jockey_id": "WEC",
+          "draw": 8
         },
         {
           "no": 11,
           "name": "盈妍威楓",
           "jockey": "袁幸堯",
-          "jockey_id": "YHY"
+          "jockey_id": "YHY",
+          "draw": 9
         },
         {
           "no": 12,
           "name": "丞匡掠影",
           "jockey": "鍾易禮",
-          "jockey_id": "CCY"
+          "jockey_id": "CCY",
+          "draw": 6
         }
       ],
       "tips": {
@@ -2320,6 +2477,18 @@
         "cutoff": "2026-09-23 R7",
         "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
+      },
+      "draw_stats_scratched": [],
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-09-23",
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "C",
+        "horses": [],
+        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
       }
     },
     {
@@ -2332,73 +2501,85 @@
           "no": 1,
           "name": "人和家興",
           "jockey": "霍宏聲",
-          "jockey_id": "FEL"
+          "jockey_id": "FEL",
+          "draw": 2
         },
         {
           "no": 2,
           "name": "團結勇士",
           "jockey": "梁家俊",
-          "jockey_id": "LDE"
+          "jockey_id": "LDE",
+          "draw": 8
         },
         {
           "no": 3,
           "name": "富心星",
           "jockey": "何澤堯",
-          "jockey_id": "HCY"
+          "jockey_id": "HCY",
+          "draw": 4
         },
         {
           "no": 4,
           "name": "久久為昇",
           "jockey": "奧爾民",
-          "jockey_id": "OJM"
+          "jockey_id": "OJM",
+          "draw": 1
         },
         {
           "no": 5,
           "name": "飛馬座",
           "jockey": "周俊樂",
-          "jockey_id": "CJE"
+          "jockey_id": "CJE",
+          "draw": 11
         },
         {
           "no": 6,
           "name": "富國兄弟",
           "jockey": "田泰安",
-          "jockey_id": "TEK"
+          "jockey_id": "TEK",
+          "draw": 7
         },
         {
           "no": 7,
           "name": "勇霸龍",
           "jockey": "艾道拿",
-          "jockey_id": "AVB"
+          "jockey_id": "AVB",
+          "draw": 6
         },
         {
           "no": 8,
           "name": "繼往開來",
           "jockey": "艾兆禮",
-          "jockey_id": "AA"
+          "jockey_id": "AA",
+          "draw": 5
         },
         {
           "no": 9,
           "name": "蓮冠皇",
           "jockey": "希威森",
-          "jockey_id": "HEL"
+          "jockey_id": "HEL",
+          "draw": 9
         },
         {
           "no": 10,
           "name": "喵喵怪",
           "jockey": "袁幸堯",
-          "jockey_id": "YHY"
+          "jockey_id": "YHY",
+          "draw": 12
         },
         {
           "no": 11,
           "name": "驕陽雄心",
           "jockey": "黃智弘",
-          "jockey_id": "WEC"
+          "jockey_id": "WEC",
+          "draw": 3
         },
         {
           "no": 12,
           "name": "亞機拉",
           "jockey": "鍾易禮",
-          "jockey_id": "CCY"
+          "jockey_id": "CCY",
+          "draw": 10
         }
       ],
       "tips": {
@@ -2681,6 +2862,18 @@
         "cutoff": "2026-09-23 R8",
         "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
+      },
+      "draw_stats_scratched": [],
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-09-23",
+        "distance": 1200,
+        "track": "TURF",
+        "rail": "C",
+        "horses": [],
+        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
       }
     },
     {
@@ -2693,73 +2886,85 @@
           "no": 1,
           "name": "嘉應傳承",
           "jockey": "艾兆禮",
-          "jockey_id": "AA"
+          "jockey_id": "AA",
+          "draw": 1
         },
         {
           "no": 2,
           "name": "紫荊傳令",
           "jockey": "潘頓",
-          "jockey_id": "PZ"
+          "jockey_id": "PZ",
+          "draw": 5
         },
         {
           "no": 3,
           "name": "凌登",
           "jockey": "奧爾民",
-          "jockey_id": "OJM"
+          "jockey_id": "OJM",
+          "draw": 7
         },
         {
           "no": 4,
           "name": "平凡騎士",
           "jockey": "霍宏聲",
-          "jockey_id": "FEL"
+          "jockey_id": "FEL",
+          "draw": 3
         },
         {
           "no": 5,
           "name": "好實力",
           "jockey": "周俊樂",
-          "jockey_id": "CJE"
+          "jockey_id": "CJE",
+          "draw": 12
         },
         {
           "no": 6,
           "name": "將義",
           "jockey": "何澤堯",
-          "jockey_id": "HCY"
+          "jockey_id": "HCY",
+          "draw": 8
         },
         {
           "no": 7,
           "name": "浪漫鬥士",
           "jockey": "黃智弘",
-          "jockey_id": "WEC"
+          "jockey_id": "WEC",
+          "draw": 2
         },
         {
           "no": 8,
           "name": "豐辰",
           "jockey": "田泰安",
-          "jockey_id": "TEK"
+          "jockey_id": "TEK",
+          "draw": 9
         },
         {
           "no": 9,
           "name": "中國心",
           "jockey": "楊明綸",
-          "jockey_id": "YML"
+          "jockey_id": "YML",
+          "draw": 11
         },
         {
           "no": 10,
           "name": "風將",
           "jockey": "蔡明紹",
-          "jockey_id": "CML"
+          "jockey_id": "CML",
+          "draw": 10
         },
         {
           "no": 11,
           "name": "瑪瑙",
           "jockey": "潘明輝",
-          "jockey_id": "PMF"
+          "jockey_id": "PMF",
+          "draw": 4
         },
         {
           "no": 12,
           "name": "財富非凡",
           "jockey": "班德禮",
-          "jockey_id": "BHW"
+          "jockey_id": "BHW",
+          "draw": 6
         }
       ],
       "tips": {
@@ -3001,6 +3206,18 @@
         ],
         "cutoff": "2026-09-23 R9",
         "method": "top3/starts; exact venue, track, distance, rail; rate desc, starts desc, saddle asc",
+        "record_type": "historical_reconstruction"
+      },
+      "draw_stats_scratched": [],
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-09-23",
+        "distance": 1800,
+        "track": "TURF",
+        "rail": "C",
+        "horses": [],
+        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     }
