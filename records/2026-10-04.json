@@ -398,8 +398,9 @@
         "distance": 1650,
         "track": "AWT",
         "rail": "AWT",
-        "horses": [],
-        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "riders": [],
+        "method_version": "jockey_draw_v1",
+        "method": "top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -809,49 +810,37 @@
         "distance": 1200,
         "track": "TURF",
         "rail": "B",
-        "horses": [
+        "riders": [
           {
-            "no": 1,
-            "name": "十分愛",
-            "draw": 7,
-            "placed": 3,
-            "starts": 3,
-            "rate": 1.0
+            "no": 4,
+            "jockey": "巫顯東",
+            "jockey_id": "MHT",
+            "draw": 5,
+            "placed": 0,
+            "starts": 1,
+            "rate": 0.0
           },
           {
-            "no": 2,
-            "name": "狼來了",
-            "draw": 6,
-            "placed": 2,
-            "starts": 3,
-            "rate": 0.6666666666666666
+            "no": 8,
+            "jockey": "楊明綸",
+            "jockey_id": "YML",
+            "draw": 9,
+            "placed": 0,
+            "starts": 1,
+            "rate": 0.0
           },
           {
-            "no": 6,
-            "name": "幸福特約",
-            "draw": 12,
-            "placed": 1,
-            "starts": 3,
-            "rate": 0.3333333333333333
-          },
-          {
-            "no": 10,
-            "name": "傳承精神",
-            "draw": 4,
-            "placed": 1,
-            "starts": 3,
-            "rate": 0.3333333333333333
-          },
-          {
-            "no": 11,
-            "name": "潮流勇駒",
-            "draw": 1,
-            "placed": 1,
-            "starts": 3,
-            "rate": 0.3333333333333333
+            "no": 9,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "draw": 14,
+            "placed": 0,
+            "starts": 1,
+            "rate": 0.0
           }
         ],
-        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_v1",
+        "method": "top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -1200,8 +1189,9 @@
         "distance": 1650,
         "track": "AWT",
         "rail": "AWT",
-        "horses": [],
-        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "riders": [],
+        "method_version": "jockey_draw_v1",
+        "method": "top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -1592,49 +1582,19 @@
         "distance": 1400,
         "track": "TURF",
         "rail": "B",
-        "horses": [
-          {
-            "no": 7,
-            "name": "海洋帝君",
-            "draw": 6,
-            "placed": 2,
-            "starts": 4,
-            "rate": 0.5
-          },
-          {
-            "no": 14,
-            "name": "紅旺繽紛",
-            "draw": 2,
-            "placed": 2,
-            "starts": 4,
-            "rate": 0.5
-          },
-          {
-            "no": 1,
-            "name": "天外富天",
-            "draw": 3,
-            "placed": 1,
-            "starts": 4,
-            "rate": 0.25
-          },
+        "riders": [
           {
             "no": 2,
-            "name": "悠然常勝",
+            "jockey": "蔡明紹",
+            "jockey_id": "CML",
             "draw": 8,
-            "placed": 1,
-            "starts": 4,
-            "rate": 0.25
-          },
-          {
-            "no": 4,
-            "name": "籐王駒",
-            "draw": 10,
-            "placed": 1,
-            "starts": 4,
-            "rate": 0.25
+            "placed": 0,
+            "starts": 1,
+            "rate": 0.0
           }
         ],
-        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_v1",
+        "method": "top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -2018,8 +1978,9 @@
         "distance": 1650,
         "track": "AWT",
         "rail": "AWT",
-        "horses": [],
-        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "riders": [],
+        "method_version": "jockey_draw_v1",
+        "method": "top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -2429,49 +2390,46 @@
         "distance": 1400,
         "track": "TURF",
         "rail": "B",
-        "horses": [
-          {
-            "no": 6,
-            "name": "紅衣醒目",
-            "draw": 2,
-            "placed": 2,
-            "starts": 4,
-            "rate": 0.5
-          },
-          {
-            "no": 12,
-            "name": "金創福威",
-            "draw": 6,
-            "placed": 2,
-            "starts": 4,
-            "rate": 0.5
-          },
+        "riders": [
           {
             "no": 1,
-            "name": "捷駿",
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
             "draw": 3,
             "placed": 1,
-            "starts": 4,
-            "rate": 0.25
-          },
-          {
-            "no": 3,
-            "name": "心雄雄",
-            "draw": 7,
-            "placed": 1,
-            "starts": 4,
-            "rate": 0.25
+            "starts": 1,
+            "rate": 1.0
           },
           {
             "no": 5,
-            "name": "飛馬精英",
+            "jockey": "霍宏聲",
+            "jockey_id": "FEL",
             "draw": 11,
-            "placed": 1,
-            "starts": 4,
-            "rate": 0.25
+            "placed": 0,
+            "starts": 1,
+            "rate": 0.0
+          },
+          {
+            "no": 11,
+            "jockey": "袁幸堯",
+            "jockey_id": "YHY",
+            "draw": 14,
+            "placed": 0,
+            "starts": 1,
+            "rate": 0.0
+          },
+          {
+            "no": 14,
+            "jockey": "蔡明紹",
+            "jockey_id": "CML",
+            "draw": 9,
+            "placed": 0,
+            "starts": 1,
+            "rate": 0.0
           }
         ],
-        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_v1",
+        "method": "top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -2862,49 +2820,55 @@
         "distance": 1400,
         "track": "TURF",
         "rail": "B",
-        "horses": [
+        "riders": [
           {
-            "no": 6,
-            "name": "好運多彩",
-            "draw": 2,
-            "placed": 2,
-            "starts": 4,
-            "rate": 0.5
+            "no": 3,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "draw": 1,
+            "placed": 1,
+            "starts": 1,
+            "rate": 1.0
           },
           {
-            "no": 8,
-            "name": "金運齊來",
-            "draw": 6,
-            "placed": 2,
-            "starts": 4,
-            "rate": 0.5
+            "no": 10,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "draw": 14,
+            "placed": 1,
+            "starts": 1,
+            "rate": 1.0
+          },
+          {
+            "no": 13,
+            "jockey": "巴度",
+            "jockey_id": "BA",
+            "draw": 12,
+            "placed": 1,
+            "starts": 1,
+            "rate": 1.0
+          },
+          {
+            "no": 4,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "draw": 13,
+            "placed": 0,
+            "starts": 2,
+            "rate": 0.0
           },
           {
             "no": 1,
-            "name": "龍文瑞安",
+            "jockey": "楊明綸",
+            "jockey_id": "YML",
             "draw": 11,
-            "placed": 1,
-            "starts": 4,
-            "rate": 0.25
-          },
-          {
-            "no": 2,
-            "name": "加州熱浪",
-            "draw": 10,
-            "placed": 1,
-            "starts": 4,
-            "rate": 0.25
-          },
-          {
-            "no": 3,
-            "name": "愛馬心",
-            "draw": 1,
-            "placed": 1,
-            "starts": 4,
-            "rate": 0.25
+            "placed": 0,
+            "starts": 1,
+            "rate": 0.0
           }
         ],
-        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_v1",
+        "method": "top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -3293,8 +3257,9 @@
         "distance": 1800,
         "track": "TURF",
         "rail": "B",
-        "horses": [],
-        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "riders": [],
+        "method_version": "jockey_draw_v1",
+        "method": "top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -3672,8 +3637,9 @@
         "distance": 1650,
         "track": "AWT",
         "rail": "AWT",
-        "horses": [],
-        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "riders": [],
+        "method_version": "jockey_draw_v1",
+        "method": "top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -4064,49 +4030,19 @@
         "distance": 1000,
         "track": "TURF",
         "rail": "B",
-        "horses": [
+        "riders": [
           {
-            "no": 5,
-            "name": "連連幸運",
-            "draw": 14,
-            "placed": 1,
+            "no": 1,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "draw": 8,
+            "placed": 0,
             "starts": 1,
-            "rate": 1.0
-          },
-          {
-            "no": 3,
-            "name": "精彩福星",
-            "draw": 10,
-            "placed": 1,
-            "starts": 2,
-            "rate": 0.5
-          },
-          {
-            "no": 7,
-            "name": "領航君子",
-            "draw": 11,
-            "placed": 1,
-            "starts": 2,
-            "rate": 0.5
-          },
-          {
-            "no": 8,
-            "name": "米奇",
-            "draw": 4,
-            "placed": 1,
-            "starts": 2,
-            "rate": 0.5
-          },
-          {
-            "no": 12,
-            "name": "金聖",
-            "draw": 1,
-            "placed": 1,
-            "starts": 2,
-            "rate": 0.5
+            "rate": 0.0
           }
         ],
-        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_v1",
+        "method": "top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -4537,49 +4473,28 @@
         "distance": 1200,
         "track": "TURF",
         "rail": "B",
-        "horses": [
+        "riders": [
           {
             "no": 2,
-            "name": "實力股",
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
             "draw": 7,
-            "placed": 3,
-            "starts": 3,
+            "placed": 1,
+            "starts": 1,
             "rate": 1.0
           },
           {
-            "no": 6,
-            "name": "睿明途嘉",
-            "draw": 6,
-            "placed": 2,
-            "starts": 3,
-            "rate": 0.6666666666666666
-          },
-          {
-            "no": 1,
-            "name": "喜蓮勁感",
-            "draw": 4,
-            "placed": 1,
-            "starts": 3,
-            "rate": 0.3333333333333333
-          },
-          {
-            "no": 3,
-            "name": "鑽石星空",
-            "draw": 12,
-            "placed": 1,
-            "starts": 3,
-            "rate": 0.3333333333333333
-          },
-          {
-            "no": 7,
-            "name": "神鵰",
-            "draw": 3,
-            "placed": 1,
-            "starts": 3,
-            "rate": 0.3333333333333333
+            "no": 14,
+            "jockey": "巴度",
+            "jockey_id": "BA",
+            "draw": 10,
+            "placed": 0,
+            "starts": 1,
+            "rate": 0.0
           }
         ],
-        "method": "top3/starts; exact venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_v1",
+        "method": "top3/starts; exact jockey, venue, track, distance, rail, draw; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     }
