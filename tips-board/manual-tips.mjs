@@ -22,6 +22,7 @@ export function chooseShaTin(r){
  r.selection={horses:nos.map(n=>({no:n,name:field.get(n).name})),main:h===0?['QP']:['Q','QP'],optional:[],method:ST_METHOD,roles:h===0?'新D':'M3+T2+T3'};
 }
 export function confidenceReason(r){
+ if(r.venue==='HV'&&[1,2,3].includes(r.score))return '跑馬地H='+r.score+'：此條件分列為信心場';
  if(r.venue!=='ST'||![0,1].includes(r.score)||r.selection?.method!==ST_METHOD||r.selection.horses.length!==3)return null;
  const b=r.banker_initial,m=r.tips.meiji;
  if(m.status!=='ready'||!m.horses.length||b?.status!=='ready'||b.as_of_race_no!==0||b.reason!=='initial'||b.numbers?.length!==5||b.date!==r.date||b.venue!=='ST'||b.race!==r.race)return null;

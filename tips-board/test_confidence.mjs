@@ -6,3 +6,8 @@ assert(confidenceReason({...base,score:1,track:'AWT'}),'T=1 does not require tur
 for(const patch of [{venue:'HV'},{score:2},{score:null},{selection:null},{tips:{meiji:{status:'pending',horses:[]}}},{tips:{meiji:{status:'ready',horses:[{no:10}]}}},{banker_initial:{...base.banker_initial,reason:'track_bias'}},{banker_initial:{...base.banker_initial,date:'2026-10-11'}},{banker_initial:{...base.banker_initial,numbers:[]}}])assert.equal(confidenceReason({...base,...patch}),null);
 const changedResult={...base,result:{horses:[{no:14}]}};assert.equal(confidenceReason(changedResult),confidenceReason(base),'Badge never depends on race result');
 console.log('PASS: T=0 turf, T=1 any track, initial first3 exclusion, missing inputs, venue/date and result independence');
+for(const score of [1,2,3]){
+ assert(confidenceReason({venue:'HV',score}),`HV H=${score} is always confidence`);
+ assert(confidenceReason({venue:'HV',score,result:{horses:[]}}),'HV confidence independent of result/selection');
+}
+for(const score of [0,null,undefined])assert.equal(confidenceReason({venue:'HV',score}),null);

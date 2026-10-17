@@ -137,3 +137,11 @@ The jockey ranking matches only rider ID, rail configuration and current draw. I
 ## October 17: draw only (supersedes same-rail filter)
 
 `jockey_draw_only_v3` matches only each declared rider and the current barrier draw. Pool both venues, turf and AWT, all rails and distances. The September 1 cutoff, prior-day-only rule, current-field eligibility, top-five limit and ranking tie-breaks remain. The UI waits for this version and labels the column 同檔表現頭5騎師.
+
+## Confidence-only and monthly tables (October 17)
+
+Both pages show a compact confidence-only table above the full race table, with race/H, the displayed bets and official results. Happy Valley H=1/2/3 are confidence races regardless of selection readiness; H=0/pending are excluded. Sha Tin keeps the existing M1-outside-initial-first-three rule, including turf for H=0.
+
+The last section aggregates every archived meeting plus the current meeting, deduplicated by meeting identity. It groups by month, venue, H, pool and main/optional role. A race hits when its displayed bet has at least one official paid combination; several winning horses or pairs still count as one hit race. Only settled hit/miss races enter the denominator. Pending results/plans, fully refunded bets and unavailable pools are displayed separately. Local saved snapshots and explicitly labelled ST historical strategy recalculations match the main table. These are retrospective confidence-rule statistics, not an independently sealed historical track record.
+
+Archive requests use a single pinned data revision. Any failed/mismatched archive response suppresses monthly rates until a complete reload succeeds. New/live races with results collection disabled remain pending, never losses. This UI change does not fetch race-day results or change selections.

@@ -1,10 +1,11 @@
 import {settle} from './settlement.mjs';
-import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261016-jockey-draws';
+import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261017-confidence';
+import {monthlyConfidence,poolLabels} from './confidence-stats.mjs?v=20261017-confidence';
 const RAW='https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/tips-data/records/';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=id=>document.getElementById(id),history=document.body.dataset.history==='true';let meeting=null,sourceMeeting=null,busy=false,base=RAW,revisionCheckedAt=0;
 const clock=d=>d?new Date(d).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong',hour12:false}):'—';
-async function read(name){const r=await fetch(base+name+'?v='+Math.floor(Date.now()/20000),{cache:'no-store'});if(!r.ok)throw Error('數據讀取失敗 ('+r.status+')');return r.json()}
+async function read(name,revision=base){const r=await fetch(revision+name+'?v='+Math.floor(Date.now()/20000),{cache:'no-store'});if(!r.ok)throw Error('數據讀取失敗 ('+r.status+')');return r.json()}
 async function pinDataRevision(force=false){
  if(!force&&revisionCheckedAt&&Date.now()-revisionCheckedAt<90000)return;
  const r=await fetch('https://api.github.com/repos/Ljackylau/hkjc-scraper/git/refs/heads/tips-data?v='+Date.now(),{cache:'no-store'});
@@ -41,16 +42,43 @@ function betLine(pool,r){
   else if(p.status==='hit')text=`<div class="bet-result hit">有中 ${p.hits.length}/${p.total}${unit}<br>${p.hits.map(h=>`${e(h.horses.join('–'))}${h.horses.length===1?'號':''}：<b title="每$10派$${h.dividend.toFixed(2)}，包含本金">${new Intl.NumberFormat('zh-HK',{maximumFractionDigits:3}).format(h.multiple)}倍</b>`).join('<br>')}${p.refunds?`<br>${p.refunds}${unit}退款`:''}</div>`;
   else text=`<div class="bet-result ${p.status==='refund'?'muted':'miss'}">${p.status==='refund'?'退款':`未中（0/${p.total}${unit}）`}${p.refunds&&p.status!=='refund'?`；${p.refunds}${unit}退款`:''}</div>`;
  }
- return `<div class="bet-item"><div class="bets">${labels[pool]} ${e(nos.join('、'))}${r.selection.method?' 互拖（3組）':''}</div>${text}</div>`;
+ return `<div class="bet-item"><div class="bets">${labels[pool]} ${e(nos.join('、'))}${pool==='Q'||pool==='QP'?` 互拖（${nos.length*(nos.length-1)/2}組）`:''}</div>${text}</div>`;
 }
 function bets(r){const s=r.selection;if(!s&&r.venue!=='ST'&&r.score===0&&r.index?.status==='disabled')return '<span class="muted">舊來源已停用，未設定替代買法</span>';if(!s)return '<span class="muted">'+(r.locked?(r.lock_type==='historical_reconstruction'?'歷史資料不足，未重建買法':'賽前資料不足，未產生買法'):'等待所需貼士')+'</span>';return s.main.map(k=>betLine(k,r)).join('')+`<div class="muted">${e(s.horses.map(h=>h.no+'.'+h.name).join('　'))}</div>`+(s.optional.length?`<div class="optional">可選：${s.optional.map(k=>betLine(k,r)).join('')}</div>`:'')+(r.locked?'<div class="locked">'+(r.strategy_recalculated?'按新規則回算（非原賽前買法）':r.lock_type==='historical_reconstruction'?'按歷史存檔重建':r.manual_local?'已鎖定手動選擇（本機）':'已鎖定賽前選擇')+'</div>':'')}
 
+let monthlySources=[],monthlyRevision=null,monthlyError=null,monthlyRequest=0;
+function resultHtml(r){return r.result?r.result.horses.map(h=>`<div class="horse"><span class="muted">${(['','冠','亞','季','四'][parseInt(h.placing)]||e(h.placing))}</span><span class="num">${e(h.no)}</span>${e(h.name)}</div>`).join(''):'<span class="muted">'+(r.date>='2026-10-16'?'不收集賽果':r.locked?'未保存賽果':'未開跑')+'</span>'}
+function renderConfidence(m){
+ const races=m.races.filter(r=>confidenceReason(r));
+ $('confidence-summary').textContent=m.date+' · '+(m.venue==='HV'?'跑馬地':'沙田')+' · '+races.length+'場信心';
+ $('confidence-rows').innerHTML=races.length?races.map(r=>`<tr><td><div class="race-label"><b>第${e(r.race)}場</b>${confidenceBadge(r)}</div><div class="clock">H=${e(r.score)} · ${e(clock(r.off).slice(0,5))}</div></td><td>${bets(r)}</td><td>${resultHtml(r)}</td></tr>`).join(''):'<tr><td colspan="3" class="empty-state">本賽日暫無已確認的信心場；條件分或貼士未齊時會等待更新。</td></tr>';
+}
+function renderMonthly(){
+ if(monthlyError){$('monthly-status').textContent=monthlyError;$('monthly-rows').innerHTML='<tr><td colspan="9" class="empty-state">歷史紀錄未完整讀取，命中率暫不顯示。請按「重新讀取」重試。</td></tr>';return}
+ if(monthlyRevision!==base){$('monthly-status').textContent='正在讀取全部歷史賽日…';$('monthly-rows').innerHTML='<tr><td colspan="9">正在讀取…</td></tr>';return}
+ const rows=monthlyConfidence([...monthlySources,...(sourceMeeting?[sourceMeeting]:[])],{savedFor:getManual});
+ $('monthly-status').textContent='按目前信心規則及頁面買法回算；包含歷史補錄／新規則回算，不代表當時實際投注。';
+ $('monthly-rows').innerHTML=rows.length?rows.map(g=>`<tr><td>${e(g.month)}</td><td>${g.venue==='HV'?'跑馬地':'沙田'}</td><td>H=${g.score}</td><td>${poolLabels[g.pool]||'待買法'}<div class="muted">${g.role==='main'?'主買法':'可選買法'}</div></td><td>${g.races}</td><td>${g.settled}</td><td>${g.hits}</td><td class="monthly-rate">${g.rate===null?'—':(g.rate*100).toFixed(1)+'%'}</td><td>${g.pending}待核對<br><span class="muted">${g.refunds}退款 · ${g.notOffered}不設彩池</span></td></tr>`).join(''):'<tr><td colspan="9" class="empty-state">暫無符合規則的信心場紀錄。</td></tr>';
+}
+async function refreshMonthly(){
+ const revision=base,request=++monthlyRequest;monthlyError=null;$('monthly-status').textContent='正在讀取全部歷史賽日…';
+ try{
+  const index=await read('history.json',revision);if(!Array.isArray(index.meetings))throw Error('歷史目錄格式有誤');
+  const dates=[...new Set(index.meetings.map(m=>m.date))];if(dates.some(d=>!/^\d{4}-\d{2}-\d{2}$/.test(d)))throw Error('歷史日期格式有誤');
+  const results=await Promise.allSettled(dates.map(date=>read(date+'.json',revision)));
+  if(request!==monthlyRequest||revision!==base)return;
+  if(results.some(r=>r.status==='rejected'))throw Error('部分歷史紀錄讀取失敗，暫不更新命中率。');
+  const sources=results.map(r=>r.value);if(sources.some((m,i)=>m.date!==dates[i]||m.venue!==index.meetings.find(x=>x.date===dates[i]).venue||!Array.isArray(m.races)))throw Error('歷史賽日資料不符，暫不更新命中率。');
+  monthlySources=sources;monthlyRevision=revision;renderMonthly();
+ }catch(err){if(request===monthlyRequest&&revision===base){monthlyError=err.message;renderMonthly()}}
+}
 function confidenceBadge(r){const reason=confidenceReason(r);return reason?`<span class="confidence-badge" title="${e(reason)}" aria-label="信心：${e(reason)}">信心</span>`:''}
-function render(source){sourceMeeting=source;let saved=getManual(source),m=applyManual(source,saved);if(saved)persistManual(saved);meeting=m;$('title').textContent=m.date+' · '+(m.venue==='HV'?'跑馬地':'沙田');$('eyebrow').textContent=history?'歷史紀錄':'最新賽日';$('subtitle').textContent=`${m.races.length}場 · 第一場 ${clock(m.races[0].off).slice(0,5)} · 馬號及馬名按官方排位核對`;$('status').textContent=m.status==='archived'?'全日紀錄已保存':m.status==='live'?'賽日收集中':m.status==='interrupted'?'抓取中斷':'等待賽日';$('updated').textContent='最近保存：'+clock(m.updated_at)+(m.manual_checked_at?' · 手動檢查：'+clock(m.manual_checked_at):'');$('cutoff').textContent=m.record_type==='historical_backfill'?'歷史補錄：'+m.backfilled_at.slice(0,10)+' '+clock(m.backfilled_at):m.tips_checked_at?'貼士已檢查：'+clock(m.tips_checked_at):'貼士檢查時間：'+m.tips_due_at.slice(0,10)+' '+clock(m.tips_due_at);const stale=m.heartbeat&&(Date.now()-Date.parse(m.heartbeat)>180000)&&m.status==='live';$('notice').textContent=m.record_type==='historical_backfill'?m.notice:stale?'抓取狀態超過3分鐘未更新，請查看工作狀態。':m.status==='interrupted'?'抓取工作中斷；未取得的資料會保留缺失狀態。':'';
+function render(source){sourceMeeting=source;let saved=getManual(source),m=applyManual(source,saved);for(const r of m.races){r.venue=m.venue;r.date=m.date}if(saved)persistManual(saved);meeting=m;$('title').textContent=m.date+' · '+(m.venue==='HV'?'跑馬地':'沙田');$('eyebrow').textContent=history?'歷史紀錄':'最新賽日';$('subtitle').textContent=`${m.races.length}場 · 第一場 ${clock(m.races[0].off).slice(0,5)} · 馬號及馬名按官方排位核對`;$('status').textContent=m.status==='archived'?'全日紀錄已保存':m.status==='live'?'賽日收集中':m.status==='interrupted'?'抓取中斷':'等待賽日';$('updated').textContent='最近保存：'+clock(m.updated_at)+(m.manual_checked_at?' · 手動檢查：'+clock(m.manual_checked_at):'');$('cutoff').textContent=m.record_type==='historical_backfill'?'歷史補錄：'+m.backfilled_at.slice(0,10)+' '+clock(m.backfilled_at):m.tips_checked_at?'貼士已檢查：'+clock(m.tips_checked_at):'貼士檢查時間：'+m.tips_due_at.slice(0,10)+' '+clock(m.tips_due_at);const stale=m.heartbeat&&(Date.now()-Date.parse(m.heartbeat)>180000)&&m.status==='live';$('notice').textContent=m.record_type==='historical_backfill'?m.notice:stale?'抓取狀態超過3分鐘未更新，請查看工作狀態。':m.status==='interrupted'?'抓取工作中斷；未取得的資料會保留缺失狀態。':'';
 if(m.venue==='ST')$('notice').textContent+=($('notice').textContent?' ':'')+'M＝明治朗原次序；B＝膽拖網初版：B1膽、B2腳1、B3腳2、B4腳3、B5腳4。T=0／1指條件分；T1–T4指唯一有貼士專家原次序。退出馬剔除後順延。「信心」：明治朗首選不在初版膽、腳1、腳2內，T=0另須草地；資料齊全才標示。';
+if(m.venue==='HV')$('notice').textContent+=($('notice').textContent?' ':'')+'跑馬地H=1、2、3均列為信心場；H指條件分。';
 if(m.races.some(r=>r.manual_local))$('notice').textContent+=($('notice').textContent?' ':'')+'本頁含目前瀏覽器保存的手動貼士及選擇。';
-$('rows').innerHTML=m.races.map(r=>`<tr><td><div class="race-label"><b>第${e(r.race)}場</b>${confidenceBadge(r)}</div><div class="clock">${e(clock(r.off).slice(0,5))}</div></td><td data-result>${r.result?r.result.horses.map((h,i)=>`<div class="horse"><span class="muted">${(['','冠','亞','季','四'][parseInt(h.placing)]||e(h.placing))}</span><span class="num">${e(h.no)}</span>${e(h.name)}</div>`).join(''):'<span class="muted">'+(m.date>='2026-10-16'?'不收集賽果':r.locked?'未保存賽果':'未開跑')+'</span>'}</td><td data-score>${r.score==null?'<span class="muted">待確認</span>':`<span class="score">${r.score}</span>`}</td><td>${tips(r.tips.meiji)}</td><td data-banker-tips>${bankerTips(r)}</td><td data-draw-top5>${drawTop5(r)}</td><td>${tips(r.tips.ball)}</td><td>${tips(r.tips.ma)}</td><td>${tips(r.tips.computer)}</td><td class="pattern">${pattern(r)}</td><td>${bets(r)}</td></tr>`).join('')}
-async function load(){if(busy)return;busy=true;try{if(!history)await pinDataRevision();if(history){if($('dates').value)render(await read($('dates').value+'.json'))}else render(await read('latest.json'))}catch(err){$('notice').textContent=err.message+'；保留最後成功讀取資料。'}finally{busy=false}}
+$('rows').innerHTML=m.races.map(r=>`<tr><td><div class="race-label"><b>第${e(r.race)}場</b>${confidenceBadge(r)}</div><div class="clock">${e(clock(r.off).slice(0,5))}</div></td><td data-result>${resultHtml(r)}</td><td data-score>${r.score==null?'<span class="muted">待確認</span>':`<span class="score">${r.score}</span>`}</td><td>${tips(r.tips.meiji)}</td><td data-banker-tips>${bankerTips(r)}</td><td data-draw-top5>${drawTop5(r)}</td><td>${tips(r.tips.ball)}</td><td>${tips(r.tips.ma)}</td><td>${tips(r.tips.computer)}</td><td class="pattern">${pattern(r)}</td><td>${bets(r)}</td></tr>`).join('');renderConfidence(m);renderMonthly()}
+async function load(){if(busy)return;busy=true;try{if(!history)await pinDataRevision();if(history){if($('dates').value)render(await read($('dates').value+'.json'))}else render(await read('latest.json'));if(monthlyRevision!==base||monthlyError)await refreshMonthly()}catch(err){$('notice').textContent=err.message+'；保留最後成功讀取資料。'}finally{busy=false}}
 async function start(){try{await pinDataRevision(true);if(history){$('history-controls').hidden=false;const h=await read('history.json');if(!h.meetings.length){$('title').textContent='歷史紀錄';$('status').textContent='尚未有紀錄';$('subtitle').textContent='每個賽日結束後，會自動保存全日表格。';$('rows').innerHTML='<tr><td colspan="11">暫時沒有已結束賽日紀錄。</td></tr>';$('dates').innerHTML='<option>尚未有紀錄</option>';$('dates').disabled=true;return}$('dates').innerHTML=h.meetings.map(m=>`<option value="${e(m.date)}">${e(m.date)} · ${m.venue==='HV'?'跑馬地':'沙田'}${m.results_enabled===false?'（不收集賽果）':m.complete?'':'（部分賽果待補）'}</option>`).join('');$('dates').onchange=load}await load()}catch(err){$('notice').textContent=err.message}}
 const names={meiji:'明治朗',ball:'波仔',ma:'馬觀微',computer:'電腦評分',index:'指數馬'};
 const manualKey=m=>'hkjc-manual-tips-v1:'+m.date+':'+m.venue;
@@ -89,7 +117,7 @@ if(!history&&$('manual-open')){
  $('manual-reset').onclick=()=>{const r=sourceMeeting.races.find(r=>r.race===Number($('manual-race').value));if(!editable(r)){$('manual-message').textContent='本場已開跑，不能修改。';return}const saved=getManual(sourceMeeting);if(saved){delete saved.races[r.race];if(!persistManual(saved))return}render(sourceMeeting);fillManual();$('manual-message').textContent='已恢復本場自動資料。'};
  $('manual-export').onclick=()=>{const saved=getManual(sourceMeeting);if(!saved||!Object.keys(saved.races).length){$('manual-message').textContent='目前沒有手動紀錄可下載。';return}const url=URL.createObjectURL(new Blob([JSON.stringify(saved,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='manual-tips-'+saved.date+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 }
-$('refresh').onclick=async()=>{try{await pinDataRevision(true);await load()}catch(err){$('notice').textContent=err.message}};await start();if(!history)setInterval(load,20000);
+$('refresh').onclick=async()=>{try{await pinDataRevision(true);monthlyRevision=null;await load()}catch(err){$('notice').textContent=err.message}};await start();if(!history)setInterval(load,20000);
 
 if(!history&&$('collect'))$('collect').onclick=()=>{
  const url='https://github.com/Ljackylau/hkjc-scraper/actions/workflows/expert-tips-run.yml';
