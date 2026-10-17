@@ -121,11 +121,15 @@ cache on subsequent meetings; no calendar-2025 history is used.
 
 The tips board no longer requests the index feed or per-race official results in live, tips or manual collection. `reconcile` is a disabled legacy entry point; the former recovery workflow refreshes draw history from completed prior days only. Existing stored results and settlement displays are retained.
 
-The table hides the index column. The ranking uses each declared jockey’s own performances at the current barrier draw, exact venue/track/distance/rail, top-three finishes divided by actual starts, from 2026-09-01 through the day before the selected meeting. Same-day and future results are excluded. Jockeys are ranked by rate, sample size, then current saddle number; only the first five with history are displayed. No condition fallback or inferred draw numbers.
+The table hides the index column. The ranking uses each declared jockey’s own performances at the current barrier draw, exact rail/draw only, pooling venues and distances, top-three finishes divided by actual starts, from 2026-09-01 through the day before the selected meeting. Same-day and future results are excluded. Jockeys are ranked by rate, sample size, then current saddle number; only the first five with history are displayed. No condition fallback or inferred draw numbers.
 
 `python tips-board/collector.py refresh-draws --data data/records --publish` fills the durable `draw-history.json` cache and recomputes archive/latest `draw_top5` without replacing original selections or board results. Future cards supply the actual draws; historical cards are explicitly reconstructions of the final field.
 
 
 ## Jockey/draw correction
 
-`draw_top5` now ranks only jockeys riding in the selected race. Each rate uses that jockey's own rides at the current barrier draw, with exact venue/track/distance/rail and dates from 2026-09-01 strictly before the meeting. Different jockeys at the same barrier are excluded. Output uses `method_version: jockey_draw_v1` and `riders`, retaining each jockey's current saddle number for identification. The renderer waits for the corrected version instead of showing the former all-jockey draw rates.
+`draw_top5` now ranks only jockeys riding in the selected race. Each rate uses that jockey's own rides at the current barrier draw, with exact rail/draw only, pooling venues and distances and dates from 2026-09-01 strictly before the meeting. Different jockeys at the same barrier are excluded. Output uses `method_version: jockey_rail_draw_v2` and `riders`, retaining each jockey's current saddle number for identification. The renderer waits for the corrected version instead of showing the former all-jockey draw rates.
+
+## October 17: same rail and draw only
+
+The jockey ranking matches only rider ID, rail configuration and current draw. It pools Sha Tin and Happy Valley rides at identically named rails and all distances; AWT remains its own rail key. Dates, withdrawals, ranking tie-breaks and current-field-only eligibility are unchanged. The version guard is `jockey_rail_draw_v2`.
