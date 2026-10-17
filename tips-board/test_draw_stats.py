@@ -13,7 +13,7 @@ class Draws(unittest.TestCase):
   out=rank(self.m,self.r,self.history);self.assertEqual([h['no'] for h in out['riders']],[1,3,2]);self.assertEqual(out['riders'][0]['draw'],8)
  def test_cutoff_september_prior_day_and_exact_conditions(self):
   other=[]
-  for changes in [{'date':'2026-08-31'},{'date':self.m['date']},{'date':'2026-10-20'},{'rail':'B'}]:other.append({**self.history[0],**changes})
+  for changes in [{'date':'2026-08-31'},{'date':self.m['date']},{'date':'2026-10-20'}]:other.append({**self.history[0],**changes})
   out=rank(self.m,self.r,self.history+other+self.history);self.assertEqual(out['riders'][0]['starts'],1)
  def test_missing_draw_pending_and_withdrawal(self):
   r=copy.deepcopy(self.r);del r['horses'][0]['draw'];self.assertEqual(rank(self.m,r,self.history)['status'],'pending')
@@ -33,14 +33,14 @@ class Draws(unittest.TestCase):
   past=copy.deepcopy(self.history[0]);past['race']=2;past['runners']=[{'draw':8,'jockey_id':'OTHER','top3':False},{'draw':2,'jockey_id':'A','top3':False}]
   out=rank(self.m,self.r,self.history+[past]);a=next(h for h in out['riders'] if h['jockey_id']=='A');self.assertEqual((a['placed'],a['starts']),(1,1))
 
- def test_pools_venues_distances_and_tracks_but_not_rails(self):
+ def test_pools_venues_distances_tracks_and_rails(self):
   other=[]
   for i,changes in enumerate([{'venue':'HV'},{'distance':1000},{'track':'AWT'},{'rail':'B'}],2):
    other.append({**self.history[0],'race':i,**changes})
   out=rank(self.m,self.r,self.history+other)
   a=next(h for h in out['riders'] if h['jockey_id']=='A')
-  self.assertEqual((a['placed'],a['starts']),(4,4))
-  self.assertEqual(out['method_version'],'jockey_rail_draw_v2')
- def test_distance_track_and_venue_not_required(self):
-  r=copy.deepcopy(self.r);r.pop('distance');r.pop('track')
+  self.assertEqual((a['placed'],a['starts']),(5,5))
+  self.assertEqual(out['method_version'],'jockey_draw_only_v3')
+ def test_rail_distance_track_and_venue_not_required(self):
+  r=copy.deepcopy(self.r);r.pop('distance');r.pop('track');r.pop('rail')
   self.assertEqual(rank({'date':self.m['date']},r,self.history)['status'],'ready')

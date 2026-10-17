@@ -29,18 +29,16 @@ def card_draw(row):
     return {}
 
 def rank(meeting,race,history,errors=None):
-    ctx={'rail':race.get('rail')}
-    out={'status':'pending','start_date':START,'before_date':meeting['date'],**ctx,'riders':[],'method_version':'jockey_rail_draw_v2',
-         'method':'top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc'}
+    out={'status':'pending','start_date':START,'before_date':meeting['date'],'riders':[],'method_version':'jockey_draw_only_v3',
+         'method':'top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc'}
     active=[h for h in race['horses'] if h['no'] not in race.get('scratched',[])]
-    if not all(ctx.values()) or any(not h.get('draw') or not h.get('jockey_id') for h in active):return out
+    if any(not h.get('draw') or not h.get('jockey_id') for h in active):return out
     stats=defaultdict(lambda:[0,0]);seen=set()
     for past in history:
         key=(past['date'],past['venue'],past['race'])
         if key in seen:continue
         seen.add(key)
         if not START<=past['date']<meeting['date']:continue
-        if past.get('rail')!=ctx['rail']:continue
         for h in past['runners']:
             if not h.get('draw') or not h.get('jockey_id'):continue
             s=stats[(h['jockey_id'],int(h['draw']))];s[1]+=1;s[0]+=int(h['top3'])

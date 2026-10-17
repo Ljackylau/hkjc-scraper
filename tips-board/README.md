@@ -133,3 +133,7 @@ The table hides the index column. The ranking uses each declared jockey’s own 
 ## October 17: same rail and draw only
 
 The jockey ranking matches only rider ID, rail configuration and current draw. It pools Sha Tin and Happy Valley rides at identically named rails and all distances; AWT remains its own rail key. Dates, withdrawals, ranking tie-breaks and current-field-only eligibility are unchanged. The version guard is `jockey_rail_draw_v2`.
+
+## October 17: draw only (supersedes same-rail filter)
+
+`jockey_draw_only_v3` matches only each declared rider and the current barrier draw. Pool both venues, turf and AWT, all rails and distances. The September 1 cutoff, prior-day-only rule, current-field eligibility, top-five limit and ranking tie-breaks remain. The UI waits for this version and labels the column 同檔表現頭5騎師.
