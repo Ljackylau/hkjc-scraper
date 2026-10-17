@@ -2,7 +2,7 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),asse
 const root=__dirname,hs=[1,2,3,4].map(no=>({no,name:'馬'+no}));
 const tip={status:'ready',horses:hs},absent={status:'absent',horses:[]};
 const result={horses:hs.slice(0,3).map((h,i)=>({...h,placing:String(i+1)})),dividends:{W:[{combination:'1',dividend_hkd:40}],P:[{combination:'1',dividend_hkd:20}],QP:[{combination:'1,2',dividend_hkd:50}]}};
-const race=(race,score)=>({race,score,off:'2026-10-14T19:00:00+08:00',horses:hs,tips:{meiji:tip,ball:tip,ma:absent,computer:absent},index:{status:'disabled',horses:[]},locked:true,result,selection:{horses:hs.slice(0,score<2?2:3),main:score<2?['W','P']:['QP'],optional:[]}});
+const race=(race,score)=>({race,score,off:'2026-10-14T19:00:00+08:00',horses:hs,tips:{meiji:tip,ball:tip,ma:absent,computer:absent},index:{status:'disabled',horses:[]},locked:true,result,selection:{horses:hs.slice(0,score<2?2:3),main:score<2?['W','P']:['QP'],optional:score===1?['QP']:[]}});
 const source={date:'2026-10-14',venue:'HV',status:'archived',updated_at:'2026-10-14T23:00:00+08:00',tips_checked_at:'2026-10-14T16:00:00+08:00',races:[race(1,0),race(2,1),race(3,2)]};
 const sept={...source,date:'2026-09-09',races:[{...race(1,1),result:null}]};
 async function open(history=false,fail=false,rateLimited=false){
@@ -20,7 +20,7 @@ async function open(history=false,fail=false,rateLimited=false){
  for(const history of [false,true]){
   const app=await open(history),html=app.el('confidence-rows').innerHTML;
   assert(!html.includes('第1場'));assert(html.includes('第2場')&&html.includes('第3場'));assert(html.includes('位置P')&&html.includes('位置Q')&&html.includes('有中'));
-  const month=app.el('monthly-rows').innerHTML;assert(month.includes('2026-10')&&month.includes('2026-09')&&month.includes('100.0%'));assert(month.includes('待核對'));assert(!app.el('monthly-status').textContent.includes('正在'));
+  const month=app.el('monthly-rows').innerHTML;assert(month.includes('2026-10')&&month.includes('2026-09')&&month.includes('100.0%'));assert(month.includes('待核對'));assert(!month.includes('獨贏W')&&!month.includes('位置P'));assert(month.indexOf('2026-09')<month.lastIndexOf('2026-10'),'H grouping precedes month grouping');assert(!app.el('monthly-status').textContent.includes('正在'));
   if(history){app.el('dates').value='2026-09-09';await app.el('dates').onchange();assert(app.el('confidence-rows').innerHTML.includes('第1場'));assert(app.el('monthly-rows').innerHTML.includes('2026-10'),'monthly stats include all history, independent of selected date')}
  }
  const limited=await open(true,false,true);assert(limited.el('revision-notice').textContent.includes('備用存檔'));assert(limited.el('confidence-rows').innerHTML.includes('第2場'));assert(limited.el('monthly-rows').innerHTML.includes('100.0%'));

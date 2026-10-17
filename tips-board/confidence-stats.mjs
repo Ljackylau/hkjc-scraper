@@ -24,6 +24,6 @@ export function monthlyConfidence(sources,{savedFor=()=>null,time=Date.now()}={}
    }
   }
  }
- const order={W:0,P:1,Q:2,QP:3,pending:4};
- return [...groups.values()].map(g=>({...g,rate:g.settled?g.hits/g.settled:null})).sort((a,b)=>b.month.localeCompare(a.month)||a.venue.localeCompare(b.venue)||a.score-b.score||a.role.localeCompare(b.role)||order[a.pool]-order[b.pool]);
+ const order={QP:0,Q:1},venueOrder={ST:0,HV:1};
+ return [...groups.values()].filter(g=>g.pool==='QP'||g.pool==='Q').map(g=>({...g,rate:g.settled?g.hits/g.settled:null})).sort((a,b)=>(venueOrder[a.venue]??2)-(venueOrder[b.venue]??2)||a.venue.localeCompare(b.venue)||a.score-b.score||b.month.localeCompare(a.month)||order[a.pool]-order[b.pool]||a.role.localeCompare(b.role));
 }

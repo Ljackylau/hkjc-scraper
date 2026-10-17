@@ -1,6 +1,6 @@
 import {settle} from './settlement.mjs';
-import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261017-confidence2';
-import {monthlyConfidence,poolLabels} from './confidence-stats.mjs?v=20261017-confidence2';
+import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261017-confidence3';
+import {monthlyConfidence,poolLabels} from './confidence-stats.mjs?v=20261017-confidence3';
 const RAW='https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/tips-data/records/';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=id=>document.getElementById(id),history=document.body.dataset.history==='true';let meeting=null,sourceMeeting=null,busy=false,base=RAW,revisionCheckedAt=0;
@@ -68,7 +68,7 @@ function renderMonthly(){
  if(monthlyRevision!==base){$('monthly-status').textContent='正在讀取全部歷史賽日…';$('monthly-rows').innerHTML='<tr><td colspan="9">正在讀取…</td></tr>';return}
  const rows=monthlyConfidence([...monthlySources,...(sourceMeeting?[sourceMeeting]:[])],{savedFor:getManual});
  $('monthly-status').textContent='按目前信心規則及頁面買法回算；包含歷史補錄／新規則回算，不代表當時實際投注。';
- $('monthly-rows').innerHTML=rows.length?rows.map(g=>`<tr><td>${e(g.month)}</td><td>${g.venue==='HV'?'跑馬地':'沙田'}</td><td>H=${g.score}</td><td>${poolLabels[g.pool]||'待買法'}<div class="muted">${g.role==='main'?'主買法':'可選買法'}</div></td><td>${g.races}</td><td>${g.settled}</td><td>${g.hits}</td><td class="monthly-rate">${g.rate===null?'—':(g.rate*100).toFixed(1)+'%'}</td><td>${g.pending}待核對<br><span class="muted">${g.refunds}退款 · ${g.notOffered}不設彩池</span></td></tr>`).join(''):'<tr><td colspan="9" class="empty-state">暫無符合規則的信心場紀錄。</td></tr>';
+ $('monthly-rows').innerHTML=rows.length?rows.map(g=>`<tr><td>${g.venue==='HV'?'跑馬地':'沙田'}</td><td>H=${g.score}</td><td>${e(g.month)}</td><td>${poolLabels[g.pool]||'待買法'}<div class="muted">${g.role==='main'?'主買法':'可選買法'}</div></td><td>${g.races}</td><td>${g.settled}</td><td>${g.hits}</td><td class="monthly-rate">${g.rate===null?'—':(g.rate*100).toFixed(1)+'%'}</td><td>${g.pending}待核對<br><span class="muted">${g.refunds}退款 · ${g.notOffered}不設彩池</span></td></tr>`).join(''):'<tr><td colspan="9" class="empty-state">暫無符合規則的信心場紀錄。</td></tr>';
 }
 async function refreshMonthly(){
  const revision=base,request=++monthlyRequest;monthlyError=null;$('monthly-status').textContent='正在讀取全部歷史賽日…';
