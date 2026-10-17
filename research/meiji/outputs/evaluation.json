@@ -1,0 +1,2854 @@
+{
+  "version": "meiji-evidence-v2-20261017",
+  "train_races": 56,
+  "test_races": 51,
+  "split": "train before 2026-10-01; test 2026-10-01 through 2026-10-14",
+  "independent_blind_test": false,
+  "methods": {
+    "meiji": {
+      "races": 51,
+      "top1_place": 29,
+      "top1_win": 9,
+      "cover4_places": 90,
+      "cover_all_three_races": 13,
+      "qp_cost": 3030,
+      "qp_return": 4138.0,
+      "qp_hit_races": 30,
+      "qp_races": 51,
+      "per_day": {
+        "2026-10-01": {
+          "races": 11,
+          "top1_place": 5,
+          "cover4_places": 18,
+          "qp_profit": 39.0
+        },
+        "2026-10-04": {
+          "races": 11,
+          "top1_place": 8,
+          "cover4_places": 18,
+          "qp_profit": -172.5
+        },
+        "2026-10-07": {
+          "races": 9,
+          "top1_place": 5,
+          "cover4_places": 13,
+          "qp_profit": -270.5
+        },
+        "2026-10-11": {
+          "races": 11,
+          "top1_place": 7,
+          "cover4_places": 25,
+          "qp_profit": 1462.0
+        },
+        "2026-10-14": {
+          "races": 9,
+          "top1_place": 4,
+          "cover4_places": 16,
+          "qp_profit": 50.0
+        }
+      },
+      "per_race": [
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            5,
+            2,
+            1,
+            12
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            6,
+            7,
+            1,
+            9
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            6,
+            7,
+            4,
+            2
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            7,
+            10,
+            14,
+            13
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            1,
+            3,
+            12,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            8,
+            6,
+            1,
+            3
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            10,
+            6,
+            2,
+            13
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            1,
+            11,
+            8,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            5,
+            4,
+            12,
+            9
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            8,
+            9,
+            3,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            1,
+            8,
+            4,
+            9
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            12,
+            1,
+            13,
+            2
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            2,
+            13,
+            11,
+            3
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            7,
+            8,
+            3,
+            2
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            3,
+            8,
+            13,
+            7
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            7,
+            3,
+            4,
+            8
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            2,
+            3,
+            5,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            9,
+            14,
+            3,
+            2
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            3,
+            10,
+            5,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            10,
+            11,
+            12,
+            8
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            1,
+            13,
+            9,
+            10
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            2,
+            4,
+            1,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 1,
+          "numbers": [
+            9,
+            1,
+            10,
+            11
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 2,
+          "numbers": [
+            10,
+            2,
+            4,
+            12
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 3,
+          "numbers": [
+            10,
+            4,
+            1,
+            8
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 4,
+          "numbers": [
+            8,
+            2,
+            10,
+            12
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 5,
+          "numbers": [
+            6,
+            4,
+            8,
+            5
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 6,
+          "numbers": [
+            4,
+            7,
+            10,
+            2
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 7,
+          "numbers": [
+            5,
+            2,
+            9,
+            11
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 8,
+          "numbers": [
+            9,
+            1,
+            2,
+            12
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 9,
+          "numbers": [
+            5,
+            1,
+            7,
+            2
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            7,
+            9,
+            5,
+            8
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            13,
+            2,
+            1,
+            12
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            4,
+            2,
+            8,
+            3
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            2,
+            8,
+            6,
+            9
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            11,
+            1,
+            6,
+            2
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            12,
+            2,
+            1,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            5,
+            14,
+            3,
+            9
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            11,
+            1,
+            8,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            10,
+            3,
+            1,
+            8
+          ],
+          "top1_place": 0,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            2,
+            7,
+            9,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            11,
+            6,
+            1,
+            8
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 1,
+          "numbers": [
+            11,
+            10,
+            1,
+            5
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 2,
+          "numbers": [
+            8,
+            10,
+            3,
+            4
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 3,
+          "numbers": [
+            9,
+            2,
+            10,
+            6
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 4,
+          "numbers": [
+            7,
+            2,
+            5,
+            1
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 5,
+          "numbers": [
+            2,
+            1,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 6,
+          "numbers": [
+            7,
+            9,
+            5,
+            3
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 7,
+          "numbers": [
+            6,
+            12,
+            3,
+            5
+          ],
+          "top1_place": 0,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 8,
+          "numbers": [
+            3,
+            9,
+            1,
+            12
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 9,
+          "numbers": [
+            7,
+            5,
+            8,
+            10
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        }
+      ],
+      "qp_profit": 1108.0,
+      "qp_roi_pct": 36.56765676567657
+    },
+    "baseline_M1": {
+      "races": 51,
+      "top1_place": 26,
+      "top1_win": 13,
+      "cover4_places": 79,
+      "cover_all_three_races": 7,
+      "qp_cost": 3060,
+      "qp_return": 2319.5,
+      "qp_hit_races": 27,
+      "qp_races": 51,
+      "per_day": {
+        "2026-10-01": {
+          "races": 11,
+          "top1_place": 8,
+          "cover4_places": 17,
+          "qp_profit": -355.0
+        },
+        "2026-10-04": {
+          "races": 11,
+          "top1_place": 7,
+          "cover4_places": 19,
+          "qp_profit": -36.0
+        },
+        "2026-10-07": {
+          "races": 9,
+          "top1_place": 5,
+          "cover4_places": 14,
+          "qp_profit": 35.5
+        },
+        "2026-10-11": {
+          "races": 11,
+          "top1_place": 2,
+          "cover4_places": 18,
+          "qp_profit": -28.5
+        },
+        "2026-10-14": {
+          "races": 9,
+          "top1_place": 4,
+          "cover4_places": 11,
+          "qp_profit": -356.5
+        }
+      },
+      "per_race": [
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            1,
+            10,
+            4,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            9,
+            6,
+            1,
+            8
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            6,
+            5,
+            2,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            7,
+            10,
+            8,
+            5
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            3,
+            1,
+            6,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            3,
+            13,
+            1,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            10,
+            4,
+            2,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            5,
+            4,
+            1,
+            8
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            1,
+            12,
+            3,
+            2
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            9,
+            7,
+            14,
+            3
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            10,
+            8,
+            6,
+            9
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            12,
+            14,
+            4,
+            1
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            11,
+            3,
+            13,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            7,
+            2,
+            8,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            12,
+            8,
+            4,
+            5
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            7,
+            6,
+            8,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            2,
+            6,
+            8,
+            5
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            14,
+            8,
+            13,
+            3
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            5,
+            8,
+            1,
+            6
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            8,
+            6,
+            11,
+            12
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            14,
+            13,
+            3,
+            2
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            2,
+            1,
+            5,
+            10
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 1,
+          "numbers": [
+            9,
+            1,
+            4,
+            3
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 2,
+          "numbers": [
+            10,
+            2,
+            4,
+            7
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 3,
+          "numbers": [
+            1,
+            4,
+            8,
+            2
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 4,
+          "numbers": [
+            2,
+            10,
+            4,
+            9
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 5,
+          "numbers": [
+            1,
+            4,
+            8,
+            9
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 6,
+          "numbers": [
+            10,
+            9,
+            3,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 7,
+          "numbers": [
+            9,
+            5,
+            12,
+            10
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 8,
+          "numbers": [
+            2,
+            10,
+            5,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 9,
+          "numbers": [
+            9,
+            7,
+            1,
+            5
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            1,
+            3,
+            2,
+            5
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            4,
+            1,
+            13,
+            7
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            1,
+            2,
+            6,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            2,
+            1,
+            7,
+            9
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            9,
+            2,
+            4,
+            6
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            3,
+            2,
+            6,
+            12
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            3,
+            14,
+            5,
+            10
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            1,
+            11,
+            9,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            4,
+            10,
+            6,
+            5
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            10,
+            3,
+            1,
+            7
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            11,
+            9,
+            6,
+            3
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 1,
+          "numbers": [
+            6,
+            10,
+            11,
+            5
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 2,
+          "numbers": [
+            3,
+            10,
+            8,
+            1
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 3,
+          "numbers": [
+            2,
+            10,
+            6,
+            9
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 4,
+          "numbers": [
+            2,
+            5,
+            7,
+            1
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 5,
+          "numbers": [
+            3,
+            1,
+            6,
+            2
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 6,
+          "numbers": [
+            7,
+            4,
+            8,
+            5
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 7,
+          "numbers": [
+            5,
+            4,
+            6,
+            1
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 8,
+          "numbers": [
+            9,
+            1,
+            3,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 9,
+          "numbers": [
+            10,
+            8,
+            7,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        }
+      ],
+      "qp_profit": -740.5,
+      "qp_roi_pct": -24.19934640522876
+    },
+    "evidence_M1": {
+      "races": 51,
+      "top1_place": 26,
+      "top1_win": 12,
+      "cover4_places": 83,
+      "cover_all_three_races": 11,
+      "qp_cost": 3060,
+      "qp_return": 2852.5,
+      "qp_hit_races": 25,
+      "qp_races": 51,
+      "per_day": {
+        "2026-10-01": {
+          "races": 11,
+          "top1_place": 5,
+          "cover4_places": 19,
+          "qp_profit": -7.5
+        },
+        "2026-10-04": {
+          "races": 11,
+          "top1_place": 6,
+          "cover4_places": 18,
+          "qp_profit": -187.5
+        },
+        "2026-10-07": {
+          "races": 9,
+          "top1_place": 6,
+          "cover4_places": 14,
+          "qp_profit": 74.0
+        },
+        "2026-10-11": {
+          "races": 11,
+          "top1_place": 4,
+          "cover4_places": 18,
+          "qp_profit": 84.0
+        },
+        "2026-10-14": {
+          "races": 9,
+          "top1_place": 5,
+          "cover4_places": 14,
+          "qp_profit": -170.5
+        }
+      },
+      "per_race": [
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            1,
+            10,
+            4,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            1,
+            9,
+            11,
+            13
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            6,
+            2,
+            4,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            7,
+            10,
+            8,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            3,
+            1,
+            6,
+            8
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            13,
+            14,
+            7,
+            3
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            14,
+            10,
+            6,
+            11
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            5,
+            3,
+            8,
+            1
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            1,
+            3,
+            2,
+            12
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            14,
+            3,
+            1,
+            7
+          ],
+          "top1_place": 0,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            9,
+            10,
+            6,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            12,
+            14,
+            4,
+            1
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            13,
+            14,
+            2,
+            3
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            8,
+            2,
+            7,
+            6
+          ],
+          "top1_place": 0,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            8,
+            13,
+            5,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            4,
+            7,
+            8,
+            6
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            2,
+            3,
+            6,
+            8
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            8,
+            3,
+            13,
+            14
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            5,
+            8,
+            6,
+            3
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            4,
+            8,
+            6,
+            2
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            14,
+            9,
+            3,
+            13
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            2,
+            10,
+            1,
+            9
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 1,
+          "numbers": [
+            9,
+            4,
+            1,
+            8
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 2,
+          "numbers": [
+            10,
+            4,
+            7,
+            2
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 3,
+          "numbers": [
+            4,
+            1,
+            10,
+            5
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 4,
+          "numbers": [
+            10,
+            2,
+            4,
+            8
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 5,
+          "numbers": [
+            8,
+            1,
+            4,
+            5
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 6,
+          "numbers": [
+            10,
+            3,
+            2,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 7,
+          "numbers": [
+            11,
+            5,
+            10,
+            3
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 8,
+          "numbers": [
+            1,
+            10,
+            5,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 9,
+          "numbers": [
+            7,
+            1,
+            2,
+            12
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            5,
+            1,
+            3,
+            10
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            13,
+            1,
+            2,
+            10
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            10,
+            8,
+            2,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            1,
+            7,
+            10,
+            9
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            2,
+            4,
+            9,
+            1
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            12,
+            3,
+            6,
+            2
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            6,
+            5,
+            14,
+            10
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            1,
+            11,
+            7,
+            9
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            10,
+            1,
+            6,
+            9
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            3,
+            7,
+            2,
+            13
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            9,
+            3,
+            8,
+            6
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 1,
+          "numbers": [
+            11,
+            5,
+            4,
+            10
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 2,
+          "numbers": [
+            10,
+            7,
+            1,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 3,
+          "numbers": [
+            10,
+            1,
+            2,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 4,
+          "numbers": [
+            5,
+            12,
+            10,
+            7
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 5,
+          "numbers": [
+            6,
+            12,
+            3,
+            10
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 6,
+          "numbers": [
+            4,
+            9,
+            2,
+            8
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 7,
+          "numbers": [
+            1,
+            4,
+            5,
+            3
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 8,
+          "numbers": [
+            9,
+            2,
+            3,
+            12
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 9,
+          "numbers": [
+            10,
+            7,
+            1,
+            2
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        }
+      ],
+      "qp_profit": -207.5,
+      "qp_roi_pct": -6.781045751633987
+    },
+    "evidence_place": {
+      "races": 51,
+      "top1_place": 20,
+      "top1_win": 8,
+      "cover4_places": 75,
+      "cover_all_three_races": 6,
+      "qp_cost": 3060,
+      "qp_return": 4220.5,
+      "qp_hit_races": 25,
+      "qp_races": 51,
+      "per_day": {
+        "2026-10-01": {
+          "races": 11,
+          "top1_place": 4,
+          "cover4_places": 16,
+          "qp_profit": -83.0
+        },
+        "2026-10-04": {
+          "races": 11,
+          "top1_place": 5,
+          "cover4_places": 16,
+          "qp_profit": 179.5
+        },
+        "2026-10-07": {
+          "races": 9,
+          "top1_place": 2,
+          "cover4_places": 15,
+          "qp_profit": 1364.5
+        },
+        "2026-10-11": {
+          "races": 11,
+          "top1_place": 6,
+          "cover4_places": 18,
+          "qp_profit": 60.0
+        },
+        "2026-10-14": {
+          "races": 9,
+          "top1_place": 3,
+          "cover4_places": 10,
+          "qp_profit": -360.5
+        }
+      },
+      "per_race": [
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            1,
+            5,
+            4,
+            10
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            4,
+            9,
+            10,
+            7
+          ],
+          "top1_place": 0,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            7,
+            6,
+            2,
+            5
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            7,
+            10,
+            14,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            12,
+            3,
+            11,
+            1
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            14,
+            7,
+            3,
+            13
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            14,
+            10,
+            12,
+            13
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            3,
+            4,
+            14,
+            2
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            3,
+            12,
+            4,
+            10
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            1,
+            14,
+            10,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-01",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            8,
+            4,
+            10,
+            6
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            12,
+            1,
+            3,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            7,
+            2,
+            1,
+            13
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            8,
+            2,
+            3,
+            7
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            12,
+            2,
+            8,
+            14
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            13,
+            1,
+            8,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            2,
+            3,
+            6,
+            9
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            13,
+            8,
+            5,
+            12
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            8,
+            9,
+            7,
+            3
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            7,
+            6,
+            8,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            4,
+            13,
+            14,
+            11
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-04",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            3,
+            14,
+            10,
+            1
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 1,
+          "numbers": [
+            12,
+            7,
+            11,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 2,
+          "numbers": [
+            10,
+            9,
+            5,
+            6
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 3,
+          "numbers": [
+            8,
+            6,
+            3,
+            1
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 4,
+          "numbers": [
+            11,
+            8,
+            2,
+            3
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 5,
+          "numbers": [
+            2,
+            6,
+            10,
+            5
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 6,
+          "numbers": [
+            12,
+            10,
+            9,
+            6
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 7,
+          "numbers": [
+            9,
+            12,
+            5,
+            10
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 8,
+          "numbers": [
+            2,
+            4,
+            6,
+            12
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-07",
+          "venue": "HV",
+          "race": 9,
+          "numbers": [
+            11,
+            7,
+            2,
+            1
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 1,
+          "numbers": [
+            3,
+            4,
+            11,
+            1
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 2,
+          "numbers": [
+            13,
+            2,
+            1,
+            10
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 3,
+          "numbers": [
+            9,
+            2,
+            8,
+            10
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 4,
+          "numbers": [
+            1,
+            2,
+            8,
+            10
+          ],
+          "top1_place": 1,
+          "cover4_places": 3
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 5,
+          "numbers": [
+            1,
+            9,
+            6,
+            5
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 6,
+          "numbers": [
+            12,
+            2,
+            3,
+            6
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 7,
+          "numbers": [
+            5,
+            14,
+            6,
+            12
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 8,
+          "numbers": [
+            10,
+            1,
+            11,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 9,
+          "numbers": [
+            10,
+            3,
+            6,
+            2
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 10,
+          "numbers": [
+            1,
+            13,
+            9,
+            2
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-11",
+          "venue": "ST",
+          "race": 11,
+          "numbers": [
+            12,
+            9,
+            3,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 1,
+          "numbers": [
+            5,
+            10,
+            4,
+            8
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 2,
+          "numbers": [
+            3,
+            4,
+            7,
+            1
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 3,
+          "numbers": [
+            6,
+            1,
+            2,
+            3
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 4,
+          "numbers": [
+            6,
+            2,
+            7,
+            1
+          ],
+          "top1_place": 0,
+          "cover4_places": 0
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 5,
+          "numbers": [
+            10,
+            1,
+            12,
+            2
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 6,
+          "numbers": [
+            7,
+            3,
+            9,
+            4
+          ],
+          "top1_place": 0,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 7,
+          "numbers": [
+            12,
+            1,
+            6,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 1
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 8,
+          "numbers": [
+            9,
+            1,
+            10,
+            7
+          ],
+          "top1_place": 1,
+          "cover4_places": 2
+        },
+        {
+          "date": "2026-10-14",
+          "venue": "HV",
+          "race": 9,
+          "numbers": [
+            2,
+            5,
+            1,
+            6
+          ],
+          "top1_place": 0,
+          "cover4_places": 2
+        }
+      ],
+      "qp_profit": 1160.5,
+      "qp_roi_pct": 37.92483660130719
+    }
+  },
+  "evidence_coverage": {
+    "historical_runner_seats": 1320,
+    "with_prior_run": 514,
+    "with_report": 514,
+    "with_trial_30d": 1007
+  }
+}

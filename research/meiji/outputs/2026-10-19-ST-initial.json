@@ -1,0 +1,4954 @@
+{
+  "version": "meiji-evidence-v2-20261017",
+  "frozen_at": "2026-10-17T14:19:38.579533+08:00",
+  "input_sha256": "a8e8b004e68bc0a8c83ac233c9ad4dc9bc63a8260710d4a711f27ca5318bf3a8",
+  "code_sha256": "97beb02cc3b02cbbfd489b2c63eb292b2dc0902f7bc5c5c9e472d2585905d48f",
+  "meeting": "2026-10-19-ST",
+  "primary_research_arm": "evidence_M1",
+  "selection_rule": "top 4 distinct active saddle numbers by ranking_score, tie smaller number",
+  "known_limitations": [
+    "Historical replay sources collected after race, not independently sealed pre-off data.",
+    "Race form/style/trip features cover only the collected September-October 107 races.",
+    "Trial comment markers are text evidence; no visual trial or paddock analysis."
+  ],
+  "models": {
+    "baseline_M1": {
+      "feature_order": [
+        "last_place",
+        "best_last3",
+        "mean_last3",
+        "placed_last3",
+        "wins_last3",
+        "form_improvement",
+        "starts_shown",
+        "missing_form",
+        "age",
+        "rating",
+        "weight",
+        "rating_change",
+        "weight_change",
+        "grade_change",
+        "draw_fraction",
+        "rating_relative",
+        "weight_relative"
+      ],
+      "target": "M1",
+      "mean": [
+        6.861363636363636,
+        4.457575757575758,
+        6.825883838383833,
+        0.7356060606060606,
+        0.2287878787878788,
+        -0.023484848484848483,
+        5.328787878787879,
+        0.026515151515151516,
+        5.20530303030303,
+        55.20909090909091,
+        125.33863636363637,
+        -0.875,
+        -0.11666666666666667,
+        -0.0446969696969697,
+        0.5430509641873278,
+        -3.2835687031337963e-16,
+        -2.153159805333637e-16
+      ],
+      "scale": [
+        3.8643308199415913,
+        3.3515740583348386,
+        2.978134270078198,
+        0.8531254992901225,
+        0.4884313640920688,
+        4.296252063744052,
+        1.5298311603726114,
+        0.1606614398518825,
+        1.1359693760503213,
+        16.84326794096469,
+        5.759815702639681,
+        2.850887023047707,
+        6.245363937119343,
+        0.40858484411356444,
+        0.28892193017500656,
+        5.350222136875347,
+        5.479099275746283
+      ],
+      "coef": [
+        -0.5256627526869866,
+        -0.4471605696126089,
+        -0.39588061504103744,
+        0.012164989942328322,
+        -0.06839495955791938,
+        -0.10981638471410103,
+        -0.10001128298620002,
+        0.38190483573293615,
+        -0.22288088598015418,
+        -0.09707695627387315,
+        -0.04187886355508833,
+        0.010585192481090877,
+        0.054658541956428844,
+        0.0061640770912837735,
+        -0.27590467091581744,
+        0.08123623687856052,
+        -0.049146776574711615
+      ],
+      "intercept": [
+        -2.859736186305501
+      ]
+    },
+    "evidence_M1": {
+      "feature_order": [
+        "last_place",
+        "best_last3",
+        "mean_last3",
+        "placed_last3",
+        "wins_last3",
+        "form_improvement",
+        "starts_shown",
+        "missing_form",
+        "age",
+        "rating",
+        "weight",
+        "rating_change",
+        "weight_change",
+        "grade_change",
+        "draw_fraction",
+        "rating_relative",
+        "weight_relative",
+        "known_runs",
+        "history_missing",
+        "days_since_known",
+        "early_fraction",
+        "style_missing",
+        "closing_gain",
+        "front_pressure",
+        "pace_interaction",
+        "same_course_rate",
+        "same_distance_rate",
+        "rider_horse_rate",
+        "rating_headroom",
+        "headroom_missing",
+        "trip_missing",
+        "trip_blocked",
+        "trip_wide",
+        "trip_slow_start",
+        "trip_over_racing",
+        "trip_health",
+        "trial_missing",
+        "trial_rank_fraction",
+        "trial_days",
+        "trial_positive",
+        "trial_negative",
+        "trial_failed"
+      ],
+      "target": "M1",
+      "mean": [
+        6.861363636363636,
+        4.457575757575758,
+        6.825883838383833,
+        0.7356060606060606,
+        0.2287878787878788,
+        -0.023484848484848483,
+        5.328787878787879,
+        0.026515151515151516,
+        5.20530303030303,
+        55.20909090909091,
+        125.33863636363637,
+        -0.875,
+        -0.11666666666666667,
+        -0.0446969696969697,
+        0.5430509641873278,
+        -3.2835687031337963e-16,
+        -2.153159805333637e-16,
+        0.4537878787878788,
+        0.6106060606060606,
+        117.42121212121212,
+        0.5154260512215061,
+        0.6106060606060606,
+        0.004218380525198707,
+        0.2829677498427498,
+        -0.01271844007964138,
+        0.25218614718614485,
+        0.2535624098124081,
+        0.2538888888888873,
+        -0.20227272727272727,
+        0.8939393939393939,
+        0.6106060606060606,
+        0.0803030303030303,
+        0.04318181818181818,
+        0.006818181818181818,
+        0.02878787878787879,
+        0.0030303030303030303,
+        0.23712121212121212,
+        0.43888511740784464,
+        18.465151515151515,
+        0.04318181818181818,
+        0.008333333333333333,
+        0.0
+      ],
+      "scale": [
+        3.8643308199415913,
+        3.3515740583348386,
+        2.978134270078198,
+        0.8531254992901225,
+        0.4884313640920688,
+        4.296252063744052,
+        1.5298311603726114,
+        0.1606614398518825,
+        1.1359693760503213,
+        16.84326794096469,
+        5.759815702639681,
+        2.850887023047707,
+        6.245363937119343,
+        0.40858484411356444,
+        0.28892193017500656,
+        5.350222136875347,
+        5.479099275746283,
+        0.6186379593118726,
+        0.4876128580720653,
+        78.48212403133674,
+        0.17835365060618133,
+        0.4876128580720653,
+        0.227290316494832,
+        0.18592027480209533,
+        0.06263631033669258,
+        0.04758671176807402,
+        0.04189403953753573,
+        0.0437175404678335,
+        1.137179252753308,
+        0.3079151732257826,
+        0.4876128580720653,
+        0.2717617589492342,
+        0.20326620171669016,
+        0.0822903045010533,
+        0.16720985862912774,
+        0.05496471862793083,
+        0.4253172261775652,
+        0.2697567561534979,
+        8.446372583868651,
+        0.2032662017166894,
+        0.09090593428863052,
+        1.0
+      ],
+      "coef": [
+        -0.46524293870534844,
+        -0.522297907472976,
+        -0.42082163688067603,
+        -0.006806948267573969,
+        -0.0911869895150414,
+        -0.06514459309926604,
+        -0.1826794972447222,
+        0.4042262437444519,
+        -0.1867880685352708,
+        -0.13872069436487328,
+        -0.04555143866334197,
+        -0.04203451480307326,
+        -0.030996629547654857,
+        -0.07230039551280648,
+        -0.2744569231708968,
+        0.02005250749344474,
+        0.03120596813719197,
+        -0.11873828595971435,
+        -0.06357631788916632,
+        -0.08921057081827902,
+        -0.11878158485920218,
+        -0.06357631788916632,
+        0.23239196216977162,
+        -0.038962197805842105,
+        -0.047895614907900466,
+        0.12636653908942402,
+        -0.16067086899042649,
+        0.06434011679688156,
+        -0.05621117364727124,
+        0.07224316175509614,
+        -0.06357631788916632,
+        -0.06191884161816579,
+        0.056477357921405937,
+        0.08304010069545115,
+        0.17557194645267216,
+        -0.13059301482254512,
+        -0.0680369537973271,
+        -0.4052237492440983,
+        -0.10816931691675273,
+        0.21026470900126412,
+        -0.17366456484355364,
+        0.0
+      ],
+      "intercept": [
+        -3.034009264118995
+      ]
+    },
+    "evidence_place": {
+      "feature_order": [
+        "last_place",
+        "best_last3",
+        "mean_last3",
+        "placed_last3",
+        "wins_last3",
+        "form_improvement",
+        "starts_shown",
+        "missing_form",
+        "age",
+        "rating",
+        "weight",
+        "rating_change",
+        "weight_change",
+        "grade_change",
+        "draw_fraction",
+        "rating_relative",
+        "weight_relative",
+        "known_runs",
+        "history_missing",
+        "days_since_known",
+        "early_fraction",
+        "style_missing",
+        "closing_gain",
+        "front_pressure",
+        "pace_interaction",
+        "same_course_rate",
+        "same_distance_rate",
+        "rider_horse_rate",
+        "rating_headroom",
+        "headroom_missing",
+        "trip_missing",
+        "trip_blocked",
+        "trip_wide",
+        "trip_slow_start",
+        "trip_over_racing",
+        "trip_health",
+        "trial_missing",
+        "trial_rank_fraction",
+        "trial_days",
+        "trial_positive",
+        "trial_negative",
+        "trial_failed"
+      ],
+      "target": "place",
+      "mean": [
+        6.861363636363636,
+        4.457575757575758,
+        6.825883838383833,
+        0.7356060606060606,
+        0.2287878787878788,
+        -0.023484848484848483,
+        5.328787878787879,
+        0.026515151515151516,
+        5.20530303030303,
+        55.20909090909091,
+        125.33863636363637,
+        -0.875,
+        -0.11666666666666667,
+        -0.0446969696969697,
+        0.5430509641873278,
+        -3.2835687031337963e-16,
+        -2.153159805333637e-16,
+        0.4537878787878788,
+        0.6106060606060606,
+        117.42121212121212,
+        0.5154260512215061,
+        0.6106060606060606,
+        0.004218380525198707,
+        0.2829677498427498,
+        -0.01271844007964138,
+        0.25218614718614485,
+        0.2535624098124081,
+        0.2538888888888873,
+        -0.20227272727272727,
+        0.8939393939393939,
+        0.6106060606060606,
+        0.0803030303030303,
+        0.04318181818181818,
+        0.006818181818181818,
+        0.02878787878787879,
+        0.0030303030303030303,
+        0.23712121212121212,
+        0.43888511740784464,
+        18.465151515151515,
+        0.04318181818181818,
+        0.008333333333333333,
+        0.0
+      ],
+      "scale": [
+        3.8643308199415913,
+        3.3515740583348386,
+        2.978134270078198,
+        0.8531254992901225,
+        0.4884313640920688,
+        4.296252063744052,
+        1.5298311603726114,
+        0.1606614398518825,
+        1.1359693760503213,
+        16.84326794096469,
+        5.759815702639681,
+        2.850887023047707,
+        6.245363937119343,
+        0.40858484411356444,
+        0.28892193017500656,
+        5.350222136875347,
+        5.479099275746283,
+        0.6186379593118726,
+        0.4876128580720653,
+        78.48212403133674,
+        0.17835365060618133,
+        0.4876128580720653,
+        0.227290316494832,
+        0.18592027480209533,
+        0.06263631033669258,
+        0.04758671176807402,
+        0.04189403953753573,
+        0.0437175404678335,
+        1.137179252753308,
+        0.3079151732257826,
+        0.4876128580720653,
+        0.2717617589492342,
+        0.20326620171669016,
+        0.0822903045010533,
+        0.16720985862912774,
+        0.05496471862793083,
+        0.4253172261775652,
+        0.2697567561534979,
+        8.446372583868651,
+        0.2032662017166894,
+        0.09090593428863052,
+        1.0
+      ],
+      "coef": [
+        -0.0647307045552128,
+        -0.07919796384905833,
+        -0.3058947185658748,
+        -0.06550472675997929,
+        -0.15437613549066112,
+        -0.057949127550447094,
+        0.1435035901941923,
+        0.06779885260046771,
+        -0.09702979760512132,
+        -0.013123384269785654,
+        -0.09021290651577435,
+        0.17835222023292044,
+        -0.04687097785152203,
+        0.047895410822178804,
+        -0.26583320431170804,
+        -0.005002792628111577,
+        0.16975754070184473,
+        0.20126574873614023,
+        0.2248316382856864,
+        -0.333053567615389,
+        -0.13860889773538132,
+        0.2248316382856864,
+        0.27332861958588495,
+        -0.04011718564242623,
+        -0.12825355325053342,
+        0.2596461469104138,
+        -0.12488035897578936,
+        0.015337518119800575,
+        0.18997530189782727,
+        0.013637588972610488,
+        0.2248316382856864,
+        0.0209963034101111,
+        0.24531722314866816,
+        0.022312163380402476,
+        0.11229738466817746,
+        -0.22504373322990281,
+        0.35798577835392925,
+        -0.31245415244985475,
+        -0.27229450696186036,
+        0.042477485037852376,
+        -0.3616343135333788,
+        0.0
+      ],
+      "intercept": [
+        -1.3371177983168325
+      ]
+    }
+  },
+  "races": [
+    {
+      "race": 1,
+      "off": "2026-10-19T12:30:00+08:00",
+      "distance": 1800,
+      "track": "TURF",
+      "rail": "C+3",
+      "arms": {
+        "baseline_M1": {
+          "numbers": [
+            2,
+            8,
+            6,
+            4
+          ],
+          "horses": [
+            {
+              "no": 2,
+              "name": "連連好運",
+              "draw": 3,
+              "jockey": "艾道拿",
+              "ranking_score": 0.2563255658044193,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-07",
+                "running_style": "forward",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-07",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/07",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K500",
+                  "date": "2026-09-22",
+                  "batch": 5,
+                  "rank": 3,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 8,
+              "name": "發財金戈",
+              "draw": 11,
+              "jockey": "周俊樂",
+              "ranking_score": 0.1692351684119196,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 1,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 6,
+              "name": "我最好",
+              "draw": 2,
+              "jockey": "何澤堯",
+              "ranking_score": 0.16767268457019477,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K502",
+                  "date": "2026-09-22",
+                  "batch": 5,
+                  "rank": 2,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 4,
+              "name": "竣誠駒",
+              "draw": 5,
+              "jockey": "袁幸堯",
+              "ranking_score": 0.14672034387232671,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-07",
+                "running_style": "forward",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-07",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/07",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2022_H486",
+                  "date": "2026-09-22",
+                  "batch": 4,
+                  "rank": 5,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_M1": {
+          "numbers": [
+            8,
+            6,
+            2,
+            1
+          ],
+          "horses": [
+            {
+              "no": 8,
+              "name": "發財金戈",
+              "draw": 11,
+              "jockey": "周俊樂",
+              "ranking_score": 0.35849491905497843,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 1,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 6,
+              "name": "我最好",
+              "draw": 2,
+              "jockey": "何澤堯",
+              "ranking_score": 0.30926495944419174,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K502",
+                  "date": "2026-09-22",
+                  "batch": 5,
+                  "rank": 2,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 2,
+              "name": "連連好運",
+              "draw": 3,
+              "jockey": "艾道拿",
+              "ranking_score": 0.29122926467042154,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-07",
+                "running_style": "forward",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-07",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/07",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K500",
+                  "date": "2026-09-22",
+                  "batch": 5,
+                  "rank": 3,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 1,
+              "name": "禾道威",
+              "draw": 8,
+              "jockey": "潘頓",
+              "ranking_score": 0.16067215574521396,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 1,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            }
+          ]
+        },
+        "evidence_place": {
+          "numbers": [
+            8,
+            1,
+            6,
+            13
+          ],
+          "horses": [
+            {
+              "no": 8,
+              "name": "發財金戈",
+              "draw": 11,
+              "jockey": "周俊樂",
+              "ranking_score": 0.9180781545201011,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 1,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 1,
+              "name": "禾道威",
+              "draw": 8,
+              "jockey": "潘頓",
+              "ranking_score": 0.5868330530221418,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 1,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 6,
+              "name": "我最好",
+              "draw": 2,
+              "jockey": "何澤堯",
+              "ranking_score": 0.5656724197303942,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K502",
+                  "date": "2026-09-22",
+                  "batch": 5,
+                  "rank": 2,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 13,
+              "name": "幸運同行",
+              "draw": 9,
+              "jockey": "艾兆禮",
+              "ranking_score": 0.2672165551080925,
+              "evidence": {
+                "known_prior_runs": 3,
+                "last_known_run": "2026-10-07",
+                "running_style": "closer",
+                "pace_proxy": 0.25,
+                "pace_known": 12,
+                "pace_field": 13,
+                "report_date": "2026-10-07",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/07",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 1,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "race": 2,
+      "off": "2026-10-19T13:00:00+08:00",
+      "distance": 1400,
+      "track": "TURF",
+      "rail": "C+3",
+      "arms": {
+        "baseline_M1": {
+          "numbers": [
+            10,
+            11,
+            8,
+            12
+          ],
+          "horses": [
+            {
+              "no": 10,
+              "name": "將傲",
+              "draw": 3,
+              "jockey": "潘頓",
+              "ranking_score": 0.18674585208258196,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-23",
+                "running_style": "forward",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-23",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/23",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L277",
+                  "date": "2026-10-13",
+                  "batch": 2,
+                  "rank": 5,
+                  "positive": 1,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/13"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 11,
+              "name": "盛勢威楓",
+              "draw": 1,
+              "jockey": "潘明輝",
+              "ranking_score": 0.13182803279032598,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-04",
+                "running_style": "forward",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-04",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/04",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K111",
+                  "date": "2026-09-22",
+                  "batch": 4,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 8,
+              "name": "確好勁",
+              "draw": 4,
+              "jockey": "艾兆禮",
+              "ranking_score": 0.1167794340078971,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-09-27",
+                "running_style": "midfield",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 12,
+              "name": "潮流勇駒",
+              "draw": 11,
+              "jockey": "艾道拿",
+              "ranking_score": 0.10430863300729831,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-04",
+                "running_style": "closer",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-04",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/04",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L209",
+                  "date": "2026-09-22",
+                  "batch": 4,
+                  "rank": 8,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_M1": {
+          "numbers": [
+            10,
+            11,
+            8,
+            2
+          ],
+          "horses": [
+            {
+              "no": 10,
+              "name": "將傲",
+              "draw": 3,
+              "jockey": "潘頓",
+              "ranking_score": 0.4417024863381557,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-23",
+                "running_style": "forward",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-23",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/23",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L277",
+                  "date": "2026-10-13",
+                  "batch": 2,
+                  "rank": 5,
+                  "positive": 1,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/13"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 11,
+              "name": "盛勢威楓",
+              "draw": 1,
+              "jockey": "潘明輝",
+              "ranking_score": 0.2091787379310003,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-04",
+                "running_style": "forward",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-04",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/04",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K111",
+                  "date": "2026-09-22",
+                  "batch": 4,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 8,
+              "name": "確好勁",
+              "draw": 4,
+              "jockey": "艾兆禮",
+              "ranking_score": 0.04983028697722843,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-09-27",
+                "running_style": "midfield",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 2,
+              "name": "超拍檔",
+              "draw": 5,
+              "jockey": "梁家俊",
+              "ranking_score": 0.04919006046648847,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K484",
+                  "date": "2026-09-22",
+                  "batch": 3,
+                  "rank": 6,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            }
+          ]
+        },
+        "evidence_place": {
+          "numbers": [
+            10,
+            11,
+            8,
+            9
+          ],
+          "horses": [
+            {
+              "no": 10,
+              "name": "將傲",
+              "draw": 3,
+              "jockey": "潘頓",
+              "ranking_score": 0.44325921772141946,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-23",
+                "running_style": "forward",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-23",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/23",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L277",
+                  "date": "2026-10-13",
+                  "batch": 2,
+                  "rank": 5,
+                  "positive": 1,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/13"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 11,
+              "name": "盛勢威楓",
+              "draw": 1,
+              "jockey": "潘明輝",
+              "ranking_score": 0.4331215047066949,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-04",
+                "running_style": "forward",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-04",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/04",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K111",
+                  "date": "2026-09-22",
+                  "batch": 4,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 8,
+              "name": "確好勁",
+              "draw": 4,
+              "jockey": "艾兆禮",
+              "ranking_score": 0.332229752784607,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-09-27",
+                "running_style": "midfield",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 9,
+              "name": "莊家班",
+              "draw": 2,
+              "jockey": "黃智弘",
+              "ranking_score": 0.3097643659881601,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.5,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "race": 3,
+      "off": "2026-10-19T13:30:00+08:00",
+      "distance": 1800,
+      "track": "TURF",
+      "rail": "C+3",
+      "arms": {
+        "baseline_M1": {
+          "numbers": [
+            2,
+            9,
+            6,
+            5
+          ],
+          "horses": [
+            {
+              "no": 2,
+              "name": "捷威",
+              "draw": 7,
+              "jockey": "何澤堯",
+              "ranking_score": 0.18329285486089805,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "midfield",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 9,
+              "name": "好運年",
+              "draw": 4,
+              "jockey": "班德禮",
+              "ranking_score": 0.15691865639743163,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "midfield",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 6,
+              "name": "幸運威龍",
+              "draw": 6,
+              "jockey": "潘明輝",
+              "ranking_score": 0.15526173049598446,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-13",
+                "running_style": "forward",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": "2026-09-13",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/13",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 5,
+              "name": "凝妙星",
+              "draw": 5,
+              "jockey": "潘頓",
+              "ranking_score": 0.14158480765363785,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-09-23",
+                "running_style": "midfield",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": "2026-09-23",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/23",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_M1": {
+          "numbers": [
+            9,
+            11,
+            3,
+            5
+          ],
+          "horses": [
+            {
+              "no": 9,
+              "name": "好運年",
+              "draw": 4,
+              "jockey": "班德禮",
+              "ranking_score": 0.12575370069701136,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "midfield",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 11,
+              "name": "智多多寶",
+              "draw": 12,
+              "jockey": "霍宏聲",
+              "ranking_score": 0.11887370500438812,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K387",
+                  "date": "2026-09-19",
+                  "batch": 2,
+                  "rank": 3,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 8,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/19"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 3,
+              "name": "雙贏",
+              "draw": 1,
+              "jockey": "蔡明紹",
+              "ranking_score": 0.11868535247460417,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2022_H382",
+                  "date": "2026-10-05",
+                  "batch": 10,
+                  "rank": 3,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/05"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 5,
+              "name": "凝妙星",
+              "draw": 5,
+              "jockey": "潘頓",
+              "ranking_score": 0.08942442302210235,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-09-23",
+                "running_style": "midfield",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": "2026-09-23",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/23",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_place": {
+          "numbers": [
+            9,
+            3,
+            2,
+            12
+          ],
+          "horses": [
+            {
+              "no": 9,
+              "name": "好運年",
+              "draw": 4,
+              "jockey": "班德禮",
+              "ranking_score": 0.6496768594176661,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "midfield",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 3,
+              "name": "雙贏",
+              "draw": 1,
+              "jockey": "蔡明紹",
+              "ranking_score": 0.40047746393640016,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2022_H382",
+                  "date": "2026-10-05",
+                  "batch": 10,
+                  "rank": 3,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/05"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 2,
+              "name": "捷威",
+              "draw": 7,
+              "jockey": "何澤堯",
+              "ranking_score": 0.37099863796263577,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "midfield",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 12,
+              "name": "揀馬之皇",
+              "draw": 11,
+              "jockey": "艾兆禮",
+              "ranking_score": 0.32656402043017707,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-23",
+                "running_style": "closer",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 12,
+                "pace_field": 14,
+                "report_date": "2026-09-23",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/23",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "race": 4,
+      "off": "2026-10-19T14:00:00+08:00",
+      "distance": 1400,
+      "track": "TURF",
+      "rail": "C+3",
+      "arms": {
+        "baseline_M1": {
+          "numbers": [
+            10,
+            7,
+            3,
+            4
+          ],
+          "horses": [
+            {
+              "no": 10,
+              "name": "龍騰盛世",
+              "draw": 1,
+              "jockey": "希威森",
+              "ranking_score": 0.2067967476710306,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2025_L335",
+                  "date": "2026-09-19",
+                  "batch": 6,
+                  "rank": 9,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/19"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 7,
+              "name": "成就非凡",
+              "draw": 10,
+              "jockey": "潘頓",
+              "ranking_score": 0.15152071997545086,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 3,
+              "name": "潮州高球",
+              "draw": 13,
+              "jockey": "班德禮",
+              "ranking_score": 0.11027667892073885,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "midfield",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 4,
+              "name": "加州熱浪",
+              "draw": 5,
+              "jockey": "艾道拿",
+              "ranking_score": 0.10515912748216562,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-04",
+                "running_style": "midfield",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-04",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/04",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            }
+          ]
+        },
+        "evidence_M1": {
+          "numbers": [
+            3,
+            7,
+            14,
+            10
+          ],
+          "horses": [
+            {
+              "no": 3,
+              "name": "潮州高球",
+              "draw": 13,
+              "jockey": "班德禮",
+              "ranking_score": 0.13861980126793277,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "midfield",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 7,
+              "name": "成就非凡",
+              "draw": 10,
+              "jockey": "潘頓",
+              "ranking_score": 0.13704015328404826,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 14,
+              "name": "久久為軍",
+              "draw": 6,
+              "jockey": "鍾易禮",
+              "ranking_score": 0.08213359435662736,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 10,
+              "name": "龍騰盛世",
+              "draw": 1,
+              "jockey": "希威森",
+              "ranking_score": 0.07616034342340343,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2025_L335",
+                  "date": "2026-09-19",
+                  "batch": 6,
+                  "rank": 9,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/19"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_place": {
+          "numbers": [
+            14,
+            4,
+            1,
+            13
+          ],
+          "horses": [
+            {
+              "no": 14,
+              "name": "久久為軍",
+              "draw": 6,
+              "jockey": "鍾易禮",
+              "ranking_score": 0.5262738647799959,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 4,
+              "name": "加州熱浪",
+              "draw": 5,
+              "jockey": "艾道拿",
+              "ranking_score": 0.39571924176297985,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-04",
+                "running_style": "midfield",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-04",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/04",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 1,
+              "name": "星價",
+              "draw": 4,
+              "jockey": "巫顯東",
+              "ranking_score": 0.30295343104177447,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 1,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 13,
+              "name": "翠湖烈風",
+              "draw": 14,
+              "jockey": "艾兆禮",
+              "ranking_score": 0.29493575377212805,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "race": 5,
+      "off": "2026-10-19T14:30:00+08:00",
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "C+3",
+      "arms": {
+        "baseline_M1": {
+          "numbers": [
+            2,
+            12,
+            10,
+            5
+          ],
+          "horses": [
+            {
+              "no": 2,
+              "name": "狼來了",
+              "draw": 2,
+              "jockey": "希威森",
+              "ranking_score": 0.21208905949013865,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-04",
+                "running_style": "midfield",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": "2026-10-04",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/04",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K353",
+                  "date": "2026-09-28",
+                  "batch": 4,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/28"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 12,
+              "name": "萬里雲",
+              "draw": 1,
+              "jockey": "潘明輝",
+              "ranking_score": 0.19063665191471107,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K279",
+                  "date": "2026-09-22",
+                  "batch": 5,
+                  "rank": 5,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 10,
+              "name": "星光大道",
+              "draw": 3,
+              "jockey": "霍宏聲",
+              "ranking_score": 0.17679495992868097,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 5,
+              "name": "銳行星",
+              "draw": 8,
+              "jockey": "黃智弘",
+              "ranking_score": 0.09588577131964704,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2025_L308",
+                  "date": "2026-10-06",
+                  "batch": 2,
+                  "rank": 7,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/06"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_M1": {
+          "numbers": [
+            2,
+            12,
+            9,
+            10
+          ],
+          "horses": [
+            {
+              "no": 2,
+              "name": "狼來了",
+              "draw": 2,
+              "jockey": "希威森",
+              "ranking_score": 0.3669109655993924,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-04",
+                "running_style": "midfield",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": "2026-10-04",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/04",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K353",
+                  "date": "2026-09-28",
+                  "batch": 4,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/28"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 12,
+              "name": "萬里雲",
+              "draw": 1,
+              "jockey": "潘明輝",
+              "ranking_score": 0.23045141282681986,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K279",
+                  "date": "2026-09-22",
+                  "batch": 5,
+                  "rank": 5,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/22"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 9,
+              "name": "機不可失",
+              "draw": 4,
+              "jockey": "楊明綸",
+              "ranking_score": 0.1545020550839324,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2024_K417",
+                  "date": "2026-10-05",
+                  "batch": 10,
+                  "rank": 3,
+                  "positive": 1,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/05"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 10,
+              "name": "星光大道",
+              "draw": 3,
+              "jockey": "霍宏聲",
+              "ranking_score": 0.10529685337985266,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            }
+          ]
+        },
+        "evidence_place": {
+          "numbers": [
+            2,
+            10,
+            11,
+            9
+          ],
+          "horses": [
+            {
+              "no": 2,
+              "name": "狼來了",
+              "draw": 2,
+              "jockey": "希威森",
+              "ranking_score": 0.5163983641224938,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-04",
+                "running_style": "midfield",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": "2026-10-04",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/04",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K353",
+                  "date": "2026-09-28",
+                  "batch": 4,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/28"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 10,
+              "name": "星光大道",
+              "draw": 3,
+              "jockey": "霍宏聲",
+              "ranking_score": 0.481474127363312,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 11,
+              "name": "雷神太保",
+              "draw": 5,
+              "jockey": "艾道拿",
+              "ranking_score": 0.4161366291328493,
+              "evidence": {
+                "known_prior_runs": 3,
+                "last_known_run": "2026-09-27",
+                "running_style": "midfield",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 3,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 9,
+              "name": "機不可失",
+              "draw": 4,
+              "jockey": "楊明綸",
+              "ranking_score": 0.2755731238960522,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.6666666666666666,
+                "pace_known": 6,
+                "pace_field": 12,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2024_K417",
+                  "date": "2026-10-05",
+                  "batch": 10,
+                  "rank": 3,
+                  "positive": 1,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/05"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "race": 6,
+      "off": "2026-10-19T15:00:00+08:00",
+      "distance": 1000,
+      "track": "TURF",
+      "rail": "C+3",
+      "arms": {
+        "baseline_M1": {
+          "numbers": [
+            3,
+            10,
+            8,
+            11
+          ],
+          "horses": [
+            {
+              "no": 3,
+              "name": "紅海旺",
+              "draw": 14,
+              "jockey": "潘頓",
+              "ranking_score": 0.22494251654736647,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-09-13",
+                "running_style": "midfield",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-13",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/13",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L098",
+                  "date": "2026-10-06",
+                  "batch": 3,
+                  "rank": 5,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/06"
+                },
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 10,
+              "name": "新力驕",
+              "draw": 6,
+              "jockey": "巴度",
+              "ranking_score": 0.19370799384308277,
+              "evidence": {
+                "known_prior_runs": 3,
+                "last_known_run": "2026-10-11",
+                "running_style": "midfield",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-11",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/11",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 3,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 8,
+              "name": "飛來霸",
+              "draw": 2,
+              "jockey": "黃寶妮",
+              "ranking_score": 0.13983058191275752,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 11,
+              "name": "天寶威威",
+              "draw": 4,
+              "jockey": "田泰安",
+              "ranking_score": 0.13710042038896605,
+              "evidence": {
+                "known_prior_runs": 3,
+                "last_known_run": "2026-10-01",
+                "running_style": "midfield",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 3,
+                "distance_starts": 2
+              }
+            }
+          ]
+        },
+        "evidence_M1": {
+          "numbers": [
+            3,
+            1,
+            10,
+            8
+          ],
+          "horses": [
+            {
+              "no": 3,
+              "name": "紅海旺",
+              "draw": 14,
+              "jockey": "潘頓",
+              "ranking_score": 0.17786510783843362,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-09-13",
+                "running_style": "midfield",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-13",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/13",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L098",
+                  "date": "2026-10-06",
+                  "batch": 3,
+                  "rank": 5,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/06"
+                },
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 1,
+              "name": "當家精彩",
+              "draw": 9,
+              "jockey": "袁幸堯",
+              "ranking_score": 0.10831532118347814,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2024_K322",
+                  "date": "2026-09-28",
+                  "batch": 4,
+                  "rank": 5,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/28"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 10,
+              "name": "新力驕",
+              "draw": 6,
+              "jockey": "巴度",
+              "ranking_score": 0.10343799129042361,
+              "evidence": {
+                "known_prior_runs": 3,
+                "last_known_run": "2026-10-11",
+                "running_style": "midfield",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-11",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/11",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 3,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 8,
+              "name": "飛來霸",
+              "draw": 2,
+              "jockey": "黃寶妮",
+              "ranking_score": 0.10066134045779807,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            }
+          ]
+        },
+        "evidence_place": {
+          "numbers": [
+            10,
+            12,
+            11,
+            8
+          ],
+          "horses": [
+            {
+              "no": 10,
+              "name": "新力驕",
+              "draw": 6,
+              "jockey": "巴度",
+              "ranking_score": 0.5364971242435691,
+              "evidence": {
+                "known_prior_runs": 3,
+                "last_known_run": "2026-10-11",
+                "running_style": "midfield",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-11",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/11",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 3,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 12,
+              "name": "杭至尊",
+              "draw": 8,
+              "jockey": "班德禮",
+              "ranking_score": 0.3972236028460014,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-09-27",
+                "running_style": "closer",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 11,
+              "name": "天寶威威",
+              "draw": 4,
+              "jockey": "田泰安",
+              "ranking_score": 0.35587988099971346,
+              "evidence": {
+                "known_prior_runs": 3,
+                "last_known_run": "2026-10-01",
+                "running_style": "midfield",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 3,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 8,
+              "name": "飛來霸",
+              "draw": 2,
+              "jockey": "黃寶妮",
+              "ranking_score": 0.29180218236659267,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.1,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "race": 7,
+      "off": "2026-10-19T15:35:00+08:00",
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "C+3",
+      "arms": {
+        "baseline_M1": {
+          "numbers": [
+            4,
+            3,
+            10,
+            11
+          ],
+          "horses": [
+            {
+              "no": 4,
+              "name": "祥勝鷹駒",
+              "draw": 3,
+              "jockey": "潘頓",
+              "ranking_score": 0.3962591969924798,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2025_L341",
+                  "date": "2026-10-06",
+                  "batch": 2,
+                  "rank": 3,
+                  "positive": 1,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/06"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 3,
+              "name": "實力加",
+              "draw": 7,
+              "jockey": "奧爾民",
+              "ranking_score": 0.23763788012162965,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 10,
+              "name": "嘉應光彩",
+              "draw": 8,
+              "jockey": "潘明輝",
+              "ranking_score": 0.18266360742039084,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K134",
+                  "date": "2026-09-19",
+                  "batch": 6,
+                  "rank": 2,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/19"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 11,
+              "name": "星光快驅",
+              "draw": 4,
+              "jockey": "希威森",
+              "ranking_score": 0.1329374757729808,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2024_K215",
+                  "date": "2026-10-08",
+                  "batch": 2,
+                  "rank": 7,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 8,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/08"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_M1": {
+          "numbers": [
+            4,
+            3,
+            10,
+            2
+          ],
+          "horses": [
+            {
+              "no": 4,
+              "name": "祥勝鷹駒",
+              "draw": 3,
+              "jockey": "潘頓",
+              "ranking_score": 0.6500404622195605,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2025_L341",
+                  "date": "2026-10-06",
+                  "batch": 2,
+                  "rank": 3,
+                  "positive": 1,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/06"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 3,
+              "name": "實力加",
+              "draw": 7,
+              "jockey": "奧爾民",
+              "ranking_score": 0.3526844198215209,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 10,
+              "name": "嘉應光彩",
+              "draw": 8,
+              "jockey": "潘明輝",
+              "ranking_score": 0.26256593159593944,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K134",
+                  "date": "2026-09-19",
+                  "batch": 6,
+                  "rank": 2,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/19"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 2,
+              "name": "常嚐發財",
+              "draw": 12,
+              "jockey": "周俊樂",
+              "ranking_score": 0.13428112334944792,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "closer",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_place": {
+          "numbers": [
+            3,
+            4,
+            6,
+            7
+          ],
+          "horses": [
+            {
+              "no": 3,
+              "name": "實力加",
+              "draw": 7,
+              "jockey": "奧爾民",
+              "ranking_score": 0.5878202066414392,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 4,
+              "name": "祥勝鷹駒",
+              "draw": 3,
+              "jockey": "潘頓",
+              "ranking_score": 0.46789219897740814,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2025_L341",
+                  "date": "2026-10-06",
+                  "batch": 2,
+                  "rank": 3,
+                  "positive": 1,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/06"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 6,
+              "name": "八玲瓏",
+              "draw": 11,
+              "jockey": "艾兆禮",
+              "ranking_score": 0.355401783362628,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "midfield",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 1,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 7,
+              "name": "非凡時刻",
+              "draw": 10,
+              "jockey": "袁幸堯",
+              "ranking_score": 0.32701605503049214,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.375,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2024_K275",
+                  "date": "2026-10-12",
+                  "batch": 8,
+                  "rank": 2,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 8,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/12"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "race": 8,
+      "off": "2026-10-19T16:05:00+08:00",
+      "distance": 1600,
+      "track": "TURF",
+      "rail": "C+3",
+      "arms": {
+        "baseline_M1": {
+          "numbers": [
+            2,
+            10,
+            7,
+            11
+          ],
+          "horses": [
+            {
+              "no": 2,
+              "name": "祝願",
+              "draw": 3,
+              "jockey": "潘頓",
+              "ranking_score": 0.19872110363347023,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2023_J256",
+                  "date": "2026-10-08",
+                  "batch": 1,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/08"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 10,
+              "name": "首飾天空",
+              "draw": 4,
+              "jockey": "巴度",
+              "ranking_score": 0.17841384079956046,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K032",
+                  "date": "2026-09-21",
+                  "batch": 7,
+                  "rank": 4,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/21"
+                },
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 7,
+              "name": "光年魅力",
+              "draw": 2,
+              "jockey": "田泰安",
+              "ranking_score": 0.14397936935364822,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2024_K130",
+                  "date": "2026-10-09",
+                  "batch": 1,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 6,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/09"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 11,
+              "name": "睿盛人生",
+              "draw": 9,
+              "jockey": "黃智弘",
+              "ranking_score": 0.09138114227679285,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-16",
+                "running_style": "forward",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": "2026-09-16",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/16",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_M1": {
+          "numbers": [
+            10,
+            2,
+            7,
+            12
+          ],
+          "horses": [
+            {
+              "no": 10,
+              "name": "首飾天空",
+              "draw": 4,
+              "jockey": "巴度",
+              "ranking_score": 0.28362384022547193,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K032",
+                  "date": "2026-09-21",
+                  "batch": 7,
+                  "rank": 4,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/21"
+                },
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 2,
+              "name": "祝願",
+              "draw": 3,
+              "jockey": "潘頓",
+              "ranking_score": 0.24801447917136057,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2023_J256",
+                  "date": "2026-10-08",
+                  "batch": 1,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/08"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 7,
+              "name": "光年魅力",
+              "draw": 2,
+              "jockey": "田泰安",
+              "ranking_score": 0.16787046575715678,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2024_K130",
+                  "date": "2026-10-09",
+                  "batch": 1,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 6,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/09"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 12,
+              "name": "天將龍駒",
+              "draw": 6,
+              "jockey": "楊明綸",
+              "ranking_score": 0.06881469478010957,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2024_K129",
+                  "date": "2026-09-29",
+                  "batch": 1,
+                  "rank": 3,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 8,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/29"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_place": {
+          "numbers": [
+            2,
+            7,
+            10,
+            8
+          ],
+          "horses": [
+            {
+              "no": 2,
+              "name": "祝願",
+              "draw": 3,
+              "jockey": "潘頓",
+              "ranking_score": 0.5345222094605108,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2023_J256",
+                  "date": "2026-10-08",
+                  "batch": 1,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/08"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 7,
+              "name": "光年魅力",
+              "draw": 2,
+              "jockey": "田泰安",
+              "ranking_score": 0.5032884503056478,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2024_K130",
+                  "date": "2026-10-09",
+                  "batch": 1,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 6,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/09"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 10,
+              "name": "首飾天空",
+              "draw": 4,
+              "jockey": "巴度",
+              "ranking_score": 0.467046812074665,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K032",
+                  "date": "2026-09-21",
+                  "batch": 7,
+                  "rank": 4,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/21"
+                },
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 8,
+              "name": "紫荊盛勢",
+              "draw": 8,
+              "jockey": "梁家俊",
+              "ranking_score": 0.42791868620332435,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "midfield",
+                "pace_proxy": 0.16666666666666666,
+                "pace_known": 6,
+                "pace_field": 11,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "race": 9,
+      "off": "2026-10-19T16:40:00+08:00",
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "C+3",
+      "arms": {
+        "baseline_M1": {
+          "numbers": [
+            10,
+            8,
+            1,
+            7
+          ],
+          "horses": [
+            {
+              "no": 10,
+              "name": "逍遙人生",
+              "draw": 1,
+              "jockey": "希威森",
+              "ranking_score": 0.22607499927014632,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-13",
+                "running_style": "midfield",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-09-13",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/13",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2023_J427",
+                  "date": "2026-10-08",
+                  "batch": 1,
+                  "rank": 5,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/08"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 8,
+              "name": "神衝萬里",
+              "draw": 4,
+              "jockey": "潘頓",
+              "ranking_score": 0.1993545911052547,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 1,
+              "name": "堅先生",
+              "draw": 11,
+              "jockey": "田泰安",
+              "ranking_score": 0.19785716115036603,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2025_L232",
+                  "date": "2026-09-28",
+                  "batch": 1,
+                  "rank": 3,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/28"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 7,
+              "name": "金金小子",
+              "draw": 5,
+              "jockey": "何澤堯",
+              "ranking_score": 0.10049896612164003,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 1,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            }
+          ]
+        },
+        "evidence_M1": {
+          "numbers": [
+            8,
+            10,
+            7,
+            3
+          ],
+          "horses": [
+            {
+              "no": 8,
+              "name": "神衝萬里",
+              "draw": 4,
+              "jockey": "潘頓",
+              "ranking_score": 0.25230628510930414,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 10,
+              "name": "逍遙人生",
+              "draw": 1,
+              "jockey": "希威森",
+              "ranking_score": 0.24775208484877687,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-13",
+                "running_style": "midfield",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-09-13",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/13",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2023_J427",
+                  "date": "2026-10-08",
+                  "batch": 1,
+                  "rank": 5,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/08"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 7,
+              "name": "金金小子",
+              "draw": 5,
+              "jockey": "何澤堯",
+              "ranking_score": 0.24067808568179652,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 1,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 3,
+              "name": "馬達",
+              "draw": 6,
+              "jockey": "梁家俊",
+              "ranking_score": 0.1899281276688278,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-07",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-07",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/07",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K165",
+                  "date": "2026-09-28",
+                  "batch": 8,
+                  "rank": 1,
+                  "positive": 1,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/28"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_place": {
+          "numbers": [
+            7,
+            11,
+            8,
+            2
+          ],
+          "horses": [
+            {
+              "no": 7,
+              "name": "金金小子",
+              "draw": 5,
+              "jockey": "何澤堯",
+              "ranking_score": 0.5493160975212659,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 1,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 11,
+              "name": "千杯不醉",
+              "draw": 9,
+              "jockey": "袁幸堯",
+              "ranking_score": 0.4501143633105994,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 8,
+              "name": "神衝萬里",
+              "draw": 4,
+              "jockey": "潘頓",
+              "ranking_score": 0.3825324372359383,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-10-01",
+                "running_style": "closer",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 2,
+              "name": "醒目高球",
+              "draw": 3,
+              "jockey": "班德禮",
+              "ranking_score": 0.33318609191765686,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.0,
+                "pace_known": 8,
+                "pace_field": 12,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2025_L004",
+                  "date": "2026-10-06",
+                  "batch": 1,
+                  "rank": 3,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/06"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "race": 10,
+      "off": "2026-10-19T17:15:00+08:00",
+      "distance": 1600,
+      "track": "TURF",
+      "rail": "C+3",
+      "arms": {
+        "baseline_M1": {
+          "numbers": [
+            7,
+            1,
+            14,
+            3
+          ],
+          "horses": [
+            {
+              "no": 7,
+              "name": "喜悅歡欣",
+              "draw": 3,
+              "jockey": "奧爾民",
+              "ranking_score": 0.339672441558693,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-06",
+                "running_style": "closer",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-09-06",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/06",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L322",
+                  "date": "2026-10-09",
+                  "batch": 1,
+                  "rank": 4,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 6,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/09"
+                },
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 1,
+              "name": "包裝戰仕",
+              "draw": 9,
+              "jockey": "潘頓",
+              "ranking_score": 0.2566140133787008,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 14,
+              "name": "八仟好運",
+              "draw": 2,
+              "jockey": "巴度",
+              "ranking_score": 0.23840467177288543,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 1,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K582",
+                  "date": "2026-09-21",
+                  "batch": 8,
+                  "rank": 2,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/21"
+                },
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 3,
+              "name": "活力拍檔",
+              "draw": 13,
+              "jockey": "何澤堯",
+              "ranking_score": 0.1360687065255428,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "closer",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            }
+          ]
+        },
+        "evidence_M1": {
+          "numbers": [
+            14,
+            7,
+            1,
+            3
+          ],
+          "horses": [
+            {
+              "no": 14,
+              "name": "八仟好運",
+              "draw": 2,
+              "jockey": "巴度",
+              "ranking_score": 0.561956886923303,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 1,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K582",
+                  "date": "2026-09-21",
+                  "batch": 8,
+                  "rank": 2,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/21"
+                },
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 7,
+              "name": "喜悅歡欣",
+              "draw": 3,
+              "jockey": "奧爾民",
+              "ranking_score": 0.5225283989452797,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-06",
+                "running_style": "closer",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-09-06",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/06",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L322",
+                  "date": "2026-10-09",
+                  "batch": 1,
+                  "rank": 4,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 6,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/09"
+                },
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 1,
+              "name": "包裝戰仕",
+              "draw": 9,
+              "jockey": "潘頓",
+              "ranking_score": 0.22510909490975195,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 3,
+              "name": "活力拍檔",
+              "draw": 13,
+              "jockey": "何澤堯",
+              "ranking_score": 0.11965705112019037,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "closer",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            }
+          ]
+        },
+        "evidence_place": {
+          "numbers": [
+            14,
+            3,
+            7,
+            5
+          ],
+          "horses": [
+            {
+              "no": 14,
+              "name": "八仟好運",
+              "draw": 2,
+              "jockey": "巴度",
+              "ranking_score": 0.6118682978179625,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 1,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K582",
+                  "date": "2026-09-21",
+                  "batch": 8,
+                  "rank": 2,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 9,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/09/21"
+                },
+                "course_starts": 2,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 3,
+              "name": "活力拍檔",
+              "draw": 13,
+              "jockey": "何澤堯",
+              "ranking_score": 0.47088870593711213,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "closer",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 7,
+              "name": "喜悅歡欣",
+              "draw": 3,
+              "jockey": "奧爾民",
+              "ranking_score": 0.30757731488868795,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-06",
+                "running_style": "closer",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-09-06",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/06",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L322",
+                  "date": "2026-10-09",
+                  "batch": 1,
+                  "rank": 4,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 6,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/09"
+                },
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 5,
+              "name": "名揚四海",
+              "draw": 11,
+              "jockey": "田泰安",
+              "ranking_score": 0.27837970525577943,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "midfield",
+                "pace_proxy": 0.35714285714285715,
+                "pace_known": 14,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 1,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "race": 11,
+      "off": "2026-10-19T17:50:00+08:00",
+      "distance": 1400,
+      "track": "TURF",
+      "rail": "C+3",
+      "arms": {
+        "baseline_M1": {
+          "numbers": [
+            8,
+            2,
+            6,
+            10
+          ],
+          "horses": [
+            {
+              "no": 8,
+              "name": "櫻花酒杯",
+              "draw": 2,
+              "jockey": "何澤堯",
+              "ranking_score": 0.30387204989043964,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-06",
+                "running_style": "forward",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-06",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/06",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L230",
+                  "date": "2026-10-06",
+                  "batch": 2,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/06"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 2,
+              "name": "極上紗瓏",
+              "draw": 7,
+              "jockey": "潘明輝",
+              "ranking_score": 0.20027700146963984,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 6,
+              "name": "友瑩仁",
+              "draw": 6,
+              "jockey": "袁幸堯",
+              "ranking_score": 0.19104446154201127,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 2
+              }
+            },
+            {
+              "no": 10,
+              "name": "超寫意",
+              "draw": 9,
+              "jockey": "周俊樂",
+              "ranking_score": 0.18364813854960635,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 1
+              }
+            }
+          ]
+        },
+        "evidence_M1": {
+          "numbers": [
+            8,
+            13,
+            2,
+            11
+          ],
+          "horses": [
+            {
+              "no": 8,
+              "name": "櫻花酒杯",
+              "draw": 2,
+              "jockey": "何澤堯",
+              "ranking_score": 0.5028678973322648,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-06",
+                "running_style": "forward",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-06",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/06",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L230",
+                  "date": "2026-10-06",
+                  "batch": 2,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/06"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 13,
+              "name": "嵐臣",
+              "draw": 11,
+              "jockey": "潘頓",
+              "ranking_score": 0.3246662672080869,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-13",
+                "running_style": "midfield",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-13",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/13",
+                "report_flags": {
+                  "blocked": 1,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2024_K438",
+                  "date": "2026-10-08",
+                  "batch": 2,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 8,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/08"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 2,
+              "name": "極上紗瓏",
+              "draw": 7,
+              "jockey": "潘明輝",
+              "ranking_score": 0.217172253861118,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 11,
+              "name": "仁心星",
+              "draw": 4,
+              "jockey": "黃智弘",
+              "ranking_score": 0.20171571447927722,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2023_J092",
+                  "date": "2026-10-05",
+                  "batch": 7,
+                  "rank": 1,
+                  "positive": 1,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/05"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        },
+        "evidence_place": {
+          "numbers": [
+            10,
+            2,
+            8,
+            11
+          ],
+          "horses": [
+            {
+              "no": 10,
+              "name": "超寫意",
+              "draw": 9,
+              "jockey": "周俊樂",
+              "ranking_score": 0.5831920420873203,
+              "evidence": {
+                "known_prior_runs": 2,
+                "last_known_run": "2026-10-01",
+                "running_style": "forward",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-10-01",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/10/01",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 2,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 2,
+              "name": "極上紗瓏",
+              "draw": 7,
+              "jockey": "潘明輝",
+              "ranking_score": 0.4833225610032776,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-27",
+                "running_style": "forward",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-27",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/27",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": null,
+                "course_starts": 1,
+                "distance_starts": 0
+              }
+            },
+            {
+              "no": 8,
+              "name": "櫻花酒杯",
+              "draw": 2,
+              "jockey": "何澤堯",
+              "ranking_score": 0.3820429816420384,
+              "evidence": {
+                "known_prior_runs": 1,
+                "last_known_run": "2026-09-06",
+                "running_style": "forward",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": "2026-09-06",
+                "report_source": "https://racing.hkjc.com/zh-hk/local/information/archive/racereportfull?Date=2026/09/06",
+                "report_flags": {
+                  "blocked": 0,
+                  "wide": 0,
+                  "slow_start": 0,
+                  "over_racing": 0,
+                  "health": 0
+                },
+                "trial": {
+                  "horse_id": "HK_2025_L230",
+                  "date": "2026-10-06",
+                  "batch": 2,
+                  "rank": 1,
+                  "positive": 0,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 7,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/06"
+                },
+                "course_starts": 1,
+                "distance_starts": 1
+              }
+            },
+            {
+              "no": 11,
+              "name": "仁心星",
+              "draw": 4,
+              "jockey": "黃智弘",
+              "ranking_score": 0.35620807930777676,
+              "evidence": {
+                "known_prior_runs": 0,
+                "last_known_run": null,
+                "running_style": "unknown",
+                "pace_proxy": 0.4,
+                "pace_known": 10,
+                "pace_field": 14,
+                "report_date": null,
+                "report_source": null,
+                "report_flags": null,
+                "trial": {
+                  "horse_id": "HK_2023_J092",
+                  "date": "2026-10-05",
+                  "batch": 7,
+                  "rank": 1,
+                  "positive": 1,
+                  "negative": 0,
+                  "failed": 0,
+                  "field": 10,
+                  "source": "https://racing.hkjc.com/zh-hk/local/information/archive/btresult?Date=2026/10/05"
+                },
+                "course_starts": 0,
+                "distance_starts": 0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "receipt_sha256": "a579c83eaedc1c45490897b5f71bbf6aee7e22cfe8494d4fe9c10e3e6b31490f"
+}
