@@ -145,3 +145,5 @@ Both pages show a compact confidence-only table above the full race table, with 
 The last section aggregates every archived meeting plus the current meeting, deduplicated by meeting identity. It groups by month, venue, H, pool and main/optional role. A race hits when its displayed bet has at least one official paid combination; several winning horses or pairs still count as one hit race. Only settled hit/miss races enter the denominator. Pending results/plans, fully refunded bets and unavailable pools are displayed separately. Local saved snapshots and explicitly labelled ST historical strategy recalculations match the main table. These are retrospective confidence-rule statistics, not an independently sealed historical track record.
 
 Archive requests use a single pinned data revision. Any failed/mismatched archive response suppresses monthly rates until a complete reload succeeds. New/live races with results collection disabled remain pending, never losses. This UI change does not fetch race-day results or change selections.
+
+GitHub版本API限流時，頁面使用本機上次成功核對的固定版本；首次瀏覽則使用2026-10-17的備用固定版本，並顯示可能未含最新貼士的提示。所有歷史紀錄仍來自同一固定版本，避免混合版本計算月率。

@@ -1,16 +1,26 @@
 import {settle} from './settlement.mjs';
-import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261017-confidence';
-import {monthlyConfidence,poolLabels} from './confidence-stats.mjs?v=20261017-confidence';
+import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261017-confidence2';
+import {monthlyConfidence,poolLabels} from './confidence-stats.mjs?v=20261017-confidence2';
 const RAW='https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/tips-data/records/';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=id=>document.getElementById(id),history=document.body.dataset.history==='true';let meeting=null,sourceMeeting=null,busy=false,base=RAW,revisionCheckedAt=0;
 const clock=d=>d?new Date(d).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong',hour12:false}):'—';
 async function read(name,revision=base){const r=await fetch(revision+name+'?v='+Math.floor(Date.now()/20000),{cache:'no-store'});if(!r.ok)throw Error('數據讀取失敗 ('+r.status+')');return r.json()}
+const fallbackRevision='820812adbd944cda87a76c84a9739ee313f00e90',revisionKey='hkjc-verified-data-revision-v1';
 async function pinDataRevision(force=false){
  if(!force&&revisionCheckedAt&&Date.now()-revisionCheckedAt<90000)return;
- const r=await fetch('https://api.github.com/repos/Ljackylau/hkjc-scraper/git/refs/heads/tips-data?v='+Date.now(),{cache:'no-store'});
- if(!r.ok)throw Error('資料版本讀取失敗 ('+r.status+')');
- const j=await r.json(),sha=j.object?.sha;if(!/^[a-f0-9]{40}$/.test(sha||''))throw Error('資料版本資料無效');
+ let sha;
+ try{
+  const r=await fetch('https://api.github.com/repos/Ljackylau/hkjc-scraper/git/refs/heads/tips-data?v='+Date.now(),{cache:'no-store'});
+  if(!r.ok)throw Error('資料版本讀取失敗 ('+r.status+')');
+  const j=await r.json();sha=j.object?.sha;if(!/^[a-f0-9]{40}$/.test(sha||''))throw Error('資料版本資料無效');
+  try{localStorage.setItem(revisionKey,sha)}catch{}
+  $('revision-notice').textContent='';
+ }catch(err){
+  let saved;try{saved=localStorage.getItem(revisionKey)}catch{}
+  sha=/^[a-f0-9]{40}$/.test(saved||'')?saved:fallbackRevision;
+  $('revision-notice').textContent=err.message+'；現顯示'+(sha===fallbackRevision?'2026-10-17保存的備用存檔':'本機上次成功核對的存檔')+'，可能未包含最新貼士。按「重新讀取」可再核對。';
+ }
  base=RAW.replace('/tips-data/records/','/'+sha+'/records/');revisionCheckedAt=Date.now();
 }
 function horses(h){return h.map(x=>`<div class="horse"><span class="num">${e(x.no)}</span><span>${e(x.name)}</span></div>`).join('')}
