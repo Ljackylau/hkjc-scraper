@@ -186,16 +186,42 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-10-19",
-        "rail": "C+3",
         "riders": [
           {
-            "no": 11,
-            "jockey": "蔡明紹",
-            "jockey_id": "CML",
-            "draw": 6,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
+            "no": 1,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "draw": 8,
+            "placed": 4,
+            "starts": 5,
+            "rate": 0.8
+          },
+          {
+            "no": 10,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "draw": 12,
+            "placed": 2,
+            "starts": 4,
+            "rate": 0.5
+          },
+          {
+            "no": 6,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "draw": 2,
+            "placed": 2,
+            "starts": 5,
+            "rate": 0.4
+          },
+          {
+            "no": 3,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "draw": 4,
+            "placed": 2,
+            "starts": 6,
+            "rate": 0.3333333333333333
           },
           {
             "no": 13,
@@ -203,30 +229,12 @@
             "jockey_id": "AA",
             "draw": 9,
             "placed": 1,
-            "starts": 1,
-            "rate": 1.0
-          },
-          {
-            "no": 4,
-            "jockey": "袁幸堯",
-            "jockey_id": "YHY",
-            "draw": 5,
-            "placed": 0,
-            "starts": 1,
-            "rate": 0.0
-          },
-          {
-            "no": 5,
-            "jockey": "霍宏聲",
-            "jockey_id": "FEL",
-            "draw": 7,
-            "placed": 0,
-            "starts": 1,
-            "rate": 0.0
+            "starts": 5,
+            "rate": 0.2
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc"
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
       },
       "banker_initial": {
         "status": "ready",
@@ -461,56 +469,55 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-10-19",
-        "rail": "C+3",
         "riders": [
           {
             "no": 10,
             "jockey": "潘頓",
             "jockey_id": "PZ",
             "draw": 3,
+            "placed": 5,
+            "starts": 7,
+            "rate": 0.7142857142857143
+          },
+          {
+            "no": 7,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "draw": 12,
+            "placed": 3,
+            "starts": 5,
+            "rate": 0.6
+          },
+          {
+            "no": 11,
+            "jockey": "潘明輝",
+            "jockey_id": "PMF",
+            "draw": 1,
             "placed": 2,
-            "starts": 2,
-            "rate": 1.0
+            "starts": 4,
+            "rate": 0.5
           },
           {
-            "no": 14,
-            "jockey": "鍾易禮",
-            "jockey_id": "CCY",
-            "draw": 9,
+            "no": 8,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "draw": 4,
+            "placed": 2,
+            "starts": 5,
+            "rate": 0.4
+          },
+          {
+            "no": 3,
+            "jockey": "楊明綸",
+            "jockey_id": "YML",
+            "draw": 14,
             "placed": 1,
-            "starts": 1,
-            "rate": 1.0
-          },
-          {
-            "no": 9,
-            "jockey": "黃智弘",
-            "jockey_id": "WEC",
-            "draw": 2,
-            "placed": 0,
-            "starts": 2,
-            "rate": 0.0
-          },
-          {
-            "no": 13,
-            "jockey": "蔡明紹",
-            "jockey_id": "CML",
-            "draw": 10,
-            "placed": 0,
-            "starts": 2,
-            "rate": 0.0
-          },
-          {
-            "no": 5,
-            "jockey": "金誠剛",
-            "jockey_id": "KRW",
-            "draw": 8,
-            "placed": 0,
-            "starts": 1,
-            "rate": 0.0
+            "starts": 4,
+            "rate": 0.25
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc"
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
       },
       "banker_initial": {
         "status": "ready",
@@ -745,56 +752,55 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-10-19",
-        "rail": "C+3",
         "riders": [
           {
             "no": 9,
             "jockey": "班德禮",
             "jockey_id": "BHW",
             "draw": 4,
+            "placed": 6,
+            "starts": 7,
+            "rate": 0.8571428571428571
+          },
+          {
+            "no": 13,
+            "jockey": "鍾易禮",
+            "jockey_id": "CCY",
+            "draw": 8,
             "placed": 2,
-            "starts": 2,
-            "rate": 1.0
-          },
-          {
-            "no": 2,
-            "jockey": "何澤堯",
-            "jockey_id": "HCY",
-            "draw": 7,
-            "placed": 1,
             "starts": 3,
-            "rate": 0.3333333333333333
-          },
-          {
-            "no": 12,
-            "jockey": "艾兆禮",
-            "jockey_id": "AA",
-            "draw": 11,
-            "placed": 0,
-            "starts": 3,
-            "rate": 0.0
+            "rate": 0.6666666666666666
           },
           {
             "no": 5,
             "jockey": "潘頓",
             "jockey_id": "PZ",
             "draw": 5,
-            "placed": 0,
-            "starts": 2,
-            "rate": 0.0
+            "placed": 4,
+            "starts": 8,
+            "rate": 0.5
           },
           {
-            "no": 10,
-            "jockey": "楊明綸",
-            "jockey_id": "YML",
-            "draw": 10,
-            "placed": 0,
+            "no": 8,
+            "jockey": "巴度",
+            "jockey_id": "BA",
+            "draw": 14,
+            "placed": 1,
             "starts": 2,
-            "rate": 0.0
+            "rate": 0.5
+          },
+          {
+            "no": 7,
+            "jockey": "金誠剛",
+            "jockey_id": "KRW",
+            "draw": 3,
+            "placed": 1,
+            "starts": 3,
+            "rate": 0.3333333333333333
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc"
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
       },
       "banker_initial": {
         "status": "ready",
@@ -1029,56 +1035,55 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-10-19",
-        "rail": "C+3",
         "riders": [
+          {
+            "no": 3,
+            "jockey": "班德禮",
+            "jockey_id": "BHW",
+            "draw": 13,
+            "placed": 2,
+            "starts": 3,
+            "rate": 0.6666666666666666
+          },
+          {
+            "no": 6,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "draw": 7,
+            "placed": 2,
+            "starts": 4,
+            "rate": 0.5
+          },
           {
             "no": 7,
             "jockey": "潘頓",
             "jockey_id": "PZ",
             "draw": 10,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
+            "placed": 2,
+            "starts": 4,
+            "rate": 0.5
+          },
+          {
+            "no": 5,
+            "jockey": "潘明輝",
+            "jockey_id": "PMF",
+            "draw": 12,
+            "placed": 2,
+            "starts": 5,
+            "rate": 0.4
           },
           {
             "no": 11,
             "jockey": "奧爾民",
             "jockey_id": "OJM",
             "draw": 11,
-            "placed": 1,
-            "starts": 2,
-            "rate": 0.5
-          },
-          {
-            "no": 12,
-            "jockey": "田泰安",
-            "jockey_id": "TEK",
-            "draw": 3,
-            "placed": 0,
-            "starts": 2,
-            "rate": 0.0
-          },
-          {
-            "no": 2,
-            "jockey": "蔡明紹",
-            "jockey_id": "CML",
-            "draw": 8,
-            "placed": 0,
-            "starts": 1,
-            "rate": 0.0
-          },
-          {
-            "no": 4,
-            "jockey": "艾道拿",
-            "jockey_id": "AVB",
-            "draw": 5,
-            "placed": 0,
-            "starts": 1,
-            "rate": 0.0
+            "placed": 2,
+            "starts": 5,
+            "rate": 0.4
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc"
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
       },
       "banker_initial": {
         "status": "ready",
@@ -1299,56 +1304,55 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-10-19",
-        "rail": "C+3",
         "riders": [
+          {
+            "no": 7,
+            "jockey": "袁幸堯",
+            "jockey_id": "YHY",
+            "draw": 7,
+            "placed": 2,
+            "starts": 2,
+            "rate": 1.0
+          },
+          {
+            "no": 12,
+            "jockey": "潘明輝",
+            "jockey_id": "PMF",
+            "draw": 1,
+            "placed": 2,
+            "starts": 4,
+            "rate": 0.5
+          },
           {
             "no": 2,
             "jockey": "希威森",
             "jockey_id": "HEL",
             "draw": 2,
             "placed": 1,
-            "starts": 1,
-            "rate": 1.0
-          },
-          {
-            "no": 7,
-            "jockey": "袁幸堯",
-            "jockey_id": "YHY",
-            "draw": 7,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
-          },
-          {
-            "no": 5,
-            "jockey": "黃智弘",
-            "jockey_id": "WEC",
-            "draw": 8,
-            "placed": 1,
             "starts": 2,
             "rate": 0.5
+          },
+          {
+            "no": 9,
+            "jockey": "楊明綸",
+            "jockey_id": "YML",
+            "draw": 4,
+            "placed": 3,
+            "starts": 7,
+            "rate": 0.42857142857142855
           },
           {
             "no": 8,
             "jockey": "奧爾民",
             "jockey_id": "OJM",
             "draw": 11,
-            "placed": 1,
-            "starts": 2,
-            "rate": 0.5
-          },
-          {
-            "no": 1,
-            "jockey": "梁家俊",
-            "jockey_id": "LDE",
-            "draw": 9,
-            "placed": 0,
-            "starts": 2,
-            "rate": 0.0
+            "placed": 2,
+            "starts": 5,
+            "rate": 0.4
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc"
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
       },
       "banker_initial": {
         "status": "ready",
@@ -1583,16 +1587,42 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-10-19",
-        "rail": "C+3",
         "riders": [
           {
             "no": 1,
             "jockey": "袁幸堯",
             "jockey_id": "YHY",
             "draw": 9,
+            "placed": 3,
+            "starts": 5,
+            "rate": 0.6
+          },
+          {
+            "no": 2,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "draw": 3,
+            "placed": 3,
+            "starts": 5,
+            "rate": 0.6
+          },
+          {
+            "no": 11,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "draw": 4,
+            "placed": 4,
+            "starts": 8,
+            "rate": 0.5
+          },
+          {
+            "no": 4,
+            "jockey": "艾道拿",
+            "jockey_id": "AVB",
+            "draw": 12,
             "placed": 1,
-            "starts": 1,
-            "rate": 1.0
+            "starts": 5,
+            "rate": 0.2
           },
           {
             "no": 6,
@@ -1600,39 +1630,12 @@
             "jockey_id": "CJE",
             "draw": 5,
             "placed": 1,
-            "starts": 1,
-            "rate": 1.0
-          },
-          {
-            "no": 5,
-            "jockey": "楊明綸",
-            "jockey_id": "YML",
-            "draw": 10,
-            "placed": 0,
-            "starts": 2,
-            "rate": 0.0
-          },
-          {
-            "no": 12,
-            "jockey": "班德禮",
-            "jockey_id": "BHW",
-            "draw": 8,
-            "placed": 0,
-            "starts": 2,
-            "rate": 0.0
-          },
-          {
-            "no": 2,
-            "jockey": "梁家俊",
-            "jockey_id": "LDE",
-            "draw": 3,
-            "placed": 0,
-            "starts": 1,
-            "rate": 0.0
+            "starts": 6,
+            "rate": 0.16666666666666666
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc"
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
       },
       "banker_initial": {
         "status": "ready",
@@ -1853,56 +1856,55 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-10-19",
-        "rail": "C+3",
         "riders": [
           {
             "no": 4,
             "jockey": "潘頓",
             "jockey_id": "PZ",
             "draw": 3,
+            "placed": 5,
+            "starts": 7,
+            "rate": 0.7142857142857143
+          },
+          {
+            "no": 11,
+            "jockey": "希威森",
+            "jockey_id": "HEL",
+            "draw": 4,
             "placed": 2,
-            "starts": 2,
-            "rate": 1.0
+            "starts": 3,
+            "rate": 0.6666666666666666
+          },
+          {
+            "no": 2,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "draw": 12,
+            "placed": 3,
+            "starts": 5,
+            "rate": 0.6
           },
           {
             "no": 7,
             "jockey": "袁幸堯",
             "jockey_id": "YHY",
             "draw": 10,
-            "placed": 2,
-            "starts": 2,
-            "rate": 1.0
-          },
-          {
-            "no": 1,
-            "jockey": "田泰安",
-            "jockey_id": "TEK",
-            "draw": 1,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
+            "placed": 4,
+            "starts": 8,
+            "rate": 0.5
           },
           {
             "no": 8,
             "jockey": "何澤堯",
             "jockey_id": "HCY",
             "draw": 5,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
-          },
-          {
-            "no": 12,
-            "jockey": "楊明綸",
-            "jockey_id": "YML",
-            "draw": 9,
-            "placed": 1,
-            "starts": 2,
-            "rate": 0.5
+            "placed": 4,
+            "starts": 9,
+            "rate": 0.4444444444444444
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc"
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
       },
       "banker_initial": {
         "status": "ready",
@@ -2122,56 +2124,55 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-10-19",
-        "rail": "C+3",
         "riders": [
           {
             "no": 2,
             "jockey": "潘頓",
             "jockey_id": "PZ",
             "draw": 3,
-            "placed": 2,
-            "starts": 2,
-            "rate": 1.0
-          },
-          {
-            "no": 7,
-            "jockey": "田泰安",
-            "jockey_id": "TEK",
-            "draw": 2,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
-          },
-          {
-            "no": 12,
-            "jockey": "楊明綸",
-            "jockey_id": "YML",
-            "draw": 6,
-            "placed": 1,
-            "starts": 3,
-            "rate": 0.3333333333333333
-          },
-          {
-            "no": 3,
-            "jockey": "艾兆禮",
-            "jockey_id": "AA",
-            "draw": 7,
-            "placed": 0,
-            "starts": 2,
-            "rate": 0.0
+            "placed": 5,
+            "starts": 7,
+            "rate": 0.7142857142857143
           },
           {
             "no": 6,
             "jockey": "潘明輝",
             "jockey_id": "PMF",
             "draw": 1,
-            "placed": 0,
-            "starts": 1,
-            "rate": 0.0
+            "placed": 2,
+            "starts": 4,
+            "rate": 0.5
+          },
+          {
+            "no": 7,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "draw": 2,
+            "placed": 3,
+            "starts": 8,
+            "rate": 0.375
+          },
+          {
+            "no": 12,
+            "jockey": "楊明綸",
+            "jockey_id": "YML",
+            "draw": 6,
+            "placed": 3,
+            "starts": 12,
+            "rate": 0.25
+          },
+          {
+            "no": 10,
+            "jockey": "巴度",
+            "jockey_id": "BA",
+            "draw": 4,
+            "placed": 1,
+            "starts": 4,
+            "rate": 0.25
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc"
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
       },
       "banker_initial": {
         "status": "ready",
@@ -2392,56 +2393,55 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-10-19",
-        "rail": "C+3",
         "riders": [
           {
-            "no": 2,
-            "jockey": "班德禮",
-            "jockey_id": "BHW",
-            "draw": 3,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
+            "no": 11,
+            "jockey": "袁幸堯",
+            "jockey_id": "YHY",
+            "draw": 9,
+            "placed": 3,
+            "starts": 5,
+            "rate": 0.6
           },
           {
             "no": 7,
             "jockey": "何澤堯",
             "jockey_id": "HCY",
             "draw": 5,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
+            "placed": 4,
+            "starts": 9,
+            "rate": 0.4444444444444444
           },
           {
-            "no": 11,
-            "jockey": "袁幸堯",
-            "jockey_id": "YHY",
-            "draw": 9,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
+            "no": 8,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "draw": 4,
+            "placed": 3,
+            "starts": 7,
+            "rate": 0.42857142857142855
           },
           {
-            "no": 1,
-            "jockey": "田泰安",
-            "jockey_id": "TEK",
-            "draw": 11,
-            "placed": 0,
-            "starts": 2,
-            "rate": 0.0
+            "no": 6,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "draw": 2,
+            "placed": 3,
+            "starts": 10,
+            "rate": 0.3
           },
           {
-            "no": 5,
-            "jockey": "蔡明紹",
-            "jockey_id": "CML",
-            "draw": 8,
-            "placed": 0,
-            "starts": 1,
-            "rate": 0.0
+            "no": 2,
+            "jockey": "班德禮",
+            "jockey_id": "BHW",
+            "draw": 3,
+            "placed": 2,
+            "starts": 8,
+            "rate": 0.25
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc"
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
       },
       "banker_initial": {
         "status": "ready",
@@ -2676,16 +2676,42 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-10-19",
-        "rail": "C+3",
         "riders": [
           {
             "no": 1,
             "jockey": "潘頓",
             "jockey_id": "PZ",
             "draw": 9,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
+            "placed": 4,
+            "starts": 6,
+            "rate": 0.6666666666666666
+          },
+          {
+            "no": 8,
+            "jockey": "潘明輝",
+            "jockey_id": "PMF",
+            "draw": 1,
+            "placed": 2,
+            "starts": 4,
+            "rate": 0.5
+          },
+          {
+            "no": 13,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "draw": 12,
+            "placed": 2,
+            "starts": 5,
+            "rate": 0.4
+          },
+          {
+            "no": 9,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "draw": 4,
+            "placed": 2,
+            "starts": 6,
+            "rate": 0.3333333333333333
           },
           {
             "no": 4,
@@ -2693,39 +2719,12 @@
             "jockey_id": "AVB",
             "draw": 7,
             "placed": 1,
-            "starts": 1,
-            "rate": 1.0
-          },
-          {
-            "no": 10,
-            "jockey": "金誠剛",
-            "jockey_id": "KRW",
-            "draw": 6,
-            "placed": 1,
-            "starts": 2,
-            "rate": 0.5
-          },
-          {
-            "no": 14,
-            "jockey": "巴度",
-            "jockey_id": "BA",
-            "draw": 2,
-            "placed": 1,
-            "starts": 2,
-            "rate": 0.5
-          },
-          {
-            "no": 5,
-            "jockey": "田泰安",
-            "jockey_id": "TEK",
-            "draw": 11,
-            "placed": 0,
-            "starts": 2,
-            "rate": 0.0
+            "starts": 3,
+            "rate": 0.3333333333333333
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc"
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
       },
       "banker_initial": {
         "status": "ready",
@@ -2960,56 +2959,55 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-10-19",
-        "rail": "C+3",
         "riders": [
-          {
-            "no": 4,
-            "jockey": "梁家俊",
-            "jockey_id": "LDE",
-            "draw": 10,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
-          },
           {
             "no": 10,
             "jockey": "周俊樂",
             "jockey_id": "CJE",
             "draw": 9,
-            "placed": 1,
-            "starts": 1,
-            "rate": 1.0
+            "placed": 3,
+            "starts": 7,
+            "rate": 0.42857142857142855
           },
           {
-            "no": 7,
-            "jockey": "霍宏聲",
-            "jockey_id": "FEL",
-            "draw": 8,
-            "placed": 0,
-            "starts": 2,
-            "rate": 0.0
+            "no": 8,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "draw": 2,
+            "placed": 2,
+            "starts": 5,
+            "rate": 0.4
           },
           {
             "no": 1,
             "jockey": "黃寶妮",
             "jockey_id": "WPN",
             "draw": 1,
-            "placed": 0,
-            "starts": 1,
-            "rate": 0.0
+            "placed": 2,
+            "starts": 7,
+            "rate": 0.2857142857142857
           },
           {
-            "no": 2,
-            "jockey": "潘明輝",
-            "jockey_id": "PMF",
-            "draw": 7,
-            "placed": 0,
-            "starts": 1,
-            "rate": 0.0
+            "no": 5,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "draw": 3,
+            "placed": 2,
+            "starts": 9,
+            "rate": 0.2222222222222222
+          },
+          {
+            "no": 3,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "draw": 12,
+            "placed": 1,
+            "starts": 5,
+            "rate": 0.2
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc"
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
       },
       "banker_initial": {
         "status": "ready",

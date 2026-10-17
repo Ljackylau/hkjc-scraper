@@ -351,7 +351,6 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-09-09",
-        "rail": "A",
         "riders": [
           {
             "no": 8,
@@ -381,8 +380,8 @@
             "rate": 0.0
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -769,7 +768,6 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-09-09",
-        "rail": "A",
         "riders": [
           {
             "no": 2,
@@ -799,8 +797,8 @@
             "rate": 0.0
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -1144,7 +1142,6 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-09-09",
-        "rail": "A",
         "riders": [
           {
             "no": 12,
@@ -1174,8 +1171,8 @@
             "rate": 0.0
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -1512,7 +1509,6 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-09-09",
-        "rail": "A",
         "riders": [
           {
             "no": 4,
@@ -1551,8 +1547,8 @@
             "rate": 0.0
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -1917,7 +1913,6 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-09-09",
-        "rail": "A",
         "riders": [
           {
             "no": 8,
@@ -1956,8 +1951,8 @@
             "rate": 0.0
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -2301,7 +2296,6 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-09-09",
-        "rail": "A",
         "riders": [
           {
             "no": 4,
@@ -2340,8 +2334,8 @@
             "rate": 0.0
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -2704,7 +2698,6 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-09-09",
-        "rail": "A",
         "riders": [
           {
             "no": 1,
@@ -2743,8 +2736,8 @@
             "rate": 0.0
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     },
@@ -3088,7 +3081,6 @@
         "status": "ready",
         "start_date": "2026-09-01",
         "before_date": "2026-09-09",
-        "rail": "A",
         "riders": [
           {
             "no": 1,
@@ -3127,8 +3119,8 @@
             "rate": 0.0
           }
         ],
-        "method_version": "jockey_rail_draw_v2",
-        "method": "top3/starts; exact jockey, rail, draw; all venues, tracks and distances; prior days only; rate desc, starts desc, saddle asc",
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
         "record_type": "historical_reconstruction"
       }
     }
