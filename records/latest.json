@@ -104,27 +104,39 @@
       "scratched": [],
       "tips": {
         "meiji": {
-          "status": "pending",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "source": "https://racing.on.cc/racing/fav/20261019/rjfavf0201x0.html",
+          "captured_at": "2026-10-18T15:39:47+08:00",
           "horses": []
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:51+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:51+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:51+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -277,6 +289,11 @@
         "record_type": "user_supplied_preoff",
         "verification": "User supplied before meeting; published banker-site initial version not independently verified",
         "captured_at": "2026-10-16T18:31:45+08:00"
+      },
+      "sha_tin_four": {
+        "status": "pending",
+        "numbers": [],
+        "generated_at": "2026-10-18T15:40:02+08:00"
       }
     },
     {
@@ -387,27 +404,56 @@
       "scratched": [],
       "tips": {
         "meiji": {
-          "status": "pending",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "source": "https://racing.on.cc/racing/fav/20261019/rjfavf0201x0.html",
+          "captured_at": "2026-10-18T15:39:47+08:00",
           "horses": []
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 11,
+              "name": "盛勢威楓"
+            },
+            {
+              "no": 8,
+              "name": "確好勁"
+            },
+            {
+              "no": 10,
+              "name": "將傲"
+            },
+            {
+              "no": 12,
+              "name": "潮流勇駒"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:51+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:51+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:51+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 1,
       "selection": null,
       "result": null,
       "locked": false,
@@ -560,6 +606,18 @@
         "record_type": "user_supplied_preoff",
         "verification": "User supplied before meeting; published banker-site initial version not independently verified",
         "captured_at": "2026-10-16T18:31:45+08:00"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          10,
+          11,
+          8,
+          12
+        ],
+        "fourth_source": "ball",
+        "initial_source": "user-provided",
+        "generated_at": "2026-10-18T15:40:02+08:00"
       }
     },
     {
@@ -670,27 +728,39 @@
       "scratched": [],
       "tips": {
         "meiji": {
-          "status": "pending",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "source": "https://racing.on.cc/racing/fav/20261019/rjfavf0201x0.html",
+          "captured_at": "2026-10-18T15:39:47+08:00",
           "horses": []
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:52+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:52+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:52+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -843,6 +913,11 @@
         "record_type": "user_supplied_preoff",
         "verification": "User supplied before meeting; published banker-site initial version not independently verified",
         "captured_at": "2026-10-16T18:31:45+08:00"
+      },
+      "sha_tin_four": {
+        "status": "pending",
+        "numbers": [],
+        "generated_at": "2026-10-18T15:40:02+08:00"
       }
     },
     {
@@ -953,27 +1028,39 @@
       "scratched": [],
       "tips": {
         "meiji": {
-          "status": "pending",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "source": "https://racing.on.cc/racing/fav/20261019/rjfavf0201x0.html",
+          "captured_at": "2026-10-18T15:39:47+08:00",
           "horses": []
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:54+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:54+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:54+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -1126,6 +1213,11 @@
         "record_type": "user_supplied_preoff",
         "verification": "User supplied before meeting; published banker-site initial version not independently verified",
         "captured_at": "2026-10-16T18:31:45+08:00"
+      },
+      "sha_tin_four": {
+        "status": "pending",
+        "numbers": [],
+        "generated_at": "2026-10-18T15:40:02+08:00"
       }
     },
     {
@@ -1222,27 +1314,56 @@
       "scratched": [],
       "tips": {
         "meiji": {
-          "status": "pending",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "source": "https://racing.on.cc/racing/fav/20261019/rjfavf0201x0.html",
+          "captured_at": "2026-10-18T15:39:47+08:00",
           "horses": []
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 8,
+              "name": "彪形勇將"
+            },
+            {
+              "no": 12,
+              "name": "萬里雲"
+            },
+            {
+              "no": 7,
+              "name": "遨遊首領"
+            },
+            {
+              "no": 2,
+              "name": "狼來了"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:55+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:55+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:55+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 1,
       "selection": null,
       "result": null,
       "locked": false,
@@ -1395,6 +1516,18 @@
         "record_type": "user_supplied_preoff",
         "verification": "User supplied before meeting; published banker-site initial version not independently verified",
         "captured_at": "2026-10-16T18:31:45+08:00"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          10,
+          12,
+          2,
+          8
+        ],
+        "fourth_source": "ball",
+        "initial_source": "user-provided",
+        "generated_at": "2026-10-18T15:40:02+08:00"
       }
     },
     {
@@ -1505,27 +1638,39 @@
       "scratched": [],
       "tips": {
         "meiji": {
-          "status": "pending",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "source": "https://racing.on.cc/racing/fav/20261019/rjfavf0201x0.html",
+          "captured_at": "2026-10-18T15:39:47+08:00",
           "horses": []
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:56+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:56+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:56+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -1678,6 +1823,11 @@
         "record_type": "user_supplied_preoff",
         "verification": "User supplied before meeting; published banker-site initial version not independently verified",
         "captured_at": "2026-10-16T18:31:45+08:00"
+      },
+      "sha_tin_four": {
+        "status": "pending",
+        "numbers": [],
+        "generated_at": "2026-10-18T15:40:02+08:00"
       }
     },
     {
@@ -1774,27 +1924,56 @@
       "scratched": [],
       "tips": {
         "meiji": {
-          "status": "pending",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "source": "https://racing.on.cc/racing/fav/20261019/rjfavf0201x0.html",
+          "captured_at": "2026-10-18T15:39:47+08:00",
           "horses": []
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:57+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 4,
+              "name": "祥勝鷹駒"
+            },
+            {
+              "no": 10,
+              "name": "嘉應光彩"
+            },
+            {
+              "no": 3,
+              "name": "實力加"
+            },
+            {
+              "no": 2,
+              "name": "常嚐發財"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:57+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:57+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 1,
       "selection": null,
       "result": null,
       "locked": false,
@@ -1947,6 +2126,18 @@
         "record_type": "user_supplied_preoff",
         "verification": "User supplied before meeting; published banker-site initial version not independently verified",
         "captured_at": "2026-10-16T18:31:45+08:00"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          4,
+          3,
+          1,
+          10
+        ],
+        "fourth_source": "ma",
+        "initial_source": "user-provided",
+        "generated_at": "2026-10-18T15:40:02+08:00"
       }
     },
     {
@@ -2042,27 +2233,39 @@
       ],
       "tips": {
         "meiji": {
-          "status": "pending",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "source": "https://racing.on.cc/racing/fav/20261019/rjfavf0201x0.html",
+          "captured_at": "2026-10-18T15:39:47+08:00",
           "horses": []
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:58+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:58+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:39:58+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -2215,6 +2418,11 @@
         "record_type": "user_supplied_preoff",
         "verification": "User supplied before meeting; published banker-site initial version not independently verified",
         "captured_at": "2026-10-16T18:31:45+08:00"
+      },
+      "sha_tin_four": {
+        "status": "pending",
+        "numbers": [],
+        "generated_at": "2026-10-18T15:40:02+08:00"
       }
     },
     {
@@ -2311,27 +2519,39 @@
       "scratched": [],
       "tips": {
         "meiji": {
-          "status": "pending",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "source": "https://racing.on.cc/racing/fav/20261019/rjfavf0201x0.html",
+          "captured_at": "2026-10-18T15:39:47+08:00",
           "horses": []
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:40:00+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:40:00+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:40:00+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -2484,6 +2704,11 @@
         "record_type": "user_supplied_preoff",
         "verification": "User supplied before meeting; published banker-site initial version not independently verified",
         "captured_at": "2026-10-16T18:31:45+08:00"
+      },
+      "sha_tin_four": {
+        "status": "pending",
+        "numbers": [],
+        "generated_at": "2026-10-18T15:40:02+08:00"
       }
     },
     {
@@ -2594,27 +2819,56 @@
       "scratched": [],
       "tips": {
         "meiji": {
-          "status": "pending",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "source": "https://racing.on.cc/racing/fav/20261019/rjfavf0201x0.html",
+          "captured_at": "2026-10-18T15:39:47+08:00",
           "horses": []
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:40:01+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 1,
+              "name": "包裝戰仕"
+            },
+            {
+              "no": 11,
+              "name": "紫荊拼搏"
+            },
+            {
+              "no": 14,
+              "name": "八仟好運"
+            },
+            {
+              "no": 7,
+              "name": "喜悅歡欣"
+            }
+          ],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:40:01+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:40:01+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 1,
       "selection": null,
       "result": null,
       "locked": false,
@@ -2767,6 +3021,18 @@
         "record_type": "user_supplied_preoff",
         "verification": "User supplied before meeting; published banker-site initial version not independently verified",
         "captured_at": "2026-10-16T18:31:45+08:00"
+      },
+      "sha_tin_four": {
+        "status": "ready",
+        "numbers": [
+          1,
+          14,
+          3,
+          11
+        ],
+        "fourth_source": "ma",
+        "initial_source": "user-provided",
+        "generated_at": "2026-10-18T15:40:02+08:00"
       }
     },
     {
@@ -2877,27 +3143,39 @@
       "scratched": [],
       "tips": {
         "meiji": {
-          "status": "pending",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "source": "https://racing.on.cc/racing/fav/20261019/rjfavf0201x0.html",
+          "captured_at": "2026-10-18T15:39:47+08:00",
           "horses": []
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:40:02+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:40:02+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261019",
+          "source_date": "2026-10-19",
+          "captured_at": "2026-10-18T15:40:02+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -3050,10 +3328,15 @@
         "record_type": "user_supplied_preoff",
         "verification": "User supplied before meeting; published banker-site initial version not independently verified",
         "captured_at": "2026-10-16T18:31:45+08:00"
+      },
+      "sha_tin_four": {
+        "status": "pending",
+        "numbers": [],
+        "generated_at": "2026-10-18T15:40:02+08:00"
       }
     }
   ],
-  "updated_at": "2026-10-16T18:31:45+08:00",
+  "updated_at": "2026-10-18T15:40:02+08:00",
   "status": "upcoming",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-19T10:30:00+08:00",
@@ -3147,6 +3430,92 @@
           10,
           3
         ]
+      ]
+    }
+  ],
+  "manual_checked_at": "2026-10-18T15:40:02+08:00",
+  "manual_checks": [
+    {
+      "started_at": "2026-10-18T15:39:47+08:00",
+      "finished_at": "2026-10-18T15:40:02+08:00",
+      "errors": [
+        {
+          "race": 1,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "error": null
+        },
+        {
+          "race": 2,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "error": null
+        },
+        {
+          "race": 3,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "error": null
+        },
+        {
+          "race": 4,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "error": null
+        },
+        {
+          "race": 5,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "error": null
+        },
+        {
+          "race": 6,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "error": null
+        },
+        {
+          "race": 7,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "error": null
+        },
+        {
+          "race": 8,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "error": null
+        },
+        {
+          "race": 9,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "error": null
+        },
+        {
+          "race": 10,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "error": null
+        },
+        {
+          "race": 11,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-14",
+          "error": null
+        }
       ]
     }
   ]
