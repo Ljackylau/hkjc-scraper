@@ -178,7 +178,7 @@
         "generated_at": "2026-10-19T10:30:15+08:00"
       },
       "result": null,
-      "locked": false,
+      "locked": true,
       "distance": 1800,
       "track": "TURF",
       "rail": "C+3",
@@ -340,7 +340,8 @@
         "fourth_source": "meiji",
         "initial_source": "user-provided",
         "generated_at": "2026-10-19T10:30:15+08:00"
-      }
+      },
+      "locked_at": "2026-10-19T15:40:22+08:00"
     },
     {
       "date": "2026-10-19",
@@ -542,7 +543,7 @@
         "generated_at": "2026-10-19T10:30:15+08:00"
       },
       "result": null,
-      "locked": false,
+      "locked": true,
       "distance": 1400,
       "track": "TURF",
       "rail": "C+3",
@@ -704,7 +705,8 @@
         "fourth_source": "ball",
         "initial_source": "user-provided",
         "generated_at": "2026-10-19T10:30:15+08:00"
-      }
+      },
+      "locked_at": "2026-10-19T15:40:22+08:00"
     },
     {
       "date": "2026-10-19",
@@ -888,7 +890,7 @@
         "generated_at": "2026-10-19T10:30:15+08:00"
       },
       "result": null,
-      "locked": false,
+      "locked": true,
       "distance": 1800,
       "track": "TURF",
       "rail": "C+3",
@@ -1050,7 +1052,8 @@
         "fourth_source": "meiji",
         "initial_source": "user-provided",
         "generated_at": "2026-10-19T10:30:15+08:00"
-      }
+      },
+      "locked_at": "2026-10-19T15:40:22+08:00"
     },
     {
       "date": "2026-10-19",
@@ -1252,7 +1255,7 @@
         "generated_at": "2026-10-19T10:30:15+08:00"
       },
       "result": null,
-      "locked": false,
+      "locked": true,
       "distance": 1400,
       "track": "TURF",
       "rail": "C+3",
@@ -1414,7 +1417,8 @@
         "fourth_source": "computer",
         "initial_source": "user-provided",
         "generated_at": "2026-10-19T10:30:15+08:00"
-      }
+      },
+      "locked_at": "2026-10-19T15:40:22+08:00"
     },
     {
       "date": "2026-10-19",
@@ -1602,7 +1606,7 @@
         "generated_at": "2026-10-19T10:30:15+08:00"
       },
       "result": null,
-      "locked": false,
+      "locked": true,
       "distance": 1200,
       "track": "TURF",
       "rail": "C+3",
@@ -1764,7 +1768,8 @@
         "fourth_source": "ball",
         "initial_source": "user-provided",
         "generated_at": "2026-10-19T10:30:15+08:00"
-      }
+      },
+      "locked_at": "2026-10-19T15:40:22+08:00"
     },
     {
       "date": "2026-10-19",
@@ -1948,7 +1953,7 @@
         "generated_at": "2026-10-19T10:30:15+08:00"
       },
       "result": null,
-      "locked": false,
+      "locked": true,
       "distance": 1000,
       "track": "TURF",
       "rail": "C+3",
@@ -2110,7 +2115,8 @@
         "fourth_source": "meiji",
         "initial_source": "user-provided",
         "generated_at": "2026-10-19T10:30:15+08:00"
-      }
+      },
+      "locked_at": "2026-10-19T15:40:22+08:00"
     },
     {
       "date": "2026-10-19",
@@ -2298,7 +2304,7 @@
         "generated_at": "2026-10-19T10:30:15+08:00"
       },
       "result": null,
-      "locked": false,
+      "locked": true,
       "distance": 1200,
       "track": "TURF",
       "rail": "C+3",
@@ -2460,7 +2466,8 @@
         "fourth_source": "ma",
         "initial_source": "user-provided",
         "generated_at": "2026-10-19T10:30:15+08:00"
-      }
+      },
+      "locked_at": "2026-10-19T15:40:22+08:00"
     },
     {
       "date": "2026-10-19",
@@ -3836,11 +3843,11 @@
       }
     }
   ],
-  "updated_at": "2026-10-19T10:30:15+08:00",
-  "status": "upcoming",
+  "updated_at": "2026-10-19T15:40:22+08:00",
+  "status": "live",
   "tips_checked_at": "2026-10-19T10:30:00+08:00",
   "tips_due_at": "2026-10-19T10:30:00+08:00",
-  "heartbeat": null,
+  "heartbeat": "2026-10-19T15:40:22.896522+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
