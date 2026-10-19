@@ -2633,10 +2633,10 @@
         "optional": [],
         "method": "st-d-qqp-20261015",
         "roles": "新D",
-        "generated_at": "2026-10-19T16:04:23+08:00"
+        "generated_at": "2026-10-19T16:04:42+08:00"
       },
       "result": null,
-      "locked": false,
+      "locked": true,
       "distance": 1600,
       "track": "TURF",
       "rail": "C+3",
@@ -2796,8 +2796,10 @@
           11
         ],
         "fourth_source": "meiji",
-        "initial_source": "user-provided"
-      }
+        "initial_source": "user-provided",
+        "generated_at": "2026-10-19T16:04:42+08:00"
+      },
+      "locked_at": "2026-10-19T16:05:02+08:00"
     },
     {
       "date": "2026-10-19",
@@ -2964,7 +2966,7 @@
         "optional": [],
         "method": "st-d-qqp-20261015",
         "roles": "新D",
-        "generated_at": "2026-10-19T16:03:02+08:00"
+        "generated_at": "2026-10-19T16:04:42+08:00"
       },
       "result": null,
       "locked": false,
@@ -3128,7 +3130,7 @@
         ],
         "fourth_source": "meiji",
         "initial_source": "user-provided",
-        "generated_at": "2026-10-19T16:03:02+08:00"
+        "generated_at": "2026-10-19T16:04:42+08:00"
       }
     },
     {
@@ -3328,7 +3330,7 @@
         "optional": [],
         "method": "st-d-qqp-20261015",
         "roles": "M3+T2+T3",
-        "generated_at": "2026-10-19T16:03:02+08:00"
+        "generated_at": "2026-10-19T16:04:42+08:00"
       },
       "result": null,
       "locked": false,
@@ -3492,7 +3494,7 @@
         ],
         "fourth_source": "ma",
         "initial_source": "user-provided",
-        "generated_at": "2026-10-19T16:03:02+08:00"
+        "generated_at": "2026-10-19T16:04:42+08:00"
       }
     },
     {
@@ -3674,7 +3676,7 @@
         "optional": [],
         "method": "st-d-qqp-20261015",
         "roles": "新D",
-        "generated_at": "2026-10-19T16:03:02+08:00"
+        "generated_at": "2026-10-19T16:04:42+08:00"
       },
       "result": null,
       "locked": false,
@@ -3838,15 +3840,15 @@
         ],
         "fourth_source": "meiji",
         "initial_source": "user-provided",
-        "generated_at": "2026-10-19T16:03:02+08:00"
+        "generated_at": "2026-10-19T16:04:42+08:00"
       }
     }
   ],
-  "updated_at": "2026-10-19T16:04:23+08:00",
+  "updated_at": "2026-10-19T16:05:02+08:00",
   "status": "live",
   "tips_checked_at": "2026-10-19T10:30:00+08:00",
   "tips_due_at": "2026-10-19T10:30:00+08:00",
-  "heartbeat": "2026-10-19T16:04:22.905408+08:00",
+  "heartbeat": "2026-10-19T16:05:02.905695+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
