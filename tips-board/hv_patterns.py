@@ -14,6 +14,8 @@ def choose_hv(r):
         return
     h = r['score'] = sum(bool(s.get('horses')) for s in sources)
     if h > 1:
+        r.pop('hv_plan_state', None)
+        r.pop('hv_plan_reason', None)
         return
     r['selection'] = None
     r.pop('hv_plan_state', None)

@@ -1,7 +1,7 @@
 import {RAW,resolveDataSource,freshJson} from './data-source.mjs?v=20261020-mobile-sync';
 import {settle} from './settlement.mjs';
-import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261021-hv-trial';
-import {monthlyConfidence,poolLabels} from './confidence-stats.mjs?v=20261021-hv-trial';
+import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261021-hv-trial2';
+import {monthlyConfidence,poolLabels} from './confidence-stats.mjs?v=20261021-hv-trial2';
 import {coldWinCandidates,coldWinSelect} from './st-coldwin.mjs?v=20261020-stwin';
 import {coldWinArchives} from './st-coldwin-history.mjs?v=20261020-stwin';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

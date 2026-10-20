@@ -9,3 +9,5 @@ r=base();r.tips.ball={status:'ready',horses:[{no:7,name:'馬7'}]};chooseHappyVal
 const source={date:r.date,venue:r.venue,races:[{...base(),locked:true,score:1,tips:r.tips,selection:{horses:[{no:7,name:'馬7'},{no:11,name:'馬11'}],main:['W','P'],optional:['QP']}}]},saved=JSON.stringify(source);
 const out=applyManual(source,null,Date.parse('2026-10-22'));assert.equal(out.races[0].selection.method,HV_METHOD);assert.equal(out.races[0].original_selection.horses.length,2);assert.equal(out.races[0].strategy_recalculated,true);assert.equal(JSON.stringify(source),saved);
 console.log('PASS: HV current rules, no bet/pending, initial identity, draw changes, scratches and labelled immutable historical replay');
+
+r=base();r.hv_plan_state='skip';r.hv_plan_reason='old';r.tips.ball={status:'ready',horses:[{no:7}]};r.tips.ma={status:'ready',horses:[{no:8}]};chooseHappyValley(r);assert.equal(r.score,2);assert.equal(r.hv_plan_state,undefined);

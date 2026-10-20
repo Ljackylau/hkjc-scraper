@@ -14,7 +14,7 @@ export function chooseHappyValley(r){
  const skip=reason=>{r.selection=null;r.hv_plan_state='skip';r.hv_plan_reason=reason};
  if(sources.some(s=>!s||!['ready','absent'].includes(s.status)||s.source_date&&s.source_date!==r.date)){r.score=null;pending('待確認三個專家來源');return}
  const h=r.score=sources.filter(s=>s.horses?.length).length;
- if(h>1)return;
+ if(h>1){delete r.hv_plan_state;delete r.hv_plan_reason;return}
  r.selection=null;delete r.hv_plan_state;delete r.hv_plan_reason;
  const field=new Map((r.horses||[]).map(x=>[Number(x.no),x])),scratched=new Set([...(r.scratched||[]),...(r.result?.withdrawn||[])].map(Number));
  const active=n=>field.has(n)&&!scratched.has(n);

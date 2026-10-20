@@ -15,4 +15,6 @@ class HappyValley(unittest.TestCase):
   r=self.base();r['draw_top5']['riders'][1]['draw']=99;choose_hv(r);self.assertEqual(r['hv_plan_state'],'pending')
  def test_h1_only_expert_first(self):
   r=self.base();r['tips']['ball']={'status':'ready','horses':[{'no':7}]};choose_hv(r);self.assertEqual(r['selection']['horses'][0]['no'],7);self.assertEqual(r['selection']['main'],['W']);self.assertEqual(r['selection']['optional'],[])
+ def test_h2_clears_previous_trial_state(self):
+  r=self.base();r['hv_plan_state']='skip';r['tips']['ball']={'status':'ready','horses':[{'no':7}]};r['tips']['ma']={'status':'ready','horses':[{'no':8}]};choose_hv(r);self.assertEqual(r['score'],2);self.assertNotIn('hv_plan_state',r)
 if __name__=='__main__':unittest.main()
