@@ -363,7 +363,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "banker_initial": {
@@ -808,7 +807,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "banker_initial": {
@@ -1235,7 +1233,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "banker_initial": {
@@ -1680,7 +1677,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "banker_initial": {
@@ -2111,7 +2107,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "banker_initial": {
@@ -2538,7 +2533,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "banker_initial": {
@@ -2969,7 +2963,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "banker_initial": {
@@ -3381,7 +3374,7 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補"
+        "record_type": "historical_reconstruction"
       },
       "banker_initial": {
         "status": "ready",
@@ -3437,7 +3430,10 @@
         "initial_source": "user-provided",
         "generated_at": "2026-10-19T16:04:42+08:00"
       },
-      "locked_at": "2026-10-19T16:05:02+08:00"
+      "locked_at": "2026-10-19T16:05:02+08:00",
+      "draw_stats_scratched": [
+        4
+      ]
     },
     {
       "date": "2026-10-19",
@@ -3754,15 +3750,6 @@
             "rate": 0.6
           },
           {
-            "no": 7,
-            "jockey": "何澤堯",
-            "jockey_id": "HCY",
-            "draw": 5,
-            "placed": 4,
-            "starts": 9,
-            "rate": 0.4444444444444444
-          },
-          {
             "no": 8,
             "jockey": "潘頓",
             "jockey_id": "PZ",
@@ -3788,11 +3775,20 @@
             "placed": 2,
             "starts": 8,
             "rate": 0.25
+          },
+          {
+            "no": 3,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "draw": 6,
+            "placed": 1,
+            "starts": 4,
+            "rate": 0.25
           }
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補"
+        "record_type": "historical_reconstruction"
       },
       "banker_initial": {
         "status": "ready",
@@ -3848,7 +3844,10 @@
         "initial_source": "user-provided",
         "generated_at": "2026-10-19T16:39:42+08:00"
       },
-      "locked_at": "2026-10-19T16:40:02+08:00"
+      "locked_at": "2026-10-19T16:40:02+08:00",
+      "draw_stats_scratched": [
+        7
+      ]
     },
     {
       "date": "2026-10-19",
@@ -4235,7 +4234,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "banker_initial": {
@@ -4661,7 +4659,7 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補"
+        "record_type": "historical_reconstruction"
       },
       "banker_initial": {
         "status": "ready",
@@ -4717,7 +4715,10 @@
         "initial_source": "user-provided",
         "generated_at": "2026-10-19T17:49:42+08:00"
       },
-      "locked_at": "2026-10-19T17:50:02+08:00"
+      "locked_at": "2026-10-19T17:50:02+08:00",
+      "draw_stats_scratched": [
+        2
+      ]
     }
   ],
   "updated_at": "2026-10-19T19:36:58+08:00",

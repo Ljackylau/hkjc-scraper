@@ -110,7 +110,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -286,7 +286,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -308,6 +308,15 @@
             "rate": 1.0
           },
           {
+            "no": 1,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "draw": 4,
+            "placed": 4,
+            "starts": 8,
+            "rate": 0.5
+          },
+          {
             "no": 11,
             "jockey": "何澤堯",
             "jockey_id": "HCY",
@@ -317,28 +326,19 @@
             "rate": 0.5
           },
           {
-            "no": 1,
-            "jockey": "潘頓",
-            "jockey_id": "PZ",
-            "draw": 4,
-            "placed": 3,
-            "starts": 7,
-            "rate": 0.42857142857142855
-          },
-          {
             "no": 8,
             "jockey": "艾兆禮",
             "jockey_id": "AA",
             "draw": 3,
             "placed": 2,
-            "starts": 9,
-            "rate": 0.2222222222222222
+            "starts": 10,
+            "rate": 0.2
           },
           {
-            "no": 5,
-            "jockey": "梁家俊",
-            "jockey_id": "LDE",
-            "draw": 10,
+            "no": 12,
+            "jockey": "潘明輝",
+            "jockey_id": "PMF",
+            "draw": 5,
             "placed": 1,
             "starts": 6,
             "rate": 0.16666666666666666
@@ -448,7 +448,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -465,9 +465,9 @@
             "jockey": "何澤堯",
             "jockey_id": "HCY",
             "draw": 2,
-            "placed": 3,
-            "starts": 6,
-            "rate": 0.5
+            "placed": 4,
+            "starts": 7,
+            "rate": 0.5714285714285714
           },
           {
             "no": 3,
@@ -479,28 +479,28 @@
             "rate": 0.4375
           },
           {
+            "no": 1,
+            "jockey": "袁幸堯",
+            "jockey_id": "YHY",
+            "draw": 3,
+            "placed": 1,
+            "starts": 6,
+            "rate": 0.16666666666666666
+          },
+          {
             "no": 2,
             "jockey": "希威森",
             "jockey_id": "HEL",
             "draw": 1,
             "placed": 1,
-            "starts": 5,
-            "rate": 0.2
+            "starts": 6,
+            "rate": 0.16666666666666666
           },
           {
             "no": 4,
             "jockey": "梁家俊",
             "jockey_id": "LDE",
             "draw": 8,
-            "placed": 1,
-            "starts": 5,
-            "rate": 0.2
-          },
-          {
-            "no": 1,
-            "jockey": "袁幸堯",
-            "jockey_id": "YHY",
-            "draw": 3,
             "placed": 1,
             "starts": 6,
             "rate": 0.16666666666666666
@@ -624,7 +624,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -800,7 +800,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -840,15 +840,6 @@
             "rate": 0.2857142857142857
           },
           {
-            "no": 11,
-            "jockey": "楊明綸",
-            "jockey_id": "YML",
-            "draw": 6,
-            "placed": 3,
-            "starts": 12,
-            "rate": 0.25
-          },
-          {
             "no": 4,
             "jockey": "梁家俊",
             "jockey_id": "LDE",
@@ -856,6 +847,15 @@
             "placed": 2,
             "starts": 8,
             "rate": 0.25
+          },
+          {
+            "no": 11,
+            "jockey": "楊明綸",
+            "jockey_id": "YML",
+            "draw": 6,
+            "placed": 3,
+            "starts": 13,
+            "rate": 0.23076923076923078
           }
         ],
         "method_version": "jockey_draw_only_v3",
@@ -962,7 +962,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -1016,8 +1016,8 @@
             "jockey_id": "BA",
             "draw": 4,
             "placed": 1,
-            "starts": 4,
-            "rate": 0.25
+            "starts": 5,
+            "rate": 0.2
           }
         ],
         "method_version": "jockey_draw_only_v3",
@@ -1138,7 +1138,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -1314,7 +1314,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -1490,7 +1490,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -1512,6 +1512,15 @@
             "rate": 0.5
           },
           {
+            "no": 9,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "draw": 2,
+            "placed": 4,
+            "starts": 11,
+            "rate": 0.36363636363636365
+          },
+          {
             "no": 11,
             "jockey": "何澤堯",
             "jockey_id": "HCY",
@@ -1528,15 +1537,6 @@
             "placed": 2,
             "starts": 6,
             "rate": 0.3333333333333333
-          },
-          {
-            "no": 9,
-            "jockey": "周俊樂",
-            "jockey_id": "CJE",
-            "draw": 2,
-            "placed": 3,
-            "starts": 10,
-            "rate": 0.3
           },
           {
             "no": 6,
@@ -1558,5 +1558,10 @@
   "tips_checked_at": null,
   "tips_due_at": "2026-10-21T16:40:00+08:00",
   "heartbeat": null,
-  "errors": []
+  "errors": [],
+  "collection_policy": {
+    "index": false,
+    "results": false,
+    "draw_start_date": "2026-09-01"
+  }
 }
