@@ -210,3 +210,8 @@ Checks: `node tips-board/test_data_source.mjs` and the three
 Both pages and the collector use the same trial rule: H=0 buys one $10 Place on J2 only when Meiji's original first pick is outside the initial banker/leg1/leg2; otherwise skip. H=1 buys one $10 Win on the sole available expert's original first pick. No odds threshold, extra legs or optional pools. Missing/stale inputs wait; a withdrawn selected runner is skipped without promotion. J2 must match the current declared draw and jockey.
 
 The browser labels historical replays as recalculated and leaves source records unchanged. Existing pre-off snapshots using this trial method remain frozen after off. H=2/3 and Sha Tin retain their rules. Monthly confidence reporting remains Q/QP-only, so H=1's former optional QP is excluded after replay under the new W-only method. These exploratory rules are marked as a trial, not a promised future return.
+
+
+## Sha Tin turf confidence-only QP (2026-10-21)
+
+H=0/1 now require TURF and Meiji's original first pick outside the initial banker/leg1/leg2. Keep the existing new-D (H0) and M3+T2+T3/fallback (H1) three-runner selection order, but buy only three Quinella Place combinations at $10 each. Skip AWT and failed gates; incomplete sources remain pending. H=2/3 and Happy Valley rules are unchanged. The display labels historical recalculation without overwriting original archive tickets. New-method pre-off snapshots stay frozen after off.

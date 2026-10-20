@@ -153,6 +153,7 @@ def choose(r):
         return
     if any(s['status'] not in ('ready','absent') for s in sources):r['score']=None;r['selection']=None;return
     r['score']=sum(bool(s['horses']) for s in sources);h=r['score'];m=r['tips']['meiji']['horses'];p=[]
+    if h>1:r.pop('st_plan_state',None);r.pop('st_plan_reason',None)
     if h==0:p=r['index']['horses'][:2]
     elif h==1:
         first=next(s['horses'][0] for s in sources if s['horses'])

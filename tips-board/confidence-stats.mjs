@@ -1,4 +1,4 @@
-import {applyManual,confidenceReason} from './manual-tips.mjs?v=20261021-hv-trial2';
+import {applyManual,confidenceReason} from './manual-tips.mjs?v=20261021-st-qp';
 import {settle} from './settlement.mjs';
 export const poolLabels={W:'獨贏W',P:'位置P',Q:'連贏Q',QP:'位置Q'};
 // Count a meeting once even when latest.json and its dated archive both exist.

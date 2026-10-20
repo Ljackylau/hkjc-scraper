@@ -1,4 +1,4 @@
-name: Happy Valley pattern checks
+name: Racing pattern checks
 on:
   push:
     paths: ['tips-board/**', '.github/workflows/hv-pattern-check.yml']
@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: tips-data
+          path: tips-data
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -22,6 +26,7 @@ jobs:
         working-directory: tips-board
         run: |
           node --check app.mjs
+          node test_sha_tin_patterns.mjs
           node test_hv_patterns.mjs
           node test_manual.mjs
           node test_confidence_stats.mjs

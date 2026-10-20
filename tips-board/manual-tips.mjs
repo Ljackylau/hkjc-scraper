@@ -54,20 +54,28 @@ export function applyHappyValley(source,time=Date.now()){
  return m;
 }
 
-export const ST_METHOD='st-d-qqp-20261015';
+export const ST_METHOD='st-turf-confidence-qp-20261021';
 export function chooseShaTin(r){
  const sources=experts.map(k=>r.tips[k]);r.selection=null;
- if(sources.some(s=>!['ready','absent'].includes(s.status))){r.score=null;return}
+ const pending=reason=>{r.st_plan_state='pending';r.st_plan_reason=reason};
+ const skip=reason=>{r.st_plan_state='skip';r.st_plan_reason=reason};
+ delete r.st_plan_state;delete r.st_plan_reason;
+ if(sources.some(s=>!['ready','absent'].includes(s.status))){r.score=null;pending('待確認三個專家來源');return}
  const h=r.score=sources.filter(s=>s.horses.length).length;if(h>1)return;
+ if(!r.track){pending('待官方跑道資料');return}
+ if(r.track!=='TURF'){skip('只買沙田草地，本場不買');return}
  const meiji=r.tips.meiji,b=r.banker_initial;
- if([meiji,...sources].some(s=>s.source_date&&s.source_date!==r.date))return;
- if(meiji.status!=='ready'||meiji.horses.length<4||!b||b.status!=='ready'||b.as_of_race_no!==0||b.reason!=='initial'||b.numbers?.length!==5||b.date!==r.date||b.venue!=='ST'||b.race!==r.race)return;
+ if([meiji,...sources].some(s=>s.source_date&&s.source_date!==r.date)){pending('貼士日期不符，待更新');return}
+ if(meiji.status!=='ready'||meiji.horses.length<4){pending('待明治朗四選');return}
+ if(!b||b.status!=='ready'||b.as_of_race_no!==0||b.reason!=='initial'||b.numbers?.length!==5||new Set(b.numbers.map(Number)).size!==5||b.date!==r.date||b.venue!=='ST'||b.race!==r.race){pending('待膽拖網同場初版推介');return}
  const M=meiji.horses.map(x=>Number(x.no)),B=b.numbers.map(Number);let order;
+ if(B.slice(0,3).includes(M[0])){skip('明治朗首選在膽拖初版前三內，本場不買');return}
  if(h===0){const rest=M.slice(1);order=[M[0],B[0],...rest.filter(n=>B.slice(0,3).includes(n)),...rest.filter(n=>!B.slice(0,3).includes(n))]}
- else {const T=sources.find(s=>s.horses.length).horses.map(x=>Number(x.no));if(T.length<3)return;order=[M[2],T[1],T[2],B[0],B[3],M[0],M[1],M[3],B[1],T[0],T[3],B[2],B[4]]}
- const field=new Map(r.horses.map(x=>[Number(x.no),x])),scratched=new Set((r.scratched||[]).map(Number));
- const nos=[...new Set(order)].filter(n=>field.has(n)&&!scratched.has(n)).slice(0,3);if(nos.length!==3)return;
- r.selection={horses:nos.map(n=>({no:n,name:field.get(n).name})),main:h===0?['QP']:['Q','QP'],optional:[],method:ST_METHOD,roles:h===0?'新D':'M3+T2+T3'};
+ else {const T=sources.find(s=>s.horses.length).horses.map(x=>Number(x.no));if(T.length<3){pending('待唯一專家第2及第3選');return}order=[M[2],T[1],T[2],B[0],B[3],M[0],M[1],M[3],B[1],T[0],T[3],B[2],B[4]]}
+ const field=new Map(r.horses.map(x=>[Number(x.no),x])),scratched=new Set([...(r.scratched||[]),...(r.result?.withdrawn||[])].map(Number));
+ const nos=[...new Set(order)].filter(n=>field.has(n)&&!scratched.has(n)).slice(0,3);if(nos.length!==3){pending('未有三匹有效選馬');return}
+ r.st_plan_state='ready';r.st_plan_reason=h===0?'草地信心條件成立，新D三馬位置Q':'草地信心條件成立，M3＋T2＋T3位置Q';
+ r.selection={horses:nos.map(n=>({no:n,name:field.get(n).name})),main:['QP'],optional:[],method:ST_METHOD,roles:h===0?'新D':'M3+T2+T3'};
 }
 export function confidenceReason(r){
  if(r.venue==='HV'&&[1,2,3].includes(r.score))return '跑馬地H='+r.score+'：此條件分列為信心場';
@@ -75,16 +83,18 @@ export function confidenceReason(r){
  const b=r.banker_initial,m=r.tips.meiji;
  if(m.status!=='ready'||!m.horses.length||b?.status!=='ready'||b.as_of_race_no!==0||b.reason!=='initial'||b.numbers?.length!==5||b.date!==r.date||b.venue!=='ST'||b.race!==r.race)return null;
  if(b.numbers.slice(0,3).map(Number).includes(Number(m.horses[0].no)))return null;
- if(r.score===0&&r.track!=='TURF')return null;
- return (r.score===0?'沙田T=0・草地':'沙田T=1')+'：明治朗首選不在膽拖網初版「膽、腳1、腳2」內';
+ if(r.track!=='TURF')return null;
+ return ('沙田草地H='+r.score)+'：明治朗首選不在膽拖網初版「膽、腳1、腳2」內';
 }
 export function applyShaTin(source,time=Date.now()){
  const m=structuredClone(source);if(m.venue!=='ST')return m;
  for(const r of m.races){
   r.venue=m.venue;r.date=m.date;
-  // Previously stored selections remain in the source record. Historical display is a labelled recalculation.
-  if((r.score===0||r.score===1||r.score==null)&&r.selection?.method!==ST_METHOD){
-   const past=r.locked||time>=Date.parse(r.off);chooseShaTin(r);if(past)r.strategy_recalculated=true;
+  if(r.score>1){delete r.st_plan_state;delete r.st_plan_reason;continue}
+  if(r.selection?.method!==ST_METHOD){
+   const past=r.locked||time>=Date.parse(r.off),original=r.selection?structuredClone(r.selection):null;
+   chooseShaTin(r);
+   if(past){r.strategy_recalculated=true;if(!Object.hasOwn(r,'original_selection'))r.original_selection=original}
   }
  }
  return m;
@@ -95,6 +105,7 @@ export function chooseManual(r){
  const sources=experts.map(k=>r.tips[k]);r.selection=null;
  if(sources.some(s=>!['ready','absent'].includes(s.status))){r.score=null;return}
  const h=r.score=sources.filter(s=>s.horses.length).length,m=r.tips.meiji.horses;let p=[];
+ if(h>1){delete r.st_plan_state;delete r.st_plan_reason}
  if(h===0)p=r.index.horses.slice(0,2);
  else if(h===1){const first=sources.find(s=>s.horses.length).horses[0],other=m.slice(0,2).find(x=>x.no!==first.no);if(other)p=[first,other]}
  else if(m.length>=3)p=m.slice(0,3);
