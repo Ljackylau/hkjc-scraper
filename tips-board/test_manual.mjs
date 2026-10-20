@@ -6,13 +6,13 @@ const tip=(text,key)=>({status:'ready',horses:parseManual(text,r,key),manual:tru
 assert.deepEqual(parseManual('3、7，10 11',r,'meiji').map(h=>h.no),[3,7,10,11]);
 for(const bad of ['3,3,7,10','3,7,10,13','3,7','3foo,7,10,11'])assert.throws(()=>parseManual(bad,r,'meiji'));
 const saved={date:m.date,venue:m.venue,races:{1:{overrides:{meiji:tip('3,7,10,11','meiji'),ball:tip('3','ball')}}}};
-let out=applyManual(m,saved,before);assert.equal(out.races[0].score,1);assert.deepEqual(out.races[0].selection.horses.map(h=>h.no),[3,7]);assert.equal(r.tips.meiji.horses.length,0,'No mutation of automatic source');
+let out=applyManual(m,saved,before);assert.equal(out.races[0].score,1);assert.deepEqual(out.races[0].selection.horses.map(h=>h.no),[3]);assert.equal(r.tips.meiji.horses.length,0,'No mutation of automatic source');
 saved.races[1].overrides.ma=tip('3','ma');out=applyManual(m,saved,before);assert.equal(out.races[0].score,2);assert.deepEqual(out.races[0].selection.horses.map(h=>h.no),[3,7,10]);
 const frozen=structuredClone(out.races[0].selection),changed=structuredClone(m);changed.races[0].locked=true;changed.races[0].result={horses:[{no:12}]};
 out=applyManual(changed,saved,Date.parse(r.off)+1);assert.deepEqual(out.races[0].selection,frozen);assert.deepEqual(out.races[0].result,changed.races[0].result);assert.equal(out.races[0].lock_type,'manual_local');
-assert.deepEqual(applyManual(m,{...saved,date:'2026-10-11'},before),m);
-assert.deepEqual(applyManual(m,{...saved,venue:'ST'},before),m);
+assert.deepEqual(applyManual(m,{...saved,date:'2026-10-11'},before),applyManual(m,null,before));
+assert.deepEqual(applyManual(m,{...saved,venue:'ST'},before),applyManual(m,null,before));
 const h0={date:m.date,venue:m.venue,races:{1:{overrides:{index:tip('5,8,3,1','index')}}}};
-out=applyManual(m,h0,before);assert.equal(out.races[0].score,0);assert.deepEqual(out.races[0].selection.horses.map(h=>h.no),[5,8]);
+out=applyManual(m,h0,before);assert.equal(out.races[0].score,0);assert.equal(out.races[0].selection,null);assert.equal(out.races[0].hv_plan_state,'pending');
 const late={date:m.date,venue:m.venue,races:{1:{overrides:{ball:tip('3','ball')}}}};out=applyManual(m,late,Date.parse(r.off)+1);assert.equal(out.races[0].selection,null);assert.equal(late.races[1].snapshot,undefined);
 console.log('PASS: manual validation, H=0/1/2, duplicate first pick, source isolation, off lock, result preservation and date/venue isolation');

@@ -7,11 +7,11 @@ class Rules(unittest.TestCase):
   self.r=empty_meeting({'date':'2026-10-14','venue':'HV','races':[{'race':1,'off':'2026-10-14T18:35:00+08:00','horses':[{'no':n,'name':str(n)} for n in range(1,13)]}]})['races'][0]
   for k in self.r['tips']:self.r['tips'][k]={'status':'absent','horses':[]}
   self.r['tips']['meiji']={'status':'ready','horses':[{'no':n,'name':str(n)} for n in [3,7,10,11]]}
- def test_zero_needs_index(self):
+ def test_zero_ignores_index_without_initial(self):
   choose(self.r);self.assertEqual(self.r['score'],0);self.assertIsNone(self.r['selection'])
-  self.r['index']['horses']=[{'no':n,'name':str(n)} for n in [5,8,3,1]];choose(self.r);self.assertEqual([h['no'] for h in self.r['selection']['horses']],[5,8])
+  self.r['index']['horses']=[{'no':n,'name':str(n)} for n in [5,8,3,1]];choose(self.r);self.assertIsNone(self.r['selection']);self.assertEqual(self.r['hv_plan_state'],'pending')
  def test_one_duplicate(self):
-  self.r['tips']['ball']={'status':'ready','horses':[{'no':3,'name':'3'}]};choose(self.r);self.assertEqual([h['no'] for h in self.r['selection']['horses']],[3,7])
+  self.r['tips']['ball']={'status':'ready','horses':[{'no':3,'name':'3'}]};choose(self.r);self.assertEqual([h['no'] for h in self.r['selection']['horses']],[3])
  def test_same_horse_two_experts_counts_two(self):
   for k in ['ball','ma']:self.r['tips'][k]={'status':'ready','horses':[{'no':3,'name':'3'}]}
   choose(self.r);self.assertEqual(self.r['score'],2);self.assertEqual(self.r['selection']['main'],['QP'])

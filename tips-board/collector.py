@@ -10,6 +10,7 @@ from cryptography.hazmat.primitives.ciphers import Cipher,algorithms,modes
 from cryptography.hazmat.primitives.padding import PKCS7
 from sha_tin_four import capture_four as capture_initial, PRO_IDS
 from sha_tin_patterns import choose_st
+from hv_patterns import choose_hv
 import jockey_top5
 import draw_stats
 import st_coldwin
@@ -64,7 +65,7 @@ def calendar():
     return {'date':one['date'],'venue':one['venue'],'source':CARD,'races':races}
 def empty_meeting(c):
     return {**c,'updated_at':stamp(),'status':'upcoming','tips_checked_at':None,'tips_due_at':(datetime.fromisoformat(c['races'][0]['off'])-timedelta(hours=2)).isoformat(),'heartbeat':None,'errors':[],
-      'races':[{**r,'tips':{k:{'status':'pending','horses':[]} for k in ['meiji',*EXPERTS]},'index':{'status':'pending','horses':[]},'score':None,'selection':None,'result':None,'locked':False} for r in c['races']]}
+      'races':[{**r,'date':c['date'],'venue':c['venue'],'tips':{k:{'status':'pending','horses':[]} for k in ['meiji',*EXPERTS]},'index':{'status':'pending','horses':[]},'score':None,'selection':None,'result':None,'locked':False} for r in c['races']]}
 def safe_horses(items,race):
     field={r['no']:r['name'] for r in race['horses']};out=[]
     for h in items:
@@ -141,6 +142,11 @@ def capture_four(meeting,request,stamp,now):
 def choose(r):
     if r.get('locked'):return
     sources=[r['tips'][k] for k in EXPERTS]
+    if r.get('venue')=='HV':
+        choose_hv(r)
+        if r.get('score') is None or r['score']<2:
+            if r.get('selection'):r['selection']['generated_at']=stamp()
+            return
     if r.get('venue')=='ST' and all(s['status'] in ('ready','absent') for s in sources) and sum(bool(s['horses']) for s in sources)<2:
         choose_st(r)
         if r.get('selection'):r['selection']['generated_at']=stamp()
@@ -258,6 +264,8 @@ def prepare_draws(store,m,history=None):
                     if k in fresh:r[k]=fresh[k]
             except Exception as e:r['draw_error']=str(e)
         r['draw_top5']=draw_stats.rank(m,r,history)
+        r.setdefault('date',m['date']);r.setdefault('venue',m['venue'])
+        if m['venue']=='HV':choose(r)
     return history
 
 def initialize(store):
