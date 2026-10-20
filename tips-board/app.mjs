@@ -30,7 +30,9 @@ function tips(t,index=false){if(!t)return '<span class="muted">待更新</span>'
 function bankerTips(r){
  const b=r.banker_initial;if(b?.status!=='ready'||b.numbers?.length!==5)return '<span class="muted">待初版推介</span>';
  const field=new Map(r.horses.map(h=>[Number(h.no),h.name])),roles=['膽','腳1','腳2','腳3','腳4'];
- return b.numbers.map((no,i)=>`<div class="horse"><span class="muted">${roles[i]}</span><span class="num">${e(no)}</span><span>${e(field.get(Number(no))||'')}</span></div>`).join('');
+ const list=b.numbers.map((no,i)=>`<div class="horse"><span class="muted">${roles[i]}</span><span class="num">${e(no)}</span><span>${e(field.get(Number(no))||'')}</span></div>`).join('');
+ const p=b.banker_top3_probability;
+ return list+(typeof p==='number'&&Number.isFinite(p)&&p>=0&&p<=1?`<div class="muted" data-banker-probability>膽入三甲估計：<b>${(p*100).toFixed(1)}%</b>${b.source_type==='user_provided'?'<br><small>用戶提供的預測估計</small>':''}</div>`:'');
 }
 function drawTop5(r){
  const v=r.draw_top5;if((v?.status!=='ready'||v.method_version!=='jockey_draw_only_v3'))return '<span class="muted">待騎師同檔往績</span>';
