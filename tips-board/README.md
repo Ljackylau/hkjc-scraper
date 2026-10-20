@@ -1,5 +1,46 @@
 # 賽日貼士表
 
+## Adopted ST turf confidence Win add-on — October 20
+
+Both pages add **沙草信心場補Win** and append its confirmed plan to the existing
+bet cells. This independent add-on does not change original selections, H,
+confidence eligibility, monthly Q/QP statistics, or HV/AWT methods.
+
+Exclude Meiji four and the initial banker five, plus known withdrawals. Use
+only dated HKJC numeric-finish records since 2025-09-01, strictly before the
+meeting date; at least two valid first-position readings in the last three
+numeric-finish races, median >=4. Rest >=60 days needs one of 西門獨/諸葛數/
+陳志懷/兆文; shorter rest needs last finish <=3 and at least two authors.
+Filter **Win odds >8** before ranking by supporter count descending, best
+author rank ascending, saddle ascending; take at most two, $10 Win each.
+
+`st_coldwin.py` captures the four authors from the dated On.cc matrix and
+minimal official prior-race form. Identity/date/name checks fail closed. Form
+requests are batched at 12 per pass, with three workers, and stop within ten
+minutes of the advertised off; missing data never becomes a partial plan.
+Preparation/manual/live passes fill pending support without reading the index,
+race-day results, post-race notes, or private prediction-model data. Upcoming
+cards now retain official horse IDs. Started/locked races are never enriched.
+
+The board has **no automatic live Win-price feed**. Latest-page users enter
+prices for all qualified candidates and confirm them. Blank/invalid prices do
+not count as <=8; no final plan appears until all candidate prices are known.
+Prices and the resulting receipt live in this browser only, survive polling,
+and freeze at off. They do not synchronize to public archive or other devices.
+Displayed prices are saved observations, not a claim of continuously live odds.
+
+`st-coldwin-history.mjs` holds explicitly reconstructed public-source inputs
+for the 31 ST turf confidence races through October 19. Historical display uses
+final odds, is labelled retrospective, and is never represented as an original
+pre-off receipt. The frozen fixture reproduces **28 bets, four winners, $280
+cost, $542 gross return, +$262**. Post-adoption races without a pre-off receipt
+are labelled missing, not reconstructed from future prices. The historical
+study is exploratory, not an independent validation or a profit guarantee.
+
+Checks: `node tips-board/test_st_coldwin.mjs`,
+`node --experimental-vm-modules tips-board/test_st_coldwin_ui.cjs`,
+and Python unittest discovery including `test_st_coldwin.py`.
+
 GitHub Pages: https://ljackylau.github.io/hkjc-scraper/tips-board/
 
 Latest and history are static pages. A separate `tips-data` branch holds `records/latest.json`, `records/YYYY-MM-DD.json` and `records/history.json`. The pages poll raw GitHub JSON every 20 seconds with a cache-busting URL; no repeated Pages deployment is needed. GitHub/CDN propagation adds delivery latency, so the polling interval is not a guaranteed end-to-end latency.

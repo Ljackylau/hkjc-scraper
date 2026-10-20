@@ -12,6 +12,7 @@ from sha_tin_four import capture_four as capture_initial, PRO_IDS
 from sha_tin_patterns import choose_st
 import jockey_top5
 import draw_stats
+import st_coldwin
 HK=ZoneInfo('Asia/Hong_Kong')
 ONCC='https://racing.on.cc/racing/fav/current/rjfavf0201x0.html'
 ST='https://racing.stheadline.com/api'
@@ -42,6 +43,9 @@ def parse_card(body):
         cells=row.find_all('td',recursive=False)
         if len(cells)>=4 and cells[0].get_text(strip=True).isdigit():
             horses.append({'no':int(cells[0].get_text(strip=True)),'name':cells[3].get_text(' ',strip=True),**jockey_top5.rider(row),**draw_stats.card_draw(row)})
+            horse_link=next((a for a in row.select('a[href]') if re.search(r'horseid=',a.get('href',''),re.I)),None)
+            ident=re.search(r'horseid=(HK_\d{4}_[A-Z]\d{3})',horse_link.get('href',''),re.I) if horse_link else None
+            if ident:horses[-1]['horse_id']=ident[1].upper()
             if re.search(r'退出|WITHDRAWN|SCRATCHED',row.get_text(' ',strip=True),re.I):scratched.append(int(cells[0].get_text(strip=True)))
     if not venue or len(horses)<4:raise ValueError('Official declared field incomplete')
     off=datetime.fromisoformat(date+'T'+clock[1]+':00').replace(tzinfo=HK).isoformat()
@@ -126,6 +130,7 @@ def collect_tips(meeting):
                 if r['tips'][key]['status']=='pending':r['tips'][key]={'status':'error','horses':[],'error':str(e)}
     for r in meeting['races']:choose(r)
     capture_four(meeting,request,stamp,now)
+    st_coldwin.collect(meeting,request,stamp,now,safe_horses)
 
 def capture_four(meeting,request,stamp,now):
     capture_initial(meeting,request,stamp,now)
@@ -244,7 +249,7 @@ def prepare_draws(store,m,history=None):
     if history is None:history=draw_stats.update_history(store,request,min(m['date'],now().date().isoformat()))['races']
     for r in m['races']:
         if r.get('locked'):continue
-        if not r.get('rail') or any(not h.get('draw') for h in r['horses'] if h['no'] not in r.get('scratched',[])):
+        if not r.get('rail') or any(not h.get('draw') or (m['venue']=='ST' and r.get('track')=='TURF' and not h.get('horse_id')) for h in r['horses'] if h['no'] not in r.get('scratched',[])):
             try:
                 q=urllib.parse.urlencode({'racedate':m['date'].replace('-','/'),'Racecourse':m['venue'],'RaceNo':r['race']})
                 fresh=parse_card(request(CARD+'?'+q))
@@ -291,6 +296,7 @@ def collect_manual(m):
     candidate['races']=[r for r in candidate['races'] if not r.get('locked') and now()<datetime.fromisoformat(r['off'])]
     for r in candidate['races']:
         r['tips']={k:{'status':'pending','horses':[]} for k in ['meiji',*EXPERTS]}
+        r.pop('st_win_support',None)
     if candidate['races']:collect_tips(candidate)
     errors=[]
     for fresh in candidate['races']:
@@ -301,6 +307,7 @@ def collect_manual(m):
             else:
                 errors.append({'race':r['race'],'source':key,'status':tip['status'],'source_date':tip.get('source_date'),'error':tip.get('error')})
                 if r['tips'][key]['status'] not in ('ready','absent'):r['tips'][key]=tip
+        if fresh.get('st_win_support'):r['st_win_support']=fresh['st_win_support']
         choose(r)
     capture_four(m,request,stamp,now)
     m['manual_checked_at']=stamp()
@@ -329,6 +336,7 @@ def run(store,date,mode):
             four_try=time.monotonic()
             capture_four(m,request,stamp,now)
             prepare_draws(store,m,draw_history)
+            st_coldwin.collect(m,request,stamp,now,safe_horses)
             t=now()
         # Respect single preflight check. Live mode never silently fetches the experts again.
         for r in m['races']:
