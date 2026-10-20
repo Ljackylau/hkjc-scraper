@@ -190,3 +190,16 @@ Archive requests use a single pinned data revision. Any failed/mismatched archiv
 GitHub版本API限流時，頁面使用本機上次成功核對的固定版本；首次瀏覽則使用2026-10-17的備用固定版本，並顯示可能未含最新貼士的提示。所有歷史紀錄仍來自同一固定版本，避免混合版本計算月率。
 
 Monthly confidence tables display pair pools only (QP, then Q), ordered by venue (Sha Tin, Happy Valley), H, then month descending. Main/optional roles remain separate; race and settlement definitions are unchanged.
+
+### Mobile refresh and stale-data recovery
+
+Both pages recheck the data revision when shown again, when the tab becomes
+visible, and after reconnecting. History polling retains the selected date and
+refreshes its date index and monthly summaries when the source changes.
+`data-source.mjs` tries the GitHub branch ref, then current raw data if the API
+is blocked or rate-limited; a saved immutable revision is an explicitly labelled
+last resort when both routes fail. Requests time out instead of leaving refresh
+permanently busy. Browser-local manual selections and odds receipts are preserved.
+
+Checks: `node tips-board/test_data_source.mjs` and the three
+`node --experimental-vm-modules tips-board/test_*_ui.cjs` suites.

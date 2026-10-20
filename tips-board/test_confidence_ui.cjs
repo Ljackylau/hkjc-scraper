@@ -8,7 +8,7 @@ const sept={...source,date:'2026-09-09',races:[{...race(1,1),result:null}]};
 async function open(history=false,fail=false,rateLimited=false){
  const els={},cache=new Map();
  const el=id=>els[id]??={textContent:'',value:'',hidden:false,disabled:false,_html:'',set innerHTML(s){this._html=s;if(id==='dates')this.value=s.match(/value="([^"]+)/)?.[1]||''},get innerHTML(){return this._html}};
- const ctx=vm.createContext({document:{body:{dataset:history?{history:'true'}:{}},getElementById:el},window:{open(){}},localStorage:{getItem(){return null}},structuredClone,Date,Intl,setInterval(){},fetch:async url=>{
+ const ctx=vm.createContext({document:{body:{dataset:history?{history:'true'}:{}},getElementById:el},window:{open(){}},localStorage:{getItem(){return null}},AbortController,setTimeout,clearTimeout,structuredClone,Date,Intl,setInterval(){},fetch:async url=>{
   if(url.includes('/git/refs/')&&rateLimited)return{ok:false,status:403};
   if(url.includes('2026-09-09.json')&&fail)throw Error('offline');
   return{ok:true,json:async()=>url.includes('/git/refs/')?{object:{sha:'a'.repeat(40)}}:url.includes('history.json')?{meetings:[{date:source.date,venue:'HV'},{date:sept.date,venue:'HV'}]}:structuredClone(url.includes('2026-09-09.json')?sept:source)};
@@ -23,7 +23,7 @@ async function open(history=false,fail=false,rateLimited=false){
   const month=app.el('monthly-rows').innerHTML;assert(month.includes('2026-10')&&month.includes('2026-09')&&month.includes('100.0%'));assert(month.includes('待核對'));assert(!month.includes('獨贏W')&&!month.includes('位置P'));assert(month.indexOf('2026-09')<month.lastIndexOf('2026-10'),'H grouping precedes month grouping');assert(!app.el('monthly-status').textContent.includes('正在'));
   if(history){app.el('dates').value='2026-09-09';await app.el('dates').onchange();assert(app.el('confidence-rows').innerHTML.includes('第1場'));assert(app.el('monthly-rows').innerHTML.includes('2026-10'),'monthly stats include all history, independent of selected date')}
  }
- const limited=await open(true,false,true);assert(limited.el('revision-notice').textContent.includes('備用存檔'));assert(limited.el('confidence-rows').innerHTML.includes('第2場'));assert(limited.el('monthly-rows').innerHTML.includes('100.0%'));
+ const limited=await open(true,false,true);assert(limited.el('revision-notice').textContent.includes('直接讀取最新'));assert(limited.el('confidence-rows').innerHTML.includes('第2場'));assert(limited.el('monthly-rows').innerHTML.includes('100.0%'));
  const app=await open(false,true);assert(app.el('monthly-rows').innerHTML.includes('命中率暫不顯示'));app.recover();await app.el('refresh').onclick();assert(app.el('monthly-rows').innerHTML.includes('100.0%'));
  console.log('PASS: both pages filter confidence races, show bets/results, aggregate all months, switch dates and recover from incomplete history');
 })().catch(e=>{console.error(e);process.exitCode=1});

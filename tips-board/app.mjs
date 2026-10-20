@@ -1,29 +1,22 @@
+import {RAW,resolveDataSource,freshJson} from './data-source.mjs?v=20261020-mobile-sync';
 import {settle} from './settlement.mjs';
 import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261017-confidence3';
 import {monthlyConfidence,poolLabels} from './confidence-stats.mjs?v=20261017-confidence3';
 import {coldWinCandidates,coldWinSelect} from './st-coldwin.mjs?v=20261020-stwin';
 import {coldWinArchives} from './st-coldwin-history.mjs?v=20261020-stwin';
-const RAW='https://raw.githubusercontent.com/Ljackylau/hkjc-scraper/tips-data/records/';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=id=>document.getElementById(id),history=document.body.dataset.history==='true';let meeting=null,sourceMeeting=null,busy=false,base=RAW,revisionCheckedAt=0;
 const clock=d=>d?new Date(d).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong',hour12:false}):'—';
-async function read(name,revision=base){const r=await fetch(revision+name+'?v='+Math.floor(Date.now()/20000),{cache:'no-store'});if(!r.ok)throw Error('數據讀取失敗 ('+r.status+')');return r.json()}
-const fallbackRevision='820812adbd944cda87a76c84a9739ee313f00e90',revisionKey='hkjc-verified-data-revision-v1';
+async function read(name,revision=base){try{return await freshJson(revision+name)}catch(err){throw Error('數據讀取失敗（'+err.message+'）')}}
+const fallbackRevision='820812adbd944cda87a76c84a9739ee313f00e90',revisionKey='hkjc-verified-data-revision-v1';let dataVersion=null;
 async function pinDataRevision(force=false){
  if(!force&&revisionCheckedAt&&Date.now()-revisionCheckedAt<90000)return;
- let sha;
- try{
-  const r=await fetch('https://api.github.com/repos/Ljackylau/hkjc-scraper/git/refs/heads/tips-data?v='+Date.now(),{cache:'no-store'});
-  if(!r.ok)throw Error('資料版本讀取失敗 ('+r.status+')');
-  const j=await r.json();sha=j.object?.sha;if(!/^[a-f0-9]{40}$/.test(sha||''))throw Error('資料版本資料無效');
-  try{localStorage.setItem(revisionKey,sha)}catch{}
-  $('revision-notice').textContent='';
- }catch(err){
-  let saved;try{saved=localStorage.getItem(revisionKey)}catch{}
-  sha=/^[a-f0-9]{40}$/.test(saved||'')?saved:fallbackRevision;
-  $('revision-notice').textContent=err.message+'；現顯示'+(sha===fallbackRevision?'2026-10-17保存的備用存檔':'本機上次成功核對的存檔')+'，可能未包含最新貼士。按「重新讀取」可再核對。';
- }
- base=RAW.replace('/tips-data/records/','/'+sha+'/records/');revisionCheckedAt=Date.now();
+ let saved;try{saved=localStorage.getItem(revisionKey)}catch{}
+ const resolved=await resolveDataSource({saved,fallback:fallbackRevision});
+ if(resolved.sha)try{localStorage.setItem(revisionKey,resolved.sha)}catch{}
+ if(dataVersion!==resolved.version){monthlyRevision=null;historyIndexRevision=null;dataVersion=resolved.version}
+ $('revision-notice').textContent=resolved.notice;
+ base=resolved.base;revisionCheckedAt=Date.now();
 }
 function horses(h){return h.map(x=>`<div class="horse"><span class="num">${e(x.no)}</span><span>${e(x.name)}</span></div>`).join('')}
 function tips(t,index=false){if(!t)return '<span class="muted">待更新</span>';let text=t.horses?.length?horses(t.horses):t.status==='absent'?'/':t.status==='stale'?'待更新（來源 '+e(t.source_date)+'）':t.status==='error'?'<span class="error">讀取失敗'+(t.error?'：'+e(t.error):'')+'</span>':t.status==='missed'?'未取得賽前資料':t.status==='historical_missing'?'歷史資料未找到':index?'待開跑前2分鐘':'待賽前檢查';if(t.timing_note)text+=`<div class="error">${e(t.timing_note)}</div>`;if(t.captured_at)text+=`<details><summary>${t.manual?'輸入':t.record_type==='historical_backfill'?'補錄':'取得'} ${e(clock(t.captured_at))}</summary><p>${e(t.source_date||t.raceid||'')}<br>${e(t.captured_at)}${t.reported_live_created_at?`<br>來源生成時間：${e(t.reported_live_created_at)}`:''}${t.source&&!t.manual?`<br><a href="${e(t.source)}" target="_blank" rel="noopener">原始來源</a>`:''}</p></details>`;return (t.manual?'<span class="manual-badge">手動輸入</span>':'')+text}
@@ -125,8 +118,27 @@ if(m.venue==='ST')$('notice').textContent+=($('notice').textContent?' ':'')+'M�
 if(m.venue==='HV')$('notice').textContent+=($('notice').textContent?' ':'')+'跑馬地H=1、2、3均列為信心場；H指條件分。';
 if(m.races.some(r=>r.manual_local))$('notice').textContent+=($('notice').textContent?' ':'')+'本頁含目前瀏覽器保存的手動貼士及選擇。';
 $('rows').innerHTML=m.races.map(r=>`<tr><td><div class="race-label"><b>第${e(r.race)}場</b>${confidenceBadge(r)}</div><div class="clock">${e(clock(r.off).slice(0,5))}</div></td><td data-result>${resultHtml(r)}</td><td data-score>${r.score==null?'<span class="muted">待確認</span>':`<span class="score">${r.score}</span>`}</td><td>${tips(r.tips.meiji)}</td><td data-banker-tips>${bankerTips(r)}</td><td data-draw-top5>${drawTop5(r)}</td><td>${tips(r.tips.ball)}</td><td>${tips(r.tips.ma)}</td><td>${tips(r.tips.computer)}</td><td class="pattern">${pattern(r)}</td><td>${bets(r)}</td></tr>`).join('');renderColdWin(m);renderConfidence(m);renderMonthly()}
-async function load(){if(busy)return;busy=true;try{if(!history)await pinDataRevision();if(history){if($('dates').value)render(await read($('dates').value+'.json'))}else render(await read('latest.json'));if(monthlyRevision!==base||monthlyError)await refreshMonthly()}catch(err){$('notice').textContent=err.message+'；保留最後成功讀取資料。'}finally{busy=false}}
-async function start(){try{await pinDataRevision(true);if(history){$('history-controls').hidden=false;const h=await read('history.json');if(!h.meetings.length){$('title').textContent='歷史紀錄';$('status').textContent='尚未有紀錄';$('subtitle').textContent='每個賽日結束後，會自動保存全日表格。';$('rows').innerHTML='<tr><td colspan="11">暫時沒有已結束賽日紀錄。</td></tr>';$('dates').innerHTML='<option>尚未有紀錄</option>';$('dates').disabled=true;return}$('dates').innerHTML=h.meetings.map(m=>`<option value="${e(m.date)}">${e(m.date)} · ${m.venue==='HV'?'跑馬地':'沙田'}${m.results_enabled===false?'（不收集賽果）':m.complete?'':'（部分賽果待補）'}</option>`).join('');$('dates').onchange=load}await load()}catch(err){$('notice').textContent=err.message}}
+let historyIndexRevision=null;
+async function refreshHistoryDates(force=false){
+ if(!history||(!force&&historyIndexRevision===base))return;
+ const selected=$('dates').value,h=await read('history.json');
+ if(!Array.isArray(h.meetings))throw Error('歷史目錄格式有誤');
+ $('history-controls').hidden=false;
+ $('dates').innerHTML=h.meetings.map(m=>`<option value="${e(m.date)}">${e(m.date)} · ${m.venue==='HV'?'跑馬地':'沙田'}${m.results_enabled===false?'（不收集賽果）':m.complete?'':'（部分賽果待補）'}</option>`).join('');
+ $('dates').disabled=!h.meetings.length;
+ if(h.meetings.some(m=>m.date===selected))$('dates').value=selected;
+ if(!h.meetings.length){$('title').textContent='歷史紀錄';$('status').textContent='尚未有紀錄';$('rows').innerHTML='<tr><td colspan="11">暫時沒有已結束賽日紀錄。</td></tr>'}
+ historyIndexRevision=base;
+}
+async function load(force=false){
+ if(busy)return;busy=true;
+ try{
+  await pinDataRevision(force);await refreshHistoryDates(force);
+  if(history){if($('dates').value)render(await read($('dates').value+'.json'))}else render(await read('latest.json'));
+  if(force||monthlyRevision!==base||monthlyError)await refreshMonthly();
+ }catch(err){$('notice').textContent=err.message+'；保留最後成功讀取資料。'}finally{busy=false}
+}
+async function start(){if(history)$('dates').onchange=()=>load();await load(true)}
 const names={meiji:'明治朗',ball:'波仔',ma:'馬觀微',computer:'電腦評分',index:'指數馬'};
 const manualKey=m=>'hkjc-manual-tips-v1:'+m.date+':'+m.venue;
 function getManual(m){try{return JSON.parse(localStorage.getItem(manualKey(m))||'null')}catch{return null}}
@@ -184,7 +196,12 @@ $('st-win-form').onsubmit=event=>{
   render(sourceMeeting);$('st-win-message').textContent='已保存於此瀏覽器；完整輸入賠率後才產生最多兩匹買法。開跑後鎖定。';
  }catch(err){$('st-win-message').textContent='未能完成保存：'+err.message}
 };
-$('refresh').onclick=async()=>{try{await pinDataRevision(true);monthlyRevision=null;await load()}catch(err){$('notice').textContent=err.message}};await start();if(!history)setInterval(load,20000);
+$('refresh').onclick=()=>load(true);
+const resume=()=>{if(document.visibilityState!=='hidden')return load(true)};
+window.addEventListener?.('pageshow',resume);
+document.addEventListener?.('visibilitychange',resume);
+window.addEventListener?.('online',resume);
+await start();setInterval(()=>{if(document.visibilityState!=='hidden')return load()},20000);
 
 if(!history&&$('collect'))$('collect').onclick=()=>{
  const url='https://github.com/Ljackylau/hkjc-scraper/actions/workflows/expert-tips-run.yml';
