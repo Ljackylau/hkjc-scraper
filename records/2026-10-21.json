@@ -314,8 +314,30 @@
       "rail": "B",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 11,
+              "name": "輕鬆大少"
+            },
+            {
+              "no": 3,
+              "name": "金風萬里"
+            },
+            {
+              "no": 8,
+              "name": "魅力知福"
+            },
+            {
+              "no": 4,
+              "name": "靖哥哥"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-20T15:20:37+08:00",
+          "manual": true
         },
         "ball": {
           "status": "pending",
@@ -350,7 +372,7 @@
             "draw": 1,
             "placed": 2,
             "starts": 2,
-            "rate": 1.0
+            "rate": 1
           },
           {
             "no": 1,
@@ -436,7 +458,17 @@
         "source_note": "用戶提供的膽拖網明日賽前推介及概率估計",
         "verification": "user supplied pre-race update; not independently verified against model",
         "captured_at": "2026-10-20T15:05:05+08:00"
-      }
+      },
+      "tip_revisions": [
+        {
+          "key": "meiji",
+          "previous": {
+            "status": "pending",
+            "horses": []
+          },
+          "replaced_at": "2026-10-20T15:20:37+08:00"
+        }
+      ]
     },
     {
       "date": "2026-10-21",
@@ -521,12 +553,56 @@
       "rail": "B",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 9,
+              "name": "唯美主義"
+            },
+            {
+              "no": 1,
+              "name": "開心三寶"
+            },
+            {
+              "no": 3,
+              "name": "都靈冠星"
+            },
+            {
+              "no": 8,
+              "name": "金駒永騰"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-20T15:20:37+08:00",
+          "manual": true
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 6,
+              "name": "如蝶翩翩"
+            },
+            {
+              "no": 8,
+              "name": "金駒永騰"
+            },
+            {
+              "no": 1,
+              "name": "開心三寶"
+            },
+            {
+              "no": 4,
+              "name": "越駿聯歡"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-20T15:20:37+08:00",
+          "manual": true
         },
         "ma": {
           "status": "pending",
@@ -643,7 +719,25 @@
         "source_note": "用戶提供的膽拖網明日賽前推介及概率估計",
         "verification": "user supplied pre-race update; not independently verified against model",
         "captured_at": "2026-10-20T15:05:05+08:00"
-      }
+      },
+      "tip_revisions": [
+        {
+          "key": "meiji",
+          "previous": {
+            "status": "pending",
+            "horses": []
+          },
+          "replaced_at": "2026-10-20T15:20:37+08:00"
+        },
+        {
+          "key": "ball",
+          "previous": {
+            "status": "pending",
+            "horses": []
+          },
+          "replaced_at": "2026-10-20T15:20:37+08:00"
+        }
+      ]
     },
     {
       "date": "2026-10-21",
@@ -742,12 +836,56 @@
       "rail": "B",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 4,
+              "name": "明德輝煌"
+            },
+            {
+              "no": 7,
+              "name": "馬鳳凰"
+            },
+            {
+              "no": 11,
+              "name": "駿馬之光"
+            },
+            {
+              "no": 1,
+              "name": "幸運愉快"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-20T15:20:37+08:00",
+          "manual": true
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 1,
+              "name": "幸運愉快"
+            },
+            {
+              "no": 4,
+              "name": "明德輝煌"
+            },
+            {
+              "no": 12,
+              "name": "三強"
+            },
+            {
+              "no": 3,
+              "name": "馬馳登"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-20T15:20:37+08:00",
+          "manual": true
         },
         "ma": {
           "status": "pending",
@@ -864,7 +1002,25 @@
         "source_note": "用戶提供的膽拖網明日賽前推介及概率估計",
         "verification": "user supplied pre-race update; not independently verified against model",
         "captured_at": "2026-10-20T15:05:05+08:00"
-      }
+      },
+      "tip_revisions": [
+        {
+          "key": "meiji",
+          "previous": {
+            "status": "pending",
+            "horses": []
+          },
+          "replaced_at": "2026-10-20T15:20:37+08:00"
+        },
+        {
+          "key": "ball",
+          "previous": {
+            "status": "pending",
+            "horses": []
+          },
+          "replaced_at": "2026-10-20T15:20:37+08:00"
+        }
+      ]
     },
     {
       "date": "2026-10-21",
@@ -963,8 +1119,30 @@
       "rail": "B",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 11,
+              "name": "皇金合"
+            },
+            {
+              "no": 12,
+              "name": "馬運高"
+            },
+            {
+              "no": 7,
+              "name": "鋼鐵安防"
+            },
+            {
+              "no": 2,
+              "name": "長勝金剛"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-20T15:20:37+08:00",
+          "manual": true
         },
         "ball": {
           "status": "pending",
@@ -1085,7 +1263,17 @@
         "source_note": "用戶提供的膽拖網明日賽前推介及概率估計",
         "verification": "user supplied pre-race update; not independently verified against model",
         "captured_at": "2026-10-20T15:05:05+08:00"
-      }
+      },
+      "tip_revisions": [
+        {
+          "key": "meiji",
+          "previous": {
+            "status": "pending",
+            "horses": []
+          },
+          "replaced_at": "2026-10-20T15:20:37+08:00"
+        }
+      ]
     },
     {
       "date": "2026-10-21",
@@ -1170,8 +1358,30 @@
       "rail": "B",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 4,
+              "name": "馬力"
+            },
+            {
+              "no": 8,
+              "name": "好好戀愛"
+            },
+            {
+              "no": 1,
+              "name": "天天同樂"
+            },
+            {
+              "no": 2,
+              "name": "樂勝天下"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-20T15:20:37+08:00",
+          "manual": true
         },
         "ball": {
           "status": "pending",
@@ -1292,7 +1502,17 @@
         "source_note": "用戶提供的膽拖網明日賽前推介及概率估計",
         "verification": "user supplied pre-race update; not independently verified against model",
         "captured_at": "2026-10-20T15:05:05+08:00"
-      }
+      },
+      "tip_revisions": [
+        {
+          "key": "meiji",
+          "previous": {
+            "status": "pending",
+            "horses": []
+          },
+          "replaced_at": "2026-10-20T15:20:37+08:00"
+        }
+      ]
     },
     {
       "date": "2026-10-21",
@@ -1391,8 +1611,30 @@
       "rail": "B",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 10,
+              "name": "飛躍成就"
+            },
+            {
+              "no": 11,
+              "name": "領袖勁力"
+            },
+            {
+              "no": 3,
+              "name": "合夥飛馳"
+            },
+            {
+              "no": 4,
+              "name": "赤兔再世"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-20T15:20:37+08:00",
+          "manual": true
         },
         "ball": {
           "status": "pending",
@@ -1513,7 +1755,17 @@
         "source_note": "用戶提供的膽拖網明日賽前推介及概率估計",
         "verification": "user supplied pre-race update; not independently verified against model",
         "captured_at": "2026-10-20T15:05:05+08:00"
-      }
+      },
+      "tip_revisions": [
+        {
+          "key": "meiji",
+          "previous": {
+            "status": "pending",
+            "horses": []
+          },
+          "replaced_at": "2026-10-20T15:20:37+08:00"
+        }
+      ]
     },
     {
       "date": "2026-10-21",
@@ -1612,8 +1864,30 @@
       "rail": "B",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 7,
+              "name": "江江彩彩"
+            },
+            {
+              "no": 12,
+              "name": "驕陽雄心"
+            },
+            {
+              "no": 5,
+              "name": "粵港資駒"
+            },
+            {
+              "no": 8,
+              "name": "飛馬座"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-20T15:20:37+08:00",
+          "manual": true
         },
         "ball": {
           "status": "pending",
@@ -1734,7 +2008,17 @@
         "source_note": "用戶提供的膽拖網明日賽前推介及概率估計",
         "verification": "user supplied pre-race update; not independently verified against model",
         "captured_at": "2026-10-20T15:05:05+08:00"
-      }
+      },
+      "tip_revisions": [
+        {
+          "key": "meiji",
+          "previous": {
+            "status": "pending",
+            "horses": []
+          },
+          "replaced_at": "2026-10-20T15:20:37+08:00"
+        }
+      ]
     },
     {
       "date": "2026-10-21",
@@ -1833,8 +2117,30 @@
       "rail": "B",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 2,
+              "name": "幸運派彩"
+            },
+            {
+              "no": 6,
+              "name": "智勇名駒"
+            },
+            {
+              "no": 12,
+              "name": "知道穩勝"
+            },
+            {
+              "no": 9,
+              "name": "納百川"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-20T15:20:37+08:00",
+          "manual": true
         },
         "ball": {
           "status": "pending",
@@ -1955,10 +2261,20 @@
         "source_note": "用戶提供的膽拖網明日賽前推介及概率估計",
         "verification": "user supplied pre-race update; not independently verified against model",
         "captured_at": "2026-10-20T15:05:05+08:00"
-      }
+      },
+      "tip_revisions": [
+        {
+          "key": "meiji",
+          "previous": {
+            "status": "pending",
+            "horses": []
+          },
+          "replaced_at": "2026-10-20T15:20:37+08:00"
+        }
+      ]
     }
   ],
-  "updated_at": "2026-10-20T15:05:05+08:00",
+  "updated_at": "2026-10-20T15:20:37+08:00",
   "status": "upcoming",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-21T16:40:00+08:00",
