@@ -227,7 +227,9 @@
         "source_note": "用戶提供的膽拖網明日賽前推介及概率估計",
         "verification": "user supplied pre-race update; not independently verified against model",
         "captured_at": "2026-10-20T15:05:05+08:00"
-      }
+      },
+      "hv_plan_state": "pending",
+      "hv_plan_reason": "待明治朗首選"
     },
     {
       "date": "2026-10-21",
@@ -378,7 +380,21 @@
         "horses": []
       },
       "score": 0,
-      "selection": null,
+      "selection": {
+        "horses": [
+          {
+            "no": 1,
+            "name": "友得盈"
+          }
+        ],
+        "main": [
+          "P"
+        ],
+        "optional": [],
+        "method": "hv-h01-trial-20261021",
+        "roles": "明治首選不在初版前三 → J2位置",
+        "generated_at": "2026-10-20T16:31:22.315Z"
+      },
       "result": null,
       "locked": false,
       "draw_top5": {
@@ -393,7 +409,7 @@
             "draw": 1,
             "placed": 2,
             "starts": 2,
-            "rate": 1.0
+            "rate": 1
           },
           {
             "no": 1,
@@ -489,7 +505,9 @@
           },
           "replaced_at": "2026-10-20T15:20:37+08:00"
         }
-      ]
+      ],
+      "hv_plan_state": "ready",
+      "hv_plan_reason": "明治首選不在初版前三 → J2位置"
     },
     {
       "date": "2026-10-21",
@@ -975,20 +993,15 @@
           {
             "no": 1,
             "name": "幸運愉快"
-          },
-          {
-            "no": 4,
-            "name": "明德輝煌"
           }
         ],
         "main": [
-          "W",
-          "P"
+          "W"
         ],
-        "optional": [
-          "QP"
-        ],
-        "generated_at": "2026-10-20T19:11:00+08:00"
+        "optional": [],
+        "method": "hv-h01-trial-20261021",
+        "roles": "唯一專家原首選獨贏",
+        "generated_at": "2026-10-20T16:31:22.315Z"
       },
       "result": null,
       "locked": false,
@@ -1108,7 +1121,9 @@
           },
           "replaced_at": "2026-10-20T15:20:37+08:00"
         }
-      ]
+      ],
+      "hv_plan_state": "ready",
+      "hv_plan_reason": "唯一專家原首選獨贏"
     },
     {
       "date": "2026-10-21",
@@ -1370,7 +1385,9 @@
           },
           "replaced_at": "2026-10-20T15:20:37+08:00"
         }
-      ]
+      ],
+      "hv_plan_state": "skip",
+      "hv_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     },
     {
       "date": "2026-10-21",
@@ -1618,7 +1635,9 @@
           },
           "replaced_at": "2026-10-20T15:20:37+08:00"
         }
-      ]
+      ],
+      "hv_plan_state": "skip",
+      "hv_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     },
     {
       "date": "2026-10-21",
@@ -1791,20 +1810,15 @@
           {
             "no": 10,
             "name": "飛躍成就"
-          },
-          {
-            "no": 11,
-            "name": "領袖勁力"
           }
         ],
         "main": [
-          "W",
-          "P"
+          "W"
         ],
-        "optional": [
-          "QP"
-        ],
-        "generated_at": "2026-10-20T19:11:00+08:00"
+        "optional": [],
+        "method": "hv-h01-trial-20261021",
+        "roles": "唯一專家原首選獨贏",
+        "generated_at": "2026-10-20T16:31:22.315Z"
       },
       "result": null,
       "locked": false,
@@ -1916,7 +1930,9 @@
           },
           "replaced_at": "2026-10-20T15:20:37+08:00"
         }
-      ]
+      ],
+      "hv_plan_state": "ready",
+      "hv_plan_reason": "唯一專家原首選獨贏"
     },
     {
       "date": "2026-10-21",
@@ -2089,20 +2105,15 @@
           {
             "no": 12,
             "name": "驕陽雄心"
-          },
-          {
-            "no": 7,
-            "name": "江江彩彩"
           }
         ],
         "main": [
-          "W",
-          "P"
+          "W"
         ],
-        "optional": [
-          "QP"
-        ],
-        "generated_at": "2026-10-20T19:11:00+08:00"
+        "optional": [],
+        "method": "hv-h01-trial-20261021",
+        "roles": "唯一專家原首選獨贏",
+        "generated_at": "2026-10-20T16:31:22.315Z"
       },
       "result": null,
       "locked": false,
@@ -2214,7 +2225,9 @@
           },
           "replaced_at": "2026-10-20T15:20:37+08:00"
         }
-      ]
+      ],
+      "hv_plan_state": "ready",
+      "hv_plan_reason": "唯一專家原首選獨贏"
     },
     {
       "date": "2026-10-21",
@@ -2476,10 +2489,12 @@
           },
           "replaced_at": "2026-10-20T15:20:37+08:00"
         }
-      ]
+      ],
+      "hv_plan_state": "skip",
+      "hv_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     }
   ],
-  "updated_at": "2026-10-20T19:11:00+08:00",
+  "updated_at": "2026-10-20T16:31:22.315Z",
   "status": "upcoming",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-21T16:40:00+08:00",
@@ -2630,5 +2645,7 @@
         }
       ]
     }
-  ]
+  ],
+  "hv_trial_method": "hv-h01-trial-20261021",
+  "hv_trial_adopted_at": "2026-10-20T16:31:22.315Z"
 }
