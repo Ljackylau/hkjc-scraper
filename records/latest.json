@@ -138,7 +138,7 @@
       "score": 0,
       "selection": null,
       "result": null,
-      "locked": false,
+      "locked": true,
       "draw_top5": {
         "status": "ready",
         "start_date": "2026-09-01",
@@ -239,7 +239,8 @@
         "captured_at": "2026-10-20T15:05:05+08:00"
       },
       "hv_plan_state": "pending",
-      "hv_plan_reason": "待明治朗首選"
+      "hv_plan_reason": "待明治朗首選",
+      "locked_at": "2026-10-21T18:40:06+08:00"
     },
     {
       "date": "2026-10-21",
@@ -403,7 +404,7 @@
         "optional": [],
         "method": "hv-h01-trial-20261021",
         "roles": "明治首選不在初版前三 → J2位置",
-        "generated_at": "2026-10-21T18:38:06+08:00"
+        "generated_at": "2026-10-21T18:39:46+08:00"
       },
       "result": null,
       "locked": false,
@@ -710,7 +711,7 @@
           "W",
           "Q"
         ],
-        "generated_at": "2026-10-21T18:38:06+08:00"
+        "generated_at": "2026-10-21T18:39:46+08:00"
       },
       "result": null,
       "locked": false,
@@ -1011,7 +1012,7 @@
         "optional": [],
         "method": "hv-h01-trial-20261021",
         "roles": "唯一專家原首選獨贏",
-        "generated_at": "2026-10-21T18:38:06+08:00"
+        "generated_at": "2026-10-21T18:39:46+08:00"
       },
       "result": null,
       "locked": false,
@@ -1828,7 +1829,7 @@
         "optional": [],
         "method": "hv-h01-trial-20261021",
         "roles": "唯一專家原首選獨贏",
-        "generated_at": "2026-10-21T18:38:06+08:00"
+        "generated_at": "2026-10-21T18:39:46+08:00"
       },
       "result": null,
       "locked": false,
@@ -2123,7 +2124,7 @@
         "optional": [],
         "method": "hv-h01-trial-20261021",
         "roles": "唯一專家原首選獨贏",
-        "generated_at": "2026-10-21T18:38:06+08:00"
+        "generated_at": "2026-10-21T18:39:46+08:00"
       },
       "result": null,
       "locked": false,
@@ -2504,11 +2505,11 @@
       "hv_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     }
   ],
-  "updated_at": "2026-10-21T18:39:28+08:00",
+  "updated_at": "2026-10-21T18:40:06+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-21T16:40:00+08:00",
-  "heartbeat": "2026-10-21T18:39:26.164882+08:00",
+  "heartbeat": "2026-10-21T18:40:06.165102+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
