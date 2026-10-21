@@ -1715,91 +1715,103 @@
       "date": "2026-10-21",
       "venue": "HV",
       "race": 7,
-      "off": "2026-10-21T21:40:00+08:00",
+      "off": "2026-10-21T21:45:00+08:00",
       "horses": [
         {
           "no": 1,
           "name": "添開心",
           "jockey_id": "AA",
           "jockey": "艾兆禮",
-          "draw": 10
+          "draw": 10,
+          "horse_id": "HK_2022_H203"
         },
         {
           "no": 2,
           "name": "賢知友您",
           "jockey_id": "OJM",
           "jockey": "奧爾民",
-          "draw": 3
+          "draw": 3,
+          "horse_id": "HK_2024_K545"
         },
         {
           "no": 3,
           "name": "合夥飛馳",
           "jockey_id": "CJE",
           "jockey": "周俊樂",
-          "draw": 1
+          "draw": 1,
+          "horse_id": "HK_2024_K342"
         },
         {
           "no": 4,
           "name": "赤兔再世",
           "jockey_id": "AVB",
           "jockey": "艾道拿",
-          "draw": 9
+          "draw": 9,
+          "horse_id": "HK_2025_L461"
         },
         {
           "no": 5,
           "name": "鋁主角",
           "jockey_id": "PZ",
           "jockey": "潘頓",
-          "draw": 5
+          "draw": 5,
+          "horse_id": "HK_2025_L319"
         },
         {
           "no": 6,
           "name": "辣得爽利",
           "jockey_id": "FEL",
           "jockey": "霍宏聲",
-          "draw": 4
+          "draw": 4,
+          "horse_id": "HK_2025_L086"
         },
         {
           "no": 7,
           "name": "盈智多寶",
           "jockey_id": "HEL",
           "jockey": "希威森",
-          "draw": 12
+          "draw": 12,
+          "horse_id": "HK_2025_L391"
         },
         {
           "no": 8,
           "name": "快樂高球",
           "jockey_id": "BHW",
           "jockey": "班德禮",
-          "draw": 6
+          "draw": 6,
+          "horse_id": "HK_2023_J222"
         },
         {
           "no": 9,
           "name": "天比高",
           "jockey_id": "LDE",
           "jockey": "梁家俊",
-          "draw": 11
+          "draw": 11,
+          "horse_id": "HK_2024_K339"
         },
         {
           "no": 10,
           "name": "飛躍成就",
           "jockey_id": "PMF",
           "jockey": "潘明輝",
-          "draw": 8
+          "draw": 8,
+          "horse_id": "HK_2024_K112"
         },
         {
           "no": 11,
           "name": "領袖勁力",
           "jockey_id": "BA",
           "jockey": "巴度",
-          "draw": 2
+          "draw": 2,
+          "horse_id": "HK_2025_L034"
         },
         {
           "no": 12,
           "name": "花果猴王",
           "jockey_id": "CCY",
           "jockey": "鍾易禮",
-          "draw": 7
+          "draw": 7,
+          "horse_id": "HK_2022_H455"
         }
       ],
       "scratched": [],
@@ -1890,7 +1902,7 @@
         "optional": [],
         "method": "hv-h01-trial-20261021",
         "roles": "唯一專家原首選獨贏",
-        "generated_at": "2026-10-21T21:33:06+08:00"
+        "generated_at": "2026-10-21T21:34:06+08:00"
       },
       "result": null,
       "locked": false,
@@ -2566,11 +2578,11 @@
       "hv_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     }
   ],
-  "updated_at": "2026-10-21T21:33:46+08:00",
+  "updated_at": "2026-10-21T21:34:06+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-21T16:40:00+08:00",
-  "heartbeat": "2026-10-21T21:33:46.221611+08:00",
+  "heartbeat": "2026-10-21T21:34:06.221703+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
