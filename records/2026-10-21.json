@@ -1177,91 +1177,103 @@
       "date": "2026-10-21",
       "venue": "HV",
       "race": 5,
-      "off": "2026-10-21T20:40:00+08:00",
+      "off": "2026-10-21T20:45:00+08:00",
       "horses": [
         {
           "no": 1,
           "name": "鴻圖新星",
           "jockey_id": "AVB",
           "jockey": "艾道拿",
-          "draw": 8
+          "draw": 8,
+          "horse_id": "HK_2023_J323"
         },
         {
           "no": 2,
           "name": "長勝金剛",
           "jockey_id": "YHY",
           "jockey": "袁幸堯",
-          "draw": 11
+          "draw": 11,
+          "horse_id": "HK_2024_K266"
         },
         {
           "no": 3,
           "name": "佐治傳奇",
           "jockey_id": "CCY",
           "jockey": "鍾易禮",
-          "draw": 12
+          "draw": 12,
+          "horse_id": "HK_2025_L007"
         },
         {
           "no": 4,
           "name": "友駿同心",
           "jockey_id": "LDE",
           "jockey": "梁家俊",
-          "draw": 1
+          "draw": 1,
+          "horse_id": "HK_2025_L214"
         },
         {
           "no": 5,
           "name": "豐勝多彩",
           "jockey_id": "BA",
           "jockey": "巴度",
-          "draw": 5
+          "draw": 5,
+          "horse_id": "HK_2025_L324"
         },
         {
           "no": 6,
           "name": "順勢而行",
           "jockey_id": "PMF",
           "jockey": "潘明輝",
-          "draw": 10
+          "draw": 10,
+          "horse_id": "HK_2026_M012"
         },
         {
           "no": 7,
           "name": "鋼鐵安防",
           "jockey_id": "WPN",
           "jockey": "黃寶妮",
-          "draw": 9
+          "draw": 9,
+          "horse_id": "HK_2025_L174"
         },
         {
           "no": 8,
           "name": "精益飛駒",
           "jockey_id": "BHW",
           "jockey": "班德禮",
-          "draw": 2
+          "draw": 2,
+          "horse_id": "HK_2025_L386"
         },
         {
           "no": 9,
           "name": "昇龍戰駒",
           "jockey_id": "HCY",
           "jockey": "何澤堯",
-          "draw": 7
+          "draw": 7,
+          "horse_id": "HK_2025_L330"
         },
         {
           "no": 10,
           "name": "超強六十",
           "jockey_id": "WEC",
           "jockey": "黃智弘",
-          "draw": 3
+          "draw": 3,
+          "horse_id": "HK_2023_J071"
         },
         {
           "no": 11,
           "name": "皇金合",
           "jockey_id": "YML",
           "jockey": "楊明綸",
-          "draw": 6
+          "draw": 6,
+          "horse_id": "HK_2024_K099"
         },
         {
           "no": 12,
           "name": "馬運高",
           "jockey_id": "CML",
           "jockey": "蔡明紹",
-          "draw": 4
+          "draw": 4,
+          "horse_id": "HK_2025_L175"
         }
       ],
       "scratched": [],
@@ -1866,7 +1878,7 @@
         "optional": [],
         "method": "hv-h01-trial-20261021",
         "roles": "唯一專家原首選獨贏",
-        "generated_at": "2026-10-21T20:31:26+08:00"
+        "generated_at": "2026-10-21T20:33:06+08:00"
       },
       "result": null,
       "locked": false,
@@ -2161,7 +2173,7 @@
         "optional": [],
         "method": "hv-h01-trial-20261021",
         "roles": "唯一專家原首選獨贏",
-        "generated_at": "2026-10-21T20:31:26+08:00"
+        "generated_at": "2026-10-21T20:33:06+08:00"
       },
       "result": null,
       "locked": false,
@@ -2542,11 +2554,11 @@
       "hv_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     }
   ],
-  "updated_at": "2026-10-21T20:32:46+08:00",
+  "updated_at": "2026-10-21T20:34:06+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-21T16:40:00+08:00",
-  "heartbeat": "2026-10-21T20:32:46.202131+08:00",
+  "heartbeat": "2026-10-21T20:34:06.202529+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
