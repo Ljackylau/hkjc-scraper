@@ -1454,77 +1454,87 @@
       "date": "2026-10-21",
       "venue": "HV",
       "race": 6,
-      "off": "2026-10-21T21:10:00+08:00",
+      "off": "2026-10-21T21:15:00+08:00",
       "horses": [
         {
           "no": 1,
           "name": "天天同樂",
           "jockey_id": "PZ",
           "jockey": "潘頓",
-          "draw": 10
+          "draw": 10,
+          "horse_id": "HK_2023_J316"
         },
         {
           "no": 2,
           "name": "樂勝天下",
           "jockey_id": "YHY",
           "jockey": "袁幸堯",
-          "draw": 2
+          "draw": 2,
+          "horse_id": "HK_2023_J540"
         },
         {
           "no": 3,
           "name": "八駿巨昇",
           "jockey_id": "CCY",
           "jockey": "鍾易禮",
-          "draw": 1
+          "draw": 1,
+          "horse_id": "HK_2022_H092"
         },
         {
           "no": 4,
           "name": "馬力",
           "jockey_id": "AA",
           "jockey": "艾兆禮",
-          "draw": 6
+          "draw": 6,
+          "horse_id": "HK_2023_J431"
         },
         {
           "no": 5,
           "name": "俏眼光",
           "jockey_id": "BHW",
           "jockey": "班德禮",
-          "draw": 5
+          "draw": 5,
+          "horse_id": "HK_2025_L003"
         },
         {
           "no": 6,
           "name": "勇敢巨星",
           "jockey_id": "MHT",
           "jockey": "巫顯東",
-          "draw": 8
+          "draw": 8,
+          "horse_id": "HK_2021_G268"
         },
         {
           "no": 7,
           "name": "晨曦儷人",
           "jockey_id": "YML",
           "jockey": "楊明綸",
-          "draw": 9
+          "draw": 9,
+          "horse_id": "HK_2023_J066"
         },
         {
           "no": 8,
           "name": "好好戀愛",
           "jockey_id": "BA",
           "jockey": "巴度",
-          "draw": 4
+          "draw": 4,
+          "horse_id": "HK_2025_L052"
         },
         {
           "no": 9,
           "name": "好評如潮",
           "jockey_id": "WPN",
           "jockey": "黃寶妮",
-          "draw": 3
+          "draw": 3,
+          "horse_id": "HK_2025_L223"
         },
         {
           "no": 10,
           "name": "燭光晚餐",
           "jockey_id": "CML",
           "jockey": "蔡明紹",
-          "draw": 7
+          "draw": 7,
+          "horse_id": "HK_2023_J468"
         }
       ],
       "scratched": [],
@@ -2555,11 +2565,11 @@
       "hv_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     }
   ],
-  "updated_at": "2026-10-21T21:03:46+08:00",
+  "updated_at": "2026-10-21T21:04:07+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-21T16:40:00+08:00",
-  "heartbeat": "2026-10-21T21:03:46.211875+08:00",
+  "heartbeat": "2026-10-21T21:04:06.211974+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
