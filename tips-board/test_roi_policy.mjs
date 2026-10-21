@@ -12,6 +12,13 @@ assert.equal(choosePolicy(r,methods,ctx).method.id,'second');assert.equal(choose
 assert.equal(choosePolicy({...r,score:null},methods,ctx).status,'skip');assert.equal(choosePolicy(r,methods,{...ctx,minSamples:10}).status,'skip');
 const p=choosePolicy(r,registry.methods,{...ctx,odds:replay.inputs[key(r)].final_odds});assert.equal(p.method.id,'hvd-M2cross_D3_rail_min8');assert.equal(p.attempts.filter(a=>a.status==='ready').length,1,'one method per race');
 const corrupt=structuredClone(r);corrupt.result={dividends:{W:[{combination:'11',dividend_hkd:99999}]}};assert.deepEqual(choosePolicy(corrupt,methods,ctx),choosePolicy(r,methods,ctx),'target result cannot change selection');
-assert.deepEqual(replay,before);assert.equal(audit.days.length,13);assert.equal(audit.days.at(-1).cost,110);assert.equal(audit.days.at(-1).profit,-35);assert(audit.days.some(d=>d.profit<0));assert.equal(Object.keys(json('./roi-stats/'+audit.days[0].date+'.json')).length,0);
+assert.deepEqual(replay,before);assert.equal(audit.days.length,13);assert.equal(audit.days.at(-1).cost,90);assert.equal(audit.days.at(-1).profit,-66.5);assert(audit.days.some(d=>d.profit<0));assert.equal(Object.keys(json('./roi-stats/'+audit.days[0].date+'.json')).length,0);
 const banker={status:'ready',pool:'QP',picks:[1,2,3],tickets:[[1,2],[1,3]],cost:20};assert.equal(settlePolicy(banker,{dividends:{QP:[{combination:'2,3',dividend_hkd:999}]} }).returned,0,'banker tickets are not boxed');
 console.log(`ROI policy: ${verified} methods reproduce all original samples/hits/costs/profits; descending fallback, no future stats, strict price boundary, no outcome-driven selection, one method, banker tickets, complete losing days and immutable archive passed.`);
+
+assert.equal(registry.methods.length,103);assert.equal(registry.methods.filter(m=>m.rule.type!=='unavailable').length,100);
+assert(!/天喜|tianxi|txLegacy|tx0/.test(JSON.stringify(registry)));
+assert(Object.values(replay.inputs).every(i=>!('T' in i)&&!('T_first_only' in i)));
+assert(Object.keys(json('./roi-stats/after.json')).every(id=>registry.methods.some(m=>m.id===id)));
+assert(!/天喜|tianxi|hkjc-roi-tx/.test(fs.readFileSync(new URL('./roi-ui.mjs',import.meta.url),'utf8')));
+console.log('Removed source: catalogue, replay input, ranking history and UI contain no removed-source inputs.');

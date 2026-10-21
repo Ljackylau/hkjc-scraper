@@ -1,6 +1,6 @@
 import {freshJson,resolveDataSource} from './data-source.mjs?v=20261020-mobile-sync';
 import {mergeManualResults} from './manual-results.mjs?v=20261021-results';
-import {choosePolicy,evaluate,preparedRace,settlePolicy,roi,rate,key,compatible} from './roi-policy.mjs?v=roi1';
+import {choosePolicy,evaluate,preparedRace,settlePolicy,roi,rate,key,compatible} from './roi-policy.mjs?v=roi2';
 import {historyRows,summarize} from './strategy-history-model.mjs?v=20261021-history';
 const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),pct=n=>n==null?'—':(n*100).toFixed(1)+'%',money=n=>n==null?'待派彩':(n<0?'−':'')+'$'+Math.abs(n).toLocaleString('en-HK',{maximumFractionDigits:1});
 const historyPage=document.body.dataset.history==='true';
@@ -9,7 +9,7 @@ const place=m=>m.venue==='HV'?'谷草':m.venue==='ST'?(m.track==='AWT'?'沙田�
 const horse=(r,n)=>esc(n+' '+(r.horses.find(h=>Number(h.no)===Number(n))?.name||''));
 const sig=r=>r.horses.map(h=>[h.no,h.draw,h.jockey_id].join(':')).join('|')+'#'+(r.scratched||[]).join(',');
 const oddsKey=r=>'hkjc-strategy-odds-v1:'+r.date+':'+r.venue+':'+r.race;
-function saved(r,kind){try{const s=JSON.parse(localStorage.getItem(kind==='odds'?oddsKey(r):'hkjc-roi-tx:'+key(r))||'null');return s&&s.signature===sig(r)&&Date.parse(s.at)<Date.parse(r.off)&&(kind!=='odds'||Date.now()-Date.parse(s.at)<600000)?s:null}catch{return null}}
+function saved(r){try{const s=JSON.parse(localStorage.getItem(oddsKey(r))||'null');return s&&s.signature===sig(r)&&Date.parse(s.at)<Date.parse(r.off)&&Date.now()-Date.parse(s.at)<600000?s:null}catch{return null}}
 function priorStats(date){return context.prior?.[date]||null}
 async function loadPrior(date){context.prior??={};if(context.prior[date])return;try{context.prior[date]=await freshJson('./roi-stats/'+(date>audit.latest_date?'after':date)+'.json')}catch{context.prior[date]={}}}
 function catalog(){
@@ -22,18 +22,18 @@ function render(){
  if(!meeting||!registry)return;
  const mode=$('mode').value,minSamples=Number($('min-samples').value),historical=historyPage||meeting.races.every(r=>r.locked||Date.parse(r.off)<=Date.now());
  $('meeting-title').textContent=meeting.date+' · '+(meeting.venue==='HV'?'跑馬地':'沙田')+(historical?' · 策略回算':' · 最高ROI逐場買法');
- $('policy-note').textContent=mode==='prior'?'排序只用該賽日前累計ROI；規則於10月21日整理，仍存在規則選擇偏差，並非真正盲測。':historical?'固定10月21日方法庫回算；包含事後選規則／排名偏差，不是當日實單。':'按已知歷史ROI降序，符合條件才選；沒有資料／未核實價格便順延。每場只採用一個方法。';
- $('price-note').textContent=historical?'本歷史回算使用官方最終獨贏賠率代理價格門檻；不能當作已保存賽前價。今日天喜首選來自用戶提供，未有獨立賽前時間封存。':'賠率只接受開跑前輸入並保存10分鐘；沒有即時價便順延。天喜可填首選1匹或原序4匹；只填1匹時不套用四選交集規則。';
+ $('policy-note').textContent=mode==='prior'?'排序只用該賽日前累計ROI；規則於10月21日整理，仍存在規則選擇偏差，並非真正盲測。':historical?'固定現行方法庫回算；包含事後選規則／排名偏差，不是當日實單。':'按已知歷史ROI降序，符合條件才選；沒有資料／未核實價格便順延。每場只採用一個方法。';
+ $('price-note').textContent=historical?'本歷史回算使用官方最終獨贏賠率代理價格門檻；不能當作已保存賽前價。':'賠率只接受開跑前輸入並保存10分鐘；沒有即時價便順延。';
  let cost=0,returned=0,hits=0,n=0,pending=0;const h=$('h').value,rows=[];
  const baseline=historyRows(meeting);const bsummary=summarize(baseline.filter(x=>h==='all'||String(x.r.score)===h));
  for(const raw of meeting.races){const r=preparedRace(meeting,raw,context);if(h!=='all'&&String(r.score)!==h)continue;
-  const closed=r.locked||Date.parse(r.off)<=Date.now(),archived=context.replay.inputs[key(r)],tx=saved(r,'tx');if(!closed&&tx)r.tianxi={numbers:tx.numbers};
+  const closed=r.locked||Date.parse(r.off)<=Date.now(),archived=context.replay.inputs[key(r)];
   // No final prices enter a live evaluation, even when a replay file exists.
-  const odds=closed?archived?.final_odds||{}:saved(r,'odds')?.odds||{};
+  const odds=closed?archived?.final_odds||{}:saved(r)?.odds||{};
   const stats=mode==='prior'?priorStats(r.date)||{}:null;
   let snapshot=r.roi_strategy;
   try{const local=JSON.parse(localStorage.getItem('hkjc-roi-snapshot:'+key(r))||'null');if(local?.signature===sig(r)&&Date.parse(local.at)<Date.parse(r.off))snapshot={...local,status:'ready',captured_at:local.at}}catch{}
-  const useSnapshot=closed&&mode==='fixed'&&minSamples===1&&snapshot?.version===registry.version&&Date.parse(snapshot.captured_at)<Date.parse(r.off);
+  const useSnapshot=closed&&mode==='fixed'&&minSamples===1&&snapshot?.version===registry.version&&registry.methods.some(m=>m.id===snapshot.method?.id)&&Date.parse(snapshot.captured_at)<Date.parse(r.off);
   const p=useSnapshot?{...snapshot,attempts:[],reason:snapshot.reason||'已保存的賽前策略'}:choosePolicy(r,registry.methods,{...context,odds,minSamples},stats),s=settlePolicy(p,r.result);
   if(s.cost&&s.returned!==null){cost+=s.cost;returned+=s.returned;n++;hits+=s.status==='hit'}else if(s.status==='pending'){pending++;cost+=s.cost}
   const attempts=p.attempts.map((a,i)=>`<tr><td>${i+1}</td><td>${esc(a.method.title)}</td><td>${pct(roi(a.method))}</td><td>${a.status==='ready'?'採用':esc(a.reason)}</td></tr>`).join('');
@@ -41,7 +41,7 @@ function render(){
   const bet=p.status==='ready'?`<b>${p.pool} ${p.banker!=null?'膽 '+horse(r,p.banker)+' 拖 ':''}${p.picks.filter(x=>x!==p.banker).map(x=>horse(r,x)).join(' ＋ ')}</b><small>${p.tickets.map(t=>t.join('–')).join('、')} · 每組$10 · 共${money(p.cost)}</small><small>${s.status==='pending'?'尚未結算':'派回 '+money(s.returned)+' · 淨盈虧 '+money(s.profit)}</small>`:'—';
   const res=r.result?.horses?.filter(h=>parseInt(h.placing)<=3).map(h=>`${esc(h.placing)}. ${horse(r,h.no)}`).join('<br>')||'未有官方賽果';
   const needOdds=[...new Set(p.attempts.filter(a=>a.status==='pending'&&a.candidates?.length).flatMap(a=>a.candidates))];
-  const inputs=!closed?`<form class="odds-form" data-race="${r.race}">${needOdds.map(no=>`<label>${horse(r,no)} W<input name="odd-${no}" type="number" min="0.1" step="0.1" value="${esc(odds[no]||'')}" inputmode="decimal"></label>`).join('')}<label>天喜首選／原序四選<input name="tx" value="${esc(tx?.numbers?.join(',')||'')}" placeholder="例如 2 或 2,4,6,8"></label><button>核實並重排本場</button><small>資料未齊的高排名方法會順延；不會與已選方法疊加。</small></form>`:'';
+  const inputs=!closed?`<form class="odds-form" data-race="${r.race}">${needOdds.map(no=>`<label>${horse(r,no)} W<input name="odd-${no}" type="number" min="0.1" step="0.1" value="${esc(odds[no]||'')}" inputmode="decimal"></label>`).join('')}<button>核實並重排本場</button><small>資料未齊的高排名方法會順延；不會與已選方法疊加。</small></form>`:'';
   rows.push(`<tr><td><b>第${r.race}場</b><small>${useSnapshot?'賽前已保存':closed?'事後規則回算':'未開跑即時配對'}</small><small>H=${r.score??'待確認'} · ${r.distance||'—'}米<br>${esc(r.rail||r.track)}</small></td><td>${selected}<details><summary>查看排名及順延原因</summary><table><thead><tr><th>序</th><th>方法</th><th>ROI</th><th>判斷</th></tr></thead><tbody>${attempts}</tbody></table></details></td><td>${bet}${inputs}</td><td>${res}</td></tr>`);
   if(!closed&&mode==='fixed'&&minSamples===1&&p.status==='ready'&&Date.now()<Date.parse(r.off))try{localStorage.setItem('hkjc-roi-snapshot:'+key(r),JSON.stringify({version:registry.version,status:'ready',at:new Date().toISOString(),signature:sig(r),method:p.method,pool:p.pool,picks:p.picks,tickets:p.tickets,banker:p.banker,cost:p.cost}))}catch{}
  }
@@ -50,10 +50,8 @@ function render(){
  $('baseline').textContent=`原網站A（只計保存主買法）：投入${money(bsummary.cost)}、派回${money(bsummary.returned)}、淨盈虧${money(bsummary.profit)}，ROI ${pct(bsummary.roi)}。不與新策略相加。`;
  for(const form of document.querySelectorAll('form[data-race]'))form.onsubmit=event=>{
   event.preventDefault();const raw=meeting.races.find(r=>r.race===Number(form.dataset.race)),r=preparedRace(meeting,raw,context);if(r.locked||Date.now()>=Date.parse(r.off)){alert('本場已開跑，不能修改賽前輸入。');return}
-  const entries=[...new FormData(form)],odds={...(saved(r,'odds')?.odds||{})};for(const [k,v] of entries)if(k.startsWith('odd-')&&v){const q=Number(v);if(!Number.isFinite(q)||q<=0)return;odds[k.slice(4)]=q}
-  const tx=String(entries.find(([k])=>k==='tx')?.[1]||'').trim(),numbers=tx?tx.split(/[,，\s]+/).map(Number):[];
-  if(numbers.length&&(![1,4].includes(numbers.length)||new Set(numbers).size!==numbers.length||numbers.some(n=>!r.horses.some(h=>h.no===n)))){alert('天喜請填原首選1匹或原序4匹，馬號不可重複。');return}
-  try{const stamp={at:new Date().toISOString(),signature:sig(r)};localStorage.setItem(oddsKey(r),JSON.stringify({...stamp,odds}));if(numbers.length)localStorage.setItem('hkjc-roi-tx:'+key(r),JSON.stringify({...stamp,numbers}));else localStorage.removeItem('hkjc-roi-tx:'+key(r));render()}catch(e){$('error').textContent='無法保存本機輸入：'+e.message}
+  const entries=[...new FormData(form)],odds={...(saved(r)?.odds||{})};for(const [k,v] of entries)if(k.startsWith('odd-')&&v){const q=Number(v);if(!Number.isFinite(q)||q<=0)return;odds[k.slice(4)]=q}
+  try{const stamp={at:new Date().toISOString(),signature:sig(r)};localStorage.setItem(oddsKey(r),JSON.stringify({...stamp,odds}));render()}catch(e){$('error').textContent='無法保存本機輸入：'+e.message}
  };
 }
 function renderDays(){

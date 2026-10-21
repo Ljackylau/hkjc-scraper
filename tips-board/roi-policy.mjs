@@ -22,8 +22,7 @@ export function evaluate(m,r,context={}){
  const sources=['ball','ma','computer'].map(k=>r.tips?.[k]);
  const ex=sources.filter(s=>s?.status==='ready'&&(!s.source_date||s.source_date===r.date)&&s.horses?.length);
  const E=ex.length===1?ex[0].horses.map(h=>Number(h.no)):null;
- const T=inp?.T||r.tianxi?.numbers||null,firstOnly=inp?.T_first_only||T?.length<4;
- const lists={M,B,J,E,T};
+ const lists={M,B,J,E};
  const need=(...names)=>names.some(n=>!lists[n]?.length);
  const legacy=()=>!M?.length||r.score===1&&!E?.length?null:r.score===1?uniq([E[0],M[0]===E[0]?M[1]:M[0]]).filter(n=>activeSet.has(n)):uniq(M).filter(n=>activeSet.has(n)).slice(0,3);
  const ranked=(scope='rail',min=1)=>{
@@ -66,34 +65,8 @@ export function evaluate(m,r,context={}){
   if(rule.min){const d=ranked(rule.scope,rule.min);if(d.status!=='ready')return no('pending',d.reason||'待檔位基準');ns=ns.filter(n=>d.draws.includes(field.get(n)?.draw))}
   if(source==='unionJ'){if(!J)return no('pending','待同檔騎師榜');ns=ns.filter(n=>J.includes(n))}
   const p=filteredPrice(ns,rule.gt,rule.cap);if(p.status!=='ready')return p;ns=p.picks;
- }else if(rule.type==='legacy'||rule.type==='txLegacy'){
+ }else if(rule.type==='legacy'){
   ns=legacy();if(!ns)return no('pending','待舊信心組合的專家／明治貼士');
-  if(rule.type==='txLegacy'){
-   if(!T?.length)return no('pending','待天喜原發布選序');
-   const varnt=rule.variant,O=ns.filter(n=>T.includes(n)),U=T.filter(n=>!ns.includes(n)&&activeSet.has(n));
-   if(['gate1','gate2','intersection','replace_last','add1'].includes(varnt)&&firstOnly)return no('pending','只有天喜首選，欠其餘原序');
-   if(varnt==='gate_T1'&& !ns.includes(T[0])||varnt==='gate1'&&O.length<1||varnt==='gate2'&&O.length<2)ns=[];
-   if(varnt==='intersection')ns=O;
-   if(varnt==='add1')ns=ns.concat(U.slice(0,1));
-   if(varnt==='replace_last'&&!T.includes(ns.at(-1))&&U.length)ns=ns.slice(0,-1).concat(U.slice(0,1));
-   if(varnt==='banker_T1_inside'){if(ns.includes(T[0]))bank=T[0];else ns=[]}
-  }
- }else if(rule.type==='tx0'){
-  if(!T?.length)return no('pending','待天喜同口徑鎖定資料');
-  if(need('M','B'))return no('pending','待明治及膽拖初版');
-  const rest=M.slice(1),order=r.venue==='ST'?[M[0],B[0],...rest.filter(n=>B.slice(0,3).includes(n)),...rest.filter(n=>!B.slice(0,3).includes(n))]:M.concat(B);
-  ns=uniq(order).filter(n=>activeSet.has(n)).slice(0,3);const v=rule.variant,conf=!B.slice(0,3).includes(M[0]);
-  if(['conf','conf_gateT1','conf_bankerT1'].includes(v)&&!conf)ns=[];
-  if(v!=='base'&&v!=='conf'){
-   if(!T?.length)return no('pending','待天喜原發布選序');
-   if(['intersection','add1','T3'].includes(v)&&firstOnly)return no('pending','只有天喜首選，欠其餘原序');
-   if(['gateT1','bankerT1','conf_gateT1','conf_bankerT1'].includes(v)){if(!ns.includes(T[0]))ns=[];else if(v.toLowerCase().includes('banker'))bank=T[0]}
-   if(v==='intersection')ns=ns.filter(n=>T.includes(n));
-   if(v==='T1bankerS'){bank=T[0];ns=uniq([T[0],...ns])}
-   if(v==='add1')ns=ns.concat(T.filter(n=>!ns.includes(n)).slice(0,1));
-   if(v==='T3')ns=T.slice(0,3);
-   if(v==='M1T1'||v==='M2T1'){ns=[M[v==='M1T1'?0:1],T[0]];if(ns[0]===ns[1])ns=[]}
-  }
  }else if(rule.type==='cover'){
   let c;
   if(inp?.cover_known)c=inp.cover.map(h=>h.no);
