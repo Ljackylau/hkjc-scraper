@@ -1,3 +1,4 @@
+import {mergeManualResults} from './manual-results.mjs?v=20261021-results';
 import {RAW,resolveDataSource,freshJson} from './data-source.mjs?v=20261020-mobile-sync';
 import {settle} from './settlement.mjs';
 import {parseManual,applyManual,confidenceReason} from './manual-tips.mjs?v=20261021-st-qp';
@@ -7,7 +8,13 @@ import {coldWinArchives} from './st-coldwin-history.mjs?v=20261020-stwin';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const $=id=>document.getElementById(id),history=document.body.dataset.history==='true';let meeting=null,sourceMeeting=null,busy=false,base=RAW,revisionCheckedAt=0;
 const clock=d=>d?new Date(d).toLocaleTimeString('zh-HK',{timeZone:'Asia/Hong_Kong',hour12:false}):'—';
-async function read(name,revision=base){try{return await freshJson(revision+name)}catch(err){throw Error('數據讀取失敗（'+err.message+'）')}}
+let manualResultCache=null,manualResultCacheAt=0;
+async function read(name,revision=base){try{
+ const data=await freshJson(revision+name);
+ if(!data?.races||data.date<'2026-10-21')return data;
+ if(!manualResultCache||Date.now()-manualResultCacheAt>30000){manualResultCacheAt=Date.now();manualResultCache=freshJson('./manual-results.json').catch(()=>null)}
+ return mergeManualResults(data,await manualResultCache);
+}catch(err){throw Error('數據讀取失敗（'+err.message+'）')}}
 const fallbackRevision='820812adbd944cda87a76c84a9739ee313f00e90',revisionKey='hkjc-verified-data-revision-v1';let dataVersion=null;
 async function pinDataRevision(force=false){
  if(!force&&revisionCheckedAt&&Date.now()-revisionCheckedAt<90000)return;
