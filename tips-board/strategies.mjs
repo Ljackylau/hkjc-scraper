@@ -1,5 +1,5 @@
 import {resolveDataSource,freshJson} from './data-source.mjs?v=20261020-mobile-sync';
-import {METHODS,roi,rate,venueName,metric,interval,nextMeeting,prepareMeeting,currentPlan,researchPlans,drawRanking} from './strategy-model.mjs?v=20261021-1';
+import {METHODS,roi,rate,venueName,metric,interval,nextMeeting,prepareMeeting,currentPlan,researchPlans,drawRanking} from './strategy-model.mjs?v=20261021-support';
 const $=id=>document.getElementById(id),e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const percent=n=>n==null?'—':(n*100).toFixed(1)+'%',money=n=>'$'+Number(n).toLocaleString('en-HK',{maximumFractionDigits:1}),signed=n=>(n>0?'+':'')+money(n);
 const clock=s=>new Date(s).toLocaleTimeString('en-GB',{timeZone:'Asia/Hong_Kong',hour:'2-digit',minute:'2-digit'});
@@ -23,7 +23,12 @@ function renderPlan(){
  if(!source)return;
  const now=Date.now(),meeting=nextMeeting([source],now);
  if(!meeting){$('next-title').textContent='尚未有下一賽日的完整賽程';$('plan-rows').innerHTML='<tr><td colspan="5" class="no-plan">最新保存的賽日已全部開跑，或未提供未開跑場次。待網站更新下一賽日；不沿用舊馬號推介。</td></tr>';$('main-budget').textContent=$('extra-budget').textContent=$('total-budget').textContent='$0';return}
- const m=prepareMeeting(meeting,savedManual(meeting),now),mainTickets=new Set(),extraTickets=new Set();
+ const prepared=structuredClone(meeting);
+ for(const r of prepared.races){
+  const s=context.support;
+  if(s?.date===prepared.date&&s.venue===prepared.venue&&s.races?.[r.race]&&!r.hv_win_support)r.hv_win_support=s.races[r.race];
+ }
+ const m=prepareMeeting(prepared,savedManual(prepared),now),mainTickets=new Set(),extraTickets=new Set();
  $('next-title').textContent=m.date+' · '+(m.venue==='HV'?'跑馬地':'沙田')+' · 每場買法';
  $('plan-rows').innerHTML=m.races.map(r=>{
   const p=currentPlan(r,now),plans=researchPlans(r,{...context,odds:savedOdds(r),now}),d=drawRanking(r,context.seed,context.history,context.index),key=ns=>[r.date,r.venue,r.race,...ns].join('|');
@@ -36,7 +41,7 @@ function renderPlan(){
    let bet=q.state==='ready'?`<b>W · ${q.picks.map(n=>horse(r,n)).join('、')} · ${fresh.length?money(fresh.length*10):'已在上列，只買一注、不另加注'}</b>`:q.state==='odds'?q.candidates.map(n=>horse(r,n)).join('、')+' · 待賠率':e(q.reason);
    return `<div class="study-plan"><span class="tag study">${q.state==='ready'?(fresh.length?'研究加注':'同馬重疊'):q.state==='odds'?'待價格':q.state==='skip'?'未觸發':'待資料'}</span><b>${e(q.method.title)}</b><small>${bet}</small>${q.method.n&&(q.state==='ready'||q.state==='odds'||q.candidates?.length)?`<div class="study-metrics" aria-label="研究方法歷史績效"><div><span>命中率</span><strong>${percent(rate(q.method))}</strong></div><div><span>Expected ROI</span><strong>${percent(roi(q.method))}</strong></div></div><small>${q.method.hits}/${q.method.n}注 · 歷史勝出率及回測ROI${q.method.h==='all'?' · 全H合併參考':''}；非本場校準預測</small>`:''}</div>`;
   }).join('')||'<span class="muted">此場地／H沒有上述高ROI研究可配對</span>';
-  const needsOdds=[...new Set(plans.filter(q=>['odds','ready','skip'].includes(q.state)&&(q.method.id.startsWith('stcold')||q.method.id==='hvcommon2')).flatMap(q=>q.candidates||q.picks||[]))],odds=savedOdds(r);
+  const needsOdds=[...new Set(plans.filter(q=>['odds','ready','skip'].includes(q.state)&&(q.method.id.startsWith('stcold')||['hvcommon2','hvcover1'].includes(q.method.id))).flatMap(q=>q.candidates||q.picks||[]))],odds=savedOdds(r);
   const oddsForm=needsOdds.length?`<form class="odds-form" data-race="${r.race}">${needsOdds.map(n=>`<label>${horse(r,n)}<input name="${n}" type="number" min="0.1" step="0.1" inputmode="decimal" value="${e(odds[n]||'')}" aria-label="第${r.race}場${n}號獨贏賠率" required></label>`).join('')}<button type="submit">核實賠率並更新研究買法</button><small>只存此瀏覽器，10分鐘後須重核；8.0不入選。</small></form>`:'';
   return `<tr><td><b>第${r.race}場</b><small>${clock(r.off)} · ${r.distance||'—'}米<br>${e(r.rail||r.track||'—')} · H=${r.score??'待確認'}</small>${r.manual_local?'<span class="tag">本機手動貼士</span>':''}</td><td>${p.state==='ready'?ticketHtml(r,p):`<span class="tag ${p.state==='pending'?'wait':''}">${p.state==='pending'?'待資料':p.state==='closed'?'已開跑':'跳過'}</span><p>${e(p.reason)}</p>`}</td><td>${p.state==='ready'?evidence(p.method):'<span class="muted">未產生買法，不估命中率</span>'}</td><td>${research}</td><td>${d.status==='ready'?d.draws.map((x,i)=>`${i+1}. ${x.draw}檔 · ${x.placed}/${x.starts}（${percent(x.rate)}）`).join('<br>'):`<span class="muted">${e(d.reason)}</span>`}${oddsForm}</td></tr>`;
  }).join('');
@@ -56,9 +61,9 @@ async function load(){
  try{
   let saved;try{saved=localStorage.getItem('hkjc-tips-data-revision')}catch{}
   const resolved=await resolveDataSource({saved,fallback:'328365912f76f8262fca5a8adc64c8378b55b263'});
-  const results=await Promise.allSettled([freshJson(resolved.base+'latest.json'),freshJson('./strategy-draw-seed.json'),freshJson(resolved.base+'draw-history.json'),freshJson(resolved.base+'history.json')]);
+  const results=await Promise.allSettled([freshJson(resolved.base+'latest.json'),freshJson('./strategy-draw-seed.json'),freshJson(resolved.base+'draw-history.json'),freshJson(resolved.base+'history.json'),freshJson('./strategy-support/latest.json')]);
   if(results[0].status!=='fulfilled')throw Error('最新賽程暫時無法讀取');
-  source=results[0].value;context={seed:results[1].status==='fulfilled'?results[1].value:null,history:results[2].status==='fulfilled'?results[2].value:null,index:results[3].status==='fulfilled'?results[3].value:null};
+  source=results[0].value;context={seed:results[1].status==='fulfilled'?results[1].value:null,history:results[2].status==='fulfilled'?results[2].value:null,index:results[3].status==='fulfilled'?results[3].value:null,support:results[4].status==='fulfilled'?results[4].value:null};
   if(!context.history||!context.index)context.seed=null;
   if(resolved.notice.includes('存檔'))throw Error('目前只能讀到備用存檔，暫停新買法；請重新連線核對最新資料。');
   if(resolved.sha)try{localStorage.setItem('hkjc-tips-data-revision',resolved.sha)}catch{}
@@ -69,3 +74,4 @@ async function load(){
 }
 for(const id of ['venue-filter','h-filter','kind-filter','sort-filter'])$(id).onchange=catalog;
 $('refresh').onclick=load;window.addEventListener('pageshow',load);window.addEventListener('online',load);window.addEventListener('storage',()=>{if(source)renderPlan()});document.addEventListener('visibilitychange',()=>{if(!document.hidden)load()});setInterval(()=>{if(!document.hidden)load()},20000);catalog();load();
+

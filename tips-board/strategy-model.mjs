@@ -1,5 +1,5 @@
 import {chooseManual,confidenceReason} from './manual-tips.mjs?v=20261021-st-qp';
-import {coldWinCandidates,coldWinSelect} from './st-coldwin.mjs?v=20261020-stwin';
+import {coldWinCandidates,coldWinSelect,hvWinCandidates} from './st-coldwin.mjs?v=20261021-support';
 const current=(id,venue,track,h,title,pool,n,hits,cost,profit,rule)=>({id,venue,track,h,title,pool,n,hits,cost,profit,rule,kind:'current',unit:'場'});
 const research=(id,venue,h,title,n,hits,profit,rule)=>({id,venue,track:'TURF',h,title,pool:'W',n,hits,cost:n*10,profit,rule,kind:'research',unit:'注'});
 export const METHODS=[
@@ -21,7 +21,7 @@ export const METHODS=[
  research('stcold0','ST',0,'M1＋檔位前三＋獨贏>8',3,2,192,'沙草H0；M1原位；檔位至少1仗'),
  research('stcoldall','ST','all','M1＋檔位前三＋獨贏>8（全部H）',6,2,162,'沙草全部H合併；含H0三注，非另一獨立樣本'),
  research('hvcommon2','HV',2,'M四選∩B五選＋檔前三＋獨贏>8',1,1,93,'共同馬按明治次序，過濾條件後最多2匹；僅1注'),
- research('hvcover1','HV',1,'舊信心場補冷Win（44注方案子組）',8,2,123,'核心外、>8、過往首段中位數≥4；休後/回勇＋作者支持；每場最多2匹；舊資格未完整封存，僅列研究'),
+ research('hvcover1','HV',1,'谷草H1補冷Win（44注方案子組）',8,2,123,'核心外、>8、過往首段中位數≥4；休後/回勇＋作者支持；每場最多2匹；歷史資格回算，研究加注'),
 ];
 export const roi=m=>m.cost?m.profit/m.cost:null;
 export const rate=m=>m.n?m.hits/m.n:null;
@@ -49,7 +49,7 @@ export function prepareMeeting(source,saved,now=Date.now()){
 }
 export function currentPlan(r,now=Date.now()){
  const method=METHODS.find(m=>m.kind==='current'&&applies(m,r));
- if(r.locked||Date.parse(r.off)<=now)return{state:'closed',reason:'已開跑／鎖定，不產生新買法',method};
+ if(r.locked||Date.parse(r.off)<=now)return{state:'closed',reason:r.selection?'已開跑／鎖定，不產生新買法':'已開跑；賽前資料不足，沒有鎖定買法',method};
  if(!method)return{state:'pending',reason:r.strategy_pending||'待確認場地及H',method};
  if(r.strategy_pending||r.hv_plan_state==='pending'||r.st_plan_state==='pending')return{state:'pending',reason:r.strategy_pending||r.hv_plan_reason||r.st_plan_reason,method};
  if(r.hv_plan_state==='skip'||r.st_plan_state==='skip'||!method.pool)return{state:'skip',reason:r.hv_plan_reason||r.st_plan_reason||method.rule,method};
@@ -84,7 +84,14 @@ export function researchPlans(r,{seed,history,index,odds={},now=Date.now()}={}){
  const active=n=>r.horses.some(h=>h.no===n)&&!(r.scratched||[]).includes(n);
  for(const method of METHODS.filter(m=>m.kind==='research'&&applies(m,r))){
   const pending=reason=>plans.push({method,state:'pending',reason});
-  if(method.id==='hvcover1'){pending('舊信心資格及新增作者／往績未完整接入；不自動補Win');continue}
+  if(method.id==='hvcover1'){
+   const c=hvWinCandidates(r,r.hv_win_support);
+   if(c.status!=='ready'){pending(c.reason||'待四位作者及往績資料');continue}
+   if(!c.candidates.length){plans.push({method,state:'skip',reason:'資料已核對，沒有符合休後／回勇及作者條件的補Win馬'});continue}
+   const q=coldWinSelect(c,odds);
+   if(q.status==='awaiting_odds'){plans.push({method,state:'odds',candidates:c.candidates.map(h=>h.no),reason:'待賽前獨贏賠率>8確認；未列入投注額'});continue}
+   plans.push({method,state:q.picks.length?'ready':'skip',picks:q.picks.map(h=>h.no),candidates:c.candidates.map(h=>h.no),cost:q.picks.length*10,reason:q.picks.length?'符合條件；屬研究加注':'賠率未高於8，不買'});continue
+  }
   if(!validM){pending('待明治朗當日原次序');continue}
   const rank=method.id==='m2d8'?d8:d;
   if(rank.status!=='ready'){pending(rank.reason);continue}
@@ -117,3 +124,4 @@ export function researchPlans(r,{seed,history,index,odds={},now=Date.now()}={}){
  }
  return plans;
 }
+

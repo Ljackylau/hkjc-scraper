@@ -28,3 +28,17 @@ class ColdWinTests(unittest.TestCase):
         m['venue']='HV';collect(m,forbidden,lambda:t.isoformat(),lambda:t,lambda h,r:h)
 
 if __name__=='__main__':unittest.main()
+
+class HVSupportTests(unittest.TestCase):
+ def test_hv_h1_collects_support_and_other_h_skips(self):
+  from unittest.mock import patch
+  t=datetime.fromisoformat('2026-10-21T18:45:00+08:00')
+  race={'race':4,'track':'TURF','score':1,'off':'2026-10-21T20:10:00+08:00','horses':[{'no':n,'name':str(n),'horse_id':'HK_2024_K403'} for n in range(1,5)],'tips':{'meiji':{'horses':[{'no':1},{'no':2}]}},'banker_initial':{'numbers':[1,2,3]}}
+  m={'date':'2026-10-21','venue':'HV','races':[race]}
+  authors={a:{4:[{'no':n} for n in range(1,5)]} for a in AUTHORS}
+  with patch('st_coldwin.parse_authors',return_value=authors),patch('st_coldwin.parse_form',return_value={'status':'ready','style_n':3,'median':6,'last_date':'2026-02-11','last_finish':1}):
+   collect(m,lambda u:'source',lambda:t.isoformat(),lambda:t,lambda h,r:h)
+  self.assertEqual(race['hv_win_support']['status'],'ready');self.assertEqual(race['hv_win_support']['wanted'],[4]);self.assertEqual(race['hv_win_support']['method'],'hv-confidence-coldwin-v1')
+  race.pop('hv_win_support');race['score']=0
+  collect(m,lambda u:self.fail('H0 must not request H1 supplement'),lambda:t.isoformat(),lambda:t,lambda h,r:h)
+  self.assertNotIn('hv_win_support',race)

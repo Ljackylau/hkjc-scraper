@@ -1,13 +1,17 @@
 // Independent add-on. Never changes the existing selections or confidence rules.
 export const ST_WIN_METHOD='st-turf-coldwin-v1';
+export const HV_WIN_METHOD='hv-confidence-coldwin-v1';
 export const AUTHORS=['西門獨','諸葛數','陳志懷','兆文'];
 const validDate=s=>/^\d{4}-\d{2}-\d{2}$/.test(s||'');
-export function coldWinCandidates(r,support,isConfidence){
- if(r.venue!=='ST'||r.track!=='TURF'||!isConfidence)return{status:'not_applicable',candidates:[]};
+export function coldWinCandidates(r,support,isConfidence){return candidatesFor(r,support,isConfidence,'ST',ST_WIN_METHOD)}
+export function hvWinCandidates(r,support){return candidatesFor(r,support,r.score===1,'HV',HV_WIN_METHOD)}
+function candidatesFor(r,support,isConfidence,venue,method){
+ if(r.venue!==venue||r.track!=='TURF'||!isConfidence)return{status:'not_applicable',candidates:[]};
  const pending=reason=>({status:'pending',reason,candidates:[]});
- if(!support||support.method!==ST_WIN_METHOD||support.date!==r.date||support.race!==r.race||support.venue!=='ST')return pending('待補Win賽前資料');
+ if(!support||support.method!==method||support.date!==r.date||support.race!==r.race||support.venue!==venue)return pending('待補Win賽前資料');
  const m=r.tips?.meiji,b=r.banker_initial;
- if(m?.status!=='ready'||m.horses?.length!==4||m.source_date&&m.source_date!==r.date||b?.status!=='ready'||b.as_of_race_no!==0||b.reason!=='initial'||b.date!==r.date||b.venue!=='ST'||b.race!==r.race||b.numbers?.length!==5)return pending('待明治朗及膽拖初版');
+ if(m?.status!=='ready'||m.horses?.length!==4||m.source_date&&m.source_date!==r.date||b?.status!=='ready'||b.as_of_race_no!==0||b.reason!=='initial'||b.date!==r.date||b.venue!==venue||b.race!==r.race||b.numbers?.length!==5)return pending('待明治朗及膽拖初版');
+ if(support.captured_at&&Date.parse(support.captured_at)>=Date.parse(r.off))return pending('補Win資料在開跑後才取得，不作賽前推介');
  if(support.status!=='ready'||AUTHORS.some(a=>support.authors?.[a]?.status!=='ready'))return pending('待四位作者及往績資料齊全');
  const core=new Set([...m.horses.map(h=>Number(h.no)),...b.numbers.map(Number)]),scratched=new Set((r.scratched||[]).map(Number));
  const candidates=[];
@@ -35,3 +39,4 @@ export function coldWinSelect(candidates,odds){
  if(unknown.length)return{...candidates,status:'awaiting_odds',unknown:unknown.map(h=>h.no),picks:[]};
  return{...candidates,picks:candidates.candidates.filter(h=>Number(odds[h.no])>8).slice(0,2).map(h=>({...h,odds:Number(odds[h.no])}))};
 }
+

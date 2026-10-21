@@ -28,3 +28,21 @@ const custom={before_date:'2026-10-20',groups:{'HV|1200|B':{1:[1,1],2:[8,10],3:[
 const ci=interval(1,1);assert.ok(ci[0]<0.3&&ci[1]>0.99);
 assert.deepEqual(raw,JSON.parse(fs.readFileSync(new URL('./fixtures/strategy-next-hv.json',import.meta.url))));
 console.log('Strategy page: catalogue, actual next-meeting plan, withdrawals, source dates, odds threshold, cutoff, incomplete history, minimum samples and immutability passed.');
+
+
+const support=JSON.parse(fs.readFileSync(new URL('./fixtures/hv-coldwin-20261021.json',import.meta.url)));
+const liveNow=Date.parse('2026-10-21T18:45:00+08:00');
+const withSupport=structuredClone(raw);
+for(const r of withSupport.races)if(support.races[r.race])r.hv_win_support=support.races[r.race];
+const live=prepareMeeting(withSupport,null,liveNow),lr=n=>live.races.find(r=>r.race===n);
+const cover=(n,odds={})=>researchPlans(lr(n),{...context,now:liveNow,odds}).find(q=>q.method.id==='hvcover1');
+assert.equal(cover(4).state,'odds');assert.deepEqual(cover(4).candidates,[2]);
+assert.equal(cover(4,{2:8}).state,'skip');assert.deepEqual(cover(4,{2:8.1}).picks,[2]);assert.equal(cover(4,{2:8.1}).cost,10);
+assert.equal(cover(7).state,'skip');assert.equal(cover(8).state,'skip');
+const wrongDate=structuredClone(lr(4));wrongDate.hv_win_support.date='2026-10-20';
+assert.equal(researchPlans(wrongDate,{...context,now:liveNow}).find(q=>q.method.id==='hvcover1').state,'pending');
+const afterOff=structuredClone(lr(4));afterOff.hv_win_support.captured_at=afterOff.off;
+assert.equal(researchPlans(afterOff,{...context,now:liveNow}).find(q=>q.method.id==='hvcover1').state,'pending');
+assert.equal(currentPlan(lr(1),liveNow).state,'closed');assert.match(currentPlan(lr(1),liveNow).reason,/賽前資料不足/);
+assert.deepEqual([2,3,4,7,8].map(n=>currentPlan(lr(n),liveNow).picks),[[1],[9,1,3],[1],[10],[12]]);
+console.log('HV supplement: authentic pre-off sources, candidate #2, strict odds >8, no qualifiers, wrong dates, late capture and unchanged primary tickets passed.');

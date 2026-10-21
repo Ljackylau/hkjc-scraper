@@ -59,3 +59,19 @@ class Rules(unittest.TestCase):
   with patch('collector.now',return_value=datetime.fromisoformat('2026-10-13T19:00:00+08:00')),patch('collector.collect_tips',side_effect=fetch):collect_manual(m)
   self.assertEqual(m['races'][0]['tips'],previous);self.assertEqual(len(m['manual_checks'][0]['errors']),4)
 if __name__=='__main__':unittest.main()
+
+class MissingMeijiRetry(unittest.TestCase):
+ def test_retry_updates_only_open_incomplete_races(self):
+  import collector
+  from datetime import datetime
+  t=datetime.fromisoformat('2026-10-21T18:45:00+08:00')
+  meeting={'date':'2026-10-21','races':[
+   {'race':1,'off':'2026-10-21T18:40:00+08:00','tips':{'meiji':{'status':'pending'}}},
+   {'race':2,'off':'2026-10-21T19:10:00+08:00','tips':{'meiji':{'status':'ready','source_date':'2026-10-21','horses':[{'no':9}]}}},
+   {'race':3,'off':'2026-10-21T19:40:00+08:00','tips':{'meiji':{'status':'error'}}}]}
+  before=copy.deepcopy(meeting)
+  with patch('collector.now',return_value=t),patch('collector.stamp',return_value=t.isoformat()),patch('collector.request',return_value='source'),patch('collector.parse_meiji',return_value=('2026-10-21',{1:[{'no':1}],2:[{'no':2}],3:[{'no':3}]})),patch('collector.safe_horses',side_effect=lambda h,r:h),patch('collector.choose') as choose:
+   collector.retry_missing_meiji(meeting)
+  self.assertEqual(meeting['races'][:2],before['races'][:2])
+  self.assertEqual(meeting['races'][2]['tips']['meiji']['horses'],[{'no':3}])
+  self.assertEqual(choose.call_count,1)

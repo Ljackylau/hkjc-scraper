@@ -133,6 +133,21 @@ def collect_tips(meeting):
     capture_four(meeting,request,stamp,now)
     st_coldwin.collect(meeting,request,stamp,now,safe_horses)
 
+def retry_missing_meiji(meeting):
+    """Retry incomplete Meiji sources before off; preserve valid tips and locks."""
+    races=[r for r in meeting['races'] if not r.get('locked') and now()<datetime.fromisoformat(r['off']) and (r['tips']['meiji'].get('status')!='ready' or r['tips']['meiji'].get('source_date')!=meeting['date'])]
+    if not races:return
+    url='https://racing.on.cc/racing/fav/'+meeting['date'].replace('-','')+'/rjfavf0201x0.html'
+    try:
+        date,entries=parse_meiji(request(url),meeting['date'])
+        if date!=meeting['date']:return
+        for r in races:
+            if r['race'] not in entries or r.get('locked') or now()>=datetime.fromisoformat(r['off']):continue
+            horses=safe_horses(entries[r['race']],r)
+            r['tips']['meiji']={'status':'ready','source_date':date,'source':url,'captured_at':stamp(),'horses':horses}
+            choose(r)
+    except Exception as exc:meeting['meiji_retry_error']=str(exc)
+
 def capture_four(meeting,request,stamp,now):
     capture_initial(meeting,request,stamp,now)
     for r in meeting['races']:
@@ -256,7 +271,7 @@ def prepare_draws(store,m,history=None):
     if history is None:history=draw_stats.update_history(store,request,min(m['date'],now().date().isoformat()))['races']
     for r in m['races']:
         if r.get('locked'):continue
-        if not r.get('rail') or any(not h.get('draw') or (m['venue']=='ST' and r.get('track')=='TURF' and not h.get('horse_id')) for h in r['horses'] if h['no'] not in r.get('scratched',[])):
+        if not r.get('rail') or any(not h.get('draw') or (r.get('track')=='TURF' and not h.get('horse_id')) for h in r['horses'] if h['no'] not in r.get('scratched',[])):
             try:
                 q=urllib.parse.urlencode({'racedate':m['date'].replace('-','/'),'Racecourse':m['venue'],'RaceNo':r['race']})
                 fresh=parse_card(request(CARD+'?'+q))
@@ -306,6 +321,7 @@ def collect_manual(m):
     for r in candidate['races']:
         r['tips']={k:{'status':'pending','horses':[]} for k in ['meiji',*EXPERTS]}
         r.pop('st_win_support',None)
+        r.pop('hv_win_support',None)
     if candidate['races']:collect_tips(candidate)
     errors=[]
     for fresh in candidate['races']:
@@ -317,6 +333,7 @@ def collect_manual(m):
                 errors.append({'race':r['race'],'source':key,'status':tip['status'],'source_date':tip.get('source_date'),'error':tip.get('error')})
                 if r['tips'][key]['status'] not in ('ready','absent'):r['tips'][key]=tip
         if fresh.get('st_win_support'):r['st_win_support']=fresh['st_win_support']
+        if fresh.get('hv_win_support'):r['hv_win_support']=fresh['hv_win_support']
         choose(r)
     capture_four(m,request,stamp,now)
     m['manual_checked_at']=stamp()
@@ -345,6 +362,7 @@ def run(store,date,mode):
             four_try=time.monotonic()
             capture_four(m,request,stamp,now)
             prepare_draws(store,m,draw_history)
+            retry_missing_meiji(m)
             st_coldwin.collect(m,request,stamp,now,safe_horses)
             t=now()
         # Respect single preflight check. Live mode never silently fetches the experts again.
@@ -397,3 +415,4 @@ if __name__=='__main__':
             print(m['date'],sum(r.get('sha_tin_four',{}).get('status')=='ready' for r in m['races']),'/',len(m['races']),flush=True)
         if s.publish:s.push()
     else:run(s,a.date,a.mode)
+

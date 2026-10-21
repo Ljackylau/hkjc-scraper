@@ -8,6 +8,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 
 METHOD='st-turf-coldwin-v1'
+HV_METHOD='hv-confidence-coldwin-v1'
 AUTHORS=('西門獨','諸葛數','陳志懷','兆文')
 
 def parse_authors(body,date):
@@ -44,25 +45,26 @@ def parse_form(body,ident,before):
     return {'status':'ready','last_date':last.get('date'),'last_finish':last.get('finish'),'style_n':len(early),'median':statistics.median(early) if early else None,'recent':recent}
 
 def collect(meeting,request,stamp,now,safe_horses):
-    if meeting['venue']!='ST':return
-    races=[r for r in meeting['races'] if r.get('track')=='TURF' and not r.get('locked') and (datetime.fromisoformat(r['off'])-now()).total_seconds()>600 and r.get('st_win_support',{}).get('status')!='ready']
+    if meeting['venue'] not in ('ST','HV'):return
+    venue=meeting['venue'];support_key='st_win_support' if venue=='ST' else 'hv_win_support';method=METHOD if venue=='ST' else HV_METHOD
+    races=[r for r in meeting['races'] if r.get('track')=='TURF' and (venue=='ST' or r.get('score')==1) and not r.get('locked') and (datetime.fromisoformat(r['off'])-now()).total_seconds()>600 and r.get(support_key,{}).get('status')!='ready']
     if not races:return
     url='https://racing.on.cc/racing/fav/'+meeting['date'].replace('-','')+'/rjfavf0201x0.html'
     try:authors=parse_authors(request(url),meeting['date'])
     except Exception as exc:
         for r in races:
-            if now()<datetime.fromisoformat(r['off']):r['st_win_support']={'method':METHOD,'date':meeting['date'],'venue':'ST','race':r['race'],'status':'error','error':str(exc),'source':url,'captured_at':stamp()}
+            if now()<datetime.fromisoformat(r['off']):r[support_key]={'method':method,'date':meeting['date'],'venue':venue,'race':r['race'],'status':'error','error':str(exc),'source':url,'captured_at':stamp()}
         return
     jobs=[];prepared={}
     for r in races:
         try:
             tips={a:{'status':'ready','numbers':[h['no'] for h in safe_horses(authors[a][r['race']],r)]} for a in AUTHORS}
             core={h['no'] for h in r['tips']['meiji'].get('horses',[])}|set(r.get('banker_initial',{}).get('numbers',[]));wanted=set(n for t in tips.values() for n in t['numbers'])-core-set(r.get('scratched',[]))
-            forms=dict(r.get('st_win_support',{}).get('forms',{}))
+            forms=dict(r.get(support_key,{}).get('forms',{}))
             for h in r['horses']:
-                if h['no'] in wanted and forms.get(str(h['no']),{}).get('status')!='ready' and len(jobs)<12:jobs.append((r,h))
-            prepared[r['race']]={'method':METHOD,'date':meeting['date'],'venue':'ST','race':r['race'],'status':'ready','source':url,'authors':tips,'forms':forms,'wanted':sorted(wanted),'captured_at':stamp()}
-        except Exception as exc:prepared[r['race']]={'method':METHOD,'date':meeting['date'],'venue':'ST','race':r['race'],'status':'error','error':str(exc),'source':url,'captured_at':stamp()}
+                if h['no'] in wanted and forms.get(str(h['no']),{}).get('status')!='ready' and len(jobs)<36:jobs.append((r,h))
+            prepared[r['race']]={'method':method,'date':meeting['date'],'venue':venue,'race':r['race'],'status':'ready','source':url,'authors':tips,'forms':forms,'wanted':sorted(wanted),'captured_at':stamp()}
+        except Exception as exc:prepared[r['race']]={'method':method,'date':meeting['date'],'venue':venue,'race':r['race'],'status':'error','error':str(exc),'source':url,'captured_at':stamp()}
     def one(job):
         r,h=job;ident=h.get('horse_id');source='https://racing.hkjc.com/zh-hk/local/information/horse?'+urllib.parse.urlencode({'HorseId':ident,'Option':1})
         try:
@@ -76,4 +78,5 @@ def collect(meeting,request,stamp,now,safe_horses):
     for r in races:
         s=prepared[r['race']]
         if s['status']!='error' and any(s['forms'].get(str(n),{}).get('status')!='ready' for n in s['wanted']):s['status']='pending'
-        if not r.get('locked') and now()<datetime.fromisoformat(r['off']):r['st_win_support']=prepared[r['race']]
+        if not r.get('locked') and now()<datetime.fromisoformat(r['off']):r[support_key]=prepared[r['race']]
+
