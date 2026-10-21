@@ -2947,91 +2947,103 @@
       "date": "2026-10-21",
       "venue": "HV",
       "race": 9,
-      "off": "2026-10-21T22:50:00+08:00",
+      "off": "2026-10-21T22:55:00+08:00",
       "horses": [
         {
           "no": 1,
           "name": "一生好彩",
           "jockey_id": "FEL",
           "jockey": "霍宏聲",
-          "draw": 10
+          "draw": 10,
+          "horse_id": "HK_2024_K114"
         },
         {
           "no": 2,
           "name": "幸運派彩",
           "jockey_id": "BA",
           "jockey": "巴度",
-          "draw": 1
+          "draw": 1,
+          "horse_id": "HK_2024_K313"
         },
         {
           "no": 3,
           "name": "超勁赤兔",
           "jockey_id": "LDE",
           "jockey": "梁家俊",
-          "draw": 7
+          "draw": 7,
+          "horse_id": "HK_2024_K312"
         },
         {
           "no": 4,
           "name": "一定掂",
           "jockey_id": "OJM",
           "jockey": "奧爾民",
-          "draw": 3
+          "draw": 3,
+          "horse_id": "HK_2023_J225"
         },
         {
           "no": 5,
           "name": "同心同樂",
           "jockey_id": "YHY",
           "jockey": "袁幸堯",
-          "draw": 8
+          "draw": 8,
+          "horse_id": "HK_2024_K081"
         },
         {
           "no": 6,
           "name": "智勇名駒",
           "jockey_id": "HEL",
           "jockey": "希威森",
-          "draw": 9
+          "draw": 9,
+          "horse_id": "HK_2023_J298"
         },
         {
           "no": 7,
           "name": "龍文鞭影",
           "jockey_id": "BHW",
           "jockey": "班德禮",
-          "draw": 11
+          "draw": 11,
+          "horse_id": "HK_2024_K226"
         },
         {
           "no": 8,
           "name": "傲聖",
           "jockey_id": "WPN",
           "jockey": "黃寶妮",
-          "draw": 12
+          "draw": 12,
+          "horse_id": "HK_2025_L384"
         },
         {
           "no": 9,
           "name": "納百川",
           "jockey_id": "CJE",
           "jockey": "周俊樂",
-          "draw": 2
+          "draw": 2,
+          "horse_id": "HK_2023_J276"
         },
         {
           "no": 10,
           "name": "哥倫布",
           "jockey_id": "WEC",
           "jockey": "黃智弘",
-          "draw": 6
+          "draw": 6,
+          "horse_id": "HK_2024_K355"
         },
         {
           "no": 11,
           "name": "我做到",
           "jockey_id": "HCY",
           "jockey": "何澤堯",
-          "draw": 4
+          "draw": 4,
+          "horse_id": "HK_2022_H381"
         },
         {
           "no": 12,
           "name": "知道穩勝",
           "jockey_id": "PMF",
           "jockey": "潘明輝",
-          "draw": 5
+          "draw": 5,
+          "horse_id": "HK_2024_K406"
         }
       ],
       "scratched": [],
@@ -3208,11 +3220,11 @@
       "hv_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     }
   ],
-  "updated_at": "2026-10-21T22:42:46+08:00",
+  "updated_at": "2026-10-21T22:44:06+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-21T16:40:00+08:00",
-  "heartbeat": "2026-10-21T22:42:46.244034+08:00",
+  "heartbeat": "2026-10-21T22:44:06.244444+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
