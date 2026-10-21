@@ -26,6 +26,8 @@ jobs:
         working-directory: tips-board
         run: |
           node --check app.mjs
+          node --check strategies.mjs
+          node test_strategy_page.mjs
           node test_sha_tin_patterns.mjs
           node test_hv_patterns.mjs
           node test_manual.mjs
@@ -34,3 +36,4 @@ jobs:
       - name: Collector and pattern regression
         working-directory: tips-board
         run: python -m unittest test_hv_patterns test_collector test_sha_tin_patterns
+
