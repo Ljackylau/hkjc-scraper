@@ -251,6 +251,17 @@ class Store:
     def write(self,name,j):
         p=self.path/name;p.parent.mkdir(parents=True,exist_ok=True);tmp=p.with_suffix('.tmp');tmp.write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n');tmp.replace(p)
     def save(self,m):
+        # Preserve one globally reviewable policy snapshot before off; never
+        # rewrite locked predictions or use post-race prices in selection.
+        if any(not r.get('locked') and now()<datetime.fromisoformat(r['off']) for r in m['races']):
+            try:
+                task=Path(__file__).with_name('roi-live-snapshot.mjs')
+                if task.exists():
+                    result=subprocess.run(['node',str(task),str(self.path.resolve())],input=json.dumps(m,ensure_ascii=False),capture_output=True,text=True,check=True,timeout=15)
+                    snapshots=json.loads(result.stdout)
+                    for r in m['races']:
+                        if not r.get('locked') and now()<datetime.fromisoformat(r['off']) and str(r['race']) in snapshots:r['roi_strategy']=snapshots[str(r['race'])]
+            except Exception as exc:m['roi_strategy_error']=str(exc)
         m['updated_at']=stamp();self.write(m['date']+'.json',m);self.write('latest.json',m)
         hist=self.read('history.json',{'meetings':[]});row={'date':m['date'],'venue':m['venue'],'status':m['status'],'complete':all(r['result'] for r in m['races']),'results_enabled':m.get('collection_policy',{}).get('results',True)}
         if m['status']=='archived':

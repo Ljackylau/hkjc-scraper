@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import {preparedRace,choosePolicy,evaluate,settlePolicy,key,compatible} from './roi-policy.mjs';
+const json=f=>JSON.parse(fs.readFileSync(new URL(f,import.meta.url))),registry=json('./roi-methods.json'),replay=json('./roi-replay.json'),audit=json('./roi-audit.json'),ctx={replay};replay.meetings=replay.meetings.map(m=>json('./'+m.file));const before=structuredClone(replay);
+let verified=0;
+for(const m of registry.methods){if(m.rule.type==='unavailable')continue;let cost=0,profit=0,n=0,hits=0;
+ for(const meeting of replay.meetings.filter(x=>x.date<=registry.trained_through))for(const raw of meeting.races){const r=preparedRace(meeting,raw,ctx),p=evaluate(m,r,{...ctx,odds:replay.inputs[key(r)].final_odds||{}}),s=settlePolicy(p,r.result);if(!s.cost||s.returned===null)continue;cost+=s.cost;profit+=s.profit;n+=m.unit==='注'?p.tickets.length:1;hits+=m.unit==='注'?r.result.dividends[p.pool].filter(x=>p.tickets.some(t=>t.length===1&&t[0]===Number(x.combination))).length:Number(s.status==='hit')}
+ assert.equal(cost,m.cost,m.id+' cost');assert.equal(profit,m.profit,m.id+' profit');assert.equal(n,m.n,m.id+' sample');assert.equal(hits,m.hits,m.id+' hits');verified++;
+}
+const meeting=replay.meetings.find(x=>x.date==='2026-10-21'),r=preparedRace(meeting,meeting.races[1],ctx),cold=registry.methods.find(m=>m.id==='cold-HV_H0_min1_M2');
+assert.equal(evaluate(cold,r,ctx).status,'pending','final replay prices never implicitly supplied');assert.equal(evaluate(cold,r,{...ctx,odds:{3:8}}).status,'skip');assert.equal(evaluate(cold,r,{...ctx,odds:{3:8.1}}).status,'ready');
+const methods=[{id:'high',title:'high',venue:'HV',track:'TURF',h:0,pool:'W',n:2,hits:1,cost:20,profit:200,rule:{type:'single',source:'M',rank:9}},{id:'second',title:'second',venue:'HV',track:'TURF',h:0,pool:'W',n:2,hits:1,cost:20,profit:100,rule:{type:'single',source:'M',rank:1}}];
+assert.equal(choosePolicy(r,methods,ctx).method.id,'second');assert.equal(choosePolicy(r,methods,ctx,{}).status,'skip','unknown prior history cannot fall back to future full-sample ROI');
+assert.equal(choosePolicy({...r,score:null},methods,ctx).status,'skip');assert.equal(choosePolicy(r,methods,{...ctx,minSamples:10}).status,'skip');
+const p=choosePolicy(r,registry.methods,{...ctx,odds:replay.inputs[key(r)].final_odds});assert.equal(p.method.id,'hvd-M2cross_D3_rail_min8');assert.equal(p.attempts.filter(a=>a.status==='ready').length,1,'one method per race');
+const corrupt=structuredClone(r);corrupt.result={dividends:{W:[{combination:'11',dividend_hkd:99999}]}};assert.deepEqual(choosePolicy(corrupt,methods,ctx),choosePolicy(r,methods,ctx),'target result cannot change selection');
+assert.deepEqual(replay,before);assert.equal(audit.days.length,13);assert.equal(audit.days.at(-1).cost,110);assert.equal(audit.days.at(-1).profit,-35);assert(audit.days.some(d=>d.profit<0));assert.equal(Object.keys(json('./roi-stats/'+audit.days[0].date+'.json')).length,0);
+const banker={status:'ready',pool:'QP',picks:[1,2,3],tickets:[[1,2],[1,3]],cost:20};assert.equal(settlePolicy(banker,{dividends:{QP:[{combination:'2,3',dividend_hkd:999}]} }).returned,0,'banker tickets are not boxed');
+console.log(`ROI policy: ${verified} methods reproduce all original samples/hits/costs/profits; descending fallback, no future stats, strict price boundary, no outcome-driven selection, one method, banker tickets, complete losing days and immutable archive passed.`);
