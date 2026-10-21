@@ -14,80 +14,90 @@
           "name": "太子",
           "jockey_id": "OJM",
           "jockey": "奧爾民",
-          "draw": 7
+          "draw": 6,
+          "horse_id": "HK_2024_K362"
         },
         {
           "no": 2,
           "name": "本領非凡",
           "jockey_id": "HCY",
           "jockey": "何澤堯",
-          "draw": 4
+          "draw": 3,
+          "horse_id": "HK_2023_J137"
         },
         {
           "no": 3,
           "name": "爆笑",
           "jockey_id": "WPN",
           "jockey": "黃寶妮",
-          "draw": 10
+          "draw": 9,
+          "horse_id": "HK_2023_J079"
         },
         {
           "no": 4,
           "name": "佳登",
           "jockey_id": "KRW",
           "jockey": "金誠剛",
-          "draw": 11
+          "draw": 10,
+          "horse_id": "HK_2024_K162"
         },
         {
           "no": 5,
           "name": "龍文瑞安",
           "jockey_id": "YML",
           "jockey": "楊明綸",
-          "draw": 6
+          "draw": 5,
+          "horse_id": "HK_2025_L029"
         },
         {
           "no": 6,
           "name": "部族高手",
           "jockey_id": "PZ",
           "jockey": "潘頓",
-          "draw": 1
+          "draw": 1,
+          "horse_id": "HK_2024_K307"
         },
         {
           "no": 7,
           "name": "晉步贏",
           "jockey_id": "LDE",
           "jockey": "梁家俊",
-          "draw": 8
+          "draw": 7,
+          "horse_id": "HK_2025_L269"
         },
         {
           "no": 8,
           "name": "妙算強人",
           "jockey_id": "CML",
           "jockey": "蔡明紹",
-          "draw": 5
+          "draw": 4,
+          "horse_id": "HK_2024_K577"
         },
         {
           "no": 9,
-          "name": "創科群英",
-          "jockey_id": "CJE",
-          "jockey": "周俊樂",
-          "draw": 3
+          "name": "創科群英 (退出)",
+          "horse_id": "HK_2024_K319"
         },
         {
           "no": 10,
           "name": "勝利君子",
           "jockey_id": "WEC",
           "jockey": "黃智弘",
-          "draw": 9
+          "draw": 8,
+          "horse_id": "HK_2025_L061"
         },
         {
           "no": 11,
           "name": "幸福約定",
           "jockey_id": "AA",
           "jockey": "艾兆禮",
-          "draw": 2
+          "draw": 2,
+          "horse_id": "HK_2025_L266"
         }
       ],
-      "scratched": [],
+      "scratched": [
+        9
+      ],
       "distance": 1650,
       "track": "TURF",
       "rail": "B",
@@ -144,22 +154,22 @@
             "rate": 0.8
           },
           {
-            "no": 4,
-            "jockey": "金誠剛",
-            "jockey_id": "KRW",
-            "draw": 11,
-            "placed": 1,
-            "starts": 2,
-            "rate": 0.5
+            "no": 2,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "draw": 3,
+            "placed": 3,
+            "starts": 4,
+            "rate": 0.75
           },
           {
-            "no": 1,
-            "jockey": "奧爾民",
-            "jockey_id": "OJM",
-            "draw": 7,
+            "no": 5,
+            "jockey": "楊明綸",
+            "jockey_id": "YML",
+            "draw": 5,
             "placed": 3,
-            "starts": 7,
-            "rate": 0.42857142857142855
+            "starts": 8,
+            "rate": 0.375
           },
           {
             "no": 11,
@@ -171,12 +181,12 @@
             "rate": 0.375
           },
           {
-            "no": 2,
-            "jockey": "何澤堯",
-            "jockey_id": "HCY",
-            "draw": 4,
-            "placed": 3,
-            "starts": 9,
+            "no": 7,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "draw": 7,
+            "placed": 2,
+            "starts": 6,
             "rate": 0.3333333333333333
           }
         ],
@@ -2494,11 +2504,11 @@
       "hv_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     }
   ],
-  "updated_at": "2026-10-21T18:33:06+08:00",
+  "updated_at": "2026-10-21T18:34:08+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-21T16:40:00+08:00",
-  "heartbeat": "2026-10-21T18:33:06.162641+08:00",
+  "heartbeat": "2026-10-21T18:34:06.162934+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
