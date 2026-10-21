@@ -2490,7 +2490,7 @@
       "score": 0,
       "selection": null,
       "result": null,
-      "locked": false,
+      "locked": true,
       "draw_top5": {
         "status": "ready",
         "start_date": "2026-09-01",
@@ -2601,14 +2601,15 @@
         }
       ],
       "hv_plan_state": "skip",
-      "hv_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
+      "hv_plan_reason": "明治朗首選在膽拖初版前三內，本場不買",
+      "locked_at": "2026-10-21T22:55:06+08:00"
     }
   ],
-  "updated_at": "2026-10-21T22:54:46+08:00",
+  "updated_at": "2026-10-21T22:55:06+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-21T16:40:00+08:00",
-  "heartbeat": "2026-10-21T22:54:46.248043+08:00",
+  "heartbeat": "2026-10-21T22:55:06.248139+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
