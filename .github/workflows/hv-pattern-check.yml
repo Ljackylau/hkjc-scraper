@@ -28,6 +28,8 @@ jobs:
           node --check app.mjs
           node --check strategies.mjs
           node test_strategy_page.mjs
+          node test_strategy_history.mjs
+          node --experimental-vm-modules test_strategy_history_ui.cjs
           node test_sha_tin_patterns.mjs
           node test_hv_patterns.mjs
           node test_manual.mjs

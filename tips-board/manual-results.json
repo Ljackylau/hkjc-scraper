@@ -627,6 +627,84 @@
           },
           "dividend_unit": "HKD per $10 stake, including principal",
           "withdrawn": []
+        },
+        "9": {
+          "horses": [
+            {
+              "placing": "1",
+              "no": 4,
+              "name": "一定掂"
+            },
+            {
+              "placing": "2",
+              "no": 5,
+              "name": "同心同樂"
+            },
+            {
+              "placing": "3",
+              "no": 2,
+              "name": "幸運派彩"
+            },
+            {
+              "placing": "4",
+              "no": 9,
+              "name": "納百川"
+            }
+          ],
+          "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F21&Racecourse=HV&RaceNo=9",
+          "captured_at": "2026-10-21T23:08:41+08:00",
+          "verified_date": "2026-10-21",
+          "verified_race": 9,
+          "dividends": {
+            "W": [
+              {
+                "combination": "4",
+                "dividend_hkd": 64.0
+              }
+            ],
+            "P": [
+              {
+                "combination": "4",
+                "dividend_hkd": 23.0
+              },
+              {
+                "combination": "5",
+                "dividend_hkd": 41.0
+              },
+              {
+                "combination": "2",
+                "dividend_hkd": 14.0
+              }
+            ],
+            "Q": [
+              {
+                "combination": "4,5",
+                "dividend_hkd": 405.0
+              }
+            ],
+            "QP": [
+              {
+                "combination": "4,5",
+                "dividend_hkd": 144.5
+              },
+              {
+                "combination": "2,4",
+                "dividend_hkd": 38.5
+              },
+              {
+                "combination": "2,5",
+                "dividend_hkd": 93.0
+              }
+            ]
+          },
+          "pool_status": {
+            "W": "settled",
+            "P": "settled",
+            "Q": "settled",
+            "QP": "settled"
+          },
+          "dividend_unit": "HKD per $10 stake, including principal",
+          "withdrawn": []
         }
       }
     }
