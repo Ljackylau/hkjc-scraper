@@ -121,7 +121,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -516,7 +516,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -935,7 +935,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -1330,7 +1330,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -1725,7 +1725,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -2144,7 +2144,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -2523,7 +2523,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -2902,7 +2902,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -3313,7 +3313,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -3724,7 +3724,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -4143,7 +4143,7 @@
         }
       },
       "index": {
-        "status": "pending",
+        "status": "disabled",
         "horses": []
       },
       "score": null,
@@ -4426,5 +4426,10 @@
   "tips_checked_at": null,
   "tips_due_at": "2026-10-25T10:40:00+08:00",
   "heartbeat": null,
-  "errors": []
+  "errors": [],
+  "collection_policy": {
+    "index": false,
+    "results": false,
+    "draw_start_date": "2026-09-01"
+  }
 }
