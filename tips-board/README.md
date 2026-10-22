@@ -226,3 +226,12 @@ H=0/1 now require TURF and Meiji's original first pick outside the initial banke
 即場跑法由 `front_forms.py` 收集目標賽日前最近三仗。賠率目前需要有效 `win_odds` 資料物件或頁面本機輸入；沒有完整候選價格，不產生補Win。`combined-live-snapshot.mjs` 不讀歷史賠率；開跑前3分鐘內分別封存主買法與補Win。伺服器封存跨裝置可讀；本機輸入及本機封存只在同一瀏覽器保留。未接入下注收據，實際下注帳保持未有資料。
 
 檢查：`node test_combined_model.mjs`、`node --experimental-vm-modules test_combined_ui.cjs`、`python -m unittest test_front_forms test_collector`。
+
+
+### H=0交集補Win（2026-10-22新增）
+
+保留原每日首三注補Win。其餘場次只限H=0：按膽拖初版五選次序，取出現在明治四選中的第2匹；僅當W>7.5時買$10W。先取原第2交集，該馬退出不補位。原首三注歸屬未明時仍顯示候選及價格條件，但不能確認下注。這個附加方法沒有額外每日三注限制。
+
+`intersectionCandidate()` 不需要賠率或跑法往績即可顯示候選；確認下注仍須原首三注排除及有效賽前價格。封存新增獨立 `secondary_version` / `secondary_finalized` / `secondary_captured_at` / `secondary_input`，不覆寫原主買法或原首三注封存。主買法、原補Win、新交集補Win可分別篩選統計，總覽按場去重。原統計用 `role:original`，現行合計用 `role:combined`。
+
+9月6日至10月21日歷史代理回算：新交集補Win15注、5勝、投入$150、淨利$392；現行合計投入$1,840、淨利$3,544.5。這是調整門檻後的探索回算，非獨立前瞻驗證或實單成績。

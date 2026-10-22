@@ -1,6 +1,7 @@
 import {applyManual,confidenceReason} from './manual-tips.mjs?v=20261021-st-qp';
 import {settle} from './settlement.mjs';
 export const VERSION='confidence-cover-v1-20261022',LAUNCH='2026-10-22',UNIT=10,MAX_COVER=3;
+export const SECONDARY_VERSION='h0-intersection2-gt7.5-v1-20261022';
 export const key=r=>[r.date,r.venue,r.race].join('|');
 const nums=a=>[...new Set((a||[]).map(Number))],active=r=>new Set(r.horses.filter(h=>!nums([...(r.scratched||[]),...(r.result?.withdrawn||[])]).includes(h.no)).map(h=>h.no));
 export const surface=r=>r.venue==='HV'?'HV_TURF':r.track==='AWT'?'ST_AWT':'ST_TURF';
@@ -39,16 +40,17 @@ export function pricedCandidate(candidate,odds){if(candidate.status!=='awaiting_
 export function validSnapshot(s,r){
  const off=Date.parse(r.off),inWindow=t=>Number.isFinite(Date.parse(t))&&Date.parse(t)>=off-180000&&Date.parse(t)<off;
  if(s?.version!==VERSION||s.date!==r.date||s.venue!==r.venue||s.race!==r.race||s.ledger!=='paper'||r.date<LAUNCH||!s.finalized||!s.primary||!s.cover||s.input?.date!==r.date||s.input?.venue!==r.venue||s.input?.race!==r.race)return false;
+ if(s.secondary_finalized&&(s.secondary_version!==SECONDARY_VERSION||!inWindow(s.secondary_captured_at)))return false;
  if(s.primary_finalized&&!inWindow(s.primary_captured_at))return false;
  if(s.cover_finalized&&!inWindow(s.cover_captured_at))return false;
  return !!(s.primary_finalized||s.cover_finalized);
 }
 export function mergeSnapshots(server,local,r){
  const a=validSnapshot(server,r)?server:null,b=validSnapshot(local,r)?local:null;if(!a)return b;if(!b)return a;
- const primary=a.primary_finalized?a:b.primary_finalized?b:a,cover=a.cover_finalized?a:b.cover_finalized?b:a;
- return {...a,primary:structuredClone(primary.primary),primary_finalized:!!primary.primary_finalized,primary_captured_at:primary.primary_captured_at,input:primary.input,cover:structuredClone(cover.cover),cover_finalized:!!cover.cover_finalized,cover_captured_at:cover.cover_captured_at,cover_input:cover.cover_input,finalized:true};
+ const primary=a.primary_finalized?a:b.primary_finalized?b:a,cover=a.cover_finalized?a:b.cover_finalized?b:a,secondary=a.secondary_finalized?a:b.secondary_finalized?b:a;
+ return {...a,secondary:secondary.secondary,secondary_version:secondary.secondary_version,secondary_finalized:!!secondary.secondary_finalized,secondary_captured_at:secondary.secondary_captured_at,secondary_input:secondary.secondary_input,primary:structuredClone(primary.primary),primary_finalized:!!primary.primary_finalized,primary_captured_at:primary.primary_captured_at,input:primary.input,cover:structuredClone(cover.cover),cover_finalized:!!cover.cover_finalized,cover_captured_at:cover.cover_captured_at,cover_input:cover.cover_input,finalized:true};
 }
-export function evaluateMeeting(m,{ledger='replay',archives={},snapshots={},oddsByRace={},now=Date.now(),saved=null}={}){
+function evaluateOriginalMeeting(m,{ledger='replay',archives={},snapshots={},oddsByRace={},now=Date.now(),saved=null}={}){
  const prepared=prepare(m,saved,now),rows=[];let used=0,unknownPrior=false;
  for(const r of [...prepared.races].sort((a,b)=>a.race-b.race)){
   const closed=r.locked||now>=Date.parse(r.off),sealed=mergeSnapshots(r.combined_snapshot,snapshots[r.race],r);
@@ -73,8 +75,40 @@ export function evaluateMeeting(m,{ledger='replay',archives={},snapshots={},odds
  }return rows;
 }
 
+export function intersectionCandidate(r,{archive=null,replay=false}={}){
+ const no=(status,reason,extra={})=>({status,reason,...extra});
+ if(r.score==null)return no('pending','待H條件核實');
+ if(r.score!==0)return no('skip','只限H=0');
+ const tip=r.tips?.meiji;
+ if(tip?.status!=='ready'||tip.source_date&&tip.source_date!==r.date||tip.horses?.length!==4)return no('pending','待同日明治四選');
+ const M=tip.horses.map(h=>Number(h.no));if(new Set(M).size!==4)return no('pending','明治四選重複，待核對');
+ let B=r.banker_initial;
+ if(replay&&(!B||B.status!=='ready')&&archive?.B)B={status:'ready',date:r.date,venue:r.venue,race:r.race,as_of_race_no:0,reason:'initial',numbers:archive.B};
+ if(B?.status!=='ready'||B.date!==r.date||B.venue!==r.venue||Number(B.race)!==r.race||B.as_of_race_no!==0||B.reason!=='initial'||B.numbers?.length!==5||new Set(B.numbers.map(Number)).size!==5)return no('pending','待同場膽拖初版');
+ const intersection=B.numbers.map(Number).filter(n=>M.includes(n)),pick=intersection[1];
+ if(!pick)return no('skip','不足兩個交集，不買',{intersection});
+ if(!active(r).has(pick))return no('skip','原第2個交集已退出，不補位',{intersection,pick});
+ return no('conditional','候選買W：只在臨場賠率>7.5，且本場不屬原首三注補Win時買$10W',{intersection,pick,threshold:7.5});
+}
+export function evaluateMeeting(m,options={}){
+ const {ledger='replay',archives={},snapshots={},oddsByRace={},now=Date.now()}=options;
+ const rows=evaluateOriginalMeeting(m,options);
+ for(const row of rows){const r=row.r,sealed=mergeSnapshots(r.combined_snapshot,snapshots[r.race],r),closed=r.locked||now>=Date.parse(r.off);
+  if(ledger==='paper'&&sealed?.secondary_finalized&&sealed.secondary_version===SECONDARY_VERSION){row.secondary=structuredClone(sealed.secondary);if(row.snapshot)Object.assign(row.snapshot,{secondary:row.secondary,secondary_version:SECONDARY_VERSION,secondary_finalized:true,secondary_captured_at:sealed.secondary_captured_at,secondary_input:sealed.secondary_input});continue;}
+  if(ledger==='paper'&&closed){row.secondary={status:'pending',reason:'未保存本版賽前交集補Win核實，不補造'};continue;}
+  const archive=ledger==='replay'?archives[key(r)]:null,odds=ledger==='replay'?archive?.final_odds||{}:oddsByRace[r.race]||{};let secondary=intersectionCandidate(r,{archive,replay:ledger==='replay'});
+  if(secondary.status==='conditional'){
+   if(row.cover.status==='ready')secondary={...secondary,status:'skip',reason:'本場已屬原首三注補Win，排除交集補Win'};
+   else if(row.cover.status!=='skip')secondary={...secondary,status:'conditional',reason:'候選買W，僅當W>7.5；須先確認本場不屬原首三注補Win'};
+   else if(Number(odds[secondary.pick])>0){const price=Number(odds[secondary.pick]);secondary={...secondary,status:price>7.5?'ready':'skip',odds:price,reason:price>7.5?'H=0第2個交集，W>7.5，買$10W':'W≤7.5，不買交集補Win'};}
+  }
+  row.secondary=secondary;
+  if(row.snapshot){const final=ledger==='paper'&&r.date>=LAUNCH&&!closed&&now>=Date.parse(r.off)-180000&&['ready','skip'].includes(secondary.status);Object.assign(row.snapshot,{secondary_version:SECONDARY_VERSION,secondary:structuredClone(secondary),secondary_finalized:final,secondary_captured_at:final?new Date(now).toISOString():null,secondary_input:final?structuredClone({date:r.date,venue:r.venue,race:r.race,off:r.off,score:r.score,tips:r.tips,banker_initial:r.banker_initial,odds,original_cover:row.cover}):null});if(final)row.snapshot.finalized=true;}
+ }return rows;
+}
+
 export function settledBet(pool,picks,result){const s=settle(pool,picks,result),cost=s.status==='not_offered'?0:s.total*UNIT,returned=s.status==='pending'?null:s.hits.reduce((a,h)=>a+h.dividend,0)+s.refunds*UNIT;return{pool,picks,cost,returned,profit:returned===null?null:returned-cost,status:s.status,hit:s.hits.length>0};}
-export function raceBets(row,role='combined'){let bs=[];if(role!=='cover'&&row.primary.status==='ready')bs=row.primary.bets.map(b=>({...settledBet(b.pool,b.picks,row.r.result),role:'main'}));if(role!=='main'&&row.cover.status==='ready')bs.push({...settledBet('W',[row.cover.pick],row.r.result),role:'cover'});return bs;}
+export function raceBets(row,role='combined'){let bs=[];if(['combined','original','main'].includes(role)&&row.primary.status==='ready')bs=row.primary.bets.map(b=>({...settledBet(b.pool,b.picks,row.r.result),role:'main'}));if(['combined','original','cover'].includes(role)&&row.cover.status==='ready')bs.push({...settledBet('W',[row.cover.pick],row.r.result),role:'cover'});if(['combined','secondary'].includes(role)&&row.secondary?.status==='ready')bs.push({...settledBet('W',[row.secondary.pick],row.r.result),role:'secondary'});return bs;}
 export function summarize(rows,{role='combined',surfaceFilter='all'}={}){
  let cost=0,returned=0,pending_cost=0,bet_races=0,settled_races=0,hits=0,profitable_races=0,pending=0;
  for(const row of rows){if(surfaceFilter!=='all'&&surface(row.r)!==surfaceFilter)continue;const bs=raceBets(row,role);if(!bs.length)continue;bet_races++;for(const b of bs){if(b.returned===null){pending++;pending_cost+=b.cost}else{cost+=b.cost;returned+=b.returned;}}

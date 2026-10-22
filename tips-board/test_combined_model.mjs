@@ -1,10 +1,10 @@
 import fs from 'node:fs';import assert from 'node:assert/strict';
-import {evaluateMeeting,summarize,fourCandidate,pricedCandidate,mergeSnapshots,VERSION} from './combined-model.mjs';
+import {evaluateMeeting,summarize,fourCandidate,pricedCandidate,mergeSnapshots,VERSION,intersectionCandidate} from './combined-model.mjs';
 import {mergeManualResults} from './manual-results.mjs';
 const read=f=>JSON.parse(fs.readFileSync(new URL(f,import.meta.url))),archives=read('./combined-archives.json').races,overlay=read('./manual-results.json');
 const dates=[...new Set(Object.values(archives).map(x=>x.date))].sort(),all=[];
 for(const date of dates){const m=mergeManualResults(read('./roi-meetings/'+date+'.json'),overlay),rows=evaluateMeeting(m,{archives});assert.equal(rows.filter(x=>x.cover.status==='ready').length,3);all.push(...rows)}
-assert.equal(summarize(all).cost,1690);assert.equal(summarize(all).profit,3152.5);assert.equal(summarize(all,{role:'main'}).profit,1524);assert.equal(summarize(all,{role:'cover'}).profit,1628.5);
+assert.equal(summarize(all,{role:'original'}).cost,1690);assert.equal(summarize(all,{role:'original'}).profit,3152.5);assert.equal(summarize(all).cost,1840);assert.equal(summarize(all).profit,3544.5);assert.equal(summarize(all,{role:'secondary'}).cost,150);assert.equal(summarize(all,{role:'secondary'}).profit,392);assert.equal(summarize(all,{role:'secondary'}).hits,5);assert.equal(summarize(all,{role:'main'}).profit,1524);assert.equal(summarize(all,{role:'cover'}).profit,1628.5);
 for(const surfaceFilter of ['ST_TURF','HV_TURF','ST_AWT'])console.log(surfaceFilter,summarize(all,{surfaceFilter}));
 const m=structuredClone(read('./roi-meetings/2026-10-21.json'));m.date='2026-10-23';m.races=m.races.slice(1,2);const r=m.races[0];Object.assign(r,{date:m.date,venue:m.venue,race:1,off:'2026-10-23T19:00:00+08:00',locked:false,result:null,scratched:[]});for(const tip of Object.values(r.tips))tip.source_date=m.date;Object.assign(r.banker_initial,{date:m.date,race:1});
 r.tips.meiji={status:'ready',source_date:m.date,horses:r.horses.slice(0,4).map(h=>({no:h.no,name:h.name}))};r.banker_initial.numbers=r.horses.slice(0,5).map(h=>h.no);
@@ -18,3 +18,13 @@ const unknown=structuredClone(r);unknown.front_support.forms[a].status='error';a
 const many=structuredClone(m);many.races=Array.from({length:5},(_,i)=>({...structuredClone(r),race:i+1,off:new Date(Date.parse(r.off)+i*1800000).toISOString(),banker_initial:{...r.banker_initial,race:i+1},front_support:{...r.front_support,race:i+1}}));const out=evaluateMeeting(many,{ledger:'paper',now:before,oddsByRace:Object.fromEntries(many.races.map(x=>[x.race,odds]))});assert.equal(out.filter(x=>x.cover.status==='ready').length,3);assert.equal(out[3].cover.status,'skip');
 const missing=evaluateMeeting(many,{ledger:'paper',now:before,oddsByRace:{2:odds,3:odds}});assert.equal(missing[1].cover.status,'pending');assert.match(missing[1].cover.reason,/前場/);
 console.log('Combined portfolio: historical reconciliation, chronological cap, independent sealing, incomplete prices, no postoff backfill and snapshot merge passed.');
+
+const fourth=out[3];assert.equal(fourth.secondary.status,'conditional');assert.equal(fourth.secondary.pick,r.horses[1].no);assert.equal(out[0].secondary.status,'skip');assert.match(out[0].secondary.reason,/原首三注/);assert.equal(fourth.secondary.threshold,7.5);
+const intersectionHorse=fourth.secondary.pick,liveOdds=Object.fromEntries(many.races.map(x=>[x.race,{...odds,[intersectionHorse]:7.5}]));
+let cross=evaluateMeeting(many,{ledger:'paper',now:before,oddsByRace:liveOdds});assert.equal(cross[3].secondary.status,'skip');assert.match(cross[3].secondary.reason,/≤7.5/);
+liveOdds[4][intersectionHorse]=7.6;cross=evaluateMeeting(many,{ledger:'paper',now:before,oddsByRace:liveOdds});assert.equal(cross[3].secondary.status,'ready');assert(cross[3].snapshot.secondary_finalized===false,'later race remains preview until its own T-3');
+const freezeTime=Date.parse(many.races[3].off)-120000;const priorSnapshots=Object.fromEntries(cross.slice(0,3).map(x=>[x.r.race,{...x.snapshot,cover_finalized:true,primary_finalized:true,primary_captured_at:new Date(Date.parse(x.r.off)-120000).toISOString(),cover_captured_at:new Date(Date.parse(x.r.off)-120000).toISOString(),finalized:true}]));
+let sealedCross=evaluateMeeting(many,{ledger:'paper',now:freezeTime,snapshots:priorSnapshots,oddsByRace:liveOdds})[3];assert(sealedCross.snapshot.secondary_finalized);const ss=sealedCross.snapshot;
+sealedCross=evaluateMeeting(many,{ledger:'paper',now:Date.parse(many.races[3].off)+1,snapshots:{...priorSnapshots,4:ss},oddsByRace:{4:{[intersectionHorse]:1}}})[3];assert.equal(sealedCross.secondary.status,'ready');assert.equal(sealedCross.secondary.odds,7.6);
+const h1=structuredClone(r);h1.score=1;assert.equal(intersectionCandidate(h1).status,'skip');const scratched=structuredClone(r);scratched.scratched=[intersectionHorse];assert.equal(intersectionCandidate(scratched).status,'skip');const stale=structuredClone(r);stale.tips.meiji.source_date='2026-10-20';assert.equal(intersectionCandidate(stale).status,'pending');
+console.log('Intersection supplement: candidate visible without prices, strict >7.5, first-three exclusion, H/date/scratch validation and independent preoff sealing passed.');
