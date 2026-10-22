@@ -1,0 +1,1099 @@
+{
+  "before_date": "2026-10-04",
+  "stats": {
+    "st2": {
+      "cost": 90,
+      "profit": -29.5,
+      "n": 3,
+      "hits": 2,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27"
+      ],
+      "maxreturn": 31.5
+    },
+    "basic-STTURF2M1W": {
+      "cost": 30,
+      "profit": -8.5,
+      "n": 3,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27"
+      ],
+      "maxreturn": 21.5
+    },
+    "basic-STTURF2M2W": {
+      "cost": 30,
+      "profit": -13,
+      "n": 3,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27"
+      ],
+      "maxreturn": 17
+    },
+    "cold-ST_all_min0_M1": {
+      "cost": 130,
+      "profit": 2.5,
+      "n": 13,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_all_min0_M4": {
+      "cost": 600,
+      "profit": -379,
+      "n": 60,
+      "hits": 2,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_all_min1_M1": {
+      "cost": 40,
+      "profit": 92.5,
+      "n": 4,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_all_min1_M4": {
+      "cost": 150,
+      "profit": -17.5,
+      "n": 15,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_all_min8_M1": {
+      "cost": 30,
+      "profit": 102.5,
+      "n": 3,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-27"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_all_min8_M4": {
+      "cost": 110,
+      "profit": 22.5,
+      "n": 11,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "basic-STTURF0M1W": {
+      "cost": 240,
+      "profit": 105.5,
+      "n": 24,
+      "hits": 7,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "basic-STTURF0M2W": {
+      "cost": 240,
+      "profit": -193,
+      "n": 24,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 47
+    },
+    "cold-ST_H0_min0_M4": {
+      "cost": 380,
+      "profit": -159,
+      "n": 38,
+      "hits": 2,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_H0_min0_union": {
+      "cost": 460,
+      "profit": -98,
+      "n": 46,
+      "hits": 3,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 141
+    },
+    "cold-ST_H0_min0_both": {
+      "cost": 210,
+      "profit": -121.5,
+      "n": 21,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 88.5
+    },
+    "cold-ST_H0_min1_union": {
+      "cost": 220,
+      "profit": -87.5,
+      "n": 22,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_all_min1_MnotB": {
+      "cost": 100,
+      "profit": 32.5,
+      "n": 10,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_all_min8_MnotB": {
+      "cost": 80,
+      "profit": 52.5,
+      "n": 8,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_H0_min1_M4": {
+      "cost": 90,
+      "profit": 42.5,
+      "n": 9,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_H0_min1_MnotB": {
+      "cost": 70,
+      "profit": 62.5,
+      "n": 7,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_H0_min8_M4": {
+      "cost": 60,
+      "profit": 72.5,
+      "n": 6,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_H0_min8_MnotB": {
+      "cost": 50,
+      "profit": 82.5,
+      "n": 5,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "st0": {
+      "cost": 450,
+      "profit": 635,
+      "n": 15,
+      "hits": 9,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 233.5
+    },
+    "cold-ST_all_min0_B1": {
+      "cost": 60,
+      "profit": 28.5,
+      "n": 6,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 88.5
+    },
+    "cold-ST_H0_min0_M1": {
+      "cost": 80,
+      "profit": 52.5,
+      "n": 8,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_H0_min0_B1": {
+      "cost": 50,
+      "profit": 38.5,
+      "n": 5,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 88.5
+    },
+    "st1": {
+      "cost": 120,
+      "profit": 137,
+      "n": 4,
+      "hits": 4,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 85.5
+    },
+    "basic-STTURF1M1W": {
+      "cost": 120,
+      "profit": -79.5,
+      "n": 12,
+      "hits": 2,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 21.5
+    },
+    "basic-STTURF1M2W": {
+      "cost": 120,
+      "profit": -84.5,
+      "n": 12,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 35.5
+    },
+    "basic-HVTURF0J1P": {
+      "cost": 150,
+      "profit": -86.5,
+      "n": 15,
+      "hits": 3,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 25.5
+    },
+    "basic-HVTURF0J2P": {
+      "cost": 150,
+      "profit": 33.5,
+      "n": 15,
+      "hits": 8,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 57.5
+    },
+    "basic-HVTURF0M1W": {
+      "cost": 150,
+      "profit": -106,
+      "n": 15,
+      "hits": 1,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 44
+    },
+    "basic-HVTURF0M2W": {
+      "cost": 150,
+      "profit": 80.5,
+      "n": 15,
+      "hits": 3,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 87
+    },
+    "hv-j2-outside": {
+      "cost": 40,
+      "profit": 33.5,
+      "n": 4,
+      "hits": 2,
+      "days": [
+        "2026-09-09",
+        "2026-09-23"
+      ],
+      "maxreturn": 57.5
+    },
+    "cold-HV_all_min0_M1": {
+      "cost": 80,
+      "profit": 23,
+      "n": 8,
+      "hits": 1,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 103
+    },
+    "cold-HV_all_min1_M1": {
+      "cost": 40,
+      "profit": 63,
+      "n": 4,
+      "hits": 1,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 103
+    },
+    "cold-HV_all_min1_M4": {
+      "cost": 120,
+      "profit": 70,
+      "n": 12,
+      "hits": 2,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 103
+    },
+    "cold-HV_all_min1_both": {
+      "cost": 60,
+      "profit": 130,
+      "n": 6,
+      "hits": 2,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 103
+    },
+    "cold-HV_all_min8_M1": {
+      "cost": 30,
+      "profit": 73,
+      "n": 3,
+      "hits": 1,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 103
+    },
+    "cold-HV_all_min8_M4": {
+      "cost": 100,
+      "profit": 90,
+      "n": 10,
+      "hits": 2,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 103
+    },
+    "cold-HV_all_min8_both": {
+      "cost": 60,
+      "profit": 130,
+      "n": 6,
+      "hits": 2,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 103
+    },
+    "cold-HV_H0_min0_M1": {
+      "cost": 50,
+      "profit": -50,
+      "n": 5,
+      "hits": 0,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_H0_min1_both": {
+      "cost": 40,
+      "profit": 47,
+      "n": 4,
+      "hits": 1,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 87
+    },
+    "cold-HV_H0_min8_both": {
+      "cost": 40,
+      "profit": 47,
+      "n": 4,
+      "hits": 1,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 87
+    },
+    "hv3": {
+      "cost": 30,
+      "profit": 15.5,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 45.5
+    },
+    "basic-HVTURF3J1P": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "basic-HVTURF3J2P": {
+      "cost": 10,
+      "profit": 4.5,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 14.5
+    },
+    "basic-HVTURF3M1W": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "basic-HVTURF3M2W": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "hv0": {
+      "cost": 80,
+      "profit": 56.5,
+      "n": 8,
+      "hits": 5,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 57.5
+    },
+    "hv1": {
+      "cost": 60,
+      "profit": 72,
+      "n": 6,
+      "hits": 4,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 45
+    },
+    "hvcover1": {
+      "cost": 80,
+      "profit": 123,
+      "n": 8,
+      "hits": 2,
+      "days": [
+        "2026-09-09",
+        "2026-09-16"
+      ],
+      "maxreturn": 109
+    },
+    "basic-HVTURF1J1P": {
+      "cost": 60,
+      "profit": -22,
+      "n": 6,
+      "hits": 3,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 15
+    },
+    "basic-HVTURF1J2P": {
+      "cost": 60,
+      "profit": -44,
+      "n": 6,
+      "hits": 1,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 16
+    },
+    "basic-HVTURF1M1W": {
+      "cost": 60,
+      "profit": -60,
+      "n": 6,
+      "hits": 0,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 0
+    },
+    "basic-HVTURF1M2W": {
+      "cost": 60,
+      "profit": -60,
+      "n": 6,
+      "hits": 0,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 0
+    },
+    "hv-legacy-q": {
+      "cost": 60,
+      "profit": -60,
+      "n": 6,
+      "hits": 0,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_all_min0_M2": {
+      "cost": 110,
+      "profit": 58,
+      "n": 11,
+      "hits": 2,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 87
+    },
+    "cold-HV_all_min1_M2": {
+      "cost": 20,
+      "profit": 67,
+      "n": 2,
+      "hits": 1,
+      "days": [
+        "2026-09-09",
+        "2026-09-23"
+      ],
+      "maxreturn": 87
+    },
+    "cold-HV_all_min8_M2": {
+      "cost": 20,
+      "profit": 67,
+      "n": 2,
+      "hits": 1,
+      "days": [
+        "2026-09-09",
+        "2026-09-23"
+      ],
+      "maxreturn": 87
+    },
+    "cold-HV_H0_min0_M2": {
+      "cost": 60,
+      "profit": 108,
+      "n": 6,
+      "hits": 2,
+      "days": [
+        "2026-09-09",
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 87
+    },
+    "basic-STTURF0J1P": {
+      "cost": 180,
+      "profit": 44.5,
+      "n": 18,
+      "hits": 4,
+      "days": [
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 161.5
+    },
+    "basic-STTURF0J2P": {
+      "cost": 180,
+      "profit": -20,
+      "n": 18,
+      "hits": 4,
+      "days": [
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 70.5
+    },
+    "cold-ST_all_min0_unionJ": {
+      "cost": 420,
+      "profit": -279,
+      "n": 42,
+      "hits": 1,
+      "days": [
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 141
+    },
+    "cold-ST_H0_min0_unionJ": {
+      "cost": 250,
+      "profit": -109,
+      "n": 25,
+      "hits": 1,
+      "days": [
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 141
+    },
+    "basic-STTURF1J1P": {
+      "cost": 90,
+      "profit": 38.5,
+      "n": 9,
+      "hits": 2,
+      "days": [
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 97
+    },
+    "basic-STTURF1J2P": {
+      "cost": 90,
+      "profit": 12,
+      "n": 9,
+      "hits": 5,
+      "days": [
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 37.5
+    },
+    "cold-ST_H0_min1_unionJ": {
+      "cost": 60,
+      "profit": -60,
+      "n": 6,
+      "hits": 0,
+      "days": [
+        "2026-09-13",
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min8_unionJ": {
+      "cost": 30,
+      "profit": -30,
+      "n": 3,
+      "hits": 0,
+      "days": [
+        "2026-09-13",
+        "2026-09-27"
+      ],
+      "maxreturn": 0
+    },
+    "basic-STTURF2J1P": {
+      "cost": 20,
+      "profit": 9,
+      "n": 2,
+      "hits": 1,
+      "days": [
+        "2026-09-13",
+        "2026-09-27"
+      ],
+      "maxreturn": 29
+    },
+    "basic-STTURF2J2P": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-13",
+        "2026-09-27"
+      ],
+      "maxreturn": 0
+    },
+    "hv2": {
+      "cost": 90,
+      "profit": 100.5,
+      "n": 3,
+      "hits": 3,
+      "days": [
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 118.5
+    },
+    "basic-HVTURF2J1P": {
+      "cost": 30,
+      "profit": -1,
+      "n": 3,
+      "hits": 2,
+      "days": [
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 17.5
+    },
+    "basic-HVTURF2J2P": {
+      "cost": 30,
+      "profit": -11.5,
+      "n": 3,
+      "hits": 1,
+      "days": [
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 18.5
+    },
+    "basic-HVTURF2M1W": {
+      "cost": 30,
+      "profit": 73,
+      "n": 3,
+      "hits": 1,
+      "days": [
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 103
+    },
+    "basic-HVTURF2M2W": {
+      "cost": 30,
+      "profit": -9.5,
+      "n": 3,
+      "hits": 1,
+      "days": [
+        "2026-09-16",
+        "2026-09-23"
+      ],
+      "maxreturn": 20.5
+    },
+    "hvcommon2": {
+      "cost": 10,
+      "profit": 93,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-23"
+      ],
+      "maxreturn": 103
+    },
+    "hvd-M2draw_D3": {
+      "cost": 10,
+      "profit": 77,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-23"
+      ],
+      "maxreturn": 87
+    },
+    "hvd-M2draw_D3_rail_min8": {
+      "cost": 10,
+      "profit": 77,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-23"
+      ],
+      "maxreturn": 87
+    },
+    "cold-HV_H0_min1_M2": {
+      "cost": 10,
+      "profit": 77,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-23"
+      ],
+      "maxreturn": 87
+    },
+    "cold-HV_H0_min8_M2": {
+      "cost": 10,
+      "profit": 77,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-23"
+      ],
+      "maxreturn": 87
+    },
+    "basic-STAWT0J1P": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-27"
+      ],
+      "maxreturn": 0
+    },
+    "basic-STAWT0J2P": {
+      "cost": 20,
+      "profit": 27.5,
+      "n": 2,
+      "hits": 1,
+      "days": [
+        "2026-09-27"
+      ],
+      "maxreturn": 47.5
+    },
+    "basic-STAWT0M1W": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-27"
+      ],
+      "maxreturn": 0
+    },
+    "basic-STAWT0M2W": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-27"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min1_M1": {
+      "cost": 20,
+      "profit": 112.5,
+      "n": 2,
+      "hits": 1,
+      "days": [
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 132.5
+    },
+    "cold-ST_H0_min8_M1": {
+      "cost": 10,
+      "profit": 122.5,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-27"
+      ],
+      "maxreturn": 132.5
+    },
+    "aw2": {
+      "cost": 30,
+      "profit": -10,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-27"
+      ],
+      "maxreturn": 20
+    },
+    "basic-STAWT2J1P": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-27"
+      ],
+      "maxreturn": 0
+    },
+    "basic-STAWT2J2P": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-27"
+      ],
+      "maxreturn": 0
+    },
+    "basic-STAWT2M1W": {
+      "cost": 10,
+      "profit": 7.5,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-27"
+      ],
+      "maxreturn": 17.5
+    },
+    "basic-STAWT2M2W": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-27"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min1_both": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-27",
+        "2026-10-01"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min8_both": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-27"
+      ],
+      "maxreturn": 0
+    }
+  },
+  "assignments": {
+    "HV|TURF|0": null,
+    "HV|TURF|1": null,
+    "HV|TURF|2": null,
+    "HV|TURF|3": null,
+    "ST|TURF|0": "st0",
+    "ST|TURF|1": null,
+    "ST|TURF|2": null,
+    "ST|TURF|3": null,
+    "ST|AWT|0": null,
+    "ST|AWT|1": null,
+    "ST|AWT|2": null,
+    "ST|AWT|3": null
+  }
+}

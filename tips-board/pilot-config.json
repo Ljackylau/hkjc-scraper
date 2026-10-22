@@ -1,0 +1,25 @@
+{
+  "version": "stable-paper-v1-20261022",
+  "stage": "paper",
+  "launched_on": "2026-10-22",
+  "trained_through": "2026-10-21",
+  "min_samples": 10,
+  "min_days": 3,
+  "freeze_minutes": 3,
+  "daily_stake_limit": 60,
+  "selection": "One fixed exact venue/track/H method per version, ranked once by profit excluding largest payout / cost; no fallback.",
+  "assignments": {
+    "HV|TURF|0": "hv0",
+    "HV|TURF|1": "hv1",
+    "HV|TURF|2": null,
+    "HV|TURF|3": null,
+    "ST|TURF|0": "st0",
+    "ST|TURF|1": null,
+    "ST|TURF|2": null,
+    "ST|TURF|3": null,
+    "ST|AWT|0": null,
+    "ST|AWT|1": null,
+    "ST|AWT|2": null,
+    "ST|AWT|3": null
+  }
+}

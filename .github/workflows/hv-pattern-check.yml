@@ -30,6 +30,7 @@ jobs:
           node test_strategy_page.mjs
           node test_strategy_history.mjs
           node test_roi_policy.mjs
+          node test_pilot_model.mjs
           node --experimental-vm-modules test_roi_ui.cjs
           node --experimental-vm-modules test_strategy_history_ui.cjs
           node test_sha_tin_patterns.mjs
@@ -40,4 +41,5 @@ jobs:
       - name: Collector and pattern regression
         working-directory: tips-board
         run: python -m unittest test_hv_patterns test_collector test_sha_tin_patterns
+
 

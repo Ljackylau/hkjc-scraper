@@ -1,0 +1,743 @@
+{
+  "before_date": "2026-09-16",
+  "stats": {
+    "st2": {
+      "cost": 60,
+      "profit": -31,
+      "n": 2,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 29
+    },
+    "basic-STTURF2M1W": {
+      "cost": 20,
+      "profit": 1.5,
+      "n": 2,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 21.5
+    },
+    "basic-STTURF2M2W": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_all_min0_M1": {
+      "cost": 60,
+      "profit": -60,
+      "n": 6,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_all_min0_M4": {
+      "cost": 310,
+      "profit": -310,
+      "n": 31,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_all_min1_M1": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-06"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_all_min1_M4": {
+      "cost": 90,
+      "profit": -90,
+      "n": 9,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_all_min8_M1": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-06"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_all_min8_M4": {
+      "cost": 70,
+      "profit": -70,
+      "n": 7,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "basic-STTURF0M1W": {
+      "cost": 120,
+      "profit": 35,
+      "n": 12,
+      "hits": 5,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 46.5
+    },
+    "basic-STTURF0M2W": {
+      "cost": 120,
+      "profit": -120,
+      "n": 12,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min0_M4": {
+      "cost": 200,
+      "profit": -200,
+      "n": 20,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min0_union": {
+      "cost": 230,
+      "profit": -230,
+      "n": 23,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min0_both": {
+      "cost": 110,
+      "profit": -110,
+      "n": 11,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min1_union": {
+      "cost": 110,
+      "profit": -110,
+      "n": 11,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_all_min1_MnotB": {
+      "cost": 60,
+      "profit": -60,
+      "n": 6,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_all_min8_MnotB": {
+      "cost": 50,
+      "profit": -50,
+      "n": 5,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min1_M4": {
+      "cost": 40,
+      "profit": -40,
+      "n": 4,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min1_MnotB": {
+      "cost": 40,
+      "profit": -40,
+      "n": 4,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min8_M4": {
+      "cost": 30,
+      "profit": -30,
+      "n": 3,
+      "hits": 0,
+      "days": [
+        "2026-09-06"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min8_MnotB": {
+      "cost": 30,
+      "profit": -30,
+      "n": 3,
+      "hits": 0,
+      "days": [
+        "2026-09-06"
+      ],
+      "maxreturn": 0
+    },
+    "st0": {
+      "cost": 180,
+      "profit": 52.5,
+      "n": 6,
+      "hits": 3,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 119
+    },
+    "cold-ST_all_min0_B1": {
+      "cost": 30,
+      "profit": -30,
+      "n": 3,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min0_M1": {
+      "cost": 40,
+      "profit": -40,
+      "n": 4,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min0_B1": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "st1": {
+      "cost": 60,
+      "profit": 68.5,
+      "n": 2,
+      "hits": 2,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 70
+    },
+    "basic-STTURF1M1W": {
+      "cost": 60,
+      "profit": -38.5,
+      "n": 6,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 21.5
+    },
+    "basic-STTURF1M2W": {
+      "cost": 60,
+      "profit": -24.5,
+      "n": 6,
+      "hits": 1,
+      "days": [
+        "2026-09-06",
+        "2026-09-13"
+      ],
+      "maxreturn": 35.5
+    },
+    "basic-HVTURF0J1P": {
+      "cost": 50,
+      "profit": -4.5,
+      "n": 5,
+      "hits": 2,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 25.5
+    },
+    "basic-HVTURF0J2P": {
+      "cost": 50,
+      "profit": -9.5,
+      "n": 5,
+      "hits": 2,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 21
+    },
+    "basic-HVTURF0M1W": {
+      "cost": 50,
+      "profit": -6,
+      "n": 5,
+      "hits": 1,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 44
+    },
+    "basic-HVTURF0M2W": {
+      "cost": 50,
+      "profit": -50,
+      "n": 5,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "hv-j2-outside": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_all_min0_M1": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_all_min1_M1": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_all_min1_M4": {
+      "cost": 40,
+      "profit": -40,
+      "n": 4,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_all_min1_both": {
+      "cost": 30,
+      "profit": -30,
+      "n": 3,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_all_min8_M1": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_all_min8_M4": {
+      "cost": 40,
+      "profit": -40,
+      "n": 4,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_all_min8_both": {
+      "cost": 30,
+      "profit": -30,
+      "n": 3,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_H0_min0_M1": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_H0_min1_both": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_H0_min8_both": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "hv3": {
+      "cost": 30,
+      "profit": 15.5,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 45.5
+    },
+    "basic-HVTURF3J1P": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "basic-HVTURF3J2P": {
+      "cost": 10,
+      "profit": 4.5,
+      "n": 1,
+      "hits": 1,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 14.5
+    },
+    "basic-HVTURF3M1W": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "basic-HVTURF3M2W": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "hv0": {
+      "cost": 30,
+      "profit": 10.5,
+      "n": 3,
+      "hits": 2,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 21
+    },
+    "hv1": {
+      "cost": 20,
+      "profit": 0.5,
+      "n": 2,
+      "hits": 1,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 20.5
+    },
+    "hvcover1": {
+      "cost": 40,
+      "profit": 54,
+      "n": 4,
+      "hits": 1,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 94
+    },
+    "basic-HVTURF1J1P": {
+      "cost": 20,
+      "profit": -9.5,
+      "n": 2,
+      "hits": 1,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 10.5
+    },
+    "basic-HVTURF1J2P": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "basic-HVTURF1M1W": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "basic-HVTURF1M2W": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "hv-legacy-q": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_all_min0_M2": {
+      "cost": 20,
+      "profit": -20,
+      "n": 2,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_all_min1_M2": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_all_min8_M2": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "cold-HV_H0_min0_M2": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-09"
+      ],
+      "maxreturn": 0
+    },
+    "basic-STTURF0J1P": {
+      "cost": 60,
+      "profit": 101.5,
+      "n": 6,
+      "hits": 1,
+      "days": [
+        "2026-09-13"
+      ],
+      "maxreturn": 161.5
+    },
+    "basic-STTURF0J2P": {
+      "cost": 60,
+      "profit": 10.5,
+      "n": 6,
+      "hits": 1,
+      "days": [
+        "2026-09-13"
+      ],
+      "maxreturn": 70.5
+    },
+    "cold-ST_all_min0_unionJ": {
+      "cost": 160,
+      "profit": -160,
+      "n": 16,
+      "hits": 0,
+      "days": [
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min0_unionJ": {
+      "cost": 80,
+      "profit": -80,
+      "n": 8,
+      "hits": 0,
+      "days": [
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "basic-STTURF1J1P": {
+      "cost": 30,
+      "profit": -30,
+      "n": 3,
+      "hits": 0,
+      "days": [
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "basic-STTURF1J2P": {
+      "cost": 30,
+      "profit": -17,
+      "n": 3,
+      "hits": 1,
+      "days": [
+        "2026-09-13"
+      ],
+      "maxreturn": 13
+    },
+    "cold-ST_H0_min1_unionJ": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "cold-ST_H0_min8_unionJ": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "basic-STTURF2J1P": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    },
+    "basic-STTURF2J2P": {
+      "cost": 10,
+      "profit": -10,
+      "n": 1,
+      "hits": 0,
+      "days": [
+        "2026-09-13"
+      ],
+      "maxreturn": 0
+    }
+  },
+  "assignments": {
+    "HV|TURF|0": null,
+    "HV|TURF|1": null,
+    "HV|TURF|2": null,
+    "HV|TURF|3": null,
+    "ST|TURF|0": null,
+    "ST|TURF|1": null,
+    "ST|TURF|2": null,
+    "ST|TURF|3": null,
+    "ST|AWT|0": null,
+    "ST|AWT|1": null,
+    "ST|AWT|2": null,
+    "ST|AWT|3": null
+  }
+}

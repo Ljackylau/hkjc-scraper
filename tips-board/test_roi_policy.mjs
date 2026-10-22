@@ -21,4 +21,4 @@ assert(!/天喜|tianxi|txLegacy|tx0/.test(JSON.stringify(registry)));
 assert(Object.values(replay.inputs).every(i=>!('T' in i)&&!('T_first_only' in i)));
 assert(Object.keys(json('./roi-stats/after.json')).every(id=>registry.methods.some(m=>m.id===id)));
 assert(!/天喜|tianxi|hkjc-roi-tx/.test(fs.readFileSync(new URL('./roi-ui.mjs',import.meta.url),'utf8')));
-console.log('Removed source: catalogue, replay input, ranking history and UI contain no removed-source inputs.');
+console.log('Removed source remains excluded from research catalogue and archives.');
