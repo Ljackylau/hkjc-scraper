@@ -14,6 +14,7 @@ from hv_patterns import choose_hv
 import jockey_top5
 import draw_stats
 import st_coldwin
+import front_forms
 HK=ZoneInfo('Asia/Hong_Kong')
 ONCC='https://racing.on.cc/racing/fav/current/rjfavf0201x0.html'
 ST='https://racing.stheadline.com/api'
@@ -131,7 +132,7 @@ def collect_tips(meeting):
                 if r['tips'][key]['status']=='pending':r['tips'][key]={'status':'error','horses':[],'error':str(e)}
     for r in meeting['races']:choose(r)
     capture_four(meeting,request,stamp,now)
-    st_coldwin.collect(meeting,request,stamp,now,safe_horses)
+    front_forms.collect(meeting,request,stamp,now)
 
 def retry_missing_meiji(meeting):
     """Retry incomplete Meiji sources before off; preserve valid tips and locks."""
@@ -255,13 +256,13 @@ class Store:
         # rewrite locked predictions or use post-race prices in selection.
         if any(not r.get('locked') and now()<datetime.fromisoformat(r['off']) for r in m['races']):
             try:
-                task=Path(__file__).with_name('roi-live-snapshot.mjs')
+                task=Path(__file__).with_name('combined-live-snapshot.mjs')
                 if task.exists():
                     result=subprocess.run(['node',str(task),str(self.path.resolve())],input=json.dumps(m,ensure_ascii=False),capture_output=True,text=True,check=True,timeout=15)
                     snapshots=json.loads(result.stdout)
                     for r in m['races']:
-                        if not r.get('locked') and now()<datetime.fromisoformat(r['off']) and str(r['race']) in snapshots:r['roi_strategy']=snapshots[str(r['race'])]
-            except Exception as exc:m['roi_strategy_error']=str(exc)
+                        if not r.get('locked') and now()<datetime.fromisoformat(r['off']) and str(r['race']) in snapshots:r['combined_snapshot']=snapshots[str(r['race'])]
+            except Exception as exc:m['combined_snapshot_error']=str(exc)
         m['updated_at']=stamp();self.write(m['date']+'.json',m);self.write('latest.json',m)
         hist=self.read('history.json',{'meetings':[]});row={'date':m['date'],'venue':m['venue'],'status':m['status'],'complete':all(r['result'] for r in m['races']),'results_enabled':m.get('collection_policy',{}).get('results',True)}
         if m['status']=='archived':
@@ -360,7 +361,7 @@ def run(store,date,mode):
     draw_history=prepare_draws(store,m)
     if mode=='manual':
         if (store.read('latest.json') or {}).get('date')!=date:raise ValueError('Manual collection is restricted to the latest meeting')
-        collect_manual(m);store.save(m);return
+        collect_manual(m);front_forms.collect(m,request,stamp,now);store.save(m);return
     due=datetime.fromisoformat(m['tips_due_at'])
     if mode=='tips':
         while now()<due:time.sleep(min(20,max(0,(due-now()).total_seconds())))
@@ -374,7 +375,7 @@ def run(store,date,mode):
             capture_four(m,request,stamp,now)
             prepare_draws(store,m,draw_history)
             retry_missing_meiji(m)
-            st_coldwin.collect(m,request,stamp,now,safe_horses)
+            front_forms.collect(m,request,stamp,now)
             t=now()
         # Respect single preflight check. Live mode never silently fetches the experts again.
         for r in m['races']:

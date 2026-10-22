@@ -215,3 +215,14 @@ The browser labels historical replays as recalculated and leaves source records 
 ## Sha Tin turf confidence-only QP (2026-10-21)
 
 H=0/1 now require TURF and Meiji's original first pick outside the initial banker/leg1/leg2. Keep the existing new-D (H0) and M3+T2+T3/fallback (H1) three-runner selection order, but buy only three Quinella Place combinations at $10 each. Skip AWT and failed gates; incomplete sources remain pending. H=2/3 and Happy Valley rules are unchanged. The display labels historical recalculation without overwriting original archive tickets. New-method pre-off snapshots stay frozen after off.
+
+
+## 2026-10-22：主買法＋每日首三注補Win
+
+入口只保留 `index.html`（最新賽日）與 `history.html`（歷史紀錄）；兩者共用 `board.mjs`、`combined-model.mjs` 的選馬及結算。舊 `strategies.html` 和 `strategy-history.html` 已移除。
+
+主買法沿用原信心場主要彩池。補Win按原四選第4匹、跑法前五未重複候選最高W賠率>10、每日首三注，每注$10。歷史回算使用 `combined-archives.json` 的最終賠率代理；不代表賽前封存或實際下注。歷史統計以去重後的下注場數作命中率分母。
+
+即場跑法由 `front_forms.py` 收集目標賽日前最近三仗。賠率目前需要有效 `win_odds` 資料物件或頁面本機輸入；沒有完整候選價格，不產生補Win。`combined-live-snapshot.mjs` 不讀歷史賠率；開跑前3分鐘內分別封存主買法與補Win。伺服器封存跨裝置可讀；本機輸入及本機封存只在同一瀏覽器保留。未接入下注收據，實際下注帳保持未有資料。
+
+檢查：`node test_combined_model.mjs`、`node --experimental-vm-modules test_combined_ui.cjs`、`python -m unittest test_front_forms test_collector`。
