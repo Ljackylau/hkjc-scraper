@@ -11535,6 +11535,87 @@
     {
       "date": "2026-10-21",
       "venue": "HV",
+      "race": 1,
+      "distance": 1650,
+      "track": "TURF",
+      "rail": "B",
+      "runners": [
+        {
+          "no": 6,
+          "jockey_id": "PZ",
+          "jockey": "潘頓",
+          "top3": true,
+          "draw": 1
+        },
+        {
+          "no": 11,
+          "jockey_id": "AA",
+          "jockey": "艾兆禮",
+          "top3": true,
+          "draw": 2
+        },
+        {
+          "no": 5,
+          "jockey_id": "YML",
+          "jockey": "楊明綸",
+          "top3": true,
+          "draw": 5
+        },
+        {
+          "no": 2,
+          "jockey_id": "HCY",
+          "jockey": "何澤堯",
+          "top3": false,
+          "draw": 3
+        },
+        {
+          "no": 1,
+          "jockey_id": "OJM",
+          "jockey": "奧爾民",
+          "top3": false,
+          "draw": 6
+        },
+        {
+          "no": 4,
+          "jockey_id": "KRW",
+          "jockey": "金誠剛",
+          "top3": false,
+          "draw": 10
+        },
+        {
+          "no": 7,
+          "jockey_id": "LDE",
+          "jockey": "梁家俊",
+          "top3": false,
+          "draw": 7
+        },
+        {
+          "no": 3,
+          "jockey_id": "WPN",
+          "jockey": "黃寶妮",
+          "top3": false,
+          "draw": 9
+        },
+        {
+          "no": 10,
+          "jockey_id": "WEC",
+          "jockey": "黃智弘",
+          "top3": false,
+          "draw": 8
+        },
+        {
+          "no": 8,
+          "jockey_id": "CML",
+          "jockey": "蔡明紹",
+          "top3": false,
+          "draw": 4
+        }
+      ],
+      "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F21&Racecourse=HV&RaceNo=1"
+    },
+    {
+      "date": "2026-10-21",
+      "venue": "HV",
       "race": 2,
       "distance": 1200,
       "track": "TURF",
@@ -12266,14 +12347,5 @@
     }
   ],
   "start_date": "2026-09-01",
-  "errors": [
-    {
-      "race": [
-        "2026-10-21",
-        "HV",
-        1
-      ],
-      "error": "Official runner draw missing"
-    }
-  ]
+  "errors": []
 }
