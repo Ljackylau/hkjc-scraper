@@ -235,3 +235,30 @@ H=0/1 now require TURF and Meiji's original first pick outside the initial banke
 `intersectionCandidate()` 不需要賠率或跑法往績即可顯示候選；確認下注仍須原首三注排除及有效賽前價格。封存新增獨立 `secondary_version` / `secondary_finalized` / `secondary_captured_at` / `secondary_input`，不覆寫原主買法或原首三注封存。主買法、原補Win、新交集補Win可分別篩選統計，總覽按場去重。原統計用 `role:original`，現行合計用 `role:combined`。
 
 9月6日至10月21日歷史代理回算：新交集補Win15注、5勝、投入$150、淨利$392；現行合計投入$1,840、淨利$3,544.5。這是調整門檻後的探索回算，非獨立前瞻驗證或實單成績。
+
+## User-supplied initial V1 — 2026-10-25
+
+`fixtures/initial-v1-2026-10-25.json` preserves the supplied 11-race card,
+ordered banker/four legs, distances, classes and ten probabilities. R11 is
+explicitly null. The supplied going is unknown. R4 #11 奇異果 is withdrawn
+and remains in the declared field; none of the five selections changes.
+
+`import-initial-v1.mjs RECORDS_DIR SOURCE_JSON` validates the existing meeting,
+number/name identities, distance/surface/rail and pre-off timing, then updates
+`records/latest.json` and `records/2026-10-25.json` together. Existing tips,
+results, model/strategy snapshots and prior archives remain intact. The history
+index lists completed meetings only, so this upcoming meeting is not marked
+archived or complete. Both pages can display its dated record.
+
+Provenance is user-provided V1 logistic regression, `reason=initial`,
+`as_of_race_no=0`. Import time is recorded as `captured_at`; the unavailable
+original prediction time stays null. No scoring, odds or result fetch is run.
+The supplied claim that selections exclude race-day results is retained;
+the underlying model has not been independently verified.
+
+The latest and history pages show a dedicated initial banker/four-leg table,
+including class, probability/unknown, source label and withdrawals. This is
+independent of the selected performance ledger.
+
+Checks: `node tips-board/test_initial_v1.mjs ../tips-data/records` and
+`node --experimental-vm-modules tips-board/test_combined_ui.cjs`.

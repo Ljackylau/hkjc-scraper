@@ -1,3 +1,4 @@
+import {initialBankerView} from './banker-initial.mjs?v=20261025-initial';
 import {resolveDataSource,freshJson} from './data-source.mjs?v=20261020-mobile-sync';
 import {mergeManualResults} from './manual-results.mjs?v=20261021-results';
 import {parseManual} from './manual-tips.mjs?v=20261021-st-qp';
@@ -18,6 +19,7 @@ const profit=v=>'<span class="'+(v>0?'profit':v<0?'loss':'')+'">'+money(v)+'</sp
 function betsText(row,role='combined'){const bets=raceBets(row,role);return bets.length?bets.map(b=>'<b>'+e(b.role==='main'?'主買法':b.role==='secondary'?'H=0交集補Win':'原首三注補Win')+' '+e(b.pool)+'</b> '+picks(row.r,b.picks)+'<small> '+money(b.cost)+(b.returned==null?' · 待結算':' · 派回'+money(b.returned))+'</small>').join('<br>'):'—';}
 function statsCells(s){return '<td>'+money(s.cost+s.pending_cost)+(s.pending_cost?'<small>（含待結算'+money(s.pending_cost)+'）</small>':'')+'</td><td>'+money(s.returned)+'</td><td>'+profit(s.profit)+'</td><td>'+pct(s.roi)+'</td><td>'+s.hits+'/'+s.settled_races+' · '+pct(s.accuracy)+'</td>';}
 function render(){if(!meetings.length)return;selected=meetings.find(m=>m.date===$('dates').value)||meetings[0];const actual=$('ledger').value==='actual',role=$('role').value;
+ const initial=initialBankerView(selected);$('initial-v1').hidden=!initial.visible;$('initial-v1-note').textContent=initial.note;$('initial-v1-rows').innerHTML=initial.rows;
  $('record-kind').textContent={replay:'歷史規則回算',paper:'賽前封存紙上帳',actual:'實際下注帳'}[$('ledger').value];$('meeting-title').textContent=selected.date+' · '+venues[selected.venue];$('meeting-meta').textContent=selected.races.length+'場';$('updated').textContent=lastUpdated;
  $('notice').textContent=(loadError?loadError+' ':'')+(actual?'未有實際下注收據，不能計算實際盈利。':$('ledger').value==='replay'?'歷史回算：補Win使用最終賠率代理；包含補錄資料，非當時已下注紀錄。':'2026-10-22起只計本版賽前封存；主買法及兩種補Win分開鎖定，未封存的已跑場次不回填。');
  const evaluated=actual?[]:meetings.map(m=>({m,rows:evaluate(m)}));rendered=evaluated.find(x=>x.m===selected)?.rows||[];const s=summarize(rendered,{role}),all=evaluated.flatMap(x=>x.rows),total=summarize(all,{role});

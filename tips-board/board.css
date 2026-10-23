@@ -3,3 +3,5 @@
 .candidate{display:block}#manual-inputs>label{display:grid;grid-template-columns:130px 160px 1fr;align-items:center;gap:10px;margin:12px 0}@media(max-width:760px){#manual-inputs>label{grid-template-columns:1fr 1fr}#manual-inputs input{grid-column:1/3}.hero{flex-wrap:wrap}.hero-tag{text-align:left}}
 
 .intersection-heading{margin-top:30px}.conditional-pick{padding:11px;border-left:4px solid #ac7b24;background:#fff7e5;border-radius:5px}.conditional-pick strong{display:block;color:#80540c;font-size:15px;margin-top:6px}#intersection-rows input{width:110px}#intersection-rows label{display:block}
+
+#initial-v1 td{vertical-align:top}#initial-v1 .horse{white-space:nowrap}#initial-v1 small{display:block}#initial-v1 .withdrawal{margin-top:8px;color:#9a3f19}
