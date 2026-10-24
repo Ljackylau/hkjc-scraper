@@ -1068,8 +1068,30 @@
           "manual": true
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 14,
+              "name": "天蓬貓"
+            },
+            {
+              "no": 6,
+              "name": "澄心知遇"
+            },
+            {
+              "no": 13,
+              "name": "君達得"
+            },
+            {
+              "no": 11,
+              "name": "北極之錶"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T10:13:05.269840+00:00",
+          "manual": true
         },
         "ma": {
           "status": "pending",
@@ -2026,24 +2048,113 @@
           "manual": true
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 8,
+              "name": "錶之光速"
+            },
+            {
+              "no": 13,
+              "name": "閃電奇駿"
+            },
+            {
+              "no": 9,
+              "name": "盈俊天下"
+            },
+            {
+              "no": 6,
+              "name": "電子好好"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T10:13:05.269840+00:00",
+          "manual": true
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 13,
+              "name": "閃電奇駿"
+            },
+            {
+              "no": 6,
+              "name": "電子好好"
+            },
+            {
+              "no": 1,
+              "name": "千杯不醉"
+            },
+            {
+              "no": 9,
+              "name": "盈俊天下"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T10:13:05.269840+00:00",
+          "manual": true
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 13,
+              "name": "閃電奇駿"
+            },
+            {
+              "no": 9,
+              "name": "盈俊天下"
+            },
+            {
+              "no": 1,
+              "name": "千杯不醉"
+            },
+            {
+              "no": 6,
+              "name": "電子好好"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T10:13:05.269840+00:00",
+          "manual": true
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
-      "selection": null,
+      "score": 3,
+      "selection": {
+        "horses": [
+          {
+            "no": 9,
+            "name": "盈俊天下"
+          },
+          {
+            "no": 13,
+            "name": "閃電奇駿"
+          },
+          {
+            "no": 5,
+            "name": "合夥智能"
+          }
+        ],
+        "main": [
+          "QP"
+        ],
+        "optional": [
+          "W",
+          "Q"
+        ],
+        "generated_at": "2026-10-24T18:13:05+08:00"
+      },
       "result": null,
       "locked": false,
       "draw_top5": {
@@ -4350,8 +4461,30 @@
           "horses": []
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "ready",
+          "horses": [
+            {
+              "no": 4,
+              "name": "正本巨星"
+            },
+            {
+              "no": 1,
+              "name": "巴基之勝"
+            },
+            {
+              "no": 3,
+              "name": "志滿同行"
+            },
+            {
+              "no": 2,
+              "name": "偵探傳奇"
+            }
+          ],
+          "source": "user-provided",
+          "source_type": "user_provided",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T10:13:05.269840+00:00",
+          "manual": true
         },
         "computer": {
           "status": "pending",
@@ -5158,7 +5291,7 @@
       }
     }
   ],
-  "updated_at": "2026-10-24T02:53:20.256Z",
+  "updated_at": "2026-10-24T10:13:05.269840+00:00",
   "status": "upcoming",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-25T10:40:00+08:00",
