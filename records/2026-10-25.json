@@ -14,117 +14,156 @@
           "name": "全能勇士",
           "jockey_id": "PZ",
           "jockey": "潘頓",
-          "draw": 3,
-          "horse_id": "HK_2025_L245"
+          "draw": 2,
+          "horse_id": "HK_2025_L245",
+          "draw_at_declaration": 3
         },
         {
           "no": 2,
           "name": "星球勇士",
           "jockey_id": "YHY",
           "jockey": "袁幸堯",
-          "draw": 6,
-          "horse_id": "HK_2025_L441"
+          "draw": 5,
+          "horse_id": "HK_2025_L441",
+          "draw_at_declaration": 6
         },
         {
           "no": 3,
           "name": "魅影諜飛",
           "jockey_id": "FEL",
           "jockey": "霍宏聲",
-          "draw": 8,
-          "horse_id": "HK_2025_L444"
+          "draw": 7,
+          "horse_id": "HK_2025_L444",
+          "draw_at_declaration": 8
         },
         {
           "no": 4,
           "name": "星月峰雲",
-          "jockey_id": "BA",
-          "jockey": "巴度",
-          "draw": 1,
-          "horse_id": "HK_2025_L455"
+          "horse_id": "HK_2025_L455",
+          "official_display_name": "星月峰雲 (退出)",
+          "draw_at_declaration": 1
         },
         {
           "no": 5,
           "name": "綠頂峰",
           "jockey_id": "OJM",
           "jockey": "奧爾民",
-          "draw": 7,
-          "horse_id": "HK_2025_L250"
+          "draw": 6,
+          "horse_id": "HK_2025_L250",
+          "draw_at_declaration": 7
         },
         {
           "no": 6,
           "name": "丙午傳奇",
           "jockey_id": "CJE",
           "jockey": "周俊樂",
-          "draw": 4,
-          "horse_id": "HK_2026_M046"
+          "draw": 3,
+          "horse_id": "HK_2026_M046",
+          "draw_at_declaration": 4
         },
         {
           "no": 7,
           "name": "海象先生",
           "jockey_id": "LDE",
           "jockey": "梁家俊",
-          "draw": 5,
-          "horse_id": "HK_2025_L457"
+          "draw": 4,
+          "horse_id": "HK_2025_L457",
+          "draw_at_declaration": 5
         },
         {
           "no": 8,
           "name": "星系之錶",
           "jockey_id": "WEC",
           "jockey": "黃智弘",
-          "draw": 9,
-          "horse_id": "HK_2025_L509"
+          "draw": 8,
+          "horse_id": "HK_2025_L509",
+          "draw_at_declaration": 9
         },
         {
           "no": 9,
           "name": "博士生",
           "jockey_id": "KRW",
           "jockey": "金誠剛",
-          "draw": 10,
-          "horse_id": "HK_2025_L351"
+          "draw": 9,
+          "horse_id": "HK_2025_L351",
+          "draw_at_declaration": 10
         },
         {
           "no": 10,
           "name": "禪勝閃亮",
           "jockey_id": "HEL",
           "jockey": "希威森",
-          "draw": 2,
-          "horse_id": "HK_2025_L051"
+          "draw": 1,
+          "horse_id": "HK_2025_L051",
+          "draw_at_declaration": 2
         },
         {
           "no": 11,
           "name": "紫電王",
           "jockey_id": "YML",
           "jockey": "楊明綸",
-          "draw": 11,
-          "horse_id": "HK_2025_L387"
+          "draw": 10,
+          "horse_id": "HK_2025_L387",
+          "draw_at_declaration": 11
         }
       ],
-      "scratched": [],
+      "scratched": [
+        4
+      ],
       "distance": 1200,
       "track": "TURF",
       "rail": "A",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "stale",
+          "horses": [],
+          "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "error": "Source still returns 2026-10-21, not target 2026-10-25; no old selections imported"
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T08:23:47.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T05:07:49.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T09:46:32.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -137,46 +176,46 @@
             "no": 1,
             "jockey": "潘頓",
             "jockey_id": "PZ",
-            "draw": 3,
+            "draw": 2,
             "placed": 7,
-            "starts": 10,
-            "rate": 0.7
+            "starts": 9,
+            "rate": 0.7777777777777778
           },
           {
-            "no": 4,
-            "jockey": "巴度",
-            "jockey_id": "BA",
-            "draw": 1,
-            "placed": 6,
-            "starts": 11,
-            "rate": 0.5454545454545454
-          },
-          {
-            "no": 5,
-            "jockey": "奧爾民",
-            "jockey_id": "OJM",
-            "draw": 7,
-            "placed": 3,
-            "starts": 7,
-            "rate": 0.42857142857142855
-          },
-          {
-            "no": 3,
-            "jockey": "霍宏聲",
-            "jockey_id": "FEL",
-            "draw": 8,
-            "placed": 1,
-            "starts": 3,
+            "no": 6,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "draw": 3,
+            "placed": 2,
+            "starts": 6,
             "rate": 0.3333333333333333
+          },
+          {
+            "no": 7,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "draw": 4,
+            "placed": 2,
+            "starts": 8,
+            "rate": 0.25
+          },
+          {
+            "no": 8,
+            "jockey": "黃智弘",
+            "jockey_id": "WEC",
+            "draw": 8,
+            "placed": 2,
+            "starts": 8,
+            "rate": 0.25
           },
           {
             "no": 10,
             "jockey": "希威森",
             "jockey_id": "HEL",
-            "draw": 2,
+            "draw": 1,
             "placed": 1,
-            "starts": 3,
-            "rate": 0.3333333333333333
+            "starts": 7,
+            "rate": 0.14285714285714285
           }
         ],
         "method_version": "jockey_draw_only_v3",
@@ -423,7 +462,11 @@
         "model": "logistic_regression",
         "results_used_for_selection": false,
         "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
-      }
+      },
+      "official_card_checked_at": "2026-10-24T18:31:37+08:00",
+      "official_card_source": "https://racing.hkjc.com/zh-hk/local/information/racecard?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=1",
+      "st_plan_state": "pending",
+      "st_plan_reason": "貼士日期不符，待更新"
     },
     {
       "date": "2026-10-25",
@@ -576,23 +619,47 @@
           "manual": true
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T08:23:47.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T05:07:49.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T09:46:32.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -915,7 +982,11 @@
         "model": "logistic_regression",
         "results_used_for_selection": false,
         "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
-      }
+      },
+      "official_card_checked_at": "2026-10-24T18:31:37+08:00",
+      "official_card_source": "https://racing.hkjc.com/zh-hk/local/information/racecard?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=2",
+      "st_plan_state": "skip",
+      "st_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     },
     {
       "date": "2026-10-25",
@@ -1091,23 +1162,66 @@
           "source_type": "user_provided",
           "source_date": "2026-10-25",
           "captured_at": "2026-10-24T10:13:05.269840+00:00",
-          "manual": true
+          "manual": true,
+          "verified_at": "2026-10-24T18:31:37+08:00",
+          "verification_source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_updated_at": "2026-10-24T08:23:47.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "User-supplied order matches dated complete expert source"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T05:07:49.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T09:46:32.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
-      "selection": null,
+      "score": 1,
+      "selection": {
+        "horses": [
+          {
+            "no": 13,
+            "name": "君達得"
+          },
+          {
+            "no": 6,
+            "name": "澄心知遇"
+          },
+          {
+            "no": 3,
+            "name": "活力精神"
+          }
+        ],
+        "main": [
+          "QP"
+        ],
+        "optional": [],
+        "method": "st-turf-confidence-qp-20261021",
+        "roles": "M3+T2+T3",
+        "generated_at": "2026-10-24T18:31:37+08:00"
+      },
       "result": null,
       "locked": false,
       "draw_top5": {
@@ -1429,7 +1543,11 @@
         "model": "logistic_regression",
         "results_used_for_selection": false,
         "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
-      }
+      },
+      "official_card_checked_at": "2026-10-24T18:31:37+08:00",
+      "official_card_source": "https://racing.hkjc.com/zh-hk/local/information/racecard?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=3",
+      "st_plan_state": "ready",
+      "st_plan_reason": "草地信心條件成立，M3＋T2＋T3位置Q"
     },
     {
       "date": "2026-10-25",
@@ -1450,8 +1568,9 @@
           "name": "凌登",
           "jockey_id": "WEC",
           "jockey": "黃智弘",
-          "draw": 11,
-          "horse_id": "HK_2025_L151"
+          "draw": 10,
+          "horse_id": "HK_2025_L151",
+          "draw_at_declaration": 11
         },
         {
           "no": 3,
@@ -1498,8 +1617,9 @@
           "name": "勁大威猛",
           "jockey_id": "FEL",
           "jockey": "霍宏聲",
-          "draw": 10,
-          "horse_id": "HK_2022_H450"
+          "draw": 9,
+          "horse_id": "HK_2022_H450",
+          "draw_at_declaration": 10
         },
         {
           "no": 9,
@@ -1520,10 +1640,9 @@
         {
           "no": 11,
           "name": "奇異果",
-          "jockey_id": "TEK",
-          "jockey": "田泰安",
-          "draw": 9,
-          "horse_id": "HK_2024_K285"
+          "horse_id": "HK_2024_K285",
+          "official_display_name": "奇異果 (退出)",
+          "draw_at_declaration": 9
         }
       ],
       "scratched": [
@@ -1560,23 +1679,47 @@
           "manual": true
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T08:23:47.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T05:07:49.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T09:46:32.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -1593,6 +1736,15 @@
             "placed": 5,
             "starts": 8,
             "rate": 0.625
+          },
+          {
+            "no": 2,
+            "jockey": "黃智弘",
+            "jockey_id": "WEC",
+            "draw": 10,
+            "placed": 1,
+            "starts": 2,
+            "rate": 0.5
           },
           {
             "no": 1,
@@ -1620,15 +1772,6 @@
             "placed": 2,
             "starts": 5,
             "rate": 0.4
-          },
-          {
-            "no": 9,
-            "jockey": "奧爾民",
-            "jockey_id": "OJM",
-            "draw": 3,
-            "placed": 3,
-            "starts": 8,
-            "rate": 0.375
           }
         ],
         "method_version": "jockey_draw_only_v3",
@@ -1895,7 +2038,11 @@
         "model": "logistic_regression",
         "results_used_for_selection": false,
         "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
-      }
+      },
+      "official_card_checked_at": "2026-10-24T18:31:37+08:00",
+      "official_card_source": "https://racing.hkjc.com/zh-hk/local/information/racecard?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=4",
+      "st_plan_state": "skip",
+      "st_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     },
     {
       "date": "2026-10-25",
@@ -2071,7 +2218,12 @@
           "source_type": "user_provided",
           "source_date": "2026-10-25",
           "captured_at": "2026-10-24T10:13:05.269840+00:00",
-          "manual": true
+          "manual": true,
+          "verified_at": "2026-10-24T18:31:37+08:00",
+          "verification_source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_updated_at": "2026-10-24T08:23:47.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "User-supplied order matches dated complete expert source"
         },
         "ma": {
           "status": "ready",
@@ -2097,7 +2249,12 @@
           "source_type": "user_provided",
           "source_date": "2026-10-25",
           "captured_at": "2026-10-24T10:13:05.269840+00:00",
-          "manual": true
+          "manual": true,
+          "verified_at": "2026-10-24T18:31:37+08:00",
+          "verification_source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_updated_at": "2026-10-24T05:07:49.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "User-supplied order matches dated complete expert source"
         },
         "computer": {
           "status": "ready",
@@ -2123,7 +2280,12 @@
           "source_type": "user_provided",
           "source_date": "2026-10-25",
           "captured_at": "2026-10-24T10:13:05.269840+00:00",
-          "manual": true
+          "manual": true,
+          "verified_at": "2026-10-24T18:31:37+08:00",
+          "verification_source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_updated_at": "2026-10-24T09:46:32.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "User-supplied order matches dated complete expert source"
         }
       },
       "index": {
@@ -2153,7 +2315,7 @@
           "W",
           "Q"
         ],
-        "generated_at": "2026-10-24T18:13:05+08:00"
+        "generated_at": "2026-10-24T18:31:37+08:00"
       },
       "result": null,
       "locked": false,
@@ -2476,7 +2638,9 @@
         "model": "logistic_regression",
         "results_used_for_selection": false,
         "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
-      }
+      },
+      "official_card_checked_at": "2026-10-24T18:31:37+08:00",
+      "official_card_source": "https://racing.hkjc.com/zh-hk/local/information/racecard?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=5"
     },
     {
       "date": "2026-10-25",
@@ -2629,24 +2793,70 @@
           "manual": true
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T08:23:47.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T05:07:49.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T09:46:32.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
-      "selection": null,
+      "score": 0,
+      "selection": {
+        "horses": [
+          {
+            "no": 3,
+            "name": "怡昌明駒"
+          },
+          {
+            "no": 7,
+            "name": "駿馬之曲"
+          },
+          {
+            "no": 6,
+            "name": "嘉應耀昇"
+          }
+        ],
+        "main": [
+          "QP"
+        ],
+        "optional": [],
+        "method": "st-turf-confidence-qp-20261021",
+        "roles": "新D",
+        "generated_at": "2026-10-24T18:31:37+08:00"
+      },
       "result": null,
       "locked": false,
       "draw_top5": {
@@ -2968,7 +3178,11 @@
         "model": "logistic_regression",
         "results_used_for_selection": false,
         "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
-      }
+      },
+      "official_card_checked_at": "2026-10-24T18:31:37+08:00",
+      "official_card_source": "https://racing.hkjc.com/zh-hk/local/information/racecard?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=6",
+      "st_plan_state": "ready",
+      "st_plan_reason": "草地信心條件成立，新D三馬位置Q"
     },
     {
       "date": "2026-10-25",
@@ -3081,23 +3295,47 @@
           "manual": true
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T08:23:47.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T05:07:49.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T09:46:32.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -3380,7 +3618,11 @@
         "model": "logistic_regression",
         "results_used_for_selection": false,
         "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
-      }
+      },
+      "official_card_checked_at": "2026-10-24T18:31:37+08:00",
+      "official_card_source": "https://racing.hkjc.com/zh-hk/local/information/racecard?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=7",
+      "st_plan_state": "skip",
+      "st_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     },
     {
       "date": "2026-10-25",
@@ -3533,23 +3775,47 @@
           "manual": true
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T08:23:47.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T05:07:49.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T09:46:32.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -3872,7 +4138,11 @@
         "model": "logistic_regression",
         "results_used_for_selection": false,
         "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
-      }
+      },
+      "official_card_checked_at": "2026-10-24T18:31:37+08:00",
+      "official_card_source": "https://racing.hkjc.com/zh-hk/local/information/racecard?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=8",
+      "st_plan_state": "skip",
+      "st_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     },
     {
       "date": "2026-10-25",
@@ -3991,27 +4261,55 @@
       "rail": "A",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "stale",
+          "horses": [],
+          "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "error": "Source still returns 2026-10-21, not target 2026-10-25; no old selections imported"
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T08:23:47.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T05:07:49.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T09:46:32.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -4326,7 +4624,11 @@
         "model": "logistic_regression",
         "results_used_for_selection": false,
         "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
-      }
+      },
+      "official_card_checked_at": "2026-10-24T18:31:37+08:00",
+      "official_card_source": "https://racing.hkjc.com/zh-hk/local/information/racecard?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=9",
+      "st_plan_state": "pending",
+      "st_plan_reason": "貼士日期不符，待更新"
     },
     {
       "date": "2026-10-25",
@@ -4453,12 +4755,24 @@
       "rail": "A",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "stale",
+          "horses": [],
+          "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "error": "Source still returns 2026-10-21, not target 2026-10-25; no old selections imported"
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T08:23:47.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "ma": {
           "status": "ready",
@@ -4484,18 +4798,31 @@
           "source_type": "user_provided",
           "source_date": "2026-10-25",
           "captured_at": "2026-10-24T10:13:05.269840+00:00",
-          "manual": true
+          "manual": true,
+          "verified_at": "2026-10-24T18:31:37+08:00",
+          "verification_source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_updated_at": "2026-10-24T05:07:49.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "User-supplied order matches dated complete expert source"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T09:46:32.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 1,
       "selection": null,
       "result": null,
       "locked": false,
@@ -4818,7 +5145,11 @@
         "model": "logistic_regression",
         "results_used_for_selection": false,
         "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
-      }
+      },
+      "official_card_checked_at": "2026-10-24T18:31:37+08:00",
+      "official_card_source": "https://racing.hkjc.com/zh-hk/local/information/racecard?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=10",
+      "st_plan_state": "pending",
+      "st_plan_reason": "貼士日期不符，待更新"
     },
     {
       "date": "2026-10-25",
@@ -4945,27 +5276,55 @@
       "rail": "A",
       "tips": {
         "meiji": {
-          "status": "pending",
-          "horses": []
+          "status": "stale",
+          "horses": [],
+          "source": "https://racing.on.cc/racing/fav/current/rjfavf0201x0.html",
+          "source_date": "2026-10-21",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "error": "Source still returns 2026-10-21, not target 2026-10-25; no old selections imported"
         },
         "ball": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T08:23:47.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "ma": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T05:07:49.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         },
         "computer": {
-          "status": "pending",
-          "horses": []
+          "status": "absent",
+          "horses": [],
+          "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+          "source_type": "public_source",
+          "source_date": "2026-10-25",
+          "captured_at": "2026-10-24T18:31:37+08:00",
+          "source_updated_at": "2026-10-24T09:46:32.000Z",
+          "published_race_day_id": "6ad969d84ea564ccca60325a",
+          "verification": "Dated expert record includes this race with all four horse IDs explicitly null; observed absence, not a fetch failure",
+          "absence_as_of": "2026-10-24T18:31:37+08:00"
         }
       },
       "index": {
         "status": "disabled",
         "horses": []
       },
-      "score": null,
+      "score": 0,
       "selection": null,
       "result": null,
       "locked": false,
@@ -5288,10 +5647,14 @@
         "model": "logistic_regression",
         "results_used_for_selection": false,
         "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
-      }
+      },
+      "official_card_checked_at": "2026-10-24T18:31:37+08:00",
+      "official_card_source": "https://racing.hkjc.com/zh-hk/local/information/racecard?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=11",
+      "st_plan_state": "pending",
+      "st_plan_reason": "貼士日期不符，待更新"
     }
   ],
-  "updated_at": "2026-10-24T10:13:05.269840+00:00",
+  "updated_at": "2026-10-24T18:31:37+08:00",
   "status": "upcoming",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-25T10:40:00+08:00",
@@ -5317,5 +5680,87 @@
     "rail": "A",
     "going": null,
     "going_status": "not_announced_in_user_source"
+  },
+  "manual_checked_at": "2026-10-24T18:31:37+08:00",
+  "manual_checks": [
+    {
+      "started_at": "2026-10-24T18:31:37+08:00",
+      "finished_at": "2026-10-24T18:31:37+08:00",
+      "scope": "primary_input_verification",
+      "errors": [
+        {
+          "race": 1,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-21"
+        },
+        {
+          "race": 9,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-21"
+        },
+        {
+          "race": 10,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-21"
+        },
+        {
+          "race": 11,
+          "source": "meiji",
+          "status": "stale",
+          "source_date": "2026-10-21"
+        }
+      ]
+    }
+  ],
+  "primary_input_check": {
+    "checked_at": "2026-10-24T18:31:37+08:00",
+    "date": "2026-10-25",
+    "venue": "ST",
+    "official_cards_verified": 11,
+    "declared_runners": 142,
+    "withdrawals": 2,
+    "expert_source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+    "expert_source_sha256": "160b37fc4559a5a8290f889f5ea6eac3624516eb7914abefcc314f8dbec32627",
+    "published_race_day_id": "6ad969d84ea564ccca60325a",
+    "expert_records_verified": 33,
+    "expert_ready": 5,
+    "expert_absent": 28,
+    "meiji_ready": 7,
+    "meiji_missing_races": [
+      1,
+      9,
+      10,
+      11
+    ],
+    "rejected_meiji_source_date": "2026-10-21",
+    "ready_primary_races": [
+      3,
+      6
+    ],
+    "pending_primary_races": [
+      1,
+      9,
+      10,
+      11
+    ],
+    "skipped_primary_races": [
+      2,
+      4,
+      5,
+      7,
+      8
+    ],
+    "card_changed_races": [
+      1,
+      4
+    ],
+    "rules_version": "st-turf-confidence-qp-20261021",
+    "results_used": false,
+    "odds_used": false,
+    "prediction_status": "current_preoff_preview_not_final_Tminus3_seal",
+    "automatic_tips_cutoff_preserved": true
   }
 }
