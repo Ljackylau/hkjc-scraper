@@ -50,6 +50,19 @@ class Rules(unittest.TestCase):
   self.assertIsNone(m['tips_checked_at']);self.assertEqual(m['races'][1],previous)
   self.assertEqual(m['races'][0]['tips']['ball']['horses'][0]['no'],3)
   self.assertEqual(len(m['manual_checks']),1)
+ def test_automatic_stale_or_failed_meiji_preserves_known_same_day(self):
+  import collector
+  for failure in (False,True):
+   with self.subTest(fetch_failure=failure):
+    m=empty_meeting({'date':'2026-10-14','venue':'HV','races':[copy.deepcopy(self.r)]})
+    m['races'][0]=copy.deepcopy(self.r);previous=copy.deepcopy(self.r['tips']['meiji'])
+    missing=copy.deepcopy(self.r);missing['race']=2;missing['tips']['meiji']={'status':'pending','horses':[]};m['races'].append(missing)
+    kwargs={'side_effect':ValueError('offline')} if failure else {'return_value':'old source'}
+    with patch('collector.request',**kwargs),patch('collector.parse_meiji',return_value=('2026-10-13',{})),patch('collector.api',side_effect=ValueError('unavailable')),patch('collector.front_forms.collect'):
+     collector.collect_tips(m)
+    self.assertEqual(m['races'][0]['tips']['meiji'],previous)
+    self.assertTrue(m['races'][0]['meiji_source_check']['retained_existing_same_day'])
+    self.assertEqual(m['races'][1]['tips']['meiji']['status'],'error' if failure else 'stale')
  def test_manual_failures_keep_previous_valid_tips(self):
   from datetime import datetime
   m=empty_meeting({'date':'2026-10-14','venue':'HV','races':[copy.deepcopy(self.r)]});m['races'][0]=copy.deepcopy(self.r)

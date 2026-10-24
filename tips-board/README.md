@@ -262,3 +262,20 @@ independent of the selected performance ledger.
 
 Checks: `node tips-board/test_initial_v1.mjs ../tips-data/records` and
 `node --experimental-vm-modules tips-board/test_combined_ui.cjs`.
+
+## Primary-input verification — October 24
+
+The October 25 pre-race check validates all 11 official cards and the three
+expert records against the dated published meeting ID. An explicit all-null
+row in a complete 11-race expert record is recorded as observed absence at
+check time, while fetch errors remain unknown. Existing user-supplied picks
+retain their provenance when verified against the source.
+
+The primary table counts ready confidence races separately from pending
+input rows, and shows the actual missing-input reason. Current selections
+remain previews until the existing pre-off sealing window; no race-day
+results or odds are collected for the primary rule.
+
+Automatic collection preserves valid same-day Meiji picks when the source
+returns a stale page or fails, retaining the failed check separately. Missing
+races stay stale/error; an old source never supplies replacement selections.

@@ -100,13 +100,19 @@ def parse_meiji(body,date):
 def collect_tips(meeting):
     if meeting.get('tips_checked_at'):return
     meeting['tips_checked_at']=stamp()
+    def retain_or_set_meiji(r,tip):
+        previous=r['tips']['meiji']
+        if tip['status']!='ready' and previous.get('status')=='ready' and previous.get('source_date') in (None,meeting['date']):
+            r['meiji_source_check']={k:v for k,v in tip.items() if k!='horses'}
+            r['meiji_source_check']['retained_existing_same_day']=True
+        else:r['tips']['meiji']=tip
     try:
         meiji_url='https://racing.on.cc/racing/fav/'+meeting['date'].replace('-','')+'/rjfavf0201x0.html'
         date,m=parse_meiji(request(meiji_url),meeting['date'])
         for r in meeting['races']:
-            r['tips']['meiji']={'status':'ready' if r['race'] in m else 'stale' if date!=meeting['date'] else 'error','source_date':date,'source':meiji_url,'captured_at':stamp(),'horses':safe_horses(m.get(r['race'],[]),r)}
+            retain_or_set_meiji(r,{'status':'ready' if r['race'] in m else 'stale' if date!=meeting['date'] else 'error','source_date':date,'source':meiji_url,'captured_at':stamp(),'horses':safe_horses(m.get(r['race'],[]),r)})
     except Exception as e:
-        for r in meeting['races']:r['tips']['meiji']={'status':'error','horses':[],'error':str(e)}
+        for r in meeting['races']:retain_or_set_meiji(r,{'status':'error','horses':[],'error':str(e),'captured_at':stamp()})
     try:
         date=meeting['date'].replace('-','');published=api('/raceDay/published',date=date)
         if datetime.fromisoformat(published['date'].replace('Z','+00:00')).astimezone(HK).date().isoformat()!=meeting['date'] or published['raceVenue']!=meeting['venue']:raise ValueError('Star published meeting date mismatch')
