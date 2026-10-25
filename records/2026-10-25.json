@@ -7657,7 +7657,7 @@
           "W",
           "Q"
         ],
-        "generated_at": "2026-10-25T15:01:08+08:00"
+        "generated_at": "2026-10-25T15:02:09+08:00"
       },
       "result": null,
       "locked": false,
@@ -7990,7 +7990,7 @@
         "before_date": "2026-10-25",
         "venue": "ST",
         "race": 5,
-        "captured_at": "2026-10-25T15:00:28+08:00",
+        "captured_at": "2026-10-25T15:02:08+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -8487,11 +8487,11 @@
         "date": "2026-10-25",
         "venue": "ST",
         "race": 5,
-        "captured_at": "2026-10-25T07:01:48.213Z",
-        "finalized": false,
-        "primary_finalized": false,
+        "captured_at": "2026-10-25T07:03:08.216Z",
+        "finalized": true,
+        "primary_finalized": true,
         "cover_finalized": false,
-        "primary_captured_at": null,
+        "primary_captured_at": "2026-10-25T07:03:08.216Z",
         "cover_captured_at": null,
         "primary": {
           "status": "skip",
@@ -8909,7 +8909,7 @@
             "before_date": "2026-10-25",
             "venue": "ST",
             "race": 5,
-            "captured_at": "2026-10-25T15:00:28+08:00",
+            "captured_at": "2026-10-25T15:02:08+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -9397,9 +9397,241 @@
           "status": "skip",
           "reason": "只限H=0"
         },
-        "secondary_finalized": false,
-        "secondary_captured_at": null,
-        "secondary_input": null
+        "secondary_finalized": true,
+        "secondary_captured_at": "2026-10-25T07:03:08.216Z",
+        "secondary_input": {
+          "date": "2026-10-25",
+          "venue": "ST",
+          "race": 5,
+          "off": "2026-10-25T15:05:00+08:00",
+          "score": 3,
+          "tips": {
+            "meiji": {
+              "status": "ready",
+              "source_date": "2026-10-25",
+              "source": "https://racing.on.cc/racing/fav/20261025/rjfavf0201x0.html",
+              "captured_at": "2026-10-25T10:24:08+08:00",
+              "horses": [
+                {
+                  "no": 9,
+                  "name": "盈俊天下"
+                },
+                {
+                  "no": 13,
+                  "name": "閃電奇駿"
+                },
+                {
+                  "no": 5,
+                  "name": "合夥智能"
+                },
+                {
+                  "no": 1,
+                  "name": "千杯不醉"
+                }
+              ]
+            },
+            "ball": {
+              "status": "ready",
+              "horses": [
+                {
+                  "no": 8,
+                  "name": "錶之光速"
+                },
+                {
+                  "no": 13,
+                  "name": "閃電奇駿"
+                },
+                {
+                  "no": 9,
+                  "name": "盈俊天下"
+                },
+                {
+                  "no": 6,
+                  "name": "電子好好"
+                }
+              ],
+              "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+              "source_date": "2026-10-25",
+              "captured_at": "2026-10-25T10:24:14+08:00"
+            },
+            "ma": {
+              "status": "ready",
+              "horses": [
+                {
+                  "no": 13,
+                  "name": "閃電奇駿"
+                },
+                {
+                  "no": 6,
+                  "name": "電子好好"
+                },
+                {
+                  "no": 1,
+                  "name": "千杯不醉"
+                },
+                {
+                  "no": 9,
+                  "name": "盈俊天下"
+                }
+              ],
+              "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+              "source_date": "2026-10-25",
+              "captured_at": "2026-10-25T10:24:14+08:00"
+            },
+            "computer": {
+              "status": "ready",
+              "horses": [
+                {
+                  "no": 13,
+                  "name": "閃電奇駿"
+                },
+                {
+                  "no": 9,
+                  "name": "盈俊天下"
+                },
+                {
+                  "no": 1,
+                  "name": "千杯不醉"
+                },
+                {
+                  "no": 6,
+                  "name": "電子好好"
+                }
+              ],
+              "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+              "source_date": "2026-10-25",
+              "captured_at": "2026-10-25T10:24:14+08:00"
+            }
+          },
+          "banker_initial": {
+            "status": "ready",
+            "date": "2026-10-25",
+            "venue": "ST",
+            "race": 5,
+            "as_of_race_no": 0,
+            "reason": "initial",
+            "numbers": [
+              13,
+              5,
+              14,
+              8,
+              11
+            ],
+            "horses": [
+              {
+                "no": 13,
+                "name": "閃電奇駿"
+              },
+              {
+                "no": 5,
+                "name": "合夥智能"
+              },
+              {
+                "no": 14,
+                "name": "同喜"
+              },
+              {
+                "no": 8,
+                "name": "錶之光速"
+              },
+              {
+                "no": 11,
+                "name": "升升雙息"
+              }
+            ],
+            "distance": 1200,
+            "race_class": "四",
+            "banker_top3_probability": 0.701,
+            "source": "user-provided",
+            "source_type": "user_provided",
+            "source_reference": "chatgpt-conversation://6adaa582-0888-83ee-a171-f69e9c899acb",
+            "source_note": "用戶提供的2026-10-25沙田草地A欄正式V1初版膽拖及概率；未獨立重跑或驗證模型。來源未提供原始預測時間。",
+            "captured_at": "2026-10-23T16:15:56.426Z",
+            "prediction_created_at": null,
+            "model_version": "V1",
+            "model": "logistic_regression",
+            "results_used_for_selection": false,
+            "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
+          },
+          "odds": {},
+          "original_cover": {
+            "status": "pending",
+            "first": [
+              13,
+              5,
+              9
+            ],
+            "ranked": [
+              {
+                "no": 14,
+                "median": 2,
+                "mean": 2.3333333333333335,
+                "n": 3
+              },
+              {
+                "no": 6,
+                "median": 3,
+                "mean": 3.3333333333333335,
+                "n": 3
+              },
+              {
+                "no": 11,
+                "median": 3,
+                "mean": 4,
+                "n": 3
+              },
+              {
+                "no": 5,
+                "median": 5,
+                "mean": 5,
+                "n": 2
+              },
+              {
+                "no": 3,
+                "median": 7.5,
+                "mean": 7.5,
+                "n": 2
+              }
+            ],
+            "excluded": [
+              7,
+              8
+            ],
+            "candidates": [
+              {
+                "no": 14,
+                "median": 2,
+                "mean": 2.3333333333333335,
+                "n": 3
+              },
+              {
+                "no": 6,
+                "median": 3,
+                "mean": 3.3333333333333335,
+                "n": 3
+              },
+              {
+                "no": 11,
+                "median": 3,
+                "mean": 4,
+                "n": 3
+              },
+              {
+                "no": 3,
+                "median": 7.5,
+                "mean": 7.5,
+                "n": 2
+              }
+            ],
+            "reason": "待所有候選的賽前W賠率",
+            "missing": [
+              14,
+              6,
+              11,
+              3
+            ]
+          }
+        }
       }
     },
     {
@@ -9598,7 +9830,7 @@
         "optional": [],
         "method": "st-turf-confidence-qp-20261021",
         "roles": "新D",
-        "generated_at": "2026-10-25T15:00:28+08:00"
+        "generated_at": "2026-10-25T15:02:08+08:00"
       },
       "result": null,
       "locked": false,
@@ -9931,7 +10163,7 @@
         "before_date": "2026-10-25",
         "venue": "ST",
         "race": 6,
-        "captured_at": "2026-10-25T15:00:28+08:00",
+        "captured_at": "2026-10-25T15:02:08+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -10301,7 +10533,7 @@
         ],
         "fourth_source": "meiji",
         "initial_source": "user-provided",
-        "generated_at": "2026-10-25T15:00:28+08:00"
+        "generated_at": "2026-10-25T15:02:08+08:00"
       },
       "combined_snapshot": {
         "version": "confidence-cover-v1-20261022",
@@ -10309,7 +10541,7 @@
         "date": "2026-10-25",
         "venue": "ST",
         "race": 6,
-        "captured_at": "2026-10-25T07:01:48.213Z",
+        "captured_at": "2026-10-25T07:03:08.216Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -10697,7 +10929,7 @@
             "before_date": "2026-10-25",
             "venue": "ST",
             "race": 6,
-            "captured_at": "2026-10-25T15:00:28+08:00",
+            "captured_at": "2026-10-25T15:02:08+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -11506,7 +11738,7 @@
         "before_date": "2026-10-25",
         "venue": "ST",
         "race": 7,
-        "captured_at": "2026-10-25T15:00:28+08:00",
+        "captured_at": "2026-10-25T15:02:08+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -11881,7 +12113,7 @@
         ],
         "fourth_source": "meiji",
         "initial_source": "user-provided",
-        "generated_at": "2026-10-25T15:00:28+08:00"
+        "generated_at": "2026-10-25T15:02:08+08:00"
       },
       "combined_snapshot": {
         "version": "confidence-cover-v1-20261022",
@@ -11889,7 +12121,7 @@
         "date": "2026-10-25",
         "venue": "ST",
         "race": 7,
-        "captured_at": "2026-10-25T07:01:48.213Z",
+        "captured_at": "2026-10-25T07:03:08.216Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -12217,7 +12449,7 @@
             "before_date": "2026-10-25",
             "venue": "ST",
             "race": 7,
-            "captured_at": "2026-10-25T15:00:28+08:00",
+            "captured_at": "2026-10-25T15:02:08+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -13111,7 +13343,7 @@
         "before_date": "2026-10-25",
         "venue": "ST",
         "race": 8,
-        "captured_at": "2026-10-25T15:00:28+08:00",
+        "captured_at": "2026-10-25T15:02:08+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -13655,7 +13887,7 @@
         ],
         "fourth_source": "meiji",
         "initial_source": "user-provided",
-        "generated_at": "2026-10-25T15:00:28+08:00"
+        "generated_at": "2026-10-25T15:02:08+08:00"
       },
       "combined_snapshot": {
         "version": "confidence-cover-v1-20261022",
@@ -13663,7 +13895,7 @@
         "date": "2026-10-25",
         "venue": "ST",
         "race": 8,
-        "captured_at": "2026-10-25T07:01:48.213Z",
+        "captured_at": "2026-10-25T07:03:08.216Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -14033,7 +14265,7 @@
             "before_date": "2026-10-25",
             "venue": "ST",
             "race": 8,
-            "captured_at": "2026-10-25T15:00:28+08:00",
+            "captured_at": "2026-10-25T15:02:08+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -14778,7 +15010,7 @@
         "optional": [],
         "method": "st-turf-confidence-qp-20261021",
         "roles": "新D",
-        "generated_at": "2026-10-25T15:00:28+08:00"
+        "generated_at": "2026-10-25T15:02:08+08:00"
       },
       "result": null,
       "locked": false,
@@ -15103,7 +15335,7 @@
         "before_date": "2026-10-25",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-10-25T15:00:28+08:00",
+        "captured_at": "2026-10-25T15:02:08+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -15652,7 +15884,7 @@
         ],
         "fourth_source": "meiji",
         "initial_source": "user-provided",
-        "generated_at": "2026-10-25T15:00:28+08:00"
+        "generated_at": "2026-10-25T15:02:08+08:00"
       },
       "combined_snapshot": {
         "version": "confidence-cover-v1-20261022",
@@ -15660,7 +15892,7 @@
         "date": "2026-10-25",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-10-25T07:01:48.213Z",
+        "captured_at": "2026-10-25T07:03:08.216Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -16035,7 +16267,7 @@
             "before_date": "2026-10-25",
             "venue": "ST",
             "race": 9,
-            "captured_at": "2026-10-25T15:00:28+08:00",
+            "captured_at": "2026-10-25T15:02:08+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -17119,7 +17351,7 @@
         "before_date": "2026-10-25",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-10-25T15:00:28+08:00",
+        "captured_at": "2026-10-25T15:02:08+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -17591,7 +17823,7 @@
         ],
         "fourth_source": "ma",
         "initial_source": "user-provided",
-        "generated_at": "2026-10-25T15:00:28+08:00"
+        "generated_at": "2026-10-25T15:02:08+08:00"
       },
       "combined_snapshot": {
         "version": "confidence-cover-v1-20261022",
@@ -17599,7 +17831,7 @@
         "date": "2026-10-25",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-10-25T07:01:48.213Z",
+        "captured_at": "2026-10-25T07:03:08.216Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -17989,7 +18221,7 @@
             "before_date": "2026-10-25",
             "venue": "ST",
             "race": 10,
-            "captured_at": "2026-10-25T15:00:28+08:00",
+            "captured_at": "2026-10-25T15:02:08+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -18975,7 +19207,7 @@
         "before_date": "2026-10-25",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-10-25T15:00:28+08:00",
+        "captured_at": "2026-10-25T15:02:08+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -19474,7 +19706,7 @@
         ],
         "fourth_source": "meiji",
         "initial_source": "user-provided",
-        "generated_at": "2026-10-25T15:00:28+08:00"
+        "generated_at": "2026-10-25T15:02:08+08:00"
       },
       "combined_snapshot": {
         "version": "confidence-cover-v1-20261022",
@@ -19482,7 +19714,7 @@
         "date": "2026-10-25",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-10-25T07:01:48.213Z",
+        "captured_at": "2026-10-25T07:03:08.216Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -19856,7 +20088,7 @@
             "before_date": "2026-10-25",
             "venue": "ST",
             "race": 11,
-            "captured_at": "2026-10-25T15:00:28+08:00",
+            "captured_at": "2026-10-25T15:02:08+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -20367,11 +20599,11 @@
       "st_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     }
   ],
-  "updated_at": "2026-10-25T15:01:48+08:00",
+  "updated_at": "2026-10-25T15:03:08+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-25T10:40:00+08:00",
-  "heartbeat": "2026-10-25T15:01:48.177337+08:00",
+  "heartbeat": "2026-10-25T15:03:08.177834+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
