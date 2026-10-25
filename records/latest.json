@@ -17352,7 +17352,7 @@
         "before_date": "2026-10-25",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-10-25T17:40:28+08:00",
+        "captured_at": "2026-10-25T17:42:08+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -17831,11 +17831,11 @@
         "date": "2026-10-25",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-10-25T09:41:48.280Z",
-        "finalized": false,
-        "primary_finalized": false,
+        "captured_at": "2026-10-25T09:43:08.277Z",
+        "finalized": true,
+        "primary_finalized": true,
         "cover_finalized": false,
-        "primary_captured_at": null,
+        "primary_captured_at": "2026-10-25T09:43:08.277Z",
         "cover_captured_at": null,
         "primary": {
           "status": "skip",
@@ -18221,7 +18221,7 @@
             "before_date": "2026-10-25",
             "venue": "ST",
             "race": 10,
-            "captured_at": "2026-10-25T17:40:28+08:00",
+            "captured_at": "2026-10-25T17:42:08+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -18691,9 +18691,209 @@
           "status": "skip",
           "reason": "只限H=0"
         },
-        "secondary_finalized": false,
-        "secondary_captured_at": null,
-        "secondary_input": null
+        "secondary_finalized": true,
+        "secondary_captured_at": "2026-10-25T09:43:08.277Z",
+        "secondary_input": {
+          "date": "2026-10-25",
+          "venue": "ST",
+          "race": 10,
+          "off": "2026-10-25T17:45:00+08:00",
+          "score": 1,
+          "tips": {
+            "meiji": {
+              "status": "ready",
+              "source_date": "2026-10-25",
+              "source": "https://racing.on.cc/racing/fav/20261025/rjfavf0201x0.html",
+              "captured_at": "2026-10-25T10:24:08+08:00",
+              "horses": [
+                {
+                  "no": 2,
+                  "name": "偵探傳奇"
+                },
+                {
+                  "no": 3,
+                  "name": "志滿同行"
+                },
+                {
+                  "no": 11,
+                  "name": "利高八斗"
+                },
+                {
+                  "no": 13,
+                  "name": "正極"
+                }
+              ]
+            },
+            "ball": {
+              "status": "absent",
+              "horses": [],
+              "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+              "source_date": "2026-10-25",
+              "captured_at": "2026-10-25T10:24:17+08:00"
+            },
+            "ma": {
+              "status": "ready",
+              "horses": [
+                {
+                  "no": 4,
+                  "name": "正本巨星"
+                },
+                {
+                  "no": 1,
+                  "name": "巴基之勝"
+                },
+                {
+                  "no": 3,
+                  "name": "志滿同行"
+                },
+                {
+                  "no": 2,
+                  "name": "偵探傳奇"
+                }
+              ],
+              "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+              "source_date": "2026-10-25",
+              "captured_at": "2026-10-25T10:24:17+08:00"
+            },
+            "computer": {
+              "status": "absent",
+              "horses": [],
+              "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261025",
+              "source_date": "2026-10-25",
+              "captured_at": "2026-10-25T10:24:17+08:00"
+            }
+          },
+          "banker_initial": {
+            "status": "ready",
+            "date": "2026-10-25",
+            "venue": "ST",
+            "race": 10,
+            "as_of_race_no": 0,
+            "reason": "initial",
+            "numbers": [
+              3,
+              11,
+              2,
+              8,
+              9
+            ],
+            "horses": [
+              {
+                "no": 3,
+                "name": "志滿同行"
+              },
+              {
+                "no": 11,
+                "name": "利高八斗"
+              },
+              {
+                "no": 2,
+                "name": "偵探傳奇"
+              },
+              {
+                "no": 8,
+                "name": "精彩福星"
+              },
+              {
+                "no": 9,
+                "name": "辣得準"
+              }
+            ],
+            "distance": 1200,
+            "race_class": "三",
+            "banker_top3_probability": 0.732,
+            "source": "user-provided",
+            "source_type": "user_provided",
+            "source_reference": "chatgpt-conversation://6adaa582-0888-83ee-a171-f69e9c899acb",
+            "source_note": "用戶提供的2026-10-25沙田草地A欄正式V1初版膽拖及概率；未獨立重跑或驗證模型。來源未提供原始預測時間。",
+            "captured_at": "2026-10-23T16:15:56.426Z",
+            "prediction_created_at": null,
+            "model_version": "V1",
+            "model": "logistic_regression",
+            "results_used_for_selection": false,
+            "verification": "User supplied before meeting; model and original prediction timestamp not independently verified"
+          },
+          "odds": {},
+          "original_cover": {
+            "status": "pending",
+            "first": [
+              3,
+              11,
+              2
+            ],
+            "ranked": [
+              {
+                "no": 8,
+                "median": 1,
+                "mean": 1.3333333333333333,
+                "n": 3
+              },
+              {
+                "no": 10,
+                "median": 2,
+                "mean": 2,
+                "n": 3
+              },
+              {
+                "no": 4,
+                "median": 2,
+                "mean": 2.6666666666666665,
+                "n": 3
+              },
+              {
+                "no": 5,
+                "median": 3,
+                "mean": 4.333333333333333,
+                "n": 3
+              },
+              {
+                "no": 11,
+                "median": 5,
+                "mean": 4.333333333333333,
+                "n": 3
+              }
+            ],
+            "excluded": [
+              6,
+              7,
+              12,
+              14
+            ],
+            "candidates": [
+              {
+                "no": 8,
+                "median": 1,
+                "mean": 1.3333333333333333,
+                "n": 3
+              },
+              {
+                "no": 10,
+                "median": 2,
+                "mean": 2,
+                "n": 3
+              },
+              {
+                "no": 4,
+                "median": 2,
+                "mean": 2.6666666666666665,
+                "n": 3
+              },
+              {
+                "no": 5,
+                "median": 3,
+                "mean": 4.333333333333333,
+                "n": 3
+              }
+            ],
+            "reason": "待所有候選的賽前W賠率",
+            "missing": [
+              8,
+              10,
+              4,
+              5
+            ]
+          }
+        }
       },
       "st_plan_state": "skip",
       "st_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
@@ -19207,7 +19407,7 @@
         "before_date": "2026-10-25",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-10-25T17:40:28+08:00",
+        "captured_at": "2026-10-25T17:42:08+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -19706,7 +19906,7 @@
         ],
         "fourth_source": "meiji",
         "initial_source": "user-provided",
-        "generated_at": "2026-10-25T17:40:28+08:00"
+        "generated_at": "2026-10-25T17:42:08+08:00"
       },
       "combined_snapshot": {
         "version": "confidence-cover-v1-20261022",
@@ -19714,7 +19914,7 @@
         "date": "2026-10-25",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-10-25T09:41:48.280Z",
+        "captured_at": "2026-10-25T09:43:08.277Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -20088,7 +20288,7 @@
             "before_date": "2026-10-25",
             "venue": "ST",
             "race": 11,
-            "captured_at": "2026-10-25T17:40:28+08:00",
+            "captured_at": "2026-10-25T17:42:08+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -20599,11 +20799,11 @@
       "st_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     }
   ],
-  "updated_at": "2026-10-25T17:41:48+08:00",
+  "updated_at": "2026-10-25T17:43:08+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-25T10:40:00+08:00",
-  "heartbeat": "2026-10-25T17:41:48.242437+08:00",
+  "heartbeat": "2026-10-25T17:43:08.242950+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
