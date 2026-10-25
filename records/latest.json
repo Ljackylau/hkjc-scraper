@@ -17022,7 +17022,7 @@
       "score": 1,
       "selection": null,
       "result": null,
-      "locked": false,
+      "locked": true,
       "draw_top5": {
         "status": "ready",
         "start_date": "2026-09-01",
@@ -18896,7 +18896,8 @@
         }
       },
       "st_plan_state": "skip",
-      "st_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
+      "st_plan_reason": "明治朗首選在膽拖初版前三內，本場不買",
+      "locked_at": "2026-10-25T17:45:08+08:00"
     },
     {
       "date": "2026-10-25",
@@ -19914,7 +19915,7 @@
         "date": "2026-10-25",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-10-25T09:44:28.452Z",
+        "captured_at": "2026-10-25T09:45:08.278Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -20799,11 +20800,11 @@
       "st_plan_reason": "明治朗首選在膽拖初版前三內，本場不買"
     }
   ],
-  "updated_at": "2026-10-25T17:44:28+08:00",
+  "updated_at": "2026-10-25T17:45:08+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-10-25T10:40:00+08:00",
-  "heartbeat": "2026-10-25T17:44:28.243525+08:00",
+  "heartbeat": "2026-10-25T17:45:08.243780+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
