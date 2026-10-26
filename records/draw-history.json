@@ -12348,6 +12348,87 @@
     {
       "date": "2026-10-25",
       "venue": "ST",
+      "race": 1,
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "A",
+      "runners": [
+        {
+          "no": 6,
+          "jockey_id": "CJE",
+          "jockey": "周俊樂",
+          "top3": true,
+          "draw": 3
+        },
+        {
+          "no": 8,
+          "jockey_id": "WEC",
+          "jockey": "黃智弘",
+          "top3": true,
+          "draw": 8
+        },
+        {
+          "no": 1,
+          "jockey_id": "PZ",
+          "jockey": "潘頓",
+          "top3": true,
+          "draw": 2
+        },
+        {
+          "no": 9,
+          "jockey_id": "KRW",
+          "jockey": "金誠剛",
+          "top3": false,
+          "draw": 9
+        },
+        {
+          "no": 7,
+          "jockey_id": "LDE",
+          "jockey": "梁家俊",
+          "top3": false,
+          "draw": 4
+        },
+        {
+          "no": 10,
+          "jockey_id": "HEL",
+          "jockey": "希威森",
+          "top3": false,
+          "draw": 1
+        },
+        {
+          "no": 3,
+          "jockey_id": "FEL",
+          "jockey": "霍宏聲",
+          "top3": false,
+          "draw": 7
+        },
+        {
+          "no": 2,
+          "jockey_id": "YHY",
+          "jockey": "袁幸堯",
+          "top3": false,
+          "draw": 5
+        },
+        {
+          "no": 5,
+          "jockey_id": "OJM",
+          "jockey": "奧爾民",
+          "top3": false,
+          "draw": 6
+        },
+        {
+          "no": 11,
+          "jockey_id": "YML",
+          "jockey": "楊明綸",
+          "top3": false,
+          "draw": 10
+        }
+      ],
+      "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=1"
+    },
+    {
+      "date": "2026-10-25",
+      "venue": "ST",
       "race": 2,
       "distance": 1400,
       "track": "TURF",
@@ -12562,6 +12643,87 @@
         }
       ],
       "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=3"
+    },
+    {
+      "date": "2026-10-25",
+      "venue": "ST",
+      "race": 4,
+      "distance": 2000,
+      "track": "TURF",
+      "rail": "A",
+      "runners": [
+        {
+          "no": 7,
+          "jockey_id": "AVB",
+          "jockey": "艾道拿",
+          "top3": true,
+          "draw": 1
+        },
+        {
+          "no": 5,
+          "jockey_id": "BA",
+          "jockey": "巴度",
+          "top3": true,
+          "draw": 5
+        },
+        {
+          "no": 1,
+          "jockey_id": "PZ",
+          "jockey": "潘頓",
+          "top3": true,
+          "draw": 6
+        },
+        {
+          "no": 3,
+          "jockey_id": "AA",
+          "jockey": "艾兆禮",
+          "top3": false,
+          "draw": 4
+        },
+        {
+          "no": 4,
+          "jockey_id": "HCY",
+          "jockey": "何澤堯",
+          "top3": false,
+          "draw": 2
+        },
+        {
+          "no": 10,
+          "jockey_id": "LDE",
+          "jockey": "梁家俊",
+          "top3": false,
+          "draw": 8
+        },
+        {
+          "no": 6,
+          "jockey_id": "CJE",
+          "jockey": "周俊樂",
+          "top3": false,
+          "draw": 7
+        },
+        {
+          "no": 8,
+          "jockey_id": "FEL",
+          "jockey": "霍宏聲",
+          "top3": false,
+          "draw": 9
+        },
+        {
+          "no": 9,
+          "jockey_id": "OJM",
+          "jockey": "奧爾民",
+          "top3": false,
+          "draw": 3
+        },
+        {
+          "no": 2,
+          "jockey_id": "WEC",
+          "jockey": "黃智弘",
+          "top3": false,
+          "draw": 10
+        }
+      ],
+      "source": "https://racing.hkjc.com/zh-hk/local/information/archive/localresults?racedate=2026%2F10%2F25&Racecourse=ST&RaceNo=4"
     },
     {
       "date": "2026-10-25",
@@ -13286,22 +13448,5 @@
     }
   ],
   "start_date": "2026-09-01",
-  "errors": [
-    {
-      "race": [
-        "2026-10-25",
-        "ST",
-        1
-      ],
-      "error": "Official runner draw missing"
-    },
-    {
-      "race": [
-        "2026-10-25",
-        "ST",
-        4
-      ],
-      "error": "Official runner draw missing"
-    }
-  ]
+  "errors": []
 }
