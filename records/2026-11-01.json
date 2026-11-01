@@ -8603,7 +8603,7 @@
       "score": null,
       "selection": null,
       "result": null,
-      "locked": false,
+      "locked": true,
       "draw_top5": {
         "status": "ready",
         "start_date": "2026-09-01",
@@ -9742,14 +9742,15 @@
             "captured_at": "2026-11-01T14:47:11+08:00"
           }
         }
-      }
+      },
+      "locked_at": "2026-11-01T17:50:18+08:00"
     }
   ],
-  "updated_at": "2026-11-01T17:49:58+08:00",
+  "updated_at": "2026-11-01T17:50:18+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-01T10:45:00+08:00",
-  "heartbeat": "2026-11-01T17:49:58.562483+08:00",
+  "heartbeat": "2026-11-01T17:50:18.562654+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
