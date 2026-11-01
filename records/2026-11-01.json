@@ -5869,7 +5869,7 @@
       "score": null,
       "selection": null,
       "result": null,
-      "locked": false,
+      "locked": true,
       "draw_top5": {
         "status": "ready",
         "start_date": "2026-09-01",
@@ -7008,7 +7008,8 @@
             "captured_at": "2026-11-01T14:47:01+08:00"
           }
         }
-      }
+      },
+      "locked_at": "2026-11-01T16:40:18+08:00"
     },
     {
       "date": "2026-11-01",
@@ -7225,7 +7226,7 @@
         "date": "2026-11-01",
         "venue": "HV",
         "race": 9,
-        "captured_at": "2026-11-01T08:39:38.563Z",
+        "captured_at": "2026-11-01T08:40:18.887Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -7448,7 +7449,7 @@
             "before_date": "2026-11-01",
             "venue": "HV",
             "race": 9,
-            "captured_at": "2026-11-01T16:38:38+08:00",
+            "captured_at": "2026-11-01T16:40:18+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -7959,7 +7960,7 @@
         "before_date": "2026-11-01",
         "venue": "HV",
         "race": 9,
-        "captured_at": "2026-11-01T16:38:38+08:00",
+        "captured_at": "2026-11-01T16:40:18+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -8666,7 +8667,7 @@
         "date": "2026-11-01",
         "venue": "HV",
         "race": 10,
-        "captured_at": "2026-11-01T08:39:38.563Z",
+        "captured_at": "2026-11-01T08:40:18.887Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -8889,7 +8890,7 @@
             "before_date": "2026-11-01",
             "venue": "HV",
             "race": 10,
-            "captured_at": "2026-11-01T16:38:38+08:00",
+            "captured_at": "2026-11-01T16:40:18+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -9326,7 +9327,7 @@
         "before_date": "2026-11-01",
         "venue": "HV",
         "race": 10,
-        "captured_at": "2026-11-01T16:38:38+08:00",
+        "captured_at": "2026-11-01T16:40:18+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -9745,11 +9746,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-01T16:39:38+08:00",
+  "updated_at": "2026-11-01T16:40:18+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-01T10:45:00+08:00",
-  "heartbeat": "2026-11-01T16:39:38.538430+08:00",
+  "heartbeat": "2026-11-01T16:40:18.538873+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
