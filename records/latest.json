@@ -7226,7 +7226,7 @@
         "date": "2026-11-01",
         "venue": "HV",
         "race": 9,
-        "captured_at": "2026-11-01T08:42:58.565Z",
+        "captured_at": "2026-11-01T08:44:18.575Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -7449,7 +7449,7 @@
             "before_date": "2026-11-01",
             "venue": "HV",
             "race": 9,
-            "captured_at": "2026-11-01T16:41:58+08:00",
+            "captured_at": "2026-11-01T16:43:38+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -7952,7 +7952,7 @@
         "secondary_captured_at": null,
         "secondary_input": null
       },
-      "banker_initial_error": "HTTP Error 503: Service Unavailable",
+      "banker_initial_error": "HTTP Error 404: Not Found",
       "front_support": {
         "method": "front-three-starts-v1",
         "status": "ready",
@@ -7960,7 +7960,7 @@
         "before_date": "2026-11-01",
         "venue": "HV",
         "race": 9,
-        "captured_at": "2026-11-01T16:41:58+08:00",
+        "captured_at": "2026-11-01T16:43:38+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -8667,7 +8667,7 @@
         "date": "2026-11-01",
         "venue": "HV",
         "race": 10,
-        "captured_at": "2026-11-01T08:42:58.565Z",
+        "captured_at": "2026-11-01T08:44:18.575Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -8890,7 +8890,7 @@
             "before_date": "2026-11-01",
             "venue": "HV",
             "race": 10,
-            "captured_at": "2026-11-01T16:41:58+08:00",
+            "captured_at": "2026-11-01T16:43:38+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -9319,7 +9319,7 @@
         "secondary_captured_at": null,
         "secondary_input": null
       },
-      "banker_initial_error": "HTTP Error 404: Not Found",
+      "banker_initial_error": "HTTP Error 503: Service Unavailable",
       "front_support": {
         "method": "front-three-starts-v1",
         "status": "ready",
@@ -9327,7 +9327,7 @@
         "before_date": "2026-11-01",
         "venue": "HV",
         "race": 10,
-        "captured_at": "2026-11-01T16:41:58+08:00",
+        "captured_at": "2026-11-01T16:43:38+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -9746,11 +9746,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-01T16:42:58+08:00",
+  "updated_at": "2026-11-01T16:44:18+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-01T10:45:00+08:00",
-  "heartbeat": "2026-11-01T16:42:58.539969+08:00",
+  "heartbeat": "2026-11-01T16:44:18.540518+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
