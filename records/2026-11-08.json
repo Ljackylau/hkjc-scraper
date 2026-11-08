@@ -3539,7 +3539,7 @@
       "score": null,
       "selection": null,
       "result": null,
-      "locked": false,
+      "locked": true,
       "draw_top5": {
         "status": "ready",
         "start_date": "2026-09-01",
@@ -4302,8 +4302,7 @@
       "banker_initial_error": "HTTP Error 404: Not Found",
       "sha_tin_four": {
         "status": "pending",
-        "numbers": [],
-        "error": "HTTP Error 404: Not Found"
+        "numbers": []
       },
       "front_support": {
         "method": "front-three-starts-v1",
@@ -4759,7 +4758,8 @@
             "captured_at": "2026-11-08T16:05:59+08:00"
           }
         }
-      }
+      },
+      "locked_at": "2026-11-08T16:40:13+08:00"
     },
     {
       "date": "2026-11-08",
@@ -4974,7 +4974,7 @@
         "date": "2026-11-08",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-08T08:39:14.011Z",
+        "captured_at": "2026-11-08T08:40:13.400Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -6192,7 +6192,7 @@
         "date": "2026-11-08",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-08T08:39:14.011Z",
+        "captured_at": "2026-11-08T08:40:13.400Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -7458,11 +7458,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-08T16:39:14+08:00",
+  "updated_at": "2026-11-08T16:40:13+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-08T10:30:00+08:00",
-  "heartbeat": "2026-11-08T16:39:13.371580+08:00",
+  "heartbeat": "2026-11-08T16:40:13.371881+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
