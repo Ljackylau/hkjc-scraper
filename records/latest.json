@@ -4913,7 +4913,7 @@
       "score": null,
       "selection": null,
       "result": null,
-      "locked": false,
+      "locked": true,
       "draw_top5": {
         "status": "ready",
         "start_date": "2026-09-01",
@@ -5960,7 +5960,8 @@
             "captured_at": "2026-11-08T16:06:02+08:00"
           }
         }
-      }
+      },
+      "locked_at": "2026-11-08T17:15:13+08:00"
     },
     {
       "date": "2026-11-08",
@@ -6191,7 +6192,7 @@
         "date": "2026-11-08",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-08T09:14:53.941Z",
+        "captured_at": "2026-11-08T09:15:13.411Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -7457,11 +7458,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-08T17:14:53+08:00",
+  "updated_at": "2026-11-08T17:15:13+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-08T10:30:00+08:00",
-  "heartbeat": "2026-11-08T17:14:53.382600+08:00",
+  "heartbeat": "2026-11-08T17:15:13.382732+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
