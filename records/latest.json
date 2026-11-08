@@ -3379,11 +3379,11 @@
       "horses": [
         {
           "no": 1,
-          "name": "喜蓮勁感",
-          "jockey_id": "CJE",
-          "jockey": "周俊樂",
+          "name": "展長風",
+          "jockey_id": "FEL",
+          "jockey": "霍宏聲",
           "draw": 12,
-          "horse_id": "HK_2025_L028"
+          "horse_id": "HK_2025_L493"
         },
         {
           "no": 2,
@@ -3555,15 +3555,6 @@
             "rate": 0.7777777777777778
           },
           {
-            "no": 1,
-            "jockey": "周俊樂",
-            "jockey_id": "CJE",
-            "draw": 12,
-            "placed": 5,
-            "starts": 9,
-            "rate": 0.5555555555555556
-          },
-          {
             "no": 6,
             "jockey": "何澤堯",
             "jockey_id": "HCY",
@@ -3589,6 +3580,15 @@
             "placed": 3,
             "starts": 10,
             "rate": 0.3
+          },
+          {
+            "no": 3,
+            "jockey": "艾道拿",
+            "jockey_id": "AVB",
+            "draw": 8,
+            "placed": 1,
+            "starts": 5,
+            "rate": 0.2
           }
         ],
         "method_version": "jockey_draw_only_v3",
@@ -3600,7 +3600,7 @@
         "date": "2026-11-08",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-11-08T08:33:53.399Z",
+        "captured_at": "2026-11-08T08:35:13.403Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -3628,11 +3628,11 @@
           "horses": [
             {
               "no": 1,
-              "name": "喜蓮勁感",
-              "jockey_id": "CJE",
-              "jockey": "周俊樂",
+              "name": "展長風",
+              "jockey_id": "FEL",
+              "jockey": "霍宏聲",
               "draw": 12,
-              "horse_id": "HK_2025_L028"
+              "horse_id": "HK_2025_L493"
             },
             {
               "no": 2,
@@ -3793,15 +3793,6 @@
                 "rate": 0.7777777777777778
               },
               {
-                "no": 1,
-                "jockey": "周俊樂",
-                "jockey_id": "CJE",
-                "draw": 12,
-                "placed": 5,
-                "starts": 9,
-                "rate": 0.5555555555555556
-              },
-              {
                 "no": 6,
                 "jockey": "何澤堯",
                 "jockey_id": "HCY",
@@ -3827,6 +3818,15 @@
                 "placed": 3,
                 "starts": 10,
                 "rate": 0.3
+              },
+              {
+                "no": 3,
+                "jockey": "艾道拿",
+                "jockey_id": "AVB",
+                "draw": 8,
+                "placed": 1,
+                "starts": 5,
+                "rate": 0.2
               }
             ],
             "method_version": "jockey_draw_only_v3",
@@ -3839,7 +3839,7 @@
             "before_date": "2026-11-08",
             "venue": "ST",
             "race": 9,
-            "captured_at": "2026-11-08T16:32:34+08:00",
+            "captured_at": "2026-11-08T16:34:13+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -4333,8 +4333,7 @@
       "banker_initial_error": "HTTP Error 404: Not Found",
       "sha_tin_four": {
         "status": "pending",
-        "numbers": [],
-        "error": "HTTP Error 404: Not Found"
+        "numbers": []
       },
       "front_support": {
         "method": "front-three-starts-v1",
@@ -4343,7 +4342,7 @@
         "before_date": "2026-11-08",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-11-08T16:32:34+08:00",
+        "captured_at": "2026-11-08T16:34:13+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -5036,7 +5035,7 @@
         "date": "2026-11-08",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-08T08:33:53.399Z",
+        "captured_at": "2026-11-08T08:35:13.403Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -5259,7 +5258,7 @@
             "before_date": "2026-11-08",
             "venue": "ST",
             "race": 10,
-            "captured_at": "2026-11-08T16:32:34+08:00",
+            "captured_at": "2026-11-08T16:34:13+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -5654,7 +5653,7 @@
         "before_date": "2026-11-08",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-08T16:32:34+08:00",
+        "captured_at": "2026-11-08T16:34:13+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -6254,7 +6253,7 @@
         "date": "2026-11-08",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-08T08:33:53.399Z",
+        "captured_at": "2026-11-08T08:35:13.403Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -6493,7 +6492,7 @@
             "before_date": "2026-11-08",
             "venue": "ST",
             "race": 11,
-            "captured_at": "2026-11-08T16:32:34+08:00",
+            "captured_at": "2026-11-08T16:34:13+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -7018,7 +7017,7 @@
         "before_date": "2026-11-08",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-08T16:32:34+08:00",
+        "captured_at": "2026-11-08T16:34:13+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -7520,11 +7519,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-08T16:33:53+08:00",
+  "updated_at": "2026-11-08T16:35:13+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-08T10:30:00+08:00",
-  "heartbeat": "2026-11-08T16:33:53.369924+08:00",
+  "heartbeat": "2026-11-08T16:35:13.370331+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
