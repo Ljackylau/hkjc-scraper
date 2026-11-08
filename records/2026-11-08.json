@@ -3600,7 +3600,7 @@
         "date": "2026-11-08",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-11-08T08:07:13.390Z",
+        "captured_at": "2026-11-08T08:08:33.390Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -3839,7 +3839,7 @@
             "before_date": "2026-11-08",
             "venue": "ST",
             "race": 9,
-            "captured_at": "2026-11-08T16:05:45+08:00",
+            "captured_at": "2026-11-08T16:07:34+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -4343,7 +4343,7 @@
         "before_date": "2026-11-08",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-11-08T16:05:45+08:00",
+        "captured_at": "2026-11-08T16:07:34+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -5036,7 +5036,7 @@
         "date": "2026-11-08",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-08T08:07:13.390Z",
+        "captured_at": "2026-11-08T08:08:33.390Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -5259,7 +5259,7 @@
             "before_date": "2026-11-08",
             "venue": "ST",
             "race": 10,
-            "captured_at": "2026-11-08T16:05:45+08:00",
+            "captured_at": "2026-11-08T16:07:34+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -5654,7 +5654,7 @@
         "before_date": "2026-11-08",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-08T16:05:45+08:00",
+        "captured_at": "2026-11-08T16:07:34+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -6254,7 +6254,7 @@
         "date": "2026-11-08",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-08T08:07:13.390Z",
+        "captured_at": "2026-11-08T08:08:33.390Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -6488,12 +6488,12 @@
           },
           "front_support": {
             "method": "front-three-starts-v1",
-            "status": "pending",
+            "status": "ready",
             "date": "2026-11-08",
             "before_date": "2026-11-08",
             "venue": "ST",
             "race": 11,
-            "captured_at": "2026-11-08T16:05:45+08:00",
+            "captured_at": "2026-11-08T16:07:34+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -6889,6 +6889,107 @@
                 "horse_id": "HK_2025_L564",
                 "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L564&Option=1",
                 "captured_at": "2026-11-08T16:06:10+08:00"
+              },
+              "11": {
+                "status": "ready",
+                "style_n": 0,
+                "median": null,
+                "last_date": null,
+                "last_finish": null,
+                "horse_id": "HK_2026_M123",
+                "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2026_M123&Option=1",
+                "captured_at": "2026-11-08T16:07:35+08:00"
+              },
+              "12": {
+                "status": "ready",
+                "last_date": "2026-10-19",
+                "last_finish": 4,
+                "style_n": 3,
+                "median": 1,
+                "recent": [
+                  {
+                    "date": "2026-10-19",
+                    "finish": 4,
+                    "positions": [
+                      1,
+                      1,
+                      1,
+                      4
+                    ]
+                  },
+                  {
+                    "date": "2026-09-27",
+                    "finish": 1,
+                    "positions": [
+                      1,
+                      1,
+                      1,
+                      1
+                    ]
+                  },
+                  {
+                    "date": "2026-09-06",
+                    "finish": 4,
+                    "positions": [
+                      1,
+                      1,
+                      1,
+                      4
+                    ]
+                  }
+                ],
+                "horse_id": "HK_2023_J180",
+                "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2023_J180&Option=1",
+                "captured_at": "2026-11-08T16:07:38+08:00"
+              },
+              "13": {
+                "status": "ready",
+                "style_n": 0,
+                "median": null,
+                "last_date": null,
+                "last_finish": null,
+                "horse_id": "HK_2025_L515",
+                "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L515&Option=1",
+                "captured_at": "2026-11-08T16:07:35+08:00"
+              },
+              "14": {
+                "status": "ready",
+                "last_date": "2026-10-19",
+                "last_finish": 2,
+                "style_n": 3,
+                "median": 4,
+                "recent": [
+                  {
+                    "date": "2026-10-19",
+                    "finish": 2,
+                    "positions": [
+                      11,
+                      10,
+                      2
+                    ]
+                  },
+                  {
+                    "date": "2026-06-27",
+                    "finish": 1,
+                    "positions": [
+                      4,
+                      3,
+                      1
+                    ]
+                  },
+                  {
+                    "date": "2026-04-26",
+                    "finish": 1,
+                    "positions": [
+                      4,
+                      2,
+                      1
+                    ]
+                  }
+                ],
+                "horse_id": "HK_2025_L232",
+                "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L232&Option=1",
+                "captured_at": "2026-11-08T16:07:36+08:00"
               }
             }
           },
@@ -6912,12 +7013,12 @@
       },
       "front_support": {
         "method": "front-three-starts-v1",
-        "status": "pending",
+        "status": "ready",
         "date": "2026-11-08",
         "before_date": "2026-11-08",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-08T16:05:45+08:00",
+        "captured_at": "2026-11-08T16:07:34+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -7313,16 +7414,117 @@
             "horse_id": "HK_2025_L564",
             "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L564&Option=1",
             "captured_at": "2026-11-08T16:06:10+08:00"
+          },
+          "11": {
+            "status": "ready",
+            "style_n": 0,
+            "median": null,
+            "last_date": null,
+            "last_finish": null,
+            "horse_id": "HK_2026_M123",
+            "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2026_M123&Option=1",
+            "captured_at": "2026-11-08T16:07:35+08:00"
+          },
+          "12": {
+            "status": "ready",
+            "last_date": "2026-10-19",
+            "last_finish": 4,
+            "style_n": 3,
+            "median": 1,
+            "recent": [
+              {
+                "date": "2026-10-19",
+                "finish": 4,
+                "positions": [
+                  1,
+                  1,
+                  1,
+                  4
+                ]
+              },
+              {
+                "date": "2026-09-27",
+                "finish": 1,
+                "positions": [
+                  1,
+                  1,
+                  1,
+                  1
+                ]
+              },
+              {
+                "date": "2026-09-06",
+                "finish": 4,
+                "positions": [
+                  1,
+                  1,
+                  1,
+                  4
+                ]
+              }
+            ],
+            "horse_id": "HK_2023_J180",
+            "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2023_J180&Option=1",
+            "captured_at": "2026-11-08T16:07:38+08:00"
+          },
+          "13": {
+            "status": "ready",
+            "style_n": 0,
+            "median": null,
+            "last_date": null,
+            "last_finish": null,
+            "horse_id": "HK_2025_L515",
+            "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L515&Option=1",
+            "captured_at": "2026-11-08T16:07:35+08:00"
+          },
+          "14": {
+            "status": "ready",
+            "last_date": "2026-10-19",
+            "last_finish": 2,
+            "style_n": 3,
+            "median": 4,
+            "recent": [
+              {
+                "date": "2026-10-19",
+                "finish": 2,
+                "positions": [
+                  11,
+                  10,
+                  2
+                ]
+              },
+              {
+                "date": "2026-06-27",
+                "finish": 1,
+                "positions": [
+                  4,
+                  3,
+                  1
+                ]
+              },
+              {
+                "date": "2026-04-26",
+                "finish": 1,
+                "positions": [
+                  4,
+                  2,
+                  1
+                ]
+              }
+            ],
+            "horse_id": "HK_2025_L232",
+            "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L232&Option=1",
+            "captured_at": "2026-11-08T16:07:36+08:00"
           }
         }
       }
     }
   ],
-  "updated_at": "2026-11-08T16:07:13+08:00",
+  "updated_at": "2026-11-08T16:08:33+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-08T10:30:00+08:00",
-  "heartbeat": "2026-11-08T16:07:13.361667+08:00",
+  "heartbeat": "2026-11-08T16:08:33.362222+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
