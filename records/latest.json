@@ -189,7 +189,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "hv_plan_state": "pending",
@@ -596,7 +595,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "hv_plan_state": "pending",
@@ -828,7 +826,7 @@
           "name": "當家精彩",
           "jockey_id": "AVB",
           "jockey": "艾道拿",
-          "draw": 7,
+          "draw": 6,
           "horse_id": "HK_2024_K322"
         },
         {
@@ -836,7 +834,7 @@
           "name": "幸運愉快",
           "jockey_id": "PMF",
           "jockey": "潘明輝",
-          "draw": 9,
+          "draw": 8,
           "horse_id": "HK_2024_K064"
         },
         {
@@ -844,7 +842,7 @@
           "name": "新力",
           "jockey_id": "YML",
           "jockey": "楊明綸",
-          "draw": 10,
+          "draw": 9,
           "horse_id": "HK_2022_H325"
         },
         {
@@ -860,7 +858,7 @@
           "name": "豐勝多彩",
           "jockey_id": "BA",
           "jockey": "巴度",
-          "draw": 12,
+          "draw": 11,
           "horse_id": "HK_2025_L324"
         },
         {
@@ -884,7 +882,7 @@
           "name": "鋼鐵安防",
           "jockey_id": "CJE",
           "jockey": "周俊樂",
-          "draw": 11,
+          "draw": 10,
           "horse_id": "HK_2025_L174"
         },
         {
@@ -916,7 +914,7 @@
           "name": "有盈勇士",
           "jockey_id": "HEL",
           "jockey": "希威森",
-          "draw": 8,
+          "draw": 7,
           "horse_id": "HK_2024_K271"
         }
       ],
@@ -974,6 +972,15 @@
             "rate": 0.42857142857142855
           },
           {
+            "no": 2,
+            "jockey": "潘明輝",
+            "jockey_id": "PMF",
+            "draw": 8,
+            "placed": 3,
+            "starts": 7,
+            "rate": 0.42857142857142855
+          },
+          {
             "no": 11,
             "jockey": "霍宏聲",
             "jockey_id": "FEL",
@@ -990,20 +997,11 @@
             "placed": 2,
             "starts": 6,
             "rate": 0.3333333333333333
-          },
-          {
-            "no": 1,
-            "jockey": "艾道拿",
-            "jockey_id": "AVB",
-            "draw": 7,
-            "placed": 2,
-            "starts": 7,
-            "rate": 0.2857142857142857
           }
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補"
+        "record_type": "historical_reconstruction"
       },
       "hv_plan_state": "pending",
       "hv_plan_reason": "待確認三個專家來源",
@@ -1220,7 +1218,10 @@
         "secondary_finalized": false,
         "secondary_captured_at": null,
         "secondary_input": null
-      }
+      },
+      "draw_stats_scratched": [
+        9
+      ]
     },
     {
       "date": "2026-11-11",
@@ -1408,7 +1409,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "hv_plan_state": "pending",
@@ -1815,7 +1815,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "hv_plan_state": "pending",
@@ -2222,7 +2221,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "hv_plan_state": "pending",
@@ -2629,7 +2627,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "hv_plan_state": "pending",
@@ -3036,7 +3033,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "hv_plan_state": "pending",
@@ -3443,7 +3439,6 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補",
         "record_type": "historical_reconstruction"
       },
       "hv_plan_state": "pending",
