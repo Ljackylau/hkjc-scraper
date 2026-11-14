@@ -10288,7 +10288,7 @@
         "date": "2026-11-14",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-14T10:04:14.170Z",
+        "captured_at": "2026-11-14T10:05:34.032Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -10545,7 +10545,7 @@
             "before_date": "2026-11-14",
             "venue": "ST",
             "race": 11,
-            "captured_at": "2026-11-14T18:03:54+08:00",
+            "captured_at": "2026-11-14T18:05:34+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -10987,7 +10987,8 @@
       "banker_initial_error": "HTTP Error 404: Not Found",
       "sha_tin_four": {
         "status": "pending",
-        "numbers": []
+        "numbers": [],
+        "error": "HTTP Error 404: Not Found"
       },
       "front_support": {
         "method": "front-three-starts-v1",
@@ -10996,7 +10997,7 @@
         "before_date": "2026-11-14",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-14T18:03:54+08:00",
+        "captured_at": "2026-11-14T18:05:34+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -11427,11 +11428,11 @@
       "st_plan_reason": "待膽拖網同場初版推介"
     }
   ],
-  "updated_at": "2026-11-14T18:04:14+08:00",
+  "updated_at": "2026-11-14T18:05:34+08:00",
   "status": "live",
   "tips_checked_at": "2026-11-14T10:30:00+08:00",
   "tips_due_at": "2026-11-14T10:30:00+08:00",
-  "heartbeat": "2026-11-14T18:04:13.789566+08:00",
+  "heartbeat": "2026-11-14T18:05:33.789937+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
