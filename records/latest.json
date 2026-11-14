@@ -10227,7 +10227,7 @@
       "score": 1,
       "selection": null,
       "result": null,
-      "locked": false,
+      "locked": true,
       "draw_top5": {
         "status": "ready",
         "start_date": "2026-09-01",
@@ -11499,14 +11499,15 @@
         }
       },
       "st_plan_state": "pending",
-      "st_plan_reason": "待膽拖網同場初版推介"
+      "st_plan_reason": "待膽拖網同場初版推介",
+      "locked_at": "2026-11-14T18:15:13+08:00"
     }
   ],
-  "updated_at": "2026-11-14T18:14:53+08:00",
+  "updated_at": "2026-11-14T18:15:13+08:00",
   "status": "live",
   "tips_checked_at": "2026-11-14T10:30:00+08:00",
   "tips_due_at": "2026-11-14T10:30:00+08:00",
-  "heartbeat": "2026-11-14T18:14:53.792672+08:00",
+  "heartbeat": "2026-11-14T18:15:13.792766+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
