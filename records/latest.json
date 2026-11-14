@@ -6835,7 +6835,7 @@
       "score": 0,
       "selection": null,
       "result": null,
-      "locked": false,
+      "locked": true,
       "draw_top5": {
         "status": "ready",
         "start_date": "2026-09-01",
@@ -8249,7 +8249,8 @@
         }
       },
       "st_plan_state": "pending",
-      "st_plan_reason": "待膽拖網同場初版推介"
+      "st_plan_reason": "待膽拖網同場初版推介",
+      "locked_at": "2026-11-14T17:05:13+08:00"
     },
     {
       "date": "2026-11-14",
@@ -8506,7 +8507,7 @@
         "date": "2026-11-14",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-14T09:04:33.913Z",
+        "captured_at": "2026-11-14T09:05:13.794Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -10212,7 +10213,7 @@
         "date": "2026-11-14",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-14T09:04:33.913Z",
+        "captured_at": "2026-11-14T09:05:13.794Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -11352,11 +11353,11 @@
       "st_plan_reason": "待膽拖網同場初版推介"
     }
   ],
-  "updated_at": "2026-11-14T17:04:33+08:00",
+  "updated_at": "2026-11-14T17:05:13+08:00",
   "status": "live",
   "tips_checked_at": "2026-11-14T10:30:00+08:00",
   "tips_due_at": "2026-11-14T10:30:00+08:00",
-  "heartbeat": "2026-11-14T17:04:33.772243+08:00",
+  "heartbeat": "2026-11-14T17:05:13.772417+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
