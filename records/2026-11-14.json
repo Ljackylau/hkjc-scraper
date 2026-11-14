@@ -10288,8 +10288,8 @@
         "date": "2026-11-14",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-14T10:10:53.813Z",
-        "finalized": false,
+        "captured_at": "2026-11-14T10:12:14.185Z",
+        "finalized": true,
         "primary_finalized": false,
         "cover_finalized": false,
         "primary_captured_at": null,
@@ -10545,7 +10545,7 @@
             "before_date": "2026-11-14",
             "venue": "ST",
             "race": 11,
-            "captured_at": "2026-11-14T18:10:33+08:00",
+            "captured_at": "2026-11-14T18:12:14+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -10980,15 +10980,89 @@
           "status": "skip",
           "reason": "只限H=0"
         },
-        "secondary_finalized": false,
-        "secondary_captured_at": null,
-        "secondary_input": null
+        "secondary_finalized": true,
+        "secondary_captured_at": "2026-11-14T10:12:14.185Z",
+        "secondary_input": {
+          "date": "2026-11-14",
+          "venue": "ST",
+          "race": 11,
+          "off": "2026-11-14T18:15:00+08:00",
+          "score": 1,
+          "tips": {
+            "meiji": {
+              "status": "ready",
+              "source_date": "2026-11-14",
+              "source": "https://racing.on.cc/racing/fav/20261114/rjfavf0201x0.html",
+              "captured_at": "2026-11-14T10:30:00+08:00",
+              "horses": [
+                {
+                  "no": 10,
+                  "name": "喜悅歡欣"
+                },
+                {
+                  "no": 11,
+                  "name": "旌採"
+                },
+                {
+                  "no": 8,
+                  "name": "名揚四海"
+                },
+                {
+                  "no": 12,
+                  "name": "紫荊拼搏"
+                }
+              ]
+            },
+            "ball": {
+              "status": "ready",
+              "horses": [
+                {
+                  "no": 9,
+                  "name": "泰力"
+                },
+                {
+                  "no": 10,
+                  "name": "喜悅歡欣"
+                },
+                {
+                  "no": 11,
+                  "name": "旌採"
+                },
+                {
+                  "no": 8,
+                  "name": "名揚四海"
+                }
+              ],
+              "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261114",
+              "source_date": "2026-11-14",
+              "captured_at": "2026-11-14T10:30:16+08:00"
+            },
+            "ma": {
+              "status": "absent",
+              "horses": [],
+              "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261114",
+              "source_date": "2026-11-14",
+              "captured_at": "2026-11-14T10:30:16+08:00"
+            },
+            "computer": {
+              "status": "absent",
+              "horses": [],
+              "source": "https://racing.stheadline.com/api/raceDay/expertTips?date=20261114",
+              "source_date": "2026-11-14",
+              "captured_at": "2026-11-14T10:30:16+08:00"
+            }
+          },
+          "odds": {},
+          "original_cover": {
+            "status": "pending",
+            "reason": "待同場膽拖初版"
+          }
+        }
       },
       "banker_initial_error": "HTTP Error 404: Not Found",
       "sha_tin_four": {
         "status": "pending",
-        "numbers": [],
-        "error": "HTTP Error 404: Not Found"
+        "numbers": []
       },
       "front_support": {
         "method": "front-three-starts-v1",
@@ -10997,7 +11071,7 @@
         "before_date": "2026-11-14",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-14T18:10:33+08:00",
+        "captured_at": "2026-11-14T18:12:14+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -11428,11 +11502,11 @@
       "st_plan_reason": "待膽拖網同場初版推介"
     }
   ],
-  "updated_at": "2026-11-14T18:10:53+08:00",
+  "updated_at": "2026-11-14T18:12:14+08:00",
   "status": "live",
   "tips_checked_at": "2026-11-14T10:30:00+08:00",
   "tips_due_at": "2026-11-14T10:30:00+08:00",
-  "heartbeat": "2026-11-14T18:10:53.791483+08:00",
+  "heartbeat": "2026-11-14T18:12:13.791879+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
