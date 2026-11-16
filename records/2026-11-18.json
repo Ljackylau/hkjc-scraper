@@ -1,0 +1,3649 @@
+{
+  "date": "2026-11-18",
+  "venue": "HV",
+  "source": "https://racing.hkjc.com/zh-hk/local/information/racecard",
+  "races": [
+    {
+      "date": "2026-11-18",
+      "venue": "HV",
+      "race": 1,
+      "off": "2026-11-18T18:40:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "禾道威",
+          "jockey_id": "PZ",
+          "jockey": "潘頓",
+          "draw": 5,
+          "horse_id": "HK_2023_J463"
+        },
+        {
+          "no": 2,
+          "name": "連連好運",
+          "jockey_id": "YHY",
+          "jockey": "袁幸堯",
+          "draw": 12,
+          "horse_id": "HK_2024_K500"
+        },
+        {
+          "no": 3,
+          "name": "大輝煌",
+          "jockey_id": "CJE",
+          "jockey": "周俊樂",
+          "draw": 3,
+          "horse_id": "HK_2024_K205"
+        },
+        {
+          "no": 4,
+          "name": "鴻圖大展",
+          "jockey_id": "HEL",
+          "jockey": "希威森",
+          "draw": 10,
+          "horse_id": "HK_2025_L138"
+        },
+        {
+          "no": 5,
+          "name": "蜜蜜送",
+          "jockey_id": "CML",
+          "jockey": "蔡明紹",
+          "draw": 4,
+          "horse_id": "HK_2023_J502"
+        },
+        {
+          "no": 6,
+          "name": "一支箭",
+          "jockey_id": "PMF",
+          "jockey": "潘明輝",
+          "draw": 7,
+          "horse_id": "HK_2022_H276"
+        },
+        {
+          "no": 7,
+          "name": "一風雲",
+          "jockey_id": "YML",
+          "jockey": "楊明綸",
+          "draw": 1,
+          "horse_id": "HK_2024_K336"
+        },
+        {
+          "no": 8,
+          "name": "多利神駒",
+          "jockey_id": "OJM",
+          "jockey": "奧爾民",
+          "draw": 11,
+          "horse_id": "HK_2021_G292"
+        },
+        {
+          "no": 9,
+          "name": "競駿勇士",
+          "jockey_id": "TEK",
+          "jockey": "田泰安",
+          "draw": 2,
+          "horse_id": "HK_2024_K464"
+        },
+        {
+          "no": 10,
+          "name": "香港精神",
+          "jockey_id": "LDE",
+          "jockey": "梁家俊",
+          "draw": 9,
+          "horse_id": "HK_2019_D241"
+        },
+        {
+          "no": 11,
+          "name": "架勢奇爸",
+          "jockey_id": "BA",
+          "jockey": "巴度",
+          "draw": 8,
+          "horse_id": "HK_2021_G312"
+        },
+        {
+          "no": 12,
+          "name": "幸運同行",
+          "jockey_id": "OSR",
+          "jockey": "奧璇璧",
+          "draw": 6,
+          "horse_id": "HK_2023_J331"
+        }
+      ],
+      "scratched": [],
+      "distance": 2200,
+      "track": "TURF",
+      "rail": "C",
+      "tips": {
+        "meiji": {
+          "status": "pending",
+          "horses": []
+        },
+        "ball": {
+          "status": "pending",
+          "horses": []
+        },
+        "ma": {
+          "status": "pending",
+          "horses": []
+        },
+        "computer": {
+          "status": "pending",
+          "horses": []
+        }
+      },
+      "index": {
+        "status": "pending",
+        "horses": []
+      },
+      "score": null,
+      "selection": null,
+      "result": null,
+      "locked": false,
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-11-18",
+        "riders": [
+          {
+            "no": 3,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "draw": 3,
+            "placed": 5,
+            "starts": 10,
+            "rate": 0.5
+          },
+          {
+            "no": 8,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "draw": 11,
+            "placed": 5,
+            "starts": 12,
+            "rate": 0.4166666666666667
+          },
+          {
+            "no": 9,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "draw": 2,
+            "placed": 5,
+            "starts": 13,
+            "rate": 0.38461538461538464
+          },
+          {
+            "no": 1,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "draw": 5,
+            "placed": 5,
+            "starts": 14,
+            "rate": 0.35714285714285715
+          },
+          {
+            "no": 5,
+            "jockey": "蔡明紹",
+            "jockey_id": "CML",
+            "draw": 4,
+            "placed": 1,
+            "starts": 7,
+            "rate": 0.14285714285714285
+          }
+        ],
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+      },
+      "hv_plan_state": "pending",
+      "hv_plan_reason": "待確認三個專家來源",
+      "combined_snapshot": {
+        "version": "confidence-cover-v1-20261022",
+        "ledger": "paper",
+        "date": "2026-11-18",
+        "venue": "HV",
+        "race": 1,
+        "captured_at": "2026-11-16T06:10:29.653Z",
+        "finalized": false,
+        "primary_finalized": false,
+        "cover_finalized": false,
+        "primary_captured_at": null,
+        "cover_captured_at": null,
+        "primary": {
+          "status": "pending",
+          "picks": [],
+          "bets": [],
+          "reason": "待確認三個專家來源"
+        },
+        "cover": {
+          "status": "pending",
+          "reason": "待同日明治四選"
+        },
+        "input": {
+          "date": "2026-11-18",
+          "venue": "HV",
+          "race": 1,
+          "off": "2026-11-18T18:40:00+08:00",
+          "score": null,
+          "track": "TURF",
+          "distance": 2200,
+          "rail": "C",
+          "horses": [
+            {
+              "no": 1,
+              "name": "禾道威",
+              "jockey_id": "PZ",
+              "jockey": "潘頓",
+              "draw": 5,
+              "horse_id": "HK_2023_J463"
+            },
+            {
+              "no": 2,
+              "name": "連連好運",
+              "jockey_id": "YHY",
+              "jockey": "袁幸堯",
+              "draw": 12,
+              "horse_id": "HK_2024_K500"
+            },
+            {
+              "no": 3,
+              "name": "大輝煌",
+              "jockey_id": "CJE",
+              "jockey": "周俊樂",
+              "draw": 3,
+              "horse_id": "HK_2024_K205"
+            },
+            {
+              "no": 4,
+              "name": "鴻圖大展",
+              "jockey_id": "HEL",
+              "jockey": "希威森",
+              "draw": 10,
+              "horse_id": "HK_2025_L138"
+            },
+            {
+              "no": 5,
+              "name": "蜜蜜送",
+              "jockey_id": "CML",
+              "jockey": "蔡明紹",
+              "draw": 4,
+              "horse_id": "HK_2023_J502"
+            },
+            {
+              "no": 6,
+              "name": "一支箭",
+              "jockey_id": "PMF",
+              "jockey": "潘明輝",
+              "draw": 7,
+              "horse_id": "HK_2022_H276"
+            },
+            {
+              "no": 7,
+              "name": "一風雲",
+              "jockey_id": "YML",
+              "jockey": "楊明綸",
+              "draw": 1,
+              "horse_id": "HK_2024_K336"
+            },
+            {
+              "no": 8,
+              "name": "多利神駒",
+              "jockey_id": "OJM",
+              "jockey": "奧爾民",
+              "draw": 11,
+              "horse_id": "HK_2021_G292"
+            },
+            {
+              "no": 9,
+              "name": "競駿勇士",
+              "jockey_id": "TEK",
+              "jockey": "田泰安",
+              "draw": 2,
+              "horse_id": "HK_2024_K464"
+            },
+            {
+              "no": 10,
+              "name": "香港精神",
+              "jockey_id": "LDE",
+              "jockey": "梁家俊",
+              "draw": 9,
+              "horse_id": "HK_2019_D241"
+            },
+            {
+              "no": 11,
+              "name": "架勢奇爸",
+              "jockey_id": "BA",
+              "jockey": "巴度",
+              "draw": 8,
+              "horse_id": "HK_2021_G312"
+            },
+            {
+              "no": 12,
+              "name": "幸運同行",
+              "jockey_id": "OSR",
+              "jockey": "奧璇璧",
+              "draw": 6,
+              "horse_id": "HK_2023_J331"
+            }
+          ],
+          "scratched": [],
+          "tips": {
+            "meiji": {
+              "status": "pending",
+              "horses": []
+            },
+            "ball": {
+              "status": "pending",
+              "horses": []
+            },
+            "ma": {
+              "status": "pending",
+              "horses": []
+            },
+            "computer": {
+              "status": "pending",
+              "horses": []
+            }
+          },
+          "draw_top5": {
+            "status": "ready",
+            "start_date": "2026-09-01",
+            "before_date": "2026-11-18",
+            "riders": [
+              {
+                "no": 3,
+                "jockey": "周俊樂",
+                "jockey_id": "CJE",
+                "draw": 3,
+                "placed": 5,
+                "starts": 10,
+                "rate": 0.5
+              },
+              {
+                "no": 8,
+                "jockey": "奧爾民",
+                "jockey_id": "OJM",
+                "draw": 11,
+                "placed": 5,
+                "starts": 12,
+                "rate": 0.4166666666666667
+              },
+              {
+                "no": 9,
+                "jockey": "田泰安",
+                "jockey_id": "TEK",
+                "draw": 2,
+                "placed": 5,
+                "starts": 13,
+                "rate": 0.38461538461538464
+              },
+              {
+                "no": 1,
+                "jockey": "潘頓",
+                "jockey_id": "PZ",
+                "draw": 5,
+                "placed": 5,
+                "starts": 14,
+                "rate": 0.35714285714285715
+              },
+              {
+                "no": 5,
+                "jockey": "蔡明紹",
+                "jockey_id": "CML",
+                "draw": 4,
+                "placed": 1,
+                "starts": 7,
+                "rate": 0.14285714285714285
+              }
+            ],
+            "method_version": "jockey_draw_only_v3",
+            "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+          },
+          "odds": {}
+        },
+        "cover_input": null,
+        "secondary_version": "h0-intersection2-gt7.5-v1-20261022",
+        "secondary": {
+          "status": "pending",
+          "reason": "待H條件核實"
+        },
+        "secondary_finalized": false,
+        "secondary_captured_at": null,
+        "secondary_input": null
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "venue": "HV",
+      "race": 2,
+      "off": "2026-11-18T19:10:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "友得盈",
+          "jockey_id": "CJE",
+          "jockey": "周俊樂",
+          "draw": 7,
+          "horse_id": "HK_2024_K106"
+        },
+        {
+          "no": 2,
+          "name": "馬運高",
+          "jockey_id": "PZ",
+          "jockey": "潘頓",
+          "draw": 1,
+          "horse_id": "HK_2025_L175"
+        },
+        {
+          "no": 3,
+          "name": "辣得金",
+          "jockey_id": "WEC",
+          "jockey": "黃智弘",
+          "draw": 11,
+          "horse_id": "HK_2023_J087"
+        },
+        {
+          "no": 4,
+          "name": "智勝攻略",
+          "jockey_id": "OJM",
+          "jockey": "奧爾民",
+          "draw": 6,
+          "horse_id": "HK_2022_H197"
+        },
+        {
+          "no": 5,
+          "name": "喆喆友福",
+          "jockey_id": "YHY",
+          "jockey": "袁幸堯",
+          "draw": 2,
+          "horse_id": "HK_2023_J345"
+        },
+        {
+          "no": 6,
+          "name": "鑽飾閃耀",
+          "jockey_id": "LDE",
+          "jockey": "梁家俊",
+          "draw": 3,
+          "horse_id": "HK_2025_L182"
+        },
+        {
+          "no": 7,
+          "name": "精算奕然",
+          "jockey_id": "MHT",
+          "jockey": "巫顯東",
+          "draw": 12,
+          "horse_id": "HK_2024_K295"
+        },
+        {
+          "no": 8,
+          "name": "精益大師",
+          "jockey_id": "HCY",
+          "jockey": "何澤堯",
+          "draw": 5,
+          "horse_id": "HK_2022_H134"
+        },
+        {
+          "no": 9,
+          "name": "果然僥倖",
+          "jockey_id": "BHW",
+          "jockey": "班德禮",
+          "draw": 8,
+          "horse_id": "HK_2022_H252"
+        },
+        {
+          "no": 10,
+          "name": "陸小鳳",
+          "jockey_id": "KRW",
+          "jockey": "金誠剛",
+          "draw": 4,
+          "horse_id": "HK_2024_K282"
+        },
+        {
+          "no": 11,
+          "name": "五福星",
+          "jockey_id": "WPN",
+          "jockey": "黃寶妮",
+          "draw": 10,
+          "horse_id": "HK_2023_J099"
+        },
+        {
+          "no": 12,
+          "name": "千杯",
+          "jockey_id": "TEK",
+          "jockey": "田泰安",
+          "draw": 9,
+          "horse_id": "HK_2023_J482"
+        }
+      ],
+      "scratched": [],
+      "distance": 1000,
+      "track": "TURF",
+      "rail": "C",
+      "tips": {
+        "meiji": {
+          "status": "pending",
+          "horses": []
+        },
+        "ball": {
+          "status": "pending",
+          "horses": []
+        },
+        "ma": {
+          "status": "pending",
+          "horses": []
+        },
+        "computer": {
+          "status": "pending",
+          "horses": []
+        }
+      },
+      "index": {
+        "status": "pending",
+        "horses": []
+      },
+      "score": null,
+      "selection": null,
+      "result": null,
+      "locked": false,
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-11-18",
+        "riders": [
+          {
+            "no": 2,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "draw": 1,
+            "placed": 6,
+            "starts": 10,
+            "rate": 0.6
+          },
+          {
+            "no": 8,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "draw": 5,
+            "placed": 5,
+            "starts": 12,
+            "rate": 0.4166666666666667
+          },
+          {
+            "no": 6,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "draw": 3,
+            "placed": 3,
+            "starts": 9,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 12,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "draw": 9,
+            "placed": 2,
+            "starts": 8,
+            "rate": 0.25
+          },
+          {
+            "no": 11,
+            "jockey": "黃寶妮",
+            "jockey_id": "WPN",
+            "draw": 10,
+            "placed": 1,
+            "starts": 4,
+            "rate": 0.25
+          }
+        ],
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+      },
+      "hv_plan_state": "pending",
+      "hv_plan_reason": "待確認三個專家來源",
+      "combined_snapshot": {
+        "version": "confidence-cover-v1-20261022",
+        "ledger": "paper",
+        "date": "2026-11-18",
+        "venue": "HV",
+        "race": 2,
+        "captured_at": "2026-11-16T06:10:29.653Z",
+        "finalized": false,
+        "primary_finalized": false,
+        "cover_finalized": false,
+        "primary_captured_at": null,
+        "cover_captured_at": null,
+        "primary": {
+          "status": "pending",
+          "picks": [],
+          "bets": [],
+          "reason": "待確認三個專家來源"
+        },
+        "cover": {
+          "status": "pending",
+          "reason": "待同日明治四選"
+        },
+        "input": {
+          "date": "2026-11-18",
+          "venue": "HV",
+          "race": 2,
+          "off": "2026-11-18T19:10:00+08:00",
+          "score": null,
+          "track": "TURF",
+          "distance": 1000,
+          "rail": "C",
+          "horses": [
+            {
+              "no": 1,
+              "name": "友得盈",
+              "jockey_id": "CJE",
+              "jockey": "周俊樂",
+              "draw": 7,
+              "horse_id": "HK_2024_K106"
+            },
+            {
+              "no": 2,
+              "name": "馬運高",
+              "jockey_id": "PZ",
+              "jockey": "潘頓",
+              "draw": 1,
+              "horse_id": "HK_2025_L175"
+            },
+            {
+              "no": 3,
+              "name": "辣得金",
+              "jockey_id": "WEC",
+              "jockey": "黃智弘",
+              "draw": 11,
+              "horse_id": "HK_2023_J087"
+            },
+            {
+              "no": 4,
+              "name": "智勝攻略",
+              "jockey_id": "OJM",
+              "jockey": "奧爾民",
+              "draw": 6,
+              "horse_id": "HK_2022_H197"
+            },
+            {
+              "no": 5,
+              "name": "喆喆友福",
+              "jockey_id": "YHY",
+              "jockey": "袁幸堯",
+              "draw": 2,
+              "horse_id": "HK_2023_J345"
+            },
+            {
+              "no": 6,
+              "name": "鑽飾閃耀",
+              "jockey_id": "LDE",
+              "jockey": "梁家俊",
+              "draw": 3,
+              "horse_id": "HK_2025_L182"
+            },
+            {
+              "no": 7,
+              "name": "精算奕然",
+              "jockey_id": "MHT",
+              "jockey": "巫顯東",
+              "draw": 12,
+              "horse_id": "HK_2024_K295"
+            },
+            {
+              "no": 8,
+              "name": "精益大師",
+              "jockey_id": "HCY",
+              "jockey": "何澤堯",
+              "draw": 5,
+              "horse_id": "HK_2022_H134"
+            },
+            {
+              "no": 9,
+              "name": "果然僥倖",
+              "jockey_id": "BHW",
+              "jockey": "班德禮",
+              "draw": 8,
+              "horse_id": "HK_2022_H252"
+            },
+            {
+              "no": 10,
+              "name": "陸小鳳",
+              "jockey_id": "KRW",
+              "jockey": "金誠剛",
+              "draw": 4,
+              "horse_id": "HK_2024_K282"
+            },
+            {
+              "no": 11,
+              "name": "五福星",
+              "jockey_id": "WPN",
+              "jockey": "黃寶妮",
+              "draw": 10,
+              "horse_id": "HK_2023_J099"
+            },
+            {
+              "no": 12,
+              "name": "千杯",
+              "jockey_id": "TEK",
+              "jockey": "田泰安",
+              "draw": 9,
+              "horse_id": "HK_2023_J482"
+            }
+          ],
+          "scratched": [],
+          "tips": {
+            "meiji": {
+              "status": "pending",
+              "horses": []
+            },
+            "ball": {
+              "status": "pending",
+              "horses": []
+            },
+            "ma": {
+              "status": "pending",
+              "horses": []
+            },
+            "computer": {
+              "status": "pending",
+              "horses": []
+            }
+          },
+          "draw_top5": {
+            "status": "ready",
+            "start_date": "2026-09-01",
+            "before_date": "2026-11-18",
+            "riders": [
+              {
+                "no": 2,
+                "jockey": "潘頓",
+                "jockey_id": "PZ",
+                "draw": 1,
+                "placed": 6,
+                "starts": 10,
+                "rate": 0.6
+              },
+              {
+                "no": 8,
+                "jockey": "何澤堯",
+                "jockey_id": "HCY",
+                "draw": 5,
+                "placed": 5,
+                "starts": 12,
+                "rate": 0.4166666666666667
+              },
+              {
+                "no": 6,
+                "jockey": "梁家俊",
+                "jockey_id": "LDE",
+                "draw": 3,
+                "placed": 3,
+                "starts": 9,
+                "rate": 0.3333333333333333
+              },
+              {
+                "no": 12,
+                "jockey": "田泰安",
+                "jockey_id": "TEK",
+                "draw": 9,
+                "placed": 2,
+                "starts": 8,
+                "rate": 0.25
+              },
+              {
+                "no": 11,
+                "jockey": "黃寶妮",
+                "jockey_id": "WPN",
+                "draw": 10,
+                "placed": 1,
+                "starts": 4,
+                "rate": 0.25
+              }
+            ],
+            "method_version": "jockey_draw_only_v3",
+            "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+          },
+          "odds": {}
+        },
+        "cover_input": null,
+        "secondary_version": "h0-intersection2-gt7.5-v1-20261022",
+        "secondary": {
+          "status": "pending",
+          "reason": "待H條件核實"
+        },
+        "secondary_finalized": false,
+        "secondary_captured_at": null,
+        "secondary_input": null
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "venue": "HV",
+      "race": 3,
+      "off": "2026-11-18T19:40:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "超強六十",
+          "jockey_id": "WEC",
+          "jockey": "黃智弘",
+          "draw": 5,
+          "horse_id": "HK_2023_J071"
+        },
+        {
+          "no": 2,
+          "name": "馬馳登",
+          "jockey_id": "OJM",
+          "jockey": "奧爾民",
+          "draw": 12,
+          "horse_id": "HK_2025_L133"
+        },
+        {
+          "no": 3,
+          "name": "渡月橋",
+          "jockey_id": "TEK",
+          "jockey": "田泰安",
+          "draw": 10,
+          "horse_id": "HK_2024_K334"
+        },
+        {
+          "no": 4,
+          "name": "銳目",
+          "jockey_id": "BHW",
+          "jockey": "班德禮",
+          "draw": 9,
+          "horse_id": "HK_2025_L068"
+        },
+        {
+          "no": 5,
+          "name": "魅影諜飛",
+          "jockey_id": "HEL",
+          "jockey": "希威森",
+          "draw": 1,
+          "horse_id": "HK_2025_L444"
+        },
+        {
+          "no": 6,
+          "name": "威武凱旋",
+          "jockey_id": "CML",
+          "jockey": "蔡明紹",
+          "draw": 2,
+          "horse_id": "HK_2026_M045"
+        },
+        {
+          "no": 7,
+          "name": "極速寶寶",
+          "jockey_id": "PMF",
+          "jockey": "潘明輝",
+          "draw": 6,
+          "horse_id": "HK_2026_M078"
+        },
+        {
+          "no": 8,
+          "name": "機不可失",
+          "jockey_id": "HCY",
+          "jockey": "何澤堯",
+          "draw": 4,
+          "horse_id": "HK_2024_K417"
+        },
+        {
+          "no": 9,
+          "name": "心中之星",
+          "jockey_id": "LDE",
+          "jockey": "梁家俊",
+          "draw": 7,
+          "horse_id": "HK_2025_L271"
+        },
+        {
+          "no": 10,
+          "name": "牛精新星",
+          "jockey_id": "WPN",
+          "jockey": "黃寶妮",
+          "draw": 8,
+          "horse_id": "HK_2025_L200"
+        },
+        {
+          "no": 11,
+          "name": "天天更好",
+          "jockey_id": "BA",
+          "jockey": "巴度",
+          "draw": 11,
+          "horse_id": "HK_2024_K277"
+        },
+        {
+          "no": 12,
+          "name": "紅悅舍",
+          "jockey_id": "YML",
+          "jockey": "楊明綸",
+          "draw": 3,
+          "horse_id": "HK_2025_L355"
+        }
+      ],
+      "scratched": [],
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "C",
+      "tips": {
+        "meiji": {
+          "status": "pending",
+          "horses": []
+        },
+        "ball": {
+          "status": "pending",
+          "horses": []
+        },
+        "ma": {
+          "status": "pending",
+          "horses": []
+        },
+        "computer": {
+          "status": "pending",
+          "horses": []
+        }
+      },
+      "index": {
+        "status": "pending",
+        "horses": []
+      },
+      "score": null,
+      "selection": null,
+      "result": null,
+      "locked": false,
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-11-18",
+        "riders": [
+          {
+            "no": 8,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "draw": 4,
+            "placed": 4,
+            "starts": 12,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 9,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "draw": 7,
+            "placed": 4,
+            "starts": 12,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 3,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "draw": 10,
+            "placed": 4,
+            "starts": 17,
+            "rate": 0.23529411764705882
+          },
+          {
+            "no": 5,
+            "jockey": "希威森",
+            "jockey_id": "HEL",
+            "draw": 1,
+            "placed": 3,
+            "starts": 13,
+            "rate": 0.23076923076923078
+          },
+          {
+            "no": 12,
+            "jockey": "楊明綸",
+            "jockey_id": "YML",
+            "draw": 3,
+            "placed": 2,
+            "starts": 9,
+            "rate": 0.2222222222222222
+          }
+        ],
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+      },
+      "hv_plan_state": "pending",
+      "hv_plan_reason": "待確認三個專家來源",
+      "combined_snapshot": {
+        "version": "confidence-cover-v1-20261022",
+        "ledger": "paper",
+        "date": "2026-11-18",
+        "venue": "HV",
+        "race": 3,
+        "captured_at": "2026-11-16T06:10:29.653Z",
+        "finalized": false,
+        "primary_finalized": false,
+        "cover_finalized": false,
+        "primary_captured_at": null,
+        "cover_captured_at": null,
+        "primary": {
+          "status": "pending",
+          "picks": [],
+          "bets": [],
+          "reason": "待確認三個專家來源"
+        },
+        "cover": {
+          "status": "pending",
+          "reason": "待同日明治四選"
+        },
+        "input": {
+          "date": "2026-11-18",
+          "venue": "HV",
+          "race": 3,
+          "off": "2026-11-18T19:40:00+08:00",
+          "score": null,
+          "track": "TURF",
+          "distance": 1200,
+          "rail": "C",
+          "horses": [
+            {
+              "no": 1,
+              "name": "超強六十",
+              "jockey_id": "WEC",
+              "jockey": "黃智弘",
+              "draw": 5,
+              "horse_id": "HK_2023_J071"
+            },
+            {
+              "no": 2,
+              "name": "馬馳登",
+              "jockey_id": "OJM",
+              "jockey": "奧爾民",
+              "draw": 12,
+              "horse_id": "HK_2025_L133"
+            },
+            {
+              "no": 3,
+              "name": "渡月橋",
+              "jockey_id": "TEK",
+              "jockey": "田泰安",
+              "draw": 10,
+              "horse_id": "HK_2024_K334"
+            },
+            {
+              "no": 4,
+              "name": "銳目",
+              "jockey_id": "BHW",
+              "jockey": "班德禮",
+              "draw": 9,
+              "horse_id": "HK_2025_L068"
+            },
+            {
+              "no": 5,
+              "name": "魅影諜飛",
+              "jockey_id": "HEL",
+              "jockey": "希威森",
+              "draw": 1,
+              "horse_id": "HK_2025_L444"
+            },
+            {
+              "no": 6,
+              "name": "威武凱旋",
+              "jockey_id": "CML",
+              "jockey": "蔡明紹",
+              "draw": 2,
+              "horse_id": "HK_2026_M045"
+            },
+            {
+              "no": 7,
+              "name": "極速寶寶",
+              "jockey_id": "PMF",
+              "jockey": "潘明輝",
+              "draw": 6,
+              "horse_id": "HK_2026_M078"
+            },
+            {
+              "no": 8,
+              "name": "機不可失",
+              "jockey_id": "HCY",
+              "jockey": "何澤堯",
+              "draw": 4,
+              "horse_id": "HK_2024_K417"
+            },
+            {
+              "no": 9,
+              "name": "心中之星",
+              "jockey_id": "LDE",
+              "jockey": "梁家俊",
+              "draw": 7,
+              "horse_id": "HK_2025_L271"
+            },
+            {
+              "no": 10,
+              "name": "牛精新星",
+              "jockey_id": "WPN",
+              "jockey": "黃寶妮",
+              "draw": 8,
+              "horse_id": "HK_2025_L200"
+            },
+            {
+              "no": 11,
+              "name": "天天更好",
+              "jockey_id": "BA",
+              "jockey": "巴度",
+              "draw": 11,
+              "horse_id": "HK_2024_K277"
+            },
+            {
+              "no": 12,
+              "name": "紅悅舍",
+              "jockey_id": "YML",
+              "jockey": "楊明綸",
+              "draw": 3,
+              "horse_id": "HK_2025_L355"
+            }
+          ],
+          "scratched": [],
+          "tips": {
+            "meiji": {
+              "status": "pending",
+              "horses": []
+            },
+            "ball": {
+              "status": "pending",
+              "horses": []
+            },
+            "ma": {
+              "status": "pending",
+              "horses": []
+            },
+            "computer": {
+              "status": "pending",
+              "horses": []
+            }
+          },
+          "draw_top5": {
+            "status": "ready",
+            "start_date": "2026-09-01",
+            "before_date": "2026-11-18",
+            "riders": [
+              {
+                "no": 8,
+                "jockey": "何澤堯",
+                "jockey_id": "HCY",
+                "draw": 4,
+                "placed": 4,
+                "starts": 12,
+                "rate": 0.3333333333333333
+              },
+              {
+                "no": 9,
+                "jockey": "梁家俊",
+                "jockey_id": "LDE",
+                "draw": 7,
+                "placed": 4,
+                "starts": 12,
+                "rate": 0.3333333333333333
+              },
+              {
+                "no": 3,
+                "jockey": "田泰安",
+                "jockey_id": "TEK",
+                "draw": 10,
+                "placed": 4,
+                "starts": 17,
+                "rate": 0.23529411764705882
+              },
+              {
+                "no": 5,
+                "jockey": "希威森",
+                "jockey_id": "HEL",
+                "draw": 1,
+                "placed": 3,
+                "starts": 13,
+                "rate": 0.23076923076923078
+              },
+              {
+                "no": 12,
+                "jockey": "楊明綸",
+                "jockey_id": "YML",
+                "draw": 3,
+                "placed": 2,
+                "starts": 9,
+                "rate": 0.2222222222222222
+              }
+            ],
+            "method_version": "jockey_draw_only_v3",
+            "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+          },
+          "odds": {}
+        },
+        "cover_input": null,
+        "secondary_version": "h0-intersection2-gt7.5-v1-20261022",
+        "secondary": {
+          "status": "pending",
+          "reason": "待H條件核實"
+        },
+        "secondary_finalized": false,
+        "secondary_captured_at": null,
+        "secondary_input": null
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "venue": "HV",
+      "race": 4,
+      "off": "2026-11-18T20:10:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "勁好運",
+          "jockey_id": "PZ",
+          "jockey": "潘頓",
+          "draw": 11,
+          "horse_id": "HK_2022_H481"
+        },
+        {
+          "no": 2,
+          "name": "太子",
+          "jockey_id": "OJM",
+          "jockey": "奧爾民",
+          "draw": 10,
+          "horse_id": "HK_2024_K362"
+        },
+        {
+          "no": 3,
+          "name": "龍城精將",
+          "jockey_id": "OSR",
+          "jockey": "奧璇璧",
+          "draw": 3,
+          "horse_id": "HK_2024_K203"
+        },
+        {
+          "no": 4,
+          "name": "龍文瑞安",
+          "jockey_id": "BA",
+          "jockey": "巴度",
+          "draw": 9,
+          "horse_id": "HK_2025_L029"
+        },
+        {
+          "no": 5,
+          "name": "大文豪",
+          "jockey_id": "FEL",
+          "jockey": "霍宏聲",
+          "draw": 8,
+          "horse_id": "HK_2025_L134"
+        },
+        {
+          "no": 6,
+          "name": "金鋼狼",
+          "jockey_id": "HEL",
+          "jockey": "希威森",
+          "draw": 4,
+          "horse_id": "HK_2025_L486"
+        },
+        {
+          "no": 7,
+          "name": "時尚歡笑",
+          "jockey_id": "CJE",
+          "jockey": "周俊樂",
+          "draw": 2,
+          "horse_id": "HK_2025_L227"
+        },
+        {
+          "no": 8,
+          "name": "威力非凡",
+          "jockey_id": "PMF",
+          "jockey": "潘明輝",
+          "draw": 1,
+          "horse_id": "HK_2024_K152"
+        },
+        {
+          "no": 9,
+          "name": "同心",
+          "jockey_id": "HCY",
+          "jockey": "何澤堯",
+          "draw": 5,
+          "horse_id": "HK_2024_K253"
+        },
+        {
+          "no": 10,
+          "name": "文采風流",
+          "jockey_id": "KRW",
+          "jockey": "金誠剛",
+          "draw": 12,
+          "horse_id": "HK_2025_L021"
+        },
+        {
+          "no": 11,
+          "name": "越駿齊歡",
+          "jockey_id": "CML",
+          "jockey": "蔡明紹",
+          "draw": 7,
+          "horse_id": "HK_2025_L079"
+        },
+        {
+          "no": 12,
+          "name": "紅磚戰士",
+          "jockey_id": "TEK",
+          "jockey": "田泰安",
+          "draw": 6,
+          "horse_id": "HK_2024_K580"
+        }
+      ],
+      "scratched": [],
+      "distance": 1650,
+      "track": "TURF",
+      "rail": "C",
+      "tips": {
+        "meiji": {
+          "status": "pending",
+          "horses": []
+        },
+        "ball": {
+          "status": "pending",
+          "horses": []
+        },
+        "ma": {
+          "status": "pending",
+          "horses": []
+        },
+        "computer": {
+          "status": "pending",
+          "horses": []
+        }
+      },
+      "index": {
+        "status": "pending",
+        "horses": []
+      },
+      "score": null,
+      "selection": null,
+      "result": null,
+      "locked": false,
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-11-18",
+        "riders": [
+          {
+            "no": 2,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "draw": 10,
+            "placed": 2,
+            "starts": 4,
+            "rate": 0.5
+          },
+          {
+            "no": 7,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "draw": 2,
+            "placed": 7,
+            "starts": 15,
+            "rate": 0.4666666666666667
+          },
+          {
+            "no": 9,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "draw": 5,
+            "placed": 5,
+            "starts": 12,
+            "rate": 0.4166666666666667
+          },
+          {
+            "no": 6,
+            "jockey": "希威森",
+            "jockey_id": "HEL",
+            "draw": 4,
+            "placed": 2,
+            "starts": 5,
+            "rate": 0.4
+          },
+          {
+            "no": 8,
+            "jockey": "潘明輝",
+            "jockey_id": "PMF",
+            "draw": 1,
+            "placed": 5,
+            "starts": 13,
+            "rate": 0.38461538461538464
+          }
+        ],
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+      },
+      "hv_plan_state": "pending",
+      "hv_plan_reason": "待確認三個專家來源",
+      "combined_snapshot": {
+        "version": "confidence-cover-v1-20261022",
+        "ledger": "paper",
+        "date": "2026-11-18",
+        "venue": "HV",
+        "race": 4,
+        "captured_at": "2026-11-16T06:10:29.653Z",
+        "finalized": false,
+        "primary_finalized": false,
+        "cover_finalized": false,
+        "primary_captured_at": null,
+        "cover_captured_at": null,
+        "primary": {
+          "status": "pending",
+          "picks": [],
+          "bets": [],
+          "reason": "待確認三個專家來源"
+        },
+        "cover": {
+          "status": "pending",
+          "reason": "待同日明治四選"
+        },
+        "input": {
+          "date": "2026-11-18",
+          "venue": "HV",
+          "race": 4,
+          "off": "2026-11-18T20:10:00+08:00",
+          "score": null,
+          "track": "TURF",
+          "distance": 1650,
+          "rail": "C",
+          "horses": [
+            {
+              "no": 1,
+              "name": "勁好運",
+              "jockey_id": "PZ",
+              "jockey": "潘頓",
+              "draw": 11,
+              "horse_id": "HK_2022_H481"
+            },
+            {
+              "no": 2,
+              "name": "太子",
+              "jockey_id": "OJM",
+              "jockey": "奧爾民",
+              "draw": 10,
+              "horse_id": "HK_2024_K362"
+            },
+            {
+              "no": 3,
+              "name": "龍城精將",
+              "jockey_id": "OSR",
+              "jockey": "奧璇璧",
+              "draw": 3,
+              "horse_id": "HK_2024_K203"
+            },
+            {
+              "no": 4,
+              "name": "龍文瑞安",
+              "jockey_id": "BA",
+              "jockey": "巴度",
+              "draw": 9,
+              "horse_id": "HK_2025_L029"
+            },
+            {
+              "no": 5,
+              "name": "大文豪",
+              "jockey_id": "FEL",
+              "jockey": "霍宏聲",
+              "draw": 8,
+              "horse_id": "HK_2025_L134"
+            },
+            {
+              "no": 6,
+              "name": "金鋼狼",
+              "jockey_id": "HEL",
+              "jockey": "希威森",
+              "draw": 4,
+              "horse_id": "HK_2025_L486"
+            },
+            {
+              "no": 7,
+              "name": "時尚歡笑",
+              "jockey_id": "CJE",
+              "jockey": "周俊樂",
+              "draw": 2,
+              "horse_id": "HK_2025_L227"
+            },
+            {
+              "no": 8,
+              "name": "威力非凡",
+              "jockey_id": "PMF",
+              "jockey": "潘明輝",
+              "draw": 1,
+              "horse_id": "HK_2024_K152"
+            },
+            {
+              "no": 9,
+              "name": "同心",
+              "jockey_id": "HCY",
+              "jockey": "何澤堯",
+              "draw": 5,
+              "horse_id": "HK_2024_K253"
+            },
+            {
+              "no": 10,
+              "name": "文采風流",
+              "jockey_id": "KRW",
+              "jockey": "金誠剛",
+              "draw": 12,
+              "horse_id": "HK_2025_L021"
+            },
+            {
+              "no": 11,
+              "name": "越駿齊歡",
+              "jockey_id": "CML",
+              "jockey": "蔡明紹",
+              "draw": 7,
+              "horse_id": "HK_2025_L079"
+            },
+            {
+              "no": 12,
+              "name": "紅磚戰士",
+              "jockey_id": "TEK",
+              "jockey": "田泰安",
+              "draw": 6,
+              "horse_id": "HK_2024_K580"
+            }
+          ],
+          "scratched": [],
+          "tips": {
+            "meiji": {
+              "status": "pending",
+              "horses": []
+            },
+            "ball": {
+              "status": "pending",
+              "horses": []
+            },
+            "ma": {
+              "status": "pending",
+              "horses": []
+            },
+            "computer": {
+              "status": "pending",
+              "horses": []
+            }
+          },
+          "draw_top5": {
+            "status": "ready",
+            "start_date": "2026-09-01",
+            "before_date": "2026-11-18",
+            "riders": [
+              {
+                "no": 2,
+                "jockey": "奧爾民",
+                "jockey_id": "OJM",
+                "draw": 10,
+                "placed": 2,
+                "starts": 4,
+                "rate": 0.5
+              },
+              {
+                "no": 7,
+                "jockey": "周俊樂",
+                "jockey_id": "CJE",
+                "draw": 2,
+                "placed": 7,
+                "starts": 15,
+                "rate": 0.4666666666666667
+              },
+              {
+                "no": 9,
+                "jockey": "何澤堯",
+                "jockey_id": "HCY",
+                "draw": 5,
+                "placed": 5,
+                "starts": 12,
+                "rate": 0.4166666666666667
+              },
+              {
+                "no": 6,
+                "jockey": "希威森",
+                "jockey_id": "HEL",
+                "draw": 4,
+                "placed": 2,
+                "starts": 5,
+                "rate": 0.4
+              },
+              {
+                "no": 8,
+                "jockey": "潘明輝",
+                "jockey_id": "PMF",
+                "draw": 1,
+                "placed": 5,
+                "starts": 13,
+                "rate": 0.38461538461538464
+              }
+            ],
+            "method_version": "jockey_draw_only_v3",
+            "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+          },
+          "odds": {}
+        },
+        "cover_input": null,
+        "secondary_version": "h0-intersection2-gt7.5-v1-20261022",
+        "secondary": {
+          "status": "pending",
+          "reason": "待H條件核實"
+        },
+        "secondary_finalized": false,
+        "secondary_captured_at": null,
+        "secondary_input": null
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "venue": "HV",
+      "race": 5,
+      "off": "2026-11-18T20:40:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "蓮冠皇",
+          "jockey_id": "PZ",
+          "jockey": "潘頓",
+          "draw": 1,
+          "horse_id": "HK_2024_K186"
+        },
+        {
+          "no": 2,
+          "name": "隨意門",
+          "jockey_id": "LDE",
+          "jockey": "梁家俊",
+          "draw": 7,
+          "horse_id": "HK_2025_L487"
+        },
+        {
+          "no": 3,
+          "name": "非凡節拍",
+          "jockey_id": "CJE",
+          "jockey": "周俊樂",
+          "draw": 12,
+          "horse_id": "HK_2025_L556"
+        },
+        {
+          "no": 4,
+          "name": "永福",
+          "jockey_id": "HCY",
+          "jockey": "何澤堯",
+          "draw": 9,
+          "horse_id": "HK_2025_L317"
+        },
+        {
+          "no": 5,
+          "name": "靖哥哥",
+          "jockey_id": "BA",
+          "jockey": "巴度",
+          "draw": 10,
+          "horse_id": "HK_2024_K503"
+        },
+        {
+          "no": 6,
+          "name": "星光大道",
+          "jockey_id": "HEL",
+          "jockey": "希威森",
+          "draw": 11,
+          "horse_id": "HK_2025_L194"
+        },
+        {
+          "no": 7,
+          "name": "辣得爽利",
+          "jockey_id": "FEL",
+          "jockey": "霍宏聲",
+          "draw": 6,
+          "horse_id": "HK_2025_L086"
+        },
+        {
+          "no": 8,
+          "name": "勇騎飛",
+          "jockey_id": "YML",
+          "jockey": "楊明綸",
+          "draw": 4,
+          "horse_id": "HK_2025_L146"
+        },
+        {
+          "no": 9,
+          "name": "擅搏",
+          "jockey_id": "CML",
+          "jockey": "蔡明紹",
+          "draw": 5,
+          "horse_id": "HK_2025_L177"
+        },
+        {
+          "no": 10,
+          "name": "快樂高球",
+          "jockey_id": "BHW",
+          "jockey": "班德禮",
+          "draw": 2,
+          "horse_id": "HK_2023_J222"
+        },
+        {
+          "no": 11,
+          "name": "大才",
+          "jockey_id": "PMF",
+          "jockey": "潘明輝",
+          "draw": 3,
+          "horse_id": "HK_2021_G192"
+        },
+        {
+          "no": 12,
+          "name": "良言一句",
+          "jockey_id": "MHT",
+          "jockey": "巫顯東",
+          "draw": 8,
+          "horse_id": "HK_2024_K569"
+        }
+      ],
+      "scratched": [],
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "C",
+      "tips": {
+        "meiji": {
+          "status": "pending",
+          "horses": []
+        },
+        "ball": {
+          "status": "pending",
+          "horses": []
+        },
+        "ma": {
+          "status": "pending",
+          "horses": []
+        },
+        "computer": {
+          "status": "pending",
+          "horses": []
+        }
+      },
+      "index": {
+        "status": "pending",
+        "horses": []
+      },
+      "score": null,
+      "selection": null,
+      "result": null,
+      "locked": false,
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-11-18",
+        "riders": [
+          {
+            "no": 1,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "draw": 1,
+            "placed": 6,
+            "starts": 10,
+            "rate": 0.6
+          },
+          {
+            "no": 3,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "draw": 12,
+            "placed": 5,
+            "starts": 10,
+            "rate": 0.5
+          },
+          {
+            "no": 10,
+            "jockey": "班德禮",
+            "jockey_id": "BHW",
+            "draw": 2,
+            "placed": 4,
+            "starts": 11,
+            "rate": 0.36363636363636365
+          },
+          {
+            "no": 2,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "draw": 7,
+            "placed": 4,
+            "starts": 12,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 4,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "draw": 9,
+            "placed": 3,
+            "starts": 9,
+            "rate": 0.3333333333333333
+          }
+        ],
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+      },
+      "hv_plan_state": "pending",
+      "hv_plan_reason": "待確認三個專家來源",
+      "combined_snapshot": {
+        "version": "confidence-cover-v1-20261022",
+        "ledger": "paper",
+        "date": "2026-11-18",
+        "venue": "HV",
+        "race": 5,
+        "captured_at": "2026-11-16T06:10:29.653Z",
+        "finalized": false,
+        "primary_finalized": false,
+        "cover_finalized": false,
+        "primary_captured_at": null,
+        "cover_captured_at": null,
+        "primary": {
+          "status": "pending",
+          "picks": [],
+          "bets": [],
+          "reason": "待確認三個專家來源"
+        },
+        "cover": {
+          "status": "pending",
+          "reason": "待同日明治四選"
+        },
+        "input": {
+          "date": "2026-11-18",
+          "venue": "HV",
+          "race": 5,
+          "off": "2026-11-18T20:40:00+08:00",
+          "score": null,
+          "track": "TURF",
+          "distance": 1200,
+          "rail": "C",
+          "horses": [
+            {
+              "no": 1,
+              "name": "蓮冠皇",
+              "jockey_id": "PZ",
+              "jockey": "潘頓",
+              "draw": 1,
+              "horse_id": "HK_2024_K186"
+            },
+            {
+              "no": 2,
+              "name": "隨意門",
+              "jockey_id": "LDE",
+              "jockey": "梁家俊",
+              "draw": 7,
+              "horse_id": "HK_2025_L487"
+            },
+            {
+              "no": 3,
+              "name": "非凡節拍",
+              "jockey_id": "CJE",
+              "jockey": "周俊樂",
+              "draw": 12,
+              "horse_id": "HK_2025_L556"
+            },
+            {
+              "no": 4,
+              "name": "永福",
+              "jockey_id": "HCY",
+              "jockey": "何澤堯",
+              "draw": 9,
+              "horse_id": "HK_2025_L317"
+            },
+            {
+              "no": 5,
+              "name": "靖哥哥",
+              "jockey_id": "BA",
+              "jockey": "巴度",
+              "draw": 10,
+              "horse_id": "HK_2024_K503"
+            },
+            {
+              "no": 6,
+              "name": "星光大道",
+              "jockey_id": "HEL",
+              "jockey": "希威森",
+              "draw": 11,
+              "horse_id": "HK_2025_L194"
+            },
+            {
+              "no": 7,
+              "name": "辣得爽利",
+              "jockey_id": "FEL",
+              "jockey": "霍宏聲",
+              "draw": 6,
+              "horse_id": "HK_2025_L086"
+            },
+            {
+              "no": 8,
+              "name": "勇騎飛",
+              "jockey_id": "YML",
+              "jockey": "楊明綸",
+              "draw": 4,
+              "horse_id": "HK_2025_L146"
+            },
+            {
+              "no": 9,
+              "name": "擅搏",
+              "jockey_id": "CML",
+              "jockey": "蔡明紹",
+              "draw": 5,
+              "horse_id": "HK_2025_L177"
+            },
+            {
+              "no": 10,
+              "name": "快樂高球",
+              "jockey_id": "BHW",
+              "jockey": "班德禮",
+              "draw": 2,
+              "horse_id": "HK_2023_J222"
+            },
+            {
+              "no": 11,
+              "name": "大才",
+              "jockey_id": "PMF",
+              "jockey": "潘明輝",
+              "draw": 3,
+              "horse_id": "HK_2021_G192"
+            },
+            {
+              "no": 12,
+              "name": "良言一句",
+              "jockey_id": "MHT",
+              "jockey": "巫顯東",
+              "draw": 8,
+              "horse_id": "HK_2024_K569"
+            }
+          ],
+          "scratched": [],
+          "tips": {
+            "meiji": {
+              "status": "pending",
+              "horses": []
+            },
+            "ball": {
+              "status": "pending",
+              "horses": []
+            },
+            "ma": {
+              "status": "pending",
+              "horses": []
+            },
+            "computer": {
+              "status": "pending",
+              "horses": []
+            }
+          },
+          "draw_top5": {
+            "status": "ready",
+            "start_date": "2026-09-01",
+            "before_date": "2026-11-18",
+            "riders": [
+              {
+                "no": 1,
+                "jockey": "潘頓",
+                "jockey_id": "PZ",
+                "draw": 1,
+                "placed": 6,
+                "starts": 10,
+                "rate": 0.6
+              },
+              {
+                "no": 3,
+                "jockey": "周俊樂",
+                "jockey_id": "CJE",
+                "draw": 12,
+                "placed": 5,
+                "starts": 10,
+                "rate": 0.5
+              },
+              {
+                "no": 10,
+                "jockey": "班德禮",
+                "jockey_id": "BHW",
+                "draw": 2,
+                "placed": 4,
+                "starts": 11,
+                "rate": 0.36363636363636365
+              },
+              {
+                "no": 2,
+                "jockey": "梁家俊",
+                "jockey_id": "LDE",
+                "draw": 7,
+                "placed": 4,
+                "starts": 12,
+                "rate": 0.3333333333333333
+              },
+              {
+                "no": 4,
+                "jockey": "何澤堯",
+                "jockey_id": "HCY",
+                "draw": 9,
+                "placed": 3,
+                "starts": 9,
+                "rate": 0.3333333333333333
+              }
+            ],
+            "method_version": "jockey_draw_only_v3",
+            "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+          },
+          "odds": {}
+        },
+        "cover_input": null,
+        "secondary_version": "h0-intersection2-gt7.5-v1-20261022",
+        "secondary": {
+          "status": "pending",
+          "reason": "待H條件核實"
+        },
+        "secondary_finalized": false,
+        "secondary_captured_at": null,
+        "secondary_input": null
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "venue": "HV",
+      "race": 6,
+      "off": "2026-11-18T21:10:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "巴閉王",
+          "jockey_id": "YHY",
+          "jockey": "袁幸堯",
+          "draw": 12,
+          "horse_id": "HK_2024_K479"
+        },
+        {
+          "no": 2,
+          "name": "佐治傳奇",
+          "jockey_id": "PZ",
+          "jockey": "潘頓",
+          "draw": 1,
+          "horse_id": "HK_2025_L007"
+        },
+        {
+          "no": 3,
+          "name": "通情達理",
+          "jockey_id": "HCY",
+          "jockey": "何澤堯",
+          "draw": 7,
+          "horse_id": "HK_2025_L183"
+        },
+        {
+          "no": 4,
+          "name": "多多好馬",
+          "jockey_id": "CJE",
+          "jockey": "周俊樂",
+          "draw": 6,
+          "horse_id": "HK_2024_K403"
+        },
+        {
+          "no": 5,
+          "name": "友駿同心",
+          "jockey_id": "LDE",
+          "jockey": "梁家俊",
+          "draw": 5,
+          "horse_id": "HK_2025_L214"
+        },
+        {
+          "no": 6,
+          "name": "贏得威楓",
+          "jockey_id": "OJM",
+          "jockey": "奧爾民",
+          "draw": 9,
+          "horse_id": "HK_2025_L248"
+        },
+        {
+          "no": 7,
+          "name": "鄉村威龍",
+          "jockey_id": "TEK",
+          "jockey": "田泰安",
+          "draw": 8,
+          "horse_id": "HK_2025_L325"
+        },
+        {
+          "no": 8,
+          "name": "路路勁",
+          "jockey_id": "PMF",
+          "jockey": "潘明輝",
+          "draw": 11,
+          "horse_id": "HK_2024_K315"
+        },
+        {
+          "no": 9,
+          "name": "乾坤圈",
+          "jockey_id": "MHT",
+          "jockey": "巫顯東",
+          "draw": 3,
+          "horse_id": "HK_2025_L385"
+        },
+        {
+          "no": 10,
+          "name": "天火同人",
+          "jockey_id": "WPN",
+          "jockey": "黃寶妮",
+          "draw": 4,
+          "horse_id": "HK_2020_E175"
+        },
+        {
+          "no": 11,
+          "name": "勝利君子",
+          "jockey_id": "BA",
+          "jockey": "巴度",
+          "draw": 10,
+          "horse_id": "HK_2025_L061"
+        },
+        {
+          "no": 12,
+          "name": "廚神",
+          "jockey_id": "YML",
+          "jockey": "楊明綸",
+          "draw": 2,
+          "horse_id": "HK_2024_K264"
+        }
+      ],
+      "scratched": [],
+      "distance": 1000,
+      "track": "TURF",
+      "rail": "C",
+      "tips": {
+        "meiji": {
+          "status": "pending",
+          "horses": []
+        },
+        "ball": {
+          "status": "pending",
+          "horses": []
+        },
+        "ma": {
+          "status": "pending",
+          "horses": []
+        },
+        "computer": {
+          "status": "pending",
+          "horses": []
+        }
+      },
+      "index": {
+        "status": "pending",
+        "horses": []
+      },
+      "score": null,
+      "selection": null,
+      "result": null,
+      "locked": false,
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-11-18",
+        "riders": [
+          {
+            "no": 2,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "draw": 1,
+            "placed": 6,
+            "starts": 10,
+            "rate": 0.6
+          },
+          {
+            "no": 3,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "draw": 7,
+            "placed": 3,
+            "starts": 8,
+            "rate": 0.375
+          },
+          {
+            "no": 10,
+            "jockey": "黃寶妮",
+            "jockey_id": "WPN",
+            "draw": 4,
+            "placed": 1,
+            "starts": 3,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 8,
+            "jockey": "潘明輝",
+            "jockey_id": "PMF",
+            "draw": 11,
+            "placed": 2,
+            "starts": 7,
+            "rate": 0.2857142857142857
+          },
+          {
+            "no": 6,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "draw": 9,
+            "placed": 3,
+            "starts": 13,
+            "rate": 0.23076923076923078
+          }
+        ],
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+      },
+      "hv_plan_state": "pending",
+      "hv_plan_reason": "待確認三個專家來源",
+      "combined_snapshot": {
+        "version": "confidence-cover-v1-20261022",
+        "ledger": "paper",
+        "date": "2026-11-18",
+        "venue": "HV",
+        "race": 6,
+        "captured_at": "2026-11-16T06:10:29.653Z",
+        "finalized": false,
+        "primary_finalized": false,
+        "cover_finalized": false,
+        "primary_captured_at": null,
+        "cover_captured_at": null,
+        "primary": {
+          "status": "pending",
+          "picks": [],
+          "bets": [],
+          "reason": "待確認三個專家來源"
+        },
+        "cover": {
+          "status": "pending",
+          "reason": "待同日明治四選"
+        },
+        "input": {
+          "date": "2026-11-18",
+          "venue": "HV",
+          "race": 6,
+          "off": "2026-11-18T21:10:00+08:00",
+          "score": null,
+          "track": "TURF",
+          "distance": 1000,
+          "rail": "C",
+          "horses": [
+            {
+              "no": 1,
+              "name": "巴閉王",
+              "jockey_id": "YHY",
+              "jockey": "袁幸堯",
+              "draw": 12,
+              "horse_id": "HK_2024_K479"
+            },
+            {
+              "no": 2,
+              "name": "佐治傳奇",
+              "jockey_id": "PZ",
+              "jockey": "潘頓",
+              "draw": 1,
+              "horse_id": "HK_2025_L007"
+            },
+            {
+              "no": 3,
+              "name": "通情達理",
+              "jockey_id": "HCY",
+              "jockey": "何澤堯",
+              "draw": 7,
+              "horse_id": "HK_2025_L183"
+            },
+            {
+              "no": 4,
+              "name": "多多好馬",
+              "jockey_id": "CJE",
+              "jockey": "周俊樂",
+              "draw": 6,
+              "horse_id": "HK_2024_K403"
+            },
+            {
+              "no": 5,
+              "name": "友駿同心",
+              "jockey_id": "LDE",
+              "jockey": "梁家俊",
+              "draw": 5,
+              "horse_id": "HK_2025_L214"
+            },
+            {
+              "no": 6,
+              "name": "贏得威楓",
+              "jockey_id": "OJM",
+              "jockey": "奧爾民",
+              "draw": 9,
+              "horse_id": "HK_2025_L248"
+            },
+            {
+              "no": 7,
+              "name": "鄉村威龍",
+              "jockey_id": "TEK",
+              "jockey": "田泰安",
+              "draw": 8,
+              "horse_id": "HK_2025_L325"
+            },
+            {
+              "no": 8,
+              "name": "路路勁",
+              "jockey_id": "PMF",
+              "jockey": "潘明輝",
+              "draw": 11,
+              "horse_id": "HK_2024_K315"
+            },
+            {
+              "no": 9,
+              "name": "乾坤圈",
+              "jockey_id": "MHT",
+              "jockey": "巫顯東",
+              "draw": 3,
+              "horse_id": "HK_2025_L385"
+            },
+            {
+              "no": 10,
+              "name": "天火同人",
+              "jockey_id": "WPN",
+              "jockey": "黃寶妮",
+              "draw": 4,
+              "horse_id": "HK_2020_E175"
+            },
+            {
+              "no": 11,
+              "name": "勝利君子",
+              "jockey_id": "BA",
+              "jockey": "巴度",
+              "draw": 10,
+              "horse_id": "HK_2025_L061"
+            },
+            {
+              "no": 12,
+              "name": "廚神",
+              "jockey_id": "YML",
+              "jockey": "楊明綸",
+              "draw": 2,
+              "horse_id": "HK_2024_K264"
+            }
+          ],
+          "scratched": [],
+          "tips": {
+            "meiji": {
+              "status": "pending",
+              "horses": []
+            },
+            "ball": {
+              "status": "pending",
+              "horses": []
+            },
+            "ma": {
+              "status": "pending",
+              "horses": []
+            },
+            "computer": {
+              "status": "pending",
+              "horses": []
+            }
+          },
+          "draw_top5": {
+            "status": "ready",
+            "start_date": "2026-09-01",
+            "before_date": "2026-11-18",
+            "riders": [
+              {
+                "no": 2,
+                "jockey": "潘頓",
+                "jockey_id": "PZ",
+                "draw": 1,
+                "placed": 6,
+                "starts": 10,
+                "rate": 0.6
+              },
+              {
+                "no": 3,
+                "jockey": "何澤堯",
+                "jockey_id": "HCY",
+                "draw": 7,
+                "placed": 3,
+                "starts": 8,
+                "rate": 0.375
+              },
+              {
+                "no": 10,
+                "jockey": "黃寶妮",
+                "jockey_id": "WPN",
+                "draw": 4,
+                "placed": 1,
+                "starts": 3,
+                "rate": 0.3333333333333333
+              },
+              {
+                "no": 8,
+                "jockey": "潘明輝",
+                "jockey_id": "PMF",
+                "draw": 11,
+                "placed": 2,
+                "starts": 7,
+                "rate": 0.2857142857142857
+              },
+              {
+                "no": 6,
+                "jockey": "奧爾民",
+                "jockey_id": "OJM",
+                "draw": 9,
+                "placed": 3,
+                "starts": 13,
+                "rate": 0.23076923076923078
+              }
+            ],
+            "method_version": "jockey_draw_only_v3",
+            "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+          },
+          "odds": {}
+        },
+        "cover_input": null,
+        "secondary_version": "h0-intersection2-gt7.5-v1-20261022",
+        "secondary": {
+          "status": "pending",
+          "reason": "待H條件核實"
+        },
+        "secondary_finalized": false,
+        "secondary_captured_at": null,
+        "secondary_input": null
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "venue": "HV",
+      "race": 7,
+      "off": "2026-11-18T21:45:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "好節拍",
+          "jockey_id": "CJE",
+          "jockey": "周俊樂",
+          "draw": 6,
+          "horse_id": "HK_2023_J519"
+        },
+        {
+          "no": 2,
+          "name": "盈好威楓",
+          "jockey_id": "YHY",
+          "jockey": "袁幸堯",
+          "draw": 2,
+          "horse_id": "HK_2024_K131"
+        },
+        {
+          "no": 3,
+          "name": "同心同樂",
+          "jockey_id": "TEK",
+          "jockey": "田泰安",
+          "draw": 8,
+          "horse_id": "HK_2024_K081"
+        },
+        {
+          "no": 4,
+          "name": "三軍勇將",
+          "jockey_id": "BA",
+          "jockey": "巴度",
+          "draw": 3,
+          "horse_id": "HK_2023_J360"
+        },
+        {
+          "no": 5,
+          "name": "智勇名駒",
+          "jockey_id": "FEL",
+          "jockey": "霍宏聲",
+          "draw": 12,
+          "horse_id": "HK_2023_J298"
+        },
+        {
+          "no": 6,
+          "name": "獅子精神",
+          "jockey_id": "KRW",
+          "jockey": "金誠剛",
+          "draw": 5,
+          "horse_id": "HK_2025_L548"
+        },
+        {
+          "no": 7,
+          "name": "龍文鞭影",
+          "jockey_id": "MHT",
+          "jockey": "巫顯東",
+          "draw": 11,
+          "horse_id": "HK_2024_K226"
+        },
+        {
+          "no": 8,
+          "name": "風將",
+          "jockey_id": "PZ",
+          "jockey": "潘頓",
+          "draw": 9,
+          "horse_id": "HK_2025_L184"
+        },
+        {
+          "no": 9,
+          "name": "有財有勢",
+          "jockey_id": "CML",
+          "jockey": "蔡明紹",
+          "draw": 4,
+          "horse_id": "HK_2022_H037"
+        },
+        {
+          "no": 10,
+          "name": "傲視同群",
+          "jockey_id": "PMF",
+          "jockey": "潘明輝",
+          "draw": 1,
+          "horse_id": "HK_2024_K357"
+        },
+        {
+          "no": 11,
+          "name": "龍城上將",
+          "jockey_id": "OSR",
+          "jockey": "奧璇璧",
+          "draw": 7,
+          "horse_id": "HK_2025_L300"
+        },
+        {
+          "no": 12,
+          "name": "都靈冠星",
+          "jockey_id": "YML",
+          "jockey": "楊明綸",
+          "draw": 10,
+          "horse_id": "HK_2025_L024"
+        }
+      ],
+      "scratched": [],
+      "distance": 1650,
+      "track": "TURF",
+      "rail": "C",
+      "tips": {
+        "meiji": {
+          "status": "pending",
+          "horses": []
+        },
+        "ball": {
+          "status": "pending",
+          "horses": []
+        },
+        "ma": {
+          "status": "pending",
+          "horses": []
+        },
+        "computer": {
+          "status": "pending",
+          "horses": []
+        }
+      },
+      "index": {
+        "status": "pending",
+        "horses": []
+      },
+      "score": null,
+      "selection": null,
+      "result": null,
+      "locked": false,
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-11-18",
+        "riders": [
+          {
+            "no": 8,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "draw": 9,
+            "placed": 8,
+            "starts": 12,
+            "rate": 0.6666666666666666
+          },
+          {
+            "no": 10,
+            "jockey": "潘明輝",
+            "jockey_id": "PMF",
+            "draw": 1,
+            "placed": 5,
+            "starts": 13,
+            "rate": 0.38461538461538464
+          },
+          {
+            "no": 11,
+            "jockey": "奧璇璧",
+            "jockey_id": "OSR",
+            "draw": 7,
+            "placed": 1,
+            "starts": 3,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 1,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "draw": 6,
+            "placed": 3,
+            "starts": 14,
+            "rate": 0.21428571428571427
+          },
+          {
+            "no": 3,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "draw": 8,
+            "placed": 3,
+            "starts": 15,
+            "rate": 0.2
+          }
+        ],
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+      },
+      "hv_plan_state": "pending",
+      "hv_plan_reason": "待確認三個專家來源",
+      "combined_snapshot": {
+        "version": "confidence-cover-v1-20261022",
+        "ledger": "paper",
+        "date": "2026-11-18",
+        "venue": "HV",
+        "race": 7,
+        "captured_at": "2026-11-16T06:10:29.653Z",
+        "finalized": false,
+        "primary_finalized": false,
+        "cover_finalized": false,
+        "primary_captured_at": null,
+        "cover_captured_at": null,
+        "primary": {
+          "status": "pending",
+          "picks": [],
+          "bets": [],
+          "reason": "待確認三個專家來源"
+        },
+        "cover": {
+          "status": "pending",
+          "reason": "待同日明治四選"
+        },
+        "input": {
+          "date": "2026-11-18",
+          "venue": "HV",
+          "race": 7,
+          "off": "2026-11-18T21:45:00+08:00",
+          "score": null,
+          "track": "TURF",
+          "distance": 1650,
+          "rail": "C",
+          "horses": [
+            {
+              "no": 1,
+              "name": "好節拍",
+              "jockey_id": "CJE",
+              "jockey": "周俊樂",
+              "draw": 6,
+              "horse_id": "HK_2023_J519"
+            },
+            {
+              "no": 2,
+              "name": "盈好威楓",
+              "jockey_id": "YHY",
+              "jockey": "袁幸堯",
+              "draw": 2,
+              "horse_id": "HK_2024_K131"
+            },
+            {
+              "no": 3,
+              "name": "同心同樂",
+              "jockey_id": "TEK",
+              "jockey": "田泰安",
+              "draw": 8,
+              "horse_id": "HK_2024_K081"
+            },
+            {
+              "no": 4,
+              "name": "三軍勇將",
+              "jockey_id": "BA",
+              "jockey": "巴度",
+              "draw": 3,
+              "horse_id": "HK_2023_J360"
+            },
+            {
+              "no": 5,
+              "name": "智勇名駒",
+              "jockey_id": "FEL",
+              "jockey": "霍宏聲",
+              "draw": 12,
+              "horse_id": "HK_2023_J298"
+            },
+            {
+              "no": 6,
+              "name": "獅子精神",
+              "jockey_id": "KRW",
+              "jockey": "金誠剛",
+              "draw": 5,
+              "horse_id": "HK_2025_L548"
+            },
+            {
+              "no": 7,
+              "name": "龍文鞭影",
+              "jockey_id": "MHT",
+              "jockey": "巫顯東",
+              "draw": 11,
+              "horse_id": "HK_2024_K226"
+            },
+            {
+              "no": 8,
+              "name": "風將",
+              "jockey_id": "PZ",
+              "jockey": "潘頓",
+              "draw": 9,
+              "horse_id": "HK_2025_L184"
+            },
+            {
+              "no": 9,
+              "name": "有財有勢",
+              "jockey_id": "CML",
+              "jockey": "蔡明紹",
+              "draw": 4,
+              "horse_id": "HK_2022_H037"
+            },
+            {
+              "no": 10,
+              "name": "傲視同群",
+              "jockey_id": "PMF",
+              "jockey": "潘明輝",
+              "draw": 1,
+              "horse_id": "HK_2024_K357"
+            },
+            {
+              "no": 11,
+              "name": "龍城上將",
+              "jockey_id": "OSR",
+              "jockey": "奧璇璧",
+              "draw": 7,
+              "horse_id": "HK_2025_L300"
+            },
+            {
+              "no": 12,
+              "name": "都靈冠星",
+              "jockey_id": "YML",
+              "jockey": "楊明綸",
+              "draw": 10,
+              "horse_id": "HK_2025_L024"
+            }
+          ],
+          "scratched": [],
+          "tips": {
+            "meiji": {
+              "status": "pending",
+              "horses": []
+            },
+            "ball": {
+              "status": "pending",
+              "horses": []
+            },
+            "ma": {
+              "status": "pending",
+              "horses": []
+            },
+            "computer": {
+              "status": "pending",
+              "horses": []
+            }
+          },
+          "draw_top5": {
+            "status": "ready",
+            "start_date": "2026-09-01",
+            "before_date": "2026-11-18",
+            "riders": [
+              {
+                "no": 8,
+                "jockey": "潘頓",
+                "jockey_id": "PZ",
+                "draw": 9,
+                "placed": 8,
+                "starts": 12,
+                "rate": 0.6666666666666666
+              },
+              {
+                "no": 10,
+                "jockey": "潘明輝",
+                "jockey_id": "PMF",
+                "draw": 1,
+                "placed": 5,
+                "starts": 13,
+                "rate": 0.38461538461538464
+              },
+              {
+                "no": 11,
+                "jockey": "奧璇璧",
+                "jockey_id": "OSR",
+                "draw": 7,
+                "placed": 1,
+                "starts": 3,
+                "rate": 0.3333333333333333
+              },
+              {
+                "no": 1,
+                "jockey": "周俊樂",
+                "jockey_id": "CJE",
+                "draw": 6,
+                "placed": 3,
+                "starts": 14,
+                "rate": 0.21428571428571427
+              },
+              {
+                "no": 3,
+                "jockey": "田泰安",
+                "jockey_id": "TEK",
+                "draw": 8,
+                "placed": 3,
+                "starts": 15,
+                "rate": 0.2
+              }
+            ],
+            "method_version": "jockey_draw_only_v3",
+            "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+          },
+          "odds": {}
+        },
+        "cover_input": null,
+        "secondary_version": "h0-intersection2-gt7.5-v1-20261022",
+        "secondary": {
+          "status": "pending",
+          "reason": "待H條件核實"
+        },
+        "secondary_finalized": false,
+        "secondary_captured_at": null,
+        "secondary_input": null
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "venue": "HV",
+      "race": 8,
+      "off": "2026-11-18T22:15:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "晨曦儷人",
+          "jockey_id": "OJM",
+          "jockey": "奧爾民",
+          "draw": 5,
+          "horse_id": "HK_2023_J066"
+        },
+        {
+          "no": 2,
+          "name": "志滿同行",
+          "jockey_id": "OSR",
+          "jockey": "奧璇璧",
+          "draw": 2,
+          "horse_id": "HK_2024_K056"
+        },
+        {
+          "no": 3,
+          "name": "馬達",
+          "jockey_id": "LDE",
+          "jockey": "梁家俊",
+          "draw": 11,
+          "horse_id": "HK_2024_K165"
+        },
+        {
+          "no": 4,
+          "name": "粵港資駒",
+          "jockey_id": "FEL",
+          "jockey": "霍宏聲",
+          "draw": 9,
+          "horse_id": "HK_2025_L033"
+        },
+        {
+          "no": 5,
+          "name": "得道猴王",
+          "jockey_id": "CJE",
+          "jockey": "周俊樂",
+          "draw": 3,
+          "horse_id": "HK_2023_J303"
+        },
+        {
+          "no": 6,
+          "name": "電光高昇",
+          "jockey_id": "CML",
+          "jockey": "蔡明紹",
+          "draw": 10,
+          "horse_id": "HK_2025_L375"
+        },
+        {
+          "no": 7,
+          "name": "福星小子",
+          "jockey_id": "TEK",
+          "jockey": "田泰安",
+          "draw": 4,
+          "horse_id": "HK_2024_K434"
+        },
+        {
+          "no": 8,
+          "name": "保羅萬友",
+          "jockey_id": "BA",
+          "jockey": "巴度",
+          "draw": 8,
+          "horse_id": "HK_2025_L475"
+        },
+        {
+          "no": 9,
+          "name": "勝本善",
+          "jockey_id": "BHW",
+          "jockey": "班德禮",
+          "draw": 12,
+          "horse_id": "HK_2026_M034"
+        },
+        {
+          "no": 10,
+          "name": "無敵好瑪",
+          "jockey_id": "HCY",
+          "jockey": "何澤堯",
+          "draw": 6,
+          "horse_id": "HK_2025_L312"
+        },
+        {
+          "no": 11,
+          "name": "明德輝煌",
+          "jockey_id": "PMF",
+          "jockey": "潘明輝",
+          "draw": 7,
+          "horse_id": "HK_2025_L298"
+        },
+        {
+          "no": 12,
+          "name": "十二神將",
+          "jockey_id": "WPN",
+          "jockey": "黃寶妮",
+          "draw": 1,
+          "horse_id": "HK_2022_H435"
+        }
+      ],
+      "scratched": [],
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "C",
+      "tips": {
+        "meiji": {
+          "status": "pending",
+          "horses": []
+        },
+        "ball": {
+          "status": "pending",
+          "horses": []
+        },
+        "ma": {
+          "status": "pending",
+          "horses": []
+        },
+        "computer": {
+          "status": "pending",
+          "horses": []
+        }
+      },
+      "index": {
+        "status": "pending",
+        "horses": []
+      },
+      "score": null,
+      "selection": null,
+      "result": null,
+      "locked": false,
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-11-18",
+        "riders": [
+          {
+            "no": 10,
+            "jockey": "何澤堯",
+            "jockey_id": "HCY",
+            "draw": 6,
+            "placed": 7,
+            "starts": 13,
+            "rate": 0.5384615384615384
+          },
+          {
+            "no": 5,
+            "jockey": "周俊樂",
+            "jockey_id": "CJE",
+            "draw": 3,
+            "placed": 5,
+            "starts": 10,
+            "rate": 0.5
+          },
+          {
+            "no": 7,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "draw": 4,
+            "placed": 7,
+            "starts": 16,
+            "rate": 0.4375
+          },
+          {
+            "no": 3,
+            "jockey": "梁家俊",
+            "jockey_id": "LDE",
+            "draw": 11,
+            "placed": 4,
+            "starts": 12,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 1,
+            "jockey": "奧爾民",
+            "jockey_id": "OJM",
+            "draw": 5,
+            "placed": 3,
+            "starts": 11,
+            "rate": 0.2727272727272727
+          }
+        ],
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+      },
+      "hv_plan_state": "pending",
+      "hv_plan_reason": "待確認三個專家來源",
+      "combined_snapshot": {
+        "version": "confidence-cover-v1-20261022",
+        "ledger": "paper",
+        "date": "2026-11-18",
+        "venue": "HV",
+        "race": 8,
+        "captured_at": "2026-11-16T06:10:29.653Z",
+        "finalized": false,
+        "primary_finalized": false,
+        "cover_finalized": false,
+        "primary_captured_at": null,
+        "cover_captured_at": null,
+        "primary": {
+          "status": "pending",
+          "picks": [],
+          "bets": [],
+          "reason": "待確認三個專家來源"
+        },
+        "cover": {
+          "status": "pending",
+          "reason": "待同日明治四選"
+        },
+        "input": {
+          "date": "2026-11-18",
+          "venue": "HV",
+          "race": 8,
+          "off": "2026-11-18T22:15:00+08:00",
+          "score": null,
+          "track": "TURF",
+          "distance": 1200,
+          "rail": "C",
+          "horses": [
+            {
+              "no": 1,
+              "name": "晨曦儷人",
+              "jockey_id": "OJM",
+              "jockey": "奧爾民",
+              "draw": 5,
+              "horse_id": "HK_2023_J066"
+            },
+            {
+              "no": 2,
+              "name": "志滿同行",
+              "jockey_id": "OSR",
+              "jockey": "奧璇璧",
+              "draw": 2,
+              "horse_id": "HK_2024_K056"
+            },
+            {
+              "no": 3,
+              "name": "馬達",
+              "jockey_id": "LDE",
+              "jockey": "梁家俊",
+              "draw": 11,
+              "horse_id": "HK_2024_K165"
+            },
+            {
+              "no": 4,
+              "name": "粵港資駒",
+              "jockey_id": "FEL",
+              "jockey": "霍宏聲",
+              "draw": 9,
+              "horse_id": "HK_2025_L033"
+            },
+            {
+              "no": 5,
+              "name": "得道猴王",
+              "jockey_id": "CJE",
+              "jockey": "周俊樂",
+              "draw": 3,
+              "horse_id": "HK_2023_J303"
+            },
+            {
+              "no": 6,
+              "name": "電光高昇",
+              "jockey_id": "CML",
+              "jockey": "蔡明紹",
+              "draw": 10,
+              "horse_id": "HK_2025_L375"
+            },
+            {
+              "no": 7,
+              "name": "福星小子",
+              "jockey_id": "TEK",
+              "jockey": "田泰安",
+              "draw": 4,
+              "horse_id": "HK_2024_K434"
+            },
+            {
+              "no": 8,
+              "name": "保羅萬友",
+              "jockey_id": "BA",
+              "jockey": "巴度",
+              "draw": 8,
+              "horse_id": "HK_2025_L475"
+            },
+            {
+              "no": 9,
+              "name": "勝本善",
+              "jockey_id": "BHW",
+              "jockey": "班德禮",
+              "draw": 12,
+              "horse_id": "HK_2026_M034"
+            },
+            {
+              "no": 10,
+              "name": "無敵好瑪",
+              "jockey_id": "HCY",
+              "jockey": "何澤堯",
+              "draw": 6,
+              "horse_id": "HK_2025_L312"
+            },
+            {
+              "no": 11,
+              "name": "明德輝煌",
+              "jockey_id": "PMF",
+              "jockey": "潘明輝",
+              "draw": 7,
+              "horse_id": "HK_2025_L298"
+            },
+            {
+              "no": 12,
+              "name": "十二神將",
+              "jockey_id": "WPN",
+              "jockey": "黃寶妮",
+              "draw": 1,
+              "horse_id": "HK_2022_H435"
+            }
+          ],
+          "scratched": [],
+          "tips": {
+            "meiji": {
+              "status": "pending",
+              "horses": []
+            },
+            "ball": {
+              "status": "pending",
+              "horses": []
+            },
+            "ma": {
+              "status": "pending",
+              "horses": []
+            },
+            "computer": {
+              "status": "pending",
+              "horses": []
+            }
+          },
+          "draw_top5": {
+            "status": "ready",
+            "start_date": "2026-09-01",
+            "before_date": "2026-11-18",
+            "riders": [
+              {
+                "no": 10,
+                "jockey": "何澤堯",
+                "jockey_id": "HCY",
+                "draw": 6,
+                "placed": 7,
+                "starts": 13,
+                "rate": 0.5384615384615384
+              },
+              {
+                "no": 5,
+                "jockey": "周俊樂",
+                "jockey_id": "CJE",
+                "draw": 3,
+                "placed": 5,
+                "starts": 10,
+                "rate": 0.5
+              },
+              {
+                "no": 7,
+                "jockey": "田泰安",
+                "jockey_id": "TEK",
+                "draw": 4,
+                "placed": 7,
+                "starts": 16,
+                "rate": 0.4375
+              },
+              {
+                "no": 3,
+                "jockey": "梁家俊",
+                "jockey_id": "LDE",
+                "draw": 11,
+                "placed": 4,
+                "starts": 12,
+                "rate": 0.3333333333333333
+              },
+              {
+                "no": 1,
+                "jockey": "奧爾民",
+                "jockey_id": "OJM",
+                "draw": 5,
+                "placed": 3,
+                "starts": 11,
+                "rate": 0.2727272727272727
+              }
+            ],
+            "method_version": "jockey_draw_only_v3",
+            "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+          },
+          "odds": {}
+        },
+        "cover_input": null,
+        "secondary_version": "h0-intersection2-gt7.5-v1-20261022",
+        "secondary": {
+          "status": "pending",
+          "reason": "待H條件核實"
+        },
+        "secondary_finalized": false,
+        "secondary_captured_at": null,
+        "secondary_input": null
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "venue": "HV",
+      "race": 9,
+      "off": "2026-11-18T22:50:00+08:00",
+      "horses": [
+        {
+          "no": 1,
+          "name": "星運少爵",
+          "jockey_id": "WEC",
+          "jockey": "黃智弘",
+          "draw": 10,
+          "horse_id": "HK_2022_H459"
+        },
+        {
+          "no": 2,
+          "name": "繼往開來",
+          "jockey_id": "HCY",
+          "jockey": "何澤堯",
+          "draw": 11,
+          "horse_id": "HK_2025_L096"
+        },
+        {
+          "no": 3,
+          "name": "多利勝駒",
+          "jockey_id": "OJM",
+          "jockey": "奧爾民",
+          "draw": 9,
+          "horse_id": "HK_2026_M063"
+        },
+        {
+          "no": 4,
+          "name": "嘉應勇將",
+          "jockey_id": "CJE",
+          "jockey": "周俊樂",
+          "draw": 4,
+          "horse_id": "HK_2025_L094"
+        },
+        {
+          "no": 5,
+          "name": "家樂龍駒",
+          "jockey_id": "WPN",
+          "jockey": "黃寶妮",
+          "draw": 6,
+          "horse_id": "HK_2022_H396"
+        },
+        {
+          "no": 6,
+          "name": "江江彩彩",
+          "jockey_id": "BHW",
+          "jockey": "班德禮",
+          "draw": 12,
+          "horse_id": "HK_2025_L516"
+        },
+        {
+          "no": 7,
+          "name": "活力禾道",
+          "jockey_id": "YML",
+          "jockey": "楊明綸",
+          "draw": 2,
+          "horse_id": "HK_2025_L470"
+        },
+        {
+          "no": 8,
+          "name": "電源之駒",
+          "jockey_id": "BA",
+          "jockey": "巴度",
+          "draw": 7,
+          "horse_id": "HK_2020_E301"
+        },
+        {
+          "no": 9,
+          "name": "馬大愛",
+          "jockey_id": "KRW",
+          "jockey": "金誠剛",
+          "draw": 1,
+          "horse_id": "HK_2025_L552"
+        },
+        {
+          "no": 10,
+          "name": "賢知友您",
+          "jockey_id": "TEK",
+          "jockey": "田泰安",
+          "draw": 5,
+          "horse_id": "HK_2024_K545"
+        },
+        {
+          "no": 11,
+          "name": "喵喵怪",
+          "jockey_id": "YHY",
+          "jockey": "袁幸堯",
+          "draw": 3,
+          "horse_id": "HK_2023_J487"
+        },
+        {
+          "no": 12,
+          "name": "耀寶",
+          "jockey_id": "PZ",
+          "jockey": "潘頓",
+          "draw": 8,
+          "horse_id": "HK_2023_J437"
+        }
+      ],
+      "scratched": [],
+      "distance": 1200,
+      "track": "TURF",
+      "rail": "C",
+      "tips": {
+        "meiji": {
+          "status": "pending",
+          "horses": []
+        },
+        "ball": {
+          "status": "pending",
+          "horses": []
+        },
+        "ma": {
+          "status": "pending",
+          "horses": []
+        },
+        "computer": {
+          "status": "pending",
+          "horses": []
+        }
+      },
+      "index": {
+        "status": "pending",
+        "horses": []
+      },
+      "score": null,
+      "selection": null,
+      "result": null,
+      "locked": false,
+      "draw_top5": {
+        "status": "ready",
+        "start_date": "2026-09-01",
+        "before_date": "2026-11-18",
+        "riders": [
+          {
+            "no": 8,
+            "jockey": "巴度",
+            "jockey_id": "BA",
+            "draw": 7,
+            "placed": 5,
+            "starts": 6,
+            "rate": 0.8333333333333334
+          },
+          {
+            "no": 12,
+            "jockey": "潘頓",
+            "jockey_id": "PZ",
+            "draw": 8,
+            "placed": 4,
+            "starts": 10,
+            "rate": 0.4
+          },
+          {
+            "no": 11,
+            "jockey": "袁幸堯",
+            "jockey_id": "YHY",
+            "draw": 3,
+            "placed": 4,
+            "starts": 11,
+            "rate": 0.36363636363636365
+          },
+          {
+            "no": 5,
+            "jockey": "黃寶妮",
+            "jockey_id": "WPN",
+            "draw": 6,
+            "placed": 1,
+            "starts": 3,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 10,
+            "jockey": "田泰安",
+            "jockey_id": "TEK",
+            "draw": 5,
+            "placed": 2,
+            "starts": 8,
+            "rate": 0.25
+          }
+        ],
+        "method_version": "jockey_draw_only_v3",
+        "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+      },
+      "hv_plan_state": "pending",
+      "hv_plan_reason": "待確認三個專家來源",
+      "combined_snapshot": {
+        "version": "confidence-cover-v1-20261022",
+        "ledger": "paper",
+        "date": "2026-11-18",
+        "venue": "HV",
+        "race": 9,
+        "captured_at": "2026-11-16T06:10:29.653Z",
+        "finalized": false,
+        "primary_finalized": false,
+        "cover_finalized": false,
+        "primary_captured_at": null,
+        "cover_captured_at": null,
+        "primary": {
+          "status": "pending",
+          "picks": [],
+          "bets": [],
+          "reason": "待確認三個專家來源"
+        },
+        "cover": {
+          "status": "pending",
+          "reason": "待同日明治四選"
+        },
+        "input": {
+          "date": "2026-11-18",
+          "venue": "HV",
+          "race": 9,
+          "off": "2026-11-18T22:50:00+08:00",
+          "score": null,
+          "track": "TURF",
+          "distance": 1200,
+          "rail": "C",
+          "horses": [
+            {
+              "no": 1,
+              "name": "星運少爵",
+              "jockey_id": "WEC",
+              "jockey": "黃智弘",
+              "draw": 10,
+              "horse_id": "HK_2022_H459"
+            },
+            {
+              "no": 2,
+              "name": "繼往開來",
+              "jockey_id": "HCY",
+              "jockey": "何澤堯",
+              "draw": 11,
+              "horse_id": "HK_2025_L096"
+            },
+            {
+              "no": 3,
+              "name": "多利勝駒",
+              "jockey_id": "OJM",
+              "jockey": "奧爾民",
+              "draw": 9,
+              "horse_id": "HK_2026_M063"
+            },
+            {
+              "no": 4,
+              "name": "嘉應勇將",
+              "jockey_id": "CJE",
+              "jockey": "周俊樂",
+              "draw": 4,
+              "horse_id": "HK_2025_L094"
+            },
+            {
+              "no": 5,
+              "name": "家樂龍駒",
+              "jockey_id": "WPN",
+              "jockey": "黃寶妮",
+              "draw": 6,
+              "horse_id": "HK_2022_H396"
+            },
+            {
+              "no": 6,
+              "name": "江江彩彩",
+              "jockey_id": "BHW",
+              "jockey": "班德禮",
+              "draw": 12,
+              "horse_id": "HK_2025_L516"
+            },
+            {
+              "no": 7,
+              "name": "活力禾道",
+              "jockey_id": "YML",
+              "jockey": "楊明綸",
+              "draw": 2,
+              "horse_id": "HK_2025_L470"
+            },
+            {
+              "no": 8,
+              "name": "電源之駒",
+              "jockey_id": "BA",
+              "jockey": "巴度",
+              "draw": 7,
+              "horse_id": "HK_2020_E301"
+            },
+            {
+              "no": 9,
+              "name": "馬大愛",
+              "jockey_id": "KRW",
+              "jockey": "金誠剛",
+              "draw": 1,
+              "horse_id": "HK_2025_L552"
+            },
+            {
+              "no": 10,
+              "name": "賢知友您",
+              "jockey_id": "TEK",
+              "jockey": "田泰安",
+              "draw": 5,
+              "horse_id": "HK_2024_K545"
+            },
+            {
+              "no": 11,
+              "name": "喵喵怪",
+              "jockey_id": "YHY",
+              "jockey": "袁幸堯",
+              "draw": 3,
+              "horse_id": "HK_2023_J487"
+            },
+            {
+              "no": 12,
+              "name": "耀寶",
+              "jockey_id": "PZ",
+              "jockey": "潘頓",
+              "draw": 8,
+              "horse_id": "HK_2023_J437"
+            }
+          ],
+          "scratched": [],
+          "tips": {
+            "meiji": {
+              "status": "pending",
+              "horses": []
+            },
+            "ball": {
+              "status": "pending",
+              "horses": []
+            },
+            "ma": {
+              "status": "pending",
+              "horses": []
+            },
+            "computer": {
+              "status": "pending",
+              "horses": []
+            }
+          },
+          "draw_top5": {
+            "status": "ready",
+            "start_date": "2026-09-01",
+            "before_date": "2026-11-18",
+            "riders": [
+              {
+                "no": 8,
+                "jockey": "巴度",
+                "jockey_id": "BA",
+                "draw": 7,
+                "placed": 5,
+                "starts": 6,
+                "rate": 0.8333333333333334
+              },
+              {
+                "no": 12,
+                "jockey": "潘頓",
+                "jockey_id": "PZ",
+                "draw": 8,
+                "placed": 4,
+                "starts": 10,
+                "rate": 0.4
+              },
+              {
+                "no": 11,
+                "jockey": "袁幸堯",
+                "jockey_id": "YHY",
+                "draw": 3,
+                "placed": 4,
+                "starts": 11,
+                "rate": 0.36363636363636365
+              },
+              {
+                "no": 5,
+                "jockey": "黃寶妮",
+                "jockey_id": "WPN",
+                "draw": 6,
+                "placed": 1,
+                "starts": 3,
+                "rate": 0.3333333333333333
+              },
+              {
+                "no": 10,
+                "jockey": "田泰安",
+                "jockey_id": "TEK",
+                "draw": 5,
+                "placed": 2,
+                "starts": 8,
+                "rate": 0.25
+              }
+            ],
+            "method_version": "jockey_draw_only_v3",
+            "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc"
+          },
+          "odds": {}
+        },
+        "cover_input": null,
+        "secondary_version": "h0-intersection2-gt7.5-v1-20261022",
+        "secondary": {
+          "status": "pending",
+          "reason": "待H條件核實"
+        },
+        "secondary_finalized": false,
+        "secondary_captured_at": null,
+        "secondary_input": null
+      }
+    }
+  ],
+  "updated_at": "2026-11-16T14:10:29+08:00",
+  "status": "upcoming",
+  "tips_checked_at": null,
+  "tips_due_at": "2026-11-18T16:40:00+08:00",
+  "heartbeat": null,
+  "errors": []
+}
