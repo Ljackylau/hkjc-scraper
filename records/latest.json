@@ -3440,7 +3440,7 @@
         "date": "2026-11-22",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-11-22T08:45:29.396Z",
+        "captured_at": "2026-11-22T08:46:49.396Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -3647,7 +3647,7 @@
             "before_date": "2026-11-22",
             "venue": "ST",
             "race": 9,
-            "captured_at": "2026-11-22T16:44:12+08:00",
+            "captured_at": "2026-11-22T16:45:50+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -4108,7 +4108,7 @@
         "before_date": "2026-11-22",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-11-22T16:44:12+08:00",
+        "captured_at": "2026-11-22T16:45:50+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -4774,7 +4774,7 @@
         "date": "2026-11-22",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-22T08:45:29.396Z",
+        "captured_at": "2026-11-22T08:46:49.396Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -5013,7 +5013,7 @@
             "before_date": "2026-11-22",
             "venue": "ST",
             "race": 10,
-            "captured_at": "2026-11-22T16:44:12+08:00",
+            "captured_at": "2026-11-22T16:45:50+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -5423,7 +5423,7 @@
         "before_date": "2026-11-22",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-22T16:44:12+08:00",
+        "captured_at": "2026-11-22T16:45:50+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -6040,7 +6040,7 @@
         "date": "2026-11-22",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-22T08:45:29.396Z",
+        "captured_at": "2026-11-22T08:46:49.396Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -6276,12 +6276,12 @@
           },
           "front_support": {
             "method": "front-three-starts-v1",
-            "status": "pending",
+            "status": "ready",
             "date": "2026-11-22",
             "before_date": "2026-11-22",
             "venue": "ST",
             "race": 11,
-            "captured_at": "2026-11-22T16:44:12+08:00",
+            "captured_at": "2026-11-22T16:45:50+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -6713,6 +6713,46 @@
                 "horse_id": "HK_2025_L563",
                 "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L563&Option=1",
                 "captured_at": "2026-11-22T16:44:25+08:00"
+              },
+              "13": {
+                "status": "ready",
+                "style_n": 0,
+                "median": null,
+                "last_date": null,
+                "last_finish": null,
+                "horse_id": "HK_2025_L356",
+                "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L356&Option=1",
+                "captured_at": "2026-11-22T16:45:50+08:00"
+              },
+              "14": {
+                "status": "ready",
+                "last_date": "2026-10-21",
+                "last_finish": 11,
+                "style_n": 2,
+                "median": 9,
+                "recent": [
+                  {
+                    "date": "2026-10-21",
+                    "finish": 11,
+                    "positions": [
+                      8,
+                      12,
+                      11
+                    ]
+                  },
+                  {
+                    "date": "2026-07-08",
+                    "finish": 10,
+                    "positions": [
+                      10,
+                      10,
+                      10
+                    ]
+                  }
+                ],
+                "horse_id": "HK_2025_L340",
+                "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L340&Option=1",
+                "captured_at": "2026-11-22T16:45:52+08:00"
               }
             }
           },
@@ -6736,12 +6776,12 @@
       },
       "front_support": {
         "method": "front-three-starts-v1",
-        "status": "pending",
+        "status": "ready",
         "date": "2026-11-22",
         "before_date": "2026-11-22",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-22T16:44:12+08:00",
+        "captured_at": "2026-11-22T16:45:50+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -7173,16 +7213,56 @@
             "horse_id": "HK_2025_L563",
             "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L563&Option=1",
             "captured_at": "2026-11-22T16:44:25+08:00"
+          },
+          "13": {
+            "status": "ready",
+            "style_n": 0,
+            "median": null,
+            "last_date": null,
+            "last_finish": null,
+            "horse_id": "HK_2025_L356",
+            "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L356&Option=1",
+            "captured_at": "2026-11-22T16:45:50+08:00"
+          },
+          "14": {
+            "status": "ready",
+            "last_date": "2026-10-21",
+            "last_finish": 11,
+            "style_n": 2,
+            "median": 9.0,
+            "recent": [
+              {
+                "date": "2026-10-21",
+                "finish": 11,
+                "positions": [
+                  8,
+                  12,
+                  11
+                ]
+              },
+              {
+                "date": "2026-07-08",
+                "finish": 10,
+                "positions": [
+                  10,
+                  10,
+                  10
+                ]
+              }
+            ],
+            "horse_id": "HK_2025_L340",
+            "source": "https://racing.hkjc.com/zh-hk/local/information/horse?HorseId=HK_2025_L340&Option=1",
+            "captured_at": "2026-11-22T16:45:52+08:00"
           }
         }
       }
     }
   ],
-  "updated_at": "2026-11-22T16:45:29+08:00",
+  "updated_at": "2026-11-22T16:46:49+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-22T10:30:00+08:00",
-  "heartbeat": "2026-11-22T16:45:29.372944+08:00",
+  "heartbeat": "2026-11-22T16:46:49.373461+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
