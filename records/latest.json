@@ -4772,7 +4772,7 @@
         "date": "2026-11-22",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-22T09:44:29.419Z",
+        "captured_at": "2026-11-22T09:45:49.966Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -5011,7 +5011,7 @@
             "before_date": "2026-11-22",
             "venue": "ST",
             "race": 10,
-            "captured_at": "2026-11-22T17:44:09+08:00",
+            "captured_at": "2026-11-22T17:45:49+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -5411,7 +5411,8 @@
       "banker_initial_error": "HTTP Error 404: Not Found",
       "sha_tin_four": {
         "status": "pending",
-        "numbers": []
+        "numbers": [],
+        "error": "HTTP Error 404: Not Found"
       },
       "front_support": {
         "method": "front-three-starts-v1",
@@ -5420,7 +5421,7 @@
         "before_date": "2026-11-22",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-22T17:44:09+08:00",
+        "captured_at": "2026-11-22T17:45:49+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -6037,7 +6038,7 @@
         "date": "2026-11-22",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-22T09:44:29.419Z",
+        "captured_at": "2026-11-22T09:45:49.966Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -6278,7 +6279,7 @@
             "before_date": "2026-11-22",
             "venue": "ST",
             "race": 11,
-            "captured_at": "2026-11-22T17:44:09+08:00",
+            "captured_at": "2026-11-22T17:45:49+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -6778,7 +6779,7 @@
         "before_date": "2026-11-22",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-22T17:44:09+08:00",
+        "captured_at": "2026-11-22T17:45:49+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -7255,11 +7256,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-22T17:44:29+08:00",
+  "updated_at": "2026-11-22T17:45:49+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-22T10:30:00+08:00",
-  "heartbeat": "2026-11-22T17:44:29.394520+08:00",
+  "heartbeat": "2026-11-22T17:45:49.395081+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
