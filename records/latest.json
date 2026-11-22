@@ -3267,10 +3267,7 @@
         },
         {
           "no": 3,
-          "name": "港邊小區",
-          "jockey_id": "MCJ",
-          "jockey": "麥道朗",
-          "draw": 9,
+          "name": "港邊小區 (退出)",
           "horse_id": "HK_2024_K902"
         },
         {
@@ -3278,7 +3275,7 @@
           "name": "安騁",
           "jockey_id": "MDB",
           "jockey": "麥文堅",
-          "draw": 10,
+          "draw": 9,
           "horse_id": "HK_2022_H452"
         },
         {
@@ -3330,7 +3327,9 @@
           "horse_id": "HK_2024_K057"
         }
       ],
-      "scratched": [],
+      "scratched": [
+        3
+      ],
       "distance": 2000,
       "track": "TURF",
       "rail": "B+2",
@@ -3440,7 +3439,7 @@
         "date": "2026-11-22",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-11-22T09:08:09.406Z",
+        "captured_at": "2026-11-22T09:09:29.407Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -3484,10 +3483,7 @@
             },
             {
               "no": 3,
-              "name": "港邊小區",
-              "jockey_id": "MCJ",
-              "jockey": "麥道朗",
-              "draw": 9,
+              "name": "港邊小區 (退出)",
               "horse_id": "HK_2024_K902"
             },
             {
@@ -3495,7 +3491,7 @@
               "name": "安騁",
               "jockey_id": "MDB",
               "jockey": "麥文堅",
-              "draw": 10,
+              "draw": 9,
               "horse_id": "HK_2022_H452"
             },
             {
@@ -3547,7 +3543,9 @@
               "horse_id": "HK_2024_K057"
             }
           ],
-          "scratched": [],
+          "scratched": [
+            3
+          ],
           "tips": {
             "meiji": {
               "status": "ready",
@@ -3647,7 +3645,7 @@
             "before_date": "2026-11-22",
             "venue": "ST",
             "race": 9,
-            "captured_at": "2026-11-22T17:07:30+08:00",
+            "captured_at": "2026-11-22T17:09:10+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -4098,8 +4096,7 @@
       "banker_initial_error": "HTTP Error 404: Not Found",
       "sha_tin_four": {
         "status": "pending",
-        "numbers": [],
-        "error": "HTTP Error 404: Not Found"
+        "numbers": []
       },
       "front_support": {
         "method": "front-three-starts-v1",
@@ -4108,7 +4105,7 @@
         "before_date": "2026-11-22",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-11-22T17:07:30+08:00",
+        "captured_at": "2026-11-22T17:09:10+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -4774,7 +4771,7 @@
         "date": "2026-11-22",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-22T09:08:09.406Z",
+        "captured_at": "2026-11-22T09:09:29.407Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -5013,7 +5010,7 @@
             "before_date": "2026-11-22",
             "venue": "ST",
             "race": 10,
-            "captured_at": "2026-11-22T17:07:30+08:00",
+            "captured_at": "2026-11-22T17:09:10+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -5423,7 +5420,7 @@
         "before_date": "2026-11-22",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-22T17:07:30+08:00",
+        "captured_at": "2026-11-22T17:09:10+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -6040,7 +6037,7 @@
         "date": "2026-11-22",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-22T09:08:09.406Z",
+        "captured_at": "2026-11-22T09:09:29.407Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -6281,7 +6278,7 @@
             "before_date": "2026-11-22",
             "venue": "ST",
             "race": 11,
-            "captured_at": "2026-11-22T17:07:30+08:00",
+            "captured_at": "2026-11-22T17:09:10+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -6781,7 +6778,7 @@
         "before_date": "2026-11-22",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-22T17:07:30+08:00",
+        "captured_at": "2026-11-22T17:09:10+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -7258,11 +7255,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-22T17:08:09+08:00",
+  "updated_at": "2026-11-22T17:09:29+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-22T10:30:00+08:00",
-  "heartbeat": "2026-11-22T17:08:09.381495+08:00",
+  "heartbeat": "2026-11-22T17:09:29.381982+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
