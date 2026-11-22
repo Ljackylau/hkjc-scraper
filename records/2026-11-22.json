@@ -3439,7 +3439,7 @@
         "date": "2026-11-22",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-11-22T09:09:29.407Z",
+        "captured_at": "2026-11-22T09:10:50.147Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -3645,7 +3645,7 @@
             "before_date": "2026-11-22",
             "venue": "ST",
             "race": 9,
-            "captured_at": "2026-11-22T17:09:10+08:00",
+            "captured_at": "2026-11-22T17:10:50+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -4096,7 +4096,8 @@
       "banker_initial_error": "HTTP Error 404: Not Found",
       "sha_tin_four": {
         "status": "pending",
-        "numbers": []
+        "numbers": [],
+        "error": "HTTP Error 404: Not Found"
       },
       "front_support": {
         "method": "front-three-starts-v1",
@@ -4105,7 +4106,7 @@
         "before_date": "2026-11-22",
         "venue": "ST",
         "race": 9,
-        "captured_at": "2026-11-22T17:09:10+08:00",
+        "captured_at": "2026-11-22T17:10:50+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -4771,7 +4772,7 @@
         "date": "2026-11-22",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-22T09:09:29.407Z",
+        "captured_at": "2026-11-22T09:10:50.147Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -5010,7 +5011,7 @@
             "before_date": "2026-11-22",
             "venue": "ST",
             "race": 10,
-            "captured_at": "2026-11-22T17:09:10+08:00",
+            "captured_at": "2026-11-22T17:10:50+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -5420,7 +5421,7 @@
         "before_date": "2026-11-22",
         "venue": "ST",
         "race": 10,
-        "captured_at": "2026-11-22T17:09:10+08:00",
+        "captured_at": "2026-11-22T17:10:50+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -6037,7 +6038,7 @@
         "date": "2026-11-22",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-22T09:09:29.407Z",
+        "captured_at": "2026-11-22T09:10:50.147Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -6278,7 +6279,7 @@
             "before_date": "2026-11-22",
             "venue": "ST",
             "race": 11,
-            "captured_at": "2026-11-22T17:09:10+08:00",
+            "captured_at": "2026-11-22T17:10:50+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -6778,7 +6779,7 @@
         "before_date": "2026-11-22",
         "venue": "ST",
         "race": 11,
-        "captured_at": "2026-11-22T17:09:10+08:00",
+        "captured_at": "2026-11-22T17:10:50+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -7255,11 +7256,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-22T17:09:29+08:00",
+  "updated_at": "2026-11-22T17:10:50+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-22T10:30:00+08:00",
-  "heartbeat": "2026-11-22T17:09:29.381982+08:00",
+  "heartbeat": "2026-11-22T17:10:49.382449+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
