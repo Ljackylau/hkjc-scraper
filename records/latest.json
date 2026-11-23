@@ -643,7 +643,8 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補"
+        "coverage_note": "部分歷史場次待補",
+        "record_type": "historical_reconstruction"
       },
       "combined_snapshot": {
         "version": "confidence-cover-v1-20261022",
@@ -875,7 +876,10 @@
         "secondary_captured_at": null,
         "secondary_input": null
       },
-      "locked_at": "2026-11-22T16:44:25+08:00"
+      "locked_at": "2026-11-22T16:44:25+08:00",
+      "draw_stats_scratched": [
+        2
+      ]
     },
     {
       "date": "2026-11-22",
@@ -1032,15 +1036,6 @@
         "before_date": "2026-11-22",
         "riders": [
           {
-            "no": 1,
-            "jockey": "周俊樂",
-            "jockey_id": "CJE",
-            "draw": 3,
-            "placed": 5,
-            "starts": 12,
-            "rate": 0.4166666666666667
-          },
-          {
             "no": 3,
             "jockey": "潘頓",
             "jockey_id": "PZ",
@@ -1059,15 +1054,6 @@
             "rate": 0.4
           },
           {
-            "no": 6,
-            "jockey": "奧爾民",
-            "jockey_id": "OJM",
-            "draw": 10,
-            "placed": 2,
-            "starts": 5,
-            "rate": 0.4
-          },
-          {
             "no": 10,
             "jockey": "袁幸堯",
             "jockey_id": "YHY",
@@ -1075,11 +1061,30 @@
             "placed": 2,
             "starts": 6,
             "rate": 0.3333333333333333
+          },
+          {
+            "no": 14,
+            "jockey": "希威森",
+            "jockey_id": "HEL",
+            "draw": 4,
+            "placed": 2,
+            "starts": 6,
+            "rate": 0.3333333333333333
+          },
+          {
+            "no": 12,
+            "jockey": "楊明綸",
+            "jockey_id": "YML",
+            "draw": 12,
+            "placed": 1,
+            "starts": 3,
+            "rate": 0.3333333333333333
           }
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補"
+        "coverage_note": "部分歷史場次待補",
+        "record_type": "historical_reconstruction"
       },
       "combined_snapshot": {
         "version": "confidence-cover-v1-20261022",
@@ -1311,7 +1316,11 @@
         "secondary_captured_at": null,
         "secondary_input": null
       },
-      "locked_at": "2026-11-22T16:44:25+08:00"
+      "locked_at": "2026-11-22T16:44:25+08:00",
+      "draw_stats_scratched": [
+        1,
+        6
+      ]
     },
     {
       "date": "2026-11-22",
@@ -3452,7 +3461,8 @@
         ],
         "method_version": "jockey_draw_only_v3",
         "method": "top3/starts; exact jockey and draw; all venues, tracks, rails and distances; prior days only; rate desc, starts desc, saddle asc",
-        "coverage_note": "部分歷史場次待補"
+        "coverage_note": "部分歷史場次待補",
+        "record_type": "historical_reconstruction"
       },
       "combined_snapshot": {
         "version": "confidence-cover-v1-20261022",
@@ -4562,7 +4572,10 @@
           }
         }
       },
-      "locked_at": "2026-11-22T17:15:09+08:00"
+      "locked_at": "2026-11-22T17:15:09+08:00",
+      "draw_stats_scratched": [
+        3
+      ]
     },
     {
       "date": "2026-11-22",
