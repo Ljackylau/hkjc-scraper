@@ -5293,7 +5293,7 @@
       "date": "2026-11-25",
       "venue": "HV",
       "race": 9,
-      "off": "2026-11-25T22:50:00+08:00",
+      "off": "2026-11-25T23:00:00+08:00",
       "horses": [
         {
           "no": 1,
@@ -5378,8 +5378,8 @@
         {
           "no": 11,
           "name": "競駿非凡",
-          "jockey_id": "OSR",
-          "jockey": "奧璇璧",
+          "jockey_id": "AA",
+          "jockey": "艾兆禮",
           "draw": 3,
           "horse_id": "HK_2023_J401"
         },
@@ -5475,6 +5475,15 @@
             "rate": 0.2857142857142857
           },
           {
+            "no": 11,
+            "jockey": "艾兆禮",
+            "jockey_id": "AA",
+            "draw": 3,
+            "placed": 5,
+            "starts": 19,
+            "rate": 0.2631578947368421
+          },
+          {
             "no": 7,
             "jockey": "潘頓",
             "jockey_id": "PZ",
@@ -5482,15 +5491,6 @@
             "placed": 2,
             "starts": 8,
             "rate": 0.25
-          },
-          {
-            "no": 3,
-            "jockey": "周俊樂",
-            "jockey_id": "CJE",
-            "draw": 4,
-            "placed": 2,
-            "starts": 12,
-            "rate": 0.16666666666666666
           }
         ],
         "method_version": "jockey_draw_only_v3",
@@ -5504,7 +5504,7 @@
         "date": "2026-11-25",
         "venue": "HV",
         "race": 9,
-        "captured_at": "2026-11-25T14:43:46.406Z",
+        "captured_at": "2026-11-25T14:44:08.155Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -5524,7 +5524,7 @@
           "date": "2026-11-25",
           "venue": "HV",
           "race": 9,
-          "off": "2026-11-25T22:50:00+08:00",
+          "off": "2026-11-25T23:00:00+08:00",
           "score": null,
           "track": "TURF",
           "distance": 1200,
@@ -5613,8 +5613,8 @@
             {
               "no": 11,
               "name": "競駿非凡",
-              "jockey_id": "OSR",
-              "jockey": "奧璇璧",
+              "jockey_id": "AA",
+              "jockey": "艾兆禮",
               "draw": 3,
               "horse_id": "HK_2023_J401"
             },
@@ -5699,6 +5699,15 @@
                 "rate": 0.2857142857142857
               },
               {
+                "no": 11,
+                "jockey": "艾兆禮",
+                "jockey_id": "AA",
+                "draw": 3,
+                "placed": 5,
+                "starts": 19,
+                "rate": 0.2631578947368421
+              },
+              {
                 "no": 7,
                 "jockey": "潘頓",
                 "jockey_id": "PZ",
@@ -5706,15 +5715,6 @@
                 "placed": 2,
                 "starts": 8,
                 "rate": 0.25
-              },
-              {
-                "no": 3,
-                "jockey": "周俊樂",
-                "jockey_id": "CJE",
-                "draw": 4,
-                "placed": 2,
-                "starts": 12,
-                "rate": 0.16666666666666666
               }
             ],
             "method_version": "jockey_draw_only_v3",
@@ -5727,7 +5727,7 @@
             "before_date": "2026-11-25",
             "venue": "HV",
             "race": 9,
-            "captured_at": "2026-11-25T22:42:26+08:00",
+            "captured_at": "2026-11-25T22:44:07+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -6190,7 +6190,7 @@
         "before_date": "2026-11-25",
         "venue": "HV",
         "race": 9,
-        "captured_at": "2026-11-25T22:42:26+08:00",
+        "captured_at": "2026-11-25T22:44:07+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -6635,11 +6635,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-25T22:43:46+08:00",
+  "updated_at": "2026-11-25T22:44:08+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-25T16:40:00+08:00",
-  "heartbeat": "2026-11-25T22:43:46.376423+08:00",
+  "heartbeat": "2026-11-25T22:44:06.376577+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
