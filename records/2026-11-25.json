@@ -2530,8 +2530,8 @@
         {
           "no": 12,
           "name": "龍之尊",
-          "jockey_id": "OSR",
-          "jockey": "奧璇璧",
+          "jockey_id": "BHW",
+          "jockey": "班德禮",
           "draw": 2,
           "horse_id": "HK_2024_K462"
         }
@@ -2619,6 +2619,15 @@
             "rate": 0.3333333333333333
           },
           {
+            "no": 12,
+            "jockey": "班德禮",
+            "jockey_id": "BHW",
+            "draw": 2,
+            "placed": 4,
+            "starts": 12,
+            "rate": 0.3333333333333333
+          },
+          {
             "no": 5,
             "jockey": "艾道拿",
             "jockey_id": "AVB",
@@ -2626,15 +2635,6 @@
             "placed": 2,
             "starts": 6,
             "rate": 0.3333333333333333
-          },
-          {
-            "no": 9,
-            "jockey": "艾兆禮",
-            "jockey_id": "AA",
-            "draw": 4,
-            "placed": 3,
-            "starts": 10,
-            "rate": 0.3
           }
         ],
         "method_version": "jockey_draw_only_v3",
@@ -2648,7 +2648,7 @@
         "date": "2026-11-25",
         "venue": "HV",
         "race": 7,
-        "captured_at": "2026-11-25T13:40:06.381Z",
+        "captured_at": "2026-11-25T13:41:27.055Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -2765,8 +2765,8 @@
             {
               "no": 12,
               "name": "龍之尊",
-              "jockey_id": "OSR",
-              "jockey": "奧璇璧",
+              "jockey_id": "BHW",
+              "jockey": "班德禮",
               "draw": 2,
               "horse_id": "HK_2024_K462"
             }
@@ -2843,6 +2843,15 @@
                 "rate": 0.3333333333333333
               },
               {
+                "no": 12,
+                "jockey": "班德禮",
+                "jockey_id": "BHW",
+                "draw": 2,
+                "placed": 4,
+                "starts": 12,
+                "rate": 0.3333333333333333
+              },
+              {
                 "no": 5,
                 "jockey": "艾道拿",
                 "jockey_id": "AVB",
@@ -2850,15 +2859,6 @@
                 "placed": 2,
                 "starts": 6,
                 "rate": 0.3333333333333333
-              },
-              {
-                "no": 9,
-                "jockey": "艾兆禮",
-                "jockey_id": "AA",
-                "draw": 4,
-                "placed": 3,
-                "starts": 10,
-                "rate": 0.3
               }
             ],
             "method_version": "jockey_draw_only_v3",
@@ -2871,7 +2871,7 @@
             "before_date": "2026-11-25",
             "venue": "HV",
             "race": 7,
-            "captured_at": "2026-11-25T21:39:07+08:00",
+            "captured_at": "2026-11-25T21:40:48+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -3369,7 +3369,7 @@
         "before_date": "2026-11-25",
         "venue": "HV",
         "race": 7,
-        "captured_at": "2026-11-25T21:39:07+08:00",
+        "captured_at": "2026-11-25T21:40:48+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -4063,7 +4063,7 @@
         "date": "2026-11-25",
         "venue": "HV",
         "race": 8,
-        "captured_at": "2026-11-25T13:40:06.381Z",
+        "captured_at": "2026-11-25T13:41:27.055Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -4286,7 +4286,7 @@
             "before_date": "2026-11-25",
             "venue": "HV",
             "race": 8,
-            "captured_at": "2026-11-25T21:39:07+08:00",
+            "captured_at": "2026-11-25T21:40:48+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -4807,7 +4807,7 @@
         "before_date": "2026-11-25",
         "venue": "HV",
         "race": 8,
-        "captured_at": "2026-11-25T21:39:07+08:00",
+        "captured_at": "2026-11-25T21:40:48+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -5524,7 +5524,7 @@
         "date": "2026-11-25",
         "venue": "HV",
         "race": 9,
-        "captured_at": "2026-11-25T13:40:06.381Z",
+        "captured_at": "2026-11-25T13:41:27.055Z",
         "finalized": false,
         "primary_finalized": false,
         "cover_finalized": false,
@@ -5747,7 +5747,7 @@
             "before_date": "2026-11-25",
             "venue": "HV",
             "race": 9,
-            "captured_at": "2026-11-25T21:39:07+08:00",
+            "captured_at": "2026-11-25T21:40:48+08:00",
             "forms": {
               "1": {
                 "status": "ready",
@@ -6210,7 +6210,7 @@
         "before_date": "2026-11-25",
         "venue": "HV",
         "race": 9,
-        "captured_at": "2026-11-25T21:39:07+08:00",
+        "captured_at": "2026-11-25T21:40:48+08:00",
         "forms": {
           "1": {
             "status": "ready",
@@ -6655,11 +6655,11 @@
       }
     }
   ],
-  "updated_at": "2026-11-25T21:40:06+08:00",
+  "updated_at": "2026-11-25T21:41:27+08:00",
   "status": "live",
   "tips_checked_at": null,
   "tips_due_at": "2026-11-25T16:40:00+08:00",
-  "heartbeat": "2026-11-25T21:40:06.351637+08:00",
+  "heartbeat": "2026-11-25T21:41:26.352220+08:00",
   "errors": [],
   "collection_policy": {
     "index": false,
